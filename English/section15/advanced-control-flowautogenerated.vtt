@@ -1,0 +1,376 @@
+WEBVTT
+
+00:00.980 --> 00:09.830
+Up to this point we learned the if statement the if else statement and the else if statement and if
+
+00:09.830 --> 00:11.840
+you remember our section outline.
+
+00:11.840 --> 00:16.890
+Well we have mentioned these two for JavaScript conditionals.
+
+00:17.360 --> 00:19.600
+So we're gonna tackle those today.
+
+00:20.030 --> 00:22.090
+As you can see we have two more to get through.
+
+00:22.250 --> 00:24.230
+But don't be scared.
+
+00:24.230 --> 00:27.280
+These are not going to introduce anything new.
+
+00:27.320 --> 00:33.140
+They're just different ways of doing control flow but they won't do anything that is simple if else
+
+00:33.260 --> 00:34.840
+statement can't do.
+
+00:34.880 --> 00:43.730
+However there are cases where it will be much easier to do these two than if we do something with the
+
+00:43.730 --> 00:45.730
+if else statement.
+
+00:45.890 --> 00:47.140
+So let's check them out.
+
+00:47.300 --> 00:50.840
+The first one we're going to talk about is the ternary operator.
+
+00:50.840 --> 00:54.910
+It looks something like this condition.
+
+00:54.940 --> 00:56.070
+The question mark
+
+00:58.680 --> 01:02.040
+expression one or expression
+
+01:06.180 --> 01:09.080
+and that is the syntax it says.
+
+01:09.210 --> 01:10.790
+Is this true or false.
+
+01:10.950 --> 01:15.120
+If it's true then provide this value.
+
+01:15.120 --> 01:18.120
+If it's false provide this value.
+
+01:18.180 --> 01:19.880
+Let me show you an example of this.
+
+01:19.980 --> 01:33.910
+We'll have a function called is user valid that accepts a boolean and we'll just return the volume value
+
+01:36.140 --> 01:36.710
+now within.
+
+01:36.710 --> 01:48.480
+Here we can say variable answer equals is user valid and we'll just say true for now.
+
+01:48.650 --> 01:50.120
+Question mark.
+
+01:50.210 --> 01:54.770
+So if that's true I'll say you may enter
+
+01:58.280 --> 02:03.610
+otherwise I'll say access denied.
+
+02:03.800 --> 02:06.660
+Let me make that this a little bit smaller so you can see.
+
+02:06.770 --> 02:14.900
+So again all we're saying is if this is true then do this expression if this is false do this expression
+
+02:15.950 --> 02:26.400
+self is just copy this into the console and see what happens if Iran answer whoops I spelled that wrong
+
+02:26.850 --> 02:34.560
+answer I get you may enter because user is valid this true.
+
+02:34.590 --> 02:46.940
+Now if I change this to say false WELL IN THAT CASE I'LL GET ACCESS DENIED but still a little bit more
+
+02:46.940 --> 02:57.800
+of a complicated answer we can say variable automated answer and we can say and I'll do this on a new
+
+02:57.800 --> 03:09.130
+line just so you can see your account number is is user valid and we'll just say something like false
+
+03:09.130 --> 03:16.180
+for now so because we have these brackets we're going to have an expression inside of here that we can
+
+03:16.180 --> 03:28.650
+evaluate so we can say is user valid if the user is valid we'll say 1 2 3 4 if not we'll say not available
+
+03:31.730 --> 03:40.120
+if we copy and paste this here into our console and we can see a better we see if user is valid we want
+
+03:40.120 --> 03:45.010
+to say one two three four if it's not then not available.
+
+03:45.010 --> 03:54.430
+So if I run this and now I look at automated answer I get your account number is not available well
+
+03:54.640 --> 04:07.930
+because is user valid is false but if I do true well in that case your account number is 1 2 3 4.
+
+04:08.160 --> 04:15.510
+Now you might notice that this is actually not that different from if you did function condition was
+
+04:15.570 --> 04:18.120
+called condition and we'll say
+
+04:21.570 --> 04:28.440
+is user valid return you may enter
+
+04:31.470 --> 04:32.770
+and you did.
+
+04:33.030 --> 04:33.630
+Else
+
+04:36.410 --> 04:43.180
+return access denied this function over here.
+
+04:43.180 --> 04:44.110
+Condition.
+
+04:44.230 --> 04:51.520
+If I say variable answer to equals condition
+
+04:55.500 --> 04:56.770
+we'll see what happens.
+
+04:59.330 --> 05:09.880
+Copy these two run them and now if I look at answer I get you may enter if I get an answer to I get
+
+05:10.210 --> 05:12.960
+you may enter.
+
+05:13.190 --> 05:18.040
+Now it's the exact same thing other than well bit of misspelling on my part.
+
+05:19.600 --> 05:28.660
+But you see that one way is a lot nicer it's just nice simple one line ternary operator is really really
+
+05:28.660 --> 05:36.010
+good for these if else where there is a check for a condition and there's two possible expressions that
+
+05:36.010 --> 05:38.680
+come out of it all right.
+
+05:38.750 --> 05:45.110
+Let's learn the next one which is the switch statement.
+
+05:45.350 --> 05:51.620
+There's the fun one so a switch statement looks something like this and we can build a simple game right
+
+05:51.620 --> 05:53.910
+now to demonstrate how it works.
+
+05:53.990 --> 06:05.080
+I can say function move command and we'll say it accepts parameter direction within this function.
+
+06:05.080 --> 06:12.530
+I'll say variable what happens and we'll say switch.
+
+06:12.690 --> 06:13.790
+Notice that it's a keyword.
+
+06:13.800 --> 06:22.430
+So it's now highlight interim bread and I'll say direction the switch statement is going to accept direction
+
+06:22.430 --> 06:27.730
+it's going to check direction and we think here we'll say.
+
+06:27.940 --> 06:42.570
+Case forward which means check direction if direction equals forward then what happens equals two.
+
+06:42.840 --> 06:45.180
+You encounter a monster
+
+06:48.460 --> 06:49.310
+break.
+
+06:49.360 --> 06:50.920
+I'll explain why break does.
+
+06:51.100 --> 06:56.890
+Right after I finish up the rest of the case statement so case segments as you can see are really good
+
+06:56.920 --> 07:08.590
+because I can just copy and paste and now I can say for here we'll say back and if direction is back
+
+07:08.680 --> 07:16.450
+we'll say you arrived home if the direction is right.
+
+07:16.690 --> 07:33.810
+In that case we'll say you found a river and if the direction is left we'll say you run into a troll
+
+07:35.240 --> 07:39.850
+and then finally we'll say default
+
+07:43.300 --> 07:49.560
+what happens equals to please enter a valid direction
+
+07:52.690 --> 07:56.050
+and we'll end it with a return.
+
+07:56.050 --> 07:58.480
+What happens.
+
+07:58.480 --> 08:01.050
+All right that was a whole lot of code.
+
+08:01.090 --> 08:06.030
+Let's run this command first and then we'll explain exactly what is happening.
+
+08:06.040 --> 08:09.840
+Copy the code copy into the console.
+
+08:10.110 --> 08:11.760
+And now we have the move comment.
+
+08:11.790 --> 08:14.270
+And if you remember the last video move.
+
+08:14.280 --> 08:22.240
+Command now exists in the root scope which is window so within here.
+
+08:22.280 --> 08:23.590
+Let's just say.
+
+08:23.590 --> 08:25.960
+Forward.
+
+08:26.210 --> 08:30.590
+Now if I run this I get you encountered a monster
+
+08:34.180 --> 08:35.120
+back.
+
+08:35.260 --> 08:36.630
+You arrived home.
+
+08:36.630 --> 08:40.630
+If I go right you found a river.
+
+08:40.630 --> 08:44.680
+If I go left you run into a bull.
+
+08:45.040 --> 08:46.780
+And if I write gibberish
+
+08:50.650 --> 08:53.830
+I get Please enter a valid direction.
+
+08:53.930 --> 08:58.410
+That's what switch statements are really good for when you have a lot of conditions.
+
+08:58.460 --> 09:01.300
+Instead of using an if else if.
+
+09:01.310 --> 09:02.730
+Else if else if.
+
+09:02.780 --> 09:10.660
+Else if else statement you can use a switch statement and you can see it reads nicely.
+
+09:10.660 --> 09:13.640
+Essentially what it's saying is create variable.
+
+09:13.690 --> 09:16.710
+What happens then switch.
+
+09:16.720 --> 09:23.350
+I want you to check whatever the condition is whatever the variable is in this case it's the direction
+
+09:23.920 --> 09:27.480
+and in case the direction equals forward.
+
+09:27.520 --> 09:29.530
+Do this in case direction is back.
+
+09:29.530 --> 09:30.100
+Do this.
+
+09:30.190 --> 09:31.420
+If it's right do this.
+
+09:31.420 --> 09:33.760
+If it's left do this.
+
+09:33.760 --> 09:39.400
+And it says default is if none of these conditions work.
+
+09:39.490 --> 09:42.000
+And remember the program goes line by line.
+
+09:42.010 --> 09:45.140
+So checks forward then checks back and it checks right.
+
+09:45.250 --> 09:52.450
+And it checks left and if nothing of those match then it says you can just default to please enter a
+
+09:52.450 --> 09:55.270
+valid direction and then we return what happened.
+
+09:55.270 --> 09:59.650
+So that while so that the function returns something for us.
+
+09:59.660 --> 10:03.370
+Now finally what is the break.
+
+10:03.450 --> 10:12.210
+The brake simply says if Casey's forward then the sign you encountered a monster too.
+
+10:12.220 --> 10:18.510
+What happens variable and then brake brake is just saying break out of the switch statement.
+
+10:18.580 --> 10:24.530
+So instead of the program then checking to see if Casey's back Casey's right Casey's left or default.
+
+10:24.790 --> 10:25.950
+If we say brake.
+
+10:26.140 --> 10:33.700
+The program stops here and then goes straight out of the switch statement to return.
+
+10:33.850 --> 10:34.540
+What happens.
+
+10:35.080 --> 10:46.780
+So if I actually do brake before what happens you encountered a monster and I copy this
+
+10:49.650 --> 11:00.690
+and let's rerun the function we'll say move command is forward notice what happens now I get undefined
+
+11:00.690 --> 11:06.840
+because we broke the program enter saying Oh yeah.
+
+11:07.260 --> 11:08.630
+He typed in forward.
+
+11:08.670 --> 11:14.880
+But before we're able to assign something to the variable I say break I exit out of the switch statement
+
+11:15.270 --> 11:21.480
+and I return what happens which it's only been declared but it's on a sign.
+
+11:21.510 --> 11:26.570
+So I just return undefined.
+
+11:26.630 --> 11:32.480
+All right there you have it your two other conditionals and you've covered all of them in JavaScript.
+
+11:32.480 --> 11:39.480
+Now each one is good for its own individual case but they're all very useful.
+
+11:39.740 --> 11:41.420
+I'll see in the next one but my.

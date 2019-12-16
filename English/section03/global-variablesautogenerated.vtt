@@ -1,0 +1,136 @@
+WEBVTT
+
+00:01.000 --> 00:02.260
+Welcome back.
+
+00:02.290 --> 00:09.410
+I want to talk quickly about global variables and how evil they are.
+
+00:09.410 --> 00:18.160
+I mean if you were paying attention you might be asking yourself Andre why don't we just do global variables
+
+00:18.280 --> 00:22.670
+all the time remember how we had global lexical environment.
+
+00:22.770 --> 00:29.480
+Why don't we just declare all our variables into the global scope because whatever function we use.
+
+00:29.550 --> 00:32.750
+Well we'll have access to all those variables.
+
+00:32.760 --> 00:38.280
+Wouldn't that be nice and everything has access to everything and we don't have to worry about undefined
+
+00:38.370 --> 00:45.600
+undeclared variables instead of having something like previously where we have these weird scope chains.
+
+00:45.630 --> 00:50.820
+Doesn't that make our code more complex harder to understand.
+
+00:50.820 --> 00:59.090
+Well there's a few issues with what we call polluting the global namespace having too much data on our
+
+00:59.120 --> 01:01.700
+global execution environment.
+
+01:01.700 --> 01:08.360
+Remember we have limited space limited memory right.
+
+01:08.390 --> 01:15.530
+And we talked about how memory leaks happen when we just have too much stuff in our memory heap that
+
+01:15.620 --> 01:23.150
+eventually it just overflows making things slower and slower and slower until our browsers crash and
+
+01:23.150 --> 01:30.710
+one of the main ways that we do that is with global variables but now you're thinking well I'm only
+
+01:30.710 --> 01:37.160
+going to declare a few variables I'm not going to just have so many that I'm going to completely crash
+
+01:37.400 --> 01:39.600
+the web browser.
+
+01:39.770 --> 01:45.800
+Well there's another issue here with global variables and why we want to avoid or minimize our use of
+
+01:45.800 --> 01:47.450
+global variables.
+
+01:47.570 --> 01:49.420
+Let's have a look at an example.
+
+01:49.550 --> 01:55.820
+You see the issue with global variables is that we can have variable collisions.
+
+01:55.820 --> 02:03.680
+For example imagine if we had multiple scripts here which as our applications get larger and larger
+
+02:04.280 --> 02:07.280
+we have more than just one JavaScript file.
+
+02:07.320 --> 02:08.040
+Right.
+
+02:08.120 --> 02:17.800
+And let's say we have in here a variable Z that equals to one we have a variable Zizi that equals two
+
+02:17.810 --> 02:30.420
+to make sure I can spell here and let's say we have variable z z equals to three and let's just add
+
+02:30.420 --> 02:32.380
+another one let's say four.
+
+02:32.430 --> 02:39.910
+We don't need this script for now and you know what this one I'm going to leave it at Z and let's say
+
+02:40.900 --> 02:45.730
+ten thousand I'm going to save and I'm going to refresh.
+
+02:45.760 --> 02:46.400
+All right.
+
+02:46.480 --> 02:49.130
+I refresh the page now.
+
+02:49.270 --> 02:53.950
+If I look at Z here what would I have.
+
+02:53.970 --> 03:02.220
+Well I get ten thousand I've overridden whatever I had at the top over here that is z equals one because
+
+03:02.250 --> 03:11.500
+we had a collision and the way this works is that in the HCM I'll file all these script tags get combined
+
+03:12.010 --> 03:15.400
+essentially into one execution context.
+
+03:15.400 --> 03:16.080
+Right.
+
+03:16.150 --> 03:19.490
+So everything gets bunched up together.
+
+03:19.600 --> 03:25.600
+Everything is on the global execution context and they overwrite each other.
+
+03:25.690 --> 03:34.520
+If there's any duplicates so this creates a lot of possible bugs where we write different variables
+
+03:34.610 --> 03:41.440
+and maybe we think we're being safe here but somebody on another file or writes one of our supersecret
+
+03:42.170 --> 03:44.230
+important variables.
+
+03:44.270 --> 03:53.040
+So how do we solve this issue and we have an entire section on this topic on the idea of modules.
+
+03:53.040 --> 04:00.630
+But I want to scratch the surface here in the next video when it comes to scopes and that is how we
+
+04:00.630 --> 04:08.290
+use what we know now about scope and scope chains to avoid the issue of global variables.
+
+04:08.550 --> 04:10.380
+I'll see in the next video by.

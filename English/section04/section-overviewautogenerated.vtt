@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.910 --> 00:01.570
+Welcome back.
+
+00:01.570 --> 00:06.710
+And good job getting this far in the course where in this part a tiny little part.
+
+00:06.730 --> 00:12.340
+Before we get into the two pillars of JavaScript a really really fun topic that I'm excited about.
+
+00:12.670 --> 00:15.970
+But first we have to get through this part.
+
+00:16.200 --> 00:20.770
+Now all programming languages have types.
+
+00:20.820 --> 00:25.290
+That is the building blocks that allow us to write in that language.
+
+00:25.290 --> 00:31.660
+We can have numbers strings billions and many more and in programming.
+
+00:31.660 --> 00:38.520
+There are two types of languages dynamically and statically typed languages.
+
+00:38.740 --> 00:46.500
+In this short section we're going to be talking all about types and the idea of types we're going to
+
+00:46.500 --> 00:50.420
+define what static versus dynamically typed means.
+
+00:50.730 --> 00:56.610
+We're going to talk about primitive types passed by reference versus past by value.
+
+00:56.610 --> 01:01.870
+We're going to talk about a very confusing topic in JavaScript type caution.
+
+01:02.190 --> 01:07.830
+And we're also going to talk a little bit about arrays functions and objects and how they relate into
+
+01:07.830 --> 01:12.470
+this whole ecosystem of types in JavaScript.
+
+01:12.500 --> 01:17.540
+This is an important stepping stone in order for us to master the language.
+
+01:17.540 --> 01:20.150
+So let's dive in and gain some new knowledge.
+
+01:20.390 --> 01:22.050
+I'll see in the next one by.

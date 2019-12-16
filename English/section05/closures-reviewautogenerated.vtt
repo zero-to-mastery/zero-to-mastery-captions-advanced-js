@@ -1,0 +1,49 @@
+WEBVTT
+
+00:01.380 --> 00:02.460
+And there we go.
+
+00:02.490 --> 00:07.920
+We learned the first important pillar of JavaScript closures.
+
+00:07.920 --> 00:14.820
+We learned that a closure is the combination of a function and the lexical environment from which it
+
+00:14.820 --> 00:22.920
+was declared and we're able to do this because well functions are a first class citizen and we have
+
+00:22.950 --> 00:29.780
+lexical scope in JavaScript and now the statement that I made at the beginning of this closure section
+
+00:30.170 --> 00:31.460
+should make sense.
+
+00:31.550 --> 00:39.950
+Closures allow a function to access variables from an enclosing scope or outer scope environment even
+
+00:39.950 --> 00:48.150
+after it leaves the scope in which it was declared because all that matters in Javascript is where the
+
+00:48.180 --> 00:49.290
+function was written.
+
+00:50.810 --> 00:57.950
+Now the interesting thing about closures is that JavaScript really popularized this idea that is now
+
+00:58.070 --> 01:05.270
+all over programming languages especially functional programming languages and the closure concept is
+
+01:05.270 --> 01:13.340
+now adopted and added to different languages like Python and Ruby after javascript popularized it and
+
+01:13.340 --> 01:22.110
+showed how powerful it is and I think C sharp and C++ even are also adding closures to their language.
+
+01:22.430 --> 01:25.160
+So it's a very very powerful tool.
+
+01:25.220 --> 01:30.110
+I hope you had fun with that section and we have one more pillar to go.
+
+01:30.110 --> 01:34.090
+So for the next one I'll see in the next video by.

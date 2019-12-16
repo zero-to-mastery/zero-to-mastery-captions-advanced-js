@@ -1,0 +1,85 @@
+WEBVTT
+
+00:02.090 --> 00:09.470
+What problem or problems do you see with everybody creating their own engines in JavaScript just like
+
+00:09.470 --> 00:10.930
+we did right.
+
+00:10.940 --> 00:15.140
+Can we just create our own engine and all of a sudden boom there it is.
+
+00:15.140 --> 00:19.720
+We have our JavaScript engine Well yes you can definitely do that.
+
+00:19.930 --> 00:28.780
+But remember our list over here how it was called at must script engines and not javascript engines.
+
+00:28.790 --> 00:34.940
+That's because if everybody can just create a JavaScript engine it will just be total chaos which is
+
+00:34.940 --> 00:37.640
+why Atma script was created.
+
+00:37.640 --> 00:43.610
+It tells people hey here's the standard and how you should do things in JavaScript and how it should
+
+00:43.610 --> 00:52.130
+work and Atma script is the governing body of javascript that essentially decides how the language should
+
+00:52.130 --> 00:57.100
+be standardized so it tells engine creators.
+
+00:57.100 --> 00:59.800
+This is how javascript should work.
+
+01:00.130 --> 01:08.620
+But internally how you build the engine is up to you as long as it conforms to the standards and if
+
+01:08.620 --> 01:16.060
+we go back to our example over here this engine inside of this box as long as it conforms to Atmos script
+
+01:16.060 --> 01:24.480
+standards I can do whatever I want as an engine creator so companies and organizations are battling
+
+01:24.480 --> 01:26.730
+to have the fastest engine.
+
+01:26.730 --> 01:28.630
+So people use their tool.
+
+01:28.890 --> 01:34.950
+For example Google is really interested in having the fastest engine so that more people use their chrome
+
+01:34.950 --> 01:41.970
+browsers so that they use their search engine so that they can sell more ads and make more revenue but
+
+01:41.970 --> 01:49.410
+keep this in mind that this can be implemented any way we want and it constantly changes to find the
+
+01:49.410 --> 01:57.490
+fastest way possible to have javascript work in our browsers or even outside of our browsers and we're
+
+01:57.490 --> 02:03.670
+gonna be talking about the V8 engine here because it is the most popular and you might see some different
+
+02:03.670 --> 02:05.080
+variations of this.
+
+02:05.200 --> 02:12.910
+But what we're going to talk about here applies to most javascript engines and although things may change
+
+02:12.970 --> 02:18.790
+over time as long as you understand the principles and why it's built the way it is we're going to be
+
+02:18.790 --> 02:22.420
+able to understand how to write optimized code.
+
+02:22.570 --> 02:26.600
+But before we get into that let's talk about what these things are.
+
+02:26.620 --> 02:29.760
+We have the interpreter and the compiler.
+
+02:29.820 --> 02:31.940
+I'll see you in the next video by.

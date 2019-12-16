@@ -1,0 +1,265 @@
+WEBVTT
+
+00:00.910 --> 00:01.910
+Welcome back.
+
+00:01.930 --> 00:06.850
+I want to spend a little bit more time on these constructor functions because they are a little bit
+
+00:06.850 --> 00:07.670
+tricky.
+
+00:07.690 --> 00:12.180
+There's a lot of magic happening here so let's make sure that we fully get this.
+
+00:12.250 --> 00:14.550
+Let's play around with this functionality.
+
+00:14.830 --> 00:16.750
+If I console the log here
+
+00:20.060 --> 00:33.740
+this and see what this is and I run I see that this is the elf object that we're creating but there's
+
+00:33.740 --> 00:38.990
+no properties on here because while we haven't added anything it just creates an empty object.
+
+00:39.710 --> 00:51.630
+However if I bring this down here and I do console log I see that after we construct this elf and add
+
+00:51.630 --> 00:54.870
+properties to it we have them accessible to us.
+
+00:54.870 --> 01:03.830
+Now the interesting thing here is that if I do something like variable A equals five and I click Run
+
+01:03.830 --> 01:11.690
+here it's not going to add this to our elf object with a constructor function.
+
+01:11.710 --> 01:20.300
+The only way we can add properties to this object is to use this keyword.
+
+01:20.300 --> 01:20.980
+All right.
+
+01:21.100 --> 01:26.860
+And then we also talked about how constructor functions automatically create that prototype chain for
+
+01:26.860 --> 01:27.410
+us.
+
+01:27.460 --> 01:38.850
+So let's test that out if in here instead of Peter dot attack I'm going to do let's say Peter underscore
+
+01:38.880 --> 01:49.790
+underscore proto let's see what I get I get ELF attack function let's comment this out for a second
+
+01:50.960 --> 01:55.250
+just so we can see it without the prototype.
+
+01:55.340 --> 01:56.210
+All right.
+
+01:56.420 --> 02:02.680
+We see that we have ELF as our prototype.
+
+02:02.700 --> 02:07.620
+So remember Frodo points to the prototype of elf.
+
+02:07.710 --> 02:16.950
+So it points to elf dot prototype and Elf type prototype was created for us because of this new keyword.
+
+02:16.950 --> 02:27.230
+So that when we finally add onto the prototype an item like attack well I now have protons pointing
+
+02:27.230 --> 02:41.470
+to elf dot prototype which contains the attack method so if I do elf here dot prototype and I run this.
+
+02:41.840 --> 02:42.440
+You see that.
+
+02:42.440 --> 02:43.760
+That's the same thing.
+
+02:43.760 --> 02:47.720
+We have the attack function inside of this prototype.
+
+02:48.470 --> 02:59.260
+If I console log this before we add the prototype Well it's an empty object and remember every function
+
+02:59.260 --> 03:07.060
+that we create gets this prototype property but only constructor function actually have used for this
+
+03:07.060 --> 03:13.350
+prototype object now just to finalize our understanding.
+
+03:13.350 --> 03:22.310
+What happens if I do console dot log elf or Peter dot prototype.
+
+03:22.390 --> 03:24.630
+What do you think this will result in.
+
+03:24.910 --> 03:28.680
+If I click Run I get undefined.
+
+03:28.900 --> 03:31.030
+Why is that while.
+
+03:31.040 --> 03:33.950
+Because Peter is not a function.
+
+03:33.950 --> 03:43.340
+Peter is an object and only functions have access to the prototype by the way one of the biggest gotchas
+
+03:44.060 --> 03:56.540
+with this is if we add something like let's say built and build is simply going to return house.
+
+03:56.540 --> 04:04.010
+So if I do Peter build now see that Peter has built a house.
+
+04:04.010 --> 04:14.150
+But let's say that instead let's do this let's say we have a function called building and this function
+
+04:14.180 --> 04:23.370
+is going to return house and let's say in here will be this dot.
+
+04:23.680 --> 04:24.070
+Name
+
+04:27.680 --> 04:31.100
+builds a house.
+
+04:31.270 --> 04:36.060
+Make sure we add them together here.
+
+04:36.280 --> 04:41.140
+And then finally we can just call building here.
+
+04:41.260 --> 04:51.620
+What do you think happens if I build now if I click Run I get undefined and yes I'm being repetitive
+
+04:51.620 --> 04:58.610
+here but hopefully by showing you these things a few times you really internalize them.
+
+04:58.610 --> 05:00.440
+Why do we get undefined.
+
+05:00.440 --> 05:04.660
+Well this is one of the biggest gotchas when it comes to object oriented programming.
+
+05:04.670 --> 05:16.490
+When we create objects like this functions inside of methods is well a function inside of a function.
+
+05:16.580 --> 05:24.350
+That means this is not assigned to the object itself but actually to the window object.
+
+05:24.350 --> 05:28.790
+And we've seen this before so there's a few ways to solve that.
+
+05:28.860 --> 05:40.840
+You can do bind this or remove the call the function and just return the function.
+
+05:40.840 --> 05:51.560
+So now we can call it Peter build a house or even easier if we go back
+
+05:54.390 --> 05:59.160
+we can just have a reference such as self equals this
+
+06:02.140 --> 06:12.630
+and this can be turned into self so that if I run this oh and we have to make sure that we return this
+
+06:12.990 --> 06:16.130
+we get Peter built a house.
+
+06:16.230 --> 06:16.470
+Awesome
+
+06:19.250 --> 06:19.710
+right.
+
+06:19.770 --> 06:24.840
+Let's remove this and go back to what we had before.
+
+06:27.040 --> 06:28.850
+Let's remove that as well.
+
+06:29.960 --> 06:31.760
+Now that we have things clean.
+
+06:32.180 --> 06:33.920
+What is the problem with this.
+
+06:33.920 --> 06:34.580
+Are we there.
+
+06:34.570 --> 06:38.060
+Are we at object oriented programming Nirvana.
+
+06:38.060 --> 06:40.610
+Do we reach our end goal.
+
+06:40.610 --> 06:42.740
+Well not really.
+
+06:42.800 --> 06:47.320
+The problem with this code is prototype is kind of weird.
+
+06:47.470 --> 06:49.420
+It's a little hard to understand isn't it.
+
+06:49.460 --> 06:52.130
+And I mean it looks kind of ugly.
+
+06:52.190 --> 06:57.950
+This code is now very understandable unless you really know your prototype of inheritance and how javascript
+
+06:57.950 --> 07:01.170
+works which most people don't.
+
+07:01.190 --> 07:03.760
+This can get very confusing very fast.
+
+07:04.810 --> 07:09.890
+As a matter of fact there's not that many people that like this style of coding.
+
+07:10.010 --> 07:16.580
+It's kind of confusing although older code bases you might see a lot of this especially if they're doing
+
+07:16.580 --> 07:18.330
+object oriented programming.
+
+07:18.560 --> 07:25.170
+But the problem is that object oriented programming is all about the idea of classes.
+
+07:25.430 --> 07:28.950
+This code well there's no classes in here.
+
+07:28.990 --> 07:35.360
+There is this weird thing where we have to make sure to remember to have a capital letter which is why
+
+07:36.620 --> 07:46.370
+object dot create was added to the language in order to avoid this headache and just use pure prototype
+
+07:46.370 --> 07:56.930
+all inheritance but the thing is this style of coding this idea of this and the new keyword is very
+
+07:56.930 --> 08:02.450
+much object oriented programming is part especially when it comes to languages like Java.
+
+08:02.540 --> 08:09.320
+If we wanted to get closer to object oriented programming well object does create is technically less
+
+08:09.500 --> 08:12.380
+object oriented than something like this.
+
+08:13.830 --> 08:16.670
+But like I said before this is not pretty.
+
+08:16.680 --> 08:21.660
+So how can we improve this and we're going to improve this a lot in the next part.
+
+08:21.660 --> 08:30.970
+We're finally going to get to the end to our goal of adding classes and doing true or as close as we
+
+08:30.970 --> 08:38.170
+can with javascript object oriented programming let's find out what that looks like in the next video.

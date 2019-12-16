@@ -1,0 +1,235 @@
+WEBVTT
+
+00:01.180 --> 00:09.550
+In order to understand how dynamic programming works we need to understand what caching means caching
+
+00:09.580 --> 00:13.630
+is a way to store values so you can use them later on.
+
+00:14.320 --> 00:23.240
+Ideally you can think of caching as a backpack they take to school instead of going all the way home
+
+00:23.360 --> 00:25.540
+when you need something like a pencil.
+
+00:25.640 --> 00:34.940
+You have a small box on your back that holds items that you need so that when you go to school you can
+
+00:34.940 --> 00:38.310
+just reuse them fast over and over.
+
+00:38.350 --> 00:40.720
+Now that's a bit of a silly example.
+
+00:40.720 --> 00:48.700
+Caching is just a way for us to speed up programs and hold some piece of data in an easily accessible
+
+00:48.700 --> 00:55.690
+box and memorization is a specific form of caching that we're going to be talking about because we use
+
+00:55.690 --> 00:57.780
+it a lot in dynamic programming.
+
+00:58.090 --> 01:06.540
+But instead of just talking about it let's actually demonstrated it in code the way we can cache things.
+
+01:06.540 --> 01:14.910
+Well let's imagine we have a function that says we want to add to 80 and this function takes a number
+
+01:16.030 --> 01:21.960
+and all it does is return the value of n..
+
+01:22.060 --> 01:25.740
+That is a parameter we give it and adds 80 to it.
+
+01:26.870 --> 01:36.590
+So that when we run the function add to 80 and let's say we put in five we get eighty five nice and
+
+01:36.590 --> 01:37.950
+simple right.
+
+01:38.030 --> 01:46.860
+But if I run this function again I'll have to go through this step again and add 80 to that answer.
+
+01:46.970 --> 01:54.950
+And if I do this again again do the same thing I've ran the calculation three times but what if this
+
+01:54.950 --> 01:59.540
+operation took a really really long time.
+
+01:59.600 --> 02:06.540
+What if I had a console log here and we can imagine that this operation takes multiple seconds.
+
+02:06.710 --> 02:15.250
+It takes a long time every time we run this function will have to run longtime three times and go through
+
+02:15.250 --> 02:17.450
+this step one by one.
+
+02:17.620 --> 02:24.250
+Even though we've done the exact same calculation three times is there a way that we can optimize this
+
+02:25.260 --> 02:30.850
+and this is where we can use caching and memorization.
+
+02:31.170 --> 02:35.170
+Let's improve the above function by doing something different.
+
+02:35.280 --> 02:42.230
+I'm going to create a new object called cache that's going to hold an empty object.
+
+02:42.450 --> 02:47.840
+We're also going to have a function that is now going to be called memorized.
+
+02:49.010 --> 02:54.220
+Not memorized memorized add to Haiti.
+
+02:54.250 --> 03:01.570
+That takes a number and inside here we're going to do something a little bit different than the above.
+
+03:01.570 --> 03:07.010
+We're still going to add to 80 but we're gonna do it in a special way.
+
+03:07.120 --> 03:18.460
+I'm going to say that if n is in cash and this is a way to check if a property exists in an object in
+
+03:18.460 --> 03:26.670
+JavaScript so it's similar to me doing cache dot and to check for the property this one just reads better
+
+03:26.670 --> 03:27.720
+so I'm going to keep it like that.
+
+03:27.720 --> 03:39.650
+So with an exists in cash so if we've cashed it before then simply return the cash dot and or cash and
+
+03:41.740 --> 03:45.790
+so return the cached value but obviously it's empty.
+
+03:45.790 --> 03:48.980
+The first time around so this is not going to work.
+
+03:49.740 --> 03:53.380
+If there's nothing in the cache which is the case the first time around.
+
+03:53.490 --> 04:07.170
+Well we have an L statement and in here we're going to have our cash an which doesn't exist yet and
+
+04:07.170 --> 04:21.340
+assign it and plus 80 so that after this if we do something like minimized ad to eighty five it's going
+
+04:21.340 --> 04:24.060
+to say five plus 80.
+
+04:24.340 --> 04:33.870
+So in here we're going to cash the property five to have a value of eighty five which is what we're
+
+04:33.870 --> 04:35.190
+doing here.
+
+04:35.190 --> 04:41.100
+So that the next time around we're doing something like this.
+
+04:41.160 --> 04:47.880
+We go through the if statement find the fact that we've already calculated five and just do simple property
+
+04:47.940 --> 04:56.750
+access which as we know is all one time is super fast with the hash table like this let's complete this
+
+04:56.750 --> 04:59.260
+example to show you how it works.
+
+04:59.360 --> 05:03.330
+I'm just simply going to return
+
+05:10.100 --> 05:17.630
+since we just fill it up here and let's just have a console log here that does long time to see that
+
+05:17.990 --> 05:21.170
+we're doing the calculation that takes a long time.
+
+05:21.350 --> 05:28.950
+The first time I run this function I get eighty five and whoops I have the cash refilled.
+
+05:29.020 --> 05:30.940
+So it didn't calculate the longtime.
+
+05:30.940 --> 05:32.040
+Let's try that again.
+
+05:32.270 --> 05:34.810
+Click Run longtime.
+
+05:35.040 --> 05:40.950
+The first pass through it went through here and did this calculation that hypothetically is going to
+
+05:40.950 --> 05:42.440
+take a really long time.
+
+05:42.480 --> 05:47.490
+Again we're using a nice easy example here but you can imagine this being a calculation that takes a
+
+05:47.490 --> 05:50.100
+long time many seconds.
+
+05:50.190 --> 05:54.450
+What if we do this again we can console that like here
+
+05:57.990 --> 06:01.140
+to make sure that we capture these values
+
+06:04.580 --> 06:12.640
+and we'll label them one and two just so we can distinguish them.
+
+06:12.700 --> 06:21.890
+So the first goal and the second call if I hit run look at that first time around we call longtime and
+
+06:21.890 --> 06:23.300
+we calculate two eighty five.
+
+06:23.600 --> 06:31.400
+But the second time around because this value was in the cache we didn't have to do this long calculation
+
+06:31.430 --> 06:35.290
+and we just returned it immediately.
+
+06:35.300 --> 06:37.670
+So what is memorization.
+
+06:37.700 --> 06:46.640
+Exactly well memorization is a specific form of caching that involves caching the return value of a
+
+06:46.640 --> 06:53.960
+function that is the return value of this function based on its parameters.
+
+06:53.960 --> 07:03.210
+And if the parameter of this function doesn't change like it is here then it's memorized.
+
+07:03.260 --> 07:09.590
+That is it uses the cache because it's calculated the same thing before with the same parameter.
+
+07:09.680 --> 07:16.060
+And it will return a cached version of the function it's memorized.
+
+07:16.340 --> 07:23.570
+If the parameter changes well it's a different parameter that it's never seen before.
+
+07:23.570 --> 07:28.140
+So it's going to calculate both times different things.
+
+07:28.230 --> 07:31.120
+And I just noticed here that this shouldn't be five it should be.
+
+07:31.290 --> 07:33.150
+And over here so it's dynamic.
+
+07:33.150 --> 07:33.780
+There you go.
+
+07:33.810 --> 07:35.670
+That's better.
+
+07:35.670 --> 07:42.990
+So remember this memorization is simply a way to remember a solution to a cell problem.
+
+07:42.990 --> 07:45.600
+So you don't have to calculate it again.

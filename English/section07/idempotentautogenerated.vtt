@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.680 --> 00:02.130
+Welcome back.
+
+00:02.150 --> 00:07.150
+Let's talk about our first big word when it comes to functional programming.
+
+00:07.160 --> 00:09.250
+It's called in-depth pittance.
+
+00:09.260 --> 00:12.290
+I know it's a hard one to say but what does it mean.
+
+00:12.290 --> 00:19.300
+Well let me show you with an example if I have a function we'll call it not good.
+
+00:19.680 --> 00:29.190
+And that's not good function is going to return math dot random if I call this function and I click
+
+00:29.310 --> 00:38.310
+Run well I get a random number between 0 and 1 and what independence means is that given the same inputs
+
+00:39.120 --> 00:41.960
+in this case we have no inputs or you know what.
+
+00:42.000 --> 00:50.390
+Let's just add the number a number in here and click Run.
+
+00:50.420 --> 00:51.280
+All right.
+
+00:51.290 --> 00:54.360
+Every time we get something different.
+
+00:54.620 --> 01:00.270
+If I do five no matter what I still get something different.
+
+01:00.420 --> 01:08.690
+The idea of impotence is a function that always returns or does what we expected to do.
+
+01:08.700 --> 01:15.210
+Now that sounds familiar with what we've just talked about about pure functions but it's a little bit
+
+01:15.300 --> 01:31.660
+different because if I do console dot log five here or just num here and I click run no matter how many
+
+01:31.660 --> 01:34.660
+times I click Run I always get five.
+
+01:35.410 --> 01:45.430
+This function that console logs five to the outside world is still in component because multiple polls
+
+01:45.490 --> 01:53.320
+is still going to display the same text even though it's not pure because while it communicates with
+
+01:53.320 --> 01:54.780
+the outside world.
+
+01:55.000 --> 02:01.310
+Another thing that can be independent for example is deleting a user from a database.
+
+02:01.480 --> 02:04.230
+When we delete a user from a database.
+
+02:04.300 --> 02:12.700
+Well I can delete that person once but if I keep calling the function to delete that user Well it's
+
+02:12.700 --> 02:14.350
+going to return the same result.
+
+02:14.350 --> 02:22.170
+It's going to return me that empty field where there's no more user and things like in components.
+
+02:22.180 --> 02:34.300
+You see a lot in API is like EDP get requests I can do an API call and I expect that that API call given
+
+02:34.360 --> 02:38.350
+some sort of parameter is always going to return the same results.
+
+02:38.350 --> 02:42.150
+Even though we are communicating with the outside world.
+
+02:42.310 --> 02:45.360
+Now why did I teach you this.
+
+02:45.440 --> 02:47.760
+Why can't we just say everything should be pure.
+
+02:47.780 --> 02:49.900
+What do we care about in opponents.
+
+02:49.910 --> 02:57.170
+Well because this idea of being able to call something a thousand times and always giving you the same
+
+02:57.170 --> 03:04.430
+result is extremely valuable when it comes to things like parallel and distributed computation because
+
+03:04.820 --> 03:08.370
+it makes our code predictable by the way.
+
+03:08.390 --> 03:16.250
+Another interesting feature of independents is this idea of being able to call yourself over and over
+
+03:16.250 --> 03:20.170
+and over or inside of yourself and you still get the same result.
+
+03:20.300 --> 03:33.440
+For example the math dot a B.S. or absolute which if I do minus 50 while a B.S. not a B.S. I'll get
+
+03:33.440 --> 03:44.560
+a positive number or an absolute number every time if in here I call math dot absolute again I get 50
+
+03:45.980 --> 03:46.900
+again.
+
+03:47.150 --> 03:48.140
+So no matter what.
+
+03:48.140 --> 03:54.830
+Calling this function over and over over inside of itself always returns the same thing.
+
+03:54.830 --> 03:56.880
+This is pretty amazing.
+
+03:56.900 --> 04:02.950
+And with that in mind we have these guarantees of code being predictable.
+
+04:02.950 --> 04:03.810
+All right.
+
+04:03.860 --> 04:05.660
+Independents we got there right.
+
+04:05.660 --> 04:07.130
+So let's move on to the next word.

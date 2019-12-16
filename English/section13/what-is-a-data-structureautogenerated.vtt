@@ -1,0 +1,190 @@
+WEBVTT
+
+00:00.950 --> 00:01.430
+Welcome back.
+
+00:02.970 --> 00:11.880
+What is a data structure a data structure is a collection of values the values can have relationships
+
+00:11.880 --> 00:14.660
+among them and they can have functions applied to them.
+
+00:15.710 --> 00:24.590
+Each one is different in what it can do and what it is best used for most important thing to take away
+
+00:24.830 --> 00:31.570
+is that each data structure is good and is specialized for its own thing.
+
+00:32.150 --> 00:36.140
+All right Andre you just said a bunch of words and I don't really understand.
+
+00:36.800 --> 00:42.030
+Well let's show you a couple of images to simplify this you see.
+
+00:42.040 --> 00:50.540
+You can think of data structures as any sort of compartment or container a data structure is simply
+
+00:50.540 --> 00:53.280
+a file cabinet of different types.
+
+00:53.360 --> 01:00.320
+You have a backpack a place where you put maybe your school books you have drawers where you put your
+
+01:00.320 --> 01:07.970
+clothes fridge where you put your food a folder for your files and a packing box maybe for your toys
+
+01:09.880 --> 01:14.950
+each one of these containers are useful for it's own thing.
+
+01:14.950 --> 01:21.730
+For example I'm not going to put my food in a drawer over here because that yogurt is going to go bad
+
+01:21.730 --> 01:32.510
+here likewise I'm not going to put all my papers and files in my backpack or perhaps a toy box because
+
+01:32.530 --> 01:34.210
+it's just going to get crumpled up.
+
+01:34.390 --> 01:40.910
+Each one of these containers are specific for it's own thing and that's what data structure really is.
+
+01:40.960 --> 01:48.370
+It's a way for us to organize data so that we can go into the backpack and retrieve that data really
+
+01:48.370 --> 01:48.910
+easily.
+
+01:48.910 --> 01:55.060
+We can go into the fridge and grab that popsicle or ice cream really fast.
+
+01:55.060 --> 02:00.670
+We can put things in data structures and we can take things from data structures and that's all it really
+
+02:00.670 --> 02:08.300
+is and there are a ton of data structures just like in our real life how we have all these containers
+
+02:08.630 --> 02:16.930
+hold these places to put things in in programming we have a ton of them if we go to Wikipedia for example
+
+02:16.960 --> 02:23.200
+well if we scroll through here we see a ton of data structures and this is going to look overwhelming
+
+02:23.230 --> 02:30.400
+but don't worry most of these well I've never encountered myself and they're very very specific.
+
+02:30.400 --> 02:36.190
+You probably only have about five or six data structures that are really really important that we're
+
+02:36.190 --> 02:39.960
+going to go over.
+
+02:39.980 --> 02:48.640
+You may have even heard of Bitcoin and how it uses block chain technology this magical word well block
+
+02:48.640 --> 02:54.400
+chain at the end of the day is simply a data structure a way to hold information
+
+02:57.290 --> 03:06.290
+so in our programming world data structures we can store things like numbers strings boolean types just
+
+03:06.290 --> 03:14.030
+like we saw when we coded in javascript with arrays and objects arrays and objects in javascript are
+
+03:14.150 --> 03:21.490
+each a form of a data structure that allows us to store information you see as humans.
+
+03:21.490 --> 03:23.940
+This is what we do on Earth right.
+
+03:23.950 --> 03:29.350
+We take the chaos and the disorder and make order out of it.
+
+03:29.350 --> 03:33.850
+At least we try to we organize our farms to produce food.
+
+03:33.850 --> 03:40.000
+We package the food and we deliver them to the grocery stores and organize them in the grocery store
+
+03:40.000 --> 03:48.280
+so that humans can grab those and can then purchase these groceries and give money to put in a compartment
+
+03:48.370 --> 03:49.980
+and a bank.
+
+03:50.050 --> 03:50.950
+That's what programs are.
+
+03:50.950 --> 03:58.710
+We're modeling real life scenarios and the more advanced a developer you become the more time you'll
+
+03:58.760 --> 04:04.090
+start thinking and spending time talking about data structures.
+
+04:04.100 --> 04:11.780
+This is why interviewers love to talk about data structures now as I always like to mention there are
+
+04:11.870 --> 04:13.820
+always tradeoffs.
+
+04:13.910 --> 04:16.790
+Every programming question has a tradeoff.
+
+04:16.790 --> 04:24.410
+Remember our three pillars of readability memory and speed.
+
+04:24.490 --> 04:26.790
+When we talked about what code is best.
+
+04:26.950 --> 04:29.670
+Well we have the same thing with data structures.
+
+04:29.770 --> 04:34.200
+One is better than the other in some aspects and the other better than the other.
+
+04:34.210 --> 04:35.320
+That's why they exist.
+
+04:35.320 --> 04:43.700
+Each one for its own specific case and there are two parts to understanding data structures.
+
+04:43.700 --> 04:46.150
+One is how to actually build one.
+
+04:46.160 --> 04:48.710
+How can we build with code.
+
+04:48.710 --> 04:54.010
+Some of these data structures and two is how to use them.
+
+04:54.020 --> 04:56.300
+How to use these data structures.
+
+04:56.300 --> 05:02.990
+We're gonna do both of these in this course but the second point is the most important right because
+
+05:03.830 --> 05:11.670
+data structures are usually just tools and most of the time they're already pre-built.
+
+05:11.710 --> 05:17.070
+For us the most important part is how to use them when to use one over the other.
+
+05:17.140 --> 05:22.540
+And we kind of saw a little bit of that in the previous section when we talked about how to solve problems
+
+05:22.810 --> 05:30.790
+where we used an object versus an array to make our code more efficient.
+
+05:30.810 --> 05:35.880
+The goal in this course is to understand data structure so that you can pick the right data structure
+
+05:35.880 --> 05:37.020
+for your problem.
+
+05:37.750 --> 05:42.660
+Based on different scenarios data needs to be stored in a specific format.
+
+05:42.790 --> 05:50.430
+We have a handful of data structures that cover our need to store data in different formats so let's
+
+05:50.430 --> 05:52.320
+get a little bit deeper into this topic.

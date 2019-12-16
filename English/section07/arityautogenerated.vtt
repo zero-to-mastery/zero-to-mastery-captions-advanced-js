@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00.600 --> 00:01.790
+Welcome back.
+
+00:01.800 --> 00:07.820
+This is just a quick video on our last term that you might hear a lot in functional programming.
+
+00:08.040 --> 00:11.680
+And that is pretty and charity.
+
+00:11.750 --> 00:16.700
+It simply means the number of arguments a function takes.
+
+00:16.700 --> 00:17.840
+That's it.
+
+00:17.840 --> 00:22.310
+If we look at composed function well it has an equity of 2.
+
+00:22.310 --> 00:27.670
+If we look at multiply by three it has an equity of 1.
+
+00:27.680 --> 00:28.860
+Nothing too difficult right.
+
+00:29.750 --> 00:32.030
+But why my teaching you this.
+
+00:32.390 --> 00:40.280
+Because in functional programming although this isn't a solid rule it usually is a good practice and
+
+00:40.280 --> 00:45.650
+a good idea that a fewer number of parameters there are in a function.
+
+00:45.860 --> 00:49.770
+The easier it is to use that function.
+
+00:49.870 --> 00:52.790
+Why is that well.
+
+00:52.790 --> 00:58.380
+Because you can do more interesting things and makes functions more flexible.
+
+00:58.610 --> 01:07.280
+We can use things like curry or we can use functions in something like compose and pipe and compose
+
+01:07.340 --> 01:08.660
+these functions together.
+
+01:08.780 --> 01:14.780
+The more parameters a function has the harder it is to really compose it with other function.
+
+01:14.780 --> 01:18.920
+It doesn't mean it's impossible but it does become a little bit more difficult.
+
+01:19.760 --> 01:25.270
+So when it comes to charity there's no hard right or wrong.
+
+01:25.370 --> 01:32.750
+However as a personal preference I like to stick to one or two parameters when it comes to functions.
+
+01:32.810 --> 01:41.240
+Because if you're using a functional programming paradigm it does help make your function more reusable.
+
+01:41.240 --> 01:41.690
+All right.
+
+01:41.780 --> 01:43.510
+Nice and short one for charity.
+
+01:43.520 --> 01:44.710
+I'll see you in the next one.
+
+01:44.710 --> 01:44.960
+Bye bye.

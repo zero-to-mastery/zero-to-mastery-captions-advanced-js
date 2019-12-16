@@ -1,0 +1,208 @@
+WEBVTT
+
+00:01.200 --> 00:02.560
+Welcome back.
+
+00:02.580 --> 00:08.550
+Let's talk about interpreters and compilers which as we can see are important pieces in our JavaScript
+
+00:08.610 --> 00:08.960
+engine.
+
+00:10.320 --> 00:17.610
+You see in programming there are generally two ways of translating to machine language or something
+
+00:17.610 --> 00:25.700
+that our computers can understand and or we're going to talk about here actually applies to most programming
+
+00:25.700 --> 00:34.460
+languages not just Javascript Python Java C++ any language you can think of is going to use some of
+
+00:34.460 --> 00:35.460
+these concepts.
+
+00:35.510 --> 00:43.570
+So it's very important let's start with the first one the interpreter with an interpreter.
+
+00:43.570 --> 00:49.520
+What we do is we translate and read the files line by line on the fly.
+
+00:50.560 --> 00:52.600
+Let's have a look at how this works.
+
+00:52.660 --> 00:57.110
+I have a piece of code here that well doesn't do very much does it.
+
+00:57.110 --> 01:05.080
+I have a function that does some calculation and we just loop over this calculation which is five plus
+
+01:05.080 --> 01:09.370
+four right over here and we do that all a thousand times.
+
+01:09.370 --> 01:14.240
+That's a long time and you see that we get the result nine over here.
+
+01:14.410 --> 01:17.290
+But the loop is happening over and over.
+
+01:17.380 --> 01:28.240
+So if I go console dot log here I we see that yeah this is looping over and over and over now with an
+
+01:28.240 --> 01:29.060
+interpreter.
+
+01:29.110 --> 01:37.500
+If I give this file to an interpreter the translation happens line by line on the fly and this is how
+
+01:37.500 --> 01:39.600
+you think the code should be run right.
+
+01:39.630 --> 01:41.820
+The interpreter sees the first line.
+
+01:41.820 --> 01:46.620
+Then the second line then the third line and says All right this is a function.
+
+01:46.680 --> 01:53.070
+And then it goes to the next part and says All right I should loop over this a bunch of times and it
+
+01:53.070 --> 01:55.020
+starts doing some calculation.
+
+01:55.020 --> 01:56.090
+It's going to go and see.
+
+01:56.090 --> 01:56.430
+All right.
+
+01:56.430 --> 01:57.960
+That's what the function is.
+
+01:58.020 --> 02:01.880
+I'm going to run five plus four and then I'm looping again.
+
+02:01.920 --> 02:08.530
+So I'm going to go once again run some calculation five plus for some calculation five plus four.
+
+02:08.610 --> 02:15.230
+And it keeps running keeps running keeps running and this is how you might think code should be run.
+
+02:15.230 --> 02:22.880
+Right because interpreting code simply means taking a set of instructions like we have over here and
+
+02:23.030 --> 02:26.540
+returning an answer and doing something with that code.
+
+02:26.540 --> 02:29.430
+It's just like me telling a computer to do this.
+
+02:29.450 --> 02:37.160
+Then do that then do this and initially that's how javascript worked it was interpreting using an interpreter
+
+02:37.550 --> 02:39.770
+which makes sense.
+
+02:39.830 --> 02:40.100
+All right.
+
+02:40.100 --> 02:43.170
+But what about a compiler.
+
+02:43.240 --> 02:46.330
+What's the deal with a compiler.
+
+02:46.330 --> 02:50.910
+Well a compiler I like an interpreter doesn't translate on the fly.
+
+02:51.580 --> 02:58.990
+What it does is it works ahead of time to create a translation of what code we've just written and it
+
+02:58.990 --> 03:07.120
+compiles down to usually a language that can be understood by our machines.
+
+03:07.120 --> 03:13.990
+Let's have a look at this in more detail with a compiler this time around it's going to take one pass
+
+03:13.990 --> 03:22.820
+through the code and try to understand what the code does and it's going to take the program in JavaScript
+
+03:23.330 --> 03:28.740
+or any type of language and write a new program in your new language.
+
+03:28.910 --> 03:31.040
+Let's say two programming language.
+
+03:31.070 --> 03:39.300
+Why or acts in this language that it spits out let's call it just x.
+
+03:39.320 --> 03:47.440
+Well this language that it spits out if we interpret it this language that is going line by one one
+
+03:47.460 --> 03:55.390
+at a time and running it it's going to create the same results as our previous language.
+
+03:55.470 --> 04:04.860
+So compiler tries to understand what we want to do and takes our language and changes it into something
+
+04:04.860 --> 04:13.520
+else and this usually happens into something called a lower level language such as machine code.
+
+04:13.530 --> 04:17.900
+Now I know you're still a little bit confused.
+
+04:17.970 --> 04:25.560
+You see the definition itself is actually a little bit fuzzy in some respects all languages have to
+
+04:25.560 --> 04:36.450
+be interpreted and compiled because it has to run it has to be interpreted and it also has to most likely
+
+04:36.450 --> 04:44.430
+get translated into something low level like machine code for example.
+
+04:44.620 --> 04:52.810
+We have a high level language here like Javascript and we run a piece of code here an interpreter will
+
+04:53.080 --> 05:02.920
+take this code line by line and spit out bite code like this that will execute this code for us or a
+
+05:02.920 --> 05:10.870
+compiler might take this code and go through this and spit out machine code just like that so that it
+
+05:10.870 --> 05:20.100
+can give it to a CPSU so that the CPSU can actually run the code but remember how I said a program or
+
+05:20.610 --> 05:29.190
+most languages are both compiled and interpreted because over here x 86 code which is machine code this
+
+05:29.190 --> 05:35.850
+is handed off to the CPSU and it needs to interpret these instructions and in reality when it comes
+
+05:35.850 --> 05:40.140
+to x eighty six is actually too slow to be interpreted literally.
+
+05:40.140 --> 05:48.330
+So instead most modern CPE use will compile this X 86 code into its own native micro code.
+
+05:48.330 --> 05:56.140
+So as you can see here there's a lot of layers that happen on and on but the main takeaways is this.
+
+05:56.280 --> 06:02.970
+There are two ways to run javascript using an interpreter or a compiler.
+
+06:02.970 --> 06:10.070
+Now I know it's still a little bit fuzzy but if I ask you why would we want to do one over the other.
+
+06:10.080 --> 06:12.480
+What are the pros and cons on each.
+
+06:12.480 --> 06:14.580
+What do you think that is.
+
+06:14.580 --> 06:18.510
+Why would you pick one over the other in the next video we're going to explore that.
+
+06:18.660 --> 06:19.350
+I'll see you now.
+
+06:20.020 --> 06:20.200
+Bob.

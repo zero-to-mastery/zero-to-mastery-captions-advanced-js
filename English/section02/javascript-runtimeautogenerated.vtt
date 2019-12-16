@@ -1,0 +1,529 @@
+WEBVTT
+
+00:00.550 --> 00:01.440
+Welcome back.
+
+00:01.480 --> 00:07.110
+It's time to talk about this diagram that looks a lot more complicated than it actually is.
+
+00:07.300 --> 00:14.700
+The javascript runtime since as we mentioned javascript is a single threaded programming language.
+
+00:14.740 --> 00:23.920
+It has only one stack in one heap hence if any other program wants to execute something it has to wait
+
+00:24.340 --> 00:29.470
+until the previous program or function is completely executed.
+
+00:29.470 --> 00:32.610
+And if I do something that takes a really really long time.
+
+00:32.920 --> 00:36.070
+While things are gonna be really slow for our program.
+
+00:36.070 --> 00:36.960
+That's not good.
+
+00:37.000 --> 00:37.420
+Boo.
+
+00:37.420 --> 00:39.010
+That's not nice is it.
+
+00:39.010 --> 00:40.130
+We don't like that.
+
+00:40.480 --> 00:44.080
+And this is where javascript runtime comes in.
+
+00:44.140 --> 00:52.090
+In this case the web browser is working in the background while the synchronous javascript code is running
+
+00:52.780 --> 01:00.820
+and it's using something called the web API or the web browser API to communicate and let the J.S. engine
+
+01:00.820 --> 01:05.660
+know Hey I'm back with some data some work that you told me to do in the background.
+
+01:06.820 --> 01:19.140
+Let's dig deep into this topic the web API comes with the browser Chrome Microsoft Edge safari Firefox
+
+01:20.310 --> 01:28.700
+all of them have their JavaScript engine implementation and all of them have a javascript runtime that
+
+01:28.700 --> 01:39.730
+provide a web API these web APIs are applications which can do a variety of things like send HDP requests
+
+01:40.090 --> 01:48.210
+listen to Dom events maybe click events on a dom delay execution using something like set timeout.
+
+01:48.420 --> 01:49.940
+Can you set interval.
+
+01:50.120 --> 01:56.260
+You can even be used for caching or database storage on the browser.
+
+01:57.360 --> 01:58.750
+Let me show you what I mean.
+
+01:59.070 --> 02:08.310
+If we go to the console here and I look at the window object Well this is what the browser provides.
+
+02:08.310 --> 02:16.410
+This is the web API that we can use so that if I scroll down here I can see different things that the
+
+02:16.410 --> 02:20.580
+browser provides for us that our JavaScript engine can use.
+
+02:20.620 --> 02:28.170
+For example if I scroll down to let's go to fetch fetch that is the function to make HDB calls.
+
+02:28.480 --> 02:38.010
+We can use that if I keep scrolling down and let's look at something fun like indexed Dobbie D.B. or
+
+02:38.010 --> 02:39.230
+index D.B..
+
+02:39.510 --> 02:43.560
+That's actually a little database that we can use on our browser.
+
+02:43.560 --> 02:51.950
+If I go to application here I see that I have some storage and indexed D.B. that the browser provides
+
+02:51.950 --> 02:52.890
+for us.
+
+02:53.030 --> 02:54.610
+Very very cool.
+
+02:54.770 --> 03:01.230
+If I keep scrolling down I also see something familiar to us such as set time out.
+
+03:01.280 --> 03:02.450
+Let's see where is it.
+
+03:02.600 --> 03:03.320
+Right here.
+
+03:03.320 --> 03:05.840
+Set time out set in terrible.
+
+03:05.840 --> 03:08.710
+All of them are provided by the browser.
+
+03:08.810 --> 03:11.930
+They're not native to javascript.
+
+03:12.110 --> 03:18.650
+So remember that the browsers are helping us create rich Web applications so that users aren't just
+
+03:18.650 --> 03:23.660
+sitting around waiting for our javascript to execute anything that can be offloaded.
+
+03:23.660 --> 03:28.880
+They'll take care of that for us in the background because you can imagine if the browser had to use
+
+03:28.880 --> 03:34.110
+the same javascript thread for execution of these features.
+
+03:34.160 --> 03:36.640
+Well it's going to take a really really long time.
+
+03:36.770 --> 03:46.520
+So browsers actually underneath the hood use low level programming languages like C++ to perform these
+
+03:46.520 --> 03:48.900
+operations in the background.
+
+03:49.190 --> 03:58.730
+And these API eyes are called Web API because while their API is provided by a web browser and these
+
+03:58.850 --> 04:06.110
+web API eyes are what we call a synchronous that means you can instruct these API to do something in
+
+04:06.110 --> 04:09.570
+the background and return data once it's done.
+
+04:09.590 --> 04:17.600
+Meanwhile we can just continue working on our javascript call stack and execute functions.
+
+04:17.650 --> 04:20.350
+So what are these other two things.
+
+04:20.410 --> 04:24.970
+Now we're only going to scratch the surface here because towards the end of this course we have an entire
+
+04:24.970 --> 04:27.290
+asynchronous javascript section.
+
+04:27.290 --> 04:30.340
+But this is what happens underneath the hood.
+
+04:30.340 --> 04:33.250
+We have items on the call stack.
+
+04:33.430 --> 04:39.000
+And as soon as something comes up like set timeout that's not part of JavaScript.
+
+04:39.010 --> 04:45.490
+It's part of the web API the call stack is going to say oh I have something that's not for me.
+
+04:45.490 --> 04:49.060
+Here it's for the web browser for the web API.
+
+04:49.060 --> 04:52.630
+So it's going to say hey web API here it is.
+
+04:52.630 --> 04:53.680
+I don't know what to do with this.
+
+04:53.680 --> 04:55.130
+You take care of it.
+
+04:55.300 --> 04:59.230
+The web API is going to say Oh I know what set time it is.
+
+04:59.320 --> 05:01.970
+Let me take care of that and do that in the background.
+
+05:02.170 --> 05:08.320
+Now with set time out you usually want something to happen afterwards.
+
+05:08.320 --> 05:16.150
+So once the Web API is done working on it maybe it's fetching some data from a server it's going to
+
+05:16.150 --> 05:23.650
+say all right I'm done with this work here's the data and here's perhaps a callback or what I want you
+
+05:23.650 --> 05:25.960
+to do with that data.
+
+05:25.960 --> 05:31.510
+And then that event loop is going to say as soon as the call stack is free is going to say hey I have
+
+05:31.510 --> 05:33.260
+something for you here.
+
+05:33.340 --> 05:36.260
+Would you like to added onto the stack.
+
+05:36.430 --> 05:42.240
+And if the stack is empty it's going to push this callback onto the stack.
+
+05:42.430 --> 05:44.050
+But that's kind of confusing.
+
+05:44.050 --> 05:46.710
+Let's actually code this and demonstrate how it works.
+
+05:47.560 --> 05:53.420
+Imagine we had a console dialog and in here we'll just print one.
+
+05:53.500 --> 05:58.240
+And by the way this is a really really common interview question so hope that catches your interest
+
+05:58.960 --> 06:07.170
+and lets say we'll also do set time out which is part of the web API.
+
+06:07.420 --> 06:13.720
+And in here we'll just give it a function and we'll just say console log
+
+06:17.830 --> 06:25.200
+in let's say thousand milliseconds or 1 second and then console dialogue.
+
+06:30.830 --> 06:34.340
+If you've been working with JavaScript for a while this isn't difficult.
+
+06:34.340 --> 06:35.790
+You know what's going to happen.
+
+06:36.080 --> 06:38.120
+But just to go over it quickly.
+
+06:38.120 --> 06:51.440
+If I go to my browser here let's copy and basis and I run it I get 1 3 2 Why is that.
+
+06:51.440 --> 06:59.690
+Well it's because we added a console log to our stack and we logged onto our console and then we removed
+
+06:59.900 --> 07:02.450
+that call from our call stack.
+
+07:02.570 --> 07:06.010
+And then we went to the next line set timeout.
+
+07:06.020 --> 07:13.700
+We added this onto our stack and then immediately the JavaScript engine is going to say oh sit Time
+
+07:13.700 --> 07:13.900
+out.
+
+07:13.910 --> 07:15.040
+That's a web API.
+
+07:15.110 --> 07:16.180
+I don't really care about it.
+
+07:16.190 --> 07:17.270
+I don't know what to do with it.
+
+07:17.300 --> 07:24.470
+I'm going to just send it off to the web API so this gets moved away from the call stack and gets sent
+
+07:24.620 --> 07:26.540
+to the web API.
+
+07:26.540 --> 07:32.480
+Now we don't know what's happening on that side of things but we just go to the next line and say console
+
+07:32.480 --> 07:38.130
+dot log three it's going to log three now behind the scenes.
+
+07:38.130 --> 07:48.150
+The web API is going to take the set timeout it's going to start a timer that is going to run for one
+
+07:48.150 --> 07:52.740
+second and once that one second is over.
+
+07:52.870 --> 07:55.090
+It's going to push the callback.
+
+07:55.090 --> 07:57.140
+That is what to do.
+
+07:57.160 --> 08:03.130
+Once it's done running for one second and the callback in this case is console log 2.
+
+08:03.160 --> 08:06.540
+It's like it's calling us back saying hey we're ready for you.
+
+08:06.550 --> 08:08.070
+One second has passed.
+
+08:08.200 --> 08:12.480
+Can you console log to and what happens now.
+
+08:12.480 --> 08:21.090
+The console log too goes to the callback you let's go to the diagram goes to the callback queue and
+
+08:21.090 --> 08:23.790
+says I'm the first person that's done.
+
+08:23.940 --> 08:30.840
+Can you console lock to the event loop is a loop that's constantly running that saying hey is the call
+
+08:30.840 --> 08:37.170
+stack empty is the call stack the MP is the call stack empty and the event loop only runs once the call
+
+08:37.170 --> 08:45.620
+stack is empty and the entire JavaScript file has been bred in our case console log three no matter
+
+08:45.620 --> 08:53.570
+how fast the web API response adds the console log to to the callback queue the then loop one start
+
+08:53.570 --> 09:00.380
+putting anything back into the call stack until the call stack is empty and we've run through the entire
+
+09:00.380 --> 09:02.490
+file at least once.
+
+09:02.510 --> 09:09.800
+So now in case after console log 3 gets printed and popped off the call stack the event loop is going
+
+09:09.800 --> 09:12.230
+to tick and say all right.
+
+09:12.230 --> 09:19.380
+Can you console log 2 and that's why we get this weird pattern now.
+
+09:19.420 --> 09:27.340
+Philip Roberts who has an amazing talk about the javascript event loop and this whole javascript runtime
+
+09:27.790 --> 09:32.410
+system created this tool to actually visualize this a lot better than I could explain.
+
+09:33.470 --> 09:38.780
+We're gonna go over the same steps that we just did we see that we have function a that calls function
+
+09:38.780 --> 09:44.220
+b function b that calls function C and function C that calls set time out.
+
+09:44.510 --> 09:51.410
+That's a Web API and it's going to have a callback function that is once it's done running for three
+
+09:51.410 --> 09:58.580
+seconds call achieve nirvana and achiever nirvana is going to console log you are enlightened.
+
+09:59.180 --> 10:06.930
+Let's see what happens and before I click play see if he can predict what's going to happen and to test
+
+10:06.930 --> 10:07.260
+yourself.
+
+10:08.010 --> 10:08.880
+Let's have a look.
+
+10:11.660 --> 10:17.480
+So we see right away a gets called that's the very first thing that happens because up until now we've
+
+10:17.480 --> 10:24.460
+just declared functions and we only run on line 17.
+
+10:24.460 --> 10:31.700
+That is we execute functioning so function gets executed and we call B.
+
+10:31.750 --> 10:38.950
+So we get we add that to the call stack and then we resume call C that gets added to the call stack
+
+10:39.490 --> 10:42.560
+and then C gets called.
+
+10:42.620 --> 10:46.400
+That is we add said time out to the call stack.
+
+10:46.400 --> 10:48.110
+And what do you think happens here.
+
+10:48.110 --> 10:57.850
+Well said timeout now get sent to the web API because well it's a web API and we don't really care what
+
+10:57.850 --> 11:01.000
+the web API does with this.
+
+11:01.000 --> 11:03.000
+It has its own implementation.
+
+11:03.280 --> 11:11.320
+But in this case it's using this timer to just run for three seconds so that it can add it to the callback
+
+11:11.320 --> 11:11.530
+queue.
+
+11:12.220 --> 11:17.500
+But in the meantime our JavaScript engine doesn't care what's happening it's just going to keep working
+
+11:17.500 --> 11:18.560
+on the call stack.
+
+11:18.610 --> 11:28.840
+So if I resume here you'll see that A B and C all get popped off the stack while the timer is running.
+
+11:28.870 --> 11:31.560
+Now see what happens when this timer ends.
+
+11:31.680 --> 11:34.910
+Want to resume and look at that.
+
+11:35.050 --> 11:36.730
+It finished in three seconds.
+
+11:36.730 --> 11:43.720
+So it's going to put it back or put it into the callback queue and the callback queue is going to say
+
+11:43.720 --> 11:48.170
+to the event loop Hey can I can I come back to the stack I'm lonely.
+
+11:48.180 --> 11:49.370
+Can I come back to the stack.
+
+11:49.520 --> 11:51.850
+And the event loop says Ho ho ho hold on.
+
+11:51.850 --> 11:54.210
+Let me check is the call stack empty.
+
+11:54.220 --> 11:55.420
+Yes it is.
+
+11:55.420 --> 11:59.310
+Has the entire file been run.
+
+11:59.320 --> 11:59.670
+Yes.
+
+11:59.680 --> 12:02.660
+Well line 17 is the last line.
+
+12:02.710 --> 12:05.980
+So that's the last thing that we want to run.
+
+12:05.990 --> 12:06.470
+OK.
+
+12:06.520 --> 12:08.040
+You're allowed to go back on the stack.
+
+12:08.080 --> 12:09.850
+So I'm going to resume and look at that.
+
+12:10.010 --> 12:17.560
+The achieve nirvana is going to get popped or pushed onto the stack console log gets printed and then
+
+12:17.560 --> 12:19.660
+we pop everything off the stack.
+
+12:19.690 --> 12:20.730
+Congratulations.
+
+12:20.740 --> 12:24.360
+We've just achieved Nirvana.
+
+12:24.440 --> 12:26.320
+That's not too bad is it.
+
+12:26.320 --> 12:30.260
+Now here's a fun little question for you.
+
+12:30.440 --> 12:36.130
+What happens if we do the exact same thing but this time add zero here.
+
+12:36.260 --> 12:37.940
+What do you think will happen.
+
+12:37.940 --> 12:44.710
+Well if I run this I get 1 3 to still now.
+
+12:44.870 --> 12:47.880
+Like I said before this is a very common interview question.
+
+12:47.900 --> 12:56.240
+The reason that happens is that no matter how fast this set timeout timer happens it still gets sent
+
+12:56.300 --> 13:04.450
+to the web API still get sent to the callback queue and the event loop still needs to check those two
+
+13:04.510 --> 13:11.590
+checks Hey is the stack empty and has the entire file been run in our case.
+
+13:11.590 --> 13:14.190
+No we are still waiting on console log to run.
+
+13:14.440 --> 13:21.700
+And only then will I push our callback function our console log to our call stack.
+
+13:21.700 --> 13:30.770
+How cool is that and using this method we're able to have this power of asynchronous code that is instead
+
+13:30.770 --> 13:38.630
+of being limited to one call stack and one memory heap whenever we get tasks that can be asynchronous
+
+13:38.840 --> 13:45.170
+that take a long time possibly like modifying dom or making HDP requests.
+
+13:45.230 --> 13:52.970
+Well in that case we can just send that off to the browser the browser can just run that in the background
+
+13:53.570 --> 14:00.400
+and whenever we're ready it can just use its callback to an event loop to notify us.
+
+14:00.420 --> 14:01.320
+All right.
+
+14:01.320 --> 14:02.660
+That was a long one.
+
+14:02.670 --> 14:05.790
+Let's take a quick break and I'll see you in the next video.
+
+14:05.790 --> 14:06.060
+Bye bye.

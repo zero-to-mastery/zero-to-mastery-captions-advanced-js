@@ -1,0 +1,280 @@
+WEBVTT
+
+00:01.700 --> 00:08.660
+Looking at hash functions we can start to think about what actions they perform and how fast it can
+
+00:08.660 --> 00:08.990
+be done.
+
+00:10.880 --> 00:18.050
+When it comes to inserting something in our memory space well it's going to be 0 of 1.
+
+00:18.140 --> 00:26.540
+We hash the key such as grapes through the hash function and places it automatically into the address
+
+00:26.540 --> 00:28.660
+space that it comes up with.
+
+00:29.690 --> 00:32.080
+Look up is the exact same.
+
+00:32.450 --> 00:40.430
+We access the property that property is gonna get hashed and direct us exactly to the address to find
+
+00:40.430 --> 00:42.050
+the values.
+
+00:42.070 --> 00:43.720
+What about deletes.
+
+00:43.720 --> 00:44.290
+Same thing.
+
+00:44.830 --> 00:47.680
+We simply use the key.
+
+00:47.680 --> 00:54.690
+Right away we know where to delete the item from and because it isn't ordered.
+
+00:54.820 --> 00:58.210
+We don't have to shift indexes like we did with arrays.
+
+00:58.720 --> 01:01.510
+Everything is just nice and simple.
+
+01:01.520 --> 01:02.680
+What about searching.
+
+01:02.990 --> 01:07.770
+If we want to find something in our basket like apples.
+
+01:07.850 --> 01:09.590
+Well that's easy too.
+
+01:09.680 --> 01:17.210
+We simply use hash functions if we go to our playground in Javascript.
+
+01:17.240 --> 01:26.840
+I can create an object let's say let user and this user will have property of each 50 for let's say
+
+01:26.840 --> 01:31.180
+that the name is going to be Kylie
+
+01:33.820 --> 01:35.020
+magic.
+
+01:35.080 --> 01:37.800
+Well let's say Kylie does have magic skills.
+
+01:37.810 --> 01:41.320
+So I'll set it to true and for fun.
+
+01:41.320 --> 01:51.830
+Let's say that the scream is a function that will just console that log a scream.
+
+01:53.400 --> 02:01.130
+That was not the strongest of screams but I don't want to scare people around me when I run this I've
+
+02:01.130 --> 02:07.640
+created a user object and the age 54 named Kylie.
+
+02:07.700 --> 02:14.450
+Magic true scream and dysfunction are all going to get placed somewhere in memory.
+
+02:14.570 --> 02:22.360
+Different addresses but I can access this really really fast I can say user dot age which is going to
+
+02:22.360 --> 02:34.210
+give me 54 at one time perhaps adding a new property I can just simply say user dot spell is going to
+
+02:34.210 --> 02:47.020
+equal Abra dad Deborah and if I run this and let's just check out what the user object gives us we see
+
+02:47.020 --> 02:52.920
+that we now have the spell abracadabra added.
+
+02:52.920 --> 03:03.460
+This again is access of 0 1 is 0 of 1 because we take it through the hash functions and the computer
+
+03:03.460 --> 03:15.970
+decides where to put both spell and abracadabra in memory and if I am user dot scream same thing I cannot
+
+03:15.970 --> 03:17.670
+spell scream.
+
+03:17.800 --> 03:28.660
+Same thing I get R I get to access this function in memory really really fast at 0 of 1 How amazing
+
+03:28.660 --> 03:34.780
+is that and I know where you're thinking hash tables are amazing we should be using them all the time
+
+03:35.620 --> 03:42.030
+and you're right we should be using them in a lot of cases but as we know there's always pros and cons.
+
+03:42.370 --> 03:51.150
+Now let me talk to you about one of the main problems with hash tables and I have a nice visual to demonstrate
+
+03:51.150 --> 03:51.910
+this for you.
+
+03:51.960 --> 03:57.180
+I'll link to this and this video so you can play around with it later.
+
+03:57.300 --> 04:06.360
+I have a little animation here where we have twelve memory spaces remember our computer has limited
+
+04:06.450 --> 04:14.850
+space and when we create an object or a hash table The computer decides how much space to allocate.
+
+04:14.940 --> 04:21.210
+It's not going to allocate all the space to the hash table it's going to allocate a bit of it and I'll
+
+04:21.210 --> 04:28.720
+show you later on when we implement our own hash table how we can adjust the size but seeing that there's
+
+04:28.720 --> 04:37.320
+only twelve spaces you can imagine if I insert here let's say 1 see if I can make this bigger so you
+
+04:37.320 --> 04:37.700
+can see it.
+
+04:37.770 --> 04:38.030
+Yeah.
+
+04:38.040 --> 04:44.560
+There you go I'm going to insert let's say the number three gets inserted here.
+
+04:44.560 --> 04:48.050
+Let's do 55 insert it.
+
+04:48.080 --> 04:49.360
+Oh what happened there.
+
+04:50.580 --> 05:03.060
+Do you see that the hash function randomly assigned a space in memory and put it in 3 0 remember.
+
+05:03.200 --> 05:10.520
+There's nothing telling the hash function to evenly distribute until everything is full although hash
+
+05:10.520 --> 05:15.800
+functions are optimized to try to distribute this data all over.
+
+05:15.860 --> 05:17.970
+It also matters what we put into it.
+
+05:17.990 --> 05:26.810
+So when fifty five gets hashed Well this hash function generates the address location of three to put
+
+05:26.820 --> 05:27.320
+it.
+
+05:27.740 --> 05:31.730
+And because we already have three there it does something funny here.
+
+05:31.820 --> 05:33.840
+Let's keep adding here and see what happens.
+
+05:33.980 --> 05:43.840
+I'll add two maybe add twelve and finally add 14 0.
+
+05:43.860 --> 05:50.060
+It did the same thing again and what we just notice here is something called collision
+
+05:53.260 --> 05:56.660
+and a collision looks something like this.
+
+05:56.710 --> 05:58.570
+We have the keys.
+
+05:58.570 --> 06:10.960
+Let's say where inserting the name and the phone number of a user and we initially place John Smith.
+
+06:10.960 --> 06:16.840
+This key gets hashed gets placed in the address space of 150 to and gets stored.
+
+06:16.870 --> 06:23.190
+Remember how I said it actually stores both keys and values it stores in something called buckets.
+
+06:23.230 --> 06:30.950
+John Smith with the value that is its phone number right here and then we keep going with Lisa Smith
+
+06:31.550 --> 06:35.350
+then Sam doe then Sandra.
+
+06:35.420 --> 06:35.990
+Oh no.
+
+06:35.990 --> 06:45.750
+As soon as we has Sandra D it becomes the same address space as John Smith and we have a collision and
+
+06:45.750 --> 06:53.670
+because of this collision we need a way to store both users somehow in this address space and something
+
+06:53.670 --> 07:02.920
+funky is going on here with this little circle and then a point and Sandra D and just a hint here.
+
+07:03.030 --> 07:09.820
+This is actually a new data structure that we're going to learn about called link lists coming up.
+
+07:10.230 --> 07:17.540
+You see with hash tables we can't avoid these collisions with enough data with limited memory.
+
+07:17.640 --> 07:20.610
+We're always going to have this collision.
+
+07:20.610 --> 07:28.920
+So there is a possibility if we go back to our example and I refresh here to start from scratch that
+
+07:30.870 --> 07:40.540
+we constantly just add despite our hash table that's really really fast costly just keep adding to the
+
+07:40.540 --> 07:49.200
+same memory space which slows down our ability to access or insert information.
+
+07:49.200 --> 07:56.730
+Because now if I want to check what's in this address space I have to go one two three four five and
+
+07:56.730 --> 07:58.250
+so on and so forth.
+
+07:58.470 --> 08:11.240
+Theoretically when you have a collision it slows down reading and writing with a hash table with o n
+
+08:11.750 --> 08:23.220
+divided by K where k is the size of your hash table and remember because we remove constants and simplify
+
+08:23.220 --> 08:31.280
+things it becomes an oh an operation now collision will likely happen in any hash table implementation.
+
+08:31.500 --> 08:38.100
+And luckily for you you're never going to have to really implemented yourself and it's not a very common
+
+08:38.340 --> 08:44.440
+interview question but you do want to know about it so you can talk about it there's two common ways
+
+08:44.440 --> 08:47.100
+to deal with these collisions.
+
+08:47.170 --> 08:52.930
+I showed you one of them with something called Link List which we'll talk about later on.
+
+08:52.930 --> 09:01.750
+But if we go to the hash table Wikipedia page and look at collision resolution you can see that there's
+
+09:01.840 --> 09:11.330
+a ton of different ways to solve collisions the way that I showed you is called separate chaining but
+
+09:11.330 --> 09:18.440
+there's different methods like open addressing and Robinhood hashing that you can read about if you're
+
+09:18.440 --> 09:20.560
+really interested in the topic.
+
+09:20.630 --> 09:29.070
+The point I wanted to make is that there is a bit of a of a downside when we talk about fast lookups
+
+09:29.610 --> 09:37.970
+and hash tables occasionally depending on the hash function it might take oh of N.
+
+09:38.180 --> 09:43.160
+All right let's keep going and expand our knowledge of hash tables in the next video.

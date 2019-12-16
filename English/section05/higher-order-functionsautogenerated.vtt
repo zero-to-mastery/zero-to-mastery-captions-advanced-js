@@ -1,0 +1,547 @@
+WEBVTT
+
+00:01.060 --> 00:02.190
+Welcome back.
+
+00:02.200 --> 00:06.540
+Let's talk about higher order functions now.
+
+00:06.700 --> 00:16.240
+Higher order functions are simply a function that can take a function as an argument or a function that
+
+00:16.240 --> 00:18.880
+returns another function.
+
+00:18.880 --> 00:19.680
+That's it.
+
+00:19.870 --> 00:22.480
+That's all higher order function is.
+
+00:22.690 --> 00:29.350
+But the big problem is that most people know what a higher order functions are but don't really understand
+
+00:29.440 --> 00:30.700
+why they're useful.
+
+00:30.700 --> 00:31.930
+Why we care.
+
+00:31.930 --> 00:37.820
+So my challenge in this video is to make you understand why higher order functions are useful.
+
+00:38.350 --> 00:40.360
+Let's get started with the first one.
+
+00:40.420 --> 00:46.630
+Let's start off with function and see what sort of problems we have with just a simple function.
+
+00:46.630 --> 00:53.410
+Let's say we're creating a system for our company where we have to let users log in.
+
+00:53.470 --> 01:03.040
+So I'm going to just naively create a function called let Adam log in in this simple function is going
+
+01:03.040 --> 01:07.480
+to do some sort of work to authenticate the user.
+
+01:07.480 --> 01:13.960
+In my case just to keep things simple I'm just going to create and write an empty array and we're going
+
+01:13.970 --> 01:17.200
+to simulate the type of work that the system I need to do.
+
+01:17.200 --> 01:23.050
+So let's do a for loop that says let I equal to zero.
+
+01:23.140 --> 01:23.790
+That's not zero.
+
+01:23.800 --> 01:24.720
+That's 0.
+
+01:25.180 --> 01:31.920
+And let's say i is less than a big number.
+
+01:31.990 --> 01:40.240
+And then finally we increment i one by one and then here we'll just do a red dot.
+
+01:40.310 --> 01:42.950
+Push the index.
+
+01:42.950 --> 01:45.190
+So we're doing something completely useless.
+
+01:45.230 --> 01:50.720
+But just to slow down our system so that at the end of it hopefully everything works out and we can
+
+01:50.720 --> 01:57.520
+just return ACCESS GRANTED TO ADAM Good job Adam.
+
+01:57.800 --> 02:05.150
+So that if I run let Adam log in I get access granted to Adam.
+
+02:05.540 --> 02:07.890
+But you saw that there was a bit of a pause there.
+
+02:07.940 --> 02:16.990
+If I add an extra zero here and I run you see that there's a bit of time that takes to grant access
+
+02:17.050 --> 02:17.910
+to Adam.
+
+02:17.980 --> 02:25.300
+So for now just think of this as a some sort of an authentication log in service that the company has
+
+02:26.540 --> 02:26.750
+all right.
+
+02:26.750 --> 02:27.710
+So that's great.
+
+02:27.740 --> 02:35.020
+We just created a function that lets Adam log in but our company has more employees right.
+
+02:35.030 --> 02:36.800
+What if we also have Eva.
+
+02:36.800 --> 02:42.870
+Well Eva needs to log in as well so let's create another function for Avon.
+
+02:42.880 --> 02:50.340
+Now this function favor instead of let Adam log in we'll be let a log in and we'll change access granted
+
+02:50.760 --> 02:59.010
+to Eva and then we can call that function that Eva log in.
+
+02:59.050 --> 03:03.960
+Now I'm going to change the zeros here just so it's a little bit faster and I'll cook.
+
+03:04.120 --> 03:05.000
+Right.
+
+03:05.080 --> 03:05.810
+There you go.
+
+03:05.890 --> 03:09.040
+Access granted to Eva perfect.
+
+03:09.160 --> 03:17.150
+Now what's the problem with this code the principle that we always hear as developers dry do not repeat
+
+03:17.150 --> 03:18.270
+yourself.
+
+03:18.470 --> 03:26.690
+We've created some code that is not very flexible right for each user that we have we have to copy and
+
+03:26.690 --> 03:30.000
+paste code and repeat ourself.
+
+03:30.090 --> 03:34.310
+And imagine if we had hundreds and hundreds of employees doing this every time.
+
+03:34.310 --> 03:37.220
+Well that's that's not very clean is it.
+
+03:37.250 --> 03:38.170
+It's not very efficient.
+
+03:38.180 --> 03:41.840
+It's not very easy to read or reasonable.
+
+03:41.910 --> 03:45.880
+So how can we fix this.
+
+03:45.890 --> 03:50.570
+Well let's move on to our next level.
+
+03:50.570 --> 03:57.200
+Let's go from a simple function to a function that accepts parameters to gain some superpowers.
+
+03:57.200 --> 03:57.680
+Let's have a look.
+
+03:58.640 --> 04:09.880
+Instead of doing this manually let's remove this and let's create a generic let the user log in function
+
+04:10.490 --> 04:13.310
+in this user is going to accept a parameter.
+
+04:13.310 --> 04:20.130
+User that will give access to some user.
+
+04:20.130 --> 04:21.330
+In this case.
+
+04:21.540 --> 04:25.930
+Well let's extract this piece of code out first.
+
+04:25.920 --> 04:39.780
+So let me copy this out and ideally we want some access to be granted to a user so let's say I do let
+
+04:40.740 --> 04:46.530
+user log in and I'll do Adam cyclic run here.
+
+04:46.590 --> 04:56.070
+Access granted to Adam and then if I do that user log in to Evan and by Evan I mean Eva I get gave us
+
+04:56.100 --> 04:57.120
+an access.
+
+04:57.210 --> 05:01.240
+Now let's refactor this code a little bit to make it cleaner.
+
+05:01.350 --> 05:11.380
+I'm going to create a another function and this function will just be called give access to that accepts
+
+05:11.770 --> 05:20.760
+a user and this user and you know let's use an arrow function here just to change things up and this
+
+05:21.150 --> 05:36.390
+error function is going to return access granted to the user or let's just say name so that we're being
+
+05:36.660 --> 05:37.310
+descriptive here.
+
+05:40.080 --> 05:45.810
+Now due to the nature of aero functions and because I only have one line I can do this and not wrap
+
+05:45.810 --> 05:49.240
+it in a curly bracket and this automatically gets returned.
+
+05:49.710 --> 05:55.730
+So that now I can just say give access to
+
+05:58.550 --> 06:02.350
+so what superpower do we just gain here.
+
+06:02.360 --> 06:09.840
+Well we leveled up over here because in here we've done something amazing.
+
+06:09.880 --> 06:24.380
+We now tell the function what data to use when we call it so remember before we had a function and that
+
+06:24.380 --> 06:33.250
+function when we actually called it decided what to do with that data instead.
+
+06:33.430 --> 06:41.590
+We now have a more generic function that says hey I'm going to give you later on some generic piece
+
+06:41.590 --> 06:42.360
+of data.
+
+06:42.400 --> 06:49.900
+I don't know what yet but when I pass you the user do some sort of functionality to it so that instead
+
+06:49.900 --> 06:57.370
+of defining Eva or Adam inside of the function we can just define that later on when we actually invoke
+
+06:57.550 --> 07:06.800
+the function so we have the ability when we call the function to define the data so we essentially have
+
+07:07.100 --> 07:13.640
+a bit more flexibility instead of when we define the function telling it what exactly one needs to be
+
+07:13.640 --> 07:14.100
+done.
+
+07:14.210 --> 07:20.720
+We can delay that until execution time and this gives us as you can see more flexibility.
+
+07:20.810 --> 07:22.800
+We kept our code dry.
+
+07:22.880 --> 07:23.810
+Awesome.
+
+07:23.810 --> 07:24.320
+That's great.
+
+07:24.320 --> 07:27.860
+But I thought we're going to talk about higher order functions.
+
+07:27.860 --> 07:33.200
+Well let's see how we might have another problem here.
+
+07:33.230 --> 07:41.730
+What if we have instead of just a user we also have admin somebody with a lot higher privilege.
+
+07:41.780 --> 07:43.940
+Well we'd have to copy this code.
+
+07:44.420 --> 07:51.130
+And this time around say let admin log in let me remove the comment from here.
+
+07:51.130 --> 07:58.450
+And this time around instead of just a simple user it's an admin and this admin we have to give it access
+
+07:58.750 --> 08:06.640
+but because their admin they have to go through a bit more security procedures and let's say it takes
+
+08:06.670 --> 08:14.930
+a little bit more time for them to get authenticate so the function has changed a little bit.
+
+08:14.940 --> 08:19.820
+We have a different loop here a different permission process.
+
+08:19.900 --> 08:22.360
+So what do we do here.
+
+08:22.360 --> 08:25.030
+Well we just copied more code.
+
+08:25.030 --> 08:26.800
+We're not being very dry are we.
+
+08:27.400 --> 08:33.520
+And imagine if we had many more roles in the company instead of just users and admins maybe we have
+
+08:33.760 --> 08:38.590
+managers maybe we have secretaries maybe we have guest access.
+
+08:38.920 --> 08:41.720
+So what can we do here.
+
+08:41.800 --> 08:45.520
+And this is where higher order functions are gonna come into play.
+
+08:45.520 --> 08:53.320
+You remember this we ran from functions with functions with parameters that way instead of just saying
+
+08:53.320 --> 08:57.530
+when we defined the function exactly what to do and what data to use.
+
+08:57.520 --> 09:01.630
+We're able to now say hey we defined the function what it does.
+
+09:01.630 --> 09:09.190
+But later on we'll tell you what data we need with a higher order function we get to do both of those
+
+09:09.190 --> 09:15.580
+things when we actually call the function that is we can give it the data and also tell the function
+
+09:16.000 --> 09:20.430
+what to do or some extra abilities when we actually invoke.
+
+09:20.890 --> 09:25.380
+So let's see this in code this time around.
+
+09:25.560 --> 09:34.950
+Let's create an authenticate function and this authenticate function will take a parameter which is
+
+09:34.950 --> 09:41.720
+the verification process in our case we'll just give it a number which is the time of authentication.
+
+09:41.820 --> 09:50.160
+So let's just do verify and inside of this function we can just remove this authentication process that
+
+09:50.160 --> 09:59.160
+we keep writing everywhere and the number will just be the parameter verify so that it's more dynamic
+
+09:59.190 --> 10:00.140
+and we can change it.
+
+10:00.270 --> 10:05.210
+According to the user or the admin so we have the authenticate.
+
+10:05.340 --> 10:11.070
+And just for from largest return true saying that yep we've verified everything.
+
+10:11.160 --> 10:12.460
+You can have access.
+
+10:12.630 --> 10:16.730
+Like I said a little bit of a useless code right now but I hope you get the idea.
+
+10:17.880 --> 10:24.010
+Now we have the authenticate function we have they give access to function.
+
+10:24.150 --> 10:27.990
+How can we make these functions better.
+
+10:27.990 --> 10:37.990
+Well instead of let admin log in let user log in let's remove these and instead let's just create a
+
+10:38.050 --> 10:49.360
+general function let person function that accepts a person as the first parameter and then a function
+
+10:49.810 --> 10:51.780
+as the second parameter.
+
+10:51.820 --> 10:58.360
+And remember our definition of high order functions it's either a function that returns another function
+
+10:58.510 --> 11:07.840
+or a function that accepts a function as a parameter so that if inside of here I say let's do a simple
+
+11:07.840 --> 11:16.400
+check saying person DOT level is admin.
+
+11:16.520 --> 11:24.730
+In that case we'll call a function with the five or five hundred thousand loop.
+
+11:24.730 --> 11:31.550
+Remember this is gonna be verify later on and then we'll say else if person DOT level
+
+11:34.430 --> 11:47.370
+is user their level of authentication won't be as intense so we'll just say function 5 or 100000 and
+
+11:47.370 --> 11:57.370
+then afterwards we can just return give access to and then this person will also have a name.
+
+11:57.400 --> 12:00.970
+So how did this make things easier.
+
+12:00.980 --> 12:01.730
+Well let's have a look.
+
+12:02.600 --> 12:17.730
+I can now say something like let person and this person will be an object that has level user error
+
+12:17.740 --> 12:24.310
+remember this level is going to be used to decide if they're in men or user and the name will be decided
+
+12:24.550 --> 12:29.340
+for giving access to that person will say this is Tim.
+
+12:29.350 --> 12:32.260
+And now the first parameter is the person.
+
+12:32.470 --> 12:35.260
+And the second parameter is the function.
+
+12:35.260 --> 12:37.690
+What should we let the person do.
+
+12:37.700 --> 12:45.440
+Well we want to authenticate the person so that let's make this a little bit smaller or actually doesn't
+
+12:45.620 --> 12:46.480
+really help.
+
+12:46.490 --> 12:47.070
+All right.
+
+12:47.120 --> 12:50.900
+So now we let person authenticate.
+
+12:50.900 --> 12:51.940
+Let's see if that works.
+
+12:52.010 --> 12:59.180
+I run all right access granted to time because I can't spell Tim all right.
+
+12:59.180 --> 13:11.680
+And if I change this to men and let's say this is Sally I run this access granted to Sally what power
+
+13:11.710 --> 13:13.150
+do we just gain here.
+
+13:13.150 --> 13:25.010
+Well We've now gained the power to not only tell it what data to use but we also got the power to tell
+
+13:25.010 --> 13:26.210
+it what to do.
+
+13:26.210 --> 13:29.790
+So the function as well.
+
+13:30.000 --> 13:38.280
+So we created a generic function let person remember how we had just let Adam log in how very specific
+
+13:38.280 --> 13:39.090
+that was.
+
+13:39.090 --> 13:47.400
+Instead we have a more generic let person that accepts a person as a first parameter and then a function.
+
+13:47.400 --> 13:52.330
+In this case authenticate as the second parameter.
+
+13:52.350 --> 13:56.130
+Now this over here wasn't very descriptive.
+
+13:56.130 --> 14:02.880
+We could have just said authenticate here as a parameter and have it a little bit more descriptive.
+
+14:02.880 --> 14:07.950
+But by making things General we can now do something like this.
+
+14:08.010 --> 14:21.130
+We can add a function let's say function sync and this sing We'll take a person and this person well
+
+14:21.220 --> 14:22.280
+we'll be able to sync.
+
+14:22.310 --> 14:23.680
+So houses do return.
+
+14:23.800 --> 14:25.470
+La la la.
+
+14:25.510 --> 14:30.270
+My name is and then add person dot name
+
+14:32.850 --> 14:41.940
+because our let person function is more general now is a higher order function because it accepts a
+
+14:41.940 --> 14:48.840
+function as a parameter yes that person is a higher order function I can now say instead of let person
+
+14:48.870 --> 14:55.200
+authenticate I can say it let the person sink and if I run this well I'm still going to get access granted
+
+14:55.200 --> 15:03.210
+to Sally because we have this return give access to function here but maybe again to make it more general
+
+15:03.300 --> 15:11.010
+we can remove this and maybe added to the authenticate function right here at the very end
+
+15:13.840 --> 15:23.200
+and in here all we really do is just return some generic functions remember a high order function return
+
+15:23.470 --> 15:31.930
+other functions so that here instead of just giving a solid number for admin and user we can just give
+
+15:31.930 --> 15:39.470
+it the person parameter fact like run that la la la.
+
+15:39.480 --> 15:42.040
+My name is Sally we're able to make.
+
+15:42.050 --> 15:47.350
+Let person be a lot more generic and do many more things to it.
+
+15:47.700 --> 15:55.440
+Now we did break a bit of functionality here and that's the verify now needs something a little bit
+
+15:55.440 --> 16:02.310
+more perhaps we can do some sort of a conditional saying that if person we pass and the person rate
+
+16:02.580 --> 16:11.340
+if person dot is an admin then we'll do this sort of authentication but I hope you get that what we've
+
+16:11.340 --> 16:19.650
+been able to achieve with higher order functions is this ability to tell the function what to do during
+
+16:19.710 --> 16:25.980
+invocation we're able to have a little bit more flexibility than we had before we're able to keep our
+
+16:25.980 --> 16:33.610
+code dry and a lot more flexible let me show you one more example just to make sure that we got this
+
+16:36.890 --> 16:49.190
+if I had a function cost multiply by and I want this function to be a generic function that I can just
+
+16:49.250 --> 16:59.330
+create multiple functions from it calling then multiply by 2 multiply by let's say 10.
+
+16:59.330 --> 17:05.560
+So on and so forth how would I go about doing that you know what.
+
+17:05.940 --> 17:12.930
+Instead of me just showing you how about you try this yourself and in the next video I'll show you how
+
+17:12.930 --> 17:13.560
+we can do this.

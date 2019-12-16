@@ -1,0 +1,91 @@
+WEBVTT
+
+00:01.400 --> 00:06.980
+IOS 7 which was introduced in 2016 is very very easy to grasp.
+
+00:07.010 --> 00:07.340
+Why.
+
+00:07.940 --> 00:12.310
+Well because unlike iOS 6 which had a lot of changes.
+
+00:12.560 --> 00:17.410
+Yes 7 only has two additions to the language in this video.
+
+00:17.420 --> 00:18.610
+I'll go through both of them.
+
+00:20.280 --> 00:29.070
+The first one and we're going to talk about is the includes method that was added on strings and a race.
+
+00:29.100 --> 00:43.450
+Let me show you I can do something like Hulu that includes and I can say Oh and if it includes so I'll
+
+00:43.450 --> 00:49.130
+get a true we can also use it on a race.
+
+00:49.150 --> 01:03.830
+So for example if I had an array let's call it pets and in the pets I have a cat dog and a bat.
+
+01:03.840 --> 01:07.720
+I know that's a weird pet but I'm sure there's some bad pets out there.
+
+01:08.650 --> 01:09.370
+All right.
+
+01:09.420 --> 01:19.870
+And now in here if I do pets includes dog well if I run this in the console I get true.
+
+01:20.440 --> 01:30.070
+If I do pet store it includes bird I'll get false because it doesn't include bird.
+
+01:30.670 --> 01:31.660
+Very simple.
+
+01:31.660 --> 01:32.170
+That's it.
+
+01:32.170 --> 01:33.420
+That's one of them.
+
+01:33.460 --> 01:37.630
+And then the second one is the exponential operator.
+
+01:37.720 --> 01:44.740
+So if I wanted to have a function that lets say squares something I can do
+
+01:47.370 --> 01:50.910
+function x is x.
+
+01:50.930 --> 01:57.060
+Star Star 2 and then means X to the power of 2.
+
+01:57.110 --> 02:08.240
+So again if I run this and then I do a square of two and I cannot spell must try it again square off
+
+02:08.350 --> 02:10.260
+to I get 4.
+
+02:10.380 --> 02:14.930
+I do a square of 5 I get twenty five.
+
+02:15.530 --> 02:20.030
+If I wanted to expand on this and do a Q Well I can do
+
+02:22.760 --> 02:32.570
+cube will have three expansions 3 so again if I clear this just to make a bit of space I do a queue
+
+02:32.990 --> 02:42.740
+of 3 I get twenty seven cube of four is sixty four and that's it.
+
+02:42.740 --> 02:48.680
+Isn't that nice Emma script is going to be releasing small incremental changes every year so it it's
+
+02:48.740 --> 02:55.280
+easy to stay on top of language and avoid scenarios like iOS 6 where all of these changes were made
+
+02:55.310 --> 03:02.050
+and people had a hard time learning all the now with these simple two things in your tool belt go and
+
+03:02.050 --> 03:05.470
+practice them and see you in the next video by.

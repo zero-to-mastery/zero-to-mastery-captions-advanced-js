@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.890 --> 00:05.390
+What problems do you see with synchronous code.
+
+00:05.390 --> 00:10.420
+Think about that for a second positive video if you need to ready for the answer.
+
+00:11.690 --> 00:20.650
+Well with single threaded synchronous code that JavaScript engine runs it's going to make it really
+
+00:20.650 --> 00:21.780
+really difficult.
+
+00:21.940 --> 00:26.790
+If we have long running tasks what does that mean.
+
+00:26.800 --> 00:31.110
+Imagine we are running Twitter and Twitter.
+
+00:31.130 --> 00:37.190
+Well it's an application that we can tweet we can check other people's tweets.
+
+00:37.190 --> 00:42.480
+We can look at followers our tweets our notifications our messages.
+
+00:42.530 --> 00:50.450
+Imagine if they had a function that had let's say a really big loop that takes five seconds to complete.
+
+00:50.450 --> 00:54.120
+When that happens if we just use the JavaScript engine.
+
+00:54.140 --> 00:55.810
+Well I wouldn't be able to click.
+
+00:55.850 --> 00:58.030
+I wouldn't be able to scroll.
+
+00:58.130 --> 01:00.380
+I wouldn't be able to do anything.
+
+01:00.380 --> 01:05.230
+A classic example of this is the alert function if I run.
+
+01:05.240 --> 01:05.750
+Alert
+
+01:11.090 --> 01:15.380
+my javascript is running right now and I can scroll.
+
+01:15.380 --> 01:16.920
+I can't click anywhere.
+
+01:17.030 --> 01:23.990
+The Web site is frozen in time until I take some sort of action and this mimics a long running javascript
+
+01:23.990 --> 01:25.970
+right on the call stack.
+
+01:25.970 --> 01:29.780
+Right now we have something like a function that's running.
+
+01:29.780 --> 01:34.910
+And until that call stack is empty I can't really do anything.
+
+01:35.180 --> 01:36.470
+That's terrible.
+
+01:36.470 --> 01:38.770
+Why would anybody use javascript.
+
+01:39.290 --> 01:41.810
+I mean it's just going to slow our pages down.
+
+01:41.810 --> 01:42.860
+Right.
+
+01:42.950 --> 01:47.880
+Well here's the thing I haven't been completely honest with you.
+
+01:47.900 --> 01:54.650
+That's because when we talk about JavaScript most of the time you're never just using the JavaScript
+
+01:54.650 --> 01:57.020
+engine which is synchronous.
+
+01:57.020 --> 02:03.430
+We need to introduce I had the idea of asynchronous code and in the next couple of videos we're going
+
+02:03.430 --> 02:10.130
+to talk about what's actually happening behind the scenes where it's not just the JavaScript engine
+
+02:10.490 --> 02:11.840
+that's running our code.
+
+02:11.960 --> 02:18.920
+We have something called the javascript runtime and as we'll see no J.S. will also implement something
+
+02:18.920 --> 02:28.310
+similar because in order for us to write code that we can use in this modern day we need something beyond
+
+02:28.370 --> 02:30.020
+just the JavaScript engine.
+
+02:30.740 --> 02:34.330
+I know I know we're almost getting there to our complete picture.
+
+02:34.430 --> 02:36.980
+Hang in there because this is gonna be a fun one.
+
+02:37.550 --> 02:39.500
+I'll see in the next one by.

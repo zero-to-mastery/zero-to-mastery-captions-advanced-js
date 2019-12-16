@@ -1,0 +1,115 @@
+WEBVTT
+
+00:01.690 --> 00:02.610
+Welcome back.
+
+00:02.620 --> 00:04.330
+Let's try something fun.
+
+00:04.330 --> 00:12.920
+What happens if we keep calling functions nested inside of each other over and over and over.
+
+00:13.030 --> 00:19.660
+We saw in the previous video with they calculate function if you call calculate line 10 then line eleven
+
+00:19.660 --> 00:20.870
+then line 13.
+
+00:20.920 --> 00:29.090
+This stack is going to get pushed on and then popped off pushed on and then popped off.
+
+00:29.110 --> 00:36.250
+But what if we have functions that are nested inside of each other so that we keep growing this stack
+
+00:36.610 --> 00:45.650
+until it gets larger and larger and larger and larger and larger until we can't do it anymore.
+
+00:45.660 --> 00:48.180
+Well that's called Stack Overflow.
+
+00:48.330 --> 00:54.750
+Just like the name of a very popular Web site for developers and programmers and Stack Overflow can
+
+00:54.750 --> 00:56.520
+be caused very easily.
+
+00:56.520 --> 00:57.980
+Let's have a look.
+
+00:58.020 --> 01:08.670
+All we need to do is create a function let's call it Inception and this function will just call itself.
+
+01:08.800 --> 01:10.290
+I know that looks confusing.
+
+01:10.360 --> 01:19.670
+And what we're using here is something called recursion and recursion is a function calling itself.
+
+01:19.870 --> 01:28.150
+There are some cases where things like this recursion is quite useful but that's something beyond the
+
+01:28.150 --> 01:32.770
+scope of this course and it's something I teach in my other courses for data structures and algorithms
+
+01:33.580 --> 01:41.440
+but recursion is one of the most common ways to create a stack overflow or a lot of functions nested
+
+01:41.620 --> 01:46.790
+inside of each other to create that stack that keeps growing and growing and growing.
+
+01:46.810 --> 01:54.500
+In this case if I run inception it's going to keep adding things onto the stack more and more and more.
+
+01:54.730 --> 01:56.810
+So what do you think happens if I run this.
+
+01:56.840 --> 02:03.000
+Well I get a maximum call stack size exceed it.
+
+02:03.100 --> 02:10.830
+We actually get a stack frame of what the error is at each entry.
+
+02:10.960 --> 02:19.670
+The State of the stack also called the stack frame is shown if at any function produces an error though
+
+02:20.360 --> 02:29.690
+javascript is going to print this stack trace which is simply a snapshot of code execution at this stack
+
+02:29.690 --> 02:36.520
+frame and you see over here that I'm calling Inception Inception Inception Inception Inception.
+
+02:36.530 --> 02:40.430
+So the same function is being called and I get an error.
+
+02:40.610 --> 02:47.030
+Now back in the day with Chrome it wouldn't give you this error and the browser will eventually just
+
+02:47.030 --> 02:48.020
+crash.
+
+02:48.320 --> 02:53.600
+But in order to prevent the browser from crashing if it reaches a limit it's going to print out this
+
+02:53.600 --> 02:58.720
+error saying hey you've just created a stack overflow.
+
+02:58.780 --> 03:00.420
+How cool is that.
+
+03:00.490 --> 03:00.760
+All right.
+
+03:00.790 --> 03:05.570
+So that's one way to cause problem with our call stack.
+
+03:05.740 --> 03:10.530
+That is one of two places that are javascript and Jim works.
+
+03:10.630 --> 03:12.770
+But what about the memory heap.
+
+03:12.820 --> 03:18.160
+Is there a way to do something like this with the memory heap.
+
+03:18.160 --> 03:20.080
+Well let's find out in the next video.

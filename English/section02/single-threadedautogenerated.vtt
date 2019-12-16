@@ -1,0 +1,70 @@
+WEBVTT
+
+00:01.130 --> 00:05.690
+Javascript is a single threaded programming language.
+
+00:06.880 --> 00:07.570
+What does that mean.
+
+00:08.320 --> 00:15.350
+Well being single threaded means that only one set of instructions is executed at a time.
+
+00:15.430 --> 00:17.890
+It's not doing multiple things.
+
+00:17.890 --> 00:25.030
+And the biggest way to check that a language is single threaded is well it has only one call stack.
+
+00:25.030 --> 00:29.140
+This one call stack allows us to run code one at a time.
+
+00:29.290 --> 00:36.940
+We're never running functions in parallel as you saw the stack keeps growing as we push new functions
+
+00:37.030 --> 00:40.680
+on the stack and then we pop them one at a time.
+
+00:40.720 --> 00:49.510
+Now initially in 1995 when javascript was born this made things easy for implementation and for developers
+
+00:49.600 --> 00:51.110
+using the language right.
+
+00:51.370 --> 00:58.450
+Because javascript was only initially a language useful for adding interactions on a web page such as
+
+00:58.450 --> 01:06.000
+form validations or clicking a button nothing really required having more than just a single thread
+
+01:07.140 --> 01:14.830
+a good way to think about it is like this single threaded means I'm the JavaScript engine and I'm eating
+
+01:14.830 --> 01:21.820
+with one hand putting food in my mouth that is the function and then use that same hand to grab the
+
+01:21.820 --> 01:25.660
+next food when I'm done chewing my food.
+
+01:25.760 --> 01:31.340
+I can't put any more things in my mouth until I'm done chewing and I also can't grab anymore food until
+
+01:31.340 --> 01:32.830
+I finish chewing.
+
+01:33.020 --> 01:34.530
+It's single threaded.
+
+01:34.610 --> 01:35.530
+One thing at a time.
+
+01:36.710 --> 01:46.070
+And because of this javascript is synchronous that is wanted to time in order that it appears only one
+
+01:46.070 --> 01:48.840
+thing can happen at the time.
+
+01:49.040 --> 01:54.500
+You might be asking yourself that doesn't sound super fast does it.
+
+01:54.500 --> 01:56.360
+Let's tackle that in the next video.

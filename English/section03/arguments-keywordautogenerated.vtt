@@ -1,0 +1,124 @@
+WEBVTT
+
+00:00.750 --> 00:02.020
+Welcome back.
+
+00:02.130 --> 00:06.770
+Now I said that arguments is a little bit dangerous to use.
+
+00:06.780 --> 00:08.460
+Why is that.
+
+00:08.460 --> 00:15.220
+Well because arguments looks like an array but it's not really an array.
+
+00:15.330 --> 00:22.050
+So there are many things that you can do with the arguments keyword that might make the compiler or
+
+00:22.050 --> 00:30.030
+the JavaScript engine less able to optimize your code because you can't really use array methods on
+
+00:30.030 --> 00:30.440
+this.
+
+00:30.450 --> 00:32.550
+Ken you mean look at it.
+
+00:32.550 --> 00:35.410
+It's not really an array is it.
+
+00:35.520 --> 00:42.960
+And with the new javascript they introduced a few little tools that we can use so that we avoid using
+
+00:42.960 --> 00:49.950
+arguments because there are some cases where we might want to iterate or loop through arguments instead
+
+00:49.950 --> 00:52.080
+of just accessing them regularly.
+
+00:53.540 --> 01:02.920
+One way to go about it is to say console log and use the new Array docked from method.
+
+01:03.210 --> 01:11.880
+And this if we give it something like arguments in here we'll create an array from whatever we give
+
+01:11.880 --> 01:23.010
+it so if we run this you see that I get Tim and Tina in an array form so that we can now use array methods
+
+01:23.400 --> 01:34.180
+on arguments so that's nice another way to do this is to let's have the Mary function again but this
+
+01:34.180 --> 01:41.860
+time use default parameters again something that we got with yes 6 and here let's call this function
+
+01:41.860 --> 01:53.400
+Mary 2 instead of using person 1 in person 2 we use the spread operator to say arcs or arguments.
+
+01:53.410 --> 02:00.370
+I can't really use arguments because that is a reserved word in JavaScript and this time around I'm
+
+02:00.370 --> 02:07.850
+going to call the arguments args which we're going to console log and we'll keep console log array from
+
+02:07.940 --> 02:18.710
+the same way if I run Mary 2 in this case and I click Run I get an error because Person 1 is not defined
+
+02:18.950 --> 02:28.050
+in our template string over here we have to access our array so let's say args the first item in our
+
+02:28.050 --> 02:35.480
+argument and the second item in our arguments if I click Run.
+
+02:35.630 --> 02:45.680
+There you go we now have args as an argument so with modern javascript you most likely want to avoid
+
+02:45.770 --> 02:46.390
+arguments.
+
+02:46.430 --> 02:52.220
+It's one of those tricky things that was initially added to javascript that caused a lot of problems
+
+02:52.220 --> 02:53.270
+and headache.
+
+02:53.270 --> 02:59.090
+But using the techniques that I've shown you we can actually convert that into an array like object
+
+02:59.120 --> 03:03.860
+so that when you do those operations it'll be helpful for you.
+
+03:04.060 --> 03:10.210
+By the way I know we went on a bit of a tangent but we are talking about this arguments object that
+
+03:10.210 --> 03:16.200
+we get to finalize our understanding of this arguments object
+
+03:18.950 --> 03:23.780
+remember something that we get on each execution context.
+
+03:23.780 --> 03:25.420
+Let me ask you a question.
+
+03:25.940 --> 03:35.040
+If I remove this Mary function and just go back to our Canada and India functions if inside of this
+
+03:35.040 --> 03:42.480
+India function I say console log arguments.
+
+03:42.700 --> 03:51.760
+What do you think I will get going to comment out the Canada function and just run India take a guess
+
+03:52.180 --> 04:03.020
+because I'm going to run I get an empty arguments object we can still use the arguments object even
+
+04:03.020 --> 04:10.220
+though it's empty even though we don't pass any parameters because on each execution context we create
+
+04:10.970 --> 04:14.440
+a new arguments object.
+
+04:14.460 --> 04:19.020
+All right let's learn a few more interesting characteristics of functions.
+
+04:19.330 --> 04:21.100
+I'll see you in the next one by.

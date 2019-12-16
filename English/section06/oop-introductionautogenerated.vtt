@@ -1,0 +1,103 @@
+WEBVTT
+
+00:00.800 --> 00:04.440
+Let's get into object oriented programming.
+
+00:04.490 --> 00:09.920
+We're gonna be talking about some things that we've actually already covered but we're gonna dive deep
+
+00:09.920 --> 00:10.870
+this time.
+
+00:10.970 --> 00:14.960
+Things like the this keyword prototype of inheritance.
+
+00:14.960 --> 00:18.450
+The new keyword the new iOS 6 classes.
+
+00:18.710 --> 00:21.980
+The idea of inheritance object to create.
+
+00:22.130 --> 00:24.530
+These are all important things.
+
+00:24.590 --> 00:33.080
+We're also going to talk about private and public fields the idea of class based inheritance that we
+
+00:33.080 --> 00:34.800
+might see in things like Java.
+
+00:35.000 --> 00:39.630
+And then finally cover the four principles of object oriented programming.
+
+00:39.980 --> 00:46.340
+Now object oriented programming has been around since the 70s and it's a style of programming that is
+
+00:46.340 --> 00:55.630
+very common in languages like C sharp Python Ruby and obviously Java in O P.
+
+00:55.630 --> 01:04.770
+An object is a box containing information and operations that are supposed to refer to the same concept.
+
+01:04.780 --> 01:11.220
+It's like we're modeling real world objects and we've seen this before right.
+
+01:11.230 --> 01:22.090
+Remember when we had the dragon object we actually had some o p principles in here we had data about
+
+01:22.090 --> 01:30.160
+the dragon such as name and ability to breathe fire and we also had methods actions that the dragon
+
+01:30.220 --> 01:32.950
+can take in 0 0 P.
+
+01:32.950 --> 01:43.960
+This data can also be called state and we've wrapped this dragon in an object to model real world dragon
+
+01:44.350 --> 01:50.720
+that contains some sort of data about the dragon and also the actions that the dragon can take these
+
+01:51.020 --> 01:58.670
+attributes or properties allows to keep track of the state of the object and these methods allow us
+
+01:58.670 --> 02:07.460
+to manipulate the state of the object so that we model the real world and that's what we want to do
+
+02:07.460 --> 02:09.090
+with object oriented programming.
+
+02:09.110 --> 02:15.470
+We want to look at the world and organize our code and the things that we want to do into these small
+
+02:15.770 --> 02:24.290
+little object boxes that interact with each other so that we keep everything divided and organized and
+
+02:24.530 --> 02:31.760
+when it comes to object oriented programming there's two main types there's class based programming
+
+02:31.760 --> 02:35.780
+languages and prototype based programming languages.
+
+02:35.780 --> 02:45.080
+And as we know with JavaScript we have prototype all inheritance by the end of the o p part.
+
+02:45.080 --> 02:51.620
+I want you to be comfortable with the idea of why it allows us to have code that we can reason about
+
+02:53.740 --> 03:00.810
+and to get started with the section and start learning some object oriented programming principles.
+
+03:00.820 --> 03:02.080
+Have a nice little cartoon here.
+
+03:03.680 --> 03:11.390
+Maybe you won't get it now but by the end of this section hopefully this cartoon is hilarious to you.
+
+03:11.390 --> 03:18.860
+Object oriented programming is all about modeling real world objects and relationships.
+
+03:18.860 --> 03:19.660
+I'll see in the next one.
+
+03:20.020 --> 03:20.420
+Bye bye.

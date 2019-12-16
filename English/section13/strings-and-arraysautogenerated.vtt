@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.820 --> 00:02.010
+Welcome back.
+
+00:02.020 --> 00:08.310
+I wanted to add a quick video to let you know about a common interview trick we're going to be doing
+
+00:08.310 --> 00:16.860
+some array questions after this but in interviews you should treat any string questions like over here
+
+00:17.430 --> 00:18.510
+as an array.
+
+00:18.510 --> 00:26.440
+QUESTION You see strings are simply array of characters most of the time in an interview.
+
+00:26.500 --> 00:34.430
+When you get a question like reverse a string what you should be thinking is to convert this into an
+
+00:34.430 --> 00:42.230
+array do some sort of a loop on it or an operation using something like a split method in JavaScript
+
+00:42.710 --> 00:50.700
+and then returning it as a string after you've finished the operations with them so that is a very common
+
+00:50.760 --> 00:54.050
+interview question where you're manipulating strings.
+
+00:54.060 --> 00:59.820
+Just keep that in mind and we'll actually demonstrate this in the next video when we do a very common
+
+00:59.820 --> 01:03.700
+interview question I'll see you on that one by.

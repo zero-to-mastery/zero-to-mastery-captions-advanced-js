@@ -1,0 +1,109 @@
+WEBVTT
+
+00:02.600 --> 00:10.450
+Let's talk about strong and weak typing and a lot of people tend to use these terms interchangeably.
+
+00:10.500 --> 00:16.830
+That is they tend to say oh a dynamic languages weakly typed in a static language is strongly typed
+
+00:16.890 --> 00:21.960
+which simply isn't the case as you can see here on the graph.
+
+00:21.960 --> 00:28.050
+You can have a weak language that is statically type and a strong language that is dynamically typed
+
+00:29.380 --> 00:36.850
+so let's make this clear javascript is a dynamic language or dynamically typed language that is weakly
+
+00:36.880 --> 00:37.790
+typed.
+
+00:37.870 --> 00:38.470
+What does that mean.
+
+00:39.370 --> 00:43.550
+Well in javascript I can do this in javascript.
+
+00:43.550 --> 00:54.860
+I can say variable A equals Booyah and then I can go ahead and say A plus 17
+
+00:57.740 --> 01:01.330
+Booyah with 17.
+
+01:01.470 --> 01:07.170
+That's what a weekly type language does.
+
+01:07.170 --> 01:15.510
+Javascript says you're crazy you're you're trying to add a string to 17.
+
+01:15.540 --> 01:17.120
+I think I know what you're trying to do.
+
+01:17.160 --> 01:20.580
+I think you're just trying to add 17 to booyah.
+
+01:20.610 --> 01:29.130
+So I'm just going to turn this 17 number into a string and do this and this is often called type caution
+
+01:29.430 --> 01:36.270
+in JavaScript and it can lead to some unintended consequences and a lot of people get annoyed at javascript
+
+01:36.420 --> 01:44.590
+for this feature because in a strongly typed language you can't do this.
+
+01:44.770 --> 01:53.010
+For example in Python you can see that it's dynamic but strongly typed if we write some python code
+
+01:54.390 --> 01:58.430
+let's say I'll do and I'm just gonna use python here.
+
+01:58.470 --> 01:59.870
+Ignore the syntax.
+
+01:59.940 --> 02:05.090
+So let's say variable is equal to booyah.
+
+02:05.100 --> 02:20.790
+Again and then I'll do a or variable plus 17 here well this is actually going to throw an error in python
+
+02:21.210 --> 02:25.650
+because it's going to say whoa whoa whoa whoa whoa you crazy guy.
+
+02:25.800 --> 02:28.080
+This is you're trying to add string and numbers.
+
+02:28.080 --> 02:29.550
+That that doesn't work.
+
+02:29.700 --> 02:34.990
+And it's kind of throw an error because it's strongly typed.
+
+02:35.000 --> 02:35.340
+All right.
+
+02:35.360 --> 02:41.630
+I hope that illustrates the point nicely for you now there are once again pros and cons to doing this
+
+02:41.870 --> 02:44.450
+but this is beyond the scope of this course.
+
+02:44.480 --> 02:49.880
+If you really want to get into it and trust me there's tons of information out there because people
+
+02:49.880 --> 02:53.810
+are so strongly opinionated about these topics.
+
+02:53.810 --> 03:00.530
+I do recommend checking them out going on Google and typing strong versus weakly typed.
+
+03:00.760 --> 03:04.840
+Let's get back on track here to our main topic that is typescript.
+
+03:05.060 --> 03:11.330
+How can we add typescript to make javascript type safe.
+
+03:11.330 --> 03:14.960
+All right I'm going to leave you in suspense.
+
+03:14.970 --> 03:17.060
+I'll see you in the next video by.

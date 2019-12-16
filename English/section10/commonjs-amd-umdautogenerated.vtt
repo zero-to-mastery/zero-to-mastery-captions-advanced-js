@@ -1,0 +1,313 @@
+WEBVTT
+
+00:00.710 --> 00:01.760
+Welcome back.
+
+00:01.760 --> 00:07.520
+We just learned about the module pattern but you're probably wondering can we design a way to improve
+
+00:07.520 --> 00:08.290
+upon it.
+
+00:08.510 --> 00:11.670
+Because of the problems mentioned in the previous video.
+
+00:11.720 --> 00:20.810
+Well luckily for us after the module pattern came to really great solutions instead of using an iffy
+
+00:20.810 --> 00:31.420
+he and the module pattern something called common J.S. and a M.D. came out or asynchronous module definition
+
+00:32.200 --> 00:40.000
+and they solved the problem of designing a module in a way that we won't have the interference of global
+
+00:40.000 --> 00:43.910
+scope where we can overwrite certain variables.
+
+00:43.960 --> 00:45.770
+Let's have a look at how they work.
+
+00:45.880 --> 00:54.660
+Common J.S. looked something like this we can import different modules or different files using require.
+
+00:54.660 --> 01:03.180
+We didn't have to add the DOT J S in here and we can even export specific functions like if we wanted
+
+01:03.180 --> 01:12.150
+to export the fight function we can just do this or if we wanted to just create our own fight function
+
+01:12.360 --> 01:19.530
+in this module we can then export it using this syntax module that exports and export an object.
+
+01:19.530 --> 01:21.390
+Nice and simple right.
+
+01:21.420 --> 01:28.230
+None of this immediately invoked function that we had to wrap each file in everything just looks clear
+
+01:28.920 --> 01:36.240
+and this original Common J.S. standard might seem familiar to you because node is still using it as
+
+01:36.240 --> 01:44.550
+a matter of fact common J.S. was created mainly for the server with no J.S. in mind to use for servers
+
+01:44.550 --> 01:52.080
+and desktop applications and it's actually one of the main reasons that no GSM became so popular this
+
+01:52.740 --> 02:02.070
+common J.S. import export module system that came before we even had it in the browser made code very
+
+02:02.520 --> 02:06.370
+easy to share for no J.S. programmers.
+
+02:06.600 --> 02:15.330
+You might have heard of NPM node package managers node package managers or manager is just a way for
+
+02:15.330 --> 02:20.430
+people to share their modules and no GSM is popularity.
+
+02:20.430 --> 02:27.480
+Well one of the main reasons that it's grown to the way it has since 2009 is because of NPM because
+
+02:27.780 --> 02:36.660
+people using common J.S. were able to share their code to other programmers so that in no G.S. sharing
+
+02:36.660 --> 02:40.850
+code and using third party code became really really easy.
+
+02:40.920 --> 02:49.110
+Now with common J.S. modules are meant to be loaded synchronicity that means remember JavaScript has
+
+02:49.110 --> 02:56.250
+one call stack so if a module takes a really long time to load we're just waiting there until that gets
+
+02:56.250 --> 02:59.970
+loaded and then the next one gets loaded and then we get to run our script.
+
+03:00.270 --> 03:07.190
+And that's not ideal for browsers where we have users clicking on bonds entering data in two forms.
+
+03:07.260 --> 03:14.550
+A lot of interaction synchronous code on the browser can get really dangerous and that is why common
+
+03:14.550 --> 03:22.590
+J.S. was mainly used on the server but you see people saw this and said I like this compact syntax it's
+
+03:22.590 --> 03:24.070
+so easy to understand.
+
+03:24.150 --> 03:29.850
+Plus I want to use all these packages that these people are writing in NPM.
+
+03:29.850 --> 03:34.710
+So how can we use some of these useful packages on the browser.
+
+03:34.710 --> 03:42.570
+Even though this imports syntax is synchronous and can slow down our web pages well we had two things
+
+03:42.570 --> 03:52.710
+that came out for a common guess one was brough certified and as you can see browser Frye lets you require
+
+03:52.710 --> 03:57.680
+modules in the browser by bundling up all of your dependencies.
+
+03:57.720 --> 03:58.790
+What does that mean.
+
+04:00.310 --> 04:08.860
+It means that by using browser wi fi I can in my command line run something like browser wi fi
+
+04:12.040 --> 04:23.880
+and do script dodgy yes to bundle 4G Yes and what it will do is it will read my script RJ Yes and understand
+
+04:23.970 --> 04:25.450
+this require syntax.
+
+04:25.550 --> 04:31.460
+Understand the module that exports syntax and output it all into a bundle.
+
+04:31.730 --> 04:32.520
+Yes.
+
+04:32.640 --> 04:40.070
+Now this bundle dot J.S. would be a bundle of all the scripts in my project.
+
+04:40.260 --> 04:48.170
+So if we go to our index start HCM Alpha I can take all these scripts you regardless of the order.
+
+04:48.340 --> 04:55.170
+And as long as I use the require and module that exports browser if II is going to understand o j Cary
+
+04:55.410 --> 05:03.750
+is needed by this module and global secret is needed by this module and it will create all those dependencies
+
+05:04.530 --> 05:09.160
+and add it all to one single file called bundle dot.
+
+05:09.200 --> 05:09.800
+Yes.
+
+05:09.810 --> 05:15.600
+So this way we're able to use common yes even though with synchronous because when we actually deploy
+
+05:15.600 --> 05:21.060
+this to the browser it's one giant JavaScript file with everything already in it.
+
+05:22.310 --> 05:27.240
+And this is what is called a module bundler and things like wetback can also do this.
+
+05:27.350 --> 05:35.030
+So inmate common GSA extremely popular because things like Westpac and browser Phi simply traverse the
+
+05:35.030 --> 05:41.420
+dependency tree of our code and bundle them up in a single file but we have finally have the benefit
+
+05:41.660 --> 05:47.550
+of well no global namespace pollution and order doesn't matter anymore.
+
+05:47.660 --> 05:55.400
+All right so common GSK is pretty great and you'll see this syntax in a lot of no GSK projects still.
+
+05:55.400 --> 05:56.450
+What about the other one.
+
+05:56.640 --> 06:02.390
+MMd well FMD looks something like this.
+
+06:03.400 --> 06:08.180
+All right right away if you're like me you're thinking this does not look as clean as common I guess
+
+06:08.700 --> 06:10.650
+I already don't like it.
+
+06:10.710 --> 06:13.500
+And also you might say I've never seen this in my life.
+
+06:13.500 --> 06:14.820
+What are you talking about.
+
+06:14.880 --> 06:22.980
+Andy was designed specifically for the browsers that means it loads scripts or modules asynchronously
+
+06:23.880 --> 06:26.070
+and that's crucial for browsers.
+
+06:26.070 --> 06:34.190
+Right where the code can really wait until a module has finished loading and yes we solve that problem
+
+06:34.190 --> 06:42.350
+with common G.S. and browser wi fi or wetback but because javascript didn't have native modules people
+
+06:42.350 --> 06:44.000
+came up with different solutions.
+
+06:44.090 --> 06:51.650
+So people that didn't like common J.S. or wanted to implement their own used a M.D. That's the problem
+
+06:51.650 --> 06:55.330
+when you don't have a standard solution for a language.
+
+06:55.460 --> 07:00.020
+Now as you can see it's still doing the same thing if I wanted to import something.
+
+07:00.020 --> 07:06.260
+Well I define it here and I have a function that well I can define whatever function I want and export
+
+07:06.260 --> 07:06.560
+it.
+
+07:06.560 --> 07:14.420
+But I can also import from other modules or do something like dot fight and grab the flight function.
+
+07:14.450 --> 07:21.650
+Now you may not have heard of M.D. but you may have heard of the library that helped us use an M.D.
+
+07:22.160 --> 07:26.510
+on the browsers it was called require dot J Yes.
+
+07:26.630 --> 07:33.400
+And although it's not used that much anymore it was the main way that people used AMG modules.
+
+07:33.410 --> 07:42.410
+Now you're thinking to yourself required JSA is a M.D. but it's not common GSK that uses the word require.
+
+07:42.410 --> 07:45.260
+Yes that is true extremely confusing.
+
+07:45.260 --> 07:51.890
+I know which is again another way to show you that this was extremely confusing and thank God that we
+
+07:51.890 --> 07:55.220
+have native modules which we're going to talk about soon.
+
+07:55.310 --> 07:55.940
+All right.
+
+07:55.940 --> 08:02.870
+So to review we have common G.S. and M.D. that finally solves the two problems that we had which was
+
+08:03.080 --> 08:08.070
+dependency resolution and the pollution of the global scope.
+
+08:08.150 --> 08:15.110
+We only need to take care of the dependencies when we define our file and we're explicit with what each
+
+08:15.650 --> 08:17.080
+module needs.
+
+08:17.300 --> 08:21.620
+But we're also avoiding the pollution of this global namespace.
+
+08:21.620 --> 08:28.940
+We learned that a M.D. helps us load modules asynchronously as needed and we also learned that common
+
+08:28.940 --> 08:37.610
+G as well common J.S. also allows us to import and be explicit with our dependencies.
+
+08:37.610 --> 08:43.600
+But at the same time because it's synchronous we can use something like a module bundler like browser
+
+08:43.610 --> 08:53.080
+fi to actually bundle all of our code into one bundled J.S. file and still use it on the browser but
+
+08:53.170 --> 09:01.960
+as I mentioned because of these different standards if you wanted to let's say have a package in NPM
+
+09:01.960 --> 09:03.640
+so you can share with the community.
+
+09:03.640 --> 09:10.360
+Now you have two ways that you need to share that package using FMD or common yes or right for both
+
+09:10.390 --> 09:12.890
+so that both communities can use it.
+
+09:13.180 --> 09:21.670
+And there was another thing that came out called you MP for universal module definition that tried to
+
+09:21.670 --> 09:29.080
+solve this problem but at the end of the day UMD was just a simple if l statement to identify the module
+
+09:29.080 --> 09:33.850
+system or the module style that the current environment supports.
+
+09:33.850 --> 09:39.790
+So this was great and all but it wasn't really solving our core problem we needed a way for JavaScript
+
+09:39.790 --> 09:45.520
+to unite as a community and say hey this is how we import and export modules because if we want people
+
+09:45.520 --> 09:49.870
+to take us seriously we need our own native module system.
+
+09:49.870 --> 09:57.310
+So here we are in this current day and age we now have native module support in JavaScript and in the
+
+09:57.310 --> 09:58.200
+next video.
+
+09:58.330 --> 10:03.660
+All this complication goes out the window with the new E6 modules.
+
+10:03.880 --> 10:04.560
+Let's go have a look.

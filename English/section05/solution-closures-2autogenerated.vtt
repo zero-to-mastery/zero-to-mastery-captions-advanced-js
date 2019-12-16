@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.870 --> 00:02.160
+Welcome back.
+
+00:02.160 --> 00:05.220
+Let's see how we can solve this issue now.
+
+00:05.270 --> 00:11.180
+I'm gonna do a naive approach to this but there are many ways of doing it using closures.
+
+00:11.480 --> 00:14.090
+So let me show you my way.
+
+00:14.090 --> 00:16.740
+If I wanted this to only be called once.
+
+00:16.940 --> 00:24.650
+Well ideally I have a variable in here called called and maybe it's a counter of how many times the
+
+00:24.650 --> 00:27.590
+function has been called in here.
+
+00:27.770 --> 00:30.230
+I want to keep track of this called.
+
+00:30.350 --> 00:36.940
+I want to use closures and keep track of it but I don't want people outside of this world touching it.
+
+00:37.190 --> 00:47.040
+So I'm going to return a function so I have an enclosing function that's surrounded by another function.
+
+00:47.510 --> 00:54.890
+And in here I can reference called and I know that I'll have access to it even though the outside world
+
+00:55.010 --> 00:56.080
+won't have access to it.
+
+00:56.150 --> 01:03.920
+As soon as the initialize gets popped up the stack so I'm going to just simply say if called is greater
+
+01:03.920 --> 01:09.170
+than 0 Well in that case just return and do nothing.
+
+01:10.370 --> 01:19.410
+Otherwise I'm going to well set the view.
+
+01:19.600 --> 01:28.270
+And then finally we also want to increment called to say that hey we've updated called this function
+
+01:28.270 --> 01:30.060
+has been called.
+
+01:30.170 --> 01:30.940
+All right.
+
+01:30.940 --> 01:34.600
+Let's see if that works if in here I do.
+
+01:34.630 --> 01:42.880
+Const start once and I do initialize.
+
+01:43.090 --> 01:48.970
+Now I can run start once once and we'll see what happens.
+
+01:48.970 --> 01:49.450
+All right.
+
+01:49.450 --> 01:50.590
+View has been set.
+
+01:50.620 --> 01:51.620
+We see the mountain.
+
+01:51.640 --> 01:52.800
+That's good.
+
+01:52.930 --> 01:55.660
+But if I run star once again
+
+01:58.700 --> 02:01.350
+look at that view has already been set.
+
+02:01.370 --> 02:04.930
+So now it doesn't matter how many times I call it.
+
+02:05.030 --> 02:07.870
+It's not going to work.
+
+02:07.950 --> 02:15.600
+Now you might be asking yourself well Andre that new programmer can still call initialize but I'm going
+
+02:15.600 --> 02:18.710
+to leave that for you to figure out how to do.
+
+02:18.990 --> 02:26.190
+In that case we can perhaps use encapsulation and only return the star once after we've initialized
+
+02:26.400 --> 02:27.090
+something.
+
+02:27.300 --> 02:30.870
+But I'll leave that to you if you've gotten this good job.
+
+02:30.870 --> 02:32.820
+I think you're starting to get closures.
+
+02:32.820 --> 02:34.080
+Let's do one more exercise.

@@ -1,0 +1,481 @@
+WEBVTT
+
+00:01.490 --> 00:08.460
+Now that we know how to use a arrays where they're fast where they're slow we're gonna get into a part
+
+00:08.550 --> 00:16.980
+that is not crucial for interviews but it's good to understand how they work and how to build an array.
+
+00:16.980 --> 00:19.960
+Most likely in an interview you won't get asked.
+
+00:20.040 --> 00:27.600
+Hey building Ray from the beginning but I do want to build those foundations for you so that we understand
+
+00:27.750 --> 00:36.090
+a race from a fundamental level so let's build an array ourselves now.
+
+00:36.120 --> 00:42.510
+In this video we're gonna be using the class syntax in JavaScript so we're gonna create an array class
+
+00:43.080 --> 00:50.120
+even though with JavaScript and many other languages we can just do this and we've created an array.
+
+00:50.280 --> 00:52.800
+Let's see if we can build one of our own.
+
+00:53.490 --> 01:00.180
+Because as you'll find out as we go through this course data structures are simply things that we can
+
+01:00.180 --> 01:01.870
+build from scratch.
+
+01:01.890 --> 01:04.130
+We can create whatever data structure we want.
+
+01:04.140 --> 01:07.260
+We can create our own data structure.
+
+01:07.260 --> 01:13.590
+The most common data structures are well known and are already implemented in most languages because
+
+01:13.590 --> 01:15.510
+they're so useful.
+
+01:15.510 --> 01:20.510
+But you are able to build any data structure you want from scratch.
+
+01:20.760 --> 01:29.210
+And as you'll find out most data structures are built on top of other data structures now to get started.
+
+01:29.240 --> 01:34.100
+We're going to create an array in javascript but just a heads up.
+
+01:34.100 --> 01:37.130
+JavaScript is a bit of an interesting case.
+
+01:37.130 --> 01:44.540
+A raise in JavaScript are just objects with integer based keys that act like indexes and that's what
+
+01:44.540 --> 01:45.820
+we're gonna build.
+
+01:45.920 --> 01:51.740
+Different languages will have this implementation differently but what we're gonna learn here is still
+
+01:51.740 --> 01:59.300
+going to be applicable to how Arrays work in other languages so we're gonna start off with creating
+
+01:59.330 --> 02:13.190
+a class let's start off with creating a class and we'll call this my array and within the my array will
+
+02:13.190 --> 02:23.140
+have a constructor which is the initial function that will be run when we create this my array and this
+
+02:23.140 --> 02:27.100
+constructor is going to have two data points.
+
+02:27.220 --> 02:34.720
+One is the length the property because with an array we're able to determine the length of the array
+
+02:35.470 --> 02:38.370
+and the initial length will be 0.
+
+02:38.380 --> 02:44.870
+That is how many items the array has and then will obviously have the data within the array.
+
+02:45.470 --> 02:48.700
+And this is going to be an object.
+
+02:48.740 --> 02:53.810
+Now what's the most common action that we have in an array.
+
+02:53.810 --> 02:56.150
+What's the access to access the data.
+
+02:56.630 --> 03:04.380
+So let's create a get method and this get method is going to take an index to actually grab the data
+
+03:04.470 --> 03:05.420
+from memory.
+
+03:05.610 --> 03:15.070
+So I'm going to just say return this dot data and if this keyword is confusing to you.
+
+03:15.380 --> 03:18.650
+Make sure you watch the previous video.
+
+03:18.650 --> 03:24.710
+This dot data is just referring to this data that we've created in the constructor and we're just going
+
+03:24.710 --> 03:32.170
+to return the data at the index that we're requiring.
+
+03:32.260 --> 03:34.990
+Let's see how this would work in action.
+
+03:36.560 --> 03:44.490
+To create a new Miri all we need to do is say const new array
+
+03:47.520 --> 03:59.760
+and we use the new keyword in javascript to instantiate this or create a copy of this class like this.
+
+03:59.770 --> 04:12.240
+So now if I do console dialog new array and I click Run I get my array that has property length of zero
+
+04:12.480 --> 04:26.900
+and data that is empty if I do new Array dot get zero index of zero I get on defined well because there's
+
+04:27.020 --> 04:38.380
+nothing in this object we have no items and JavaScript automatically has the type on defined when.
+
+04:38.390 --> 04:45.590
+While there's nothing let's add our next method that is the push method to add something at the end
+
+04:45.590 --> 04:46.100
+of the array.
+
+04:46.550 --> 04:54.300
+So I'm going to create a push method and this method will take in an item that we will give it and within
+
+04:54.320 --> 05:05.720
+here will simply add this to the data of our object it's going to add it to the length of our item.
+
+05:05.780 --> 05:10.250
+So because we have zero items and the length is zero.
+
+05:10.250 --> 05:20.110
+This is going to add the data at this dot data zero index in the zero index will simply now contain
+
+05:20.470 --> 05:32.360
+the item and because we want to keep adding items if we want it to we will say this dot length plus
+
+05:32.360 --> 05:40.090
+plus because now our array has a length of 1 instead of 0.
+
+05:40.310 --> 05:47.570
+So that next time we run the push method this dot length will be 1 and the new item will be added at
+
+05:47.660 --> 05:58.640
+index of 1 and let's just return this dot length for now because the typical push method in JavaScript
+
+05:58.640 --> 06:01.670
+will usually return the length of the array.
+
+06:02.840 --> 06:05.190
+Let's run this and see what happens.
+
+06:05.240 --> 06:17.620
+I'm going to say that down here we'll see we'll have new Array dot push and we're going to push high.
+
+06:17.670 --> 06:27.390
+If I run this I see I have my array length 1 data is going to have a prop. 0 0.
+
+06:27.430 --> 06:28.080
+Hi.
+
+06:28.240 --> 06:28.850
+Nice.
+
+06:28.990 --> 06:31.980
+What if we add another thing let's do new Array Dot.
+
+06:31.990 --> 06:38.440
+Push and we'll say you if I run this I have length of 2.
+
+06:38.440 --> 06:41.900
+Now with index of 0 at high.
+
+06:42.160 --> 06:46.610
+Or index of 0 has high and they index of 1 has you.
+
+06:46.660 --> 06:48.340
+Very cool.
+
+06:48.400 --> 06:49.240
+What else can we do.
+
+06:49.240 --> 06:58.590
+Well let's add the pop command to remove the last item of the array once again we have the pop method
+
+06:59.370 --> 07:05.100
+that doesn't receive anything we don't need to pass it a parameter all we need to do is delete the last
+
+07:05.160 --> 07:07.260
+item in the array.
+
+07:07.260 --> 07:17.610
+We can simply have a variable let's say last item that grabs the last item in our data object.
+
+07:17.670 --> 07:25.890
+So this is going to just simply be this DOD data at index of length minus 1.
+
+07:25.900 --> 07:34.180
+Remember we want the index of 1 even though the lengths to because we're counting 0 1 we want the last
+
+07:34.180 --> 07:36.340
+item in the data.
+
+07:37.420 --> 07:47.890
+And from here we can just use the delete key word in JavaScript and say this dot data at this dot length
+
+07:48.280 --> 07:49.440
+minus 1.
+
+07:49.570 --> 07:56.250
+Just delete that item and obviously we need to decrease.
+
+07:56.290 --> 08:05.420
+So just shorthand here in javascript to decrease the length of our data by 1 and then finally we can
+
+08:05.420 --> 08:09.980
+just return the item that we deleted.
+
+08:10.000 --> 08:17.510
+So now if I run another command and by the way you might see here that I've missed the semicolons in
+
+08:17.510 --> 08:18.100
+JavaScript.
+
+08:18.110 --> 08:20.830
+Most of the time you can get away with not adding semicolons.
+
+08:20.840 --> 08:24.740
+And some people don't use semicolons at all in JavaScript.
+
+08:24.740 --> 08:26.240
+Don't get too distracted by that.
+
+08:26.270 --> 08:30.290
+Sometimes I forget and it's not really important at least for our purposes.
+
+08:30.560 --> 08:41.620
+Let's add a new item to the array that's gonna be the exclamation point and I'm going to say my or new
+
+08:43.420 --> 08:47.320
+Array dot pop.
+
+08:47.980 --> 08:55.660
+If I run this I get an error saying item because this should be last item.
+
+08:55.740 --> 08:56.110
+Here you go.
+
+08:56.110 --> 09:03.520
+Let's run that again and we see that it's high you because the exclamation mark has been deleted.
+
+09:03.610 --> 09:05.470
+If I run pop again
+
+09:08.380 --> 09:12.550
+I see that I have length of one and only high remaining.
+
+09:12.820 --> 09:15.360
+Very cool.
+
+09:15.380 --> 09:21.250
+All right let's add one last one and to show you why some operations in a race are.
+
+09:21.590 --> 09:25.770
+Oh then we're going to add the delete method
+
+09:28.980 --> 09:37.390
+and the delete method is going to take an index which item we want to delete and then here we will have
+
+09:37.390 --> 09:39.520
+to do a cost item.
+
+09:39.610 --> 09:49.270
+So we're going to create a reference to this dot data index which is the item we want to delete and
+
+09:50.350 --> 09:51.830
+how are we going to delete this.
+
+09:51.880 --> 10:00.340
+Because remember in an array we'll have to delete the item then shift the index of all the other data
+
+10:00.340 --> 10:10.110
+types by 1 what because we want to follow good coding practices using the idea of single responsibility
+
+10:10.110 --> 10:11.130
+principle.
+
+10:11.130 --> 10:17.860
+Let's add a another function that does this for us that does the shifting of data for us.
+
+10:17.940 --> 10:27.510
+I'm going to create a new method and we do this in javascript using this syntax shift items in this
+
+10:27.780 --> 10:33.840
+method is going to take the index that we received here and the delete.
+
+10:33.880 --> 10:40.960
+Now this shift items we can create it here and say that shift items.
+
+10:40.960 --> 10:48.180
+Method and by the way I use the words function and methods interchangeably sometimes methods simply
+
+10:48.180 --> 10:53.520
+means is a function within a class.
+
+10:53.520 --> 11:01.820
+So this this shift items will be a method of my array but it is a function.
+
+11:01.830 --> 11:10.840
+So this function which is a method of my array will have the index parameter passed into it.
+
+11:11.170 --> 11:15.910
+And this is where we do some fun things we're going to have to loop through the items.
+
+11:15.940 --> 11:23.350
+So that's a for loop which right away should ring the bell and say oh this is an o of an operation we're
+
+11:23.350 --> 11:30.170
+going to have an index of 0 or I of 0 actually instead of 0.
+
+11:30.170 --> 11:40.470
+Remember because we want to shift items not all of them just wherever the index starts from we say index.
+
+11:40.470 --> 11:44.570
+And now I will have to be this stored length.
+
+11:45.120 --> 11:54.140
+So I is less than this length minus one and we're going to increment I by one each time through the
+
+11:54.140 --> 12:04.860
+loop within this loop all we're gonna do is say this dot data are data at each index that we loop through
+
+12:06.180 --> 12:13.040
+is going to equal this dot data that I plus one.
+
+12:13.050 --> 12:13.800
+Mm hmm.
+
+12:13.860 --> 12:23.610
+What just happened here Well we're saying start at the index that we want to start the delete from and
+
+12:23.790 --> 12:26.610
+iterate through it all the way until the end.
+
+12:26.850 --> 12:35.940
+And within this loop I want you to take each item in the data that we have and instead of what it had
+
+12:36.120 --> 12:41.560
+before I want you to add the data that is right next to it at plus 1.
+
+12:41.580 --> 12:53.250
+So if we had an array that is 0 and 2 I'm saying from the index of 0 over here I want you to now instead
+
+12:53.580 --> 12:57.170
+make 0 equal to 2.
+
+12:57.210 --> 12:59.390
+So index of Y plus 1.
+
+12:59.520 --> 13:12.270
+So we're shifting the items to the left by one so we have shifted here all the items one to the left
+
+13:13.920 --> 13:21.420
+and because we did that the index that we gave it for the delete automatically gets replaced because
+
+13:21.690 --> 13:26.370
+that I is going to get replaced.
+
+13:26.530 --> 13:28.430
+Now there's an issue here right.
+
+13:28.620 --> 13:40.690
+Because now the very last item in the array that is this dot data at this dot length minus 1 which is
+
+13:40.690 --> 13:45.430
+the last item in the array will still exists.
+
+13:45.430 --> 13:55.180
+We've shifted everything over by 1 but we've never touched the very last item because we stopped when
+
+13:55.460 --> 13:55.920
+I.
+
+13:55.930 --> 13:59.310
+Is less than this dot left minus one.
+
+13:59.320 --> 14:03.680
+So this is still full.
+
+14:03.700 --> 14:09.630
+So I'm going to comment this out and just show you what happens if we just leave it like this.
+
+14:09.940 --> 14:11.470
+I'm going to run the new
+
+14:14.410 --> 14:23.920
+Array dot delete and I'm going to remove the pup mans for now and in the delete I'm going to say I want
+
+14:23.920 --> 14:27.580
+to delete the you item.
+
+14:27.580 --> 14:40.330
+So that's index of 1 5 run this I get high you is deleted but then I have exclamation mark at index
+
+14:40.330 --> 14:40.770
+of 1.
+
+14:40.780 --> 14:48.360
+So the shifting is working but at index of 2 I still have the exclamation mark because while we never
+
+14:48.360 --> 14:52.590
+deleted it we've shifted everything once over but we never touched index of two.
+
+14:53.280 --> 15:03.130
+So all we need to do to get rid of that is the delete keyword to delete the last item and obviously
+
+15:03.280 --> 15:14.450
+to decrement our length because we've just delete an item we can do this dot length minus minus if we
+
+15:14.450 --> 15:23.310
+run this now hey look at that length of too high exclamation mark let's play a literal round to make
+
+15:23.310 --> 15:30.120
+sure everything is working here if let's say I add a couple more push commands here and we'll say here
+
+15:30.150 --> 15:43.890
+are high you are and then let's say nice if I run this I get high exclamation mark ah nice that doesn't
+
+15:43.890 --> 15:55.320
+make senseless changes to zero to remove the high if I run this I get you exclamation mark ah nice that's
+
+15:55.470 --> 16:01.230
+still doesn't make sense let's remove the exclamation mark so that we only have you are nice I'm going
+
+16:01.230 --> 16:10.950
+to run the new array and we can delete index of 1 which is the exhumation Mark and let's see what we
+
+16:10.950 --> 16:17.820
+get then if I run this I get you are nice
+
+16:20.690 --> 16:28.160
+Now you might look at this and want to add your own methods you might want to let's say in here return
+
+16:28.280 --> 16:38.320
+the last item just as a reference which is how it works in javascript but I think for now you have an
+
+16:38.320 --> 16:46.450
+understanding of how Arrays work and how they're implemented underneath the hood we have simple 0 of
+
+16:46.450 --> 16:53.850
+1 commands which are really really nice but as soon as we have to start shifting indexes and changing
+
+16:53.850 --> 17:01.790
+things around we have to loop over things which makes it 0 event or linear time I'm going to leave this
+
+17:01.790 --> 17:07.850
+for you as a playground after this lesson so you can add your own things maybe you write it in different
+
+17:07.850 --> 17:14.600
+languages and explore a little bit more into a race but this video's already getting long I want you
+
+17:14.600 --> 17:17.800
+to get to board now so I'll see you in the next video.
+
+17:17.970 --> 17:18.290
+Bye bye.

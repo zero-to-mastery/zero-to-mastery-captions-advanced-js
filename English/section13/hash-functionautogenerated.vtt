@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00.990 --> 00:04.070
+What is a hash function.
+
+00:04.170 --> 00:12.850
+It's something that's used all across computer science a hash function is simply a function that generates
+
+00:12.850 --> 00:19.160
+a value of fixed length for each input that it gets.
+
+00:19.180 --> 00:19.580
+All right.
+
+00:19.580 --> 00:21.260
+What does that mean.
+
+00:21.260 --> 00:28.250
+Well I have here a empty five hash generated empty five is the type of hash function.
+
+00:28.250 --> 00:37.520
+And there's many many types you might have heard of SHA 1 shot 256 and many others using this hash function.
+
+00:37.570 --> 00:40.270
+LET'S SEE WHAT HAPPENS IF I DO.
+
+00:40.390 --> 00:42.590
+HELLO.
+
+00:42.630 --> 00:44.570
+YOU SEE THAT RIGHT AWAY.
+
+00:44.570 --> 00:55.280
+AND THESE FIVE HASHES this string and turns it into this gibberish that's what a hash function does.
+
+00:55.550 --> 01:03.470
+We give it an input and the function generates some random pattern.
+
+01:03.470 --> 01:07.550
+Now there's some key aspects of hash functions.
+
+01:07.550 --> 01:16.670
+First is that it's one way in the sense that if I give somebody this they have no idea what the input
+
+01:16.670 --> 01:17.630
+was.
+
+01:17.990 --> 01:24.790
+And it's practically impossible for me to have any clue as to what the input is.
+
+01:24.800 --> 01:31.590
+The second is that no matter how many times I put Hello in there it's going to be the same.
+
+01:31.760 --> 01:38.840
+But I soon as I change one thing it's going to completely change the output.
+
+01:38.840 --> 01:46.270
+If I go back to hello and watch me just change to capital H even a capital letter.
+
+01:46.320 --> 01:48.640
+So it starts with five D four.
+
+01:49.130 --> 01:53.020
+If I do capital H it's completely different.
+
+01:53.040 --> 01:58.230
+Again and looking at this we can at least say that.
+
+01:58.250 --> 01:58.950
+Mm hmm.
+
+01:59.140 --> 02:05.050
+I don't know what this is useful for but the one thing that I know is that no matter what if I give
+
+02:05.050 --> 02:11.560
+it the same input it's going to give me the same result but I have no idea how to convert this back
+
+02:11.570 --> 02:13.550
+into Hello.
+
+02:13.690 --> 02:18.230
+This is what we call indent potent or indent potent.
+
+02:18.310 --> 02:20.110
+There's different pronunciations.
+
+02:20.110 --> 02:26.320
+I'm not really sure which ones which but it is a fancy way of saying that a function given an input
+
+02:26.440 --> 02:29.750
+always outputs the same output.
+
+02:29.810 --> 02:37.700
+Now the one benefit and why we would want to use this in a data structure is that we get really fast
+
+02:37.850 --> 02:51.230
+dad access because all I have to do to find grapes or basket dot grapes is to pass grapes into something
+
+02:51.230 --> 02:58.490
+like an empty five hash it generates this number for me and I immediately know where it is in my memory
+
+02:58.940 --> 03:02.600
+on our computer but this doesn't look like an address.
+
+03:02.610 --> 03:11.480
+Does it technically a hash function that we use for hash tables is going to take grapes generate some
+
+03:11.480 --> 03:20.210
+sort of gibberish and then converted to an index space or an address space that it has based on this
+
+03:20.210 --> 03:22.250
+number.
+
+03:22.410 --> 03:32.210
+You see unlike a race where we just had ordered indexes with hash tables all we need to do is give it
+
+03:32.210 --> 03:39.890
+a key and we know exactly where that item is in our memory but you might be wondering this black box
+
+03:39.960 --> 03:43.070
+hash function doesn't it slow things down.
+
+03:43.280 --> 03:52.970
+Because every time we want to add a prop. And a value grapes and ten thousand two hash table we have
+
+03:52.970 --> 03:58.640
+to run it through the hash function so we can decide where to put it in memory.
+
+03:58.640 --> 04:00.560
+And if you've noticed that.
+
+04:00.680 --> 04:01.430
+Good job.
+
+04:01.430 --> 04:03.350
+That is a big factor.
+
+04:03.500 --> 04:10.940
+You don't want this to take a very long time because well every time you add a property to memory or
+
+04:10.940 --> 04:18.410
+retrieve a property to memory because again we add both times we're sending the key grapes into the
+
+04:18.410 --> 04:21.420
+hash function to find where to get it from.
+
+04:21.470 --> 04:23.900
+We need this to be really really fast.
+
+04:24.560 --> 04:31.820
+And underneath the hood remember because hash tables exist in all languages they're implemented with
+
+04:31.820 --> 04:35.750
+an optimum hashing function that's really really fast.
+
+04:37.090 --> 04:47.960
+As a side note hash functions like SHA 256 take a really long time to generate a hash and it is an overly
+
+04:47.960 --> 04:57.020
+complex hashing function that is used a lot in places like cryptography where you want this to take
+
+04:57.620 --> 05:01.010
+longer but that is outside the scope of this course.
+
+05:01.190 --> 05:08.880
+If you're interested I do recommend that you check out the differences between these two to review.
+
+05:08.880 --> 05:11.730
+We have a key that is grapes.
+
+05:11.730 --> 05:18.240
+We send it through a hash function that is going to hash something really really fast and then map whatever
+
+05:18.240 --> 05:29.890
+the hash came out to be into a memory address where we want to store our data our grapes 10000 and when
+
+05:29.890 --> 05:35.440
+it comes to hashing functions you typically leave this to whatever framework or language you're using
+
+05:36.100 --> 05:44.740
+and we usually assume a time complexity or Big O notation of 0 1 because this happens really fast.
+
+05:44.740 --> 05:45.230
+All right.
+
+05:45.310 --> 05:48.070
+Now that we understand what this black box does.
+
+05:48.190 --> 05:54.970
+Let's talk a little bit more about hash tables why they're useful and why in some cases are better than
+
+05:54.980 --> 05:55.390
+arrays.

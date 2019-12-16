@@ -1,0 +1,592 @@
+WEBVTT
+
+00:01.370 --> 00:02.760
+Welcome back.
+
+00:02.780 --> 00:08.210
+Now why you'll learn in the next few videos is quite advanced.
+
+00:08.300 --> 00:13.640
+It does take some time to really grasp the concepts and understand them.
+
+00:13.640 --> 00:17.490
+And the best way to do that is to do these yourselves.
+
+00:17.660 --> 00:22.810
+So use these videos as a reference to come back to when you have questions.
+
+00:22.820 --> 00:28.130
+I'm going to cover the main topics that you'll see out in the wild.
+
+00:28.130 --> 00:34.260
+You can come back and reference these videos whenever you have questions and in this video we're going
+
+00:34.260 --> 00:38.200
+to tackle advanced functions.
+
+00:38.260 --> 00:40.540
+Now I have a sample function for you here.
+
+00:40.600 --> 00:46.630
+But knowing what we learned about the new javascript syntax we're going to convert this first to how
+
+00:46.630 --> 00:50.420
+we should write JavaScript in 2018.
+
+00:50.470 --> 00:53.450
+Function word is gone now.
+
+00:53.590 --> 00:58.450
+We can just say cost first equals
+
+01:01.830 --> 01:12.240
+hero function and this error function has a greet which can be a constant and a function which again
+
+01:12.270 --> 01:13.800
+can be cost.
+
+01:13.860 --> 01:14.430
+Second
+
+01:18.750 --> 01:24.690
+and finally this can be a cost as well.
+
+01:24.690 --> 01:32.040
+We also learned about scope an important property of function is that the variables create in the inside
+
+01:32.040 --> 01:38.190
+of them including their parameters are local to the function.
+
+01:38.240 --> 01:47.000
+So that means that every time we run the first function this block of code gets executed and they greet
+
+01:47.210 --> 01:50.690
+variable gets created every time.
+
+01:50.690 --> 01:58.880
+Now this is actually good for us because we make sure that if our program every time we run first remembered
+
+01:58.930 --> 02:05.600
+degreed well they'll have conflicts because it's a constant and we constantly reassign the same thing
+
+02:05.630 --> 02:08.400
+to a variable that already exists.
+
+02:08.420 --> 02:15.110
+So this way within a function we make sure that every time we run it it's a clean slate.
+
+02:15.110 --> 02:21.500
+You can name the variables however you like because there's nothing else that will collide with it.
+
+02:21.560 --> 02:28.790
+Like I said this behavior helps prevent accidental interferences between functions and as developers
+
+02:28.970 --> 02:32.890
+we want to minimize the number of bugs or errors in our code.
+
+02:32.990 --> 02:39.650
+If all variables were shared by the whole program it take a lot of effort to make sure no name is ever
+
+02:39.650 --> 02:42.440
+used for two different purposes.
+
+02:42.440 --> 02:48.820
+Imagine if Grete was in another function and we had no idea and we can't use it.
+
+02:48.830 --> 02:56.900
+Well luckily by having our own separate scope we're able to make sure that we can use greed without
+
+02:56.900 --> 03:04.730
+having to check the entire code base now by treating function local variables as existing only within
+
+03:04.730 --> 03:05.350
+the function.
+
+03:05.360 --> 03:13.850
+The language makes it possible to read and understand functions as small universes where whatever happens
+
+03:13.850 --> 03:21.830
+in that universe only matters to itself but I also wanted to demonstrate an interesting concept with
+
+03:21.830 --> 03:31.490
+JavaScript and that is closures you can think of it as this a function runs the function executed.
+
+03:31.820 --> 03:38.360
+Now it's never going to execute again kind of like the first function we just executed it here and the
+
+03:38.360 --> 03:45.910
+result we put into new function it's going to remember that there are references to those variables
+
+03:45.940 --> 03:47.970
+alive in a memory first.
+
+03:48.910 --> 03:51.940
+However we see a problem here.
+
+03:52.130 --> 03:59.660
+You see that when we load up this program on our Web site the JavaScript engine will see this and I'll
+
+03:59.660 --> 04:04.320
+say OK we have a variable first that's a function great.
+
+04:04.640 --> 04:12.020
+And then in the next line we see what we want to assign a variable new function and we want to get the
+
+04:12.020 --> 04:13.410
+result of first.
+
+04:13.460 --> 04:20.930
+So the program runs first sees that we want to create a constant greet high and then we also see that
+
+04:21.680 --> 04:26.770
+we have another function called second and we're returning that function.
+
+04:26.960 --> 04:28.370
+But there is a problem here right.
+
+04:29.460 --> 04:39.910
+Second needs to remember what greed is although first runs and return second so we can think of this
+
+04:39.910 --> 04:45.100
+as once we do this we will only have the second function
+
+04:48.460 --> 04:52.510
+now and I know this is this looks confusing but just look at the highlighted here.
+
+04:52.600 --> 04:59.950
+That's what calling first means but you see over here that the Greek variable second doesn't.
+
+04:59.950 --> 05:07.270
+Well it's not within the scope of second rate what closures does and this is a rule in Javascript is
+
+05:07.270 --> 05:17.800
+that the child scope always has access to the parent scope so it's almost as if it remembers they always
+
+05:17.800 --> 05:21.580
+remember that there's a reference to those variables alive.
+
+05:21.700 --> 05:28.830
+So inside the web browser the web browser says oh this second function needs greed.
+
+05:28.840 --> 05:30.300
+So I'm going to remember it.
+
+05:30.340 --> 05:31.420
+Let me demonstrate that for you.
+
+05:31.930 --> 05:42.620
+So if I do first here and I'm going to copy this into the console and now we have new function.
+
+05:42.790 --> 05:48.780
+If I run new function I get high.
+
+05:49.160 --> 05:55.940
+Even though first is never going to be run again the only thing that we have left is the second function
+
+05:56.840 --> 06:02.490
+the web browser remembers Grete again this is a confusing concept.
+
+06:02.500 --> 06:11.890
+When you hear for the first time but like I said Just remember closures is just saying a function ran
+
+06:13.270 --> 06:16.850
+the function executed
+
+06:19.690 --> 06:21.340
+it's never going to execute again
+
+06:26.530 --> 06:35.650
+but it's going to remember that there are references to those variables.
+
+06:36.070 --> 06:44.600
+So that child's scope always has access to the parents.
+
+06:44.890 --> 06:58.670
+Now you may be wondering if I did hear const name equals Bobby will the first function have access to
+
+06:58.970 --> 07:00.610
+Bobby.
+
+07:00.610 --> 07:01.720
+No it wouldn't.
+
+07:01.720 --> 07:02.950
+So think of it this way.
+
+07:02.980 --> 07:08.800
+Children always have access to their parents scope by parents scope.
+
+07:08.880 --> 07:12.430
+They don't have access to their children.
+
+07:12.610 --> 07:16.630
+All right let's get into a few more things.
+
+07:16.650 --> 07:25.210
+Next we're going to talk about currying and curbing is the process of converting a function that takes
+
+07:25.270 --> 07:30.170
+multiple arguments into a function that takes them one at a time.
+
+07:30.250 --> 07:31.440
+Let's see what I mean.
+
+07:31.600 --> 07:45.410
+We have a function here we'll call it multiply and multiply accepts two parameters and again we're using
+
+07:45.410 --> 07:48.950
+our new function syntax will say a multiplies B
+
+07:51.760 --> 07:58.370
+now currying means we're changing this function to only accept one parameter at a time.
+
+07:58.420 --> 08:08.680
+So that means we do curried multiply equals a B
+
+08:12.250 --> 08:22.080
+A times B Whoa whoa what do we just do and again this looks very confusing.
+
+08:22.090 --> 08:25.540
+But think of these arrows as functions.
+
+08:25.540 --> 08:36.500
+So right now if I do curried multiply and I'll just say three well let's see this in action what happens
+
+08:39.520 --> 08:47.230
+I get a function that sets B multiply B so by running this is saying that a is three
+
+08:49.940 --> 08:54.280
+and now we'll know that when we multiply a street.
+
+08:54.380 --> 09:04.160
+But because this has a function and another function so a function inside of a function this just returns
+
+09:04.820 --> 09:10.470
+this part so returns a function as you can see here.
+
+09:10.480 --> 09:12.630
+So now in order to make this work.
+
+09:12.640 --> 09:17.030
+Let me put this back in order to make it work.
+
+09:17.030 --> 09:24.340
+We have to say curried multiply we'll say three.
+
+09:24.580 --> 09:35.950
+And then another bracket for and I get 12 if we look at this function compared to here we see exactly
+
+09:35.950 --> 09:46.360
+what we did we created a variable curried multiplier that accepts a parameter so it's a function that
+
+09:46.360 --> 09:47.280
+accepts a.
+
+09:47.320 --> 09:56.870
+In this case it's three and once you call that function once you've run it ever returns a another function
+
+09:57.440 --> 09:59.260
+that accepts B.
+
+09:59.570 --> 10:02.480
+And that function multiplies A and B.
+
+10:02.510 --> 10:09.150
+So what I'm doing here is saying create a multiplier a is three B is four.
+
+10:09.380 --> 10:18.160
+And now multiply a times b and as you can see as I said about currying it's the process of converting
+
+10:18.160 --> 10:26.840
+a function that takes multiple arguments like I said into a function that takes them one at a time.
+
+10:26.850 --> 10:30.180
+Now why do we even need to do this.
+
+10:30.450 --> 10:40.810
+Because now it's more extensible I can do something like const multiply by five equals and now I have
+
+10:40.810 --> 10:41.260
+this.
+
+10:41.770 --> 10:49.340
+So any time I want to multiply by five I could just say let me copy this.
+
+10:50.200 --> 10:54.920
+Now anytime I want to multiply a number by five five
+
+10:58.630 --> 11:09.430
+10 and now I have this function that was created that always multiply things by 5 which is very cool.
+
+11:09.430 --> 11:16.090
+All right we're going to get into one more thing and then I promise I'll make your head stop hurting.
+
+11:16.210 --> 11:25.710
+It's called compose and compose is the act of putting two functions together to form a third function
+
+11:26.160 --> 11:33.150
+where the output of one function is the input of the other even me saying that I'm like What did I just
+
+11:33.150 --> 11:33.440
+say.
+
+11:33.720 --> 11:46.650
+So let's write this down a compose looks like this let's say F and G parameters f and g return a function
+
+11:48.380 --> 11:58.620
+that takes parameter a that returns a function that has this holy moly.
+
+11:58.700 --> 12:03.770
+And if you look at this and you have no idea what's going on there's something that takes years for
+
+12:03.770 --> 12:06.460
+some to get it is really really advanced stuff.
+
+12:06.740 --> 12:12.580
+But if you're able to understand the inner workings of this you can pretty much do anything.
+
+12:13.210 --> 12:15.420
+Let's let's give it a go.
+
+12:17.190 --> 12:18.900
+What is happening here.
+
+12:18.900 --> 12:23.550
+Well it looks like looking at f and g.
+
+12:23.680 --> 12:29.140
+It looks like F is a function because while we have the brackets it even highlighted in blue for you
+
+12:29.530 --> 12:41.500
+and G is also a function if I had a some function that that lets say takes a number
+
+12:44.260 --> 12:55.150
+and just adds one what we can do with compose is I can say compose again.
+
+12:55.160 --> 13:06.050
+We have the function here some sum so both f and g are some and now because it takes a another bracket
+
+13:06.140 --> 13:06.830
+I can say
+
+13:11.170 --> 13:11.420
+all right.
+
+13:11.510 --> 13:20.850
+So let's run this and then we can go step by step to show you what it does I get seven so why is that.
+
+13:20.850 --> 13:32.990
+Well let's take it one by one if both f and g are some and a is five we look at what the function returns
+
+13:33.630 --> 13:39.230
+and because again we have two brackets we're executing the first part of the function which returns
+
+13:39.230 --> 13:44.760
+us another function which is this and within it we give the a five.
+
+13:44.810 --> 13:49.590
+So when this function runs it says a is five.
+
+13:49.610 --> 13:50.310
+OK.
+
+13:50.420 --> 13:53.150
+And then let's run the inner function G.
+
+13:53.300 --> 13:55.160
+In this case it's sum.
+
+13:55.310 --> 14:02.150
+So if you remember some is just saying give me five and then five plus one.
+
+14:02.150 --> 14:13.220
+So now this changes to six and then finally the F function runs which is again some and this says some
+
+14:13.820 --> 14:26.820
+is giving me six so six plus one is seven and this whole thing returns seven.
+
+14:27.180 --> 14:27.670
+All right.
+
+14:27.690 --> 14:37.230
+That was a whole ton of stuff but I want you to remember these three key words because when you get
+
+14:37.230 --> 14:43.360
+to advanced JavaScript functions are really really important.
+
+14:43.380 --> 14:52.050
+You'll hear words like closures and currying and compose a lot and you'll find tools and libraries that
+
+14:52.050 --> 14:54.240
+use these heavily.
+
+14:54.240 --> 14:57.450
+Now you don't need to know the definition of them.
+
+14:57.450 --> 15:01.820
+You just need to be able to read a piece of code and understand what's going on.
+
+15:01.890 --> 15:11.100
+And this is why I like showing you this although it's really advanced and very hard to to grasp by understanding
+
+15:11.100 --> 15:15.270
+the step by step process of how a function works.
+
+15:15.300 --> 15:21.420
+This is really useful because now when you encounter this in the wild you'll understand how everything
+
+15:21.780 --> 15:26.290
+works now to finish off this function section.
+
+15:26.290 --> 15:33.180
+I want to tell you the most important thing that you can do as a web developer when creating code and
+
+15:33.180 --> 15:43.750
+that is the idea of avoiding side effects and functional purity.
+
+15:43.840 --> 15:44.500
+What does that mean.
+
+15:44.650 --> 15:48.420
+Well let's go back to my diagram here.
+
+15:48.460 --> 15:55.570
+You might remember this from the first part where we said a input is what we give a function input of
+
+15:55.570 --> 15:56.320
+some sort.
+
+15:56.320 --> 16:00.730
+It could be an empty input or it could have parameters like five or 10.
+
+16:00.730 --> 16:04.390
+A function does something that we define.
+
+16:04.540 --> 16:05.660
+It has its own scope.
+
+16:05.680 --> 16:08.000
+Remember it's its own universe.
+
+16:08.050 --> 16:15.070
+It could have console log it could do a bunch of stuff and then it asks Am I returning anything you
+
+16:15.070 --> 16:16.340
+can do.
+
+16:16.450 --> 16:23.790
+This should be undefined so you can return a value or if it doesn't return anything.
+
+16:23.800 --> 16:32.990
+It just does on define now the two words that I just said sides effects and functional purity will side
+
+16:32.990 --> 16:40.030
+effects are any of these things any of actions that happen.
+
+16:41.430 --> 16:49.890
+Inside of the function that we don't really know anything about if it interacts or reads or writes to
+
+16:50.220 --> 16:54.420
+an external variable for example or console logs.
+
+16:54.420 --> 16:56.740
+Well that's a side effect.
+
+16:57.090 --> 17:02.250
+If we change here a variable one A equals one
+
+17:05.280 --> 17:07.950
+and then I have a function
+
+17:11.510 --> 17:15.220
+that changes a.
+
+17:15.460 --> 17:17.620
+Well that's a side effect.
+
+17:17.620 --> 17:22.600
+That's something that the function's doing to effect the outside world.
+
+17:22.600 --> 17:29.730
+Remember we want to think of functions as its own universe and if it starts affecting the outside world.
+
+17:29.800 --> 17:35.930
+I mean it's not the end of the world we've done console log before we've done we've done this before
+
+17:37.070 --> 17:41.620
+but it is good practice to avoid these side effects.
+
+17:42.750 --> 17:49.530
+And by avoiding these side effects we have something called functional purity and functional purity
+
+17:50.710 --> 17:58.370
+is a concept where we say in order for us to write really really good programs we want to avoid side
+
+17:58.370 --> 18:14.060
+effects and we always wonder return so that this and this are gone and we always return something and
+
+18:14.060 --> 18:18.300
+what's the power in this by avoiding side effects.
+
+18:19.590 --> 18:30.420
+And always returning we create something that we call deterministic and deterministic is a word that
+
+18:30.420 --> 18:31.490
+you may have heard.
+
+18:31.680 --> 18:41.340
+It means that no matter what if my inputs let's say 5 and 10 go through this function this little universe
+
+18:41.760 --> 18:46.550
+the return value will be always the same.
+
+18:46.630 --> 18:54.400
+Let me say that again the input whatever we put in the parameters whether it's empty or it has certain
+
+18:54.400 --> 19:01.680
+parameters it always returns if we run this a thousand times it always returns the same value that's
+
+19:01.740 --> 19:02.960
+determinism.
+
+19:03.060 --> 19:08.070
+It's a very important concept and that's a key principle in avoiding bugs.
+
+19:08.070 --> 19:14.670
+Because if this function always does the same thing well then you know exactly what it does and you
+
+19:14.670 --> 19:17.920
+won't have random errors popping up here and there.
+
+19:18.940 --> 19:28.940
+That's what I want to leave you with although this is not the law and you'll find code bases that we'll
+
+19:28.940 --> 19:30.200
+have a lot of side effects.
+
+19:30.200 --> 19:35.420
+There's gonna be a lot of things happening inside functions that maybe even affect variables that live
+
+19:35.450 --> 19:36.860
+outside of a function.
+
+19:36.950 --> 19:43.880
+It is really really good practice to be a top performing developer to have this in mind of creating
+
+19:43.880 --> 19:54.370
+functions that minimize side effects and have functional purity what we call determinism where anything
+
+19:54.370 --> 19:59.390
+you put into the function it always returns the same thing.
+
+19:59.400 --> 20:00.970
+All right that's it for now.
+
+20:01.020 --> 20:02.880
+Go try out some exercises.
+
+20:02.880 --> 20:04.300
+I'll see you in the next one.
+
+20:04.310 --> 20:04.620
+Bye bye.

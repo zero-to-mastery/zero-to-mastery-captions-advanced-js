@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.780 --> 00:01.980
+Welcome back.
+
+00:02.130 --> 00:04.130
+Here's another exercise for you.
+
+00:05.160 --> 00:10.460
+And here's a hint there's actually two ways of solving this problem.
+
+00:10.560 --> 00:14.090
+So let's see if we can find both solutions.
+
+00:14.310 --> 00:21.060
+And I'm using this question because it has to be one of the most commonly asked interview questions
+
+00:21.060 --> 00:22.710
+for JavaScript developers.
+
+00:22.710 --> 00:25.630
+So hopefully you're able to understand it.
+
+00:25.710 --> 00:35.550
+I have an array here and also a loop over this array so we're just looping over the array and we're
+
+00:35.550 --> 00:37.470
+running a set time out.
+
+00:37.530 --> 00:46.080
+So we're calling that web API and we have a callback function right here that will be called in three
+
+00:46.080 --> 00:56.840
+seconds that will console log I am at index of my SO if I click Run here what's going to happen.
+
+00:56.850 --> 01:00.770
+Well let's find out when I click Run.
+
+01:00.830 --> 01:04.430
+I'm waiting for set time out and it's back.
+
+01:04.430 --> 01:11.780
+I am at index 4 for 4 for is that what you expected.
+
+01:13.100 --> 01:13.940
+If there wasn't.
+
+01:13.980 --> 01:25.960
+Look at the function carefully and see if we can fix this so that I logs 1 2 3 4 and I'll see in the
+
+01:25.960 --> 01:26.590
+solution video.

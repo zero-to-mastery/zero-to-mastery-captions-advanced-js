@@ -1,0 +1,244 @@
+WEBVTT
+
+00:00.840 --> 00:01.350
+Welcome back.
+
+00:01.830 --> 00:05.550
+Let's talk about the idea of imperative vs. declarative.
+
+00:06.360 --> 00:07.410
+What does that mean.
+
+00:08.560 --> 00:17.230
+Well imperative code is code that tells the machine what to do and how to do it declarative code tells
+
+00:17.230 --> 00:20.830
+it what to do and what should happen.
+
+00:20.830 --> 00:24.010
+It doesn't tell the computer how to do things.
+
+00:24.080 --> 00:25.510
+I'm still confused.
+
+00:26.230 --> 00:32.360
+Well think of it this way a computer is better at being imperative.
+
+00:32.450 --> 00:35.750
+That is it needs to know how to do things.
+
+00:35.900 --> 00:39.180
+We on the other hand as humans are more declarative.
+
+00:39.290 --> 00:44.180
+If I tell my friend hey can you pass me that jug of water.
+
+00:44.990 --> 00:51.450
+Well I don't need to tell my friend hey can you walk over there with your right hand pick up the jug.
+
+00:51.770 --> 00:52.890
+Come towards me.
+
+00:52.910 --> 00:56.810
+Give it to me and then release the jug into my hand.
+
+00:56.810 --> 00:57.750
+I don't have to tell it.
+
+00:57.800 --> 01:05.400
+Humans are declared and if you remember when we talked about JavaScript engines you can see this example
+
+01:05.400 --> 01:06.090
+here.
+
+01:06.330 --> 01:14.820
+Machine code is very imperative we say put the variable in this memory space and then take it out here
+
+01:14.820 --> 01:16.060
+and modify here.
+
+01:16.110 --> 01:22.740
+It's very descriptive of how to do things versus as we go higher and higher up the chain to something
+
+01:22.740 --> 01:24.320
+like a higher level language.
+
+01:24.450 --> 01:26.800
+Well that becomes more declarative.
+
+01:26.850 --> 01:30.240
+We don't have to say hey this is where you should store the memory.
+
+01:30.300 --> 01:37.800
+We just declare variable with some sort of data and we say what we need to get done but not how to do
+
+01:37.800 --> 01:37.920
+it.
+
+01:37.920 --> 01:40.480
+The computer takes care of that for us.
+
+01:40.500 --> 01:48.780
+Another great example of imperative versus declarative is the idea of for loops where we have four let
+
+01:49.020 --> 01:51.970
+AI of let's say equals to zero.
+
+01:52.380 --> 02:02.930
+And then we say AI is less than a thousand increment AI and then in here a console dot log.
+
+02:02.990 --> 02:06.800
+Hi would you say that's imperative or declarative.
+
+02:06.900 --> 02:10.770
+I mean it's all on a spectrum but this is pretty imperative.
+
+02:10.800 --> 02:11.460
+Right.
+
+02:11.610 --> 02:20.160
+We say declare variables zero and then loop for a thousand times and then also increment AI and console
+
+02:20.160 --> 02:20.560
+log.
+
+02:20.850 --> 02:22.990
+There's a lot of instruction here.
+
+02:23.190 --> 02:26.350
+How can you make this more declarative.
+
+02:26.400 --> 02:36.930
+Well I can simply say let's say we have an array of a thousand items and I can say for each for each
+
+02:36.960 --> 02:48.690
+item in the array just console the old log the item so that if I do something like this I get one two
+
+02:48.810 --> 02:55.090
+three you can see that this is a lot more declarative I don't tell the program what to do or how to
+
+02:55.090 --> 02:55.760
+do it.
+
+02:56.390 --> 02:57.170
+Simply.
+
+02:57.200 --> 03:02.800
+Well here's an array for each array for and each item just console log the item.
+
+03:03.080 --> 03:07.760
+I don't tell it to increment I by 1 and to loop through things.
+
+03:07.790 --> 03:11.270
+This is more declarative than this one.
+
+03:11.270 --> 03:15.950
+Another classic example of this is J query J.
+
+03:15.950 --> 03:22.340
+Query is a lot more imperative than what we have now on the front and frameworks like react angular
+
+03:22.340 --> 03:28.430
+or view because with J query we told our Web site exactly what to do.
+
+03:28.460 --> 03:35.990
+Hey if the user clicks on the ACM L then grab the drop down menu and then hide it.
+
+03:35.990 --> 03:43.430
+Hey if something happens with the drop down menu well then look at the sibling and then hide that we
+
+03:43.430 --> 03:45.820
+tell it exactly what to do.
+
+03:45.850 --> 03:53.870
+But also how to do it versus if you look at something like react and this is a project that we've worked
+
+03:53.870 --> 03:54.080
+on.
+
+03:54.080 --> 04:02.030
+On another one of my courses if I go to components and we look at card component for example react is
+
+04:02.030 --> 04:09.470
+fairly imperative we have a function here that takes in some parameters and then returns a piece of
+
+04:09.470 --> 04:10.760
+HMO.
+
+04:10.910 --> 04:15.780
+We don't tell it what to display and how to do it just simply hate.
+
+04:15.830 --> 04:17.100
+This is the data.
+
+04:17.240 --> 04:19.400
+Can you just display this.
+
+04:19.400 --> 04:22.840
+Even if we go into something like apt J Yes.
+
+04:22.910 --> 04:25.880
+And if you've never seen react before don't get scared.
+
+04:25.880 --> 04:26.770
+This is not important.
+
+04:26.780 --> 04:30.440
+I just want to show you the idea behind it.
+
+04:30.500 --> 04:39.080
+You see that I have an is pending and a loading and I'm simply saying Hey if is pending is the true.
+
+04:39.080 --> 04:47.940
+Then just do a loading screen otherwise just load up the card list don't tell react how to do things.
+
+04:48.000 --> 04:50.500
+I just tell it hey this is what I want.
+
+04:50.520 --> 04:58.830
+This is more declarative why my teaching you this because functional programming helps us be more declarative
+
+04:59.430 --> 05:06.630
+by using functions and what we'll learn eventually which is composing functions we tell our programs
+
+05:07.140 --> 05:10.310
+what to do instead of how to do it.
+
+05:10.350 --> 05:17.070
+Now I know that that's still hard to understand and we'll keep working on that understanding throughout
+
+05:17.070 --> 05:22.500
+the next couple of videos but it's important here to remember that when we talk about declarative and
+
+05:22.620 --> 05:30.300
+imperative declarative code is always going to end up either compiling down or being processed by something
+
+05:30.300 --> 05:32.520
+imperative like machine code right.
+
+05:33.710 --> 05:41.600
+At the end of the day we can't just avoid side effects and data manipulation right at the end of the
+
+05:41.600 --> 05:48.110
+day something has to manipulate the DOM on a web page or talk to a database.
+
+05:48.110 --> 05:57.290
+In the case of something like react yes it abstracts away a lot of this complexity so that we as programmers
+
+05:57.290 --> 06:05.210
+don't have to do it but the react library itself and even functional languages like Lisp or Haskell
+
+06:05.600 --> 06:10.170
+eventually have to compile and do imperative things.
+
+06:10.310 --> 06:19.250
+But the idea is for us to go a step higher a level higher into declarative code so that it's easier
+
+06:19.250 --> 06:21.680
+to read and we can be more productive.
+
+06:22.190 --> 06:25.420
+So that is imperative versus declarative.
+
+06:25.610 --> 06:27.350
+Let's move on to another important concept.

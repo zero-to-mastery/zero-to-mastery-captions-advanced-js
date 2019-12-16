@@ -1,0 +1,139 @@
+WEBVTT
+
+00:00.450 --> 00:01.680
+Welcome back.
+
+00:01.710 --> 00:08.940
+If you've been following along each video one by one and you're finally here I hope that the this keyword
+
+00:08.970 --> 00:11.400
+is something not scary anymore.
+
+00:11.490 --> 00:12.320
+You understand it.
+
+00:12.360 --> 00:13.820
+You have a good idea of it.
+
+00:14.100 --> 00:22.850
+And I want to take this opportunity to review the ways that we've learned we can manipulate this keyword.
+
+00:22.920 --> 00:33.960
+The most recent one that we learned was this idea of the new binding and this new binding was used with
+
+00:33.960 --> 00:38.900
+constructor functions where we'd have things like a person.
+
+00:39.080 --> 00:40.850
+And we can use this dot.
+
+00:40.850 --> 00:44.450
+Name equals name.
+
+00:44.450 --> 00:57.780
+This dot age equals page and as soon as we call this and do Person 1 equals new person and we give it
+
+00:57.810 --> 00:59.220
+let's say Xavier
+
+01:03.830 --> 01:05.760
+and fifty five.
+
+01:05.770 --> 01:07.980
+Well now we have Person 1
+
+01:12.450 --> 01:21.990
+with the proper this updated the new binding allow us to assign this to the object that we instantiate
+
+01:22.380 --> 01:22.980
+the person from.
+
+01:23.190 --> 01:27.090
+So Person 1 will be the this keyword.
+
+01:27.690 --> 01:31.290
+So that's the one way that we can manipulate this keyword.
+
+01:32.310 --> 01:38.220
+The other way is called implicit binding and with implicit binding.
+
+01:38.340 --> 01:47.600
+Well it's when we used something like this where it was just implied we didn't have to do anything.
+
+01:47.610 --> 01:50.670
+This is just how the language works.
+
+01:50.670 --> 01:58.770
+We created an object and inside of that object the this keyword will refer to person.
+
+01:58.890 --> 02:00.830
+That's implicit binding.
+
+02:00.930 --> 02:09.130
+It's the most common one but then we also learned about X plus it binding.
+
+02:09.480 --> 02:15.780
+And that's when we dictate exactly what the this keyword should refer to.
+
+02:15.820 --> 02:26.830
+For example if we have person three here with name H and again the same function high function but that
+
+02:27.010 --> 02:32.770
+function has let's say set timeout that it wants to call.
+
+02:32.770 --> 02:36.850
+But in this case this is going to refer to Person 3.
+
+02:36.880 --> 02:38.650
+Just like we saw above.
+
+02:38.740 --> 02:43.170
+But let's say that we want to call the set timeout method.
+
+02:43.450 --> 02:49.200
+And I mean we could just do window or just not use anything and just to set timeout.
+
+02:49.360 --> 02:58.990
+But if we want this to refer to the window object we can explicitly tell it what to bind to and we say
+
+02:59.050 --> 03:06.820
+bind to window so that if I do person three dot high
+
+03:09.950 --> 03:18.050
+this works I get the set timeout functionality from the window explicit binding is using bind call or
+
+03:18.050 --> 03:26.840
+apply to explicitly tell the program hey this is what I want this to be I want it to be window and then
+
+03:26.840 --> 03:37.220
+finally we learned about Arrow functions and with Arrow functions we learned that unlike all the other
+
+03:37.220 --> 03:45.530
+times where this is dynamically scoped that is it gets determined whenever it gets called with the arrow
+
+03:45.530 --> 03:51.920
+functions we can do lexical scoping that is wherever we write the function that's what this binds to
+
+03:53.150 --> 03:59.900
+so that if we do something like person for and we have the high function but inside of that function
+
+03:59.960 --> 04:07.550
+we have a another function remember a method with a function inside of it is the biggest gotcha when
+
+04:07.550 --> 04:09.170
+it comes to this.
+
+04:09.170 --> 04:17.780
+Well if we run inner here and we run it everything is working because we're using arrow functions if
+
+04:17.780 --> 04:26.070
+we didn't use an arrow function and just used a regular function well in that case this would be the
+
+04:26.070 --> 04:34.880
+window object which we usually never want so I hope this is now easier for you to understand error functions
+
+04:34.940 --> 04:42.410
+explicit binding implicit binding the new binding allow us to harness the power of this I'll see in
+
+04:42.410 --> 04:43.720
+the next one by.

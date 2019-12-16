@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.530 --> 00:06.630
+It's time to celebrate because you just finished your first data structure and they're going to get
+
+00:06.630 --> 00:07.620
+more and more fun.
+
+00:08.040 --> 00:14.520
+But you see here that we've started to complete our mental model of data structures.
+
+00:14.700 --> 00:19.290
+I promise to you that by the end of this course this whole diagram is going to make sense.
+
+00:19.470 --> 00:21.790
+And we've finished a small part of it.
+
+00:21.870 --> 00:27.920
+The arrays we talked about static and dynamic arrays.
+
+00:28.330 --> 00:34.750
+We talked about the big go complexity and how dynamic arrays can sometimes have.
+
+00:34.980 --> 00:44.560
+Oh then Pence because well sometimes we have to double up or expand our memory.
+
+00:44.560 --> 00:51.100
+We also talked about how strings and questions regarding strings can be treated very similar to array
+
+00:51.100 --> 00:59.210
+questions where you just convert them to an array and then join them back up and return a String answer
+
+00:59.390 --> 01:05.450
+they need and there's a few other points for arrays that we're going to talk about when we get into
+
+01:05.450 --> 01:06.650
+algorithms.
+
+01:06.650 --> 01:14.930
+But by now you should take a look at the Big O Cheat Sheet and understand why the array data structure
+
+01:15.140 --> 01:22.920
+has these big numbers and understand when our new Array is a good thing to use.
+
+01:22.940 --> 01:27.890
+One thing that you'll note when it comes to race especially when we get to algorithms is that they're
+
+01:27.890 --> 01:36.290
+really really good at having sort of data when it comes to sorting arrays are awesome because they're
+
+01:36.570 --> 01:41.370
+in memory in sequential order according to their index now.
+
+01:41.510 --> 01:45.730
+Before I go onto the slide you can pause the video.
+
+01:45.740 --> 01:49.930
+Think about when you would want to use an array when you wouldn't.
+
+01:50.180 --> 01:56.690
+Because in about five seconds I'm going to show you the pros and cons so positive video and the answer
+
+01:56.870 --> 02:02.150
+to when you should use an array Well here it is.
+
+02:02.250 --> 02:05.180
+Arrays are great for fast lookups.
+
+02:05.370 --> 02:10.370
+That is just accessing information where you know which index you want to look up.
+
+02:10.740 --> 02:12.840
+It's really fast that push and pop.
+
+02:12.840 --> 02:20.400
+So adding things at the end of an array or taking things out at the end of the array and of course because
+
+02:20.400 --> 02:26.310
+it's ordered having something that is ordered and close to each other in memory makes it really fast
+
+02:27.450 --> 02:34.770
+however it has slow inserts and deletes because we have to shift arrays whenever it's not at the very
+
+02:34.770 --> 02:36.150
+end of the array.
+
+02:36.420 --> 02:43.770
+And then finally if using static arrays it's fixed twice that means sometimes you have to declare the
+
+02:43.770 --> 02:51.150
+memory ahead of time and how large of an array you want but that can be avoided if we use some of the
+
+02:51.150 --> 02:55.530
+more modern languages that have dynamic arrays.
+
+02:55.560 --> 03:00.220
+Also I just realized that this smiley face kind of looks like a crazy person.
+
+03:00.750 --> 03:02.280
+But this is meant to be good.
+
+03:02.370 --> 03:03.180
+This is good.
+
+03:03.330 --> 03:08.000
+This scary little icon that's bad OK.
+
+03:08.320 --> 03:13.750
+I think we get it now we're going to come back to raise because a lot of other data structures we're
+
+03:13.750 --> 03:19.010
+going to talk about later on like Qs and stacks are related to race.
+
+03:19.300 --> 03:25.190
+But for now I want to get into other data structures because we still have a few to go through.
+
+03:25.430 --> 03:26.230
+I'll see you in the next one.

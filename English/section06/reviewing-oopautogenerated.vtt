@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.780 --> 00:01.770
+There you go.
+
+00:01.770 --> 00:02.470
+You did it.
+
+00:02.490 --> 00:09.490
+You just finish the Object Oriented Programming section of the course we can finally jump into functional
+
+00:09.490 --> 00:13.660
+programming and then talking about composition versus inheritance.
+
+00:13.720 --> 00:19.120
+And then finally comparing Object Oriented Programming with functional programming when to use what
+
+00:19.470 --> 00:26.140
+and some of the pros and cons but in this section we learn some really interesting things we learned
+
+00:26.140 --> 00:33.220
+about the this keyword the new keyword we learnt all about prototypes but also how we can simplify things
+
+00:33.340 --> 00:35.610
+using ESL classes.
+
+00:35.770 --> 00:43.810
+We learned about languages that are class based like Java and C++ but we also learn how JavaScript can
+
+00:44.020 --> 00:50.760
+become a language that works with classes although it uses prototype all inheritance.
+
+00:50.890 --> 00:57.390
+It can still create classes and act like an object oriented paradigm.
+
+00:57.400 --> 01:02.160
+We also learn object does create for those that want to avoid using classes.
+
+01:02.170 --> 01:03.580
+There are ways around it.
+
+01:04.010 --> 01:09.970
+And we also learned about private versus public fields something that JavaScript is definitely working
+
+01:09.970 --> 01:13.770
+towards and will be important as the language grows.
+
+01:13.770 --> 01:21.100
+And in order to really solidify the object oriented principles speaking of principles we covered the
+
+01:21.100 --> 01:29.110
+four principles of object oriented programming encapsulation abstraction inheritance and polymorphism
+
+01:30.430 --> 01:37.870
+and at the end of it all we learned how this programming paradigm allows us to structure our code beyond
+
+01:37.870 --> 01:45.940
+just simple procedural code but code that is well thought out well organized so that as it grows it's
+
+01:46.090 --> 01:55.260
+easier and easier to maintain to extend and to reason about hopefully now you feel like you've gained
+
+01:55.260 --> 02:03.140
+some superpowers and you're finally able to use OPI to become a better programmer.
+
+02:03.220 --> 02:05.060
+I'll see you in the next one by.

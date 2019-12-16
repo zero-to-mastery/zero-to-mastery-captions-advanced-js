@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.670 --> 00:02.790
+Welcome back.
+
+00:02.840 --> 00:08.600
+Let's do a quick little video on some of the things that you want to watch out for with functions.
+
+00:08.600 --> 00:14.190
+The one thing is you want to be careful of initializing functions inside of loops.
+
+00:14.210 --> 00:23.960
+For example if I had a loop here let's say for let I equals zero and we'll say that I as long as it's
+
+00:24.050 --> 00:29.460
+less than five we will increment i.
+
+00:29.940 --> 00:39.430
+And in here if I had a function a that gets initialized well every time we loop over here.
+
+00:39.430 --> 00:48.520
+So when I equals zero we're going to initialize the function a and then perhaps we run the function.
+
+00:48.940 --> 00:50.710
+And then when I becomes one.
+
+00:50.770 --> 00:56.330
+Once again we initialize the function added to memory and then invoke the function.
+
+00:56.530 --> 01:00.750
+So on and so forth until I becomes five.
+
+01:00.930 --> 01:06.270
+You want to be careful here because instead of initializing the function in a loop five times like we
+
+01:06.270 --> 01:16.140
+do here We instead should be moving this up top so that we initialize the function just once and then
+
+01:16.350 --> 01:23.480
+when we loop over it we're just executing at five times instead of initializing it and executing it.
+
+01:24.650 --> 01:32.190
+So that's something that is often overlooked and you want to be careful of another thing that you want
+
+01:32.190 --> 01:41.060
+to be careful with is something like let's say we had a function that returns some parameter.
+
+01:41.060 --> 01:45.440
+And if I run this I get undefined because I haven't called it yet.
+
+01:45.450 --> 01:51.180
+So let's call that if I run this I get a reference error param is not defined.
+
+01:51.270 --> 01:53.740
+I looked at my variable environment.
+
+01:53.740 --> 01:55.280
+Hey do I have param.
+
+01:55.300 --> 01:56.730
+No don't have it.
+
+01:56.730 --> 01:58.560
+Keep looking up the scope chain.
+
+01:58.620 --> 02:03.300
+So I go up to the global variables and I ask is parameter.
+
+02:03.480 --> 02:04.730
+No don't have it.
+
+02:04.740 --> 02:10.380
+And as soon as we have nothing in our variable environment and nothing up our scope chain we get a reference
+
+02:10.380 --> 02:11.360
+error.
+
+02:11.520 --> 02:17.940
+This often causes a lot of functions to fail and involves us always doing some sort of a check to see
+
+02:17.940 --> 02:26.430
+hey does param exist or is it a number or is it a certain type.
+
+02:26.430 --> 02:34.260
+Now we could in here add a parameter and if I run this I won't get that error because when we add a
+
+02:34.260 --> 02:43.290
+parameter to a function it adds it automatically to our variable environment as if we just declare it
+
+02:43.530 --> 02:44.790
+that variable.
+
+02:44.790 --> 02:48.750
+But when we call it with nothing.
+
+02:48.870 --> 02:51.070
+Well we're gonna get undefined.
+
+02:51.270 --> 02:57.570
+So one way you can avoid this is if you just give it a default parameter which is new.
+
+02:57.570 --> 02:58.850
+With iOS 6.
+
+02:58.980 --> 03:08.740
+So if I do param equals to 6 and I run this look at that I get six so it's good to have default parameters
+
+03:08.830 --> 03:14.460
+set on a function as a way to avoid those edge cases.
+
+03:14.470 --> 03:19.510
+Now these are just small things and there's many best practices when it comes to functions.
+
+03:19.510 --> 03:22.030
+We're going to explore those a little bit later on in the course.
+
+03:22.030 --> 03:24.510
+So for now I'll see you in the next video by.

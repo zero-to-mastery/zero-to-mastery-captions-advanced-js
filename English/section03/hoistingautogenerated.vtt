@@ -1,0 +1,355 @@
+WEBVTT
+
+00:01.640 --> 00:02.990
+Remember this diagram.
+
+00:03.740 --> 00:07.580
+Well in this diagram there is an important piece missing.
+
+00:07.580 --> 00:09.830
+I told you about the creation phase.
+
+00:09.830 --> 00:14.890
+That is when we set the global object and the this keyword and they equal each other.
+
+00:15.080 --> 00:21.200
+And then I told you that the second phase which is the execution phase is while we just run our code
+
+00:22.600 --> 00:25.770
+well in this diagram there is an important piece missing.
+
+00:25.930 --> 00:34.470
+This white line actually divides these two phases and in the creation phase we have one more step.
+
+00:34.630 --> 00:44.080
+We have something called hoisting so let's look at what this does hoisting is the behavior of moving
+
+00:44.500 --> 00:51.760
+the variables or function declarations to the top of their respective environments during compilation
+
+00:51.760 --> 00:52.340
+phase.
+
+00:52.390 --> 00:57.450
+Variables are partially hoisted and function declarations are hoisted.
+
+00:57.600 --> 00:58.150
+All right.
+
+00:58.150 --> 00:59.650
+Did you get any of that.
+
+00:59.650 --> 01:02.620
+No that was a little bit confusing so let's go through some code.
+
+01:02.680 --> 01:11.150
+If I create a console log here and just to make things clear and I'll just say one like this so we know
+
+01:11.150 --> 01:16.800
+what's happening and in here we'll have a variable.
+
+01:17.090 --> 01:22.150
+Teddy and Teddy will equal to equal to bear.
+
+01:22.160 --> 01:30.380
+It's a cute name and then we'll also have a function and let's say sing and the sing function sings
+
+01:31.220 --> 01:32.650
+beautifully.
+
+01:34.430 --> 01:37.130
+Oh la la la.
+
+01:37.160 --> 01:37.750
+Beautiful song.
+
+01:39.090 --> 01:47.470
+Now hoist thing what it does during the creation phase of our global execution context.
+
+01:47.660 --> 01:50.030
+Well it does something like this.
+
+01:50.180 --> 01:54.130
+What do you think will happen if I console da log Teddy.
+
+01:54.140 --> 02:03.800
+Here I run this I get on the fight for Teddy.
+
+02:04.250 --> 02:07.550
+Ok now this might not surprise you.
+
+02:07.800 --> 02:11.260
+And if you've been working with JavaScript This is normal right.
+
+02:11.270 --> 02:16.400
+It's undefined but in most languages it doesn't work like this.
+
+02:17.390 --> 02:23.030
+Because in javascript I can also run the function like this.
+
+02:23.090 --> 02:28.450
+Sing even before I have written it down.
+
+02:28.500 --> 02:32.120
+If I click Run I see that I have.
+
+02:32.200 --> 02:42.960
+Oh la la la And this is due to hoisting it is the JavaScript engine allocating memory for the variables
+
+02:42.990 --> 02:49.610
+and functions that it sees in your code during the creation phase before it executes it.
+
+02:50.250 --> 02:56.850
+So what happens underneath the hood is that during the creation face the JavaScript engine is going
+
+02:56.850 --> 03:05.900
+to look through the code and as soon as it sees two things either the VAR keyword or the function keyword.
+
+03:05.910 --> 03:11.490
+It's going to say oh let me allocates a memory because this guy over here he's gonna about his.
+
+03:11.490 --> 03:15.870
+He's gonna need some memory so it's going to do something like this.
+
+03:15.900 --> 03:20.520
+It's going to say hey variable Teddy.
+
+03:20.970 --> 03:22.600
+That's going to be undefined.
+
+03:22.620 --> 03:29.080
+I don't know what it is yet but I know that we're gonna have to have a variable Teddy so assign it undefined
+
+03:29.100 --> 03:29.790
+for now.
+
+03:29.790 --> 03:32.690
+And that's an actual javascript type.
+
+03:32.700 --> 03:39.910
+It's a reserved word because it's something in JavaScript and then same with function.
+
+03:39.980 --> 03:44.540
+It's almost like this function gets moved up here saying hey there's a function here.
+
+03:44.570 --> 03:49.130
+Let's add this to memory because well we're gonna use it.
+
+03:49.130 --> 03:56.930
+And underneath the hood This is what it might look like with hoisting where Teddy is now undefined because
+
+03:57.620 --> 04:05.180
+the JavaScript engine when an executes the code during the creation phase we already knew that Teddy
+
+04:05.300 --> 04:06.860
+was gonna be a variable.
+
+04:07.160 --> 04:08.570
+We don't know what it is yet.
+
+04:08.600 --> 04:13.810
+It is not there but it's undefined so it gives us undefined.
+
+04:13.910 --> 04:20.540
+So that's what I mean when I said variables are partially hoisted we hoist the variable but not the
+
+04:20.540 --> 04:27.320
+right side not the actual value we just assign it on defined functions are fully hoisted.
+
+04:27.320 --> 04:34.760
+That means this function declaration was during the creation phase assigned a location in memory and
+
+04:34.760 --> 04:41.960
+you can think of it this way where anytime we call saying we know where this piece of text is in memory
+
+04:42.140 --> 04:45.230
+so that if we call thing we can run that function.
+
+04:45.590 --> 04:47.740
+And as you can see it's working.
+
+04:48.140 --> 04:52.040
+Now let's test some of our assumptions that I just told you.
+
+04:52.850 --> 05:01.680
+If we move this back to where it was and we remove Teddy undefined from here and go back to that code
+
+05:02.730 --> 05:11.550
+what I told you was that as soon as the JavaScript engine sees var or function it's going to hoist it
+
+05:11.970 --> 05:16.710
+and make space for it in memory.
+
+05:16.740 --> 05:23.030
+So what if I do something like this where I add a bracket to the function over here.
+
+05:23.190 --> 05:27.960
+So the JavaScript engine no longer sees function as the first word.
+
+05:27.990 --> 05:31.340
+Instead it sees a bracket then a function.
+
+05:31.410 --> 05:37.200
+What do you think will happen here if I hit play I get a reference here.
+
+05:37.220 --> 05:45.490
+Singh is not defined because it doesn't hoisted because the first thing it sees wasn't a far wasn't
+
+05:45.490 --> 05:48.440
+a function well.
+
+05:48.680 --> 05:49.970
+This was not hoisted.
+
+05:49.970 --> 05:53.730
+So we get Singh is not defined.
+
+05:53.900 --> 05:54.900
+What about this.
+
+05:54.980 --> 05:58.010
+And this is something that we're going to talk about later on.
+
+05:58.070 --> 06:10.220
+But if I change this to a cost which is a new E6 syntax now with this cost keyword or let that doesn't
+
+06:10.220 --> 06:10.870
+get hoisted.
+
+06:10.880 --> 06:14.210
+Remember the rule is it's either var or function.
+
+06:14.270 --> 06:18.350
+So as soon as it sees let it actually will air out.
+
+06:18.350 --> 06:25.960
+Now in this ripple it won't give me an error but if I open up the console here and copy our code
+
+06:28.960 --> 06:36.000
+and run it I'll get Teddy is not defined and in most languages where there isn't hoisting.
+
+06:36.130 --> 06:44.640
+That's what would happen we wouldn't be able to use variables or functions before we actually render
+
+06:45.090 --> 06:48.430
+the compiler won't know anything about it.
+
+06:48.570 --> 06:57.840
+Now unlike what I told you initially the compiler isn't actually moving these lines of code.
+
+06:57.840 --> 07:05.800
+It's not physically moving variable Teddy all the way up or function all the way up.
+
+07:05.980 --> 07:13.870
+It looks like it may but what it's doing is simply having one pass through the code and saying reserve
+
+07:13.960 --> 07:17.420
+memory or assigned memory into this space.
+
+07:17.620 --> 07:25.210
+If we look at our diagram with hoisting during our global execution phase we're simply saying Hey we're
+
+07:25.210 --> 07:25.480
+gonna.
+
+07:25.480 --> 07:28.690
+It looks like we're gonna have a few functions and a few variables.
+
+07:28.690 --> 07:30.840
+Can you allocate some memory for us here.
+
+07:31.040 --> 07:37.710
+Just get us ready for the program about to run therefore when we see console log Teddy.
+
+07:37.840 --> 07:46.500
+Here the JavaScript engine is during its execution phase is going to say hey can you grab Teddy from
+
+07:46.590 --> 07:54.630
+memory and when it looks at Teddy in memory it's assigned undefined for now because it hasn't been assigned
+
+07:54.840 --> 08:05.250
+a new value and that is a key distinction especially when it comes to functions we have function declarations
+
+08:05.550 --> 08:12.540
+like the one that we saw here where function is the first word on a line or we have something like function
+
+08:12.540 --> 08:19.670
+expressions that is we can create a variable sing too.
+
+08:19.710 --> 08:27.270
+That equals function and this function is going to sing something else.
+
+08:27.390 --> 08:28.030
+Who.
+
+08:28.040 --> 08:29.940
+La la.
+
+08:29.960 --> 08:31.370
+There you go.
+
+08:31.370 --> 08:33.740
+This is a function expression
+
+08:38.840 --> 08:39.500
+this
+
+08:42.140 --> 08:46.910
+is a function declaration.
+
+08:46.960 --> 08:56.830
+Now what do you think this piece of code does when it comes to hoisting well during the creation phase.
+
+08:56.910 --> 09:03.530
+This variable is going to be hoisted up here and it's going to be assigned undefined.
+
+09:03.660 --> 09:12.360
+So with the function expression until the execution phase reaches it that is it has hoisted everything
+
+09:12.390 --> 09:19.600
+and now we're in the second part where we start running the code line by line with a function expression
+
+09:20.650 --> 09:26.770
+is only going to be run after it was defined.
+
+09:26.770 --> 09:29.490
+So I can't do sing to here.
+
+09:29.560 --> 09:31.630
+I'll get an error.
+
+09:31.630 --> 09:36.640
+It's not a function but if I move this line after we assign it
+
+09:40.600 --> 09:43.990
+it's working for us and if we go back
+
+09:46.800 --> 09:56.040
+and just console log sing to instead of running it with the brackets I get undefined because sing too
+
+09:56.130 --> 10:03.880
+was hoisted so to review with our global execution context.
+
+10:04.200 --> 10:06.480
+We have a few things that happen.
+
+10:06.630 --> 10:13.920
+We have the global object and this object during the creation phase that gets assigned and then during
+
+10:13.920 --> 10:16.740
+the execution phase we run our code.
+
+10:17.100 --> 10:24.150
+But it's important to remember that during this creation phase we also have this act of hoisting something
+
+10:24.150 --> 10:32.940
+that's quite unique to JavaScript where we move anytime we see the function or the VAR keywords as the
+
+10:32.940 --> 10:34.400
+first items on the line.
+
+10:34.620 --> 10:43.990
+We allocate space for them in our heap to make sure that the JavaScript engine is ready for the execution.
+
+10:44.010 --> 10:47.600
+So now that we've gotten that done let's do a fun little exercise.

@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.830 --> 00:01.890
+Welcome back.
+
+00:01.910 --> 00:07.770
+I want to revisit a few terms that we've seen before and that we should be familiar with.
+
+00:08.060 --> 00:15.950
+That is in JavaScript functions are first class citizens which means we can have high order functions
+
+00:16.490 --> 00:20.150
+and we can also have closures.
+
+00:20.160 --> 00:27.020
+Now let's start off with higher order functions and we view what they are higher order functions both
+
+00:27.110 --> 00:30.020
+in mathematics as well as computer science.
+
+00:30.290 --> 00:34.860
+Simply means it's a function that does one of two things.
+
+00:34.970 --> 00:45.390
+It either takes one or more functions as arguments or returns a function as a result often called a
+
+00:45.420 --> 00:54.430
+callback so we can write a fairly simple high order function such as const h o f and this higher order
+
+00:54.430 --> 01:04.130
+function will be a function that returns another function.
+
+01:04.150 --> 01:11.590
+This is a high order function because when I do h o f for a higher order function Oh and I don't need
+
+01:11.620 --> 01:18.110
+a return here because with an error function if it's on the same line the return is implied.
+
+01:18.340 --> 01:23.870
+You see that I get a function so it's a function that returns a function.
+
+01:24.080 --> 01:28.690
+So if I call this again there you I get 5.
+
+01:28.930 --> 01:31.230
+So that's a high order function.
+
+01:31.240 --> 01:42.600
+Another function could be a function that returns us or receives as a parameter a function.
+
+01:42.610 --> 01:54.430
+So here I can just call function 5 so that if I do h o f and in here give it a function like function
+
+01:55.540 --> 02:08.560
+a is a function that lets say returns 5 or in our case I'll return x which is our parameter if we do
+
+02:08.560 --> 02:13.200
+this and run 0 return make sure I spelled I right.
+
+02:13.210 --> 02:14.360
+Let's try that again.
+
+02:14.380 --> 02:15.090
+There you go.
+
+02:15.100 --> 02:17.490
+We have 5.
+
+02:17.570 --> 02:27.720
+This is a function the parameter of h o f takes a function so that's a higher order function as well
+
+02:28.970 --> 02:35.090
+and the interesting thing about high order functions and the fact that functions are first class citizens
+
+02:35.180 --> 02:37.980
+in JavaScript means we can do closures.
+
+02:38.080 --> 02:38.790
+Right.
+
+02:38.960 --> 02:43.500
+And we had a whole section on closures so you should be familiar with it by now.
+
+02:43.760 --> 02:52.280
+Let's just review like object closures in JavaScript are a mechanism for containing some sort of state
+
+02:52.970 --> 03:00.290
+and in JavaScript we create a closure whenever a function accesses a variable defined outside of the
+
+03:00.290 --> 03:04.450
+immediate function scope that is the scope of the parent.
+
+03:04.700 --> 03:07.100
+And it's fairly easy to create a closure rate.
+
+03:07.100 --> 03:14.150
+We simply define a function inside another function and expose the inner function either by returning
+
+03:14.150 --> 03:20.190
+it or passing it to another function so that we can use that variable.
+
+03:20.270 --> 03:22.240
+Let's have a look at an example.
+
+03:22.670 --> 03:37.460
+I can say variable or less to cost has a closure function and this closure function will have a variable
+
+03:37.820 --> 03:50.480
+let's call it let count which for now will equals zero and it's going to return a another function that
+
+03:50.480 --> 04:02.430
+will say increment and increment will simply increase the count or we can just do plus plus so that
+
+04:02.790 --> 04:12.180
+when we run the closure function and I click Run I get the increment function and if I run this again
+
+04:12.420 --> 04:23.610
+or if I assign into a variable and call it const increment function I can now call the increment function
+
+04:24.240 --> 04:25.080
+whenever I want.
+
+04:25.080 --> 04:31.670
+Let's see I get undefined because it's not returning anything for the from the actual increment.
+
+04:31.740 --> 04:45.020
+So let's just return count to see why we get we get one if I call this again.
+
+04:45.040 --> 04:45.730
+There you go.
+
+04:45.730 --> 04:46.560
+We had to.
+
+04:46.690 --> 04:53.430
+And then once again for good measure we get three now.
+
+04:53.470 --> 05:02.110
+Even though the initial closure function was called and we're done with that because of closure this
+
+05:02.380 --> 05:14.780
+increment function remembers the variable used by or declared in the outer scope so the variable used
+
+05:14.780 --> 05:21.740
+by the inner function will be available to it even after the outer function has finished running and
+
+05:21.830 --> 05:23.460
+you might notice two things.
+
+05:23.480 --> 05:29.390
+If you have been following along with our functional programming concept one is that we're modifying
+
+05:30.050 --> 05:35.160
+state outside of our function aren't we.
+
+05:35.180 --> 05:42.110
+This increment function is touching state or data that belongs to another function.
+
+05:42.110 --> 05:49.510
+The closure function and when it comes to functional programming it doesn't mean we can't use closures.
+
+05:49.510 --> 05:56.050
+We can definitely still use closures and they're very powerful but we have to be careful that closures
+
+05:56.050 --> 05:58.140
+only make a function impure.
+
+05:58.270 --> 06:12.470
+If we modified the closed over variable if instead our increment is just a get counter for example that
+
+06:12.770 --> 06:21.030
+returns the counter and lets say the country is at fifty five and we'll change the name of this to get
+
+06:21.330 --> 06:33.650
+counter and I run this I get 55 we're using closures here and although we're not modifying the state
+
+06:33.740 --> 06:39.330
+like we had before we still have access to data outside of ourselves.
+
+06:39.410 --> 06:46.430
+But as long as we don't modify it and mutate the data we're still following the functional programming
+
+06:46.520 --> 06:55.220
+paradigm something that is nice with this is that we just created private variables we are able to use
+
+06:55.220 --> 07:05.220
+closures to create data privacy which is very very cool because now as a user I can't really modify
+
+07:05.250 --> 07:05.940
+the count.
+
+07:05.940 --> 07:15.720
+Maybe this is a super important don't or don't touch variable because we're using closures.
+
+07:16.140 --> 07:23.430
+We're able to still have access to that variable but make sure that others don't modify it which is
+
+07:23.460 --> 07:31.760
+a very very nifty tool and closures get used a lot in functional programming for this specific reason.
+
+07:32.220 --> 07:40.750
+We just have to be careful not to modify the state so now that we've just gone over high order functions
+
+07:41.050 --> 07:46.720
+and closures we can keep going with our functional programming terminology.
+
+07:46.720 --> 07:48.080
+I'll see you in the next one.
+
+07:48.120 --> 07:48.460
+Bye bye.

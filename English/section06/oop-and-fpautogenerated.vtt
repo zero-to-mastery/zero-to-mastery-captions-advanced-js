@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.390 --> 00:09.850
+In all programs there are two primary components the data that is the stuff that we keep in our memory
+
+00:10.510 --> 00:14.810
+and the behavior the things that the programs can do.
+
+00:14.830 --> 00:23.400
+The functions and in order for us to deal with that through organized things like that Well we initially
+
+00:23.400 --> 00:31.800
+had languages let's say like Java like scheme that had different ideas of what we can do and we learn
+
+00:31.800 --> 00:36.550
+how Java and scheme where the inspiration of JavaScript.
+
+00:36.600 --> 00:42.930
+We also learned that there's things like functions and objects in javascript that are really really
+
+00:42.930 --> 00:44.220
+important.
+
+00:44.220 --> 00:51.120
+We learned all about prototype all inheritance about functions and they're useful tools like closures
+
+00:51.620 --> 00:58.860
+and idea that functions were first class citizens in JavaScript objects allow us to do prototype all
+
+00:58.860 --> 01:07.350
+inheritance and from that idea we also had functional programming an object oriented programming object
+
+01:07.380 --> 01:16.230
+oriented programming says that bringing together the data and its behavior in a single location called
+
+01:16.260 --> 01:25.490
+an object and containing all of that in a box makes it easier to understand how our programs work functional
+
+01:25.490 --> 01:32.600
+programming says that data and behavior are distinctly different things and should be kept separate
+
+01:32.780 --> 01:33.980
+for clarity.
+
+01:34.250 --> 01:40.910
+So perhaps instead of having a one giant box to describe everything we have multiple boxes the way that
+
+01:40.910 --> 01:46.300
+I like to think about it is object oriented programming is like building a robot.
+
+01:46.430 --> 01:54.110
+We have a head component a arm component maybe a chess component lacks component antenna components
+
+01:54.890 --> 02:02.240
+and we build those together while functional programming says just give me a data and I'll act upon
+
+02:02.240 --> 02:10.100
+that data through functions and I'll return something new from the data that you gave me.
+
+02:10.100 --> 02:14.620
+Now if you're still confused don't worry we're gonna really dive into this topic.
+
+02:14.960 --> 02:21.740
+But the goal of these two sections coming up is not to show you that it's functional programming versus
+
+02:21.800 --> 02:23.600
+object oriented programming.
+
+02:23.600 --> 02:29.060
+Yes I know that's the title of the sections but my goal at the end of these sections is to convince
+
+02:29.060 --> 02:33.190
+you that these are actually complementary.
+
+02:33.680 --> 02:35.820
+It's not one over the other.
+
+02:35.900 --> 02:42.200
+Instead it's about using both paradigms in unison to make beautiful programs.
+
+02:42.200 --> 02:49.430
+You see the beauty of javascript is that it is multi paradigm we can use both of these techniques to
+
+02:49.430 --> 02:56.540
+make our code easy to reason about to make it clearer to make it more understandable easy to extend
+
+02:56.810 --> 03:06.440
+more efficient and we can use each of these paradigms based on our problems and use the techniques in
+
+03:06.620 --> 03:11.340
+each to pick the right paradigm for the specific problem.
+
+03:11.450 --> 03:17.890
+And do you see we already started on our journey of functional programming an object oriented programming.
+
+03:17.930 --> 03:19.880
+You remember the two pillars.
+
+03:19.910 --> 03:28.010
+Well the two pillars finally allow us to learn about these topics closures where a big part of functions
+
+03:28.270 --> 03:32.090
+and without closures we wouldn't be able to do the things that we're going to show you.
+
+03:32.240 --> 03:38.240
+For functional programming and without prototypes we're not gonna be able to do the things that we're
+
+03:38.240 --> 03:41.940
+gonna be able to do in object oriented programming.
+
+03:41.960 --> 03:44.510
+So we have our stepping stones ready.
+
+03:44.780 --> 03:47.590
+Now the only thing we have left to do is to start.
+
+03:47.680 --> 03:49.980
+So I'll see you in the next video by.

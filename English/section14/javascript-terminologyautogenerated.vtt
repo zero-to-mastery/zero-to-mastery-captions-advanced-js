@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.360 --> 00:03.300
+Hey there welcome back in this quick video.
+
+00:03.300 --> 00:06.650
+I just want to go over the terminology that we've been using again.
+
+00:06.690 --> 00:14.700
+I'm just going to repeat it so that you really have it nailed the first one that we've learned about
+
+00:14.970 --> 00:23.250
+is the idea of function declaration and function declaration is a way for us to create functions
+
+00:29.640 --> 00:31.830
+like this.
+
+00:31.850 --> 00:39.860
+We also learned about function expression and function expression is a way for us to create functions
+
+00:40.340 --> 00:41.600
+with a variable like
+
+00:44.250 --> 00:44.640
+this
+
+00:50.740 --> 01:01.350
+and function expressions can also have aims.
+
+01:01.410 --> 01:04.880
+It could be an anonymous function like this.
+
+01:05.160 --> 01:09.820
+You're more likely to encounter this than with names.
+
+01:10.140 --> 01:12.700
+But I want to show you both of those.
+
+01:12.710 --> 01:13.380
+OK.
+
+01:13.470 --> 01:14.520
+What else do we have.
+
+01:14.580 --> 01:19.880
+We also had this idea of expression and an expression is.
+
+01:19.980 --> 01:27.510
+Well this actually gives it a good good overview and expression is something that denotes a value.
+
+01:27.540 --> 01:34.120
+So one plus three is an expression and we end expressions with semicolon.
+
+01:34.290 --> 01:38.230
+If we do a variable A equals two that's an expression.
+
+01:38.340 --> 01:42.000
+If we're returning something from a function we're returning true.
+
+01:42.000 --> 01:42.900
+That's an expression.
+
+01:42.900 --> 01:46.620
+So an expression it's something that produces a value.
+
+01:46.620 --> 01:46.970
+OK.
+
+01:46.980 --> 01:51.390
+How do we make a function perform that action.
+
+01:51.390 --> 01:57.930
+Who will we call that calling or invoking a function.
+
+01:59.040 --> 02:10.860
+And we do that by doing alert and then the brackets or we can do something like new function parameter
+
+02:10.860 --> 02:19.200
+one parameter 2 and we call or invoke a function this way.
+
+02:19.370 --> 02:25.630
+We also assign a variable and we do that by.
+
+02:25.640 --> 02:31.960
+Well we assign a variable a true.
+
+02:32.140 --> 02:32.390
+OK.
+
+02:32.390 --> 02:46.580
+We also learn about function vs. methods or method and a function is something like this is a function
+
+02:50.000 --> 03:01.310
+a method is something that is inside of an object like this is a method
+
+03:04.850 --> 03:19.450
+so the way we access them is different function is accessed like this a method is accessed with a dot
+
+03:19.510 --> 03:20.110
+in front of it
+
+03:24.620 --> 03:31.370
+and there you have it a few terminologies that I've been using them hopefully you've learned them by
+
+03:31.370 --> 03:38.600
+now but wanted to recap everything so that it really really sticks and this should make everything more
+
+03:38.600 --> 03:42.190
+clear I'll see in the next one by.

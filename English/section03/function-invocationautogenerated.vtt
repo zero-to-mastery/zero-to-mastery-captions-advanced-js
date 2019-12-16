@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.830 --> 00:02.070
+Welcome back.
+
+00:02.090 --> 00:03.940
+Remember what I said before.
+
+00:04.130 --> 00:11.030
+Programs are simply assigning memory for example assigning a value to a variable and then running a
+
+00:11.030 --> 00:16.040
+function for the program to do something with those variables.
+
+00:16.040 --> 00:22.960
+That's all programs are and without functions our programs wouldn't do anything.
+
+00:22.970 --> 00:26.250
+This is an important concept in all programming languages.
+
+00:26.420 --> 00:34.890
+And as you'll see in future videos functions give us some amazing powers in JavaScript So let's define
+
+00:35.310 --> 00:38.700
+functions and some of the common terms around them.
+
+00:38.700 --> 00:44.790
+We already touched on the fact that we have function expressions and function declarations a function
+
+00:44.790 --> 00:49.490
+declaration is something that starts with the function keyword.
+
+00:49.770 --> 01:00.720
+And let's just create a function India and this function will simply console log form because it's pretty
+
+01:00.720 --> 01:01.920
+warm in India.
+
+01:02.220 --> 01:09.330
+A function expression on the other hand doesn't start with the function keyword instead can look like
+
+01:09.330 --> 01:15.860
+this and say variable Canada and that's going to equal.
+
+01:15.930 --> 01:26.060
+Function and inside of this function it's console dialogue and Canada is very cold at least where I'm
+
+01:26.060 --> 01:32.300
+filming right now it's extremely cold and that's a function expression and we've learned about this
+
+01:32.300 --> 01:35.510
+and how function declarations get hoisted.
+
+01:35.510 --> 01:43.810
+Function expressions don't I could also write this with an arrow function and do something like this
+
+01:44.080 --> 01:46.360
+if I wanted to I'll have the same effect.
+
+01:47.350 --> 01:56.800
+Now with our functions we can call them right and the terms here sometimes vary but you can have a function
+
+01:57.310 --> 01:58.380
+let's comment this out.
+
+01:58.510 --> 02:09.930
+We can have function invocation calling a function or you can even have execution of a function and
+
+02:10.050 --> 02:17.080
+what that means is we're telling our JavaScript engine to hey run our function.
+
+02:17.220 --> 02:26.520
+We've put these functions in memory or at least we've assigned to a variable and now we're ready to
+
+02:26.610 --> 02:28.270
+do something with our program.
+
+02:28.320 --> 02:35.960
+So we do a function invocation by simply running the function with curly brackets.
+
+02:36.020 --> 02:40.180
+And as soon as the JavaScript engine sees this it says All right what do we do.
+
+02:40.220 --> 02:43.710
+We create an execution context.
+
+02:43.870 --> 02:44.740
+Same with India
+
+02:48.280 --> 02:49.370
+going like this.
+
+02:49.480 --> 02:54.480
+I invoke a function I call the function I execute the function.
+
+02:54.740 --> 02:59.570
+If I click Run it's working and this is pretty basic nothing new.
+
+02:59.570 --> 03:06.010
+Right I wanted to go over the terms just so we're clear for the next few videos.
+
+03:06.060 --> 03:16.190
+When I use these terms and to review when it comes to the Canada function well this function is defined
+
+03:16.580 --> 03:23.450
+at runtime when we actually run the function or call the function or execute the function or invoke
+
+03:23.450 --> 03:24.380
+the function.
+
+03:24.380 --> 03:34.910
+That's when we define what this function does versus India where this function gets defined at pastime.
+
+03:34.910 --> 03:41.860
+That is when the compiler initially looks at the code and starts hoisting and allocating memory.
+
+03:41.890 --> 03:47.910
+Now these functions when they're executed have a another piece to them.
+
+03:47.980 --> 03:48.540
+Let's have a look.
+
+03:49.830 --> 03:58.680
+When a function is invoked Well we create a new execution context on top of our global execution context
+
+03:59.310 --> 04:00.890
+and we get a few things.
+
+04:01.140 --> 04:09.390
+We get the this keyword which we've already talked about and we'll define it a little bit better later
+
+04:09.390 --> 04:18.160
+on in the videos as well but unlike the global execution context that gave us a global object that equals
+
+04:18.160 --> 04:27.660
+to this instead with a function invocation we get something called arguments and that's another key
+
+04:27.660 --> 04:32.690
+word in JavaScript let's have a look at this arguments keyword.
+
+04:32.690 --> 04:37.310
+If I scrolled down here and let's start off with a new function.
+
+04:37.310 --> 04:43.970
+This function is going to be called Mary and it's a function that Mary two people person 1 and Person
+
+04:44.150 --> 04:53.330
+2 it has parameters and inside of this function will just simply console dot log arguments which according
+
+04:53.330 --> 05:00.140
+to what I just said we should have access to because when we invoke this function we'll get past an
+
+05:00.230 --> 05:08.410
+arguments object and just are from let's also return from this function a template string that will
+
+05:08.410 --> 05:10.720
+say Person 1
+
+05:13.940 --> 05:16.160
+is now married to
+
+05:18.820 --> 05:25.080
+Person 2 How cute is that right now from here.
+
+05:25.220 --> 05:36.250
+If I run the memory function with let's say marrying Tim and Tina if I run this I'll get Tim is now
+
+05:36.250 --> 05:37.400
+married to Tina.
+
+05:37.600 --> 05:38.290
+That's great.
+
+05:38.410 --> 05:46.670
+But look at that we get something from this console log arguments let's write arguments in here and
+
+05:46.670 --> 05:51.230
+just so we can be a little bit more clear as to what's happening.
+
+05:52.360 --> 06:01.390
+And if I run this we see that this arguments keyword gives us an object with the first index being Tim
+
+06:01.670 --> 06:06.400
+in the second index or in this case key being Tina.
+
+06:06.400 --> 06:10.880
+So we get that special object very interesting.
+
+06:11.190 --> 06:18.820
+Now if what I told you is correct that means we don't really get arguments in the global object do we.
+
+06:18.820 --> 06:21.340
+If I run this I'll get an error.
+
+06:21.550 --> 06:29.230
+Arguments is not defined because while arguments is only available to us when we create a new execution
+
+06:29.230 --> 06:38.520
+context with a function All right so we got the arguments object but you might remember something from
+
+06:38.520 --> 06:41.280
+our previous videos.
+
+06:41.400 --> 06:50.430
+Remember this we talked about how to help the JavaScript engine optimize our code and I told you not
+
+06:50.430 --> 06:56.130
+to use arguments and I kind of gave you a vague answer as to why that is.
+
+06:56.460 --> 06:59.190
+Well in the next video let's have a look at why that is.

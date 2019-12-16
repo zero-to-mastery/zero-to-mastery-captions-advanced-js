@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.780 --> 00:01.960
+Welcome back.
+
+00:02.010 --> 00:11.130
+Let's do a nice little exercise to solidify our knowledge of this keyword I have here three objects
+
+00:11.970 --> 00:19.300
+and each one of them has a name and a say method that are slightly different.
+
+00:19.420 --> 00:26.560
+What do you think that this values or what do you think the log will be on the right hand side here.
+
+00:27.640 --> 00:28.970
+Let's start off with the first one.
+
+00:29.020 --> 00:39.850
+If I do B dot say what's going to happen what will this be if I run this does you get that right.
+
+00:39.900 --> 00:41.430
+This should make sense right.
+
+00:41.430 --> 00:46.270
+This is the object B.
+
+00:46.400 --> 00:49.230
+Nice and easy OK.
+
+00:49.350 --> 01:00.690
+What about C this time around we're returning a function so this might look a little bit confusing but
+
+01:00.960 --> 01:07.410
+we're essentially saying the same function is going to return another function.
+
+01:07.560 --> 01:13.930
+So that's a function inside of a another function and that's going to return console log.
+
+01:13.970 --> 01:24.850
+This if I run this or I should change it to see if I run this I get a function that should make sense
+
+01:24.850 --> 01:25.480
+right.
+
+01:25.810 --> 01:36.910
+When we run say it returns for us this function so if I run this function again by doing this what's
+
+01:36.910 --> 01:48.800
+going to happen who calls this function this gets called first and then this gets called Let's find
+
+01:48.800 --> 01:59.180
+out Whoops I get an error again remember code sandboxes like this sometimes give out an error because
+
+01:59.210 --> 02:02.480
+this is an unexpected use of this.
+
+02:02.480 --> 02:11.270
+So this part we have to copy and open it up in our console if I copy and paste here and I run this I
+
+02:11.270 --> 02:22.330
+get the window object because well remember a method that has a function inside of it that this gets
+
+02:22.330 --> 02:31.510
+bound to window an unintended consequence of JavaScript of dynamically scoped this that was the tricky
+
+02:31.510 --> 02:31.790
+one.
+
+02:32.440 --> 02:35.590
+Let's refresh here.
+
+02:35.710 --> 02:37.510
+What about D.
+
+02:37.580 --> 02:44.260
+Object D that uses an error function this time around instead of just the function.
+
+02:44.310 --> 02:46.880
+So this is going to be lexical scope.
+
+02:47.550 --> 02:55.130
+If I run this while I get a function nothing new right because we return a function but if I call this
+
+02:55.130 --> 03:03.480
+function again and I run this and look at that it fixed our problem because the this keyword was lexical
+
+03:03.670 --> 03:07.890
+scoped inside of the error function it doesn't care about where it was called.

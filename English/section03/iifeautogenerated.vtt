@@ -1,0 +1,409 @@
+WEBVTT
+
+00:00.590 --> 00:01.730
+Welcome back.
+
+00:01.790 --> 00:04.760
+So global variables are bad.
+
+00:05.090 --> 00:08.790
+They can cause a lot of issues and how can we minimize them.
+
+00:10.560 --> 00:16.350
+With modern javascript we have things like e s modules and module bundlers something we're going to
+
+00:16.350 --> 00:18.990
+talk about a little bit later on in the course.
+
+00:18.990 --> 00:26.910
+But before we had those things javascript developers used what we know now about the language itself
+
+00:27.390 --> 00:39.850
+to avoid this global variable issue and it's called and iffy or an immediately invoked function expression.
+
+00:39.850 --> 00:40.830
+Let's see what it looks like.
+
+00:41.840 --> 00:52.930
+And if he is a function expression that looks something like this.
+
+00:53.100 --> 00:54.300
+Here we go.
+
+00:54.290 --> 00:55.620
+Confused.
+
+00:55.820 --> 01:01.670
+Don't be because we already know this and we should already understand what the JavaScript engine is
+
+01:01.670 --> 01:03.740
+going to do with this code.
+
+01:04.100 --> 01:10.490
+You see if these are common javascript design pattern used by a lot of popular libraries especially
+
+01:10.490 --> 01:14.750
+back in the day like J query or even backbone J Yes.
+
+01:14.870 --> 01:26.480
+The idea was using this pattern we can place all library code inside of local scope to avoid any namespace
+
+01:26.480 --> 01:27.430
+collisions.
+
+01:27.530 --> 01:29.820
+So let's have a look one by one.
+
+01:29.990 --> 01:37.380
+The first thing we're doing is we're saying with this brackets Hey this isn't a function declaration.
+
+01:37.610 --> 01:39.630
+It's a function expression right.
+
+01:39.710 --> 01:44.630
+Because the JavaScript engine won't see function as the first item on the line.
+
+01:44.840 --> 01:47.990
+Instead it's going to see these brackets.
+
+01:48.260 --> 01:52.580
+So this automatically makes it into a function expression.
+
+01:52.910 --> 01:56.970
+And then after we've done that we've created an anonymous function.
+
+01:57.020 --> 01:59.470
+There's no name attached to this function.
+
+01:59.600 --> 02:02.930
+And then we immediately invoke it.
+
+02:03.200 --> 02:05.690
+That is we call the function.
+
+02:05.720 --> 02:12.450
+So if I run this while I get undefined OK.
+
+02:12.470 --> 02:15.240
+But just to test our assumption.
+
+02:15.350 --> 02:16.840
+What if I do something like this.
+
+02:16.850 --> 02:25.590
+What if I use a function declaration and call it immediately afterwards so that's our function declaration.
+
+02:25.760 --> 02:31.640
+And then right afterwards I'm going to call it I'm going to get a syntax error.
+
+02:31.690 --> 02:37.720
+You can't really call a function declaration immediately after a function expression.
+
+02:37.720 --> 02:44.180
+However you can now what's the benefit in doing this.
+
+02:44.240 --> 02:53.010
+You see since the anonymous function within this if he is a function expression and it's not being assigned
+
+02:53.010 --> 02:59.780
+to any global variables no global property is really being created.
+
+02:59.790 --> 03:08.570
+Is there and all of the properties created inside over here are going to be scoped inside here.
+
+03:08.570 --> 03:14.380
+So it's only going to be available inside this if the but not outside.
+
+03:15.230 --> 03:19.540
+If I have variable A equals 2 1.
+
+03:19.610 --> 03:23.570
+Well I can't really access a a is not defined.
+
+03:24.200 --> 03:28.680
+Let's have a look at a diagram and immediately invoked function.
+
+03:28.710 --> 03:37.980
+Expression simply allows us to call immediately as javascript is executing it's going to define what
+
+03:37.980 --> 03:38.390
+it is.
+
+03:38.430 --> 03:41.900
+And right afterwards with the brackets it's going to call it.
+
+03:42.030 --> 03:49.760
+It's going to create a new variable environment a new execution context that's going to have our own
+
+03:49.880 --> 04:00.070
+Variable Scope and this allows us to attach private data right in here that can be accessed by the global
+
+04:00.100 --> 04:05.260
+execution context because while the chain runs downward.
+
+04:05.260 --> 04:09.640
+Now before I get into an example let me just show you one other thing.
+
+04:09.680 --> 04:17.540
+What do you think happens if I remove or move these brackets to inside over here.
+
+04:17.540 --> 04:21.190
+Will anything change.
+
+04:21.190 --> 04:22.540
+No it doesn't.
+
+04:22.540 --> 04:26.370
+We're still following the rules of JavaScript right.
+
+04:26.410 --> 04:31.540
+We have the function expression because of the parentheses.
+
+04:31.540 --> 04:37.420
+And then right after the compiler looks through the code and says All right here's the function we're
+
+04:37.420 --> 04:40.900
+immediately going to run it.
+
+04:40.900 --> 04:49.730
+Let's see this in action imagine I create a another function here I'm going to call it function a another
+
+04:49.730 --> 04:54.760
+original name and this function is just going to return fire.
+
+04:55.260 --> 05:04.200
+If I refresh this function and I do a I get fired that makes sense but then all of a sudden this little
+
+05:04.200 --> 05:15.650
+bugger over here decides to pollute my name space and create its own function a that mocks me and just
+
+05:16.280 --> 05:25.760
+last me so that now if I refresh and run a oh boy just laughing at me ridiculing me.
+
+05:25.980 --> 05:28.880
+So how can we use if these to solve this problem.
+
+05:29.040 --> 05:30.060
+And this is how we worked.
+
+05:30.060 --> 05:31.780
+Back in the day before we had.
+
+05:31.790 --> 05:39.120
+Yes modules against something we're gonna discuss in our modules section of the course I can create
+
+05:40.020 --> 05:51.360
+a variable let's call it script 1 and this script 1 is going to equal function a or we can even leave
+
+05:51.360 --> 05:53.230
+out the name if we wanted to.
+
+05:53.610 --> 06:04.530
+And within this function because this is a function expression I can wrap it in brackets and then immediately
+
+06:05.250 --> 06:05.610
+invoke.
+
+06:06.300 --> 06:07.790
+So let's see what happens now.
+
+06:08.190 --> 06:16.440
+I'm going to save and refresh if I call a I get hahaha Okay nothing's changed.
+
+06:16.440 --> 06:27.210
+Instead of returning 5 I'm going to create my function again function a and this function a loops let's
+
+06:27.210 --> 06:38.440
+make sure we fix that this function a will now have return 5 and all we need to do is just return from
+
+06:38.440 --> 06:42.400
+here an object with a as
+
+06:45.570 --> 06:56.040
+so that if I save here and refresh let's say I run a again while I get hahaha but now within my script
+
+06:56.070 --> 07:09.340
+one dot a I can run this and look at that I have access to a because script 1 now returns an object
+
+07:09.670 --> 07:19.510
+that contains this a function for me now the interesting thing with this is that while we still have
+
+07:19.510 --> 07:23.940
+a global namespace we still created this script.
+
+07:24.040 --> 07:35.500
+One global variable but the good thing is that we can just have one variable and this variable can be
+
+07:35.500 --> 07:44.950
+an object that contains many properties that we might want to use and it only pollutes the global namespace
+
+07:45.220 --> 07:55.240
+once more importantly we're attaching this private data to a function that creates fresh environments
+
+07:55.420 --> 08:05.860
+for us it executes them and it only allows us to return whatever we want from inside this function now.
+
+08:05.980 --> 08:10.020
+Libraries like Jake we used to do this a lot.
+
+08:10.420 --> 08:18.530
+For example let's clear this and add a J query library at the very top of our file here.
+
+08:18.550 --> 08:21.580
+This is a J query code right at the top.
+
+08:23.370 --> 08:29.470
+So that now we'll have access to the J squared library.
+
+08:29.470 --> 08:33.210
+This means that anything that comes after this script.
+
+08:33.220 --> 08:39.370
+Well because everything gets combined in the script acts we can use J courier now.
+
+08:39.520 --> 08:40.620
+So let's do that.
+
+08:40.840 --> 08:51.470
+Let's have a function that lets say instead of this function A will do the J query syntax to grab H1
+
+08:51.680 --> 08:52.850
+which is this.
+
+08:52.850 --> 08:53.510
+Hello.
+
+08:53.510 --> 09:06.050
+Over here and we'll just say on click we want to run a callback function that simply well let's say
+
+09:06.080 --> 09:07.690
+hides the hello.
+
+09:07.790 --> 09:13.310
+So I can do this here if I want but that's a topic we're gonna get into a little bit later on.
+
+09:13.310 --> 09:16.630
+So let's just stick with each one dot.
+
+09:16.640 --> 09:26.380
+Hide and see what happens here and for now let's just not return anything just an empty object.
+
+09:26.390 --> 09:29.610
+I'm going to refresh if I click here.
+
+09:29.690 --> 09:30.280
+Look at that.
+
+09:30.380 --> 09:31.160
+It's working.
+
+09:31.160 --> 09:31.790
+It disappeared.
+
+09:32.860 --> 09:42.880
+We have access to this dollar sign because Jay Query provides for us the ability to use this from its
+
+09:42.970 --> 09:46.810
+library because it's added it to the window object.
+
+09:47.170 --> 09:52.570
+If I go to window dot dollar sign there we have something here.
+
+09:52.570 --> 09:55.100
+I can also do window dot J query.
+
+09:55.570 --> 09:59.300
+And again same thing now.
+
+09:59.440 --> 09:59.880
+J.
+
+09:59.890 --> 10:06.740
+Query inside of this library has a ton of functions a ton of variables but inside it they can just create
+
+10:06.740 --> 10:16.000
+an iffy and just expose for us this J query object that we can use so let's play with something here.
+
+10:16.090 --> 10:27.630
+If in this parentheses remember this is us executing this function if I add J query here.
+
+10:28.010 --> 10:36.460
+Here after we call this function this function is going to receive this J query parameter and we'll
+
+10:36.460 --> 10:44.050
+make this J query parameter 0 AMG that says 0 AMG Well this should still work right.
+
+10:45.050 --> 10:56.360
+This 0 AMG syntax if I refresh let's save and refresh and I click here still disappears because what
+
+10:56.360 --> 11:07.040
+I've done is I've added J query from the global namespace as a parameter on to my immediately invoked
+
+11:07.040 --> 11:16.290
+function and this function when it gets called it's going to receive a parameter which is J.
+
+11:16.300 --> 11:23.680
+Query and we're just assigning get a variable O M G but this O M G still has whatever this library gave
+
+11:23.680 --> 11:28.880
+us so I can use it whatever way I want inside here.
+
+11:29.100 --> 11:37.330
+Now the interesting thing here is that we actually have a bit of a performance benefit here because
+
+11:37.330 --> 11:45.760
+before we didn't have this when we looked at the dollar sign we would go up the scope chain to the global
+
+11:45.850 --> 11:49.920
+namespace and find the dollar sign and what it means.
+
+11:50.140 --> 11:59.290
+But this time around because we've added our J query library as a parameter it doesn't look in the global
+
+11:59.680 --> 12:01.300
+namespace right.
+
+12:01.300 --> 12:07.390
+Instead it looks at its local scope which includes the parameter that we had.
+
+12:07.390 --> 12:14.230
+So we technically get a bit of a speed boost because we're not doing that scope chain lookup as a matter
+
+12:14.230 --> 12:24.230
+of fact we can do something fun here let's change this back to the dollar sign and now return the dollar
+
+12:24.230 --> 12:37.360
+sign to just equal height if I do this and I refresh and I run script 1 dot dollar sign you see that
+
+12:37.420 --> 12:44.170
+within this function within this script we've all over written whatever the dollar sign wants and is
+
+12:44.170 --> 12:46.990
+just high completely useless to us.
+
+12:47.990 --> 12:54.020
+Immediately invoked function expressions are something we're gonna get into it a little bit more when
+
+12:54.020 --> 13:01.670
+we talk about modules but want to introduce them to you now because as you can see they take advantage
+
+13:01.730 --> 13:10.780
+of what we learned about scope it enables us to attach private data to a function and it creates a fresh
+
+13:10.780 --> 13:15.690
+environment for us so that we don't pollute our global execution context.
+
+13:17.110 --> 13:23.980
+As we start to get more and more JavaScript files we want to make sure that we can wrap things in a
+
+13:23.980 --> 13:32.950
+function to scope things into their own environments and minimize the amount of data that we place on
+
+13:32.950 --> 13:34.730
+the global execution context.
+
+13:35.900 --> 13:37.320
+I'll see in the next one.
+
+13:37.420 --> 13:37.670
+Bobby.

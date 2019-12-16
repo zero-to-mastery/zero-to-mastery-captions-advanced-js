@@ -1,0 +1,310 @@
+WEBVTT
+
+00:01.070 --> 00:02.100
+Welcome back.
+
+00:02.120 --> 00:10.580
+Let's finally learn about yes six modules javascript needed a way to support modules because it's now
+
+00:10.580 --> 00:12.170
+a serious language.
+
+00:12.200 --> 00:19.010
+It's not just for the browser you can use javascript anywhere on the server on mobile on desktop on
+
+00:19.100 --> 00:26.480
+IO T devices and as applications grow larger and larger as we've learned we need modules.
+
+00:26.480 --> 00:31.120
+And luckily we don't have to worry about common Jesus M.D. or UMD anymore.
+
+00:31.160 --> 00:38.380
+I mean you'll still see common G.S. in node programs but we're gonna have native iOS 6 modules A.J.
+
+00:38.460 --> 00:39.170
+as soon as well.
+
+00:40.190 --> 00:46.220
+So how is this going to look just like this.
+
+00:46.240 --> 00:57.920
+We have a native keyword now called import that imports a module from what profile we want and a nother
+
+00:57.920 --> 01:01.540
+module from another JavaScript file that we want.
+
+01:01.730 --> 01:04.010
+And anytime we want to export something.
+
+01:04.040 --> 01:11.430
+Well we do export and whatever we want to export how nice and simple is that.
+
+01:11.480 --> 01:20.150
+Let's turn our code that was originally just a simple module pattern into using iOS 6 modules.
+
+01:20.270 --> 01:30.130
+Well all we're going to do is copy our fight function and this fight function well we don't need jump
+
+01:30.130 --> 01:30.650
+function.
+
+01:30.670 --> 01:34.960
+It's not doing anything or let's keep it there just for fun.
+
+01:34.960 --> 01:42.940
+I'm going to copy the fight function and we're in yes sixth line now so let's just change this to const
+
+01:44.830 --> 01:51.390
+you won't do anything for now but it just looks nicer and I also want Harry involved in more variables
+
+01:51.480 --> 01:52.250
+to come with me.
+
+01:52.260 --> 01:58.080
+So I'm going to grab those and put them up here.
+
+01:58.530 --> 02:01.220
+We'll change these two constants as well.
+
+02:02.820 --> 02:08.580
+Again that doesn't really affect imports or export is just we're in modern javascript land now.
+
+02:08.580 --> 02:12.620
+So might as well use the modern features.
+
+02:12.690 --> 02:14.540
+Now here's the thing.
+
+02:14.820 --> 02:21.520
+All we need to do to export this and make this available is to.
+
+02:21.520 --> 02:26.020
+Well first of all let's remove the imports because we're not importing anything in here.
+
+02:26.110 --> 02:34.390
+All I need to do to say hey I want you to export a function or a variable from this file is to add the
+
+02:35.080 --> 02:44.590
+export keyword so that if I do export function fight I'm going to have access to it and everything that
+
+02:44.650 --> 02:51.370
+I don't export like Harry and Voldemort or maybe I don't want to export jump because this is a private
+
+02:51.370 --> 02:52.040
+function.
+
+02:52.120 --> 02:57.460
+Well then nobody else is going to get access to it except for whoever is working on this file.
+
+02:57.610 --> 03:05.720
+So let's remove our module pattern and see how this works in the browser.
+
+03:05.790 --> 03:08.150
+I'm going to go down here.
+
+03:08.190 --> 03:11.630
+Let's minimize our scripts that we aren't using.
+
+03:11.730 --> 03:13.140
+And now with our last script
+
+03:16.570 --> 03:29.500
+I'm going to add a new file or we can just do it here we're going to import the fight function from
+
+03:30.160 --> 03:35.860
+the well what should we import it from we import it from script file right over here
+
+03:40.020 --> 03:43.260
+and this is called a named export.
+
+03:43.260 --> 03:49.770
+I can do as many exports as I want if I wanted to export jump for example I can just say export here
+
+03:50.430 --> 03:55.530
+and I can import it just like that.
+
+03:55.530 --> 03:58.080
+But you need these curly brackets.
+
+03:58.090 --> 04:05.280
+Another way to export it is to actually do something called a default export and a default export is
+
+04:05.480 --> 04:09.160
+while you just add a default in here export default function.
+
+04:09.360 --> 04:16.380
+And now this is the default function or default item that gets imported.
+
+04:16.420 --> 04:20.490
+So you don't need the brackets anymore because it should only be one.
+
+04:20.500 --> 04:20.770
+All right.
+
+04:20.770 --> 04:22.410
+So we imported this.
+
+04:22.630 --> 04:30.190
+And just to see that we have this working I'm going to say in here fight and then we'll fight Ron against
+
+04:31.120 --> 04:34.080
+Hedwig.
+
+04:34.120 --> 04:36.190
+Now let's see if this actually works.
+
+04:36.250 --> 04:42.580
+I'm going to save this and refresh and I get an error.
+
+04:42.630 --> 04:49.140
+Mm hmm unexpected identifier export it doesn't recognize our import and export statements.
+
+04:49.150 --> 04:51.100
+But why.
+
+04:51.100 --> 04:57.500
+I mean I thought you told me that yes six modules are available right.
+
+04:57.560 --> 05:02.060
+Well yes there are but there's one other trick.
+
+05:02.110 --> 05:05.360
+Well actually two other tricks to make this work.
+
+05:05.410 --> 05:15.760
+One is that you now have to define this script as a type module and again this is a new feature where
+
+05:15.760 --> 05:18.120
+you have to tell it hey what we're doing here.
+
+05:18.130 --> 05:19.330
+This is a module.
+
+05:19.420 --> 05:22.430
+It's not a regular script like we've had in in the past.
+
+05:22.480 --> 05:30.490
+This is a CSX module and same thing here anytime we use import and export we have to tell it hey this
+
+05:31.480 --> 05:32.200
+is a module.
+
+05:34.300 --> 05:36.370
+So now if I save this and refresh
+
+05:39.040 --> 05:46.040
+it looks like I'm still getting an error now because it's not just a regular script that the browser
+
+05:46.040 --> 05:46.460
+reads.
+
+05:46.490 --> 05:47.510
+It's a module.
+
+05:47.510 --> 05:51.300
+We actually need to serve it from a server.
+
+05:51.380 --> 05:59.290
+So I'm going to use a tool called Life server and you can do this with any type of a shitty server.
+
+05:59.300 --> 06:06.590
+This is the one that I like and all you do is say live server from the project that you're working with.
+
+06:06.620 --> 06:12.380
+And as long as you have an index not a small file they'll open it for you.
+
+06:12.410 --> 06:12.960
+All right.
+
+06:13.010 --> 06:20.930
+So we have our browser but I see that Oh I failed to resolve module specified I have to tell it where
+
+06:20.930 --> 06:22.970
+the script file is.
+
+06:23.030 --> 06:26.390
+So it's script dot James that we're looking for.
+
+06:26.390 --> 06:35.040
+If I save this and go back hey look at that Hedwig wins we're able to use the fight function and export
+
+06:35.040 --> 06:36.840
+it from one module to another.
+
+06:37.050 --> 06:46.920
+If I keep refreshing here every once in a while hopefully Ron wins as well.
+
+06:46.920 --> 06:47.670
+There you go.
+
+06:47.700 --> 06:52.350
+Ron is not very good at this because while he's only got three letters but every once in a while Ron
+
+06:52.350 --> 06:53.660
+wins as well.
+
+06:53.820 --> 06:55.460
+Awesome.
+
+06:55.500 --> 06:57.060
+And there you have it.
+
+06:57.120 --> 07:06.810
+How much simpler was that instead of worrying about if he's module patents common G.S. and M.D. and
+
+07:06.810 --> 07:13.840
+making sure that things worked across the browser and things worked as a third package on NPM.
+
+07:13.950 --> 07:19.190
+We now have simple import and export statements that we can use.
+
+07:19.590 --> 07:26.040
+By the way if for example we had something like this where we had export function and an export default
+
+07:26.040 --> 07:34.350
+function well we can simply import it this way where we have fight and then because the other one is
+
+07:34.350 --> 07:44.220
+not a default export we just do jump like this so that if we console that log jump and jump start on
+
+07:44.220 --> 07:55.200
+doing anything right now so let's just console log jump here and save both of these and go back to our
+
+07:55.200 --> 08:03.000
+file and look at that Hedwig wins and jump is working but because we're now using modules.
+
+08:03.390 --> 08:08.240
+Well I can't really use it in here if I do jump.
+
+08:08.310 --> 08:13.500
+No that's a different module you have to explicitly tell me that you're importing something if you want
+
+08:13.500 --> 08:13.950
+to use it.
+
+08:14.580 --> 08:18.030
+So now we're not polluting the global namespace.
+
+08:18.030 --> 08:23.660
+If I go to window I'm not gonna see jump or fight or anything like that on there.
+
+08:23.730 --> 08:26.160
+How awesome is that.
+
+08:26.160 --> 08:32.340
+Now import and export makes things really really easy and I'll link to ways that you can import different
+
+08:32.340 --> 08:39.240
+functionality from other modules but like you see over here there's just a few ways of doing it differently
+
+08:39.690 --> 08:42.080
+that you can learn on your own.
+
+08:42.120 --> 08:43.280
+It's not very difficult.
+
+08:43.280 --> 08:50.450
+The idea behind it is to keep everything simple so let's finish off this section with our conclusion.
+
+08:50.490 --> 08:52.380
+What we have now with modules.

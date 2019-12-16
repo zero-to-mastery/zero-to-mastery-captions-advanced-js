@@ -1,0 +1,547 @@
+WEBVTT
+
+00:01.440 --> 00:03.140
+And a welcome back.
+
+00:03.150 --> 00:07.770
+Hopefully those exercises weren't too tough and you breezed right through them.
+
+00:09.050 --> 00:12.760
+We're going to talk about something called control flow.
+
+00:12.860 --> 00:15.840
+Up until now we've been doing this.
+
+00:15.950 --> 00:20.110
+This little arrow we write a line of code.
+
+00:20.150 --> 00:22.430
+Then another line of code then another line of code.
+
+00:22.430 --> 00:28.700
+Then another line of code and everything executes in one line just flows.
+
+00:28.700 --> 00:33.050
+Just kind of like water if you're pouring water down is just going straight down.
+
+00:33.890 --> 00:37.110
+But what if we had conditions.
+
+00:37.190 --> 00:44.270
+What if we want to say something like If use your name is Bob say hi Bob.
+
+00:44.300 --> 00:46.930
+If not say I don't know you.
+
+00:47.540 --> 00:56.400
+Maybe sign in again or we don't have this user that's called conditional execution and it looks something
+
+00:56.400 --> 01:03.450
+like this where we get to a point in the program and we have two options where we either want to go
+
+01:03.450 --> 01:11.060
+one way or the other and then continue executing so in this lesson we're going to talk about exactly
+
+01:11.060 --> 01:15.130
+that Conditional Execution let's try some out
+
+01:19.300 --> 01:21.490
+so javascript conditionals.
+
+01:21.730 --> 01:22.840
+That's what they're called.
+
+01:22.840 --> 01:30.870
+We're going to start off with what's called an if statement and an if statement kind of reads like English
+
+01:31.740 --> 01:33.930
+we can do something similar to this.
+
+01:33.960 --> 01:43.470
+I say if name equals remember three equals signs here because we're not assigning a variable we're comparing
+
+01:45.280 --> 01:47.410
+if name equals Billy
+
+01:49.980 --> 01:51.000
+closed the bracket.
+
+01:51.000 --> 01:55.990
+And this is just a notation that you'll have to get used to again is just like learning a language.
+
+01:56.130 --> 02:01.740
+You just have to know that when you're doing an if statement you have to have these brackets closed
+
+02:01.740 --> 02:08.340
+the brackets and then you do curly bracket hold shift and enter so that the program that doesn't execute
+
+02:09.030 --> 02:15.300
+and will say I've added a tab just so you can see for indentation I can say alert
+
+02:18.380 --> 02:19.970
+Hi Billy
+
+02:23.940 --> 02:32.770
+and I closed the bracket and again just like I said each expression something that produces a value
+
+02:33.160 --> 02:37.230
+needs to have a semicolon and you might think that you need a semicolon here.
+
+02:37.240 --> 02:45.090
+But again with an if statement you don't add one but alert that's an expression we add a semicolon here.
+
+02:45.130 --> 02:51.540
+Now you might be asking yourself well we haven't assigned a variable to name yet so let's do that.
+
+02:51.640 --> 02:59.920
+I'm going to say name variable name equals.
+
+03:00.110 --> 03:08.650
+We'll say Billy and I'm going to press censure let's see what happens High Belly.
+
+03:08.840 --> 03:09.110
+OK.
+
+03:09.140 --> 03:12.960
+So that looks like it's working just the double check.
+
+03:13.010 --> 03:22.360
+What if I change name to Susie looks semicolon not called OK.
+
+03:22.460 --> 03:30.800
+And now if we run this program again I'm going to just copy it if name equals Billy alert.
+
+03:30.810 --> 03:34.480
+Hi Billy nothing happens.
+
+03:34.620 --> 03:42.010
+I just get undefined and no alert so that's a conditional statement.
+
+03:42.130 --> 03:44.120
+But let's be realistic here.
+
+03:44.140 --> 03:50.320
+You often won't just have code that executes when a condition holds true but also code that handles
+
+03:50.740 --> 03:54.400
+other cases such as when the name isn't Billy.
+
+03:54.400 --> 04:05.670
+Maybe when the name is Susie so this alternate path is shown if you remember in the diagram by the alternate
+
+04:05.670 --> 04:14.100
+arrow we need to have an alternate route in case the name doesn't equal Billy so let's go back again
+
+04:15.060 --> 04:16.560
+and see what we can do.
+
+04:16.590 --> 04:28.350
+So the second key word that we're going to learn is else so you can do something like If name equals
+
+04:29.320 --> 04:33.030
+Billy and I just press right here.
+
+04:33.030 --> 04:41.010
+Here again Google Chrome is smart enough to know that you've typed this before and now instead of leaving
+
+04:41.010 --> 04:44.400
+it like that I now press space else.
+
+04:44.400 --> 04:50.800
+So if Naomi goes belly alert HI BILLY else it kind of reads like English right.
+
+04:51.420 --> 05:05.930
+And then again else opening curly bracket closing curly bracket and within here I'm going to say alert.
+
+05:06.180 --> 05:09.830
+I don't know you.
+
+05:09.870 --> 05:14.800
+So now let's see what happens.
+
+05:14.930 --> 05:15.530
+I don't know you.
+
+05:15.530 --> 05:16.160
+And why is that.
+
+05:16.160 --> 05:20.990
+Because if you remember name you call Susie.
+
+05:20.990 --> 05:23.000
+If I change name to
+
+05:26.500 --> 05:26.920
+Billy
+
+05:29.990 --> 05:32.300
+well and redo the program again.
+
+05:32.900 --> 05:34.270
+Hi Billy.
+
+05:34.280 --> 05:42.700
+So that's what's called an if else statement you write a condition if something equals true then do
+
+05:42.700 --> 05:46.570
+something else do something else.
+
+05:46.570 --> 05:49.110
+And this is just a syntax you'll have to learn.
+
+05:49.120 --> 05:55.520
+But as you can see it's fairly easy you read it a couple times and you'll get the hang of it OK.
+
+05:55.540 --> 06:05.980
+But now you might have another question what if what if you have something like this something a little
+
+06:05.980 --> 06:13.290
+bit more complicated like this where you have multiple conditions.
+
+06:13.390 --> 06:14.740
+Let's see what I'm talking about.
+
+06:14.770 --> 06:23.890
+By showing you another example in this one we're going to use something called else F.
+
+06:23.990 --> 06:30.750
+So again I'm going to say f name equals Billy.
+
+06:30.750 --> 06:35.000
+Again I'm just going to press the right key here and it's going to load up what I've written before.
+
+06:35.070 --> 06:38.060
+So if name equals Billy alert.
+
+06:38.220 --> 06:39.160
+Hi Billy.
+
+06:39.180 --> 06:41.940
+Else alert.
+
+06:41.980 --> 06:43.510
+I don't know.
+
+06:43.510 --> 06:43.960
+I don't know.
+
+06:44.050 --> 06:47.410
+But what if we also want to check for the name Susie.
+
+06:47.410 --> 06:59.300
+Well I can do something like else if name equals Susie close bracket.
+
+07:00.000 --> 07:00.690
+I'm going to say
+
+07:04.020 --> 07:12.820
+hi Susie and at the end here you can leave it as is or again we can add an else statement.
+
+07:12.830 --> 07:24.220
+So with both of these fail both of these comparisons fail I can say else alert.
+
+07:24.500 --> 07:25.190
+I don't know you
+
+07:28.970 --> 07:34.820
+close the bracket again don't forget to close and close the bracket press enter and says Hi Billy.
+
+07:34.820 --> 07:39.030
+Because remember my name is Billy.
+
+07:39.080 --> 07:42.400
+But if I do name equals Susie
+
+07:45.510 --> 07:51.040
+and I rerun the program again press the Cherokee and I press enter again.
+
+07:51.060 --> 07:54.610
+Hi Susie that's pretty cool right.
+
+07:54.700 --> 07:58.330
+You can think of this counting how passwords work right.
+
+07:58.330 --> 08:04.750
+This is what forms are doing they're checking your e-mail and checking your password using simple logic
+
+08:04.750 --> 08:06.630
+like this.
+
+08:06.650 --> 08:13.880
+Now I want to show you also with conditionals what's very useful and that's something called logical
+
+08:14.180 --> 08:15.660
+operators.
+
+08:15.770 --> 08:20.290
+I'm going to show you the three of them if I can on comment this.
+
+08:20.300 --> 08:21.100
+There you go.
+
+08:21.200 --> 08:27.450
+And these are the three so let's clean this up and try something.
+
+08:27.620 --> 08:33.830
+I can go if name equals Billy
+
+08:37.390 --> 08:43.460
+or these two lines so it's right above your enter key.
+
+08:43.680 --> 08:50.580
+This means or in JavaScript for name equals an
+
+08:54.360 --> 08:57.820
+then alert
+
+09:01.460 --> 09:04.030
+hi billy or an
+
+09:07.210 --> 09:08.570
+closer bracket.
+
+09:08.650 --> 09:09.740
+What do you think will happen here.
+
+09:10.090 --> 09:10.730
+Let's see.
+
+09:12.080 --> 09:13.910
+Name equals
+
+09:20.400 --> 09:21.690
+re execute the program.
+
+09:23.220 --> 09:26.060
+Press enter again.
+
+09:26.210 --> 09:28.200
+Hi Billy or n.
+
+09:28.280 --> 09:29.900
+But if now the name is
+
+09:32.710 --> 09:36.980
+Han and I re execute the program press enter again.
+
+09:37.090 --> 09:46.440
+Hi Billy or an that's that's pretty cool I can do or comparison what's another one that we can do.
+
+09:46.650 --> 09:57.860
+Well we can also do and which is two of these sites and this means if name equals Billy and name equals
+
+09:58.000 --> 10:01.760
+and let's see if this works.
+
+10:01.930 --> 10:09.720
+No let's to name equals N and we do the program and I'm not getting anything What if I do Billy
+
+10:14.260 --> 10:15.340
+and execute.
+
+10:15.370 --> 10:16.780
+No nothing.
+
+10:16.780 --> 10:17.540
+Why is that.
+
+10:17.540 --> 10:20.320
+Well this doesn't make sense right.
+
+10:20.800 --> 10:24.310
+I mean name equals Billy and name equals.
+
+10:24.310 --> 10:30.680
+And but as we've discussed a variable holds well holds a value.
+
+10:30.730 --> 10:36.430
+It's a drawer in your desk and it has a certain type of look to it.
+
+10:36.430 --> 10:43.620
+It either has a pen or a bunch of files it can have both billion and a lease.
+
+10:43.630 --> 10:52.520
+Now with what we've learned so far so this doesn't make sense where you would use end is maybe to check
+
+10:52.520 --> 10:54.730
+somebodies name so I can do.
+
+10:54.850 --> 11:14.360
+If first name remember I'm using camel case here Bob Dent last name equals Smith closer bracket curly
+
+11:14.360 --> 11:14.860
+brackets.
+
+11:14.870 --> 11:16.790
+I'm going to say alert.
+
+11:16.790 --> 11:24.760
+Hi Bob Smith closer brackets curly brackets press enter.
+
+11:25.190 --> 11:29.880
+And looks like I made a mistake here and it says first name is not defined.
+
+11:29.880 --> 11:35.000
+And while that's true because I've never said what first name is and last name this before I've already
+
+11:35.000 --> 11:36.510
+defined what name was.
+
+11:36.980 --> 11:43.970
+But it needs to know what these variables are otherwise saying hey I'm javascript and I've never encountered
+
+11:43.970 --> 11:46.340
+these words before where are you talking about.
+
+11:46.340 --> 12:00.260
+So before we do this we have to say variable first name equals Bob and variable last name equals
+
+12:05.830 --> 12:06.670
+OK.
+
+12:06.740 --> 12:12.140
+I actually want to draw your attention back to the air you'll get this a lot when you're starting off
+
+12:12.560 --> 12:15.370
+reference their first name is not defined.
+
+12:15.380 --> 12:21.830
+It's pretty good air but keep that in mind reference area just means I I don't know what this value
+
+12:21.830 --> 12:28.210
+is it's not referencing anything OK so now that we have first name and last name defined we press up
+
+12:28.210 --> 12:33.880
+again to get to our little execution piece here and I go press enter again.
+
+12:33.920 --> 12:35.130
+Hi Bob Smith.
+
+12:35.260 --> 12:47.100
+If I change the first name or last name to say JONES PRESENTER And let's re execute this piece of code
+
+12:48.440 --> 12:56.670
+I get nothing because first name and last name must match OK I have one last one over here and that's
+
+12:56.670 --> 13:01.260
+the exclamation point or exclamation mark not point.
+
+13:02.200 --> 13:03.460
+Let's see what it does.
+
+13:03.520 --> 13:07.070
+This is a little bit tricky but see if you can follow along here.
+
+13:07.360 --> 13:31.280
+If exclamation mark name equals Bob opening brackets alert Hi Bob and close the press enter and I get.
+
+13:31.470 --> 13:32.280
+Bob.
+
+13:32.850 --> 13:37.390
+OK let's remember one name was it's Billy.
+
+13:37.390 --> 13:48.720
+Why am I getting high Bob when Billy's the name clearly name doesn't equal Bob because of this.
+
+13:48.800 --> 13:51.690
+This is the not operator.
+
+13:51.980 --> 13:54.590
+So it's the opposite.
+
+13:54.710 --> 14:05.010
+So it turns this expression which is name equals Bob which is false to true so just to show you if I
+
+14:05.010 --> 14:14.730
+go this and then false I get true and if I go this true I get false.
+
+14:14.730 --> 14:24.360
+So that's why I use the brackets here I'm saying evaluate this and once you do this add the opposite
+
+14:24.900 --> 14:31.170
+to not and it seems like why would I ever want to do that.
+
+14:31.170 --> 14:32.840
+When would I ever use this.
+
+14:32.880 --> 14:40.200
+And this is a good thing to use whenever let's say you want to turn off a switch.
+
+14:40.200 --> 14:45.040
+So just like I showed you if I go not true I can say now it's off.
+
+14:45.270 --> 14:48.510
+Not false light comes on.
+
+14:49.470 --> 14:51.860
+So you'll see cases when we do use this.
+
+14:51.990 --> 14:57.420
+And I promise you it's very very very important that we have it in the language.
+
+14:57.420 --> 15:05.610
+So let's just review what we've learned up to this point so that in the next video we have a sense of
+
+15:05.700 --> 15:11.430
+where we've been and where we've got we've talked about JavaScript types we've learned about numbers
+
+15:11.760 --> 15:16.510
+strings billions and undefined.
+
+15:16.530 --> 15:23.460
+We've also learned about JavaScript comparisons that we use sometimes in conditional statements like
+
+15:23.460 --> 15:24.720
+if statements.
+
+15:24.720 --> 15:32.530
+We've learned about JavaScript variables we've learned about JavaScript conditionals that if else else
+
+15:32.560 --> 15:40.420
+if statements and we've learned about JavaScript logical operators these and or and exclamation marks
+
+15:40.790 --> 15:42.810
+and there's a few more that we haven't covered yet.
+
+15:42.810 --> 15:44.780
+And don't worry we will.
+
+15:45.000 --> 15:46.320
+I know this is confusing.
+
+15:46.320 --> 15:53.740
+This is new syntax it's learning a new language but it's not too bad.
+
+15:53.890 --> 15:57.570
+It definitely doesn't have as many words as a real language.
+
+15:57.640 --> 16:02.980
+You just have to get used to this and practice typing in the console and practice with the problems
+
+16:03.040 --> 16:10.140
+and get yourself familiar with running these syntax is and it will click and it'll become second nature.
+
+16:10.150 --> 16:13.720
+Like I said everybody goes through this you'll get it.
+
+16:13.810 --> 16:19.210
+I promise I know I keep saying this but I only say because I know when I started learning this stuff
+
+16:19.750 --> 16:25.300
+that's how I felt and and that's how everybody else feels so I want to just make sure that don't worry
+
+16:25.420 --> 16:30.790
+you'll get there you're gonna be a master of JavaScript by the end of this course so I'll see you on
+
+16:30.790 --> 16:31.910
+the next one.
+
+16:31.960 --> 16:33.980
+Can't wait to show you more.
+
+16:34.090 --> 16:35.280
+Talk to you then.
+
+16:35.350 --> 16:35.650
+Bye bye.

@@ -1,0 +1,124 @@
+WEBVTT
+
+00:00.910 --> 00:01.940
+Welcome back.
+
+00:02.260 --> 00:08.800
+To start off our section to really understand functional programming we need to start from the core
+
+00:08.800 --> 00:14.020
+concept and that is the pillar the pure functions pillar.
+
+00:14.020 --> 00:18.190
+We're going to start step by step with this idea of pure functions.
+
+00:18.190 --> 00:23.800
+And I'm going to introduce you to different functional programming terms that sound a lot more complicated
+
+00:23.830 --> 00:32.100
+than they are and finally after learning all these terms we're going to implement our functional programming
+
+00:32.100 --> 00:35.390
+style to our Amazon shopping cart.
+
+00:35.460 --> 00:41.150
+So what are pure functions when it comes to pure functions.
+
+00:41.160 --> 00:49.990
+There's two main things a function has to always return the same output given the same input and the
+
+00:49.990 --> 00:54.670
+function cannot modify anything outside of itself.
+
+00:54.670 --> 00:56.190
+No side effects.
+
+00:56.320 --> 00:58.660
+Let me show you with an example.
+
+00:58.680 --> 01:07.800
+So what I said was We have a function that has no side effects so no side effects.
+
+01:07.800 --> 01:19.030
+And then finally a function that given the same input returns the same output no matter how many times
+
+01:19.120 --> 01:22.140
+we call it so let's start off with the first line.
+
+01:22.240 --> 01:29.940
+The idea of no side effects let's say we have an array and this array is a simple one.
+
+01:29.980 --> 01:38.400
+One two three if I create a function here calling it function 8.
+
+01:39.640 --> 01:49.390
+And this function a receives some sort of array and it does the pop method on an array so that if I
+
+01:49.390 --> 02:01.710
+call a array and I run this while I get undefined because I'm not returning anything from this function.
+
+02:02.280 --> 02:04.020
+But the interesting thing happens here.
+
+02:04.410 --> 02:08.700
+If I just console log dot array
+
+02:11.500 --> 02:22.600
+I only have one and two left in the array this function has what we call side effects and side effects
+
+02:23.090 --> 02:24.050
+are.
+
+02:24.100 --> 02:28.050
+Well does the function modify anything outside of itself.
+
+02:29.330 --> 02:41.400
+And it does right outside of this function this a function or religious call it now mutate array mutates
+
+02:41.700 --> 02:51.640
+and modifies this array that lives outside of itself in the global object and this is called a side
+
+02:51.640 --> 02:52.750
+effect.
+
+02:52.870 --> 02:59.620
+We don't know what might happen to the array because well anybody can call it and it can change things
+
+02:59.950 --> 03:13.310
+so that if I call a let's say again 0 and I have to make sure that I update the name my array is well
+
+03:13.430 --> 03:23.770
+modified once again or let's say that we also have a for each function let's say array dot for each
+
+03:24.580 --> 03:38.070
+or actually just create a new array here that will say for each item we all just push
+
+03:41.350 --> 03:49.670
+one at the end of the array so that if I click Run well look at that 0 and make sure that we have different
+
+03:49.670 --> 03:57.260
+names for this list to mutate array to click Run I have 1 2 1 1.
+
+03:57.350 --> 04:00.400
+Now this is pretty confusing.
+
+04:00.410 --> 04:02.300
+I'm not really sure what's happening here.
+
+04:02.320 --> 04:09.130
+I have to go one by one line by line to figure out how these functions are modifying the data.
+
+04:09.380 --> 04:11.610
+This global state.
+
+04:11.870 --> 04:19.850
+And that's one of the problems with having side effects is that reusing shared state something like
+
+04:19.850 --> 04:29.300
+a global variable that can interact with anything and the order of the function calls matter and that
+
+04:29.300 --> 04:31.670
+can cause a lot of bugs.
+
+04:31.670 --> 04:35.380
+So how can you write something that has no side effects.

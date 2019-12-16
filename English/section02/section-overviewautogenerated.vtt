@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.450 --> 00:09.920
+Hey Lou we're starting an advanced course with how javascript works but I already know how javascript
+
+00:09.920 --> 00:10.330
+works.
+
+00:10.340 --> 00:12.320
+I write JavaScript every day.
+
+00:12.350 --> 00:14.260
+Stop wasting my time Andre.
+
+00:14.390 --> 00:20.900
+I know you like to give me a hard time but let me ask you this when you write code on a file do you
+
+00:20.900 --> 00:22.350
+know what happens.
+
+00:22.430 --> 00:25.630
+How does the browser read this file.
+
+00:25.640 --> 00:28.520
+How is javascript executed.
+
+00:28.520 --> 00:30.800
+How does no GSA work.
+
+00:30.800 --> 00:33.110
+We write code in a text editor.
+
+00:33.110 --> 00:40.110
+And somehow this code magically turns into ones and zeros to tell the computer to do something.
+
+00:40.220 --> 00:46.100
+In this section and to begin this course I want to build what I think is the most important foundation
+
+00:46.310 --> 00:48.470
+of learning any language.
+
+00:48.500 --> 00:52.420
+If somebody asks you Hey can you explain how javascript works.
+
+00:52.520 --> 00:54.080
+As if I was five.
+
+00:54.080 --> 00:59.990
+You're going to be able to answer it by the end of this section knowing something deeply is being able
+
+00:59.990 --> 01:06.550
+to understand it so well that you can explain it to anybody even somebody without technical knowledge.
+
+01:06.560 --> 01:12.110
+More importantly you will have an understanding of the language at a deeper level than most people in
+
+01:12.110 --> 01:18.600
+the industry so that you can write better code let's have a look at what we're going to talk about in
+
+01:18.600 --> 01:25.170
+the first part we're going to talk about the JavaScript engine javascript runtime about interpreters
+
+01:25.170 --> 01:27.450
+compilers and JIT compilers.
+
+01:27.510 --> 01:30.140
+We're going to learn about writing optimized code.
+
+01:30.270 --> 01:35.730
+We're going to talk about call Stack's memory heaps and some of the things that we have to be careful
+
+01:35.910 --> 01:40.400
+when it comes to stacks and heaps and that is stack overflow and memory leaks.
+
+01:40.500 --> 01:43.760
+We're gonna talk a little bit about garbage collection about no J.
+
+01:43.770 --> 01:51.060
+Yes and how it fits into this whole javascript ecosystem and it's single threaded model and using what
+
+01:51.060 --> 01:57.720
+we learned in this section we're gonna be able to use these fundamentals as we learn higher and higher
+
+01:57.720 --> 02:00.810
+level concepts as we move throughout the course.
+
+02:00.810 --> 02:06.480
+So hang in there even if you have a good understanding of how javascript works you may learn a thing
+
+02:06.480 --> 02:07.690
+or two.
+
+02:07.770 --> 02:13.200
+We're also going to have a little bit of coding but most exercises in this section are going to be thought
+
+02:13.200 --> 02:17.890
+experiments and a lot more code is gonna come up in future sections.
+
+02:18.060 --> 02:22.830
+So hang in there and I hope you are as excited as I am to start the course.
+
+02:22.830 --> 02:24.240
+It's gonna be a lot of fun.
+
+02:24.300 --> 02:25.820
+Let's get started shall we.
+
+02:25.950 --> 02:26.720
+See you in the next one.

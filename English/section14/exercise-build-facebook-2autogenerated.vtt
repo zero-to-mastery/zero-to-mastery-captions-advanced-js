@@ -1,0 +1,274 @@
+WEBVTT
+
+00:00.940 --> 00:01.960
+Welcome back.
+
+00:02.110 --> 00:09.240
+Using our newfound knowledge of loops we're going to make our Facebook app a little bit better.
+
+00:09.390 --> 00:13.240
+I mean because Facebook has more than one user rate.
+
+00:13.300 --> 00:16.870
+It's not just one user it's got millions of them.
+
+00:16.900 --> 00:25.970
+So how can we check somebody's password by going through not just one user but multiple ones well.
+
+00:26.090 --> 00:28.670
+Sounds like a perfect solution for loops.
+
+00:28.760 --> 00:30.470
+So let's give it a go.
+
+00:30.470 --> 00:33.680
+I'm going to add a few more users in here.
+
+00:33.730 --> 00:40.510
+Mean just copy this and we'll have Sally with the password.
+
+00:40.520 --> 00:42.350
+One two three.
+
+00:42.350 --> 00:49.710
+And we'll also have Ingrid with password 7 7 7.
+
+00:49.780 --> 00:51.700
+So let's refresh it.
+
+00:51.700 --> 00:54.800
+I'm going to make this on our new line just so you can see it.
+
+00:54.850 --> 01:06.910
+I'm going to refresh and Let's type in Ingrid 7 7 sorry wrong user name and password.
+
+01:07.160 --> 01:08.180
+And that makes sense right.
+
+01:08.180 --> 01:15.430
+Because when we created our sign in function well it's only checking the first item in the database.
+
+01:15.740 --> 01:20.180
+But we want to check through all of them we want to check through the first item in the array.
+
+01:20.180 --> 01:28.000
+The second and the third looks like we need to add a loop in here so how can we do that.
+
+01:28.360 --> 01:31.930
+We should look at a for loop.
+
+01:31.930 --> 01:34.650
+I'm going to say in here.
+
+01:34.660 --> 01:41.950
+Well actually I'm going to comment this out first and we'll say that when we sign in we want to do for
+
+01:43.510 --> 01:47.090
+variable i equals zero.
+
+01:47.100 --> 01:55.480
+We remember this syntax from last video we'll say pi is less than the database dot length.
+
+01:56.860 --> 02:09.360
+So database length that's three and we'll increment by every time open in close brackets and then here
+
+02:09.360 --> 02:14.280
+we want to say if database pie.
+
+02:14.360 --> 02:28.260
+So instead of zero now we can say I because high is going to go 0 1 to so database I he calls and we
+
+02:28.260 --> 02:29.880
+should had user name here as well.
+
+02:30.120 --> 02:42.420
+So if the user name equals the user name that we receive which is the input user name and then start
+
+02:42.420 --> 02:56.550
+a new line here database Hi dot password equals the password that we receive from the user Well if that's
+
+02:56.730 --> 02:59.200
+the case what should we do.
+
+02:59.220 --> 03:13.890
+Well if that's correct we'll do console log user fee otherwise we'll do alert sorry wrong username and
+
+03:13.890 --> 03:14.370
+password
+
+03:17.870 --> 03:18.920
+so not going to save.
+
+03:18.920 --> 03:30.250
+Let's try this out username Ingrid password 7 7 7 sorry wrong user name and password sorry wrong username
+
+03:30.250 --> 03:35.860
+and password but then I get the news feed what just happened.
+
+03:35.870 --> 03:41.530
+Well what we just did was we did a for loop but we ran this three times.
+
+03:41.630 --> 03:47.660
+So the first time I got sorry wrong the user name the second time I got sorry wrong user name because
+
+03:47.660 --> 03:55.580
+it's checking Andre and Sally and then it's checking Ingrid which finally works and gives me back the
+
+03:55.580 --> 03:59.380
+news feed so our logic here isn't right.
+
+04:00.450 --> 04:04.030
+What can we do to solve this.
+
+04:04.060 --> 04:05.820
+Well I have an idea.
+
+04:05.820 --> 04:08.280
+Let's create another function.
+
+04:08.370 --> 04:16.800
+I'm going to call this function is user valid and this function is going to receive user name
+
+04:20.270 --> 04:28.460
+and password and here we can copy this and move it over here.
+
+04:28.460 --> 04:35.660
+But we don't really want to do what happened here where we constantly log instead we would want to say
+
+04:36.230 --> 04:41.480
+return true so if user is valid.
+
+04:41.930 --> 04:49.940
+Return true if the user is not valid then we should return false.
+
+04:49.940 --> 04:50.150
+Right.
+
+04:50.150 --> 04:52.750
+But how can we do that.
+
+04:52.770 --> 04:58.020
+Well if I do return false here let's look at the logic.
+
+04:58.260 --> 05:00.260
+I am looping through everything.
+
+05:00.590 --> 05:06.660
+If at any point the user name and the password match will what we have in the database return true.
+
+05:06.680 --> 05:11.590
+And we remember that a function stops and exits when it sees returns.
+
+05:11.600 --> 05:13.490
+So it's going to return true.
+
+05:13.490 --> 05:20.750
+But if it does the looping three times and this if condition never passes it's going to go to the next
+
+05:20.750 --> 05:25.510
+line which is return false.
+
+05:25.540 --> 05:28.300
+So now is user valid.
+
+05:28.300 --> 05:30.530
+Well let's test this out.
+
+05:30.610 --> 05:41.260
+I'm going to say console dog log is user valid and we'll give it username and password.
+
+05:41.260 --> 05:44.830
+You can see that the user name and password is coming from here.
+
+05:44.950 --> 05:45.690
+So let's see.
+
+05:45.760 --> 05:47.830
+I'm going to save and refresh
+
+05:50.450 --> 05:55.810
+Ingrid 7 7 7 true.
+
+05:55.820 --> 05:56.600
+That's right.
+
+05:56.600 --> 05:58.470
+Let's test something where it's not right.
+
+05:58.490 --> 05:59.410
+I'm going to say it.
+
+05:59.870 --> 06:02.440
+And garbled verbal false.
+
+06:03.220 --> 06:03.600
+OK.
+
+06:03.620 --> 06:08.710
+It looks like our is user valid function is working.
+
+06:08.760 --> 06:20.860
+So now watch this we can remove the log and on comment our original function and instead of doing all
+
+06:20.860 --> 06:35.800
+this check we can now say if is user valid user name and password which is again this username and password
+
+06:35.800 --> 06:46.950
+that we receive over here from the prompt if this is true then run the news feed if it's false while
+
+06:47.100 --> 06:54.230
+else you say sorry wrong user name and password let's save and refresh OK.
+
+06:54.300 --> 06:54.930
+Let's go.
+
+06:55.140 --> 07:05.700
+Ingrid password 777 we get our news feed and if we enter a wrong information
+
+07:08.660 --> 07:13.070
+we get sorry wrong username and password.
+
+07:13.250 --> 07:14.580
+How cool is that.
+
+07:14.690 --> 07:19.530
+We now just created two functions and it reads pretty nicely right.
+
+07:19.550 --> 07:22.440
+And it says Sign in here's a user name.
+
+07:22.460 --> 07:23.880
+Here's the password.
+
+07:23.990 --> 07:30.190
+We go to the sign and function it says hey if is user valid.
+
+07:30.190 --> 07:33.040
+Yes users valid then blog news feed.
+
+07:33.160 --> 07:34.260
+Otherwise alert.
+
+07:34.270 --> 07:36.180
+Sorry wrong username and password.
+
+07:36.310 --> 07:42.130
+And that is a really important concept of naming things and ordering code so you can kind of read it
+
+07:42.130 --> 07:43.780
+like English and it makes sense.
+
+07:44.600 --> 07:45.910
+And there you have it.
+
+07:46.000 --> 07:48.530
+We have our Facebook app.
+
+07:48.730 --> 07:50.880
+You can see here the power of JavaScript.
+
+07:50.950 --> 08:00.580
+Again we've created these functionalities that can be applied on grander scale on real web apps.
+
+08:00.700 --> 08:02.620
+I'll see in the next one but my.

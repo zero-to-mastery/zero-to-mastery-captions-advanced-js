@@ -1,0 +1,133 @@
+WEBVTT
+
+00:01.110 --> 00:07.960
+I wanted to do a quick video to see how what we just learned applies to different languages.
+
+00:08.010 --> 00:15.480
+For example you might have heard of an executable file that is a dot e XY file especially if you've
+
+00:15.480 --> 00:22.770
+ever used Windows before you double click a file that ends in dot e XY and then the code starts running.
+
+00:22.770 --> 00:31.770
+The application starts running and that dot e xy is an executable and most of the time these dot EMC
+
+00:31.770 --> 00:35.690
+files are created by C++.
+
+00:35.700 --> 00:45.110
+You write a C++ code and you compile it to a dot EMC file for example you can use a command like G plus
+
+00:45.110 --> 00:59.540
+plus your program DOT C++ so that's your C++ file and you're going to output it to an executable your
+
+00:59.660 --> 01:10.900
+program and this is going to create that dot EMC file that you compile down from C++ to an executable
+
+01:11.710 --> 01:18.550
+machine code so that when you double click a file that is your program it's going to run because it's
+
+01:18.550 --> 01:19.580
+been compiled.
+
+01:20.400 --> 01:28.920
+Now when you use a program like let's say Java Java on the other hand uses something called the JVM
+
+01:29.100 --> 01:38.220
+or Java Virtual Machine where it compiles your code or interprets your code to bike code inside of this
+
+01:38.220 --> 01:39.810
+JVM.
+
+01:39.810 --> 01:49.320
+And this Java Virtual Machine is going to understand despite code so unlike a compiled language that
+
+01:49.320 --> 01:52.900
+has to be compiled for each specific type of computer.
+
+01:53.040 --> 02:00.090
+A Java program only needs to be converted to byte code once and that bike code can be understood by
+
+02:00.090 --> 02:07.770
+the Java Virtual Machine and that's where the term for Java right once run everywhere came from.
+
+02:07.770 --> 02:16.260
+Now one thing to note here is that bike code is not a native machine code that is most computers won't
+
+02:16.260 --> 02:17.520
+understand this bike code.
+
+02:17.520 --> 02:20.600
+They might understand machine code but not bike code.
+
+02:20.640 --> 02:29.570
+So with bike code you need software such as the virtual machine or a JavaScript engine so we can execute
+
+02:29.570 --> 02:30.270
+it directly.
+
+02:30.270 --> 02:38.110
+I can't double click a byte code file and run it without an engine or a javascript machine so I have
+
+02:38.110 --> 02:38.850
+a question for you.
+
+02:38.860 --> 02:45.310
+Knowing what you just learn now is javascript and interpreted language.
+
+02:45.370 --> 02:46.380
+You'll hear this a lot.
+
+02:46.390 --> 02:54.440
+JavaScript is an interpreted language but learning what you just did is javascript and interpreted language.
+
+02:54.440 --> 03:02.240
+I mean yes initially when javascript first came out you had JavaScript engine such as Spider Monkey
+
+03:02.390 --> 03:09.500
+created by Brendan like that interpreted javascript to byte code and that engine was able to run inside
+
+03:09.500 --> 03:12.880
+of our browsers to tell our computers what to do.
+
+03:13.040 --> 03:14.680
+But things have evolved now.
+
+03:14.780 --> 03:16.300
+We don't have just interpreters.
+
+03:16.310 --> 03:19.500
+We also use compilers to optimize this code.
+
+03:20.180 --> 03:22.670
+So this is a common misconception.
+
+03:22.970 --> 03:27.460
+When somebody says javascript is an interpreted language yes there is some truth to it.
+
+03:28.400 --> 03:31.260
+But it actually depends on the implementation.
+
+03:31.310 --> 03:38.420
+You can make an implementation of JavaScript of the javascript engine that perhaps only compiles and
+
+03:38.420 --> 03:49.280
+by the way this is also true when it comes to something like Python Python can be run through a compiler
+
+03:49.790 --> 03:55.410
+or it can also be interpreted even interpreted through something like the Java Virtual Machine.
+
+03:55.580 --> 03:58.760
+So it all matters depending on implementation.
+
+03:59.390 --> 04:04.150
+So the next time somebody tells you hey javascript that's an interpreted language.
+
+04:04.280 --> 04:09.020
+You can sound super smart and nitpicky by saying well not technically.
+
+04:09.080 --> 04:12.630
+Technically it depends on the implementation.
+
+04:12.720 --> 04:15.270
+All right I'll see in the next video by.

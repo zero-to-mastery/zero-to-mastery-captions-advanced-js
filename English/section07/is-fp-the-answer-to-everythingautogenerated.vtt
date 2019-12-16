@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.620 --> 00:04.440
+Why is functional programming so great.
+
+00:04.440 --> 00:06.430
+We just learned a bunch of terms.
+
+00:06.480 --> 00:08.040
+Everything kind of looks like math.
+
+00:08.370 --> 00:13.140
+But why are people so excited about this in the next video.
+
+00:13.220 --> 00:18.740
+We're gonna go over the Amazon exercise and hopefully what we've learned up until now will all come
+
+00:18.740 --> 00:26.240
+together but the idea with functional programming is this idea of separation of data and functions or
+
+00:26.240 --> 00:30.560
+data and the effects that happen on that data.
+
+00:30.560 --> 00:31.910
+Kind of like this pipe.
+
+00:32.000 --> 00:40.370
+We have a piece of data that we put through this pipe and whatever happens through the pipe these transformation
+
+00:40.580 --> 00:46.490
+something gets output if you try to perform effects and logic at the same time.
+
+00:46.570 --> 00:51.580
+The problem is that you may create hidden side effects which cause a lot of bugs.
+
+00:51.790 --> 00:59.290
+If multiple things in your program handle some piece of data at the same time well that gets really
+
+00:59.290 --> 01:07.090
+complicated and it could cause many problems so the idea in functional programming of keeping functions
+
+01:07.090 --> 01:15.040
+small and pure and composed while doing one thing at a time and doing it well this idea of immutability
+
+01:15.730 --> 01:22.870
+the idea that functions that take inputs and return outputs so that it can be used with other functions
+
+01:23.200 --> 01:32.900
+it allows us to have a predictable program where it minimizes bugs because everything is so simple and
+
+01:32.900 --> 01:38.360
+as long as we are able to combine these small little functions together we're able to create really
+
+01:38.360 --> 01:39.810
+complex programs.
+
+01:39.920 --> 01:45.860
+These small little pieces that eventually build something like a pyramid something great.
+
+01:46.220 --> 01:49.820
+It doesn't mean that functional programming is the answer to everything.
+
+01:50.270 --> 01:57.230
+Yes because of its nature it works really well with distributed systems that have different little machines
+
+01:57.290 --> 02:05.330
+all over the world working with each other or parallelism where multiple things have to happen in parallel
+
+02:05.780 --> 02:11.970
+but because these functions are pure it doesn't cause strange bugs.
+
+02:12.350 --> 02:16.130
+But at the same time it all depends on the problem you have.
+
+02:16.130 --> 02:20.030
+There are times when object oriented programming might be better.
+
+02:20.040 --> 02:27.380
+You're building a fairy tale game and you have clear objects characters in the game that have some sort
+
+02:27.380 --> 02:33.710
+of state and that can interact with that state and others can interact with them as well or you have
+
+02:33.710 --> 02:40.700
+something like an Amazon shopping cart where there's a clear data that needs to get processed.
+
+02:40.700 --> 02:46.070
+So using everything that we've learned up until now let's go back to the exercise that I showed you
+
+02:46.070 --> 02:51.230
+at the very beginning of this section and see if we can apply some of these principles to our answer
+
+02:51.990 --> 02:52.690
+ready.
+
+02:53.000 --> 02:54.050
+Let's get started.

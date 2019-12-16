@@ -1,0 +1,277 @@
+WEBVTT
+
+00:00.540 --> 00:01.440
+Welcome back.
+
+00:01.470 --> 00:05.930
+I have one last piece of information that's going to blow your mind.
+
+00:06.060 --> 00:10.170
+And after this you can relax saying that all right.
+
+00:10.170 --> 00:11.370
+No more surprises.
+
+00:11.370 --> 00:13.390
+The hardest part is over.
+
+00:13.470 --> 00:18.910
+It's gonna become easier and easier as we learn how to use prototype of inheritance.
+
+00:18.990 --> 00:26.460
+Now this statement is true only functions have the prototype property.
+
+00:26.460 --> 00:29.060
+What does that mean.
+
+00:29.070 --> 00:30.490
+Remember this.
+
+00:30.570 --> 00:35.200
+How Prado points to the prototype object.
+
+00:36.080 --> 00:44.930
+Well the thing that contains this prototype object is always a function if we go back to our multiplied
+
+00:44.930 --> 00:45.590
+by five.
+
+00:45.590 --> 00:51.280
+Example we ask ourself is multiplied by five a function.
+
+00:51.410 --> 00:54.610
+Well yes it is then it's a special type of object.
+
+00:54.800 --> 00:57.280
+It has an M vocal piece of code.
+
+00:57.320 --> 00:59.570
+It has an optional Name property.
+
+00:59.570 --> 01:09.470
+It can have its own properties and we can use Prado to link up to the prototype but multiplied by five
+
+01:09.470 --> 01:15.760
+itself because I just said it in that statement every function has a prototype property.
+
+01:16.100 --> 01:17.600
+It has a prototype.
+
+01:17.600 --> 01:18.160
+Let's have a look.
+
+01:19.650 --> 01:26.340
+If I clear this and do multiply Well let's run that function again.
+
+01:26.340 --> 01:32.740
+Function multiplied by five and I'll do multiplied by five.
+
+01:32.770 --> 01:37.390
+Dot prototype and look at that.
+
+01:37.390 --> 01:40.270
+I have a prototype now.
+
+01:40.300 --> 01:46.700
+This prototype itself is pretty empty when we create a function like this.
+
+01:46.720 --> 01:56.620
+This prototype we don't really use it just gets created but we never really make use of it because prototypes
+
+01:56.680 --> 02:01.440
+although they are a property on all functions.
+
+02:01.540 --> 02:10.240
+The only time we really use prototypes is using what we call constructor functions constructor functions.
+
+02:10.240 --> 02:18.430
+They usually start with a capital letter and they contain the actual blueprint or prototype that we
+
+02:18.430 --> 02:19.610
+use.
+
+02:19.660 --> 02:29.110
+So for example if I do multiplied by five dot underscore underscore Kroto which links to that prototype
+
+02:30.010 --> 02:38.400
+we already know that function dot prototype is going to equal exactly that if I do multiply by five
+
+02:38.550 --> 02:47.060
+dot proto product and then up the chain again which will be the object constructor.
+
+02:47.120 --> 02:53.660
+Well if I do object dot prototype I get the same thing.
+
+02:54.230 --> 03:00.800
+But now you're asking yourself Whoa whoa whoa you just told me that prototype properties only exist
+
+03:01.280 --> 03:10.340
+on functions and this is where it gets a little bit tricky because this object is something we've talked
+
+03:10.340 --> 03:11.480
+about before.
+
+03:11.660 --> 03:20.510
+It's the base object because if I do multiply by five prototype prototype and then one more time Kroto
+
+03:21.340 --> 03:31.220
+will get no because we're past the space object but if I do type of object here I get.
+
+03:31.530 --> 03:41.550
+Function what I know I know super confusing type of object is a function because well it has the prototype
+
+03:41.640 --> 03:42.870
+property.
+
+03:42.870 --> 03:49.200
+Remember when I talked about standard built in objects in javascript and we have all these things like
+
+03:49.200 --> 03:57.480
+fundamental objects like object function boolean we have no end dates like no math date string all with
+
+03:57.480 --> 03:59.170
+capital letters.
+
+03:59.190 --> 04:09.840
+Well if I click on object here we see that this object is the object constructor that creates the object
+
+04:10.140 --> 04:10.590
+wrapper
+
+04:13.290 --> 04:20.520
+remember in order for us to perform an action in a program we have to have a function right.
+
+04:20.670 --> 04:22.260
+That's what a program does.
+
+04:22.260 --> 04:27.790
+It stores data and we use functions to manipulate that data.
+
+04:27.840 --> 04:29.700
+So when we do something like
+
+04:32.880 --> 04:40.800
+const object equals object underneath the hood JavaScript has to create that object.
+
+04:40.800 --> 04:42.860
+And in order to create that object.
+
+04:42.870 --> 04:50.710
+Well it uses this object constructor just to prove to you that that's the case.
+
+04:50.710 --> 05:02.260
+If I do type of an empty object now look at that I get object because this is now an actual object that
+
+05:02.260 --> 05:06.590
+we've created from the object constructor.
+
+05:06.610 --> 05:11.800
+Now I am going to warn you and I know I've been bugging you about this.
+
+05:11.920 --> 05:17.830
+This can get pretty hairy and complicated and it's hard to wrap your head around.
+
+05:17.830 --> 05:24.250
+But if there's one thing that you take away from this video is that every function has a prototype property
+
+05:24.520 --> 05:32.920
+and it references to an object used to attach properties that will be inherited by objects further down
+
+05:33.040 --> 05:34.810
+the prototype chain.
+
+05:34.900 --> 05:43.000
+The last object in the chain is this built in object dot prototype.
+
+05:43.020 --> 05:49.750
+Remember that difference object is a function because it has the prototype.
+
+05:49.890 --> 05:56.130
+Now the object that prototype is what we call the base object.
+
+05:56.220 --> 06:05.460
+That's the very last piece or the very last object that we can look for properties on before we point
+
+06:05.580 --> 06:07.380
+to no.
+
+06:07.490 --> 06:13.290
+I told you that your brain was gonna hurt after this one oh and one last thing.
+
+06:13.590 --> 06:25.220
+If I created let's say an object equals to an empty object will I be able to access object dot prototype
+
+06:27.490 --> 06:28.750
+No it's undefined.
+
+06:28.780 --> 06:31.330
+It's not a function right.
+
+06:31.330 --> 06:42.970
+If I do let's say an array so const array if I do array dot prototype is that available.
+
+06:43.360 --> 06:45.080
+No it's not a function.
+
+06:45.190 --> 06:52.600
+What if I do a string dot prototype.
+
+06:52.600 --> 06:56.700
+Is that available.
+
+06:56.870 --> 07:08.610
+You don't have prototype because well that's just a primary type functions have a prototype and you
+
+07:08.610 --> 07:16.870
+may notice here that we do have boolean functions we have numbers we have strings.
+
+07:16.940 --> 07:22.790
+So if I do something like string dot prototype.
+
+07:23.280 --> 07:25.110
+Well yeah we have that.
+
+07:25.110 --> 07:36.430
+And strings have all these methods from the string constructor that they can inherit from even though
+
+07:36.430 --> 07:43.960
+I did string dot prototype here underneath the hood when I try and access a method on the string.
+
+07:44.230 --> 07:52.550
+JavaScript is going to convert it into a string object and look up the prototype chain for these methods.
+
+07:52.550 --> 08:03.210
+That way we can perform all these actions on the string type to review everything in Javascript is an
+
+08:03.270 --> 08:11.370
+object and arrays and functions in JavaScript are objects they inherit through the prototype chain from
+
+08:11.400 --> 08:13.260
+the base object.
+
+08:13.450 --> 08:22.350
+You can go up the prototype chain looking for properties on this prototype property this prototype property
+
+08:22.560 --> 08:31.860
+also has the prototype property inside of it that links higher up to the next prototype chain Prado
+
+08:32.100 --> 08:40.770
+always points to prototype and we also remembered that only functions have the prototype property and
+
+08:40.920 --> 08:51.150
+at the end of the day this was useful for us because using prototypes we avoid repeating ourselves we
+
+08:51.150 --> 08:58.470
+avoid adding the same code over and over and over and being inefficient with our memory but we can also
+
+08:58.470 --> 09:05.760
+start creating some interesting programming paradigms now and practices using what we learned both prototypes
+
+09:05.830 --> 09:10.540
+enclosures to write some really powerful programs.
+
+09:10.920 --> 09:13.350
+We're almost ready to get into the next section.
+
+09:13.590 --> 09:15.350
+I'll see you in the next video by.

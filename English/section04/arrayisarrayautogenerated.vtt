@@ -1,0 +1,67 @@
+WEBVTT
+
+00:01.180 --> 00:02.020
+Welcome back.
+
+00:02.020 --> 00:04.870
+Let's do a quick video on a race.
+
+00:04.870 --> 00:05.900
+Remember what I said.
+
+00:05.950 --> 00:16.240
+Arrays are objects in javascript because underneath the hood if we do let's say an array that contains
+
+00:16.260 --> 00:29.160
+one two three in JavaScript it's almost the same as saying variable object or in this case array equals
+
+00:29.910 --> 00:42.260
+index of 0 contains one index of one contains two and index of two contains three if I change these
+
+00:42.260 --> 00:45.800
+two strings.
+
+00:45.920 --> 00:49.340
+That would be the same thing as this.
+
+00:49.340 --> 00:58.830
+And that is why when we do type of and check out an array I get an object.
+
+00:58.850 --> 01:05.590
+Now how will we ever test to see if something we create is an array.
+
+01:05.780 --> 01:13.470
+Let's say we create a variable somewhere and we want to find out what this variable is.
+
+01:13.520 --> 01:15.640
+Does it contain an array an object.
+
+01:15.650 --> 01:24.950
+How can we figure out if typeof array is the same thing as type of object well in the new version of
+
+01:24.950 --> 01:25.990
+JavaScript.
+
+01:26.090 --> 01:35.200
+We actually have something called array dot is array and this array as you can see is an object.
+
+01:35.470 --> 01:40.330
+It's an array constructor which we're going to talk about a little bit later on in the course.
+
+01:40.650 --> 01:46.470
+And we use the dot notation to access a new property or method on it is great.
+
+01:46.590 --> 01:50.480
+And then here we can give it something to see if something is in right.
+
+01:50.490 --> 01:54.780
+If I give it an array it's going to run true.
+
+01:55.430 --> 02:04.940
+If I give it let's say an object is going to give me false and that's how we check for a raise in JavaScript.
+
+02:05.330 --> 02:09.620
+Otherwise it'll be really hard to determine if something is in array in Java.
+
+02:09.650 --> 02:16.410
+Because once again arrays in JavaScript are objects I'll see in the next one by.

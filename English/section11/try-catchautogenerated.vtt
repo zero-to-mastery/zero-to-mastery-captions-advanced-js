@@ -1,0 +1,331 @@
+WEBVTT
+
+00:01.020 --> 00:02.180
+Welcome back.
+
+00:02.190 --> 00:06.930
+How can we catch errors in our programs in JavaScript.
+
+00:06.930 --> 00:10.110
+There are two ways that we can go about it.
+
+00:10.110 --> 00:23.920
+One is the catch block or the try catch block which we'll talk about and also the catch method now.
+
+00:23.930 --> 00:28.430
+In this video we're going to talk about the first on and in the next video we'll talk about this one.
+
+00:29.540 --> 00:31.670
+So how does it work.
+
+00:31.670 --> 00:35.510
+Well a try catch block simply works like this.
+
+00:35.750 --> 00:44.110
+If I had a function let's call it fail and this function inside of here does something simple.
+
+00:44.150 --> 00:49.200
+It uses a try block of code.
+
+00:49.580 --> 00:57.440
+And in here try simply means hey just run this piece of code and this try block can also be accompanied
+
+00:57.740 --> 01:02.740
+by a catch block.
+
+01:03.160 --> 01:10.960
+So try anything that's inside of this block if inside of this block there's any errors then handle them
+
+01:11.080 --> 01:14.350
+in here in here.
+
+01:14.380 --> 01:23.890
+Let's just say a console DOT Blog and I'll say this works and do a catch here that says well let's just
+
+01:23.890 --> 01:39.250
+say console dot log we have made an whoopsie if I run this fail function well I'll get an error because
+
+01:39.910 --> 01:48.880
+the last piece of the puzzle is that this catch block also accepts an error parameter and this air parameter
+
+01:48.970 --> 01:56.870
+is whatever gets thrown from here as the air object.
+
+01:56.960 --> 02:01.760
+Well I get this works because nothing's happened in this code.
+
+02:01.760 --> 02:07.820
+This code just simply works in the cache block was never called this function although it's called Fail
+
+02:08.150 --> 02:09.900
+has never failed.
+
+02:09.920 --> 02:14.160
+But what if we have something that fails in here.
+
+02:14.320 --> 02:19.340
+What if I miss Belle console dialog and click Run.
+
+02:19.340 --> 02:19.960
+There you go.
+
+02:19.970 --> 02:23.380
+Now it says we have made an upset.
+
+02:24.230 --> 02:34.130
+If I add the error object here and I click Run look at that I get a reference error console is not defined
+
+02:34.720 --> 02:39.530
+and I get a stack trace here which is are where are we on the call stack.
+
+02:39.530 --> 02:43.550
+Because I'm using this rebel tool inside of the browser.
+
+02:43.640 --> 02:52.470
+The call stack is pretty pretty big if instead we did this on our console you'll see that the stack
+
+02:52.470 --> 02:53.890
+trace is quite small.
+
+02:53.910 --> 02:57.520
+We just failed at the fail function OK.
+
+02:57.600 --> 03:05.550
+Well what if we do something like this we'll fix console that log and instead actually throw a new error
+
+03:06.270 --> 03:18.080
+and this error will be whoopsie with exclamation marks if I run this I see that we have made a new C
+
+03:20.030 --> 03:25.870
+this piece of code works because Trai is going to go line by line.
+
+03:26.120 --> 03:30.570
+We see that this is going to get logged and then we're going to encounter an error.
+
+03:30.650 --> 03:34.230
+And as soon as we encounter an error it's going to go up.
+
+03:34.280 --> 03:34.610
+All right.
+
+03:34.610 --> 03:35.800
+Well we have to handle it.
+
+03:35.810 --> 03:37.750
+Let's see is there a catch here.
+
+03:37.750 --> 03:38.000
+Yep.
+
+03:38.060 --> 03:38.930
+There's a catch.
+
+03:38.960 --> 03:40.080
+Let's go here.
+
+03:40.130 --> 03:49.760
+I'll pass this new air instance into this air object and now I have air right here so that if I do air
+
+03:49.970 --> 03:55.640
+dot let's say name I have the air.
+
+03:55.980 --> 04:07.180
+If I do stack I have this crazy stack and if I do message I see that I have whoopsie and we're able
+
+04:07.180 --> 04:14.170
+to create a hurdle and catch an error like this so we can wrap our entire piece of code into a try.
+
+04:14.170 --> 04:19.000
+BLOCK And then catch the error if we want to handle it somehow.
+
+04:19.000 --> 04:24.580
+Now the interesting thing here is that if I move this piece of code down here what do you think will
+
+04:24.580 --> 04:25.570
+happen.
+
+04:25.570 --> 04:28.910
+Well this is never going to get called right.
+
+04:28.930 --> 04:33.670
+As soon as we encounter an error our JavaScript engine says All right I'm stopping whatever I'm doing
+
+04:33.850 --> 04:35.230
+I'm looking for a catch block.
+
+04:35.260 --> 04:36.490
+Is there anything to catch me.
+
+04:36.490 --> 04:37.640
+Oh yeah here it is.
+
+04:37.690 --> 04:47.690
+If I remove this and I run this while I get an error because try won't let you do anything without the
+
+04:47.930 --> 04:51.900
+catch block or finally what's this one.
+
+04:51.920 --> 04:53.130
+Let's talk about it.
+
+04:53.270 --> 04:56.400
+If I bring this back everything is still working.
+
+04:56.420 --> 05:06.990
+We're getting a new C. We can also have a finally here and the finally block says hey no matter what
+
+05:06.990 --> 05:12.690
+happens in the tri cache block finally at the end of it all do something for me so I can say console
+
+05:12.750 --> 05:16.800
+dialogue still good.
+
+05:16.800 --> 05:24.150
+And if I run this look at that this piece of code still runs finally simply says hey I don't care what
+
+05:24.150 --> 05:28.770
+happens in the try I don't care what happened in the catch after you've done with all that business.
+
+05:28.770 --> 05:34.190
+Finally do something here so that we can always do something like return
+
+05:37.360 --> 05:44.710
+returning fail so that if I run this look at that our program returns something in the end even if we
+
+05:44.710 --> 05:49.560
+have an error internally we're handling the error on our own by just console logging it.
+
+05:49.570 --> 05:57.540
+In this case now the interesting thing here with the try catch block is that if we had any code outside
+
+05:57.540 --> 06:05.420
+of here let's say console that log exclamation marks over here and a smiley face.
+
+06:05.430 --> 06:13.860
+Well if I run this this part is never going to get run because we're running the try block which throws
+
+06:14.100 --> 06:16.190
+which goes into the cache block.
+
+06:16.410 --> 06:20.730
+And then the finally gets run which returns our function.
+
+06:20.750 --> 06:26.670
+Now this try catch block you may not have seen it that often in real code.
+
+06:27.200 --> 06:30.700
+It's oftentimes the simplest way to handle errors.
+
+06:31.010 --> 06:37.990
+This type of try catch block can be used to catch any type of synchronous errors.
+
+06:38.000 --> 06:42.830
+Now this try catch block can be used in different ways.
+
+06:42.830 --> 06:45.470
+I can even nest them if I wanted to.
+
+06:45.560 --> 06:55.400
+For example if I just remove everything here and just do try and in here do another try block and we'll
+
+06:55.400 --> 06:58.370
+call something here which is a function that doesn't exist.
+
+06:58.370 --> 06:59.690
+So we'll throw an error.
+
+06:59.900 --> 07:05.720
+We'll do here a catch error and end here.
+
+07:06.540 --> 07:18.260
+Well let's throw a new error in here which is the actual error and then outside of this we have also
+
+07:18.260 --> 07:25.950
+the catch block that finally handles console dialog.
+
+07:25.990 --> 07:27.330
+Got it.
+
+07:27.880 --> 07:30.410
+Which will be the actual error.
+
+07:30.460 --> 07:31.800
+So what's happening here.
+
+07:31.840 --> 07:39.040
+We have a tri block that tries this code that inside of it has another try block that tries this code
+
+07:39.460 --> 07:45.670
+which is going to fail on line 3 which is going to catch and throw.
+
+07:45.670 --> 07:52.050
+Once again the another error that has the message of the previous error.
+
+07:52.240 --> 07:53.950
+And that's going to throw.
+
+07:54.100 --> 08:01.390
+Which means that this piece of code will throw inside of this original tribe block which will catch
+
+08:01.630 --> 08:02.630
+here.
+
+08:02.740 --> 08:07.940
+I know it looks a little bit confusing but we can nest these things to handle catching.
+
+08:07.950 --> 08:16.780
+At each step of our execution context so that if I run this call and make sure that I get error over
+
+08:16.780 --> 08:20.080
+here and click Run look at that I have got it.
+
+08:20.200 --> 08:21.970
+I have a reference error.
+
+08:22.000 --> 08:28.540
+Something is not defined so I'm catching this before it actually errors out like it did before where
+
+08:28.540 --> 08:35.470
+I don't catch it properly and I get an actual red piece of text.
+
+08:35.550 --> 08:45.180
+Now this try catch block works with synchronous errors or synchronous code for example if in here I
+
+08:45.180 --> 08:54.270
+had a set timeout which is asynchronous and had a function that doesn't do anything let's say a function
+
+08:54.270 --> 09:01.320
+in here that uses a fake variable that doesn't exist.
+
+09:01.320 --> 09:12.630
+We haven't declared it anywhere and we'll run this in one second if I click run here.
+
+09:12.670 --> 09:15.470
+Do you see that everything is working.
+
+09:15.480 --> 09:17.390
+I get no errors.
+
+09:17.550 --> 09:21.910
+This catch block doesn't catch it because this code is asynchronous.
+
+09:22.050 --> 09:29.230
+And as we know this exits our current call stack goes all the way to the web API.
+
+09:29.310 --> 09:36.060
+The callback queue the van loop and gets popped onto this or pushed onto the stack after this whole
+
+09:36.060 --> 09:42.570
+piece of synchronous code is already done executing so that's a problem.
+
+09:42.560 --> 09:43.500
+Right.
+
+09:43.770 --> 09:49.380
+In Javascript we don't only write synchronous code we write asynchronous code as well.
+
+09:49.380 --> 09:51.290
+So how do we handle that.
+
+09:51.330 --> 09:52.680
+Let's find out in the next video.

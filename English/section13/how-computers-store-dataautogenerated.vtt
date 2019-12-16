@@ -1,0 +1,379 @@
+WEBVTT
+
+00:01.480 --> 00:08.230
+In order to truly understand the value of data structures we have to go deep down into the way computer
+
+00:08.230 --> 00:08.910
+works.
+
+00:08.980 --> 00:16.630
+At the fundamental level in order for a computer to run code it needs to keep track of things like variables
+
+00:17.110 --> 00:27.260
+like numbers strings array these variables are stored in what we call random access memory or RAM for
+
+00:27.260 --> 00:28.390
+short.
+
+00:28.560 --> 00:30.370
+That's how programs run.
+
+00:30.660 --> 00:39.330
+We remember this from space complexity video right on top that we also have storage where we store things
+
+00:39.330 --> 00:50.500
+like our video files music files documents and the storage can be a disk drive a flash drive or a solid
+
+00:50.500 --> 00:56.190
+state drive data own storage is permanent or what we call persistent.
+
+00:56.190 --> 01:02.430
+So when you turn off your laptop or computer it's still going to be there when you turn it back on in
+
+01:02.430 --> 01:03.150
+RAM.
+
+01:03.360 --> 01:10.610
+You lose the memory when the computer turns off so why wouldn't we just always use storage.
+
+01:10.610 --> 01:12.790
+So we don't lose any data.
+
+01:12.830 --> 01:21.470
+Well the problem is that persistent storage is slow because you see a computer is run by its.
+
+01:21.590 --> 01:26.860
+You can think of the CPA as the little worker that does all the calculations that we need.
+
+01:27.000 --> 01:29.530
+It does the actual work inside our computer.
+
+01:29.880 --> 01:39.930
+And this CPSU needs access to the RAM and the storage but it can access the RAM and the information
+
+01:39.930 --> 01:48.200
+and the ram a lot faster but let me give you an example as if we're using Google when we run Google
+
+01:48.200 --> 01:54.390
+Chrome for example a browser that Google Chrome browser has a piece of code.
+
+01:54.400 --> 01:58.790
+Now here I've simplified it and we just have a variable A equals one.
+
+01:58.840 --> 02:03.740
+We're just assigning this variable one but we can imagine how.
+
+02:03.970 --> 02:08.280
+We have hundreds thousands of lines of code of Google Chrome.
+
+02:08.350 --> 02:16.010
+Now in order for our computer to run Google Chrome we run the CPSU for it to do so.
+
+02:16.130 --> 02:24.320
+Now when a variable is declared in let's say a script to run Google Chrome it's going to hold that in
+
+02:24.320 --> 02:33.510
+memory in our random access memory but once we turn off or close Google Chrome we want to be able to
+
+02:34.050 --> 02:36.500
+re open it right.
+
+02:36.510 --> 02:40.380
+Well that's what we do when we save an application on our computer.
+
+02:40.470 --> 02:51.230
+We save it to storage so that next time we open up google chrome the CPSU is going to grab the program
+
+02:51.590 --> 02:55.030
+from the storage so that it can use it again.
+
+02:55.120 --> 03:02.240
+And for Google Chrome to run fast and run smaller scripts it's going to keep that information and random
+
+03:02.360 --> 03:03.800
+access memory.
+
+03:03.800 --> 03:06.500
+We can see this on our computers as well.
+
+03:08.010 --> 03:15.690
+If I go to about this Mac my computer we can see here that we have the processor which is my CCU.
+
+03:15.900 --> 03:18.510
+We have my memory which is my ram.
+
+03:18.900 --> 03:29.770
+And if I go to storage This is my flash storage my persistent storage on my computer so you can think
+
+03:29.770 --> 03:38.690
+of RAM in the computer as a massive storage area kind of like a data structure rate well this massive
+
+03:38.690 --> 03:50.280
+storage area has shelves that are no we call these address or addresses and it's a really really big
+
+03:50.280 --> 04:01.080
+shelf that holds a lot of information and it allows us to run programs on our computer now each of these
+
+04:01.080 --> 04:07.060
+shelves holds what we call eight bits or numbers.
+
+04:07.290 --> 04:12.560
+You see here one two three four five six seven eight.
+
+04:12.630 --> 04:21.460
+Each one of these numbers is a bit and a bit is a tiny electrical switch that can be turned on or off
+
+04:21.910 --> 04:33.370
+but instead of calling it on or off we call it 1 or 0 and 8 bits is called a byte each shelf has one
+
+04:33.670 --> 04:43.650
+byte of storage and the CPSU is connected to something called a memory controller and in memory controller
+
+04:43.950 --> 04:53.280
+does the actual reading of this memory as well as writing this memory because sometimes this shelf might
+
+04:53.280 --> 04:55.780
+be blank and doesn't have anything.
+
+04:55.850 --> 05:05.660
+Now this direct connection to the CPSU is important because the CPSU asks the RAM Hey what's in shelf
+
+05:05.690 --> 05:14.510
+number 0 and the memory controller actually has connections individually to all of these shelves.
+
+05:14.630 --> 05:21.710
+Again that's really important because it means that we can access the zero shelf and immediately access
+
+05:21.710 --> 05:30.470
+the seven shelf or ten thousand seven hundred and eighty one shelf without having to climb down or step
+
+05:30.470 --> 05:32.000
+down.
+
+05:32.130 --> 05:35.190
+That's what the name random access memory means.
+
+05:35.190 --> 05:40.600
+We can access memory really fast because we have these connections any shelf we want.
+
+05:40.620 --> 05:47.310
+We just need to know which shelf we're looking for we can access the bits at any random address in memory
+
+05:47.400 --> 05:54.090
+right away even though this memory controller can jump between far apart memory addresses really fast
+
+05:54.390 --> 05:57.730
+programs stand to access memory that is nearby.
+
+05:57.840 --> 06:06.390
+The closer the information is to the CPSU and the less the has to travel the faster a program can run
+
+06:07.570 --> 06:14.700
+so computers are actually tuned to get extra speed boosts when reading memory dresses that are close
+
+06:14.700 --> 06:22.130
+to each other for a computer to access 0 and 1 is a lot faster than a computer.
+
+06:22.140 --> 06:30.940
+For it to access zero and a thousand because these are a lot closer together and to further optimize
+
+06:30.940 --> 06:40.750
+this our computers also have what we call a CPE you cash where the CPSU has a tiny tiny memory where
+
+06:40.750 --> 06:50.000
+it stores a copy of stuff that is really really recent and this is called a cash common one that you
+
+06:50.000 --> 06:53.230
+might hear is something called a la you cash.
+
+06:53.290 --> 07:00.070
+So again if we use Google Chrome as an example we turn on Google Chrome with let's say we have the application
+
+07:00.110 --> 07:08.590
+downloaded on our storage the CPE you loads it up and because we've visited hacker News.com it's going
+
+07:08.590 --> 07:16.630
+to load up the information for that hacker news and put it into memory or maybe even cash if it can
+
+07:16.630 --> 07:22.220
+hold it so why is this important for data structures
+
+07:25.230 --> 07:26.660
+data structures.
+
+07:26.720 --> 07:30.570
+I remember ways for us to store information.
+
+07:30.810 --> 07:38.810
+For example if we want to store a variable a equals one well in our modern computers usually we represent
+
+07:38.870 --> 07:39.950
+integers.
+
+07:39.950 --> 07:43.490
+That is the number one in thirty two bits.
+
+07:43.670 --> 07:47.320
+That is this block size of ram.
+
+07:47.450 --> 07:58.120
+And by the way this is now can be 64 bits with more and more recent upgrades but this way we can store
+
+07:58.210 --> 08:03.070
+the number one within this blocks of 32 bits.
+
+08:03.080 --> 08:04.750
+Why 32 bits.
+
+08:04.750 --> 08:13.720
+Because eight bits which is one byte times one two three four so eight times four is thirty two bits
+
+08:13.930 --> 08:23.810
+we can store 32 bits of information and this bit of one you can see here 0 0 0 0 0 0 0 0 and 1 is stored
+
+08:23.810 --> 08:25.130
+now in memory.
+
+08:25.130 --> 08:26.510
+0 1 2 3.
+
+08:26.570 --> 08:27.260
+Or the address.
+
+08:27.260 --> 08:28.100
+0 1 2 3.
+
+08:28.580 --> 08:37.700
+If we have another variable B equals to 7 we would store it in the next block over here in our RAM and
+
+08:37.710 --> 08:38.970
+doing this.
+
+08:39.560 --> 08:48.290
+You can now think about how systems that are 8 bit can hold two hundred and fifty five bits of information
+
+08:50.330 --> 08:51.900
+things that are sixteen bit.
+
+08:51.920 --> 08:54.650
+Well they can hold a lot more information.
+
+08:54.950 --> 08:58.070
+And now we have systems that are 32 bits.
+
+08:58.070 --> 09:05.690
+We can see here that we can hold a ton of information and then if we had 64 bits that is instead of
+
+09:05.690 --> 09:15.000
+having four little shelves over here we have eight shells shelf sometimes eight bits.
+
+09:15.040 --> 09:19.160
+Well that's a lot of information that we can store.
+
+09:19.390 --> 09:23.770
+And the bigger this is the more diverse that information is.
+
+09:23.800 --> 09:25.670
+If we had an eight bit system.
+
+09:25.870 --> 09:30.040
+Well the number two hundred and fifty six we can't really store that.
+
+09:30.040 --> 09:31.830
+That's really hard to do.
+
+09:31.960 --> 09:38.290
+And I can demonstrate this to you with JavaScript you see there's something called integer overflow.
+
+09:38.390 --> 09:41.420
+Now javascript technically doesn't have integers.
+
+09:41.420 --> 09:44.680
+It only has what we call a 64 bit floats.
+
+09:44.870 --> 09:53.800
+But the idea is that a computer can only store a certain number of information so using this syntax
+
+09:53.920 --> 10:00.430
+in JavaScript we have math dot Pao which is a function that returns the base to the exponent power.
+
+10:00.430 --> 10:05.930
+That is the first parameter is the base to the power of the second parameter.
+
+10:06.130 --> 10:09.670
+So we can create really large numbers like math dot dogpile.
+
+10:09.700 --> 10:11.830
+So 5 to the power of 100.
+
+10:11.830 --> 10:14.430
+If I run this we see the number over here.
+
+10:14.470 --> 10:19.660
+If I increase this to let's say 6 again another large number.
+
+10:19.660 --> 10:28.150
+Now what if I keep going and change this to six to the power of a thousand we get infinity.
+
+10:28.600 --> 10:30.340
+What what is that.
+
+10:30.340 --> 10:38.860
+Well as the number becomes too large to store in our RAM then we need to represent this number that
+
+10:38.980 --> 10:44.920
+we cannot store into something that is tangible in JavaScript space it is infinity.
+
+10:44.920 --> 10:51.820
+We can only store this much information and no matter how big I make this any number above a certain
+
+10:51.820 --> 10:55.970
+threshold is going to just say infinity.
+
+10:56.000 --> 10:58.600
+How cool is that.
+
+10:58.620 --> 11:04.790
+Now let's go back to the slides I showed you all of this because other data types other than numbers
+
+11:04.880 --> 11:06.080
+work the same way.
+
+11:06.350 --> 11:14.770
+Each data type has a number of bits associated with it and that needs to get stored in the system and
+
+11:14.770 --> 11:22.740
+the system allocates that storage and then the CPSU reads from that storage.
+
+11:22.760 --> 11:28.100
+Now I'll leave a link for you after this video so that you can get more information if you want.
+
+11:28.100 --> 11:35.480
+We don't want to get too deep in this but a data structure is this a data structure is an arrangement
+
+11:35.480 --> 11:42.290
+of data you can define the way you interact with this data and how it is arranged in RAM.
+
+11:42.290 --> 11:47.070
+So some data structures in RAM are organized right next to each other.
+
+11:47.090 --> 11:55.480
+Some are organized apart from each other and they have different pros and cons on access and right Our
+
+11:55.480 --> 12:02.980
+goal is to minimize the operation that we need to do for the CPSU to get the information for the you
+
+12:02.980 --> 12:08.570
+to write information and that is why data structures are so powerful.
+
+12:08.720 --> 12:15.620
+We're thinking about the low level and I don't know about you but this to me when I learned about this
+
+12:15.680 --> 12:22.820
+was really really exciting because we have a way now to think how data structures actually affect the
+
+12:22.820 --> 12:30.250
+process of our computers and how we can use what we know about computers now to write great code.
+
+12:30.680 --> 12:31.640
+I'll see in the next video.

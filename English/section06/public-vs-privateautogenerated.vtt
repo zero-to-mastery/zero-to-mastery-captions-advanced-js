@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00.690 --> 00:10.260
+In many object oriented programming languages that have classes the idea of private and public fields
+
+00:10.590 --> 00:12.360
+are really important.
+
+00:12.630 --> 00:15.940
+Now in JavaScript we don't really have that.
+
+00:16.170 --> 00:24.300
+And before what a lot of people did was anything that was private that shouldn't be accessed from let's
+
+00:24.300 --> 00:32.640
+say a class or even an object we would add an underscore to let other programmers know that hey this
+
+00:32.640 --> 00:35.430
+is a private method.
+
+00:35.430 --> 00:40.800
+You shouldn't call it because well it's super important that you don't mess with it or you change it
+
+00:41.340 --> 00:45.040
+but unfortunately underscore doesn't really do anything.
+
+00:45.090 --> 00:55.230
+If I do attack here and let me remove this and I run it and we can't call attack anymore because we
+
+00:55.230 --> 00:57.730
+renamed it let me just remove that.
+
+00:58.000 --> 00:58.410
+All right.
+
+00:58.410 --> 00:59.170
+Attack.
+
+00:59.250 --> 01:09.540
+I can still use and I can maybe by mistake reassign it to just false so that now if I call Shrek dot
+
+01:10.110 --> 01:14.210
+attack and I spell Shrek correctly.
+
+01:15.470 --> 01:16.120
+I get false.
+
+01:16.190 --> 01:22.510
+I just went ahead and I've overridden everything that's not good is it.
+
+01:22.520 --> 01:32.300
+Well other languages like Java actually have keywords like private that make things private for us and
+
+01:32.390 --> 01:37.670
+they are methods that would only be able to be used inside of the class.
+
+01:37.670 --> 01:44.360
+Now you can actually solve this issue with something called weak maps in javascript but it's a little
+
+01:44.360 --> 01:53.090
+hacky and well we don't want to get into it because there's a proposal coming up and based on when you
+
+01:53.090 --> 01:59.120
+watch the video this might already be implemented in JavaScript or it might be a little bit different
+
+02:00.330 --> 02:03.240
+the Atma script proposal is in stationary.
+
+02:03.240 --> 02:10.440
+So that is it's getting pretty close to being part of the language and it's for class field declarations
+
+02:10.680 --> 02:14.510
+and there's a few changes that can happen in here.
+
+02:14.520 --> 02:23.580
+For example instead of having to call constructor on state that perhaps doesn't require parameters we
+
+02:23.580 --> 02:34.650
+can do something like Age equals fifty four and this will be part of the state that we can use in other
+
+02:34.650 --> 02:35.100
+areas.
+
+02:35.250 --> 02:38.700
+So in my attack I could say this dot H.
+
+02:39.060 --> 02:46.730
+So we don't have to go through the constructor when we don't have parameters but the other thing is
+
+02:46.970 --> 02:49.250
+we can make things private.
+
+02:49.520 --> 03:00.480
+If we add the pound sign like this it says this is a private variable and if I try and access H outside
+
+03:00.480 --> 03:07.890
+of this class maybe as part of the instances here with Shrek or Dobie Well it's not going to let me
+
+03:09.460 --> 03:18.550
+now for now we're most likely the closest to doing something like this where we can have private state
+
+03:18.790 --> 03:27.490
+that is private data that can only be accessed inside of the class like this but private methods is
+
+03:27.490 --> 03:33.670
+something that we are still working towards again depending on when you watch the video.
+
+03:33.670 --> 03:39.270
+This feature might be implemented maybe we won't use the pound sign anymore and it'll be something different.
+
+03:39.430 --> 03:44.080
+But for now you can see the progress is well not the fastest.
+
+03:44.470 --> 03:52.750
+If we scroll all the way down we see that the proposal of private state started July 2016 and it's still
+
+03:52.750 --> 03:59.710
+going through everything we have a stage 3 but there's now class fields and private methods that have
+
+03:59.710 --> 04:01.770
+been updated to State Street.
+
+04:01.780 --> 04:09.760
+So keep an eye out on this feature but be mindful that in JavaScript the idea of private and public
+
+04:09.940 --> 04:19.020
+is still in the works the properties and methods are available and cannot be private at least for now.
+
+04:19.210 --> 04:20.910
+I'll see in the next video by.

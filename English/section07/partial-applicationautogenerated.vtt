@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.950 --> 00:02.160
+Welcome back.
+
+00:02.180 --> 00:06.670
+Let's talk about something similar yet slightly different to curry.
+
+00:06.770 --> 00:20.070
+It's called partial application and partial application is a way for us to well partially apply a function.
+
+00:20.290 --> 00:28.420
+It's a process of producing a function with a smaller number of parameters.
+
+00:28.670 --> 00:29.210
+What does that mean.
+
+00:29.960 --> 00:38.120
+Well it means taking a function applying some of its arguments into the function so it remembers those
+
+00:38.150 --> 00:43.680
+parameters and then it uses closures to later on be called.
+
+00:43.760 --> 00:46.410
+With all the rest of the arguments.
+
+00:46.460 --> 00:46.690
+OK.
+
+00:46.700 --> 00:54.190
+So let's see how that looks and code and then compare it to Curry with partial application.
+
+00:54.190 --> 01:03.630
+We can say that the code below is well it uses partial application BUT WHAT IF WE HAD A B and C that
+
+01:03.630 --> 01:07.620
+we're using that we want to multiply.
+
+01:07.620 --> 01:17.100
+So we have three numbers now three arguments well partial application says hey I want to apply let's
+
+01:17.100 --> 01:21.270
+say a portion of the parameters for example a.
+
+01:21.930 --> 01:29.760
+And then the next time I call that function I want to apply the rest of the arguments.
+
+01:29.820 --> 01:36.810
+So let me show you the code version first the curried version will simply have a nother error function
+
+01:36.810 --> 01:48.150
+in here that will be C and then we do a b c and then finally we can remove all this and simply say curried
+
+01:48.240 --> 01:56.840
+multiply three times four times ten which is well and instead of brackets.
+
+01:56.860 --> 01:58.030
+Remember this is curried.
+
+01:58.030 --> 02:02.860
+So I call it three times three times four times ten.
+
+02:03.010 --> 02:10.360
+If I click Run I get one hundred twenty three times four times ten is one hundred and twenty partial
+
+02:10.360 --> 02:17.830
+application says no no no what I want you to do is I want you to call the function once and then apply
+
+02:17.860 --> 02:20.970
+the rest of the arguments to it.
+
+02:21.720 --> 02:27.060
+So that means on the second call I expect all the arguments.
+
+02:27.120 --> 02:29.330
+So how do we do that.
+
+02:29.350 --> 02:44.870
+Well we can do partial multiply by five and we can just simply say we want to use the multiply function
+
+02:45.680 --> 02:52.970
+and we want to bind which remember gives us a another function but we don't really care about this.
+
+02:52.980 --> 02:55.730
+There's no such thing as this here.
+
+02:55.730 --> 03:02.270
+So I'm just going to give it no because I don't care but I want to use bind as a way to pass a parameter
+
+03:03.890 --> 03:11.850
+or an argument into partial multiplied by five in which case that would be five so that if I do partial
+
+03:11.970 --> 03:21.780
+multiply by five what we have that we have multiply function with the five applied right over here so
+
+03:21.780 --> 03:35.750
+that if I do partial multiply by five and I remove and I call just four and let's say 10 and I run this
+
+03:36.110 --> 03:45.800
+look at that I get two hundred because I've partially applied a parameter the a parameter and then I
+
+03:45.800 --> 03:52.830
+get to call the rest of the parameters B and C like this so that's the main difference between currying
+
+03:52.860 --> 03:56.880
+and partial application partial application is on the second call.
+
+03:57.000 --> 04:03.870
+I expect all the arguments currying says I expect one argument at a time.
+
+04:03.910 --> 04:07.240
+Now I know what you're thinking why are you showing me this.
+
+04:07.240 --> 04:10.020
+I see not much application of this.
+
+04:10.090 --> 04:10.600
+Don't worry.
+
+04:10.600 --> 04:11.460
+Hang in there.
+
+04:11.530 --> 04:18.610
+We're almost done with all these terms and we're gonna start to use them in our exercise to see how
+
+04:18.730 --> 04:19.940
+they might benefit us.
+
+04:19.960 --> 04:20.860
+So hang in there.
+
+04:20.890 --> 04:22.360
+Promise it's gonna get better.
+
+04:22.420 --> 04:23.950
+I'll see in the next Bye.

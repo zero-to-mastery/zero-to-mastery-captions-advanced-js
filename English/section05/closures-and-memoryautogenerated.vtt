@@ -1,0 +1,262 @@
+WEBVTT
+
+00:00.740 --> 00:01.780
+Welcome back.
+
+00:01.790 --> 00:05.570
+I feel like you're still not really convinced.
+
+00:05.570 --> 00:06.740
+I bet you're thinking Andre.
+
+00:06.740 --> 00:09.080
+I feel like you're overhyping closures.
+
+00:09.080 --> 00:10.910
+They're not that exciting.
+
+00:10.910 --> 00:13.580
+You said is gonna give me superpowers.
+
+00:13.580 --> 00:17.780
+Well maybe this video will convince you otherwise.
+
+00:17.870 --> 00:24.320
+You see closures have two very important main benefits.
+
+00:24.320 --> 00:31.010
+I mean there are obviously a lot of benefits but there's two that I really want to focus on and that
+
+00:31.010 --> 00:37.190
+is they can be very memory efficient.
+
+00:37.190 --> 00:43.010
+And it also allows to do something called and cap solution.
+
+00:43.100 --> 00:46.570
+I hope I spelled that right now.
+
+00:46.720 --> 00:53.350
+These two things are probably the coolest part about closures and I hope that this is gonna blow your
+
+00:53.350 --> 00:53.630
+mind.
+
+00:53.950 --> 01:01.840
+Let's start off with the first one memory efficient let's say that we have a little function.
+
+01:02.080 --> 01:06.930
+I know all my functions I say are fun but I think this one's extra fun.
+
+01:07.620 --> 01:16.700
+Let's say I have a function here and we'll call it a heavy duty function in this heavy duty function.
+
+01:16.800 --> 01:24.920
+Well it's heavy duty because we're going to create a big array here in a nice easy simple way to create
+
+01:24.920 --> 01:34.490
+a massive array is to do something like this new array and I'll fill it up with seven thousand entries
+
+01:35.330 --> 01:45.430
+and use the fill method that comes with arrays and fill it in with a smiley face and in here we'll just
+
+01:45.430 --> 01:50.760
+return big array so just to test it out.
+
+01:50.760 --> 01:53.370
+Let's see what happens when I run heavy duty.
+
+01:53.370 --> 01:54.790
+I click Run.
+
+01:54.840 --> 01:56.390
+All right lots of smiling faces.
+
+01:56.390 --> 01:57.480
+Everybody's happy.
+
+01:57.480 --> 01:59.490
+That's great okay.
+
+01:59.520 --> 02:07.520
+But let's say that obviously this is a silly example but let's assume that this is a very heavy duty
+
+02:07.520 --> 02:17.830
+operation that we need to do and let's say that maybe this operation is about accessing a massive array.
+
+02:17.930 --> 02:23.870
+For example if I do item here I can access Vega Ray by the index number.
+
+02:23.930 --> 02:32.360
+So let's say actually instead of item list to index here and if I do index I can access different parts
+
+02:32.360 --> 02:37.800
+of the array like six hundred or six hundred eighty eight.
+
+02:37.850 --> 02:43.210
+And if I run this index is not defined because I can't spell.
+
+02:43.310 --> 02:44.480
+Let's try that again.
+
+02:44.480 --> 02:45.680
+Click run.
+
+02:45.680 --> 02:46.560
+There you go.
+
+02:46.580 --> 02:52.060
+I'm accessing the index of new right.
+
+02:52.110 --> 02:52.770
+All right.
+
+02:52.920 --> 02:56.900
+So far so good but let's say this index.
+
+02:56.900 --> 03:04.560
+Six eighty eight is some place in maybe a database or just an array that gets access to a lot.
+
+03:04.590 --> 03:06.570
+What if we call this function.
+
+03:06.660 --> 03:10.630
+Many times many many times every time I run it.
+
+03:10.680 --> 03:21.020
+Well right now we can't see so let's just add a console door log created which will be a string
+
+03:24.940 --> 03:27.240
+that we run four times.
+
+03:27.430 --> 03:34.930
+And in this case we see here that we're creating a big array adding data to our memory which we have
+
+03:35.200 --> 03:39.680
+limited memory so we're creating it every time.
+
+03:39.700 --> 03:46.780
+So every time we run this function we create this memory and then we return it and because nothing's
+
+03:46.780 --> 03:51.790
+referencing it it gets destroyed and then we create it and then gets destroyed to be created and then
+
+03:51.790 --> 03:54.750
+gets destroyed be created and that gets destroyed.
+
+03:54.760 --> 03:55.480
+All right.
+
+03:55.480 --> 03:58.030
+That doesn't sound very efficient.
+
+03:58.120 --> 04:06.010
+Wouldn't it be great if there was a way for us to create this array and because we know it's going to
+
+04:06.010 --> 04:13.990
+be used a lot to only create it once and just have it in memory there so we can just constantly access
+
+04:13.990 --> 04:16.000
+it instead of doing all that work.
+
+04:16.420 --> 04:23.520
+How can we do that with closures if you want pause here and try and solve this yourself.
+
+04:23.690 --> 04:31.710
+Otherwise I'm going to get going instead of using the original heavy duty function let's create a another
+
+04:31.710 --> 04:42.110
+function down here and this function will be called heavy duty to and heavy duty to well will be a function
+
+04:42.680 --> 04:47.420
+that for now we can just copy from up above right here.
+
+04:47.420 --> 04:52.100
+Let's do that and I'm going to remove some of these.
+
+04:53.060 --> 04:54.770
+So heavy duty too.
+
+04:54.770 --> 04:58.320
+We're gonna make some adjustments to it so it uses closure.
+
+04:58.490 --> 05:07.390
+The first thing that we should think about is well a closure returns a function so we want to add this
+
+05:07.900 --> 05:16.050
+to that little closure box and then return a function that holds a reference to bigger Ray so let's
+
+05:16.050 --> 05:16.590
+do that.
+
+05:16.590 --> 05:24.810
+I want to change this to created again and in here I'm going to create a function that receives the
+
+05:24.900 --> 05:36.580
+index and inside of here we're going to return big array index nothing that much different from above
+
+05:37.980 --> 05:39.410
+except for one thing.
+
+05:39.480 --> 05:39.990
+Right.
+
+05:40.080 --> 05:48.720
+We've created closure that is we have a reference to Big Ray.
+
+05:48.900 --> 05:56.590
+Let's see what happens if we run this I'm going to run the heavy duty original function three times
+
+05:57.800 --> 06:08.930
+and then I'm also going to create a variable called get heavy duty and this variable will actually use
+
+06:08.930 --> 06:17.210
+the heavy duty to function and the heavy duty to function actually doesn't even need the parameter index
+
+06:17.390 --> 06:24.980
+anymore because index is something we're gonna pass to the function that gets returned from it so here
+
+06:25.100 --> 06:36.980
+I'm just going to call this and then I'm going to just say get heavy duty and call six eighty eight
+
+06:37.850 --> 06:46.410
+maybe call something else as well less to seven hundred and then get heavy duty.
+
+06:46.510 --> 06:52.870
+Finally eight hundred let's just remove the semicolons you don't really need those.
+
+06:53.020 --> 06:57.850
+Now if I run this did you see that.
+
+06:58.140 --> 07:05.880
+Now obviously I'm able to use get heavy duty or heavy duty to up over here because well of hoisting
+
+07:05.880 --> 07:11.010
+right function declarations get hoisted to the top but we see a difference here right.
+
+07:11.220 --> 07:21.350
+The first heavy duty was well created three times vs. heavy duty to where we used closures.
+
+07:21.450 --> 07:27.840
+We were able to create the big array once and because we knew we were going to access it a lot.
+
+07:27.840 --> 07:34.470
+We just maintain that closure scope over it and we were able to call it over and over without doing
+
+07:34.500 --> 07:36.420
+all that creation destruction work.
+
+07:37.020 --> 07:39.350
+How cool is that.
+
+07:39.420 --> 07:40.250
+All right.
+
+07:40.290 --> 07:43.580
+Still not convinced that closures are cool.
+
+07:43.590 --> 07:49.820
+Well how about the second benefit of closures encapsulation for that.
+
+07:49.910 --> 07:50.780
+I'll see in the next video.

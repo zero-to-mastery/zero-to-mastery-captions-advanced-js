@@ -1,0 +1,352 @@
+WEBVTT
+
+00:01.070 --> 00:03.770
+What are modules.
+
+00:03.770 --> 00:08.600
+Well first let's ask ourselves what our programs in general.
+
+00:08.600 --> 00:16.910
+There's simply a way for us to modify data modify variables because so much of our code is just about
+
+00:17.150 --> 00:25.930
+modifying data and how we organize these variables within our code the way we structure this data should
+
+00:25.930 --> 00:31.990
+be the most important part of our program because it's going to allow us to have more maintainable code
+
+00:33.050 --> 00:35.210
+now as humans in our head.
+
+00:35.210 --> 00:40.170
+If we just had a few variables to think about that's easy right.
+
+00:40.190 --> 00:43.960
+We don't really need multiple files in JavaScript we just need one file.
+
+00:44.180 --> 00:50.840
+And because of java scripts functional scope we don't even have to think about all the functions in
+
+00:50.840 --> 00:59.330
+our program because of how scope works in JavaScript and functions can't have access to variables that
+
+00:59.330 --> 01:01.550
+are defined in other functions.
+
+01:01.550 --> 01:07.680
+Well we can just in our head keep the variables that we're currently using.
+
+01:07.710 --> 01:10.170
+For example if I had a sign in function
+
+01:14.620 --> 01:23.730
+well and I'm writing this function I don't have to worry necessarily about me creating a let's say text
+
+01:23.730 --> 01:28.660
+field variable and I can set it to whatever I want.
+
+01:28.790 --> 01:35.270
+This text field because of function scope and the way works in javascript isn't going to be modified
+
+01:35.450 --> 01:42.490
+by anybody outside of it so that if I have another function let's say function is human because when
+
+01:42.490 --> 01:48.310
+people sign in and we want to make sure that they are human I can once again start working on this function
+
+01:48.490 --> 01:53.950
+and not really care about what this function is doing with its piece of data because well I don't really
+
+01:53.950 --> 02:01.430
+have access to text field I have access to my own variables and this is great right.
+
+02:01.450 --> 02:03.630
+This is completely manageable.
+
+02:03.780 --> 02:07.170
+It means that we're working on one function at a time.
+
+02:08.470 --> 02:17.970
+And think about that one function only but it does have a downside right because without talking to
+
+02:17.970 --> 02:26.910
+other functions without talking to other pieces of data outside of ourself Well we can really write
+
+02:26.910 --> 02:28.690
+programs do we.
+
+02:28.910 --> 02:33.710
+We need a way to share data between these different functions.
+
+02:33.710 --> 02:35.880
+So how do we do this.
+
+02:35.960 --> 02:47.540
+Well if we had a user variable that was an object we can simply put it on the scope outside of let's
+
+02:47.540 --> 02:53.630
+say a function so that both functions have access to it so that now when I call these functions I can
+
+02:53.630 --> 03:03.490
+perhaps pass in the user parameter so that we have access to this shared piece of data and that's how
+
+03:03.490 --> 03:05.100
+we've done things.
+
+03:05.110 --> 03:12.880
+We just move the piece of data that we need that we need to share up the scope chain to a parent that
+
+03:12.880 --> 03:21.270
+can share this piece of data with its children for example on the global scope.
+
+03:21.300 --> 03:24.340
+Now what's the problem with this code.
+
+03:24.360 --> 03:30.960
+When we first start writing bigger and bigger programs and we have this piece of code that we keep extending
+
+03:30.960 --> 03:35.710
+keep extended keep adding data and variables to our global scope.
+
+03:35.730 --> 03:45.540
+Well we know that we have the idea of tight coupling which simply means that everything is connected
+
+03:46.110 --> 03:54.420
+really really tightly so that if I modify the user object for example who knows what effect might have
+
+03:54.420 --> 04:02.070
+in other parts of the file other functions maybe some function really needed the user to have the name
+
+04:02.190 --> 04:12.130
+property but in another function I changed the name for a property to perhaps nickname that's tight
+
+04:12.160 --> 04:12.940
+coupling.
+
+04:12.940 --> 04:17.160
+It means a lot of things having to depend on one another.
+
+04:17.170 --> 04:23.220
+This also creates hard to debug code because so many things can happen that can modify data.
+
+04:23.320 --> 04:31.060
+And as we've talked before polluting the global namespace causes possible memory leaks where we have
+
+04:31.120 --> 04:35.470
+limited amount of memory on our window object for example.
+
+04:35.470 --> 04:38.830
+And while we're just adding more and more data to it.
+
+04:39.430 --> 04:39.660
+OK.
+
+04:39.700 --> 04:41.240
+So let's solve this problem.
+
+04:41.260 --> 04:48.760
+We have a massive file with a thousand lines of javascript but we're polluting the global namespace
+
+04:48.760 --> 04:52.880
+there's too many global variables too many things depending on one another.
+
+04:52.900 --> 04:54.360
+They're tightly coupled.
+
+04:54.370 --> 04:55.210
+How can we fix it.
+
+04:55.750 --> 04:59.020
+And you might be asking yourself well that's no problem.
+
+04:59.020 --> 05:04.810
+I can just have a nice simple file and I'll include all my script files.
+
+05:04.870 --> 05:13.270
+I'll just divide up the code and perhaps add different script files script to script 3 and then I don't
+
+05:13.270 --> 05:21.170
+have to worry about anything right well not really because the way we've had it in the past is that
+
+05:22.160 --> 05:28.610
+simply adding script files to let's say an HMO file the browser doesn't really care that you've put
+
+05:28.610 --> 05:32.240
+code in separate files when it's evaluating the javascript.
+
+05:32.240 --> 05:38.840
+It just combines all these files together so you might as well just have put everything into one file
+
+05:38.870 --> 05:46.280
+because any variable that you declare in that script on the global scope of that script is going to
+
+05:46.280 --> 05:49.630
+be a global variable in the entire web page.
+
+05:49.760 --> 05:56.210
+And on top of that the dependencies between these different parts of your code are what we call implicit
+
+05:56.900 --> 06:02.210
+we're not defining it is just the kind of figure out on their own what's depending on what what's modifying
+
+06:02.210 --> 06:03.240
+the data.
+
+06:03.440 --> 06:08.840
+Any function can grab anything on the global scope so you don't know which functions depend on which
+
+06:08.840 --> 06:11.680
+scripts let's do a little example.
+
+06:11.810 --> 06:16.520
+I have a fun little function here called fight and fight.
+
+06:16.520 --> 06:23.760
+Well accepts two parameters and it makes them fight two characters.
+
+06:23.800 --> 06:29.110
+That makes them fight and in our case we have Harry and Voldemort.
+
+06:29.320 --> 06:33.000
+Now all I'm doing here is I'm doing math.
+
+06:33.100 --> 06:40.900
+Random was generates a number from 0 to 1 and then I multiply that by the character length.
+
+06:40.900 --> 06:50.650
+So in that case I'm multiplying math random by 1 2 3 4 5 6 and then doing math at floor so that we get
+
+06:50.680 --> 06:53.430
+a whole number an integer.
+
+06:53.890 --> 06:55.060
+And I'm doing the same here.
+
+06:55.120 --> 06:58.720
+If I console log this and do attack 1
+
+07:03.460 --> 07:10.690
+I'm just randomly generating a number for Harry at least between 0
+
+07:14.500 --> 07:15.060
+now yes.
+
+07:15.070 --> 07:21.250
+This function is not very good because if you have a longer name while you have a higher chance of actually
+
+07:21.250 --> 07:26.540
+winning because we compare which is higher and then one wins over the other.
+
+07:26.950 --> 07:33.400
+In this case he who must not be named wins and most of the time while Voldemort wins but every once
+
+07:33.400 --> 07:35.650
+in a while Harry prevails as well.
+
+07:35.680 --> 07:47.100
+Now this silly little function if I copy and paste this into let's say my script file just like this
+
+07:47.760 --> 07:58.490
+and we don't need to call this for now if I save this and we see that we have the script file in our
+
+07:58.500 --> 07:59.790
+Asian male page.
+
+07:59.880 --> 08:07.950
+Let's open our index that HMO file and then now we should be able to have access to fight which is a
+
+08:07.950 --> 08:10.170
+function so that if I do fight
+
+08:13.470 --> 08:17.960
+Harry and Baltimore.
+
+08:17.960 --> 08:18.480
+There you go.
+
+08:19.610 --> 08:28.650
+Baltimore wins again and that's because well everything that we define in this file is going to be part
+
+08:28.650 --> 08:38.340
+of the global scope unless we define it inside of a function and the problem arises when we have a another
+
+08:38.340 --> 08:49.340
+script and this script simply says variable fight equals haha.
+
+08:49.730 --> 08:51.980
+I have to make sure that I close the string.
+
+08:51.980 --> 08:54.080
+Let's refresh again and I do.
+
+08:54.080 --> 09:01.950
+Fight Oh I've just overridden my fight function that I worked really really hard to build.
+
+09:01.970 --> 09:02.220
+OK.
+
+09:02.240 --> 09:14.310
+Well can't I just move this up here so that this script gets read after I refresh and do fight.
+
+09:14.870 --> 09:18.800
+Yep I have the function there but this is not good right.
+
+09:18.860 --> 09:26.760
+This is one of the major problems without modules because these variables are on global scope every
+
+09:26.760 --> 09:35.710
+part of the code that's inside of that file can change a variable so that you start to have really hard
+
+09:35.720 --> 09:42.710
+code to debug and as you get bigger and bigger with your javascript it becomes impossible to maintain
+
+09:43.310 --> 09:52.190
+in any serious language has a way to handle modules because you cannot build large applications without
+
+09:52.190 --> 09:53.070
+module.
+
+09:53.120 --> 09:55.420
+So how do we solve this.
+
+09:55.430 --> 10:00.170
+Well back in the day we used to just have one page of javascript like I've showed you.
+
+10:00.170 --> 10:07.210
+And that was easy enough because web pages in the 90s especially were very simple javascript.
+
+10:07.250 --> 10:13.880
+Nothing too crazy maybe a form here and there but things started getting bigger and bigger.
+
+10:13.920 --> 10:20.340
+We have really complex web applications now so we can no longer keep everything in our head.
+
+10:20.340 --> 10:27.120
+We can no longer just have one JavaScript file and know how each piece of data is being touched by a
+
+10:27.120 --> 10:27.800
+function.
+
+10:27.840 --> 10:32.630
+Most of the time we're working in teams with tens hundreds thousands of developers.
+
+10:32.670 --> 10:35.240
+So how do we do this in javascript.
+
+10:35.430 --> 10:42.180
+Now JavaScript has a thing called yes module that is a module system that is native to JavaScript now.
+
+10:42.450 --> 10:45.030
+But this happened quite recently.
+
+10:45.090 --> 10:46.840
+What do we do before.
+
+10:47.160 --> 10:53.670
+Before I show you how things work now I want to show you how we solve this problem of modules so that
+
+10:53.670 --> 10:59.510
+we have a bit of a historical context because some code bases still use these older methods.
+
+10:59.580 --> 11:04.660
+So let's get started with a first solution to this problem I'll see in the next one by.

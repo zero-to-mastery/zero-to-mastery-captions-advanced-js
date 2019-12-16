@@ -1,0 +1,61 @@
+WEBVTT
+
+00:03.390 --> 00:07.400
+I want to show you one little diagram to finalize this point.
+
+00:08.370 --> 00:15.950
+When a function is called an environment is created for the new scope that it enters.
+
+00:15.990 --> 00:16.580
+Right.
+
+00:16.680 --> 00:25.950
+This little world that it enters that environment has a field that has its own variable environment
+
+00:26.280 --> 00:34.120
+but also another place that points to the outer scope and then that outer scope points to its outer
+
+00:34.120 --> 00:43.630
+scope until it hits the global scope and the javascript spec actually has this internally where its
+
+00:43.690 --> 00:49.180
+bracket bracket or square brackets square brackets scope or scopes.
+
+00:49.240 --> 00:58.120
+So let's test out this idea now in Google Chrome developer browser you can actually access this property.
+
+00:58.390 --> 01:09.760
+If I create a function here let's just call it a if I go into the window object now and look for a Let's
+
+01:09.770 --> 01:13.710
+scroll down there it is by click over here.
+
+01:13.970 --> 01:22.100
+I HAVE A FEW THINGS BUT IF I GO DOWN LOOK AT THAT I HAVE SOMETHING CALLED scopes and inside of the Scopes
+
+01:23.060 --> 01:26.000
+we have type global.
+
+01:26.000 --> 01:26.900
+Why.
+
+01:26.900 --> 01:34.770
+Well because the scope of function a that scope is global.
+
+01:34.830 --> 01:38.880
+So this is pointing to the outer parent.
+
+01:39.390 --> 01:43.880
+So we have our variable environments in function a.
+
+01:44.160 --> 01:51.210
+And as soon as we can't find what we're looking for we're going to look inside of scopes to our outer
+
+01:51.210 --> 01:58.260
+environment which in this case is the global type which is the window object.
+
+01:58.380 --> 02:00.900
+Very very cool.
+
+02:00.920 --> 02:03.200
+All right it's time to do a fun little exercise.

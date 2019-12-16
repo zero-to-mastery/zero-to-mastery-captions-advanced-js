@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.750 --> 00:10.400
+Let's talk about errors and that is error handling now errors or what others may call exceptions.
+
+00:10.400 --> 00:14.520
+In programming is a seldomly taught topic.
+
+00:14.660 --> 00:20.570
+Most people think that if you are a good programmer it means you shouldn't have any errors in your code.
+
+00:20.570 --> 00:22.600
+You don't have to even worry about them.
+
+00:22.700 --> 00:30.400
+However handling errors is an important skill in becoming a great developer because no matter what.
+
+00:30.480 --> 00:38.750
+There is no such thing as a perfect program we need to stop thinking about errors as mistakes and instead
+
+00:38.900 --> 00:47.070
+start thinking of errors as a feature a feature for us to improve our code and tell the user or the
+
+00:47.070 --> 00:54.410
+programmer when something is wrong and also possibly even telling him how to fix this error.
+
+00:54.810 --> 01:03.150
+So remember errors aren't mistakes but rather a feature therefore handling error is a way for us to
+
+01:03.150 --> 01:05.610
+become better programmers.
+
+01:05.610 --> 01:06.240
+Let's get started.

@@ -1,0 +1,331 @@
+WEBVTT
+
+00:00.950 --> 00:01.580
+Welcome back.
+
+00:02.450 --> 00:06.940
+Let's do a fun little demonstration of the prototype chain.
+
+00:07.070 --> 00:17.180
+I'm going to create a dragon and this dragon will have name as the property.
+
+00:17.750 --> 00:21.100
+Let's call that dragon Tonya fire wall.
+
+00:21.140 --> 00:22.590
+It's a fire breathing dragon.
+
+00:22.610 --> 00:24.220
+So obviously that's set to true.
+
+00:24.740 --> 00:27.800
+And the dragon can also fight.
+
+00:27.800 --> 00:33.110
+So this Fighting Dragon will return let's say damage of fire.
+
+00:33.410 --> 00:35.150
+That's a pretty strong dragon.
+
+00:35.360 --> 00:36.410
+And you know what.
+
+00:36.650 --> 00:46.020
+Just to make it more fun we're going to add a Singh method to this object and we'll say it returns us
+
+00:46.040 --> 00:47.490
+to templates strings.
+
+00:47.540 --> 00:50.490
+I am this this dog.
+
+00:50.490 --> 00:54.650
+Name the breather of fire.
+
+00:54.730 --> 01:00.620
+I am Tanya the breeder of fire I should make sense now.
+
+01:00.780 --> 01:07.230
+If we do dragon dot Singh have a syntax error because I forgot a comma.
+
+01:07.230 --> 01:08.580
+Let's try that again.
+
+01:08.580 --> 01:12.610
+I am Tanya the breeder of fire nice.
+
+01:12.810 --> 01:16.760
+And if I do fight here I also get five.
+
+01:16.800 --> 01:17.880
+Perfect.
+
+01:17.880 --> 01:28.890
+Now let's say we have another object now in this object is just a simple lizard and this lizard unfortunately
+
+01:29.430 --> 01:31.590
+doesn't have much powers.
+
+01:31.650 --> 01:44.240
+It has a name of Kiki and then maybe it can also fight but definitely not as strong as the Dragon.
+
+01:44.240 --> 01:47.420
+So it's only going to give a damage of one
+
+01:50.200 --> 01:53.800
+not a very strong lizard.
+
+01:53.810 --> 02:03.070
+Now if we let's say wanted to borrow a method from the dragon object we've learned how to do that before
+
+02:03.080 --> 02:03.740
+right.
+
+02:03.740 --> 02:05.690
+Remember bind.
+
+02:05.690 --> 02:16.040
+Well I can just do something like contest saying lizard and this constant lizard thing lizard will have
+
+02:16.040 --> 02:28.480
+the dragon dot sync dot find and borrow that method for the lizard object so let's console dialogue
+
+02:29.470 --> 02:33.140
+sing lizard and run this function let's see what happens.
+
+02:33.160 --> 02:39.790
+I run and I get I am Kiki the breather of fire.
+
+02:39.790 --> 02:40.400
+Nice.
+
+02:40.480 --> 02:47.870
+Very very cool but let's say this object gets a little bit more complicated let's say that the dragon
+
+02:48.200 --> 02:49.510
+this time around.
+
+02:49.640 --> 02:56.450
+Well in order for us to breathe fire we have to make sure that we have the fire property set to true
+
+02:57.410 --> 03:09.250
+so that we can perhaps do if this dot fire which will be true in our case if that is true that's when
+
+03:09.250 --> 03:17.670
+we return our battle cry so that if I run this now I get undefined.
+
+03:18.320 --> 03:26.250
+Unfortunately the lizard doesn't have fire set to true and even though we borrow the method because
+
+03:26.310 --> 03:29.460
+we don't have the fire ability it's never going to sing.
+
+03:29.490 --> 03:31.860
+I am Kiki debris there are fire.
+
+03:32.010 --> 03:33.950
+So what can we do here.
+
+03:33.960 --> 03:40.050
+I mean we can manually just add the property but you can see how it might get more and more complicated
+
+03:40.050 --> 03:40.980
+here right.
+
+03:40.980 --> 03:45.510
+What if we had a big object and we want to borrow more than just one method.
+
+03:45.510 --> 03:52.100
+We want to perhaps inherit a bunch of these properties for the lizard as well to make it all powerful.
+
+03:52.860 --> 03:57.280
+And this is where a prototype all inheritance comes in.
+
+03:57.310 --> 04:07.030
+What if we create a prototype chain that says hey I want lizard to inherit all these properties and
+
+04:07.030 --> 04:08.900
+methods from Dragon.
+
+04:09.310 --> 04:10.150
+How can we do this
+
+04:12.970 --> 04:15.820
+we can go like this.
+
+04:15.820 --> 04:24.760
+We can say lizard dot underscore underscore Prato underscore underscore that is we're creating that
+
+04:24.760 --> 04:31.300
+chain from Lizard all the way up to Dragon.
+
+04:31.470 --> 04:31.830
+All right.
+
+04:31.950 --> 04:32.990
+Let's see if that works.
+
+04:33.030 --> 04:33.810
+If I do.
+
+04:33.810 --> 04:44.160
+Lizard dot sing now and I run check that out I am Kiki the breather a fire.
+
+04:44.170 --> 04:45.940
+What about the property fire.
+
+04:45.940 --> 04:47.430
+That means we have fire as well right.
+
+04:47.500 --> 04:53.640
+Let's do fire or sorry just the property fire set to true.
+
+04:53.650 --> 04:55.520
+How awesome is that.
+
+04:55.540 --> 04:56.980
+What about flight.
+
+04:57.580 --> 05:09.360
+If I do fight and I run this while my power is still won because I have fight already defined in my
+
+05:09.360 --> 05:11.550
+lizard object.
+
+05:11.630 --> 05:21.230
+So what we were able to do here is we were able to inherit through this prototype chain all the properties
+
+05:21.260 --> 05:31.180
+and methods of the dragon and override anything that we've already declared in our own object.
+
+05:31.220 --> 05:33.530
+So that is name and fight.
+
+05:33.650 --> 05:34.610
+Stay with us.
+
+05:34.700 --> 05:41.560
+But as soon as we say something like sing well the JavaScript engine is going to say all right lizard
+
+05:41.570 --> 05:45.150
+dot saying hey lizard let's sing.
+
+05:45.200 --> 05:50.500
+And then it's going to look through the properties and say hmm hmm I don't see sync here.
+
+05:50.510 --> 05:57.440
+I'm going to go up the prototype chain because we've created that prototype chain up to Dragon and C
+
+05:57.680 --> 06:00.370
+Hey dragon do you have sing.
+
+06:00.560 --> 06:09.990
+And if Dragon has sing then it's going to run it using this code.
+
+06:10.010 --> 06:14.930
+Now what happens if we call something other than sing maybe dance.
+
+06:15.050 --> 06:24.700
+And if I run I get no lizard dog dance is not a function because we go up the prototype chain does Dragon
+
+06:24.710 --> 06:25.470
+have dance.
+
+06:25.720 --> 06:26.190
+Nope.
+
+06:26.300 --> 06:27.840
+And then what do we do next.
+
+06:27.890 --> 06:35.710
+We go up the prototype chain of Dragon was the prototype chain of dragon while we talked about this
+
+06:35.720 --> 06:36.320
+right.
+
+06:36.340 --> 06:41.420
+The prototype chain of Dragon is.
+
+06:41.710 --> 06:52.210
+Let me comment out the dance here is the original base object so that hypothetically I can use whatever
+
+06:52.210 --> 06:54.280
+methods this base object has.
+
+06:54.370 --> 06:57.880
+If you remember our base object.
+
+06:57.880 --> 07:09.370
+So if I go concept object or concept dragon equals for now an empty object and I do dragon dot underscore
+
+07:09.370 --> 07:17.350
+underscore Frodo underscore underscore I get this base object and I have a few properties here.
+
+07:17.350 --> 07:25.630
+So if I do let's say is prototype of which looks like comes with the base object I should be able to
+
+07:25.750 --> 07:26.890
+use this right.
+
+07:27.160 --> 07:40.750
+If I do dragon dot is Prado type of and in here I say hey another object whose prototype chain is to
+
+07:40.750 --> 07:41.340
+be checked.
+
+07:41.530 --> 07:49.110
+So is Dragon a prototype of let's say a lizard I run this.
+
+07:49.350 --> 07:53.380
+Yep dragon is a prototype of lizard.
+
+07:53.940 --> 07:55.670
+What happens underneath the hood.
+
+07:55.740 --> 08:00.560
+We tell the javascript engine Hey dragon run this method.
+
+08:00.570 --> 08:04.010
+It's going to look in the Dragon object say.
+
+08:04.230 --> 08:08.000
+I don't see any method called is prototype off here.
+
+08:08.070 --> 08:14.730
+I'm going to go up the prototype chain to the base object that all objects are created in JavaScript
+
+08:14.880 --> 08:22.320
+from including functions in arrays and it's going to say hey do you have is prototype of the javascript
+
+08:22.320 --> 08:22.700
+engine.
+
+08:22.720 --> 08:30.400
+He's gonna say yep I have is prototype of let's give you that functionality and for us this functionality
+
+08:30.400 --> 08:39.670
+is prototype of does exactly what it asks us to it ask hey is Dragon a prototype of lizard that is does
+
+08:39.670 --> 08:42.440
+lizard inherit from Dragon.
+
+08:42.460 --> 08:43.450
+Yep it does.
+
+08:43.450 --> 08:45.630
+So we get true.
+
+08:45.640 --> 08:55.830
+If I change this around to Lizard Dragon and I run this I get false because lizard isn't the prototype
+
+08:55.830 --> 08:57.570
+of Dragon it's the other way around.
+
+08:58.560 --> 09:01.980
+Now you may have noticed something interesting here.
+
+09:02.010 --> 09:06.170
+Let's take a break and I'll see you in the next video or we'll discuss this further.
+
+09:06.540 --> 09:06.810
+Bobby.

@@ -1,0 +1,445 @@
+WEBVTT
+
+00:01.020 --> 00:05.280
+Lou let's learn some javascript.
+
+00:05.360 --> 00:12.860
+We're gonna open up google chrome here and we're gonna go to a view developer and this time javascript
+
+00:12.860 --> 00:16.750
+console so you can do command option J as well.
+
+00:16.850 --> 00:23.780
+And it opens up this console which is if you remember elements you've seen it before.
+
+00:23.780 --> 00:30.870
+That's your a male console is where we can write JavaScript on the right you'll see the outline of what
+
+00:30.870 --> 00:33.660
+we'll talk about in this javascript segment.
+
+00:33.690 --> 00:42.120
+We'll go one by one and some of them will come back to but don't worry by the end you'll know everything.
+
+00:42.120 --> 00:54.170
+And here so let's talk javascript JavaScript has seven types you can think of types as values that JavaScript
+
+00:54.170 --> 00:56.930
+can have let's start with the first one.
+
+00:57.920 --> 01:05.950
+And that is number so the number type well in JavaScript you can do something like this.
+
+01:08.150 --> 01:12.790
+Look at that the console allows us to write JavaScript as much as we want.
+
+01:12.800 --> 01:20.080
+So by writing this and the console giving us an answer it means that yes this is valid javascript.
+
+01:20.670 --> 01:20.920
+OK.
+
+01:20.930 --> 01:30.290
+What else can we do well we can do three times five 15 Twelve divided by four three.
+
+01:30.330 --> 01:31.770
+That's awesome what else can we do.
+
+01:31.860 --> 01:36.650
+12 minus four eight nine.
+
+01:36.660 --> 01:37.890
+Can we do this.
+
+01:37.890 --> 01:40.370
+Can we do three plus four.
+
+01:40.380 --> 01:41.670
+Close the bracket.
+
+01:41.670 --> 01:43.670
+Times two.
+
+01:43.680 --> 01:47.410
+So that's seven times to 14.
+
+01:47.460 --> 01:48.520
+Yeah.
+
+01:48.720 --> 01:55.260
+That works and we can even do this and this is a special character that you might have not seen before.
+
+01:55.290 --> 01:58.170
+It's called module and let's see what happens.
+
+01:58.350 --> 01:59.450
+Gives me zero.
+
+01:59.470 --> 02:00.250
+Mm hmm.
+
+02:00.270 --> 02:05.520
+What if I do twelve modulo five it gives me two.
+
+02:05.850 --> 02:07.290
+What this symbol does.
+
+02:07.320 --> 02:13.900
+And let's make this bigger so you can see clearly and I'm going to clear this just so you can see it
+
+02:13.900 --> 02:19.740
+better and I can do clear here with these brackets and I'll clean up everything for me.
+
+02:19.840 --> 02:25.180
+So one more time what I did was twelve modulo five.
+
+02:25.510 --> 02:33.640
+And that gives me two in what module does is it gives me the remainder so twelve divided by five is
+
+02:33.700 --> 02:39.480
+well it gives me a reminder of two because five can only go to 10 and then you have to reminder.
+
+02:39.490 --> 02:50.760
+So if I do let's say twelve modulo five or less to nine I get a remainder of three and you're thinking
+
+02:51.510 --> 02:57.060
+Oh God you just you're just teaching me math but don't worry this is only a small part of it I just
+
+02:57.060 --> 03:03.570
+want to show you that the first javascript type is a number and we can do operations on them just like
+
+03:03.990 --> 03:06.180
+a calculator can.
+
+03:06.420 --> 03:17.380
+The second type in Javascript is a string so a string is just text and all you need to do to let javascript
+
+03:17.380 --> 03:28.560
+know that you're writing a piece of text is double quotes so I can just say Bob I can say my name and
+
+03:28.560 --> 03:29.970
+you can also use single quotes
+
+03:35.300 --> 03:43.550
+and that is a string but what else can we do with the string and we clear this well.
+
+03:43.590 --> 03:46.000
+You can also do this.
+
+03:46.080 --> 03:50.630
+You can say hello plus there.
+
+03:50.680 --> 03:51.790
+What do you think will happen here.
+
+03:53.460 --> 03:56.130
+Let's see Hello there.
+
+03:56.720 --> 03:59.610
+But it is one word.
+
+03:59.780 --> 04:12.770
+We need a space so we would have to do Hello space plus there and there we have the space OK so we can
+
+04:13.580 --> 04:17.840
+add things so add two sentences together.
+
+04:17.920 --> 04:20.310
+What if we do.
+
+04:20.470 --> 04:23.200
+What if we do something like this.
+
+04:23.230 --> 04:30.700
+This isn't very nice I hit enter and.
+
+04:31.030 --> 04:31.280
+OK.
+
+04:31.280 --> 04:31.700
+That works.
+
+04:31.700 --> 04:32.210
+That's good.
+
+04:32.210 --> 04:34.790
+But what if I use single quotes here.
+
+04:34.850 --> 04:36.060
+What if I go like this.
+
+04:36.080 --> 04:40.600
+And remember I said that I can use single quotes and JavaScript.
+
+04:40.610 --> 04:45.590
+Well you see the syntax changes and I get a little error.
+
+04:45.740 --> 04:52.370
+Well because I'm using a single quote and then inside the string I'm trying to use a single quote and
+
+04:52.380 --> 05:00.070
+that would happen as well if I use double quotes so if we go back to the example before and I add another
+
+05:00.070 --> 05:00.780
+quote in here.
+
+05:01.300 --> 05:04.410
+Well again I get an error.
+
+05:04.570 --> 05:10.660
+So let me clear that how can we avoid this problem well with the string in JavaScript.
+
+05:10.670 --> 05:16.180
+We can do something like this this wants to use single quotes.
+
+05:16.180 --> 05:20.080
+This isn't and as
+
+05:23.740 --> 05:33.580
+this isn't very nice and this backslash has a special meaning the backslash says hey whatever comes
+
+05:33.610 --> 05:38.460
+after this it's a special meaning means just ignore it.
+
+05:38.460 --> 05:41.730
+Don't say that this is a piece of string.
+
+05:41.770 --> 05:43.840
+I just want the back tick.
+
+05:44.020 --> 05:48.120
+So if I run like this upset I made the syntax over here wrong.
+
+05:48.130 --> 05:49.650
+Obviously the quotes need to match.
+
+05:49.650 --> 05:52.340
+So let's try that again.
+
+05:52.340 --> 05:53.100
+There you go.
+
+05:53.120 --> 05:56.120
+This is a very nice OK.
+
+05:56.210 --> 06:06.000
+I have another question what happens here 10 plus string of thirty four so that's number 10 plus string
+
+06:06.000 --> 06:07.280
+of thirty four.
+
+06:07.350 --> 06:08.380
+Let's see what happens.
+
+06:09.790 --> 06:10.120
+Hmm.
+
+06:10.360 --> 06:11.710
+Weird.
+
+06:11.720 --> 06:18.680
+So javascript automatically looked at this and said he's adding a number and a string.
+
+06:18.770 --> 06:26.390
+He's probably trying to add strings together so javascript converts the number 10 into a string 10 and
+
+06:26.390 --> 06:28.290
+does 10 34.
+
+06:28.370 --> 06:29.450
+That's kind of weird right.
+
+06:29.450 --> 06:32.170
+It's one of the course of JavaScript there's a few of them.
+
+06:32.270 --> 06:34.060
+You just have to get used to it.
+
+06:34.100 --> 06:34.940
+Let's try something else.
+
+06:34.940 --> 06:43.590
+What about if I do 10 minus three press enter I get seven.
+
+06:43.710 --> 06:46.010
+What is going on here.
+
+06:46.110 --> 06:50.750
+And because put the string you can really subtract the string.
+
+06:50.750 --> 07:01.640
+I mean let's see if I go Hello minus by I get this weird symbol which will get back to you but that
+
+07:01.640 --> 07:02.450
+doesn't work.
+
+07:02.450 --> 07:08.250
+So now javascript says I'm going to because he's subtracting.
+
+07:08.260 --> 07:10.330
+I'm just gonna assume that he means the number three.
+
+07:10.360 --> 07:12.460
+So he's trying to help you out.
+
+07:13.500 --> 07:17.980
+But sometimes it can have unexpected behavior.
+
+07:17.990 --> 07:20.230
+So ideally you never do things like this.
+
+07:20.240 --> 07:25.460
+Ideally you keep numbers with numbers and strings with strings and you keep the actions between the
+
+07:25.460 --> 07:28.580
+like types so let's go back to this.
+
+07:28.640 --> 07:36.300
+What just happen when I say hello minus by well and a n stands for not a number and it's technically
+
+07:36.300 --> 07:38.830
+in JavaScript you can see the blue highlighting here.
+
+07:39.090 --> 07:41.310
+It's part of the number type.
+
+07:41.310 --> 07:47.310
+So numbers can you know can range from one to 10 to you know five hundred sixty seven.
+
+07:47.340 --> 07:48.800
+But there's also the.
+
+07:48.810 --> 07:54.770
+And then when it's saying hey whatever you just wrote is not a number.
+
+07:54.810 --> 07:56.380
+So that's the case as well.
+
+07:56.430 --> 08:02.800
+I know it's really really confusing but don't more is just the quirks of the language that we're learning.
+
+08:02.880 --> 08:09.000
+OK I'm going to show you one other javascript type before we get to some fun things in the next video
+
+08:10.140 --> 08:22.410
+so the next one is boolean and the boolean type is very simple boolean just means true or false that's
+
+08:22.410 --> 08:22.800
+it.
+
+08:22.830 --> 08:29.370
+And sometimes that can be represented as ones and zeros and for those that know a lot about computers
+
+08:29.370 --> 08:35.370
+you might know that computer is pretty much runs on ones and zeros and that's that's where it comes
+
+08:35.370 --> 08:43.760
+from but billions are very very useful because now we can do something like three is greater than two
+
+08:44.360 --> 08:47.720
+and I'll say true three is greater than two.
+
+08:48.000 --> 08:55.710
+If I do five is greater than ten will say false five is not greater than ten.
+
+08:55.710 --> 09:03.070
+We can also do five is greater than or equal to five.
+
+09:03.370 --> 09:12.940
+So we'll say true because I can do greater than equal to and I can also do five is smaller than or equal
+
+09:12.940 --> 09:15.730
+to five.
+
+09:15.730 --> 09:26.650
+Now what if I want to say does three equal three I get an error why is that well.
+
+09:26.690 --> 09:32.900
+Because in javascript if you want to say something is equal to something you have to say three equals
+
+09:32.990 --> 09:37.700
+three equals sign three and I get true.
+
+09:37.700 --> 09:41.660
+And in the next video I'll tell you why that's the case.
+
+09:41.660 --> 09:42.790
+It's very very interesting.
+
+09:42.800 --> 09:50.080
+But for now just remember that's always a tricky point that a lot of beginners get confused about.
+
+09:50.180 --> 09:57.250
+Just remember if you're comparing two things three equal signs the last one I want to show you is this
+
+09:57.880 --> 10:05.080
+three doesn't equal three isn't that confusing.
+
+10:05.090 --> 10:14.650
+So this is saying that's three not equal three false because three equals three.
+
+10:14.710 --> 10:17.110
+I know it can get really really confusing.
+
+10:17.230 --> 10:21.220
+But think of this as the opposite of the equals sign.
+
+10:21.550 --> 10:27.770
+So for example if I do four doesn't equal five I'll get you because you're right.
+
+10:27.770 --> 10:31.090
+Four doesn't equal five.
+
+10:31.100 --> 10:39.370
+So what we just learned are javascript comparisons and they're the things right over here.
+
+10:39.580 --> 10:40.150
+That's it.
+
+10:40.150 --> 10:42.330
+You just have to remember these.
+
+10:42.820 --> 10:45.440
+Well that was that was fun right.
+
+10:45.550 --> 10:51.800
+But we're just getting started after this video I have left an exercise she for you try to find the
+
+10:51.800 --> 10:58.130
+answers to the problems and then copy and paste them each of the questions each of the line into the
+
+10:58.130 --> 10:59.810
+javascript console.
+
+10:59.900 --> 11:08.060
+So for example if I said you know evaluate three plus five your copy this put it in the console and
+
+11:08.060 --> 11:14.300
+just press enter and I want you to get comfortable working with console and playing around with it experimenting
+
+11:14.300 --> 11:18.930
+around and like I said really try and work on the next problem sets.
+
+11:18.950 --> 11:24.270
+I haven't given you a lot because I don't want you to get overwhelmed.
+
+11:24.710 --> 11:27.910
+There's a lot more interesting things happening in JavaScript than this.
+
+11:28.100 --> 11:30.360
+And you can pick this up fairly easily.
+
+11:30.560 --> 11:33.680
+But I do encourage you to make sure you do the exercises.
+
+11:33.740 --> 11:36.720
+Now can you get all of them.
+
+11:36.880 --> 11:38.410
+Good luck.
+
+11:38.410 --> 11:40.090
+I'll see you in the next video.
+
+11:40.100 --> 11:40.540
+Bye bye.

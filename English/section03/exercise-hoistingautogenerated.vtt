@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00.780 --> 00:01.610
+Welcome back.
+
+00:01.620 --> 00:10.900
+Let's try a fun little exercise and before you see my solution try to solve this yourself if we look
+
+00:10.900 --> 00:16.870
+at this piece of code based on what we learned about hoisting What do you think it does.
+
+00:17.620 --> 00:28.020
+Well here if I just console da log one and run it we get to that makes sense during execution phase.
+
+00:28.020 --> 00:31.770
+The very last line was to assign two to one.
+
+00:31.770 --> 00:37.740
+So console log one is too confusing but that makes sense.
+
+00:37.740 --> 00:40.740
+During hoisting What do you think happens.
+
+00:40.740 --> 00:46.980
+Well during hoisting one is simply going to equal on defined.
+
+00:46.980 --> 00:57.380
+So when the JavaScript engine sees a second line with the VAR keyword and the same variable assigned
+
+00:57.380 --> 01:05.030
+to it it's actually going to just ignore this line that is it's going to say no no no I'm good.
+
+01:05.030 --> 01:06.830
+I already have one equals two undefined.
+
+01:06.830 --> 01:15.670
+I'm going to just choose to ignore you because we've already assigned one to equal undefined OK.
+
+01:15.690 --> 01:18.220
+What about this.
+
+01:18.250 --> 01:25.560
+What if I have a function a you know I'm being very creative with my function names here but there with
+
+01:25.560 --> 01:30.430
+me I have console log high that's functioning.
+
+01:30.900 --> 01:41.970
+And I also have another function a that says by what do you think happens or sorry let's do function
+
+01:42.090 --> 01:42.860
+a again.
+
+01:42.870 --> 01:45.970
+So we have the exact same functions.
+
+01:46.170 --> 01:49.820
+And if I run a here what do you think happens.
+
+01:49.860 --> 01:54.750
+Pause and think about with variables.
+
+01:54.890 --> 01:56.240
+They're partially hoisted.
+
+01:56.240 --> 02:01.940
+So we have undefined to that variable with a function declaration.
+
+02:01.970 --> 02:11.180
+We fully hoist it so something gets put in memory during the creation phase but we have two of the same
+
+02:11.180 --> 02:18.100
+functions based on what you know about the JavaScript engine that you've learned up until now.
+
+02:18.180 --> 02:19.540
+What do you think's gonna happen.
+
+02:19.590 --> 02:20.790
+All right enough suspense.
+
+02:20.790 --> 02:24.460
+Let's find out you get by.
+
+02:24.850 --> 02:26.670
+And that makes sense right.
+
+02:26.710 --> 02:29.460
+During the hoisting phase we look at the function.
+
+02:29.530 --> 02:37.060
+The compiler says Oh yeah yep I'm going to hoist this and I'm going to put this someplace in memory
+
+02:37.060 --> 02:37.950
+for us.
+
+02:38.320 --> 02:44.380
+And then it keeps going to the next line and says oh here's functioning again I'm going to put this
+
+02:44.620 --> 02:46.120
+in memory.
+
+02:46.120 --> 02:56.120
+And because this even though this is the same thing because we're doing it one after another it's going
+
+02:56.120 --> 03:05.950
+to rewrite that place in memory to include console log by so that in this case we've lost the ability
+
+03:05.950 --> 03:14.760
+to say hi with this function we can only say by this is the case even if I put the A here or even if
+
+03:14.760 --> 03:15.810
+I put the A
+
+03:19.050 --> 03:22.490
+and I hope by now that makes sense to you.
+
+03:22.550 --> 03:30.230
+Now I have one more exercise for you and this is a tricky one because up until now we've talked about
+
+03:30.620 --> 03:40.180
+the global execution context in this global execution context has the creation phase and the execution
+
+03:40.180 --> 03:41.020
+phase.
+
+03:41.410 --> 03:50.470
+But this actually happens any time we call a function anytime we call a function.
+
+03:50.510 --> 03:55.110
+There is a creation phase and an execution phase where there's hoisting involved.
+
+03:55.950 --> 03:57.450
+Let me show you in the next exercise.

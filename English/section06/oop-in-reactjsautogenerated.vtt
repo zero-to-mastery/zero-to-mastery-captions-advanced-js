@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.020 --> 00:02.260
+Welcome back.
+
+00:02.340 --> 00:09.200
+Whether you know it or not you can now spot object oriented programming in the wild.
+
+00:09.200 --> 00:16.340
+For example if you've ever used we act as a front end library you can see some sample code here and
+
+00:16.790 --> 00:17.810
+how they've used.
+
+00:17.840 --> 00:20.370
+Object Oriented Programming principles.
+
+00:20.600 --> 00:23.970
+We can now look at the code and understand a lot better.
+
+00:24.050 --> 00:35.250
+Right for example we have a toggle class that we create that extends react dot component react dot component
+
+00:35.640 --> 00:39.380
+is something that comes from the REACT team.
+
+00:39.510 --> 00:48.840
+They've built this class that has all these features for us so that while we can use things like render
+
+00:49.170 --> 00:53.780
+that comes automatically for us so that we can run code like this.
+
+00:53.780 --> 00:55.740
+And our application gets rendered.
+
+00:55.740 --> 01:04.950
+So we're using somebody else's code and we're extending react component and using the base functionality
+
+01:04.950 --> 01:08.590
+there to add our own little features.
+
+01:08.790 --> 01:12.810
+We have constructors that will receive props.
+
+01:12.810 --> 01:20.730
+We have state which is the state of our toggle class as you can see we have an object with is toggle
+
+01:21.090 --> 01:22.270
+honest true.
+
+01:22.380 --> 01:30.640
+And then we create our own methods on this class such as handling the click and then at the end we return
+
+01:30.790 --> 01:39.860
+a button that well is a toggle button and we also see here how we have the bind over here.
+
+01:40.290 --> 01:47.130
+And we've talked about this right because this is what we call a callback function.
+
+01:47.420 --> 01:54.720
+That is when we run handle click we want this dot set St..
+
+01:54.790 --> 02:05.340
+The this keyword to refer to the toggle class and not the actual button that we click in here.
+
+02:05.440 --> 02:11.840
+We have to bind it that is I'm telling hey this dot handle click.
+
+02:12.000 --> 02:21.310
+I want you to bind to the toggle class so that when I do this dot handle click a method on this property
+
+02:21.900 --> 02:28.310
+that this keyword is referring to the class and not the actual button clicked on it and although this
+
+02:28.310 --> 02:35.930
+is just an example you can now understand and notice when Object Oriented Programming principles are
+
+02:35.930 --> 02:43.010
+used in libraries frameworks and any other code written by somebody else.
+
+02:43.010 --> 02:47.600
+And trust me object oriented programming is everywhere.
+
+02:47.600 --> 02:53.060
+And now that you have the skills you're going to understand it and you're gonna notice it more and more
+
+02:53.360 --> 03:00.760
+out in the wild so start exploring the library and framework world and see if you can notice any patterns
+
+03:00.790 --> 03:02.470
+that we've learned so far.
+
+03:02.740 --> 03:04.070
+I'll see in the next one.
+
+03:04.140 --> 03:04.580
+Bye.

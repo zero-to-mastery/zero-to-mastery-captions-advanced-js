@@ -1,0 +1,229 @@
+WEBVTT
+
+00:01.500 --> 00:02.700
+Welcome back.
+
+00:02.710 --> 00:05.270
+Well let's create our own memory leak.
+
+00:05.400 --> 00:07.880
+How can we do this well.
+
+00:07.920 --> 00:13.950
+The easiest way to do it is to just create an array and we'll say that it's an empty array to start
+
+00:13.950 --> 00:14.400
+off.
+
+00:14.820 --> 00:18.820
+But within here we're going to create a loop.
+
+00:18.840 --> 00:24.470
+Let's say I equals to five and I want you to keep looping as long as I.
+
+00:24.480 --> 00:29.750
+Is greater than 1 and I'm 1 to say I plus plus.
+
+00:29.750 --> 00:32.540
+That means let's increment I by 1.
+
+00:32.540 --> 00:39.830
+Now you see here that I'm creating an infinite loop because while I is always going to be bigger than
+
+00:39.830 --> 00:51.450
+one so all I have to do here is say array dot push and we're going to add to the array by minus one.
+
+00:51.460 --> 00:58.300
+Now when I run this code what's going to happen is we're going to run an infinite loop that keeps pushing
+
+00:58.330 --> 00:59.530
+to the array.
+
+00:59.530 --> 01:08.020
+I minus one over and over and over until well we fill up our memory and there's nothing left for us
+
+01:08.020 --> 01:13.690
+to use and while we're gonna crash the browser let's see how this happens.
+
+01:13.710 --> 01:16.720
+Once I press enter.
+
+01:16.780 --> 01:17.270
+All right.
+
+01:17.270 --> 01:18.320
+Things are happening.
+
+01:18.350 --> 01:21.140
+Oh did you see that.
+
+01:21.310 --> 01:26.550
+Something went wrong while displaying this web page we just crashed our browser.
+
+01:26.620 --> 01:31.090
+Go ahead and play with that if you want or tried to create your own memory leaks.
+
+01:31.090 --> 01:38.460
+But what I did was I filled up our memory heap with more and more and more data.
+
+01:38.680 --> 01:44.500
+The garbage collection wasn't really working because well we had this array we were using this array
+
+01:44.530 --> 01:52.370
+over and over until we crashed our program so memory leaks are pieces of memory that the application
+
+01:52.370 --> 01:59.990
+have used in the past but it's not needed any longer but has not yet been returned back to us to the
+
+01:59.990 --> 02:01.890
+poor free memory.
+
+02:01.910 --> 02:08.510
+Now this was a silly example and most likely you're not going to do in your programs but there are three
+
+02:09.170 --> 02:15.510
+common memory leaks that happened that I want to show you so you can avoid them in your application.
+
+02:15.680 --> 02:22.100
+The very first one and this is something that you've heard over and over and that is global variables
+
+02:23.970 --> 02:30.450
+one of the reasons that we don't want to have too many global variables such as doing variable A equals
+
+02:30.450 --> 02:31.460
+to one.
+
+02:31.470 --> 02:38.400
+Well I've just added variable a as a variable on our global scope something we'll get into a little
+
+02:38.400 --> 02:39.160
+bit later.
+
+02:39.300 --> 02:47.820
+But if hypothetically I just keep adding variables to my environment while we're adding more and more
+
+02:47.820 --> 02:55.180
+pieces of memory and these where objects and deeply nested objects you can see the memory being used
+
+02:55.180 --> 02:57.610
+up more and more and more.
+
+02:57.800 --> 03:12.570
+Another one is event listeners so if I have something like element equals document dot get element by
+
+03:12.630 --> 03:21.720
+I.D. in our browser and let's say I select the button and with this button I'm going to add an event
+
+03:21.720 --> 03:22.140
+listener
+
+03:24.860 --> 03:30.290
+that's going to listen on the click event and it's going to do some function that well I'll just call
+
+03:30.290 --> 03:30.920
+it on click.
+
+03:30.920 --> 03:35.110
+We don't really have a here but it's going to have that.
+
+03:35.160 --> 03:42.210
+Now this is one of the most common ways to leak memory and that is you add these event listeners and
+
+03:42.240 --> 03:48.030
+you never remove them when you don't need them so that you keep adding keep adding keep adding event
+
+03:48.030 --> 03:48.990
+listeners.
+
+03:49.230 --> 03:54.510
+And because they're just there in the background you forget about them.
+
+03:54.510 --> 04:00.620
+And next thing you know you create a memory like this happens a lot especially if you go back and forth
+
+04:00.650 --> 04:09.050
+between single page applications where you're not removing the event listeners off the page and as a
+
+04:09.050 --> 04:15.260
+user goes back and forth back and forth the memory keeps increasing more and more as more event listeners
+
+04:15.260 --> 04:16.440
+are added.
+
+04:16.670 --> 04:26.090
+Another common one is simply using something like set interval where you have the sent interval function
+
+04:26.300 --> 04:37.830
+that does something and inside of here you start referencing objects and these objects in here are going
+
+04:37.830 --> 04:44.970
+to will never be collected by the garbage collector because this set interval unless we clear it and
+
+04:44.970 --> 04:48.300
+stop it is going to keep running and running and running.
+
+04:48.420 --> 04:56.570
+So memory leaks are something that we have to be careful of So one example is SoundCloud you see SoundCloud
+
+04:56.630 --> 05:01.830
+which some of you may know you can listen to some really interesting artists and music.
+
+05:01.880 --> 05:09.320
+Well they had this application that worked on a gaming device but it was built with JavaScript and web
+
+05:09.320 --> 05:16.850
+tools so that this SoundCloud application can be run in the background of this game console.
+
+05:16.850 --> 05:22.400
+What they found out is that they had a memory leak because people put SoundCloud in the background it
+
+05:22.400 --> 05:30.450
+just kept running for long periods of time so that this memory leak that they had kept increasing more
+
+05:30.480 --> 05:35.970
+and more and more because people would enclose the application for while sometimes hours and hours and
+
+05:35.970 --> 05:43.080
+hours and they noticed that they had a memory leak in their program because unlike most Web sites or
+
+05:43.080 --> 05:47.420
+apps their app runs a really really long time in the background.
+
+05:47.550 --> 05:53.620
+So they had to fix that memory leak I'll leave a link to this article where they explain some of this
+
+05:53.620 --> 05:53.970
+problem.
+
+05:53.980 --> 05:57.430
+It's really really interesting if you want to learn a little bit more about it.
+
+05:57.580 --> 06:03.100
+Just something to be aware of that memory is limited.
+
+06:03.100 --> 06:06.310
+That is when it comes to call stack and memory heap.
+
+06:06.310 --> 06:12.020
+Those are two places that JavaScript remembers or stores memory.
+
+06:12.370 --> 06:14.930
+And we have limited use of them.
+
+06:14.950 --> 06:21.820
+So for us to write efficient code we have to be conscious to not have stack overflow or a memory leak
+
+06:22.090 --> 06:27.610
+and to manage that memory well all right that's enough for now.
+
+06:27.630 --> 06:28.500
+Take a break.
+
+06:28.500 --> 06:29.600
+Drink some coffee.
+
+06:29.730 --> 06:32.790
+Have some tea and I'll see you in the next video.
+
+06:32.790 --> 06:33.030
+Bye bye.

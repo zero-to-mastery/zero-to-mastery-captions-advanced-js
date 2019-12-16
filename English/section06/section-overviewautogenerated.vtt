@@ -1,0 +1,217 @@
+WEBVTT
+
+00:01.600 --> 00:03.240
+Welcome back.
+
+00:03.250 --> 00:05.670
+We finally made it here.
+
+00:05.710 --> 00:13.000
+It took a while but we're in probably the most exciting section at least for me.
+
+00:13.760 --> 00:21.140
+We're going to be talking about object oriented programming and functional programming both of these
+
+00:21.740 --> 00:29.530
+are what we call Programming Paradigms object oriented programming and functional programming.
+
+00:29.650 --> 00:37.320
+Our paradigms that allow us to organize code in a way that is easy to reason about.
+
+00:37.480 --> 00:45.190
+What does that really mean by the end of this section after we've done talking about Opie and FP.
+
+00:45.190 --> 00:48.660
+My goal is that you realize these benefits.
+
+00:48.670 --> 00:56.870
+One is that by using these paradigms we're going to make code more clear and more understandable.
+
+00:56.890 --> 01:05.560
+We're going to make code easy to extend that is as our app grows as our programs grow as the number
+
+01:05.560 --> 01:08.600
+of developers working on a project grow.
+
+01:08.620 --> 01:13.980
+It's easier to extend using these programming paradigms.
+
+01:14.050 --> 01:19.950
+I'm also going to convince you how it's easier to maintain by multiple programmers.
+
+01:20.230 --> 01:23.470
+It's going to be memory efficient.
+
+01:23.470 --> 01:26.640
+And then finally it's going to keep our code dry.
+
+01:26.770 --> 01:28.710
+That is we won't repeat ourself.
+
+01:28.840 --> 01:35.290
+Our code is gonna be nice and clean and we're gonna have all these benefits because of these programming
+
+01:35.380 --> 01:36.340
+paradigms.
+
+01:36.340 --> 01:39.300
+And that's what programming paradigms are.
+
+01:39.310 --> 01:53.540
+It allows us to make complex code more organized now before we even had OPI and FP we had well machine
+
+01:53.540 --> 01:54.410
+code right.
+
+01:54.410 --> 01:58.490
+Initially it was all ones and zeros that programmers used.
+
+01:58.490 --> 02:06.330
+And then as time passed we went into something called procedural style of programming in a procedural
+
+02:06.330 --> 02:07.980
+style of programming is that.
+
+02:07.980 --> 02:16.950
+Well we did what computers want us to do that is we would store data and then manipulate that data using
+
+02:16.950 --> 02:18.540
+some sort of functions.
+
+02:18.810 --> 02:21.910
+But there was no structure or organization.
+
+02:21.960 --> 02:27.280
+We just had step by step instructions of Hey computer put memory here.
+
+02:27.330 --> 02:29.850
+Hey computer move this memory here.
+
+02:29.910 --> 02:34.320
+Hey computer change the memory here and then give me this.
+
+02:34.320 --> 02:42.650
+Everything was procedural and I'll link to this Wikipedia article which I think is really really interesting.
+
+02:42.690 --> 02:50.020
+If you want to give it a go as I said before initially we started with some very basic programming languages
+
+02:50.770 --> 02:58.690
+really low level languages we have things like basic assembly language COBOL and then throughout the
+
+02:58.690 --> 03:02.860
+60s and 70s a big change happened.
+
+03:02.950 --> 03:05.810
+We started establishing these fundamental paradigms.
+
+03:05.830 --> 03:10.080
+How can you write code in a more organized fashion.
+
+03:10.120 --> 03:19.330
+So it wasn't as procedural that's when object oriented programming and functional programming started
+
+03:19.330 --> 03:21.470
+to really take effect.
+
+03:21.520 --> 03:28.260
+We had languages like Scheme which we mentioned was one of the inspirations of JavaScript.
+
+03:28.390 --> 03:35.860
+We had languages like Smalltalk that really popularized this idea of object oriented programming as
+
+03:35.860 --> 03:37.900
+a way to organize this code.
+
+03:38.050 --> 03:46.390
+And then finally in the 80s as more and more best practices start to happen we started having more of
+
+03:46.390 --> 03:51.510
+a consolidation that is people agreeing on what some good patterns are.
+
+03:51.520 --> 03:57.280
+We had things like a modules that once again we'll talk about and we have a section on object oriented
+
+03:57.280 --> 04:00.470
+programming really started taking off.
+
+04:00.550 --> 04:11.170
+You see we had languages like C++ that came into existence and C++ was simply the original C language
+
+04:11.290 --> 04:19.990
+with classes classes which allowed us to do object oriented programming we had Objective C as the name
+
+04:19.990 --> 04:27.160
+suggest it was a C based language inspired by the idea of objects and object oriented programming and
+
+04:27.170 --> 04:29.870
+that really started to take effect.
+
+04:30.110 --> 04:36.590
+But at the same time in the background we also had functional programming in the 90s with the age of
+
+04:36.590 --> 04:37.090
+the Internet.
+
+04:37.100 --> 04:44.990
+We started having more languages Java became extremely popular with their object oriented paradigm.
+
+04:44.990 --> 04:52.430
+We had javascript that came as the language of the web and many other languages that we're familiar
+
+04:52.430 --> 05:00.440
+with now object oriented programming kept up with the trends and was really really popularized by things
+
+05:00.440 --> 05:01.790
+like Java.
+
+05:01.820 --> 05:10.670
+However now we see a trend towards functional programming languages becoming more and more popular mostly
+
+05:10.670 --> 05:17.960
+because of the way that the paradigm works and how well it works with concurrent and distributed programming.
+
+05:17.960 --> 05:24.830
+Again something that we'll touch on later on I highly recommend you go through this article is really
+
+05:24.830 --> 05:26.090
+really fascinating.
+
+05:26.090 --> 05:32.930
+But the whole point of this was that as the years progressed programmers as we worked more and more
+
+05:32.930 --> 05:40.160
+with code we started to develop an idea of what our good practices what should we do an object oriented
+
+05:40.160 --> 05:42.610
+programming and functional programming.
+
+05:42.740 --> 05:45.110
+Were the two strong paradigms that evolved.
+
+05:45.740 --> 05:51.230
+So by learning these two things we get to stand on shoulders of giants.
+
+05:51.230 --> 05:58.460
+We get to learn what are the good practices that all these programmers that came before us learned that
+
+05:58.670 --> 06:05.330
+they made mistakes and then they've changed in the way that they program so that we write better code.
+
+06:06.200 --> 06:08.810
+And in this section we're going to do just that.
+
+06:08.900 --> 06:11.330
+We're going to learn from everybody's mistake in the past.
+
+06:11.330 --> 06:17.270
+We're going to learn from all the ideas and all the ways that we can write better programs.
+
+06:17.270 --> 06:18.860
+I hope that gets you excited.
+
+06:18.860 --> 06:22.710
+It definitely does for me and I'll see you in the next video.
+
+06:22.720 --> 06:23.150
+Bye bye.

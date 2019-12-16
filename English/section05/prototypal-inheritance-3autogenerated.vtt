@@ -1,0 +1,253 @@
+WEBVTT
+
+00:00.860 --> 00:02.330
+Welcome back.
+
+00:02.330 --> 00:04.710
+Let's see if we can do something interesting here.
+
+00:04.730 --> 00:07.780
+I'm going to remove this line.
+
+00:07.940 --> 00:12.450
+Remember we just have dragon and lizard.
+
+00:12.500 --> 00:16.850
+We're going to once again inherit or create a prototype chain
+
+00:20.410 --> 00:22.960
+up to Dragon.
+
+00:23.050 --> 00:25.780
+And now here let's check something.
+
+00:25.870 --> 00:34.780
+I'm going to do a for in loop so I'm going to say let property in lizard that is looped through the
+
+00:34.780 --> 00:45.810
+properties and lizard and let's just simply say console dot log prop or property.
+
+00:45.940 --> 00:54.610
+If I run this I see that the Lizard has properties name fight fire and sink because we've created a
+
+00:54.610 --> 00:57.120
+prototype chain.
+
+00:57.300 --> 01:05.790
+Now the base object also gives us another interesting method that we can use called has own property.
+
+01:05.880 --> 01:19.460
+If I do if lizard DOT has own property and we give it a property name so let's just give it prop which
+
+01:19.460 --> 01:28.430
+we're gonna loop over and say if lizard has own property then we're going to console log.
+
+01:28.680 --> 01:30.060
+What does that mean.
+
+01:30.060 --> 01:38.190
+Well we're saying with this method only log whatever lizard has as its own property.
+
+01:38.370 --> 01:41.440
+Let's see what happens when I run this.
+
+01:41.510 --> 01:51.030
+I only get name and fight because lizard only has name and fight the other properties are inherited
+
+01:51.390 --> 01:54.590
+from up the prototype chain.
+
+01:54.610 --> 01:56.170
+How cool is that.
+
+01:56.200 --> 02:00.820
+So we're not actually copying these properties from the dragon.
+
+02:00.820 --> 02:08.530
+As I said before if the JavaScript engine doesn't find the property on that object it goes up the prototype
+
+02:08.530 --> 02:13.440
+chain for example the has own property is not part of lizard.
+
+02:13.510 --> 02:20.650
+So it goes up the prototype chain to Dragon and then up to the base object and finds his own property
+
+02:21.040 --> 02:28.460
+and we're able to use it and the beauty is that JavaScript looks for you through the prototype chain
+
+02:28.950 --> 02:30.770
+automatically.
+
+02:30.900 --> 02:37.710
+We don't have to do any weird dot underscore and score proto dot underscore proto proto to find has
+
+02:37.710 --> 02:38.650
+on property.
+
+02:38.910 --> 02:40.950
+It does it automatically.
+
+02:40.950 --> 02:47.650
+And I want to remind you this isn't the same thing as the scope chain that we talked about.
+
+02:47.700 --> 02:56.720
+Remember these are the prototype chains and these are the scope chains.
+
+02:56.730 --> 02:57.960
+Different color change right.
+
+02:57.960 --> 02:59.080
+So keep that in mind.
+
+02:59.160 --> 03:04.230
+They work in a similar fashion but they're two different things.
+
+03:04.230 --> 03:08.130
+Now before I tell you why this is so useful.
+
+03:08.400 --> 03:14.220
+If you haven't already figured it out I do want to warn you what I've just shown you.
+
+03:14.220 --> 03:16.620
+Well you shouldn't really attempt.
+
+03:16.620 --> 03:22.650
+You might be asking yourself Hey how come I haven't really seen this underscore underscore proto before.
+
+03:22.740 --> 03:25.530
+It seems pretty useful why don't we see it everywhere.
+
+03:25.530 --> 03:32.440
+Well this underscore underscore Prieto although we can use it here you shouldn't really use it.
+
+03:32.790 --> 03:34.840
+Actually you should never use it.
+
+03:34.860 --> 03:41.560
+It's bad for performance and there's different ways that we want to inherit when it comes to prototype
+
+03:41.560 --> 03:46.920
+or inheritance something that we're really going to dive deep into when we talk about object oriented
+
+03:46.920 --> 03:47.570
+programming.
+
+03:47.640 --> 03:55.130
+So we never want to manually assign the prototype chain and create that chain ourselves.
+
+03:55.200 --> 04:02.130
+It's going to well mess up our javascript compiler pretty badly but I wanted to show you just how it
+
+04:02.130 --> 04:02.750
+works.
+
+04:02.880 --> 04:09.290
+And when we start talking about object oriented programming we'll learn proper ways of doing this.
+
+04:09.300 --> 04:18.330
+Now let's talk about why this prototype all inheritance is useful let's think about this maybe pause
+
+04:18.330 --> 04:18.970
+the video.
+
+04:18.990 --> 04:20.610
+Think about it.
+
+04:20.730 --> 04:22.610
+Why is this useful.
+
+04:22.740 --> 04:30.060
+The fact that objects can share prototypes means that you can have objects with properties that are
+
+04:30.060 --> 04:35.370
+pointing to the same place in memory thus being more efficient.
+
+04:35.370 --> 04:38.360
+Imagine if we had a ton of lizards right.
+
+04:38.490 --> 04:46.500
+And we just copied all this functionality of the dragon onto the lizard into a different place in memory.
+
+04:46.560 --> 04:50.420
+That can get overwhelming fairly soon.
+
+04:50.610 --> 04:55.980
+Instead with prototype all inheritance instead of just copying all this functionality into different
+
+04:55.980 --> 04:59.440
+places in memory we have it in just one place.
+
+05:00.370 --> 05:08.980
+Anything that inherits from Dragon will just use this one instance of this method because the JavaScript
+
+05:08.980 --> 05:16.720
+engine is just going to look up the prototype chain which makes things really interesting right.
+
+05:16.840 --> 05:23.440
+For example this has own property that lives on the base object only lives a memory in one location
+
+05:24.070 --> 05:30.790
+because well we'll just use the prototype chain to look for it and everything that inherits from the
+
+05:30.790 --> 05:33.980
+base object will get access to this.
+
+05:34.000 --> 05:35.520
+How cool is that.
+
+05:35.740 --> 05:37.720
+We're being efficient with our code.
+
+05:37.840 --> 05:44.440
+We're not repeating ourselves and we're saving ourselves memory and by the way whenever we get undefined
+
+05:44.500 --> 05:59.530
+on something let's say in here I go lizard dot haha and I run this I get a type error or if I go as
+
+05:59.530 --> 06:08.000
+a prop. I get undefined whenever the JavaScript engine doesn't find anything up the prototype chain.
+
+06:08.180 --> 06:17.800
+We get these errors or undefined because it goes all the way up to the base object and then what happens
+
+06:17.920 --> 06:22.650
+after we get to the base object let's find out if I clear this.
+
+06:22.730 --> 06:33.330
+Let me refresh and say I have an object that will create it's gonna be an empty object and if we do
+
+06:33.330 --> 06:41.980
+object dot proto Well I get the base object where all objects are created from.
+
+06:42.220 --> 06:43.390
+But let me ask you this.
+
+06:43.480 --> 06:51.340
+What if I do dot underscore underscore Frodo again even higher up than this base object.
+
+06:51.400 --> 07:03.820
+What do you think will happen we get no that surprise you know means there's nothing there when javascript
+
+07:03.820 --> 07:12.400
+was created as a language undefined was used for well we don't have that variable we don't have something
+
+07:12.400 --> 07:20.200
+defined nor meant there's absolutely nothing there because of its prototype all inheritance nature we
+
+07:20.200 --> 07:28.300
+needed some way to say Hey pass the base object there's nothing there there's not some would call this
+
+07:28.330 --> 07:32.480
+a null pointer pointing to no it's the end of the chain.
+
+07:32.560 --> 07:34.750
+Sorry I got nothing for you there.
+
+07:34.840 --> 07:36.910
+Throw an error throw undefined.
+
+07:36.970 --> 07:39.280
+Say something's wrong we don't have that.
+
+07:39.720 --> 07:45.590
+All right let's take a break and get into more prototype or inheritance in the next video by.

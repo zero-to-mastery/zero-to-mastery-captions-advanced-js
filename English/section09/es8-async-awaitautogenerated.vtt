@@ -1,0 +1,517 @@
+WEBVTT
+
+00:02.000 --> 00:07.320
+The new feature in javascript that everyone is talking about lately async await.
+
+00:07.550 --> 00:12.840
+In this video we're going to learn what all the hype is about to get started.
+
+00:12.880 --> 00:19.380
+You must first know that async await is part of iOS 8 and is built on top of promises.
+
+00:20.020 --> 00:22.200
+If you aren't sure where promises are.
+
+00:22.300 --> 00:28.110
+Make sure you check out that video first now underneath the hood.
+
+00:28.110 --> 00:32.310
+An async function is a function that returns a promise.
+
+00:32.880 --> 00:38.100
+But the benefit of async await is that it makes code easier to read.
+
+00:38.130 --> 00:39.700
+Let me show you what I mean.
+
+00:39.780 --> 00:44.750
+This is a promise that we just made up.
+
+00:44.790 --> 00:47.370
+It's a move player function.
+
+00:47.370 --> 00:53.250
+Imagine we're designing a game and it has the distance plus the direction that the player moves.
+
+00:53.310 --> 00:59.880
+And if we want to change these we have moved player dot then move player again move player again move
+
+00:59.880 --> 01:01.050
+player again.
+
+01:01.170 --> 01:03.680
+Now this is asynchronous code.
+
+01:03.720 --> 01:08.520
+We know that move player is going to happen then this is going to happen then this than this.
+
+01:08.520 --> 01:16.410
+If we want to have any sort of action within here we can wrap it in brackets in console log at extractions
+
+01:16.800 --> 01:21.400
+all things they can do with promises with async await.
+
+01:21.440 --> 01:26.500
+It would look something like this.
+
+01:27.310 --> 01:36.160
+What's going on here the big benefit of async await is that it makes code easier to read and I know
+
+01:36.490 --> 01:41.220
+you're probably not thinking that right now because this is new syntax but just give it a chance.
+
+01:41.230 --> 01:48.920
+The goal with async await is to make code look synchronous a code that's asynchronous look synchronous.
+
+01:48.920 --> 01:56.680
+Now if you remember a promise in Javascript is kind of like an IOU I promise to return something to
+
+01:56.680 --> 02:02.460
+you in the future something like an ajax call with sizing an image.
+
+02:02.650 --> 02:05.110
+Getting some information from a database.
+
+02:05.170 --> 02:06.980
+These are all things that take time.
+
+02:07.180 --> 02:12.760
+Instead of waiting around on them we want to continue on with our lives and just habit let us know when
+
+02:12.760 --> 02:13.200
+it's done.
+
+02:13.780 --> 02:18.690
+But we're going to keep working on our own stuff whilst doing that in the background.
+
+02:18.700 --> 02:22.260
+We do it this way because that is how javascript works.
+
+02:22.330 --> 02:29.980
+If you remember in our how javascript works video we talked about JavaScript being single threat for
+
+02:30.010 --> 02:31.200
+programs to be efficient.
+
+02:31.210 --> 02:37.120
+We can use asynchronous programming to do these things so promises help us solve this and it looked
+
+02:37.900 --> 02:39.540
+like this.
+
+02:39.580 --> 02:46.990
+Now remember what I said at the beginning async await code are just promises underneath the hood.
+
+02:46.990 --> 02:55.630
+We call the syntactic sugar something that still does the same thing but is just different syntax to
+
+02:55.630 --> 03:04.510
+make it look prettier syntactic sugar and promises have this done then that you keep having to change
+
+03:05.740 --> 03:12.660
+async on the other hand has this async word in front of it and some await keywords.
+
+03:12.730 --> 03:20.080
+So let's go through what all this means although these two things do the same with the player search
+
+03:20.080 --> 03:20.550
+function.
+
+03:20.560 --> 03:28.900
+We first declare a function as async we let javascript know hey this is an async function and we declare
+
+03:28.900 --> 03:35.410
+it with the word function and the function name we now can do anything we want.
+
+03:35.410 --> 03:41.860
+Inside of this function but we have access to a new word because we used the async word to define this
+
+03:41.860 --> 03:42.590
+function.
+
+03:42.640 --> 03:53.240
+We have the Kuwait keyword and this keyword sets and we can remove this for now this await keyword says
+
+03:53.460 --> 04:01.340
+hey pause this function until I have something for you so we're awaiting their response.
+
+04:02.380 --> 04:08.920
+And you can use this awake keyword in front of any function that returns a promise which we know that
+
+04:08.920 --> 04:09.220
+move.
+
+04:09.220 --> 04:12.490
+Player does and once the promises resolved.
+
+04:12.490 --> 04:19.480
+Then the function moves to the next line and it awaits the next move and awaits the next move and awaits
+
+04:19.600 --> 04:20.840
+the next move.
+
+04:20.860 --> 04:26.950
+Now the cool thing above this is that instead of chaining it like this I can now assign just like a
+
+04:26.950 --> 04:34.420
+synchronous programming variable first to await this and I can assign second
+
+04:37.750 --> 04:44.980
+to await this and first and second will have the result of each function.
+
+04:45.040 --> 04:48.280
+But in a variable so it looks very synchronous.
+
+04:48.280 --> 04:50.830
+You're not using dot then you're not changing.
+
+04:50.980 --> 04:53.300
+You just have simple synchronous programming.
+
+04:53.320 --> 04:56.230
+You're waiting for this to happen then waiting for this to happen.
+
+04:57.130 --> 04:59.620
+But let's use a more realistic example.
+
+04:59.620 --> 05:05.350
+So he really understand this if we use our fetch function.
+
+05:05.350 --> 05:09.940
+And again if you remember fetch function that's a promise.
+
+05:11.220 --> 05:12.900
+You see that we get a promise.
+
+05:15.430 --> 05:26.090
+So what the first function if we use our favorite API resource Jason placeholder let's grab the users
+
+05:26.100 --> 05:27.120
+here.
+
+05:27.120 --> 05:34.850
+So this user's end point if we want to fetch something we did return a promise so we would do a dog.
+
+05:34.870 --> 05:39.770
+Dan response you would have to run it through.
+
+05:40.630 --> 05:48.440
+Jason and then finally dog then console DOT Blog.
+
+05:48.730 --> 05:51.980
+The response or the data that we get.
+
+05:52.010 --> 06:00.660
+So again if I copy and paste this into our console get a promise that's pending initially.
+
+06:00.820 --> 06:06.030
+Then it gets resolved and I get my users.
+
+06:06.100 --> 06:09.380
+Now how can we turn this into an async function again.
+
+06:09.550 --> 06:15.900
+The same feature will work the same but it will look a little bit cleaner.
+
+06:16.270 --> 06:17.980
+You'll be syntactic sugar.
+
+06:18.640 --> 06:25.100
+Well if you remember we have to declare a function with async keyword.
+
+06:25.600 --> 06:40.310
+And this function will say Fetch users and fetch users will have this inside of it but we can now use
+
+06:40.940 --> 06:43.530
+in front of anything that returns a promise.
+
+06:43.610 --> 06:46.770
+The await keyword.
+
+06:46.790 --> 06:56.840
+So now this function is going to pause until we get a response from fetch so I can say cost response.
+
+06:59.100 --> 07:13.760
+Equals await the fetch call and now instead of using the dot then I can say const data equals await
+
+07:14.720 --> 07:15.980
+response dot Jason.
+
+07:16.070 --> 07:21.700
+Because again response that Jason returns a promise I can put the away keyword.
+
+07:21.710 --> 07:31.420
+And then finally I can just console log data right and let's copy and paste this and see if it works.
+
+07:35.590 --> 07:36.110
+All right.
+
+07:36.150 --> 07:45.360
+Now I called the fetch user's function which is the async function and I made a bit of an error here.
+
+07:45.370 --> 07:49.440
+There's no response it's Chris short form response.
+
+07:49.440 --> 07:49.880
+There you go.
+
+07:49.880 --> 07:51.350
+Let's try that again.
+
+07:51.650 --> 08:01.850
+So let's refresh that copy and paste run the fetch user's function and look at that.
+
+08:02.140 --> 08:06.250
+We have our promise that got resolved.
+
+08:06.250 --> 08:18.220
+And we have our users nothing different from the promise but now we have a nice step by step synchronous
+
+08:18.220 --> 08:21.160
+looking code that says fetch this.
+
+08:21.220 --> 08:29.480
+Get a response then run it through the Jason method and then console log that and you might be thinking
+
+08:29.480 --> 08:33.710
+to yourself Is this actually prettier than what we had before.
+
+08:34.400 --> 08:35.860
+Let's remember what we had before
+
+08:43.940 --> 08:45.650
+this what we had before.
+
+08:45.770 --> 08:47.410
+This is what we have now.
+
+08:48.650 --> 08:53.750
+And some of you may argue that the first promise way it looks better and you know what.
+
+08:53.850 --> 08:55.320
+It's personal preference.
+
+08:55.320 --> 08:57.030
+And this is a simple example.
+
+08:57.030 --> 09:04.050
+So there are times where this actually looks a lot cleaner but I'm a big believer in doing what's easiest
+
+09:04.260 --> 09:07.530
+to read and understand for you and your teammates.
+
+09:07.560 --> 09:12.850
+Let's do one last example let's do something even more realistic.
+
+09:12.960 --> 09:15.920
+Let's say that we have a list of you or else.
+
+09:15.960 --> 09:24.540
+And this time we have the users the posts and albums from the Jason placeholder API and we want to run
+
+09:24.540 --> 09:25.850
+through them all.
+
+09:25.890 --> 09:30.310
+If you remember in our promises video we had something like this.
+
+09:30.540 --> 09:32.910
+Let's remove this so we can see it better.
+
+09:32.910 --> 09:40.320
+So we had something like this we did promise that all we mapped through that you or else we felt that
+
+09:40.320 --> 09:50.410
+you are URLs and responded with the Jason and then we returned the array and the array had users post
+
+09:50.500 --> 09:54.010
+albums and we also did a dot catch.
+
+09:54.050 --> 10:03.490
+So again just to make sure that this works not to copy this put it into our console and we see that
+
+10:03.490 --> 10:06.700
+we get our users posts and albums data.
+
+10:06.880 --> 10:11.110
+So that's working Let's convert this into an async function.
+
+10:11.320 --> 10:24.440
+Well let's start by doing a concert get data and this will be an async function and then once to point
+
+10:24.440 --> 10:29.540
+out that I did it this time with function expression instead of the way that we did it last time which
+
+10:29.540 --> 10:31.820
+was async function and then the function name.
+
+10:32.060 --> 10:35.620
+But I just want to show you both ways all right.
+
+10:35.650 --> 10:44.680
+So how can we do a promise that all Well if you remember we can now put the away keyword in front of
+
+10:44.770 --> 10:50.280
+any promise so we can put the awake key keyboard in front of promise that all.
+
+10:50.560 --> 11:01.870
+So I can say that concept and this is a little yes 6 magic of D structuring I can say users posts and
+
+11:01.930 --> 11:12.160
+albums that we're gonna receive is going to equal a weight and then they promise that all which we already
+
+11:12.160 --> 11:13.040
+have.
+
+11:13.090 --> 11:20.110
+So let's just copy that and we're going to copy the promise that all and place it on here.
+
+11:20.110 --> 11:20.750
+All right.
+
+11:20.830 --> 11:26.230
+And now we can just console log what we had.
+
+11:26.230 --> 11:33.400
+We can copy and paste right after we await all the promises.
+
+11:33.400 --> 11:42.580
+We'll have users posts I can spell and then albums and instead of array because we've done it with restructuring.
+
+11:42.850 --> 11:46.780
+We can just say users
+
+11:49.780 --> 11:50.470
+post
+
+11:53.290 --> 11:55.400
+and columns.
+
+11:55.530 --> 12:05.300
+All right so let's see if this works copy paste this and run get data
+
+12:08.290 --> 12:09.040
+and look at that.
+
+12:09.090 --> 12:12.800
+We got the exact same results.
+
+12:13.850 --> 12:22.370
+Very cool but there might be one thing that you noticed here that is in the promised way we have the
+
+12:22.490 --> 12:25.000
+DOT catch if any of these fail.
+
+12:25.040 --> 12:27.620
+We want to catch these errors.
+
+12:27.680 --> 12:31.610
+How can we do that with async await.
+
+12:31.610 --> 12:35.410
+Right now we're not catching any of these errors well.
+
+12:35.490 --> 12:41.310
+This is the part that not a lot of people are big fans of but it is something that once you get used
+
+12:41.310 --> 12:44.100
+to is not too bad.
+
+12:44.580 --> 12:51.180
+Jargon script has something called try catch blocks and that is when it sees the try.
+
+12:51.330 --> 12:55.800
+Word is just going to automatically run Whatever's inside of it.
+
+12:55.800 --> 13:01.750
+In our case all of this block we wanted to run in a try.
+
+13:01.770 --> 13:08.630
+BLOCK And then try comes with a catch block as well.
+
+13:09.570 --> 13:15.310
+So try catch block within the catch if anything fails within here.
+
+13:15.720 --> 13:17.510
+Well we can catch it in here.
+
+13:17.640 --> 13:21.880
+So we can just do console dialog loops.
+
+13:21.910 --> 13:27.150
+So now let's say I misspelled one of the URLs.
+
+13:27.280 --> 13:28.570
+Copy this.
+
+13:28.610 --> 13:29.840
+Straight out.
+
+13:30.040 --> 13:37.890
+We'll have the new URLs clear that New York URLs with the misspelled you URL for one of them.
+
+13:37.900 --> 13:44.890
+We're going to copy and paste that get data and you'll see only here that we get a syntax here and that
+
+13:44.890 --> 13:53.500
+is because one thing you have to remember with catch is that the catch receives an error.
+
+13:53.500 --> 13:56.080
+In this area you can console log it if you want.
+
+13:56.170 --> 14:00.050
+So let's just console log and then try this again.
+
+14:01.520 --> 14:03.320
+This time we'll just call this one.
+
+14:03.350 --> 14:04.170
+Get Data.
+
+14:04.190 --> 14:06.010
+What.
+
+14:06.030 --> 14:07.250
+Perfect.
+
+14:07.260 --> 14:16.730
+Now if I clean this up a bit and do get data one with the try catch block I get loops type error failed
+
+14:16.750 --> 14:17.460
+to fetch.
+
+14:17.500 --> 14:27.200
+So I get the cache block with the air just like we did with promise dot all just using promises.
+
+14:27.420 --> 14:28.410
+And there you have it.
+
+14:28.410 --> 14:35.610
+That's it async await although intimidating at first because there is a bit of new syntax actually makes
+
+14:35.610 --> 14:40.230
+things quite nice and synchronous looking.
+
+14:40.230 --> 14:48.720
+We simply have a variable that we assign the weight promise to and then the function pauses there until
+
+14:48.720 --> 14:53.650
+the promise returns and then it continues on with console logging.
+
+14:53.880 --> 14:59.730
+You just have to remember the try catch blocks here to catch your errors and that's it.
+
+14:59.730 --> 15:02.300
+You're now an async await master.
+
+15:02.370 --> 15:05.160
+You can use whichever one you prefer.
+
+15:05.160 --> 15:12.390
+Like I said at the end of the day use promises or async await functions based on whichever one is simpler
+
+15:12.390 --> 15:18.760
+for you and your team but hopefully when you control both of these you're now a lot more comfortable
+
+15:19.690 --> 15:21.570
+I'll see in the next one by.

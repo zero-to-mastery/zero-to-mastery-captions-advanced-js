@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.960 --> 00:02.370
+Welcome back.
+
+00:02.370 --> 00:08.190
+There are quite a few data structures that you may be asked in an entry and we saw how many of them
+
+00:08.220 --> 00:10.110
+there are on that wikipedia page.
+
+00:10.290 --> 00:14.750
+But luckily for you the list isn't actually that intimidating.
+
+00:14.760 --> 00:18.350
+All you need to learn are these ones over here.
+
+00:18.390 --> 00:19.490
+These are used.
+
+00:19.500 --> 00:25.350
+I would say 90 percent of the time and this is what we're going to talk about in our course.
+
+00:25.350 --> 00:30.770
+Now there may be specific ones within these groups and each one of them has tradeoffs.
+
+00:30.960 --> 00:36.780
+But as long as you learn these and you learn when and why you should use them then you're going to be
+
+00:36.780 --> 00:38.700
+miles ahead of most people.
+
+00:38.790 --> 00:44.410
+It's gonna be a lot of fun now before we get going.
+
+00:44.410 --> 00:46.790
+I want to note one last thing.
+
+00:46.990 --> 00:56.530
+You see each language has their own data types or built in data types javascript for example has numbers
+
+00:57.220 --> 01:09.540
+strings has billions which are true false and then some strange ones like undefined and each language
+
+01:09.540 --> 01:15.120
+has data structures to organize these data types.
+
+01:15.120 --> 01:23.930
+So for example in JavaScript we have arrays and objects that we use and they are data types.
+
+01:23.970 --> 01:32.220
+It allows us to structure and organize information such as our primitive data types or even hold more
+
+01:32.220 --> 01:37.590
+complex ones like having an array that contains multiple objects.
+
+01:37.590 --> 01:43.500
+And we're going to talk about this in more detail but I want to show you that we do have different languages
+
+01:43.560 --> 01:47.760
+that have different access to some data structures.
+
+01:47.790 --> 01:55.080
+You can see over here some of the other languages that we can use in this course and whether they have
+
+01:55.080 --> 01:56.220
+them available.
+
+01:56.310 --> 02:01.940
+We see that Java has arrays has linked lists stacks.
+
+02:02.310 --> 02:07.020
+We have priority to cues and many other types.
+
+02:07.080 --> 02:15.240
+Now does that mean that if we're using JavaScript we can only use arrays and objects.
+
+02:15.240 --> 02:17.940
+Well no not really.
+
+02:18.330 --> 02:21.980
+Although these languages come with data structures built in.
+
+02:22.050 --> 02:30.660
+We can also built our own in most languages have enough data structures and data types for us to build
+
+02:31.740 --> 02:42.720
+and create our own data structures so if javascript doesn't have stacks Well we can build one now to
+
+02:42.720 --> 02:47.260
+finish this section and finally dive into our first data structure.
+
+02:47.300 --> 02:53.480
+I wanted to just remind you that we have a little map over here of what we need to know for the coding
+
+02:53.480 --> 02:54.440
+interview.
+
+02:54.440 --> 03:02.090
+Now in this map I have a little present emoji next to each one of the data structures that we're going
+
+03:02.090 --> 03:09.060
+to talk about as you can see there aren't that many of them and many of them are quite related or are
+
+03:09.060 --> 03:17.030
+children of the other but use this as a reference for you to just draw a map of how things are connected
+
+03:17.270 --> 03:23.310
+and what the data structures are that we're going to talk about but let's get our hands dirty with our
+
+03:23.310 --> 03:24.880
+first data structure.
+
+03:24.960 --> 03:26.790
+I'll see in the next one by.

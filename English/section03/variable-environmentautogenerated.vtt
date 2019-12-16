@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.970 --> 00:02.140
+Welcome back.
+
+00:02.140 --> 00:10.240
+We learned that there can be many execution context but you might be asking yourself what about variables
+
+00:10.390 --> 00:16.470
+that are created inside of these individual execution context.
+
+00:16.870 --> 00:22.320
+That is variables inside of functions and we have a place for that.
+
+00:22.660 --> 00:31.240
+On top of the execution context of this in arguments we also have a little space over here called variable
+
+00:31.510 --> 00:32.740
+environment.
+
+00:32.740 --> 00:38.560
+This is a place that variables can live in in these different stack worlds.
+
+00:38.560 --> 00:45.430
+I mean they all technically live in our JavaScript engine memory but they need to know how they relate
+
+00:45.430 --> 00:46.760
+to one another.
+
+00:46.840 --> 00:54.070
+Some functions have access to certain variables and some don't remember what I said before.
+
+00:54.430 --> 01:01.830
+You can think of each execution context like its own little planet its own little universe.
+
+01:02.170 --> 01:07.640
+These worlds don't really communicate with each other or know of each other.
+
+01:07.870 --> 01:10.430
+Well kind of for now.
+
+01:10.450 --> 01:17.940
+So what type of thing do we have in this variable environment let's have a look at a little example
+
+01:18.720 --> 01:30.270
+let's say I create two functions we have function to that has variable is valid we're not assigning
+
+01:30.270 --> 01:40.330
+it to anything we're just declaring this variable we have function one in this function will have once
+
+01:40.330 --> 01:53.190
+again variable is valid and we'll give that valid equal to true and then we'll also call the function
+
+01:53.310 --> 02:05.750
+two in here finally we'll also add a variable is valid here we'll say false in here and then finally
+
+02:05.750 --> 02:13.530
+on line eleven we'll call the one function all right that looks extremely confusing but let's go step
+
+02:13.530 --> 02:21.270
+by step and see what happens when it comes to variable environments the first thing that happens while
+
+02:21.330 --> 02:23.370
+we have function declarations.
+
+02:23.370 --> 02:31.710
+So these get hoisted and put at the top allocating memory space for them we also have is valid which
+
+02:32.430 --> 02:42.640
+is a global variable and is assigned an undefined when it gets hosted then we start running or executing
+
+02:42.670 --> 02:44.740
+our code during the execution phase.
+
+02:44.950 --> 02:51.370
+The very first step is line 10 where we assign false to is valid.
+
+02:51.370 --> 02:57.550
+So in the memory space we change on defined to now false.
+
+02:57.550 --> 03:00.370
+So that is valid equals to false.
+
+03:00.370 --> 03:09.790
+The second step is line eleven where we run one we invoke the function in a new execution context is
+
+03:09.790 --> 03:17.410
+created on top of the step if we can think about it like this we just created a new execution context
+
+03:19.090 --> 03:29.060
+the third step is while we go into the function and we have line six over here where we have the variable
+
+03:29.330 --> 03:39.260
+is valid that will be put into the new execution context that is this variable will be put in the local
+
+03:40.220 --> 03:49.460
+environment or the variable environment and then we run function too.
+
+03:49.580 --> 03:53.560
+So a new execution context is created.
+
+03:56.430 --> 04:08.930
+And on top of the stack we add to so now we go into the two world and in the two world we have a new
+
+04:10.070 --> 04:11.870
+variable that's being declared.
+
+04:12.020 --> 04:18.640
+Initially it's undefined but then when we actually see this while nothing's being assigned to it.
+
+04:18.680 --> 04:30.780
+So this remains undefined so let's think about this in terms of variable environment in the global environment.
+
+04:30.940 --> 04:38.300
+That is remember at the very bottom of the stack we have the global execution context.
+
+04:38.440 --> 04:42.580
+While we have variable is valid equals 2 FALSE.
+
+04:42.580 --> 04:51.950
+So this is going to have false as its variable in the one execution context.
+
+04:52.200 --> 05:00.300
+The local environment or variable environment is going to have a variable called is valid that is going
+
+05:00.300 --> 05:01.990
+to equal to true.
+
+05:02.160 --> 05:08.230
+It doesn't really care about what's happening in the global execution environment or the global world.
+
+05:08.280 --> 05:11.970
+It only cares about what's inside it for itself.
+
+05:12.090 --> 05:21.030
+When we go to two well to we already have is valid as well but this is valid is going to be undefined.
+
+05:22.050 --> 05:30.710
+So each of these worlds carry information or variables and data that they have access to.
+
+05:30.800 --> 05:40.850
+And when we finish executing the functions that is line two gets done in function too well we pop off
+
+05:41.630 --> 05:50.330
+this off the stack and that memory space for is valid is gone and then we pop off one and that memory
+
+05:50.330 --> 05:53.190
+space for is valid is also gone.
+
+05:53.540 --> 06:01.880
+And then finally once we're done with the year we can clear everything and all the memory is gone from
+
+06:01.880 --> 06:03.510
+our program.
+
+06:03.580 --> 06:11.140
+Now this variable environment a place where we store information and by the way when I say store information
+
+06:11.650 --> 06:19.000
+some of this information can be on the actual call stack or the execution context remember this is just
+
+06:19.000 --> 06:25.630
+a call stack or it could be a reference to somewhere in the heap in the memory heap that perhaps we
+
+06:25.630 --> 06:27.920
+might have an object.
+
+06:28.010 --> 06:34.910
+Now this is something we're gonna use in some upcoming videos but keep in mind each execution context
+
+06:35.090 --> 06:41.490
+has its own variable environment let's learn more about this in the next video by.

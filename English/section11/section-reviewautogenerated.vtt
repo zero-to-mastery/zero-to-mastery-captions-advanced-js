@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.760 --> 00:09.940
+For programmers errors aren't just mistakes and just letting errors go through isn't often the best
+
+00:10.120 --> 00:11.490
+you can do.
+
+00:11.500 --> 00:19.780
+I mean sometimes yes those are unavoidable such as syntax error or reference errors and on handled exceptions
+
+00:19.870 --> 00:24.730
+like these is a good way to see that a program is broken.
+
+00:24.730 --> 00:32.050
+For example on the browser we'll get in our console an error with the stack trace in node.
+
+00:32.050 --> 00:39.810
+Once again we'll get an error but a better way to think about errors is that expecting these errors
+
+00:39.810 --> 00:48.330
+to happen during runtime and handling them correctly is a better strategy than having these unexpected
+
+00:48.330 --> 00:49.620
+things happen.
+
+00:49.650 --> 00:53.960
+So try to handle your errors to the best of your ability.
+
+00:54.000 --> 01:00.720
+It's unavoidable that some of them will pass through and you won't be able to catch everything but by
+
+01:00.720 --> 01:09.660
+using this new ability to catch errors you can perhaps make errors fail gracefully so that you have
+
+01:09.660 --> 01:12.540
+control over why your program does.
+
+01:12.540 --> 01:15.680
+Thus making our code more predictable.
+
+01:15.920 --> 01:17.140
+I'll see in the next one.
+
+01:17.470 --> 01:17.700
+Bobby.

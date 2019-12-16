@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.680 --> 00:09.060
+Welcome back javascript was created in 1995 five but the Netscape web browser right over here it was
+
+00:09.070 --> 00:13.660
+a way for them to be able to add actions to Web sites.
+
+00:13.660 --> 00:18.440
+Think of JavaScript as the verb in anything you do on a Web site.
+
+00:18.640 --> 00:19.720
+You tweet.
+
+00:19.720 --> 00:22.070
+You play a YouTube video.
+
+00:22.150 --> 00:24.600
+You sign up for a user name.
+
+00:24.610 --> 00:30.020
+These are all actions we take on Web sites made possible through javascript.
+
+00:30.100 --> 00:36.820
+In 1995 it was a way for this browser Netscape to beat the competition which were other browsers at
+
+00:36.820 --> 00:40.660
+the time because at the time Netscape was the most popular.
+
+00:40.930 --> 00:45.640
+Other browsers started adopting their own version of JavaScript so that Web sites will work on their
+
+00:45.640 --> 00:51.400
+browsers as well and thus less people switch over to their browsers.
+
+00:51.410 --> 00:53.570
+Can you guess what happened next.
+
+00:53.570 --> 00:58.250
+Well every browser had their own idea of what javascript was.
+
+00:58.310 --> 01:00.260
+So there was no standard.
+
+01:00.260 --> 01:06.500
+Eventually a standard had to be created to make sure that everyone had the same idea of what javascript
+
+01:06.530 --> 01:14.230
+was so that web developers can build one Web site and have it work on all browsers.
+
+01:14.230 --> 01:16.240
+This standard was called Acme script.
+
+01:16.240 --> 01:23.590
+So yes javascript and my script can be used interchangeably and you will hear both of these a lot but
+
+01:23.860 --> 01:26.100
+it's the same language.
+
+01:26.200 --> 01:32.890
+Now this browser compatibility issue browsers having their own teams their own schedule and their own
+
+01:32.890 --> 01:33.790
+code.
+
+01:33.790 --> 01:35.050
+Sound familiar.
+
+01:35.890 --> 01:41.910
+Yep if you remember it's the same thing that happened with HCM Mel and CSX.
+
+01:41.980 --> 01:45.880
+It's the same issue that we keep having over and over.
+
+01:45.880 --> 01:49.580
+We cover this topic in web developer fundamental part two.
+
+01:49.750 --> 01:53.600
+You see it's always a big problem.
+
+01:53.800 --> 02:01.420
+Make sure that all browsers have the same understanding of what our real a shemale see CSX and JavaScript
+
+02:01.420 --> 02:08.640
+should be so that when we send each one of those files we don't have to write one specific for each
+
+02:08.640 --> 02:14.630
+browser and just like AC million CSX javascript is evolving.
+
+02:14.690 --> 02:21.710
+So there are new things that we can do now that you weren't able to do in 1995 with JavaScript in the
+
+02:21.710 --> 02:25.190
+E6 video section later on in the course.
+
+02:25.190 --> 02:27.080
+We will talk about these new features.
+
+02:27.080 --> 02:28.920
+So don't worry.
+
+02:29.000 --> 02:32.060
+Now let's take a look at what javascript does.
+
+02:32.060 --> 02:37.570
+We can open up the browser and I have you Demi over here.
+
+02:37.680 --> 02:40.250
+Well you Demi uses a lot of Javascript.
+
+02:40.260 --> 02:48.580
+I mean clicking on a course adding it to cart liking a post all these things.
+
+02:48.590 --> 02:51.690
+Well they're all javascript.
+
+02:51.690 --> 02:57.780
+Even if you open categories over here you see this dropdown and I can select things and there's actions
+
+02:57.960 --> 03:00.370
+constantly happening throughout the Web site.
+
+03:00.630 --> 03:07.640
+That's all javascript but it's not just the Web they can use javascript on Instagram.
+
+03:07.850 --> 03:11.780
+Well Instagram uses javascript.
+
+03:11.810 --> 03:13.130
+What about something else.
+
+03:13.130 --> 03:16.240
+Maybe virtual reality.
+
+03:16.250 --> 03:17.570
+Yeah you can do that too.
+
+03:17.570 --> 03:24.910
+You can do VR VR games VR apps with JavaScript.
+
+03:24.950 --> 03:27.320
+That's that's pretty cool what else can javascript do.
+
+03:27.560 --> 03:35.180
+Well you can actually program drones with JavaScript and control them from your wee remote.
+
+03:35.180 --> 03:39.220
+If you wanted to what about robotics.
+
+03:39.250 --> 03:39.630
+Yeah.
+
+03:39.670 --> 03:48.890
+This guy built a robot so he can control from his web browser.
+
+03:48.910 --> 03:49.680
+How cool is that.
+
+03:51.770 --> 03:58.730
+Now remember no J.S. we talked about this slide at the beginning of the course and how we're going to
+
+03:58.730 --> 03:59.660
+learn these topics.
+
+03:59.660 --> 04:07.680
+Well some of this is able to be done because of it but no G S is pretty much javascript it is javascript.
+
+04:07.760 --> 04:13.640
+So you learn Javascript you can pick up back and stuff very easily and then know j a section of this
+
+04:13.640 --> 04:15.320
+course will be a breeze.
+
+04:15.320 --> 04:16.680
+It's not a new language.
+
+04:16.700 --> 04:21.470
+You'll learn so as express so is react.
+
+04:21.470 --> 04:24.160
+So this is why javascript is so important.
+
+04:24.200 --> 04:28.350
+What we will learn here will take you very far in the rest of your career.
+
+04:28.370 --> 04:34.840
+This is one skill that really opens up a lot of possibilities here's the beauty of JavaScript though
+
+04:35.110 --> 04:44.260
+and any other programming languages because what is javascript really it's it's a file a file that you
+
+04:44.260 --> 04:46.830
+can write instructions to a computer.
+
+04:46.960 --> 04:53.230
+In the example of a robot arm all you had to do is write if I press this button move arm to the right.
+
+04:53.230 --> 04:59.040
+If I press this button move arm to the left it all looks extremely complicated.
+
+04:59.040 --> 05:05.520
+But as you will see no matter how complex a program let's say an online game like World of Warcraft.
+
+05:05.880 --> 05:08.760
+Well everything is built one block at a time.
+
+05:08.790 --> 05:15.670
+One simple logic at a time in the next section we're going to start writing our first JavaScript in
+
+05:15.670 --> 05:17.930
+our first simple pieces of logic.
+
+05:18.100 --> 05:20.740
+Don't let a fool you though although it may look simple.
+
+05:20.740 --> 05:27.680
+These are the building blocks that allow you to build big web apps like Facebook or Google exciting
+
+05:27.680 --> 05:30.080
+things are going to happen with your new found power.
+
+05:30.080 --> 05:33.190
+So I'll see you in the next one by.

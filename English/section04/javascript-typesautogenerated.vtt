@@ -1,0 +1,529 @@
+WEBVTT
+
+00:00.740 --> 00:01.920
+Welcome back.
+
+00:01.940 --> 00:06.620
+Let's talk about the different types that we have in JavaScript.
+
+00:06.620 --> 00:09.620
+And luckily for us there aren't that many.
+
+00:09.680 --> 00:11.600
+There's only seven of them.
+
+00:11.600 --> 00:15.340
+We have numbers like five.
+
+00:15.590 --> 00:19.120
+We have billions like true false.
+
+00:19.130 --> 00:24.540
+We have strings like to be or not to be.
+
+00:24.650 --> 00:29.020
+We have undefined which we've talked about.
+
+00:29.090 --> 00:31.730
+We also have something called null.
+
+00:31.820 --> 00:37.060
+We have another special one that came with yes six which is symbol.
+
+00:37.060 --> 00:40.920
+And in here for now let's just say just me.
+
+00:41.070 --> 00:49.800
+And then finally we have objects one two three four five six seven and you're looking at the list and
+
+00:49.800 --> 00:53.950
+thinking Andre I think you've missed a bunch of others.
+
+00:53.970 --> 00:57.060
+Where are arrays or functions.
+
+00:57.120 --> 00:59.100
+Well before I get into that.
+
+00:59.490 --> 01:09.810
+Luckily for us JavaScript has an operator called type of that tells us the type of an item.
+
+01:09.810 --> 01:15.390
+So let me comment this out and find out what the type of five is.
+
+01:15.390 --> 01:17.100
+It's a number.
+
+01:17.100 --> 01:17.400
+All right.
+
+01:17.400 --> 01:18.380
+That makes sense.
+
+01:18.390 --> 01:23.990
+What about type of true around this.
+
+01:24.060 --> 01:25.690
+It's boolean.
+
+01:25.980 --> 01:26.310
+All right.
+
+01:26.580 --> 01:27.580
+So far so good.
+
+01:27.630 --> 01:28.860
+Nice and easy.
+
+01:28.860 --> 01:34.670
+What if I do type of To Be or Not to be.
+
+01:34.850 --> 01:36.440
+That's a string.
+
+01:36.440 --> 01:37.940
+Easy peasy.
+
+01:37.940 --> 01:40.820
+What about type of undefined.
+
+01:41.120 --> 01:44.150
+Well that's undefined.
+
+01:44.180 --> 01:47.460
+It's a special value in javascript on defined.
+
+01:47.680 --> 01:53.590
+What about type of No.
+
+01:53.700 --> 01:56.330
+Well what just happened here.
+
+01:56.730 --> 01:58.830
+Noel is an object.
+
+01:58.830 --> 01:59.750
+What.
+
+02:00.030 --> 02:04.260
+This is something that we're going to talk about a little bit more when we get into the object oriented
+
+02:04.260 --> 02:06.010
+programming part of the course.
+
+02:06.240 --> 02:11.200
+But this is actually a mistake I'm not making this up.
+
+02:11.230 --> 02:12.390
+It's true.
+
+02:12.520 --> 02:18.090
+Even the creator of the language Brendan Eich who created javascript acknowledged it.
+
+02:18.280 --> 02:20.740
+Remember no programming language is perfect.
+
+02:20.740 --> 02:25.650
+We all write programs that well can never be bug free.
+
+02:25.780 --> 02:31.350
+And this is one of those cases that this should be not right.
+
+02:31.390 --> 02:33.660
+It's an actual type in JavaScript.
+
+02:33.670 --> 02:40.870
+It's a what we call a primitive type but when we run the type of no operator we get object.
+
+02:40.870 --> 02:47.980
+There was actually a proposal to fix this but because there's so much legacy code that depends on this
+
+02:48.070 --> 02:54.030
+type of know being object that well they couldn't really change it because they'll break a lot of programs.
+
+02:54.040 --> 02:56.680
+So for now we're stuck with that.
+
+02:56.680 --> 03:00.760
+And trust me there's a lot more we are things like that in javascript.
+
+03:00.760 --> 03:02.790
+So let's get over to the next one.
+
+03:02.920 --> 03:07.080
+Let's look at type of symbol if I hit run.
+
+03:07.450 --> 03:17.640
+It's a symbol now a symbol like I said is new in E6 and it creates something unique for us.
+
+03:17.770 --> 03:19.700
+That is a symbol value.
+
+03:19.750 --> 03:29.130
+In this case just me is useful for identifying an object so symbols are usually used for object properties
+
+03:30.030 --> 03:33.750
+so that the objects property is unique.
+
+03:33.840 --> 03:36.050
+We're not going to concern ourselves too much with this.
+
+03:36.060 --> 03:41.760
+You can read up on it if you want but it's just a new type that we have that allow us to do some interesting
+
+03:41.760 --> 03:44.140
+things with object properties.
+
+03:44.190 --> 03:44.710
+All right.
+
+03:44.790 --> 03:48.480
+Last one type of actually before we get to type of.
+
+03:49.260 --> 03:53.330
+Let's go back here undefined and no.
+
+03:53.730 --> 03:56.410
+What are the differences between the two.
+
+03:56.430 --> 04:01.350
+Well undefined is the absence of a definition.
+
+04:01.470 --> 04:07.590
+So it's used as the default value when the JavaScript engine initialize is our variables.
+
+04:07.590 --> 04:08.790
+Right.
+
+04:08.790 --> 04:15.330
+Remember our talk about hoisting what we use undefined for anything like that or even cases where let's
+
+04:15.330 --> 04:21.450
+say functions return undefined when they don't return anything there's no return keyword in a function
+
+04:22.080 --> 04:27.660
+or there's missing properties of an object undefined simply means well there's a variable there but
+
+04:27.900 --> 04:30.000
+there's nothing there.
+
+04:30.000 --> 04:30.500
+No.
+
+04:30.510 --> 04:34.970
+On the other hand is the absence of value.
+
+04:35.100 --> 04:38.510
+It means there's no value there.
+
+04:38.520 --> 04:45.660
+I know that distinction is a little bit hard to get remember undefined is the absence of definition
+
+04:46.650 --> 04:49.300
+null is an absence of value.
+
+04:49.500 --> 04:51.230
+There is no value there.
+
+04:51.420 --> 04:54.450
+And this is something we'll get into a little bit later on in the course.
+
+04:54.450 --> 04:54.780
+All right.
+
+04:54.810 --> 04:55.470
+Where are we.
+
+04:55.590 --> 04:57.390
+Back to objects.
+
+04:57.390 --> 05:04.400
+If I do typeof here and I hit run it's an object nice.
+
+05:04.430 --> 05:06.000
+That makes sense.
+
+05:06.020 --> 05:06.260
+OK.
+
+05:06.260 --> 05:09.060
+So where are the race.
+
+05:09.080 --> 05:10.110
+Let's have a look.
+
+05:10.160 --> 05:16.730
+If I do type of array that's an object.
+
+05:17.370 --> 05:17.620
+OK.
+
+05:17.640 --> 05:23.700
+What about type of let's say a function like this.
+
+05:23.960 --> 05:30.030
+If I run this that's a function well.
+
+05:30.060 --> 05:33.980
+So Andre did you just teach us something completely wrong.
+
+05:33.990 --> 05:39.310
+There's clearly a type of function in javascript right.
+
+05:39.330 --> 05:42.410
+Well technically no.
+
+05:42.450 --> 05:45.910
+And for now I need you to trust me on something.
+
+05:46.040 --> 05:50.210
+I need you to trust me that this diagram makes sense.
+
+05:50.270 --> 05:55.810
+That is arrays and functions are objects.
+
+05:55.850 --> 05:59.650
+That's something that we're gonna get back and do later on in the course.
+
+05:59.900 --> 06:02.440
+And we're really going to define what this means.
+
+06:02.540 --> 06:09.620
+But for now just remember functions and Arrays are objects.
+
+06:09.620 --> 06:18.470
+And even though type of function gives us a function underneath the hood a function in javascript is
+
+06:18.530 --> 06:20.370
+just an object.
+
+06:20.390 --> 06:20.640
+All right.
+
+06:20.660 --> 06:22.030
+Still don't trust me.
+
+06:22.070 --> 06:28.260
+What if I just do something like this by comment on this code and I create a function.
+
+06:28.250 --> 06:33.770
+Function a and in here I'll say return 5.
+
+06:34.170 --> 06:42.750
+The simple function but now can I do something like this.
+
+06:42.840 --> 06:51.990
+Can I add a property to a function just like I can with an object with a dot notation if what I told
+
+06:51.990 --> 06:57.950
+you is correct and functions are just simply objects that should make sense right.
+
+06:57.960 --> 07:01.400
+This should work well let's find out.
+
+07:01.400 --> 07:05.030
+Let's console log a dot.
+
+07:05.090 --> 07:05.790
+Hi.
+
+07:06.140 --> 07:10.270
+If I run this all right it's working.
+
+07:10.990 --> 07:16.670
+So this is something we'll come back to but for now at least maybe 80 percent.
+
+07:16.690 --> 07:22.580
+You're convinced that functions are objects but let's get back to what we're talking about.
+
+07:25.080 --> 07:31.980
+We have the type of operator here that tells us what type something is and in JavaScript.
+
+07:31.980 --> 07:34.740
+We have two distinctions.
+
+07:34.740 --> 07:42.950
+We have the primitive types which are right over here and then we have the non primitive types.
+
+07:43.020 --> 07:53.030
+Now what's the difference between the two in JavaScript all types other than the object type are all
+
+07:53.030 --> 07:54.530
+primitives.
+
+07:54.530 --> 07:57.580
+So what is a primitive type.
+
+07:57.610 --> 08:07.450
+It's a data that only represents a single value so that means this primitive five well in memory the
+
+08:07.450 --> 08:10.510
+value is five in memory.
+
+08:10.510 --> 08:12.850
+The value is true in memory.
+
+08:12.850 --> 08:16.750
+The value is this piece of string undefined null symbol.
+
+08:16.800 --> 08:27.290
+There's no ambiguity about it a variable of a primitive type directly contains the value of that type.
+
+08:27.420 --> 08:28.170
+Think of it this way.
+
+08:28.200 --> 08:33.640
+They're kind of like atoms where they can't really be broken down into any smaller parts.
+
+08:33.690 --> 08:36.330
+5 is just 5 in memory.
+
+08:36.330 --> 08:46.620
+Null is just null and memory symbol just me is just a symbol that has just me in memory a non primitive
+
+08:46.620 --> 08:51.550
+type doesn't contain the actual value directly.
+
+08:51.630 --> 08:53.060
+What does that mean.
+
+08:53.070 --> 09:03.140
+Well if I do something like an object that equals let's say an object that has property a equal to Tom.
+
+09:03.180 --> 09:09.670
+This object doesn't actually contain the value here directly.
+
+09:09.810 --> 09:19.010
+Instead it has a reference similar to a pointer to somewhere a memory that the object is health.
+
+09:19.020 --> 09:27.000
+Now I know that's still a little bit hard to grasp and we're gonna have a video coming up on pass by
+
+09:27.000 --> 09:34.590
+reference versus pass by value where we discuss the difference here a little bit more but before we
+
+09:34.590 --> 09:38.090
+get into that video I want to finish off with one last thing.
+
+09:39.070 --> 09:49.010
+That is the idea of JavaScript built in objects and you can see some of the built in objects here.
+
+09:49.040 --> 09:56.160
+Now when I say built in objects I don't mean global objects like we saw when we added things to the
+
+09:56.160 --> 09:57.650
+window object.
+
+09:57.780 --> 10:01.360
+No standard built in objects come with the language.
+
+10:01.380 --> 10:03.360
+It's part of the language.
+
+10:03.510 --> 10:09.710
+And if I scroll through here we see some familiar ones like infinity not a number on defined.
+
+10:09.900 --> 10:14.790
+If we keep scrolling we see error we see symbol.
+
+10:14.880 --> 10:21.860
+We see no math date and I'll link to this MDMA page so you can take a look for yourself.
+
+10:21.870 --> 10:29.150
+These are built in objects that come with javascript but you might be asking yourself why do we have
+
+10:29.160 --> 10:31.320
+things like well boolean.
+
+10:31.470 --> 10:33.940
+Why do we have things like No.
+
+10:34.060 --> 10:34.480
+What do we have.
+
+10:34.480 --> 10:36.020
+Things like string.
+
+10:36.220 --> 10:43.790
+Do we just say that those are primitives those aren't objects.
+
+10:44.050 --> 10:45.040
+Right.
+
+10:45.130 --> 10:50.110
+Well you may have heard the term everything in Javascript is an object.
+
+10:50.110 --> 10:51.430
+And bear with me here.
+
+10:51.460 --> 10:52.990
+This gets a little tricky.
+
+10:53.020 --> 10:59.410
+Many things that we interact with directly in JavaScript such just strings numbers ebullience which
+
+10:59.470 --> 11:08.320
+are primitive and not objects get a little bit complicated by the fact that these primitives have object
+
+11:08.650 --> 11:18.030
+wrappers like string or number or bullying.
+
+11:19.350 --> 11:29.600
+Let me demonstrate for you what these two for example if I do true here and I do two string and I run
+
+11:29.600 --> 11:37.090
+this I get true in string for why is that.
+
+11:37.280 --> 11:39.650
+This is a primitive type.
+
+11:39.650 --> 11:46.520
+Why is it acting like an object by using Don notation and doing to string.
+
+11:46.750 --> 11:55.270
+You see this is where javascript gets a little sneaky it silently creates a wrapper object around this
+
+11:55.270 --> 11:56.090
+true.
+
+11:56.110 --> 12:06.350
+Something like this when we try and attempt to access a property on a primitive.
+
+12:06.510 --> 12:14.160
+So behind the scenes it's almost like it's wrapping this in boolean so that it has access to two string
+
+12:14.820 --> 12:19.460
+and then finally returns true super confusing I know.
+
+12:19.530 --> 12:24.930
+So keep in mind that things like boolean or let's say string.
+
+12:25.020 --> 12:36.100
+For example exist in order in order for us to be able to use some methods on these primitive values.
+
+12:37.000 --> 12:48.160
+So no not everything in Javascript is an object but there are a lot of object or built in objects that
+
+12:48.160 --> 13:03.290
+we can use so that if we do type of math for example that's an object if we do type of infinity in JavaScript
+
+13:03.530 --> 13:11.030
+that's a number like I said types in JavaScript can get a little bit tricky.
+
+13:11.440 --> 13:18.190
+And most of the time you don't really need to concern yourself with the inner workings of these things.
+
+13:18.220 --> 13:26.800
+Try not to confuse yourself too much with but I think we still need to work on this idea of objects
+
+13:27.460 --> 13:32.180
+primitive types are simple types like no strings bullets.
+
+13:32.200 --> 13:32.680
+Right.
+
+13:32.740 --> 13:36.220
+But objects those are still a little bit confusing.
+
+13:36.250 --> 13:39.460
+So in the next video let's work a little bit more on this.

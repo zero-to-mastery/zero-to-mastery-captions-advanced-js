@@ -1,0 +1,259 @@
+WEBVTT
+
+00:01.010 --> 00:02.850
+Welcome back.
+
+00:02.910 --> 00:05.520
+Why do we just learn all of this.
+
+00:05.520 --> 00:11.590
+Well because now we know a critical part in being a javascript programmer.
+
+00:11.620 --> 00:16.880
+We want to write code in a way that helps the compiler make optimizations.
+
+00:16.960 --> 00:21.670
+We don't want to work against it and make things slow throughout the rest of the course.
+
+00:21.670 --> 00:24.930
+We're going to learn different ways to write efficient code.
+
+00:25.060 --> 00:31.630
+But I want to give you some basic things to watch out for when working with JavaScript engine.
+
+00:31.640 --> 00:37.010
+Now keep in mind that most of these things I'm going to show you will seem like things you don't really
+
+00:37.010 --> 00:39.610
+use or see that much anymore.
+
+00:39.710 --> 00:46.220
+And that's because most developers don't use them since they can be bad for optimizations but it never
+
+00:46.220 --> 00:47.980
+hurts to know what they are.
+
+00:48.020 --> 00:53.010
+It doesn't mean that you should never use them but that they use cases for them are very rare.
+
+00:53.360 --> 00:54.900
+So here's the list.
+
+00:55.280 --> 01:04.030
+In order to help the JavaScript engine we want to be really really careful with these on the left functions
+
+01:04.060 --> 01:12.880
+that call literally the Val function which comes with JavaScript can be very problematic arguments which
+
+01:12.940 --> 01:16.870
+we're going to talk about when we get into functions of this course.
+
+01:16.870 --> 01:20.350
+Something that comes with every function.
+
+01:20.350 --> 01:27.880
+There are many ways that we can use this keyword by javascript but there are many ways that makes compilers
+
+01:28.150 --> 01:29.260
+on optimizing.
+
+01:29.380 --> 01:35.350
+So we have to be really careful with using arguments and I'll show you later on how we can use parameter
+
+01:35.350 --> 01:39.850
+d structuring to avoid using arguments for and loop.
+
+01:39.910 --> 01:45.410
+For example when looping over objects can also be problematic sometimes.
+
+01:45.430 --> 01:54.970
+So I like to use object keys and iterate over the object keys that way the With statement which once
+
+01:54.970 --> 01:59.610
+again you don't see very often in the wild anymore is another problematic one.
+
+01:59.800 --> 02:04.280
+And also the delete key word in JavaScript can be problematic.
+
+02:04.300 --> 02:10.590
+Now I'll leave resources for you to read up on them if you really really want to get into the weeds.
+
+02:11.200 --> 02:17.680
+But there's two main things I want to talk about here that are the main reasons that these things in
+
+02:17.680 --> 02:21.250
+JavaScript can make our code less optimized.
+
+02:21.340 --> 02:22.550
+Let's have a look.
+
+02:22.660 --> 02:30.610
+The first thing I want to talk about is something called inline caching and inline caching we can demonstrate
+
+02:30.610 --> 02:31.030
+this way.
+
+02:31.390 --> 02:41.630
+Let's say we have a function and this function will say find user that takes in the user parameter and
+
+02:41.720 --> 02:54.890
+this function will just return a template string and say found let's a user dot first name then
+
+03:00.490 --> 03:12.530
+and here we can just create an object call it user data that will have the first name say Johnson and
+
+03:12.770 --> 03:16.700
+last name say junior.
+
+03:16.720 --> 03:27.080
+Now all we do here is say find user and give it the user data object now inline caching does something
+
+03:27.170 --> 03:37.320
+really interesting do to inline caching done by the compiler code that executes the same method repeatedly.
+
+03:37.320 --> 03:43.270
+That is let's say the find user method or function was being called multiple times.
+
+03:43.290 --> 03:51.660
+Well the compiler can optimize this so that whenever it's looking for the user data which has first
+
+03:51.660 --> 03:59.780
+name and last name it can use something called inline caching where instead of looking up this object
+
+03:59.810 --> 04:07.610
+every time finding the key that is first name and last name and then the values it will cache or inline
+
+04:07.700 --> 04:14.630
+cache so that find user just becomes this piece of text.
+
+04:14.630 --> 04:23.120
+So if we call find user over and over and over we would just replace that with found Johnson Junior
+
+04:23.750 --> 04:27.220
+because at the end of the day that's all that the function is doing.
+
+04:27.560 --> 04:35.600
+The other one that is really important for optimizing compiler code is something called Hidden classes
+
+04:36.570 --> 04:42.600
+and a lot of the gotchas that I showed you previously that is this one over here such as the delete
+
+04:42.600 --> 04:47.730
+key word really affects this hitting classes when it comes to compilers.
+
+04:47.730 --> 04:48.600
+Let's have a look.
+
+04:49.360 --> 05:00.880
+If I had a function let's call it animal that receives X and Y parameters and we'll use this keyword
+
+05:01.210 --> 05:04.750
+for now we're going to learn more about that soon in this course.
+
+05:04.750 --> 05:05.890
+Don't worry.
+
+05:05.890 --> 05:11.640
+But let's say we just have this animal with X and Y properties.
+
+05:12.030 --> 05:22.790
+And now we create a new object let's say cost object one is going to be a new animal that takes in 1
+
+05:22.940 --> 05:26.190
+and 2 as the properties.
+
+05:26.230 --> 05:33.160
+Doesn't really mean much but there's our first object and then our second object will do the same thing
+
+05:33.160 --> 05:40.770
+but this time with different parameters three and four now a compiler is gonna take a look at this and
+
+05:40.770 --> 05:45.870
+say All right we have an animal that we're creating here and we're assigning it to object one and object
+
+05:45.870 --> 06:00.470
+to but if I go ahead and add object one dot a to equal let's say 30 and then object Wanda be to equal
+
+06:01.360 --> 06:12.130
+one hundred and I'll do the same thing for the object too except that this time around for object to
+
+06:13.840 --> 06:17.250
+I'm going to create it in different order.
+
+06:17.350 --> 06:25.960
+So that is I add the b property and then the a property to object to hopefully that's not too confusing.
+
+06:26.230 --> 06:35.400
+That code is actually going to make the compiler run slower or de optimize the code and that is something
+
+06:35.400 --> 06:38.240
+called Hidden classes.
+
+06:38.380 --> 06:44.740
+You want to try and instantiate your object properties in the same order so that hidden classes which
+
+06:44.740 --> 06:53.590
+is what the compiler uses underneath the hood to say oh this animal class this object one an object
+
+06:53.590 --> 07:00.220
+two objects have the same hidden class that is they have the same properties but as soon as you start
+
+07:00.250 --> 07:07.380
+introducing things in different orders it's going to get confused and say they don't have a shared hidden
+
+07:07.390 --> 07:14.090
+class they're two separate things and internally that's actually going to slow things down so one thing
+
+07:14.090 --> 07:20.870
+you want to do in a situation like this is to assign all properties of an object in its constructor
+
+07:20.960 --> 07:21.870
+over here.
+
+07:21.950 --> 07:28.760
+So that is to add the A and B property in here so that you avoid this issue or making sure that we add
+
+07:28.760 --> 07:36.540
+things in the same order and that's why there is this issue of delete keyword as well.
+
+07:36.540 --> 07:46.220
+If I delete the property here of the object Well again I change the hitting classes so that they don't
+
+07:46.220 --> 07:48.240
+match up anymore.
+
+07:48.260 --> 07:54.110
+Now when it comes to optimizing the compiler there's small little gotchas like that that you don't really
+
+07:54.110 --> 07:56.410
+have to worry too much about it.
+
+07:56.420 --> 08:03.590
+The key takeaway from here is that we should write code that is predictable not only for humans but
+
+08:03.590 --> 08:11.270
+also for machines the more predictable your code is the better it will be because they'll have no surprises.
+
+08:11.270 --> 08:17.360
+And throughout the course we're going to learn these practices that will help us write optimized code
+
+08:17.540 --> 08:21.180
+that is predictable and that doesn't confuse the compiler.
+
+08:21.230 --> 08:26.900
+I'm not going to mention every single time that we're doing an optimization for the compiler we're just
+
+08:26.900 --> 08:31.940
+going to assume that these best practices when incorporated like I'm going to show you throughout the
+
+08:31.940 --> 08:39.350
+course it's going to help us write fast efficient code I'll leave resources for you here if you want
+
+08:39.350 --> 08:45.230
+to learn a little bit more about this topic and really get into understanding what this hit in classes
+
+08:45.230 --> 08:49.290
+is it isn't something that you need to worry about too much.
+
+08:49.290 --> 08:52.930
+But for now I'll see you in the next video by.

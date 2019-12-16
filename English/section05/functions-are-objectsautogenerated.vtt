@@ -1,0 +1,286 @@
+WEBVTT
+
+00:00.890 --> 00:02.320
+Welcome back.
+
+00:02.330 --> 00:06.360
+Let's start off by talking about functions.
+
+00:06.470 --> 00:14.740
+Remember what I said functions in JavaScript are also object and throughout the next couple of videos
+
+00:14.800 --> 00:16.010
+we're going to explore that.
+
+00:16.060 --> 00:24.500
+But let's review what we have learned about functions so far when we invoke a function.
+
+00:24.700 --> 00:27.540
+We get two parameters automatically.
+
+00:28.090 --> 00:36.410
+We get the this keyword in the arguments keyword and we learned that arguments is an array like object
+
+00:36.740 --> 00:41.180
+that has some weird behaviors for looping an iteration.
+
+00:41.180 --> 00:47.080
+So we want to avoid using it and instead use something like the spread operator.
+
+00:47.270 --> 00:53.420
+And we also learned that because of the arguments object we can technically not have any parameters
+
+00:53.450 --> 00:55.970
+defined for a function.
+
+00:55.970 --> 01:02.360
+And when we call that function if we add parameters to it we can still grab them using the arguments
+
+01:02.600 --> 01:03.440
+keyword.
+
+01:03.440 --> 01:11.000
+We also learned that when we define our functions and the compiler looks at our code lexical Lee it
+
+01:11.000 --> 01:16.640
+determines what variables are available for us in our variable environment.
+
+01:16.880 --> 01:25.880
+And it also add our scope genes and we have a few ways of invoking and creating functions.
+
+01:25.910 --> 01:27.060
+Right.
+
+01:27.150 --> 01:36.380
+The first method we're very familiar with we have function 1 and this function one is going to return
+
+01:36.380 --> 01:37.070
+1.
+
+01:37.260 --> 01:42.840
+We've defined a function and we can invoke it like this.
+
+01:43.050 --> 01:43.740
+Nice and easy.
+
+01:44.220 --> 01:47.910
+So that was our first way of invoking a function.
+
+01:47.910 --> 02:00.680
+Another way of invoking a function is as a method that is a method is a function inside of an object.
+
+02:00.690 --> 02:03.450
+So if I do something like to
+
+02:07.510 --> 02:20.770
+and this function to well returns to we can call this method of the object as object got to and run
+
+02:20.920 --> 02:28.680
+the function I can also simplify this instead of saying function here with the new X-men script 6 we
+
+02:28.680 --> 02:30.950
+can just do that.
+
+02:31.000 --> 02:37.960
+So we're now calling the function as a method and we also notice here that because the object is the
+
+02:37.960 --> 02:48.500
+one that's calling to the this keyword will also be updated to object instead of window so that's our
+
+02:48.500 --> 02:49.140
+second way.
+
+02:49.910 --> 02:57.880
+Another way that we've learned to use functions is using the call and apply.
+
+02:58.310 --> 02:59.330
+Right.
+
+02:59.330 --> 03:11.590
+If I do return three here I can call this function by doing three dot call and running this function.
+
+03:11.620 --> 03:12.490
+There you go.
+
+03:12.490 --> 03:20.220
+So those are three ways that we can define and invoke functions but there's actually one more way in
+
+03:20.220 --> 03:26.400
+this one you're not going to see very often and it might look confusing to you at first but just to
+
+03:26.400 --> 03:37.230
+show you we can also do something like this cost four equals to new function and in here we say Well
+
+03:37.800 --> 03:51.350
+let's return if I run this function and click Run look at that I get for this is called a function constructor
+
+03:52.190 --> 03:59.060
+remember our built in javascript object that the javascript language itself comes with.
+
+03:59.270 --> 04:00.620
+Well that's what it is.
+
+04:00.650 --> 04:06.410
+It creates functions for us and this new keyword is something we're going to talk about in the object
+
+04:06.410 --> 04:08.300
+oriented programming section of the course.
+
+04:08.480 --> 04:17.000
+But all we do is the first parameter is whatever we want the function text to be which is to return
+
+04:17.000 --> 04:17.700
+for it.
+
+04:17.840 --> 04:31.400
+And I can also add parameters so if I give it let's say parameter NUM and I say return num if I call
+
+04:31.460 --> 04:41.710
+number four with four here I still get four it accepts parameters and whatever is in the last parameter
+
+04:41.770 --> 04:48.120
+of the function will be the actual code body but remember what I said before.
+
+04:48.380 --> 04:56.790
+Functions are objects and it's something that is not very common in other languages because in javascript
+
+04:57.210 --> 04:59.380
+I can do something like function.
+
+04:59.580 --> 05:06.290
+Woo hoo that console logs where.
+
+05:07.450 --> 05:08.570
+Very exciting function.
+
+05:09.360 --> 05:10.420
+But this function.
+
+05:10.500 --> 05:20.730
+I can also say woo hoo dot Yelp and add properties to it like R and underneath the hood.
+
+05:20.820 --> 05:30.870
+What javascript does is well it creates a special type of object called a callable object that is it's
+
+05:30.990 --> 05:39.090
+this special object was just show you some pseudocode here so it's not exactly what's happening underneath
+
+05:39.090 --> 05:46.610
+the hood but for your illustration purposes what we've done here is we have a Yelp property that is.
+
+05:47.520 --> 05:55.680
+We also have a name property that comes with this function which is the name of the function itself.
+
+05:55.680 --> 05:59.570
+So the name of the function is we who.
+
+05:59.700 --> 06:04.760
+And then it's also a callable object that is it can be invoked.
+
+06:04.770 --> 06:12.510
+Remember these brackets Well it's almost as if we can use this notation and whenever we run the function
+
+06:12.660 --> 06:18.600
+it's a callable function we console door log wahoo.
+
+06:18.650 --> 06:21.470
+Now if I actually ran this code it wouldn't work.
+
+06:21.470 --> 06:28.250
+I just want to show you what is happening underneath the hood to review it looks something like this.
+
+06:28.250 --> 06:33.170
+If we had some function well it would be an object.
+
+06:33.170 --> 06:42.340
+Think of this orange box as an object with some special properties one it has a piece of code that we
+
+06:42.340 --> 06:43.390
+can invoke.
+
+06:43.390 --> 06:50.320
+With this these brackets and when we invoke with these brackets it reads whatever the piece of code
+
+06:50.320 --> 06:53.300
+is inside of that function and it executes it.
+
+06:54.180 --> 06:58.680
+Another thing it has it has a name property that is optional.
+
+06:58.680 --> 07:01.470
+Because remember we can have anonymous functions.
+
+07:01.530 --> 07:09.060
+So if this function was called some func the name will be some func but if we let's say used function
+
+07:09.060 --> 07:11.490
+expression assigned it to a variable.
+
+07:11.490 --> 07:13.820
+But the function itself is anonymous.
+
+07:13.860 --> 07:17.090
+Well name wouldn't exist because it's optional.
+
+07:18.420 --> 07:24.180
+Another thing we get is we get properties automatically on a function.
+
+07:24.180 --> 07:25.680
+And we've seen them before.
+
+07:26.010 --> 07:34.210
+We have properties like call apply and bind that allow us to act upon that function.
+
+07:34.290 --> 07:43.450
+For example if I go back to woo hoo I can do call and we see that we have this method available for
+
+07:43.450 --> 07:53.170
+us if I go back we see that yeah look at this this purple box these are methods that we have and then
+
+07:53.170 --> 07:58.720
+we also have properties like arguments length name remember the name.
+
+07:59.200 --> 08:04.220
+So that if I run this look at that we have Woo hoo.
+
+08:04.300 --> 08:06.580
+Now what about objects.
+
+08:06.580 --> 08:12.150
+If I created an object would I have those properties on there.
+
+08:12.480 --> 08:14.220
+Well let's see object dot
+
+08:17.420 --> 08:26.370
+I don't have called do I I don't have bind I don't have arguments no I don't have that remember what
+
+08:26.370 --> 08:35.880
+I said functions are objects and they're a special type of object that is a callable object with the
+
+08:36.300 --> 08:43.500
+bracket notation for invoking the function contains the code it has name and it also has some properties
+
+08:43.500 --> 08:48.000
+like call apply and bind but why do we care.
+
+08:48.060 --> 08:50.930
+Why is that really important.
+
+08:50.970 --> 08:58.170
+Because functions are just objects in javascript that means that we can pass them around like objects
+
+08:58.650 --> 09:00.740
+like things that contain data.
+
+09:00.840 --> 09:10.290
+So besides just doing things for us and performing actions in our code we can also store them as data
+
+09:10.500 --> 09:15.660
+move them around and have some really interesting applications and that's what we're going to explore
+
+09:15.840 --> 09:17.130
+over the next couple of videos.
+
+09:17.820 --> 09:18.330
+Let's dive in.

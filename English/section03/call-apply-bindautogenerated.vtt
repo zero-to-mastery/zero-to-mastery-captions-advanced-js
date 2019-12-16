@@ -1,0 +1,340 @@
+WEBVTT
+
+00:01.240 --> 00:07.660
+Welcome back in order for us to manipulate the this keyword.
+
+00:07.660 --> 00:14.260
+There are three really important methods that you see a lot especially for senior javascript developer
+
+00:14.260 --> 00:15.280
+interviews.
+
+00:15.280 --> 00:24.350
+That is call apply and bind and we saw bind in the previous video.
+
+00:24.400 --> 00:29.110
+So let's talk about them and see how they can be used.
+
+00:29.110 --> 00:35.380
+The first thing we're going to talk about is actually call and apply and they look a lot more intimidating
+
+00:35.410 --> 00:44.420
+than they actually are because underneath the hood all functions use call when invoking a function.
+
+00:44.440 --> 00:45.190
+Let me show you what I mean.
+
+00:45.820 --> 01:00.520
+If I do function a here and inside of here I console dialog Hi if I do a dot call and I run this I get
+
+01:01.150 --> 01:12.780
+high underneath the hood in JavaScript when I do a bracket bracket to invoke the function all functions
+
+01:12.840 --> 01:20.200
+when created have this property called call that allows us to call the function.
+
+01:20.300 --> 01:25.070
+So this is just a shorthand that we can use.
+
+01:25.070 --> 01:27.020
+How cool is that.
+
+01:27.060 --> 01:28.910
+What if we do apply here.
+
+01:29.010 --> 01:35.850
+If I run this same thing call then apply do the same thing for now at least.
+
+01:35.940 --> 01:41.960
+But let's see how call in apply can be useful besides just calling functions.
+
+01:42.030 --> 01:46.850
+Let's say that we're creating a game and this game has a wizard.
+
+01:46.920 --> 01:49.860
+Obviously all games do.
+
+01:50.310 --> 02:00.060
+And this wizard has a name of Merlin obviously and Merlin has a health of a 100 go for Merlin.
+
+02:00.120 --> 02:07.980
+He's nice and healthy and obviously because Merlin is a wizard he has a heal function and this he'll
+
+02:07.980 --> 02:12.190
+function can make this dot health.
+
+02:12.270 --> 02:17.760
+Again we're referring to a property of an object to equal 100.
+
+02:17.790 --> 02:27.240
+That's an awesome power so that any time I do wizard dot he'll.
+
+02:27.450 --> 02:31.700
+Well let's return something here so we can actually see what's happening.
+
+02:31.860 --> 02:33.110
+I get a hundred.
+
+02:34.050 --> 02:35.500
+That's fantastic.
+
+02:35.550 --> 02:38.400
+If his health goes to 50.
+
+02:38.460 --> 02:42.050
+Well as long as we run he'll we're all good.
+
+02:42.060 --> 02:48.770
+It's still gonna be 100 OK but in the game we need more than just one character right.
+
+02:48.890 --> 02:56.810
+Let's add another character and this time around I'm going to I'd add an archer and this Archer name
+
+02:56.810 --> 03:07.550
+will be all Robin Hood obviously and health for Robin Hood is only thirty I know he's not doing too
+
+03:07.550 --> 03:15.160
+well he needs he need some healing power we just created this piece of code and Robin Hood doesn't really
+
+03:15.160 --> 03:24.880
+do much has a name and health but would it be nice if we're able to borrow a function from the Wizard
+
+03:25.300 --> 03:31.650
+and he'll Archer and I know I'm using a silly example here especially for an advanced course.
+
+03:31.660 --> 03:38.410
+But I hope you can see the power of being able to borrow methods of other objects so that we keep our
+
+03:38.410 --> 03:39.220
+code dry.
+
+03:39.310 --> 03:39.730
+Right.
+
+03:39.730 --> 03:41.580
+We don't repeat ourself.
+
+03:41.780 --> 03:43.500
+We don't add to memory.
+
+03:43.520 --> 03:49.350
+We have one place where the method is in one place where we can change it.
+
+03:49.370 --> 03:52.760
+This is going to create a lot less bugs in our code.
+
+03:52.760 --> 04:00.990
+So how can we borrow the heal method for the arching it's not part of the same object so we can't just
+
+04:00.990 --> 04:04.390
+use this dot hill right.
+
+04:04.440 --> 04:11.160
+We can't really just do this dot feel because while this object doesn't have it and we don't want to
+
+04:11.160 --> 04:19.800
+copy and paste the code instead we can borrow it and we can use coal and apply to borrow methods.
+
+04:19.950 --> 04:26.370
+So let's see how we can do that I can simply say wizard dot heal.
+
+04:26.390 --> 04:37.050
+So that is the method I want to use and instead of calling it like we have before I use dot call which
+
+04:37.200 --> 04:40.270
+if I run this I'll just get with your tell.
+
+04:41.070 --> 04:51.630
+But in here I'm going to use call and then the first parameter of call will be what this should be bound
+
+04:51.630 --> 04:52.290
+to.
+
+04:52.350 --> 04:59.280
+And if I scroll over here you can see that call calls a method of an object substituting another object
+
+04:59.370 --> 05:02.440
+from the current object very very confusing.
+
+05:02.610 --> 05:12.510
+But essentially it's saying hey call heal instead of using wizard to call he'll use Archer to call heel
+
+05:13.320 --> 05:21.630
+and we're just going to borrow this heel from the wizard so that if I run this well we don't know what
+
+05:21.630 --> 05:22.120
+happens yet.
+
+05:22.410 --> 05:31.840
+But licious console dot log Archer and console lot log Archer again.
+
+05:31.840 --> 05:46.030
+So this is one and this is to if I run this you see that at the beginning my Archer only had health
+
+05:46.030 --> 05:57.000
+of 30 but after we used Merlin's heel power and used it on Archer our health went back up to 100.
+
+05:57.020 --> 06:05.760
+How cool is that and Cole actually has other parameters that it can receive it can receive arguments
+
+06:06.600 --> 06:12.330
+so that we can give Archer or the heel method parameters.
+
+06:12.330 --> 06:20.020
+So for example let's say the heel method took number one and number two.
+
+06:20.370 --> 06:36.850
+And what this does is well we add no one plus number two so whatever two numbers we give it adds to
+
+06:36.850 --> 06:41.820
+our current health let's make this a little bit bigger.
+
+06:41.820 --> 06:42.300
+They're young.
+
+06:42.330 --> 06:48.830
+That's a lot cleaner I can now call Archer with the parameters.
+
+06:48.850 --> 06:50.790
+So what are the parameters going to be.
+
+06:50.830 --> 07:01.420
+I'm going to give Archer 50 health plus let's do 30 health so that if I run this I have one hundred
+
+07:01.480 --> 07:09.000
+and ten now because to my current 30 health I've added 50 which is 80 and then 30 which is one hundred
+
+07:09.000 --> 07:11.270
+and ten we'll get that one hundred and ten health.
+
+07:11.290 --> 07:12.520
+That's pretty good.
+
+07:12.520 --> 07:14.780
+That's all coal is really useful for.
+
+07:14.980 --> 07:17.660
+I mean it is quite useful isn't it.
+
+07:17.730 --> 07:18.970
+And when it comes to apply.
+
+07:19.060 --> 07:21.570
+Like I said it does the same thing.
+
+07:21.580 --> 07:28.600
+The only difference between call and apply is that instead of call that just takes parameters parameters
+
+07:28.630 --> 07:31.360
+parameters with apply.
+
+07:31.390 --> 07:40.020
+It takes an array of parameters so that if I do this it's still going to work.
+
+07:40.200 --> 07:42.980
+If I change this to let's say 100.
+
+07:43.320 --> 07:45.230
+Look at that 160 help.
+
+07:45.240 --> 07:53.730
+That's pretty cool so choosing which one to use call or apply just depends on which one is easier to
+
+07:53.730 --> 08:01.110
+pass he arguments and just decide whether it's easier to pass array of parameters or comma separated
+
+08:01.470 --> 08:02.800
+list of arguments.
+
+08:03.060 --> 08:10.990
+So next time you're thinking hmm I'm really jealous of that object that method that that object has.
+
+08:11.160 --> 08:14.070
+Wouldn't it be nice if I can just copy it.
+
+08:14.220 --> 08:22.350
+Well does that function include the this keyword so that it can be dynamic cool then you can use call
+
+08:22.350 --> 08:23.780
+or apply on it.
+
+08:23.910 --> 08:25.160
+That's your test.
+
+08:25.200 --> 08:27.080
+All right that's enough for calling apply.
+
+08:27.110 --> 08:30.660
+But what about the other one that I was talking about bind.
+
+08:30.750 --> 08:32.430
+What happens if I use bind.
+
+08:33.060 --> 08:39.300
+Well similar to call and apply bind allows us to use what we have here.
+
+08:39.630 --> 08:47.820
+You see bind unlike call and apply that immediately runs a function bind returns a new function with
+
+08:47.850 --> 08:50.880
+a certain context and parameters.
+
+08:50.880 --> 08:57.420
+And it's usually used when we want a function to be called later on with a certain type of context or
+
+08:57.420 --> 08:59.980
+a certain type of this keyword.
+
+09:00.030 --> 09:04.020
+Let's see how that would work in order to use bind.
+
+09:04.170 --> 09:12.830
+We would do bind and bind accepts just like call parameters.
+
+09:12.830 --> 09:17.570
+But if I run this now it doesn't work.
+
+09:17.570 --> 09:20.600
+Mike Archer Robin Hood didn't get healed.
+
+09:21.050 --> 09:28.630
+And that's because unlike calling apply it doesn't run the function it returns a function so that if
+
+09:28.630 --> 09:39.620
+I added to a variable let's say heal Archer so that we can use this function later on we can now run
+
+09:39.770 --> 09:42.380
+heal Archer
+
+09:45.120 --> 09:56.890
+and if we click Run look at that our Archer is healed so bind allows us to store the this keyword or
+
+09:56.890 --> 10:05.780
+this function borrowing for later use and you might have noticed something here bind is like a Band-Aid
+
+10:06.050 --> 10:14.540
+to fix this idea of a dynamically scoped this keyword that ruins our entire lexical scoping discussion
+
+10:14.540 --> 10:22.420
+that we've had remember in the previous video how we talked about this solution when we didn't have
+
+10:22.420 --> 10:32.550
+the arrow function we can use bind I hope that makes sense now we were able to store the value of this
+
+10:32.550 --> 10:38.730
+which was object so that we can use it later so that another function instead of giving us this weird
+
+10:39.000 --> 10:48.630
+dynamically scoped this keyword we're able to bind another function to use the this keyword that is
+
+10:48.840 --> 10:55.710
+the object so to review called then apply when are they useful.
+
+10:55.710 --> 11:05.670
+Well call in reply are useful for borrowing methods from an object while bind is useful for us to call
+
+11:05.670 --> 11:14.550
+functions later on with a certain context or certain this keyword and by the way there's one more interesting
+
+11:14.610 --> 11:17.310
+use of mind let's explore that in the next video.

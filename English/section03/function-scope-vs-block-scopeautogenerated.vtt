@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.610 --> 00:01.910
+Welcome back.
+
+00:01.930 --> 00:06.480
+Let's talk about function's scope vs. block scope.
+
+00:06.580 --> 00:13.930
+These are very important terms when it comes to well any programming language remember scope means what
+
+00:14.200 --> 00:20.880
+variables we have access to and JavaScript has function scope.
+
+00:21.190 --> 00:22.150
+Right.
+
+00:22.150 --> 00:29.710
+Every time we create a function we create a new execution context which has its own variable environment
+
+00:30.860 --> 00:38.330
+but you see most other programming languages have something called block scope.
+
+00:38.390 --> 00:40.490
+So what's the difference.
+
+00:40.490 --> 00:48.800
+Well it means that with a function scope if I created let's say an if statement and let's say if five
+
+00:49.220 --> 01:01.190
+is greater than four which it is and I create a variable here called secret and I have a super secret
+
+01:01.370 --> 01:11.870
+password because javascript uses function scope I can actually access the password like this.
+
+01:12.200 --> 01:23.480
+If I click Run I'm able to access this password because this variable is functionally scoped.
+
+01:23.590 --> 01:34.810
+That means we only create a new scope a new environment when there is a function if this was a function
+
+01:36.910 --> 01:47.680
+well in that case with function scope we can't access the secret now in most other programming languages
+
+01:47.710 --> 01:51.770
+the use block scope and block scope is.
+
+01:51.890 --> 02:00.410
+Well anytime I see a block of code that is these curly brackets I'm going to create a new world a new
+
+02:00.410 --> 02:03.660
+environment in other programming languages.
+
+02:03.670 --> 02:08.290
+If I do secret here I wouldn't be able to access it like I can.
+
+02:08.290 --> 02:14.340
+And javascript saw this and said I want to be able to do blocks scoping too.
+
+02:14.650 --> 02:15.980
+How can I do that.
+
+02:16.240 --> 02:30.080
+Well with E6 they introduced the left and the concept keywords and they allow us to use block scoping.
+
+02:30.080 --> 02:30.830
+Let me show you.
+
+02:30.950 --> 02:38.120
+If I run this Oh I can't access secret if I had the let keyword.
+
+02:38.340 --> 02:39.390
+Oh no.
+
+02:39.630 --> 02:40.290
+This secret.
+
+02:40.290 --> 02:45.130
+Well it's definitely secret now I can't access it.
+
+02:45.260 --> 02:52.340
+You see variables declared inside a block scope such as an if statement or let's say for loops can be
+
+02:52.370 --> 02:57.240
+accessed from the outside of the opening and closing curly brackets.
+
+02:57.440 --> 03:05.540
+When we use function scope when we use things like var but now with the introduction of let and var
+
+03:06.380 --> 03:10.510
+we can do this which gives us a little bit more power.
+
+03:10.610 --> 03:16.520
+Now that doesn't mean that you should never use var I mean most of the time you probably should just
+
+03:16.520 --> 03:24.860
+use light or concert but let and costs are just block scoped alternatives for variable declaration.
+
+03:25.190 --> 03:32.390
+So let's see how this can be useful to us in the next video we're going to do a little exercise and
+
+03:32.390 --> 03:33.350
+let's see if we can solve it.
+
+03:33.440 --> 03:34.310
+It's gonna be a hard one.

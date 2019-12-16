@@ -1,0 +1,283 @@
+WEBVTT
+
+00:01.050 --> 00:02.270
+Welcome back.
+
+00:02.280 --> 00:10.500
+I wanted to talk to you quickly about a very important topic for a developer and that is debugging debugging
+
+00:10.560 --> 00:14.530
+is the act of looking over code.
+
+00:14.730 --> 00:22.860
+Understanding what it's doing and figuring out why it's not acting as expected or maybe it's not even
+
+00:22.860 --> 00:28.560
+running maybe you're getting errors or maybe something that the user does on a Web site is triggering
+
+00:28.680 --> 00:30.800
+a weird behavior.
+
+00:30.810 --> 00:36.270
+That's what debugging is frightening out why the program isn't acting the way it is.
+
+00:36.390 --> 00:42.180
+And when you work as a developer a lot of your time is spent debugging.
+
+00:42.180 --> 00:47.010
+So it's a very important topic and I want to talk about some of the strategies that we can use for debugging
+
+00:48.110 --> 00:56.010
+I have over here a pretty complex function and frankly unless you've had a lot of experience with JavaScript
+
+00:56.640 --> 00:59.380
+This is a pretty hard function to understand.
+
+00:59.440 --> 01:08.680
+Let's say that you get into work and somebody says hey I don't I don't know what's going on with this
+
+01:08.680 --> 01:10.030
+function.
+
+01:10.150 --> 01:11.160
+Can you look into it.
+
+01:11.560 --> 01:18.010
+And you have to figure out what it does and whether it's working fine or not.
+
+01:18.010 --> 01:23.390
+So I'm going to take you through the steps that I would use to debug this code.
+
+01:23.500 --> 01:25.450
+Maybe it's working fine maybe it's not.
+
+01:25.450 --> 01:34.500
+But I want to understand what this piece of code does so the first thing I would do is just read it.
+
+01:34.500 --> 01:35.790
+I say OK.
+
+01:35.820 --> 01:41.110
+We we're assigning a variable and it looks like we have an array.
+
+01:41.220 --> 01:49.980
+It is a nested array so there's an array inside of an array and it looks like this code wants to do
+
+01:49.980 --> 01:51.090
+something called flattened.
+
+01:51.840 --> 01:52.750
+OK.
+
+01:52.770 --> 02:01.680
+We know that reduce from what we've learned before a is the accumulator I can change the name.
+
+02:01.680 --> 02:02.990
+So it makes more sense to me.
+
+02:03.020 --> 02:04.710
+OK accumulator.
+
+02:04.950 --> 02:05.340
+Perfect.
+
+02:05.760 --> 02:10.960
+And B is will what is B B is this right.
+
+02:10.970 --> 02:21.210
+Because we're iterating looping over the first array which so it gives us three arrays so I can just
+
+02:21.210 --> 02:22.980
+say all right here
+
+02:28.560 --> 02:29.430
+now.
+
+02:29.640 --> 02:36.780
+I also see that within this reduce I have the accumulator I have the array and I want the accumulator
+
+02:37.590 --> 02:40.350
+to start off with an empty array.
+
+02:40.590 --> 02:41.610
+That makes sense so far.
+
+02:42.210 --> 02:46.980
+So the accumulator is gonna be an empty array when we start off and what we're going to do is we're
+
+02:46.980 --> 02:50.350
+gonna do empty array dot com cat.
+
+02:50.370 --> 02:58.450
+And if you remember con cat attaches the contents of an array into whatever is being the cat.
+
+02:58.530 --> 03:06.540
+One thing I can do is open up this function so that now instead of just having one line I can say console
+
+03:06.540 --> 03:16.320
+dot log array and we'll find out what array is and we'll also say console log accumulator we'll say
+
+03:16.860 --> 03:17.900
+accumulator.
+
+03:17.910 --> 03:23.310
+All right so we have the console opened and we also want to make sure that we're returning this because
+
+03:23.310 --> 03:29.380
+we removed it from a single line which already implicitly means return to making it two lines.
+
+03:29.400 --> 03:29.570
+OK.
+
+03:29.580 --> 03:36.270
+So let's just refresh and add this function and see if we can get some console logs to figure out what
+
+03:36.270 --> 03:37.190
+it's doing.
+
+03:37.320 --> 03:43.920
+There's going to be three looping is that we see and in the first looping it looks like it says the
+
+03:43.920 --> 03:48.070
+array is 0 1 and the accumulator is the empty array.
+
+03:48.140 --> 03:56.280
+Okay that makes sense and then we see the second loop around the 2 and 3 array which is here gets looped
+
+03:56.280 --> 04:01.560
+around and the accumulator now has 0 and 1.
+
+04:01.890 --> 04:08.190
+So it looks like after the first loop through I've added the zero and one of the array into the empty
+
+04:08.190 --> 04:11.860
+array which is the accumulator OK.
+
+04:12.000 --> 04:15.640
+And then the last pass through it which is four and five.
+
+04:15.690 --> 04:22.950
+I now attach the array of four and five into the accumulator which has 0 1 2 3.
+
+04:23.220 --> 04:32.770
+So it looks like what we're doing is we're grabbing each array and we're adding it into the accumulator
+
+04:33.100 --> 04:37.180
+and because it looks something like this.
+
+04:37.210 --> 04:44.860
+So this is what it would look like in the first path through we're just using the cat function to join
+
+04:45.430 --> 04:54.080
+the arrays 0 on 1 so that we are funding the array so that means instead of having an array inside of
+
+04:54.080 --> 04:58.310
+an array we can just completely flattened everything.
+
+04:58.310 --> 05:08.610
+That means that with Flint if I look at what it does well it just finds 0 0 1 2 3 4 5 awesome.
+
+05:08.650 --> 05:14.340
+There's one other trick I want to show you and that is instead of using console log you can use something
+
+05:14.340 --> 05:22.680
+called debugger and you notice that the color turned red which means yep it's a javascript keyword.
+
+05:22.800 --> 05:24.470
+And what this allows you to do.
+
+05:24.510 --> 05:32.000
+Well let's see what happens when I run this function going to refresh your and I'm going to run it well
+
+05:32.510 --> 05:43.290
+what just happened when the JavaScript engine in the browser runs into the word debugger it stops.
+
+05:43.380 --> 05:49.650
+It's a it's a word that tells whatever is reading this file to hey stop whatever you're doing just freeze
+
+05:50.790 --> 05:55.350
+and it opens up the window for us exactly where it's stopped.
+
+05:55.350 --> 06:03.230
+So let me make this full screen and show you it stops in the middle of its execution but we see that
+
+06:03.230 --> 06:15.310
+here accumulator is an empty array because while we started it and the array is 0 and 1.
+
+06:15.490 --> 06:17.800
+Now I have a couple options.
+
+06:17.800 --> 06:21.550
+I can hit play which resumes the entire thing where I can hit.
+
+06:21.550 --> 06:25.310
+Step over and let's see what happens with step over.
+
+06:25.440 --> 06:34.260
+It goes to the next line and if I click again it goes to the next line and now I see that the accumulator
+
+06:34.890 --> 06:40.860
+is 0 and 1 and the array is now 2 and 3.
+
+06:40.970 --> 06:45.770
+So I know that in the next line the accumulator.
+
+06:45.900 --> 06:53.050
+Well I changed this to a array by mistake but this will be the accumulator will be 0 and 1 dot.com Cat
+
+06:53.650 --> 07:03.910
+2 and 3 and I can keep stepping through this and see how the parameters change and literally go through
+
+07:03.970 --> 07:06.370
+the entire function.
+
+07:06.640 --> 07:08.680
+Let's close that down fight.
+
+07:08.740 --> 07:13.030
+Bring this back to the way it was which is the accumulator
+
+07:18.430 --> 07:20.280
+make this full screen all right.
+
+07:20.680 --> 07:24.060
+So Array 01 accumulator is an empty array.
+
+07:24.070 --> 07:24.910
+I'm going to step through
+
+07:28.220 --> 07:34.410
+that change accumulators now 0 1 array 2 3 and I keep stepping through and I notice exactly what's happening
+
+07:34.410 --> 07:46.210
+in the code and when it's done executing it returns and look at that we have our console back.
+
+07:46.370 --> 07:51.710
+Isn't that cool debugger allows us to literally go into the function and see what happened step by step
+
+07:52.250 --> 07:53.840
+as I return this to the way it was
+
+07:57.110 --> 08:01.730
+I wanted to take this with you and understand that although when you first see something like this it's
+
+08:01.730 --> 08:02.720
+overwhelming.
+
+08:02.720 --> 08:08.720
+With enough time and using console and debugger you're able to understand what a function does.
+
+08:08.720 --> 08:13.340
+And if it's doing something that you don't expect to do or is doing something wrong you can use these
+
+08:13.340 --> 08:17.300
+techniques to fix it.
+
+08:17.320 --> 08:20.150
+It's a very useful skill that you're going to use a lot of.
+
+08:20.680 --> 08:21.580
+So good luck.
+
+08:21.580 --> 08:23.140
+Have fun out there by.

@@ -1,0 +1,295 @@
+WEBVTT
+
+00:02.010 --> 00:09.850
+IOS 8 has a few more new features that were introduced in 2017 compared to yes 7.
+
+00:09.990 --> 00:13.680
+In this video we'll just go over the important ones.
+
+00:13.680 --> 00:18.030
+So the very first one is string padding.
+
+00:18.030 --> 00:28.110
+We have new functions that we can add to strings which is parts start and pad and now to demonstrate
+
+00:28.110 --> 00:28.580
+this.
+
+00:28.620 --> 00:34.920
+Let's go into the console and let's just do a turtle.
+
+00:37.260 --> 00:39.500
+And we'll do a pad start.
+
+00:40.280 --> 00:56.510
+Of 10 if I do this I get turtle with 10 spaces in front of it if I do pad and get turtle with 10 spaces
+
+00:56.750 --> 00:57.770
+after it.
+
+00:57.950 --> 01:01.640
+And this is useful just for aligning characters of strings.
+
+01:01.640 --> 01:09.810
+If you want specific padding for the again very very simple easy to pick up just another string method
+
+01:10.110 --> 01:12.030
+that we received.
+
+01:12.030 --> 01:13.500
+All right let's go into the second one.
+
+01:13.500 --> 01:18.240
+The second one that we got is something called trailing commas in functions.
+
+01:18.240 --> 01:21.050
+Parameter lists and calls.
+
+01:21.060 --> 01:21.990
+What does that mean.
+
+01:21.990 --> 01:36.100
+Well now I can do something like const fun A B C D and add a comma at the end and if I do a function
+
+01:36.130 --> 01:43.960
+but let's just say console dot logs a just a silly simple function I can now run this function like
+
+01:43.990 --> 01:48.980
+one two three four and then a comma at the end.
+
+01:49.240 --> 01:55.570
+And this is still valid javascript if I round this you see that it works.
+
+01:55.570 --> 01:58.690
+Console log a which is one gets logged.
+
+01:59.020 --> 02:03.850
+Now why would this be useful at all.
+
+02:03.880 --> 02:09.340
+The main reason is when you start getting really really big parameter lists you'll see a lot of people
+
+02:09.340 --> 02:12.400
+doing things similar to this
+
+02:15.930 --> 02:18.330
+just to make things a little bit cleaner.
+
+02:18.330 --> 02:28.410
+And when you start doing this every time you add a new parameter it's a lot easier but also in get hub
+
+02:28.470 --> 02:32.690
+when you make changes it actually makes the difference.
+
+02:32.700 --> 02:35.180
+The green and the red differences.
+
+02:35.190 --> 02:35.870
+A lot cleaner.
+
+02:35.900 --> 02:41.370
+So it's just syntactic and just make things look a little bit nicer.
+
+02:41.490 --> 02:47.550
+Again you normally wouldn't want to do something like this but maybe when you have a long parameter
+
+02:47.550 --> 02:54.630
+list like that the ending comma is now valid and it won't give out an error right.
+
+02:54.660 --> 03:00.690
+Let's look at the next one the next one is we have object that values
+
+03:03.340 --> 03:12.380
+and object dot entries and these are very very useful because before these we had something called Object
+
+03:12.380 --> 03:21.920
+dot cheese and object are keys allowed us to do something similar to arrays but on object.
+
+03:22.030 --> 03:32.720
+So for example if we had an object that lets say we'll have an object and this object will have user
+
+03:32.770 --> 03:47.900
+name 0 Santa we have user name 1 Rudolph and we also have the user name to Mr. Grinch
+
+03:52.000 --> 04:04.090
+now looking at this object because it's not an array we can't do the map or filter or reduce but this
+
+04:04.090 --> 04:05.550
+is kind of an ugly object.
+
+04:05.830 --> 04:10.420
+And this illustrates a good point sometimes when you're working with servers you'll get two objects
+
+04:10.450 --> 04:17.330
+that you don't really like or you don't want to work with but you still want to iterate over the and
+
+04:17.340 --> 04:22.770
+before we can do something like this with object keys we make a little bit more space over here so we
+
+04:22.770 --> 04:23.310
+can see.
+
+04:24.190 --> 04:34.540
+I could do object keys and in here will throw the object and now I can use it like an array.
+
+04:34.540 --> 04:35.940
+I'll go one by one.
+
+04:37.210 --> 04:37.950
+Like an array.
+
+04:39.490 --> 04:45.520
+So it's as if it's an array but except it has property and values.
+
+04:45.520 --> 04:53.530
+So let's say we wanted to do a for each loop and for each key that is for each key in the array.
+
+04:53.530 --> 05:02.010
+So for each user name we also have the index so that is 0 1 to let's wrap this in brackets
+
+05:05.900 --> 05:15.420
+and now within here we can say console dot log key and then object key.
+
+05:15.960 --> 05:20.480
+So now we're grabbing the object with the key username.
+
+05:20.520 --> 05:29.800
+So if a console dialog this let's copy and paste this clean this up a bit and I see that I have user
+
+05:29.800 --> 05:30.710
+name Santa.
+
+05:30.740 --> 05:31.630
+User name 1.
+
+05:31.700 --> 05:33.250
+Rudolph user name 2.
+
+05:33.320 --> 05:35.210
+Mr. Grinch.
+
+05:35.210 --> 05:44.540
+And that's one way for us to iterate or loop through objects but with object dot entries things become
+
+05:44.810 --> 05:46.690
+a little bit easier.
+
+05:46.730 --> 05:58.880
+For example we can do object must make more space we can do object of values and the object of values.
+
+05:59.030 --> 06:06.060
+If I do a for each year I simply grab the value from the value.
+
+06:06.160 --> 06:21.590
+I can just console the log value and now I get the value of each object that is it loops through Santa
+
+06:21.670 --> 06:22.260
+Rudolph.
+
+06:22.440 --> 06:25.800
+And Mr. Grinch with the entries
+
+06:29.080 --> 06:30.900
+if I do object entries.
+
+06:31.630 --> 06:33.060
+Well let's see what happens.
+
+06:34.400 --> 06:41.780
+It's clear this I get an array of user named Santa User Name one Rudolph and user name two.
+
+06:41.790 --> 06:42.600
+Mr. Grinch.
+
+06:43.050 --> 06:48.300
+So this gives you a lot of control you get both property and value or key and value.
+
+06:48.750 --> 06:55.370
+And you can do whatever you want with it and use for each map reduce filter all those array functions.
+
+06:55.950 --> 06:58.370
+So let's use a real life scenario here.
+
+06:58.410 --> 07:04.350
+Let's say we wanted to we just received this from the back and the back and just sent us a bunch of
+
+07:04.350 --> 07:09.960
+users that they had in that database and we want to generate user names for that because we don't like
+
+07:09.960 --> 07:12.510
+the user named Zero User Name one user name too.
+
+07:12.570 --> 07:19.420
+You want to display name that displays the Santa with the I.D. number that is zero for Rudolph will
+
+07:19.420 --> 07:21.590
+be one for Mr. grandchild be two.
+
+07:21.630 --> 07:25.580
+How can we do that using our new found powers.
+
+07:25.590 --> 07:33.940
+Well I can just simply do something with object on entries and object adding trees will have an object
+
+07:34.540 --> 07:40.200
+that I can map over and this will give us a value.
+
+07:40.890 --> 07:44.070
+Again remember that this will return arrays.
+
+07:44.640 --> 07:55.200
+And here we just want to return this to a value of one because we want to grab Santa Rudolph and Mr.
+
+07:55.200 --> 07:55.740
+Grinch.
+
+07:55.740 --> 08:04.850
+So that is the second item in the array and then we want to add to that like a string value zero which
+
+08:04.850 --> 08:06.770
+is the first item.
+
+08:06.770 --> 08:10.050
+So username 0 user username 1 user name too.
+
+08:10.130 --> 08:18.050
+And here we want to replace this is just the function that we can use on strings and we want to replace
+
+08:18.760 --> 08:22.470
+user name with an empty string.
+
+08:22.710 --> 08:29.160
+So what we're doing here is we're creating a new string with Santa 0 because we don't need the user
+
+08:29.160 --> 08:30.510
+name in here.
+
+08:30.510 --> 08:33.450
+So now even though we have an object.
+
+08:33.450 --> 08:37.670
+We can loop through it like an array and look at that.
+
+08:37.700 --> 08:42.610
+We have new user names Santas zero Rudolph one and Mr. Grinch too.
+
+08:42.770 --> 08:49.950
+How cool is that so these are really really useful additions to the language especially object values
+
+08:49.950 --> 08:51.110
+and object that entries.
+
+08:51.120 --> 08:59.430
+You can do a lot with it but there is one big he 8 feature that has arrived at everybody's excited about
+
+09:01.020 --> 09:07.530
+and they're called async await now it's brand new and everybody in the community is really excited about
+
+09:07.530 --> 09:07.680
+it.
+
+09:07.680 --> 09:14.550
+However in order to fully grasp the benefit and understand it we need an entire video on its own.
+
+09:14.970 --> 09:17.800
+So I'll see you on that one by.

@@ -1,0 +1,58 @@
+WEBVTT
+
+00:01.170 --> 00:06.100
+We finally made it to another important section in this course.
+
+00:06.240 --> 00:14.000
+The two pillars in this section we're going to be talking about what I think are the two of the most
+
+00:14.000 --> 00:18.670
+important concepts in JavaScript and also the most powerful.
+
+00:18.980 --> 00:26.030
+These two powers that we're going to learn are also quite unique and not available in all languages
+
+00:26.810 --> 00:34.810
+but it's also why it makes javascript so powerful if you understand these two topics that we're going
+
+00:34.810 --> 00:39.260
+to talk about that you're truly going to evolve as a programmer.
+
+00:39.450 --> 00:44.400
+If you want to be considered a senior javascript developer you have to know inside and out.
+
+00:44.850 --> 00:47.450
+So what are these special skills.
+
+00:47.460 --> 00:55.710
+It's right here closures and prototype all inheritance if you worked with JavaScript before then for
+
+00:55.710 --> 01:02.520
+sure you've heard of these terms but they're pretty advanced especially if you want to deeply understand
+
+01:02.520 --> 01:04.830
+them which we're going gonna do in this section.
+
+01:04.830 --> 01:11.460
+But before we dive into these two pillars we're going to quickly talk about some of the below topics
+
+01:11.790 --> 01:13.130
+right over here.
+
+01:13.500 --> 01:22.090
+High order functions and functions versus objects in order to truly understand these concepts and once
+
+01:22.180 --> 01:28.420
+we have all of that in place and we talk a little bit about the birth of JavaScript and how scheme and
+
+01:28.420 --> 01:35.290
+Java where inspirational to Brendan Knight when he created javascript what we're going to learn here
+
+01:35.650 --> 01:41.670
+and the two pillars is going to allow us to really move on to object oriented programming.
+
+01:41.860 --> 01:50.040
+Functional programming to really start using what we've learned to make ourselves a better programmer.
+
+01:50.050 --> 01:54.100
+So let's get started and I'll see in the next video by.

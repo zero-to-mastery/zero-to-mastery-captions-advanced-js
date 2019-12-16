@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.830 --> 00:02.830
+Welcome back.
+
+00:03.090 --> 00:10.560
+Now hash tables are implemented differently in different languages but most of the time the key and
+
+00:10.560 --> 00:20.070
+the value can be any type of data structure we saw here that we can have a function as a value we can
+
+00:20.070 --> 00:28.230
+have another object if we want as a value we can have an array as a value if we want and I mean you
+
+00:28.230 --> 00:30.680
+can do this in arrays as well.
+
+00:30.830 --> 00:38.660
+We don't just have numbers and strings in a race we can have arrays of objects but you can also sometimes
+
+00:38.660 --> 00:43.070
+have keys that are more than just strings.
+
+00:43.190 --> 00:52.920
+You could potentially have functions as keys and a value that is also a function or perhaps a number
+
+00:52.920 --> 01:00.790
+or an array whatever you want now in JavaScript in an object like this.
+
+01:00.880 --> 01:08.680
+If you pass a key that is a number or a function it actually gets string fight and it only allows String
+
+01:09.310 --> 01:19.000
+keys but with the new version of JavaScript and the S6 you actually have something called Map and sets
+
+01:20.220 --> 01:23.370
+which also may be familiar in other languages.
+
+01:23.460 --> 01:36.030
+A map is created like this and the difference between a map and an object is the fact that a map allows
+
+01:36.030 --> 01:40.250
+you to save any data type as the key.
+
+01:40.270 --> 01:46.740
+Remember with an object you can only save the key as a string with a map.
+
+01:46.740 --> 01:53.750
+It allows us if we want to even have functions as keys or arrays as keys.
+
+01:53.790 --> 02:00.180
+And another benefit of map is that it maintains insertion order.
+
+02:00.210 --> 02:04.020
+What does that mean well with an object.
+
+02:04.050 --> 02:07.140
+There is no order is there.
+
+02:07.140 --> 02:17.450
+If we go back to our diagram our data is inserted randomly in different places if we go back to our
+
+02:17.750 --> 02:18.320
+users.
+
+02:18.320 --> 02:27.630
+Example we see that there is definitely no order when we grab all the values of an object.
+
+02:27.740 --> 02:36.350
+We start with let's say Lisa Smith which was entered second then John Smith then perhaps Sandra D Sam
+
+02:36.350 --> 02:38.870
+doe gets selected last.
+
+02:38.960 --> 02:47.800
+There is no order like there was with the race but there are some versions of hash tables like maps
+
+02:47.860 --> 02:56.050
+in javascript that maintains this order of insertion so that when we loop through items in an object
+
+02:56.590 --> 03:04.650
+we have this maintained order sets is a another feature very similar to map.
+
+03:04.710 --> 03:10.050
+The only difference is that it only stores the keys no values.
+
+03:10.050 --> 03:17.660
+So you see here each language as we mentioned comes with its own pre-built versions of data structures.
+
+03:17.940 --> 03:21.030
+But at the end of the day all of them are hash tables.
+
+03:21.240 --> 03:28.890
+But in order to truly understand how hash tables work I think we should build one in the next video
+
+03:29.070 --> 03:30.000
+we're gonna do just that.

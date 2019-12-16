@@ -1,0 +1,754 @@
+WEBVTT
+
+00:01.180 --> 00:02.290
+Welcome back.
+
+00:02.350 --> 00:08.830
+It's time to implement all that we've learned in the previous videos and make a functional programming
+
+00:09.080 --> 00:10.050
+paradigm.
+
+00:10.090 --> 00:15.220
+Amazon shopping cart so let's think about this.
+
+00:15.400 --> 00:22.600
+We want to implement a cart feature that is we want to add items to cart at a 3 percent tax to the item
+
+00:22.720 --> 00:23.740
+in the cart.
+
+00:23.740 --> 00:29.440
+And while we want to buy an item which means moving whatever is in the cart to the purchases of the
+
+00:29.440 --> 00:33.270
+user and then we finally want to empty that cart.
+
+00:33.430 --> 00:38.110
+So it looks like all of these are functions that we're going to need to do.
+
+00:39.230 --> 00:43.760
+What are these functions licious list them out so that we have a good plan in place.
+
+00:43.850 --> 00:48.760
+We want to obviously purchase item which is going to do all of that for us.
+
+00:50.090 --> 00:54.920
+So the first thing is I'm going to have a function purchase item.
+
+00:55.070 --> 00:59.200
+What else will we want to add items to cart.
+
+00:59.350 --> 01:07.530
+So I'm going to create another function items for item to cart let's keep it on a single line right
+
+01:07.530 --> 01:09.450
+now because we don't have anything.
+
+01:09.450 --> 01:09.870
+What else.
+
+01:09.870 --> 01:21.690
+Well we want to add tax so I'm going to create another function call it apply tax to items we have function
+
+01:22.230 --> 01:32.350
+by item which will physically move the cart to purchases and then finally will do the empty cart.
+
+01:32.430 --> 01:37.380
+So function empty.
+
+01:37.570 --> 01:37.950
+All right.
+
+01:37.980 --> 01:42.330
+So we have our function that's going to affect the data that we have.
+
+01:42.330 --> 01:47.620
+That is the user now based on what I learned about functional programming.
+
+01:47.640 --> 01:56.860
+I want to keep these pure but it also looks like I'm applying a bunch of steps to the same data maybe
+
+01:56.860 --> 02:05.290
+we can use something like compose to compose all these steps so that purchase item does well all these
+
+02:05.290 --> 02:06.410
+things over here.
+
+02:07.180 --> 02:15.520
+So the first thing I want to do is well just to test out that everything is working let's just create
+
+02:15.520 --> 02:26.870
+the naive approach where we return from purchase item let's say we receive the user and the item from
+
+02:26.870 --> 02:27.400
+here.
+
+02:27.530 --> 02:35.330
+So we're gonna receive this user and the item and we're going to return the user with the new item.
+
+02:35.330 --> 02:38.920
+So let's just say we want to return home.
+
+02:39.410 --> 02:42.240
+Well we know that we want to keep things immutable.
+
+02:42.260 --> 02:47.570
+We don't want to just modified the user so I'm going to return a new object.
+
+02:47.570 --> 02:58.940
+I'm going to use object out sign here and object out assign and we can create a new object using an
+
+02:58.940 --> 03:01.930
+empty object that we're creating as a first parameter.
+
+03:02.030 --> 03:10.490
+Then the actual object that we're copying over and then we're going to add any updates to that object
+
+03:10.610 --> 03:12.280
+as a third parameter.
+
+03:12.440 --> 03:18.530
+So I'm going to say that the third parameter is going to be the fact that while I want the purchases
+
+03:18.530 --> 03:28.600
+to be added to the item so I'm going to say Purchase says is going to include the item so nice and easy
+
+03:28.630 --> 03:38.800
+naive approach so that if I call purchase items here or purchase item and I give it let's say the let's
+
+03:38.800 --> 03:46.830
+say name is laptop and the price is three hundred forty four.
+
+03:46.870 --> 03:54.190
+Nice and cheap laptop if I run this and I get object assign is not a function because not spelling correct
+
+03:54.280 --> 03:55.590
+assign G.
+
+03:56.230 --> 03:56.830
+That's better.
+
+03:56.830 --> 03:58.480
+Let's run this.
+
+03:58.480 --> 04:05.930
+Hey look at that I get something back but something's not working and that's because remember I have
+
+04:05.930 --> 04:09.950
+two parameters here and I need to pass the user into purchase items.
+
+04:10.250 --> 04:14.670
+So let's add the user in here and hit run.
+
+04:14.840 --> 04:15.760
+And there you go.
+
+04:15.800 --> 04:22.600
+Kim which is an active user now has purchased laptop that costs three hundred forty four.
+
+04:22.610 --> 04:24.800
+And it's in their purchases history.
+
+04:24.800 --> 04:28.220
+That's great but that's not why we needed to do right.
+
+04:28.250 --> 04:34.010
+We have to do all these things because well people can just buy things they have to add things to their
+
+04:34.010 --> 04:34.460
+cart.
+
+04:34.460 --> 04:36.220
+We have to apply the taxes.
+
+04:36.280 --> 04:40.220
+We need a record of what happened and we don't know what Kim did.
+
+04:40.220 --> 04:42.280
+Maybe she wants to remove things from the cart.
+
+04:42.290 --> 04:49.430
+This is too simplistic and looking at this I'm thinking we need compose we need to compose these functions
+
+04:49.430 --> 04:52.140
+together I've changed my mind.
+
+04:52.270 --> 04:55.560
+I don't want to do this anymore this is too simplistic.
+
+04:55.690 --> 05:00.430
+What I want to do instead is something like this
+
+05:03.310 --> 05:14.870
+I want to be able to compose purchase item I want to be able to add item to cart and you know let's
+
+05:14.870 --> 05:19.320
+rename this to add item to cart because it makes more sense.
+
+05:19.610 --> 05:26.240
+I want to add the item to cart initially and then because we're using compose we're gonna go from left
+
+05:26.690 --> 05:28.350
+or right to left.
+
+05:28.370 --> 05:37.880
+So we want to add the item to cart then we want to apply tax to the items in the cart and then we also
+
+05:37.880 --> 05:48.300
+want to well buy the item and then finally once we've done all that then we can empty the cart All right
+
+05:49.050 --> 05:55.410
+let's add commas here so that I don't get a syntax error and I want to be able to do this.
+
+05:55.500 --> 06:04.580
+I have a factory called purchase item that takes data which will be the user and the item.
+
+06:04.650 --> 06:12.540
+So that is the name that is laptop with a price of laptop just went up in price.
+
+06:12.570 --> 06:14.410
+It's way more expensive actually.
+
+06:14.430 --> 06:14.970
+You know what.
+
+06:15.360 --> 06:16.100
+Let's keep it cheap.
+
+06:16.110 --> 06:19.270
+Two hundred and I want to be able to do this.
+
+06:19.320 --> 06:22.990
+I want to give this data to this function.
+
+06:23.010 --> 06:28.990
+Then this function in this function then this function and I want all of this to happen for me.
+
+06:29.800 --> 06:32.660
+All right so it looks like we need compose.
+
+06:33.140 --> 06:35.660
+So let's compose these functions together.
+
+06:35.840 --> 06:41.240
+The very first thing is well let's create a compose function.
+
+06:41.510 --> 06:52.870
+I'm going to say const compose that's going to receive function and G so that's the first two parameters
+
+06:53.170 --> 06:56.790
+but we have a problem here right.
+
+06:58.590 --> 07:04.550
+Because we now have more than two functions that we want to go through.
+
+07:05.010 --> 07:06.810
+What can we do here.
+
+07:07.170 --> 07:15.120
+Now this is part of the reason that you'd use a library like RAM or load ash to use compose because
+
+07:15.540 --> 07:17.760
+you don't need to implement it yourself.
+
+07:17.760 --> 07:22.620
+I'm going to show you the way to do it but keep in mind that it does look a little confusing.
+
+07:22.620 --> 07:29.070
+I prefer using the library version usually because well it hides away a lot of the complexity but in
+
+07:29.070 --> 07:31.740
+this case we have way more arguments.
+
+07:31.740 --> 07:39.720
+So I'm going to use the spread operator to get all the other arguments and then in here I'm going to
+
+07:39.720 --> 07:49.330
+call f over G and inside just spread the arguments so I have composed now.
+
+07:49.430 --> 07:54.590
+I also want to define purchase item and this purchase item.
+
+07:54.590 --> 07:59.030
+Actually we have it over here so let's come down here.
+
+07:59.030 --> 08:03.590
+This purchase item we're gonna change things up a bit here.
+
+08:05.780 --> 08:12.880
+The purchase item is going to receive what Well it's going to receive a bunch of functions.
+
+08:12.950 --> 08:17.010
+Right and we don't necessarily know how many.
+
+08:17.140 --> 08:27.450
+So I'm going to just spread these functions and these spread functions are going to well return what
+
+08:27.930 --> 08:35.180
+I want to use these functions and I want to be able to compose them.
+
+08:35.340 --> 08:40.340
+So what I'm going to do is I'm going to use reduce.
+
+08:40.350 --> 08:45.510
+And if you're not sure why reduce is make sure you check out the video that I linked to with advanced
+
+08:45.990 --> 08:56.240
+race and in reduce I'm going to pass a callback function that will take a previous value and the current
+
+08:56.240 --> 08:58.380
+value or an accumulator.
+
+08:58.550 --> 09:00.040
+And the next value.
+
+09:00.770 --> 09:10.710
+So if I pass compose here the reduced function which is in itself a high order function is going to
+
+09:10.710 --> 09:19.280
+run this for me which is going to take F N G but it's also going to iterate through empty card by item
+
+09:19.290 --> 09:20.250
+of taxable items.
+
+09:20.250 --> 09:28.860
+Add to Cart and actually return one by one and run these functions.
+
+09:29.110 --> 09:32.800
+Like I said this can be a little overwhelming at first.
+
+09:32.800 --> 09:40.660
+You might have to spend a few minutes figuring out what exactly you're doing but essentially we build
+
+09:40.690 --> 09:47.290
+our own compose function that allows us to enter any number of parameters that we want into the purchase
+
+09:47.320 --> 09:53.910
+item so that we can compose these functions and act over the data that we receive.
+
+09:53.910 --> 09:54.220
+All right.
+
+09:54.240 --> 09:58.540
+So let's go step by step now and see what we can do.
+
+09:58.590 --> 10:03.070
+The first thing I want to do is add item to cart.
+
+10:03.130 --> 10:11.610
+So with ADD item to cart it's going to receive a user and the item.
+
+10:11.610 --> 10:21.540
+And in here we're going to just create a simple function we want to add a updated cart and this updated
+
+10:21.540 --> 10:23.020
+cart.
+
+10:23.110 --> 10:30.360
+Well we want to add to the user's cart but we don't know what the user had previously.
+
+10:30.400 --> 10:33.890
+We want to make sure that we don't mutate any of the previous race.
+
+10:33.940 --> 10:36.820
+We want to return what we currently have.
+
+10:36.850 --> 10:37.890
+Let's do this instead.
+
+10:37.900 --> 10:47.980
+We're going to say user dot cart dot com cat which will add a new array that is completely different
+
+10:48.130 --> 10:51.970
+and copied from the previous array or the original array.
+
+10:52.120 --> 11:03.120
+And in here I'm going to pass the item that we're buying so that we can finally return object dot assign
+
+11:04.490 --> 11:17.880
+and in here we return a new object once again user with a new cart item.
+
+11:17.890 --> 11:18.560
+All right.
+
+11:18.560 --> 11:23.860
+In order to see that this works let's from all these other functions.
+
+11:23.870 --> 11:26.930
+You see that I'm returning a new user state.
+
+11:26.930 --> 11:31.580
+So in all these functions I'm going to have a user and it's going to.
+
+11:31.580 --> 11:35.620
+Well let's just return user from each of these functions.
+
+11:35.690 --> 11:40.830
+So as the data funnels through we can see the output.
+
+11:41.120 --> 11:47.780
+So I'm not doing anything in these functions other than while passing the data through.
+
+11:49.180 --> 11:59.730
+See if I've made any typos here if I run this purchase items oh and this is not an error function.
+
+11:59.740 --> 12:01.780
+This is a function declaration.
+
+12:01.780 --> 12:08.070
+So I have to make sure that I return in here
+
+12:11.700 --> 12:14.280
+this properly if I run this.
+
+12:14.640 --> 12:20.150
+Hey look at that can now has an item in her cart.
+
+12:20.150 --> 12:22.230
+How cool is that.
+
+12:22.280 --> 12:29.870
+I was able to purchase items while I was able to do the first thing add item to cart and I passed on
+
+12:29.930 --> 12:36.320
+the data to the next functions that were composing but they just received the user and just passed it
+
+12:36.350 --> 12:38.420
+all the way out like a factory.
+
+12:38.420 --> 12:39.780
+How cool is that.
+
+12:39.950 --> 12:46.070
+All right now that we've created this this is a pure function just takes in something and returns something
+
+12:46.070 --> 12:47.570
+no matter how many times we call it.
+
+12:47.570 --> 12:49.060
+It's always going to be the same.
+
+12:49.160 --> 12:52.640
+Let's apply all the other functionality to these ones as well.
+
+12:52.640 --> 12:59.030
+The first is to apply tax I'm going to say can't and let's use this structuring here so we don't have
+
+12:59.030 --> 13:01.460
+to do user dot cart all the time.
+
+13:01.460 --> 13:04.960
+So let's say user and in here.
+
+13:04.990 --> 13:08.470
+Let's just say that the tax rate is one point three.
+
+13:08.590 --> 13:11.310
+They say 3 or 30 percent 3 percent tax.
+
+13:11.320 --> 13:14.850
+OK so let's create cost
+
+13:17.640 --> 13:24.390
+tax rate and this tax rate will be one point zero three.
+
+13:24.690 --> 13:26.490
+Let's do 30 percent for now.
+
+13:26.550 --> 13:29.390
+Just because we can see the difference a lot better that way.
+
+13:29.400 --> 13:30.520
+So 30 percent tax.
+
+13:30.570 --> 13:31.630
+That's a big tax.
+
+13:31.860 --> 13:40.290
+And we're going to say updated cart is going to equal cart dot map.
+
+13:40.290 --> 13:42.180
+Remember cart is an array.
+
+13:42.240 --> 13:52.520
+We're gonna map over this and we're gonna map over each item and we're going to return a new object
+
+13:52.880 --> 14:00.310
+that contains well the name that is the item dot name so nothing's changed there.
+
+14:00.310 --> 14:02.020
+But the price is going to be different.
+
+14:02.050 --> 14:05.310
+It's going to be item dot price.
+
+14:05.410 --> 14:16.570
+Multiply by the tax rate so that finally at the end of it all we can just return object dot assign.
+
+14:16.580 --> 14:23.600
+Remember we want to return the user but a new copy of the user with the updated information that has
+
+14:23.600 --> 14:36.970
+the cart updated cart so that if I run this Hey look at that the price of the laptop went up because
+
+14:36.970 --> 14:40.990
+we applied the tax to it it went from two hundred to two hundred and sixty.
+
+14:40.990 --> 14:41.440
+Oh boy.
+
+14:41.440 --> 14:43.810
+This tax is really killing us.
+
+14:43.900 --> 14:46.660
+All right let's keep going with bi item.
+
+14:46.750 --> 14:54.330
+So in here we want to move the cart item to the purchases again using our functional approach.
+
+14:54.340 --> 14:55.730
+This should be an easy one.
+
+14:55.750 --> 14:59.660
+All we need to do is object dot assign.
+
+14:59.950 --> 15:02.760
+And in here we have an empty object.
+
+15:03.370 --> 15:13.510
+The user that we receive and all we do is while we have the purchases and we update that with the items
+
+15:13.510 --> 15:14.260
+in the cart.
+
+15:14.260 --> 15:20.370
+So it'll be user dot cart if I run this.
+
+15:20.500 --> 15:23.770
+And once again I'm not spelling object design properly.
+
+15:23.770 --> 15:25.330
+Let's try that again.
+
+15:25.330 --> 15:26.380
+Hey look at that.
+
+15:26.380 --> 15:36.620
+We have our purchases but we need to remove this from the actual cart because now Kim has purchased
+
+15:36.620 --> 15:37.550
+her laptop.
+
+15:37.550 --> 15:45.820
+So with our last function to finish things off let's do the last piece object dot assign hopefully I'm
+
+15:45.830 --> 15:52.390
+spelling that right this time around we have an empty object that we attached a user to and then we
+
+15:52.390 --> 15:55.930
+update the cart to be what just an empty array.
+
+15:57.410 --> 16:05.200
+If I run this holy moly Kim has just purchased her first laptop.
+
+16:05.280 --> 16:08.100
+It was 260 bucks because of the big tax.
+
+16:08.110 --> 16:12.000
+But hey now she can do all the coding that she wants.
+
+16:12.010 --> 16:13.480
+How nice was that.
+
+16:13.630 --> 16:20.440
+I mean it was a little bit complicated at first because we had to create this compose function but now
+
+16:20.440 --> 16:26.250
+that we have this compose in place this purchase items works really nicely.
+
+16:26.290 --> 16:26.730
+Right.
+
+16:26.890 --> 16:29.880
+Exactly like a factory where we add item to cart.
+
+16:29.890 --> 16:32.790
+Apply tax two items by item empty cart.
+
+16:32.860 --> 16:40.210
+If a new functionality such as upgrade to Kim's status to not active.
+
+16:40.210 --> 16:45.330
+If we needed to add new functionality the rest of the code doesn't really care about that.
+
+16:45.430 --> 16:49.170
+We can just create a new function and just add it in here.
+
+16:49.180 --> 16:51.370
+That's the beauty of functional programming.
+
+16:51.400 --> 16:58.660
+This idea that we're building these small composed of all functions that are each worried about their
+
+16:58.660 --> 17:01.990
+own world so that whenever bugs happen.
+
+17:02.770 --> 17:09.550
+Well as long as they're tested well it's most likely not then it's most likely in a place where we might
+
+17:09.550 --> 17:15.670
+have state or we might be mutating state but we will know that hey these functions are OK because they're
+
+17:15.670 --> 17:16.810
+pure.
+
+17:17.000 --> 17:23.560
+Now here's the really really interesting part and why I think functional programming and the concepts
+
+17:23.560 --> 17:32.680
+around it are so interesting because now if we want to say create another function like refund item
+
+17:34.840 --> 17:36.600
+Well again that's easy to do.
+
+17:36.640 --> 17:42.890
+We just have to remove things from purchases or even from the cart.
+
+17:42.910 --> 17:51.280
+But the more interesting thing is the idea of now being able to play back history because let's be honest.
+
+17:51.280 --> 17:55.880
+If you were Amazon you want to keep track of your data.
+
+17:56.020 --> 17:57.820
+You want to know what users did.
+
+17:57.850 --> 18:03.700
+Maybe Kim complains that hey I purchased my laptop but it's not in my purchases.
+
+18:03.700 --> 18:09.570
+I can receive it and Amazon needs a way to go back in time and figure out what happened.
+
+18:09.640 --> 18:18.340
+They need logs of what the user might have done that may have resulted in an error on their side inadvertently
+
+18:18.430 --> 18:21.380
+using our functional programming paradigm.
+
+18:21.430 --> 18:25.480
+We have an ability to travel back and forth through time.
+
+18:25.540 --> 18:26.110
+Let me show you.
+
+18:27.040 --> 18:33.840
+If for example we have a database there's just a cost database or you know what.
+
+18:33.850 --> 18:35.700
+Let's do history.
+
+18:36.140 --> 18:42.070
+Do Amazon history and this will be.
+
+18:42.280 --> 18:51.090
+Well actually initially we'll just be an empty array and every time we do something we want to add to
+
+18:51.090 --> 18:52.210
+this history.
+
+18:52.350 --> 18:58.830
+For example in the IDE item to cart at the beginning I can just say Amazon thought Amazon history does
+
+18:58.860 --> 19:07.380
+push the current user state and then maybe I want to make sure that I capture the state of the user
+
+19:07.380 --> 19:09.230
+before we apply the taxes.
+
+19:09.360 --> 19:18.120
+Maybe here when we buy the item and then empty cart I'm just pushing this user data to our Amazon history
+
+19:18.870 --> 19:20.160
+so that when I run
+
+19:23.140 --> 19:33.650
+Amazon history and I click Run check that out I have the entire history of Kim and what she did.
+
+19:33.710 --> 19:41.360
+Now this doesn't look very pretty right now but I hope you can see that we have Kim initially with no
+
+19:41.360 --> 19:48.860
+purchases nothing in the cart and all the way till the end where she has purchases and right now she
+
+19:48.860 --> 19:53.690
+still has the things in the cart because we haven't captured the history after we empty the cart but
+
+19:53.930 --> 20:01.580
+we can go back in time now as an Amazon employee I can go back in time and see where Kim made her purchases
+
+20:01.910 --> 20:07.490
+when she added things to the cart when we added taxes to the items.
+
+20:08.710 --> 20:18.250
+Now behind the scenes maybe Amazon can create new functions like get user state or function that is
+
+20:18.520 --> 20:22.270
+go back in history or go forward.
+
+20:23.800 --> 20:26.820
+How cool is that.
+
+20:26.830 --> 20:31.390
+Another thing that you might be asking yourself as well were well how come we're doing push and Amazon
+
+20:31.390 --> 20:32.780
+history isn't that state.
+
+20:32.800 --> 20:35.110
+Are we modifying state.
+
+20:35.110 --> 20:40.690
+And remember we can't just purely have pure functions in order for us to do anything with the program
+
+20:40.990 --> 20:41.710
+at some point.
+
+20:41.710 --> 20:50.540
+We do have to mutate data the idea of functional programming is to minimize those mutations all right.
+
+20:50.540 --> 20:59.460
+This video's getting long so I want to finish off with the idea of pipe remember compose is we go from
+
+20:59.730 --> 21:01.990
+right to left.
+
+21:02.150 --> 21:03.740
+How would we fix this with pipe.
+
+21:04.400 --> 21:15.830
+Well if you prefer reading left to right we just change this compose to pipe and just change g into
+
+21:15.830 --> 21:19.310
+F and F into G.
+
+21:19.310 --> 21:24.890
+We'll have to change the orders of these around into the opposite direction but that's it.
+
+21:24.890 --> 21:27.280
+You can choose Piper compose based on what you like.
+
+21:28.340 --> 21:30.320
+All right that's enough talking for me.
+
+21:30.320 --> 21:32.660
+I hope that was exciting for you.
+
+21:32.660 --> 21:39.270
+We're able to use all that we've learned in the previous videos to implement something quite clean.
+
+21:39.390 --> 21:45.200
+Now this is obviously a simple example but I hope you now see the power of functional programming.
+
+21:45.300 --> 21:47.020
+I'll see in the next one by.

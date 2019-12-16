@@ -1,0 +1,334 @@
+WEBVTT
+
+00:01.120 --> 00:09.470
+Welcome back remember how we said the javascript is a single threaded language but with the asynchronous
+
+00:09.740 --> 00:17.880
+ability we're able to do things in the background so that even though we have javascript that is just
+
+00:18.240 --> 00:24.750
+one thread we're able to do these complex things and still have Web sites and programs that perform
+
+00:24.750 --> 00:33.030
+well because with the asynchronous model these requests that take a long time don't block the main thread
+
+00:33.960 --> 00:42.430
+but the thing is where do they go where does the Web API have this compute power to run these things.
+
+00:42.480 --> 00:52.230
+And the thing is tasks in a web browser for example or even a node where we use something like fetch
+
+00:52.290 --> 01:01.610
+or set timeout or look into the database or read a file system in node these are still executed in threats.
+
+01:01.650 --> 01:08.600
+The thing is this is hidden from us because often they are running on their own separate background
+
+01:08.840 --> 01:18.040
+threats outside of JavaScript you see when I create a new tab here the browser creates one thread per
+
+01:18.040 --> 01:27.150
+tab so that I have an entire javascript call stack and memory heap in here every time on new taps.
+
+01:27.190 --> 01:35.700
+And as soon as I close the tab while that thread dies and is gone now on the main thread let's say on
+
+01:35.700 --> 01:42.960
+this Web site the javascript program that I'm running is on the main thread but sometimes there's things
+
+01:42.960 --> 01:49.380
+that we need to do in the background and the browser has something called Web workers that work in the
+
+01:49.380 --> 01:52.350
+background for me that I don't really need to know about.
+
+01:52.410 --> 01:59.060
+But if there's something complicated that needs to happen that's outside of my control.
+
+01:59.070 --> 02:02.510
+They take care of it for me by the way.
+
+02:02.840 --> 02:10.550
+Remember this diagram where I talked about the idea of a single threaded model and no GSM became popular
+
+02:10.550 --> 02:21.230
+because even though it had this one thread it was able to pass off things into the callback queue so
+
+02:21.230 --> 02:26.620
+that it never blocked this one single thread and it just passed things on two different things.
+
+02:26.650 --> 02:32.270
+Unlike the traditional model where any requests that we would have towards a server we would spawn a
+
+02:32.270 --> 02:34.310
+new thread handle that.
+
+02:34.310 --> 02:40.910
+But because that will be blocked we would have to spawn another thread for the next request and if we
+
+02:41.030 --> 02:49.700
+ran out of threads while the requests would have to wait for our threat pool to be available and no
+
+02:49.720 --> 02:57.410
+GSM is able to do this because of something called WORKER THREADS you see in the background.
+
+02:57.410 --> 03:05.750
+Although the limitation of the V V8 JavaScript engine is this single threaded model with one call stack
+
+03:06.470 --> 03:15.560
+we can pass things off to something like lib you V that is written in C++ to handle work or threads
+
+03:15.590 --> 03:18.780
+and multiple worker threads in the background for us.
+
+03:19.070 --> 03:26.480
+And just like that on the browser we also have this idea of a web worker and a web worker is a javascript
+
+03:26.480 --> 03:33.060
+program running on a different thread in parallel to our main thread.
+
+03:33.080 --> 03:37.480
+Now how can we create something like that it's quite easy.
+
+03:37.550 --> 03:42.920
+We can just simply say variable Walker equals new worker
+
+03:45.850 --> 03:53.650
+and this worker hour window object will have access to and it can read from a javascript file.
+
+03:53.710 --> 03:58.370
+Let's say worker dot J.S. file will make sure I spell that right.
+
+03:59.550 --> 04:09.560
+So we can spawn a new Web worker and assign it to worker and now in here from this worker we can actually
+
+04:10.070 --> 04:22.350
+do something called post message to post a message to another thread so I can say hello and in a different
+
+04:22.350 --> 04:30.170
+thread such as let's say the main thread I can just say ad event listener.
+
+04:30.170 --> 04:33.640
+And then just listen to a message.
+
+04:33.640 --> 04:41.360
+And if we get a message like post message well we can take that data from one worker into our own thread
+
+04:43.630 --> 04:47.140
+now most of the time you won't be working with Web workers.
+
+04:47.140 --> 04:50.260
+I just want to show you that they do exist in the background.
+
+04:51.090 --> 04:57.930
+The main takeaway is that web worker is a javascript program running on a different thread alongside
+
+04:57.930 --> 05:05.350
+our main threat just like a browser creates a new threat for us when I create new taps on our program.
+
+05:05.350 --> 05:12.130
+Now keep in mind that these Web workers communicate through these messages that I just showed you but
+
+05:12.310 --> 05:17.590
+they don't really have access to all the browser web API is like they don't have access to Windows or
+
+05:17.590 --> 05:25.160
+document object but they do have some abilities like using set timeout location or navigator.
+
+05:25.300 --> 05:29.950
+But luckily for us on the browser that's taking care of it for us right.
+
+05:30.040 --> 05:36.400
+Using things like fetch on the browser we don't need to worry about different threads working on something
+
+05:36.400 --> 05:36.850
+else.
+
+05:36.910 --> 05:45.370
+We just call it using this facade function and it's a facade because underneath the hood it calls on
+
+05:45.400 --> 05:48.730
+to the web API and says Hey web API I have something for you.
+
+05:48.730 --> 05:50.110
+Can you take care of it for us.
+
+05:50.170 --> 05:52.410
+Which is really nice it's out of our hands.
+
+05:53.910 --> 05:56.910
+What about in note what happens in note.
+
+05:57.420 --> 06:04.920
+Well as you saw we have worker threads when we do something like reading from the file system in the
+
+06:04.920 --> 06:11.710
+background node does these things for you reading from a database note does it for you.
+
+06:11.760 --> 06:18.480
+So we don't really need to worry about having to create our own threads which is really really nice.
+
+06:18.480 --> 06:21.070
+It makes our programs simple.
+
+06:21.120 --> 06:27.630
+Now I want to finish off this video with this diagram that I actually got from Stack Overflow and I
+
+06:27.630 --> 06:30.470
+think is absolutely great.
+
+06:30.540 --> 06:37.890
+This shows the difference between two terms that are really really common but also confusing the idea
+
+06:37.890 --> 06:41.310
+of concurrency and parallelism.
+
+06:41.420 --> 06:50.850
+You see if we ran this first program where we only have a single core CPI you on our computer what the
+
+06:50.850 --> 06:57.270
+computer would be doing is it'll be working on one thread as soon as it's done with that thread or has
+
+06:57.270 --> 07:03.860
+a bit of time a bit of pause it can switch to the next thread and work on something there and then go
+
+07:03.960 --> 07:06.350
+back to thread one because we have more work to do.
+
+07:06.480 --> 07:12.840
+And then back to thread 2 it can switch back and forth between these two threads but only allowing one
+
+07:12.840 --> 07:19.720
+thread to run out of time because we have a single core CPI that is once a B you can do work.
+
+07:19.980 --> 07:26.680
+So the best way to think about it is just like this man over here eating in a single threaded model.
+
+07:26.700 --> 07:29.730
+You just have one mouth to eat these things.
+
+07:29.730 --> 07:34.990
+One mouth means ACP you but you have two hands right.
+
+07:34.990 --> 07:37.150
+So you can grab something from the plate.
+
+07:37.210 --> 07:43.030
+Let's say an apple and bring that to your mouth and once you're done with that you can grab a another
+
+07:43.030 --> 07:49.850
+hand with let's say a banana and grab that and bring it towards your mouth and that is what concurrency
+
+07:50.030 --> 07:58.860
+is concurrency is something that we can achieve in JavaScript right we're using concurrency when we
+
+07:58.860 --> 08:05.790
+work on our single threaded javascript but in the background we use note or Web browsers to actually
+
+08:05.790 --> 08:11.460
+allow us to do things in the background on different threads so that we can accomplish things but we
+
+08:11.460 --> 08:19.760
+can only do those once our main stack main call stack is done with our work and then we have this idea
+
+08:19.760 --> 08:26.800
+of concurrency as well as parallelism and that can only happen when we have things like multicore CPE
+
+08:26.810 --> 08:32.270
+use that is many CB use many more mouth than just one.
+
+08:32.270 --> 08:39.680
+And this is kind of like that men having too much or having two people eat food with two hands each
+
+08:41.410 --> 08:49.500
+if we ran this program the multicore CPI you would allow us to execute threads at the same time because
+
+08:49.530 --> 08:58.010
+each one would be on a different CPI you so we'd be able to run these threads in parallel side by side
+
+08:58.430 --> 09:00.180
+at the exact same time.
+
+09:00.230 --> 09:05.570
+How cool is that now when it comes to parallelism and JavaScript.
+
+09:05.570 --> 09:07.460
+You can't really do that can you.
+
+09:07.460 --> 09:13.790
+It's not really built into the language but there is a way to achieve something like this.
+
+09:13.860 --> 09:22.780
+Let's say something like node you see node was built for simplicity but if you have let's say for CPE
+
+09:22.780 --> 09:32.120
+use on your computer or server then you can run that node instance on all those for CB use so how do
+
+09:32.120 --> 09:38.870
+we create more of these processes that can run on multiple course.
+
+09:38.870 --> 09:45.500
+Well in node we can do something like spawn and there's three other ways of doing this.
+
+09:45.500 --> 09:53.900
+Different ways of doing this but we'll just use spawn as a good example and we'll just require the child
+
+09:54.930 --> 10:05.390
+process module that comes with node which will spawn a new process and then we can just run this process
+
+10:05.450 --> 10:07.910
+by saying let's just say get
+
+10:11.930 --> 10:12.500
+stuff.
+
+10:12.620 --> 10:17.780
+And if I run this all generate a new process that I can run.
+
+10:17.780 --> 10:19.320
+Now this is very advanced.
+
+10:19.340 --> 10:21.580
+You can read up on your own.
+
+10:21.800 --> 10:26.810
+The point of this video is just to show you the idea of concurrency and parallelism.
+
+10:26.810 --> 10:33.030
+The idea of threads and how that works in our programming and although javascript might be single thread
+
+10:33.030 --> 10:35.600
+it might have just one call stack.
+
+10:35.600 --> 10:43.700
+The beauty is in its restriction and simplicity because this is really really hard to manage parallelism
+
+10:44.000 --> 10:52.190
+is extremely difficult especially when you have these two threads touching the same data the fact that
+
+10:52.190 --> 11:01.160
+we have a single call stack in our program allows us to write really nice clean code and have asynchronous
+
+11:01.850 --> 11:11.360
+events that happen which I think makes things really really fun to code and avoid some really really
+
+11:11.360 --> 11:15.540
+strange bugs that might occur in a model like this.
+
+11:15.680 --> 11:16.140
+All right.
+
+11:16.190 --> 11:18.750
+This was a little bit beyond the scope of the course.
+
+11:18.770 --> 11:23.150
+I just wanted to throw it out there so you can go explore on your own if you're interested.
+
+11:23.150 --> 11:24.920
+As always thanks for watching.
+
+11:24.920 --> 11:26.380
+I'll see you in the next one.
+
+11:26.390 --> 11:26.870
+Bye bye.

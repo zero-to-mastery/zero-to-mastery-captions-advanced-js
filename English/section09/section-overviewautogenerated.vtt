@@ -1,0 +1,145 @@
+WEBVTT
+
+00:01.010 --> 00:06.260
+Let's talk about asynchronous JavaScript in this section.
+
+00:06.310 --> 00:12.250
+We're going to revisit what we spoke about in the first part of the course in our foundations where
+
+00:12.250 --> 00:20.810
+we talked about the web API is about the idea of callbacks the event loop and how we were able to use
+
+00:20.870 --> 00:26.670
+asynchronous web API as to have rich applications.
+
+00:27.050 --> 00:36.370
+And what does async mean asynchronous simply means that we don't have a right now when we build modern
+
+00:36.490 --> 00:41.770
+Web sites we don't have all the data initially do we.
+
+00:41.990 --> 00:49.400
+I mean we have our 80 mile page our CSF page some javascript but as the page is being loaded we also
+
+00:49.400 --> 00:57.050
+have to make a request maybe to a database maybe we need to make a request across the web to fetch some
+
+00:57.110 --> 01:04.920
+third party API all of these require asynchronous code because it's information we don't have yet.
+
+01:04.990 --> 01:06.650
+We need to get it.
+
+01:06.700 --> 01:11.350
+We're simply saying to JavaScript Hey can you go find this out for me.
+
+01:11.410 --> 01:18.580
+And when you're done with it come back and give me that information because JavaScript has no idea what
+
+01:18.580 --> 01:21.340
+the worldwide web or internet is.
+
+01:21.370 --> 01:22.780
+It's single threaded.
+
+01:22.810 --> 01:24.990
+It's a programming language.
+
+01:25.180 --> 01:34.600
+On the other hand the web browser or node j yes allows us to use a sync or asynchronous code so we can
+
+01:34.600 --> 01:42.840
+interact with things outside the world of JavaScript and that is the solution asynchronous functions
+
+01:43.290 --> 01:46.680
+are functions that we can execute later.
+
+01:46.970 --> 01:52.890
+And in this section we're going to finalize our understanding of asynchronous javascript and also revisit
+
+01:52.950 --> 01:56.660
+the problem that we saw in the first part of the course.
+
+01:56.910 --> 02:06.720
+Remember this piece of code we had a set time out that would console log one is the loneliest number
+
+02:07.990 --> 02:19.080
+with a delay of 0 seconds a set timeout that console logs 2 can be as bad as 1 in 10 milliseconds.
+
+02:19.540 --> 02:23.440
+A promise that automatically results with high.
+
+02:24.310 --> 02:28.460
+And then we console log that data which will be high.
+
+02:28.930 --> 02:40.700
+Right over here and then we have a console log three so that when we run this we have this weird output
+
+02:40.850 --> 02:47.890
+that we saw right we get three is a crowd as the first item.
+
+02:48.120 --> 02:49.410
+And that makes sense right.
+
+02:49.410 --> 02:58.170
+Because this whole process begins with the JavaScript engine reading our code saying Oh all right this
+
+02:58.200 --> 03:01.950
+I'm calling the web API this I'm calling a web API.
+
+03:02.160 --> 03:06.350
+This well I'm not sure what I'm doing here but this is asynchronous.
+
+03:06.390 --> 03:12.110
+So we're going to come back to it and then we run this piece of code first.
+
+03:12.140 --> 03:20.860
+Remember this diagram once our JavaScript engine sees something that is asynchronous or something like
+
+03:20.870 --> 03:30.250
+timeout that is part of a web API we send it over to the web API and then the web API is going to do
+
+03:30.250 --> 03:36.730
+something for us in the background when it's done with whatever it is such as a timeout or five seconds
+
+03:37.360 --> 03:44.710
+it will add the callback or the function that we need to invoke into the callback Q And then the event
+
+03:44.710 --> 03:50.530
+loop is going to check and see if our call stack is empty and our entire JavaScript file has been bred
+
+03:50.530 --> 03:56.560
+once and then if it's empty it pops it onto the or it pushes it onto the call stack.
+
+03:56.560 --> 04:03.550
+So the event loop simply monitors the call stack and the callback you and we've talked about this before
+
+04:04.240 --> 04:15.150
+but then we had this problem right where we expect three is a crowd to get printed but next part gets
+
+04:15.150 --> 04:15.860
+confusing.
+
+04:15.930 --> 04:16.610
+Right.
+
+04:16.710 --> 04:25.560
+For some reason the promised console log gets run first The program returns undefined.
+
+04:25.790 --> 04:35.240
+So this entire JavaScript file has been read and then only then do we get this set timeout and then
+
+04:35.240 --> 04:42.860
+this set timeout block now we're going to explore that and a few other interesting things about JavaScript
+
+04:43.100 --> 04:45.720
+throughout the next couple of videos.
+
+04:45.830 --> 04:48.170
+So hang in there it's gonna be another fun one.
+
+04:48.620 --> 04:49.860
+I'll see on the next one.
+
+04:49.870 --> 04:50.240
+Bye bye.

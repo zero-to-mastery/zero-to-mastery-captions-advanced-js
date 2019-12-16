@@ -1,0 +1,199 @@
+WEBVTT
+
+00:01.260 --> 00:02.640
+Welcome back.
+
+00:02.640 --> 00:08.820
+We've done a brief run through of the javascript runtime and asynchronous javascript.
+
+00:08.820 --> 00:14.730
+Now this is something that we're gonna get into a little bit deeper later on in the course but I hope
+
+00:14.730 --> 00:22.710
+by now you should have a good understanding of the difference between a JavaScript engine and a javascript
+
+00:23.070 --> 00:28.450
+runtime the way that I like to think about it is like this.
+
+00:28.650 --> 00:36.570
+You see a javascript file look kind of like musical notes ways for us to write music write programs
+
+00:37.380 --> 00:42.170
+the JavaScript engine is kind of like the musician or the composer.
+
+00:42.420 --> 00:48.720
+That person is the one that can read this music and understand it and make sense of it and then the
+
+00:48.720 --> 00:57.410
+runtime is kind of like the whole package where we have the musician but we also give that musician
+
+00:57.840 --> 00:59.730
+besides the musical notes.
+
+00:59.730 --> 01:03.240
+All these tools to play our beautiful music.
+
+01:03.240 --> 01:11.400
+So let me ask you this if we're able to have different javascript different times because while JavaScript
+
+01:11.490 --> 01:20.490
+can run outside of the browser What do you think node j s as well is no G S a programming language is
+
+01:20.490 --> 01:23.390
+no G S a JavaScript engine.
+
+01:23.430 --> 01:25.250
+Is it a runtime.
+
+01:25.290 --> 01:27.600
+Well this kind of gives it away.
+
+01:27.660 --> 01:29.850
+It's a javascript runtime.
+
+01:29.850 --> 01:36.640
+It's not a language it's a runtime you see up until 2009.
+
+01:36.640 --> 01:40.450
+You ran javascript code inside of the browser.
+
+01:40.520 --> 01:43.740
+That's why people didn't really respect javascript.
+
+01:43.760 --> 01:45.710
+They thought it was a silly toy language.
+
+01:47.000 --> 01:54.470
+Well Ryan doll in 2009 decided it would be great to run it outside the browser because up until now
+
+01:54.470 --> 02:02.410
+we only had that runtime that web API and the callback Q In the event loop all browser based.
+
+02:02.510 --> 02:11.610
+So he created node j yes which is actually a C++ program you can actually think of it as node dot e
+
+02:11.610 --> 02:23.610
+XY it's an executable rate a C++ program that provides this runtime for us and if we look at the no
+
+02:23.610 --> 02:31.070
+J.S. runtime you see that it looks quite similar with our browser based runtime doesn't it.
+
+02:32.210 --> 02:40.660
+When it comes to node J.S. There are a few differences but it works the same way as our diagram.
+
+02:40.700 --> 02:49.840
+We have our V8 engine and then we have our event loop and what they call our callback and they use something
+
+02:49.840 --> 02:58.060
+called lib U V which again is written in C++ for us to do these asynchronous operations with the V8
+
+02:58.060 --> 02:59.510
+engine.
+
+02:59.540 --> 03:06.590
+Now when it comes to no G Yes it does a little bit more than our web browser runtime.
+
+03:06.590 --> 03:11.470
+You see in the case of a browser we're limited to what we can do in the background right.
+
+03:11.480 --> 03:15.950
+The browser isn't going to allow us to do much on the person's computer.
+
+03:15.980 --> 03:20.270
+You can't really access for example the file system of the user.
+
+03:20.270 --> 03:26.310
+I mean that would be a huge security flaw it just runs on the browser on the tab that we're currently
+
+03:26.310 --> 03:29.300
+on in what we call a sandbox environment.
+
+03:29.460 --> 03:33.080
+But in node we can pretty much do most of the things in the background.
+
+03:34.460 --> 03:36.220
+We can access file systems.
+
+03:36.290 --> 03:38.480
+We can do all sorts of things.
+
+03:38.750 --> 03:47.480
+You see no GSA uses the Google V8 engine to understand the javascript but it uses this lib u v library
+
+03:48.200 --> 03:55.220
+which works along to create this event loop to extend what we can do in the background.
+
+03:55.220 --> 03:56.610
+Now here's the fun thing.
+
+03:56.750 --> 04:04.840
+If I install no GSA my computer and let's just run node if I type in window here.
+
+04:04.890 --> 04:08.890
+Well I get an error there's no window like we had in the browser.
+
+04:09.090 --> 04:15.980
+Instead node has something called global and that's its global API.
+
+04:16.190 --> 04:16.910
+You see that.
+
+04:16.910 --> 04:24.650
+Just like we had with window in node we have this global API that we can use which also happens to have
+
+04:24.770 --> 04:27.260
+set time out set and terrible.
+
+04:27.260 --> 04:35.950
+That's nice but also has some extra things that we couldn't do in a browser and that is why node is
+
+04:36.310 --> 04:44.790
+set to be a server side platform based on asynchronous IO that is non blocking.
+
+04:45.220 --> 04:53.510
+It means that it uses javascript but outside of the browser but it creates this entire environment.
+
+04:53.530 --> 05:02.470
+This runtime that runs outside of the browser and it allows us to have the same model of a single threaded
+
+05:02.560 --> 05:10.380
+model but any asynchronous tasks can be non blocking that is they can be passed on to what we call work
+
+05:10.380 --> 05:16.870
+or threats in the background to do the work for us and then get sent back through the callback queue
+
+05:16.900 --> 05:19.780
+an event loop onto the stack.
+
+05:19.960 --> 05:28.690
+We were able in 2009 to have a different model to perhaps create servers you see back in the day we
+
+05:28.690 --> 05:38.050
+would create a thread for each request something like P HB would work like this and if what we call
+
+05:38.050 --> 05:43.460
+the threat pool that is however much the server can work is maxed out.
+
+05:43.480 --> 05:50.780
+Well the requests would just have to wait for the other ones to be available again no J.S. changed this
+
+05:50.780 --> 05:57.830
+mentality and said hey we only have this one single threat but as soon as you give me a thread I'm just
+
+05:57.830 --> 06:02.190
+going to pass it off to my asynchronous runtime to take care of it.
+
+06:02.360 --> 06:05.020
+And this simplified things a lot.
+
+06:05.700 --> 06:12.930
+Now there's pros and cons to each method but I hope now you see the power of the runtime.
+
+06:13.020 --> 06:19.530
+How would ads on this extra feature to JavaScript so that we can finally have the capabilities we had
+
+06:19.530 --> 06:24.200
+in the browser but also the capabilities outside of the browser.
+
+06:24.420 --> 06:25.350
+I'll see in the next video.

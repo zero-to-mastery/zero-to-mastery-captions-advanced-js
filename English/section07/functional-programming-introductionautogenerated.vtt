@@ -1,0 +1,109 @@
+WEBVTT
+
+00:01.770 --> 00:04.770
+What is functional programming.
+
+00:04.770 --> 00:12.630
+Functional programming is all about separation of concerns which object oriented programming does as
+
+00:12.630 --> 00:14.080
+well right.
+
+00:14.100 --> 00:21.330
+It's all about packaging our code into separate chunks so that everything's a well organized in each
+
+00:21.330 --> 00:22.790
+part of our code.
+
+00:22.950 --> 00:26.660
+Concerns itself with the one thing it's good at.
+
+00:26.730 --> 00:32.460
+We remember in our object oriented programming section how we had classes to divide up properties and
+
+00:32.460 --> 00:39.180
+methods of let's say an ogre from that of an elf and functional programming has this idea as well of
+
+00:39.180 --> 00:45.390
+separating concerns but they also separate data and functions.
+
+00:45.390 --> 00:50.080
+That is a functional programmer views the world as well.
+
+00:50.100 --> 00:58.770
+There's data and then this data gets interacted with but we're not going to combine both data and functions
+
+00:58.860 --> 01:02.070
+as one piece or one object.
+
+01:02.070 --> 01:09.630
+Now there is no correct definition for what is and isn't functional but generally functional languages
+
+01:09.630 --> 01:18.140
+have an emphasis on simplicity where data and functions are concerned we separate them up and most functional
+
+01:18.140 --> 01:26.080
+programming languages don't have these concepts of classes and methods that belong to objects instead
+
+01:26.440 --> 01:34.390
+functions operate on well-defined data structures like arrays and objects rather than actually belonging
+
+01:34.630 --> 01:37.970
+to that data structure like an object.
+
+01:38.110 --> 01:45.760
+And the thing is the goals of functional programming are the exact same as that of object oriented programming.
+
+01:45.760 --> 01:51.550
+It's the idea to make our code clear and understandable easy to extend easy to maintain.
+
+01:51.670 --> 01:58.180
+It's going to allow us to not repeat ourselves keeping our code dry and keeping our memory efficient
+
+01:58.570 --> 02:03.510
+by having these reusable functions that act on data.
+
+02:03.680 --> 02:11.180
+Now when it comes to functional programming we have a very important pillar and unlike object oriented
+
+02:11.180 --> 02:19.300
+programming where we had those four pillars of encapsulation abstraction polymorphism and inheritance.
+
+02:19.640 --> 02:27.020
+If you want to break things down in functional programming it all comes down to this concept of pure
+
+02:27.560 --> 02:28.480
+functions.
+
+02:28.820 --> 02:32.090
+And this is something that we're going to explore over the next couple of videos.
+
+02:32.240 --> 02:38.840
+But the idea here is that there's a separation between data over a program and the behavior of a program
+
+02:39.290 --> 02:47.060
+in all objects created in functional programming are immutable something that we'll talk about a little
+
+02:47.060 --> 02:47.660
+bit more.
+
+02:47.750 --> 02:53.130
+But what that means is once something is created it cannot be changed.
+
+02:53.270 --> 03:01.010
+We avoid things like shared state and we adhere to this principle of pure functions.
+
+03:01.370 --> 03:08.630
+And as you'll find out functional programming has a lot of restraints a lot of rules things that you
+
+03:08.630 --> 03:15.830
+can't do but restraints like these are good encoding because we don't allow people to just do everything
+
+03:15.980 --> 03:18.900
+by having small options of things that we can do.
+
+03:19.070 --> 03:25.730
+We can make sure that we have code that doesn't get out of hand and before we get into what exactly
+
+03:25.730 --> 03:31.190
+is a pure function how to implement functional programming paradigm let's do a little exercise.

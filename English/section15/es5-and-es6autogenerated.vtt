@@ -1,0 +1,787 @@
+WEBVTT
+
+00:01.590 --> 00:08.160
+If there's one thing we have learned this entire time in this course is that there is nothing static
+
+00:08.160 --> 00:10.210
+about being a web developer.
+
+00:10.320 --> 00:13.350
+Improvements are constantly made all the time.
+
+00:13.350 --> 00:24.490
+In Asia Mel CSX and JavaScript and even the browsers get constantly updated libraries are also constantly
+
+00:24.490 --> 00:25.490
+being created.
+
+00:25.510 --> 00:31.090
+If you remember libraries are just pieces of code they could be CSX they could be a shemale they could
+
+00:31.090 --> 00:37.420
+be javascript pieces of code written by somebody else so that we can use it so we don't have to start
+
+00:37.420 --> 00:39.800
+from scratch.
+
+00:40.030 --> 00:48.410
+Now it's human nature to want to constantly improve and in this video we're going to learn the new features
+
+00:48.770 --> 00:51.230
+that everybody will be using.
+
+00:51.350 --> 01:00.240
+But first let's recap something from our previous videos if you remember javascript was created by the
+
+01:00.240 --> 01:08.430
+Netscape browser and everybody else all the other browsers started using JavaScript So Netscape submitted
+
+01:08.430 --> 01:16.310
+javascript to something called the AMA international so that JavaScript could be standardized and they
+
+01:16.310 --> 01:27.580
+could say hey everybody use this version of JavaScript on all browsers that's what it must script is.
+
+01:27.680 --> 01:35.520
+My script is well it's javascript but it's just the standard way of calling it so that when the browsers
+
+01:35.550 --> 01:39.960
+implement what javascript should do and how they read javascript.
+
+01:39.960 --> 01:43.840
+Well everybody agrees on the standard now.
+
+01:43.850 --> 01:50.800
+Every time you see something like this like E6 and you'll see that quite a lot.
+
+01:50.880 --> 01:59.120
+IOS 6 just stands for Aqua script version 6.
+
+01:59.150 --> 02:08.870
+So yes there was a script version one all the way through 6 and we're currently it's version 7 but it's
+
+02:08.870 --> 02:09.640
+still new.
+
+02:09.640 --> 02:16.120
+So we're only learning version 5 and version 6 for now but version 5 and version 6.
+
+02:16.130 --> 02:22.640
+Introduce some new features that are really really powerful and make coding in JavaScript really really
+
+02:22.640 --> 02:23.330
+nice.
+
+02:23.330 --> 02:31.160
+And most code bases that you'll see in 2018 will be using these features as a very very exciting topic
+
+02:31.160 --> 02:31.610
+for me.
+
+02:31.610 --> 02:38.600
+It's one of my favorite parts of JavaScript now and I'm excited to show you some of these new features
+
+02:38.750 --> 02:42.580
+that will make your life a whole lot easier now.
+
+02:42.620 --> 02:48.980
+One thing you might be thinking though is Andre I don't want to learn something if browsers don't support
+
+02:48.980 --> 02:51.190
+them and I can't actually use them.
+
+02:51.800 --> 02:54.020
+But don't worry my friend.
+
+02:54.170 --> 02:57.640
+These are all features that are supported.
+
+02:57.990 --> 02:58.520
+You know why.
+
+02:59.270 --> 03:03.170
+Well mainly because of something called Babel.
+
+03:03.280 --> 03:09.610
+You see a few years ago programming created Babel so that developers can start using new javascript
+
+03:09.610 --> 03:11.590
+features as they come.
+
+03:11.590 --> 03:18.070
+Remember Xmas script releases versions all the time now without having to wait for browsers to implement
+
+03:18.070 --> 03:19.140
+these features.
+
+03:19.270 --> 03:23.380
+Babel allowed us to well to use them right away.
+
+03:24.450 --> 03:26.160
+Now how did they do that.
+
+03:26.280 --> 03:27.340
+Let's have a look.
+
+03:28.110 --> 03:37.170
+If I go in to try it out here you'll see that Babel shows me something I can write and will learn the
+
+03:37.170 --> 03:43.260
+syntax soon enough don't worry I can write something like this which is the new way of writing javascript
+
+03:43.440 --> 03:50.470
+with Acme scripts X and it compiles into this.
+
+03:50.470 --> 03:51.690
+Now what does that mean.
+
+03:51.700 --> 04:00.550
+It means that it reads a file line by line and then changes it to a version of JavaScript that all browsers
+
+04:00.550 --> 04:03.430
+know and it works on all browsers.
+
+04:03.430 --> 04:10.570
+When we actually deploy our application or Web site which means putting it online after we're done with
+
+04:10.570 --> 04:17.980
+it we can use Babel to say hey read our JavaScript file and transform it into this.
+
+04:18.010 --> 04:25.660
+So it works on all browsers so without even thinking about it you can write all your code in the newest
+
+04:25.660 --> 04:26.740
+and best way of writing it.
+
+04:26.740 --> 04:34.420
+You can see how clean this is and Babel will take care of changing everything for you so that browsers
+
+04:34.420 --> 04:35.280
+can read it.
+
+04:36.500 --> 04:40.310
+Isn't that awesome enough that let's learn some new sin taxes.
+
+04:40.400 --> 04:41.270
+And don't be afraid.
+
+04:41.270 --> 04:48.350
+Yes 5 and yes 6 made javascript a whole lot easier and more fun to write from now on will we take what
+
+04:48.350 --> 04:54.100
+we learn in this video to write all our code because it's what the industry is using right now.
+
+04:54.140 --> 04:57.140
+And this is why you will get asked during interviews.
+
+04:57.260 --> 04:58.930
+So let's get started.
+
+05:04.680 --> 05:09.920
+The first feature I'm going to show you is let and cost.
+
+05:09.940 --> 05:13.330
+These are actually very very simple.
+
+05:13.480 --> 05:16.660
+These are new ways of declaring variables.
+
+05:17.140 --> 05:25.180
+So if you see over here in our section online you see that JavaScript variables has now two new ways
+
+05:25.330 --> 05:33.320
+of declaring a variable and as a matter of fact variable that we've been using up to this point we don't
+
+05:33.320 --> 05:35.970
+really need to use it ever again.
+
+05:36.000 --> 05:40.570
+We now have something called let to show you how both of these work.
+
+05:40.740 --> 05:42.240
+Let's do a small example.
+
+05:42.300 --> 05:55.270
+I'm going to say const player and constants for constant will say Bobby and we'll say let experience
+
+05:55.960 --> 06:12.220
+equals to 100 and we'll say let wizard level equal to False now if I do something like If experience
+
+06:12.280 --> 06:15.180
+is greater than 90 then
+
+06:18.750 --> 06:22.120
+goes stay true OK.
+
+06:22.150 --> 06:26.580
+So these look like variables nothing's different.
+
+06:26.590 --> 06:31.960
+Let's run this through the console and see what happens okay.
+
+06:32.030 --> 06:33.920
+If I now check wizard level
+
+06:39.750 --> 06:40.830
+faults.
+
+06:40.950 --> 06:42.470
+That's that's strange right.
+
+06:42.470 --> 06:49.920
+Because in the previous video where we talked about the scope for had wizard level has a variable I
+
+06:49.920 --> 06:51.420
+would have gotten true here.
+
+06:51.420 --> 06:59.420
+So if this was variable and this was variable wizard level instead of being false will be true.
+
+06:59.500 --> 07:02.710
+Now that's confusing right.
+
+07:02.760 --> 07:05.780
+That's because it's not inside of a function.
+
+07:05.790 --> 07:13.380
+This is a little bit tricky but with variable we only we're able to create a scope inside of a function
+
+07:13.800 --> 07:29.220
+but never if it had curly brackets but inside of F with let when I say let and let well now I've created
+
+07:29.460 --> 07:38.850
+a wizard level variable inside of if so the only way that I can access this is INSIDE THE F if I do
+
+07:38.850 --> 07:42.160
+console door log wizard level here
+
+07:44.880 --> 07:53.800
+and console dialogue wizard level outside and then let's put inside
+
+07:56.310 --> 08:11.420
+and outside if I copy this paste that in inside I get true outside I get false because now with let
+
+08:11.760 --> 08:22.170
+any time it's wrapped around a curly bracket well it creates a new scope versus with a variable if I
+
+08:22.170 --> 08:23.430
+change this to a variable
+
+08:27.370 --> 08:29.860
+and I copy this again and refresh
+
+08:32.900 --> 08:45.960
+if I copy this I get inside equals to true and outside equals to true because wizard level has already
+
+08:45.960 --> 08:55.190
+been changed no new scope is created inside the curly brackets because this isn't a function now I know
+
+08:55.190 --> 08:56.830
+that's a really really confusing.
+
+08:56.870 --> 09:03.640
+But the one big takeaway from this is just don't use variable anymore variable is actually quite confusing.
+
+09:03.650 --> 09:08.900
+Now think of let as the new variable.
+
+09:08.900 --> 09:12.830
+So from now on we're gonna be using left for variables.
+
+09:12.830 --> 09:19.160
+But what is const well const is even cooler.
+
+09:19.160 --> 09:20.440
+Watch this.
+
+09:20.540 --> 09:30.680
+If I want to change the experience level I can say experience equals 80 and now if I look at experience
+
+09:31.250 --> 09:32.680
+well experience equals 80.
+
+09:32.930 --> 09:44.140
+But if I want to change the player Bobby to a new name equals Sally I get an error assignment to constant
+
+09:44.160 --> 09:44.870
+variable.
+
+09:44.880 --> 09:46.980
+What that means is a constant.
+
+09:47.010 --> 09:54.810
+You're not able to reassign to the variable so it cannot be updated.
+
+09:54.810 --> 09:56.760
+Now why would that be useful.
+
+09:56.760 --> 10:02.850
+It's really really useful because a lot of bugs happen when you're working in a team of people.
+
+10:02.850 --> 10:07.860
+If you have something like player and somebody changes the name of the player while you're working on
+
+10:07.860 --> 10:13.140
+a program and you still think it's Bobby and you keep getting errors because somebody else has touched
+
+10:13.140 --> 10:15.910
+it well that's that's a bit of an issue isn't it.
+
+10:15.960 --> 10:23.790
+But using costs you make sure that this player variable will always have the same value.
+
+10:23.910 --> 10:31.080
+So this is actually very very useful and my recommendation is that if you have anything that isn't going
+
+10:31.080 --> 10:33.640
+to change it should be a constant.
+
+10:33.660 --> 10:43.670
+So a function could be a constant because well if this function or if the assignment of A is not going
+
+10:43.670 --> 10:52.620
+to change then we feel a lot safer using const then let's say let because we make sure that nobody assigns
+
+10:52.830 --> 10:56.350
+something else to a so.
+
+10:56.360 --> 11:04.220
+The rule from now on is use cons if you're using a variable that doesn't change most of the time you'll
+
+11:04.220 --> 11:11.240
+use this and fear using a variable die you reassigned something to like Wizard level where it changes
+
+11:11.240 --> 11:13.740
+from true to false false true.
+
+11:13.760 --> 11:24.590
+Well then you'd let one thing with cost that you have to keep in mind is that if you do a cost object
+
+11:25.340 --> 11:38.850
+equals player Bobby experience one hundred and Wizard level two false.
+
+11:38.910 --> 11:50.340
+Well if I copy this object and try to reassign this object to say a number I get an error because it's
+
+11:50.340 --> 11:55.710
+a constant but if I try and change a property
+
+12:00.000 --> 12:04.660
+now my wizard level is too true.
+
+12:04.700 --> 12:15.290
+So one thing with constant is you can change the properties of the objects still you just can't reassign
+
+12:16.780 --> 12:20.480
+the variable right onto more fun things
+
+12:23.270 --> 12:29.630
+let's do these structuring and these ones that I'm going to show you are gonna make your life a whole
+
+12:29.630 --> 12:37.320
+lot easier again if we actually have our object here.
+
+12:37.320 --> 12:46.260
+Let's say that we wanted to grab these objects so we'll have to do a concert player equals object up
+
+12:46.260 --> 13:02.990
+player we'll do concerts experience equals object dots experience and then let wizard level equals object
+
+13:03.010 --> 13:03.710
+dots.
+
+13:03.890 --> 13:11.220
+Wizard level was a whole lot of typing to access these properties well with the structuring you can
+
+13:11.220 --> 13:11.910
+do this.
+
+13:12.060 --> 13:18.450
+You can say const player and experience
+
+13:21.840 --> 13:30.090
+the object so with this syntax it does the exact same thing as the first two lines over here.
+
+13:30.750 --> 13:41.070
+You just select the properties you want from an object and now you have cost player and experience available
+
+13:41.070 --> 13:49.680
+to you so you can use player anywhere you want in your code base and therefore let me can do wizard
+
+13:49.680 --> 13:51.450
+level equals
+
+13:55.080 --> 13:56.460
+much much cleaner.
+
+13:56.520 --> 13:57.600
+You just have to get used to it.
+
+13:57.630 --> 14:00.000
+But it's a lot nicer to look at.
+
+14:00.480 --> 14:00.810
+All right.
+
+14:00.810 --> 14:11.730
+Another thing cool thing you can do with objects concept name equals John Snow we can just start a new
+
+14:13.150 --> 14:27.830
+object here and we can say now name is hello and we can do Ray Smith.
+
+14:27.980 --> 14:29.920
+Hi all right.
+
+14:29.950 --> 14:36.670
+So this is a silly object but I wanted to show you some new ways of declaring object properties
+
+14:41.260 --> 14:44.570
+now in yes 6.
+
+14:44.620 --> 14:51.850
+You can have instead of the old way of having just player or experience or wizard level we can have
+
+14:51.850 --> 15:01.300
+something dynamic that we can assign like John Snow or we can do Ray plus myth or we can do one plus
+
+15:01.570 --> 15:07.390
+two and have these dynamic property values.
+
+15:07.390 --> 15:08.860
+Let me show you how they work
+
+15:11.920 --> 15:13.210
+if I access object.
+
+15:13.210 --> 15:21.820
+Now I have three equals hi hi and John Snow equals hello again new ways of declaring properties very
+
+15:21.820 --> 15:32.320
+useful if you need to calculate something for the property value but even cooler is being able to do
+
+15:32.470 --> 15:39.310
+something like this imagine you had a cost a equals to Simon
+
+15:43.460 --> 15:56.200
+cost B equals two true and cost C is an empty object and if we wanted to add these to an object we would
+
+15:56.200 --> 16:10.150
+have had to do a is a B as B and C is C and sometimes you wanted the property to match the value again
+
+16:10.360 --> 16:21.550
+with the new javascript if property and value are the same in that case we can just say A B C so we
+
+16:21.550 --> 16:27.220
+can remove we can remove the declaration that we have with property and value if they're the same and
+
+16:27.220 --> 16:29.420
+just keep it like this.
+
+16:29.650 --> 16:35.500
+Again this is something that when we get to the react section it's going to become very very useful.
+
+16:35.580 --> 16:36.600
+All right.
+
+16:36.720 --> 16:45.960
+Something even more fun and this time it's templates strings so template strings.
+
+16:46.000 --> 16:52.000
+Now remember when we have let's say a greeting how knowing it was that we had to do.
+
+16:52.010 --> 16:52.990
+Hello
+
+16:55.500 --> 17:09.360
+name plus you seem to be doing plus greeting and then say you had an exclamation mark and you also had
+
+17:09.360 --> 17:15.360
+to worry about backslash if you had an apostrophe that was really tedious and annoying.
+
+17:15.480 --> 17:27.440
+Now he knew something really fun instead of doing it this way you can have greeting fast equals something
+
+17:27.440 --> 17:30.860
+called templates strings and these are back ticks.
+
+17:30.950 --> 17:37.280
+So the back ticks that this is right above your tap key if you're on a Mac instead of using double quotes
+
+17:37.340 --> 17:48.250
+or single quotes this means Templar strings and now you can use double quotes or single quotes anywhere
+
+17:48.550 --> 18:01.070
+you want and there'll be a string but even cooler if you have name equals Sally and age equals thirty
+
+18:01.070 --> 18:06.110
+four Pat is horse.
+
+18:06.340 --> 18:08.170
+Now we can do Hello
+
+18:10.900 --> 18:12.050
+name.
+
+18:12.190 --> 18:23.480
+You seem to be notice the syntax and the colouring age minus 10.
+
+18:23.650 --> 18:25.290
+What a lovely
+
+18:27.680 --> 18:29.240
+pet you have
+
+18:32.520 --> 18:34.400
+so notice what we did here.
+
+18:34.410 --> 18:39.330
+I'm going to copy this just so we have it a comment this out.
+
+18:39.330 --> 18:48.870
+Now if I look into the console I'll refresh you see that now instead of doing all that double quotes
+
+18:48.870 --> 18:58.440
+and plus and worrying about spacing within these back ticks I can say a piece of string and then add
+
+18:58.440 --> 19:07.330
+dynamically by using the dollar sign then the curly brackets of value that we want we can again do any
+
+19:07.330 --> 19:08.530
+sort of expression.
+
+19:08.560 --> 19:10.380
+So age minus 10.
+
+19:10.480 --> 19:12.040
+What a lovely pet you have.
+
+19:12.040 --> 19:13.560
+Let's see what happens if I do.
+
+19:13.570 --> 19:17.440
+Greeting best that.
+
+19:17.610 --> 19:18.420
+Hello Sally.
+
+19:18.420 --> 19:20.630
+You seem to be twenty four.
+
+19:20.670 --> 19:24.390
+What a lovely horse you have very cool.
+
+19:24.410 --> 19:25.880
+So this is very very useful.
+
+19:25.880 --> 19:30.080
+We'll be definitely using this later on in the course.
+
+19:30.100 --> 19:39.100
+Another thing I want to show you is default arguments can do something like great we'll say name equals
+
+19:40.430 --> 19:47.440
+empty string age equals 30 and we'll say Pat
+
+19:49.720 --> 19:51.800
+is cat.
+
+19:52.090 --> 19:57.650
+Let's just copy what we had before with the greeting.
+
+19:57.750 --> 19:58.830
+I'm going to comment this out
+
+20:01.760 --> 20:03.630
+and we'll return this.
+
+20:03.710 --> 20:05.750
+So nothing's changed.
+
+20:05.750 --> 20:14.130
+We just have a function that returns a greeting the only thing that's new is this we show you what it
+
+20:14.130 --> 20:17.230
+does if I comment this out.
+
+20:17.270 --> 20:18.230
+I copy this.
+
+20:18.230 --> 20:20.030
+Put it into the console.
+
+20:20.390 --> 20:24.710
+And now I run Grete Hello.
+
+20:24.740 --> 20:26.160
+You seem to be 20.
+
+20:26.180 --> 20:33.530
+What a lovely cat you have do you catch that even though our browser and let me just refresh so you
+
+20:33.530 --> 20:38.870
+know for sure that our browser has no idea of what age or pet is.
+
+20:39.170 --> 20:41.720
+But if I run this function
+
+20:46.190 --> 20:53.810
+because of the way I made the parameters I gave them default arguments which says if I don't provide
+
+20:53.810 --> 20:58.680
+a value for name which I haven't I haven't given any arguments.
+
+20:58.850 --> 21:12.250
+Well then make name empty string make age 30 and make pet cat if I do now greet John 50 and we'll do
+
+21:13.270 --> 21:14.380
+monkey.
+
+21:14.440 --> 21:15.210
+Now I get.
+
+21:15.220 --> 21:15.810
+Hello John.
+
+21:15.820 --> 21:16.870
+You seem to be 40.
+
+21:16.870 --> 21:24.700
+What a lovely monkey you have this gets ignored because I've passed it parameters but otherwise I can
+
+21:24.700 --> 21:31.360
+pass a default parameter so that when somebody calls this function and they don't provide these arguments
+
+21:32.590 --> 21:39.600
+my function won't fail because well I have default arguments very cool.
+
+21:39.650 --> 21:42.330
+All right what else do we have.
+
+21:42.420 --> 21:50.590
+Let's refresh here if you remember we had one more type to do javascript types and that is a symbol.
+
+21:50.840 --> 21:56.690
+It's actually not used very often but I wanted to show you just because while it's a type we want to
+
+21:56.690 --> 22:06.380
+complete the seven types of JavaScript and a symbol is special because.
+
+22:06.400 --> 22:19.220
+Symbol 1 I create a symbol by doing this index and I can have a second symbol that is symbol and within
+
+22:19.220 --> 22:34.460
+here we can put anything we can put foo and variable symbol 3 equals symbol and we'll say foo as well.
+
+22:34.460 --> 22:47.250
+What's so unique about symbols and we should be using Paulette here if I copy this and I access someone
+
+22:47.430 --> 22:58.370
+I get symbol access Sim to I get Foo and same 3 I get food but the unique thing is that if I do Sim
+
+22:59.300 --> 23:10.570
+2 equals Sim 3 I get false even though well they look like they're the exact same thing and symbols
+
+23:10.570 --> 23:18.610
+are used because they create these completely unique type so that you can make sure there's never going
+
+23:18.610 --> 23:26.720
+to be any conflict and the symbol value is used as an indented fire mostly for object properties it's
+
+23:26.930 --> 23:32.420
+pretty much the only purpose of that because sometimes you don't want object properties if you have
+
+23:32.720 --> 23:38.750
+thousands of them to collide and be the same ones because then you'll get bugs we won't see it too much
+
+23:38.750 --> 23:44.150
+in the course you won't see it out in the wild too much but I wanted to show you it regardless because
+
+23:44.210 --> 23:49.360
+while we want to know all the javascript types all right.
+
+23:49.540 --> 23:55.770
+One last one I know we've covered a lot but this is the best one and that is arrow functions.
+
+23:57.850 --> 24:09.910
+Up to this point if we wanted to do something like add we had to do a b and return a plus b and you
+
+24:09.910 --> 24:18.060
+might have gotten sick and tired of constantly writing function over and over and over well now you
+
+24:18.060 --> 24:19.300
+have our functions.
+
+24:19.320 --> 24:21.510
+So with an error function you can do
+
+24:31.960 --> 24:37.430
+so anytime you see this syntax and I had to pass a and b here as well.
+
+24:37.510 --> 24:44.380
+Anytime you see this syntax it's the same thing as saying function but now is just the shorthand form
+
+24:44.380 --> 24:51.370
+so that you don't have to constantly write function and the beauty of it is that you could have done
+
+24:51.670 --> 24:56.630
+return and B and that completely work.
+
+24:56.630 --> 25:04.130
+So the only difference is that we have a function expression that accepts a parameter and we have this
+
+25:04.130 --> 25:08.790
+fat Haro but with an error function.
+
+25:08.970 --> 25:11.160
+If you have a single return
+
+25:13.820 --> 25:18.140
+you can just put it on one line and it assumes that you want to return this.
+
+25:18.140 --> 25:29.210
+If I save this and copy it in here I don't need the syntax let's copy that one more time.
+
+25:30.760 --> 25:36.940
+Add 4 and 2 that's the first function and then the new way with the error function.
+
+25:37.010 --> 25:42.990
+Add to for to again I get the same thing.
+
+25:43.010 --> 25:50.270
+It returns automatically because everything while it's on one line it looks very very nice a lot easier
+
+25:50.270 --> 25:53.190
+to write than the above.
+
+25:53.250 --> 25:55.570
+And there you have it.
+
+25:55.590 --> 25:58.290
+I know that was a lot of information.
+
+25:58.320 --> 26:04.320
+Make sure you do the exercises after this video to get yourself familiar with the syntax is just new
+
+26:04.320 --> 26:05.650
+ways of doing things.
+
+26:05.700 --> 26:15.520
+These are going to help you to write better cleaner code and just to show you what we've covered you've
+
+26:15.520 --> 26:24.470
+managed to finish everything in the section outline form variables to conditionals to finally the error
+
+26:24.470 --> 26:25.550
+function.
+
+26:25.550 --> 26:30.740
+We've covered everything that we've wanted to for JavaScript and moving forward.
+
+26:30.830 --> 26:37.510
+We're gonna be using these new syntax is to write our code.
+
+26:37.540 --> 26:40.630
+I hope you're excited as I am to start using these.
+
+26:40.630 --> 26:42.440
+I'll see you in the next one.

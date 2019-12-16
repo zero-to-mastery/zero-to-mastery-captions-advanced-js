@@ -1,0 +1,163 @@
+WEBVTT
+
+00:00.590 --> 00:01.680
+Welcome back.
+
+00:01.730 --> 00:03.320
+Let's do a fun little exercise.
+
+00:03.320 --> 00:06.690
+That is a little bit tricky as well.
+
+00:06.830 --> 00:19.410
+Let's say I have a function called weird and this function weird has a height of 50.
+
+00:19.470 --> 00:28.590
+Where do you think this height property or height variable is located.
+
+00:28.610 --> 00:31.930
+Let's run this and see what happens.
+
+00:32.720 --> 00:41.840
+I'm going to run weird get undefined because it's not returning anything but if I return height I get
+
+00:41.990 --> 00:51.800
+50 OK but is height being created in the variable environment of weird.
+
+00:51.950 --> 00:59.560
+Well no and that's because javascript is a little bit weird here.
+
+00:59.580 --> 01:07.930
+This is actually called leakage of global the tables because what javascript does underneath the hood
+
+01:08.650 --> 01:11.500
+is that it looks at height.
+
+01:11.510 --> 01:16.720
+It says this isn't in my nothing's been declared.
+
+01:16.720 --> 01:22.810
+I haven't seen a var or a concert or a left keyword.
+
+01:22.840 --> 01:24.540
+So I don't have it.
+
+01:24.700 --> 01:29.980
+Those keywords tell javascript to put those in our variable environment but it's not there.
+
+01:30.010 --> 01:38.230
+So it's going to go up the scope chain to the global environment and says hey is there such thing as
+
+01:38.230 --> 01:46.070
+a height and the global environment is going to say no I don't have it but it's not throwing an error
+
+01:46.250 --> 01:47.330
+is it.
+
+01:47.390 --> 01:55.670
+And that's because the global environment actually sees that this doesn't exist and we'll create it
+
+01:55.940 --> 02:00.670
+for you just as it's looking up the scope chain.
+
+02:00.680 --> 02:02.780
+Now don't you think that's weird.
+
+02:02.840 --> 02:05.860
+That doesn't make any sense right.
+
+02:05.870 --> 02:12.460
+This is something that in the past with JavaScript you could do and it caused a lot of problems.
+
+02:12.470 --> 02:21.470
+So now we have something like use strict that if I added to the top of a page you may have seen things
+
+02:21.470 --> 02:22.210
+like this.
+
+02:22.490 --> 02:31.830
+You strict was introduced as a way to prevent javascript for doing these weird unpredictable edge cases
+
+02:32.580 --> 02:39.180
+because javascript was written by a programmer and there's no such thing as a perfect programming language
+
+02:39.990 --> 02:49.190
+or a perfect program and you strict allows us to avoid these pitfalls that shouldn't happen and you
+
+02:49.190 --> 02:55.280
+see over here as soon as I used you strict it's going to say height is not defined because it's going
+
+02:55.280 --> 03:03.670
+to go up the scope chain and it's going to say no you've never really declared this variable.
+
+03:03.670 --> 03:05.170
+I have no idea what you're talking about.
+
+03:05.560 --> 03:12.900
+So I have to use variable or let or concept to declare that variable.
+
+03:12.910 --> 03:13.350
+All right.
+
+03:13.420 --> 03:14.440
+JavaScript is weird.
+
+03:15.280 --> 03:20.310
+Here's another one let's say we have a variable call it.
+
+03:20.350 --> 03:27.700
+Hey hey another creative name by me and in here this variable will have a function but instead of an
+
+03:27.700 --> 03:36.020
+anonymous function it's going to have a name let's call it doodle and this function well let's say do
+
+03:36.020 --> 03:36.950
+something.
+
+03:36.950 --> 03:38.290
+It's not really doing anything is it.
+
+03:39.720 --> 03:51.580
+Now if I run Hey hey and actually licious console lock here or just return.
+
+03:52.270 --> 04:02.610
+Hey hey if I run this well that's expected but what if I run.
+
+04:02.640 --> 04:11.700
+What do you think will happen take a guess well if I run this I get a reference error.
+
+04:11.900 --> 04:12.660
+What does that mean.
+
+04:12.670 --> 04:16.550
+That means it's nowhere to be seen in the scope chain.
+
+04:16.570 --> 04:29.530
+This is because the doodle function is actually enclosed in its own scope doodle gets actually added
+
+04:29.560 --> 04:37.550
+to its own execution context variable environment very weird right.
+
+04:37.680 --> 04:42.630
+But that's a little gotcha over here where we can't access it on the global scope.
+
+04:42.720 --> 04:47.470
+We can only access it.
+
+04:47.490 --> 04:48.240
+All right.
+
+04:48.480 --> 04:51.070
+I hope that didn't confuse you too much.
+
+04:51.240 --> 04:55.090
+Just fun little tricks to confuse your programming friends.
+
+04:55.110 --> 04:55.720
+All right.
+
+04:55.980 --> 04:57.160
+I'll see you in the next one.
+
+04:57.170 --> 04:57.600
+Bye bye.

@@ -1,0 +1,286 @@
+WEBVTT
+
+00:01.610 --> 00:02.120
+All right.
+
+00:02.120 --> 00:04.910
+We've gone closer and closer.
+
+00:04.910 --> 00:10.120
+Let's reach ultimate object oriented programming in JavaScript.
+
+00:10.190 --> 00:17.210
+We have our constructor functions that while we're a little funny nobody really liked the prototype
+
+00:17.360 --> 00:19.580
+ways of adding methods.
+
+00:19.580 --> 00:31.280
+So with E6 javascript finally got the class keyword object oriented programming was created with the
+
+00:31.280 --> 00:33.030
+class idea in mind.
+
+00:33.080 --> 00:37.520
+A class being a blueprint of what we want created.
+
+00:37.700 --> 00:44.720
+Let's see how this works with the new E6 classes.
+
+00:44.990 --> 00:46.890
+We can now do this.
+
+00:46.970 --> 00:52.810
+We have the elf class that we just simply defined like that.
+
+00:52.810 --> 01:02.020
+And then we have a constructor and then the constructor is something that gets run every time we instantiate
+
+01:02.140 --> 01:04.900
+or use the new keyword on a class.
+
+01:04.900 --> 01:06.940
+So this goes inside.
+
+01:07.000 --> 01:15.000
+Over here and we take in the name and weapon parameter.
+
+01:15.030 --> 01:22.380
+Now the beauty with classes is that as object oriented programming suggests we want to keep all our
+
+01:22.380 --> 01:30.750
+functionality inside of this box all the properties all the state all the methods all the actions together
+
+01:31.530 --> 01:35.980
+in a nice contained environment a class an object.
+
+01:36.090 --> 01:44.820
+So instead of having these in a separate location I can now just simply add attack in here as part of
+
+01:44.820 --> 01:49.820
+our class and this method can now act upon our state.
+
+01:50.760 --> 01:52.200
+So I can just return
+
+01:55.160 --> 02:03.430
+right here and I can get rid of this ugly prototype how nice and easy was that.
+
+02:03.460 --> 02:04.450
+Let's see if this works.
+
+02:04.450 --> 02:08.680
+If I click Run look at that it's all working.
+
+02:08.680 --> 02:11.440
+How much cleaner is that.
+
+02:11.440 --> 02:17.890
+And if you're coming from an object oriented programming language like Java or C++ this is going to
+
+02:17.890 --> 02:24.940
+look really familiar to you and this is the true beauty of object oriented programming.
+
+02:25.050 --> 02:27.950
+We're modeling real life scenarios.
+
+02:27.960 --> 02:35.310
+We're creating an elf class that is a blueprint of what we want else to be like well else have names
+
+02:35.370 --> 02:42.480
+they have weapons and they can act upon these properties like attack or built and we can just keep adding
+
+02:42.480 --> 02:52.670
+things here and we have one location that holds this entire elf object and anytime we need to update
+
+02:52.670 --> 03:01.300
+something or change or add a method we can just change it in here and all the instances of the Elf will
+
+03:01.390 --> 03:03.970
+get that update.
+
+03:04.080 --> 03:10.980
+Now I keep seeing this word instance and this is a common term that you'll hear a lot when it comes
+
+03:10.980 --> 03:12.710
+to object oriented programming.
+
+03:12.780 --> 03:20.910
+And when we use classes an instance happens when we call this class and create an object out of this
+
+03:20.910 --> 03:22.050
+class.
+
+03:22.080 --> 03:27.480
+So for example Peter is an instance of elf.
+
+03:27.510 --> 03:38.770
+For example if I do console dialogue and do Peter and luckily for us JavaScript has an instance of then
+
+03:38.770 --> 03:42.090
+do elf VI click right here.
+
+03:42.100 --> 03:48.610
+I get true Peter is an instance of ELF so with Sam.
+
+03:48.610 --> 03:59.040
+But if I do elf instance of Peter I'll get false because while it's the other way around.
+
+03:59.140 --> 04:05.710
+So instance of is this language that we can use an object oriented programming to say we're creating
+
+04:05.710 --> 04:07.930
+an instance of a class.
+
+04:08.050 --> 04:15.180
+This with the new keyword is called instantiation where instantiating a class.
+
+04:15.580 --> 04:21.970
+If I remove the keyword from here the new keyword and I click Run I see that class constructor elf cannot
+
+04:21.970 --> 04:26.690
+be invoked without new we even get a nice error saying hey we need.
+
+04:26.710 --> 04:27.640
+We need new here.
+
+04:27.640 --> 04:31.770
+Don't forget new which is really really nice.
+
+04:31.940 --> 04:37.670
+All right everybody cheers get up throw your chairs throw your laptops all right don't throw your laptops
+
+04:37.760 --> 04:45.740
+but we finally have classes we finally have object oriented programming in JavaScript right.
+
+04:45.860 --> 04:48.260
+Well not really.
+
+04:48.440 --> 04:55.530
+You see this is what we call syntactic sugar underneath the hood in JavaScript.
+
+04:55.640 --> 05:02.510
+We're still using prototype all inheritance we're not using classes like classes work in other languages.
+
+05:02.510 --> 05:09.200
+This is the closest that JavaScript is going to get to classes underneath the hood they're still using
+
+05:09.200 --> 05:16.820
+the new keyword with the prototype and you're thinking to yourself well why don't we just all this trouble
+
+05:16.820 --> 05:21.420
+why don't we just create classes from the beginning in JavaScript.
+
+05:21.470 --> 05:26.650
+Wouldn't it just make everything easier now as we'll find out.
+
+05:26.690 --> 05:32.780
+Classes aren't necessarily the answer to everything as we'll see when we get to functional programming
+
+05:33.260 --> 05:40.790
+but also there's an interesting story or quote behind why javascript doesn't have classes.
+
+05:40.790 --> 05:43.790
+This is a quote from the Creator.
+
+05:43.790 --> 05:50.880
+Brendan Eich of javascript if I had down classes in JavaScript back in 1995 I'd have been told that
+
+05:50.880 --> 05:57.150
+it was too much like Java or that JavaScript was competing with Java and I was under the marketing orders
+
+05:57.150 --> 06:02.010
+to make it look like Java but not make it too big for its britches.
+
+06:02.040 --> 06:09.450
+So the interesting thing was that Brendan Dyke was tasked with creating a language that would attract
+
+06:09.900 --> 06:16.020
+Java developers that were really used to classes and object oriented programming concepts.
+
+06:16.260 --> 06:22.200
+But at the same time they wanted to create a competing language and for marketing purposes they couldn't
+
+06:22.200 --> 06:23.750
+make it the exact same.
+
+06:23.790 --> 06:25.580
+So he had to be creative.
+
+06:25.680 --> 06:32.520
+So he used prototype all inheritance which is quite different from how classes work in languages like
+
+06:32.520 --> 06:35.300
+Java and C++ in other languages.
+
+06:35.340 --> 06:39.060
+Classes are an actual thing in JavaScript.
+
+06:39.060 --> 06:42.390
+Classes are still just objects.
+
+06:42.510 --> 06:44.370
+Everything in Javascript is an object.
+
+06:45.000 --> 06:49.170
+So in an interview if you get asked hey does javascript have classes.
+
+06:49.200 --> 06:57.470
+Well yes they do as syntactic sugar but class keyword is still just prototype all inheritance.
+
+06:57.470 --> 07:05.190
+And some people call this pseudo classical inheritance because it's not real classical inheritance.
+
+07:05.310 --> 07:12.300
+Looking at this I hope you see how have we gone from repetitive code that was harder and harder to maintain
+
+07:12.450 --> 07:15.210
+to something that's a little bit more organized.
+
+07:15.330 --> 07:24.230
+We've created this grouping of functionality so that it's easier to maintain and extend by the way.
+
+07:24.360 --> 07:31.780
+You may be asking yourself why do we just add attack to the constructor.
+
+07:31.780 --> 07:35.530
+Why do we just put it outside over here.
+
+07:35.530 --> 07:40.360
+And this is actually a very interesting question that you might get in an interview.
+
+07:41.800 --> 07:50.230
+You see every time we use the new keyword and create or instantiate a class the constructor function
+
+07:50.260 --> 07:57.610
+gets run because this constructor function needs to get run because each elf has a unique name and perhaps
+
+07:57.610 --> 08:06.980
+a unique weapon but attack is shared by all instances of the class if we moved attack to the constructor
+
+08:08.200 --> 08:11.530
+that's going to take up memory space.
+
+08:11.530 --> 08:19.770
+Right instead of creating an attack function from each object which is what we would do if we added
+
+08:19.980 --> 08:23.310
+to the constructor and that's something that we've been trying to avoid.
+
+08:23.470 --> 08:31.020
+Instead we just have one one function in one location that all these instances can access.
+
+08:31.020 --> 08:32.660
+So there you have it.
+
+08:32.700 --> 08:35.990
+I hope you start to see the beauty in efficiency.
+
+08:37.260 --> 08:41.490
+Let's take a break and talk a little bit more about this in the next video.
+
+08:41.550 --> 08:42.770
+I'll see you on that one.
+
+08:42.770 --> 08:43.050
+Bye bye.

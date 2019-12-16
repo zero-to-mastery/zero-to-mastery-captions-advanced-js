@@ -1,0 +1,241 @@
+WEBVTT
+
+00:01.190 --> 00:02.730
+Welcome back.
+
+00:02.750 --> 00:11.720
+We started with an idea and using this idea we started learning about object oriented programming and
+
+00:11.720 --> 00:21.320
+how we can use the programming paradigm to better our code to make it more organized and when it comes
+
+00:21.320 --> 00:24.090
+to Opie inadvertently.
+
+00:24.260 --> 00:30.230
+You just learned the four pillars of object oriented programming.
+
+00:30.230 --> 00:36.650
+The first one was encapsulation before Opie.
+
+00:36.690 --> 00:43.290
+We have procedural programming and unlike procedural programming where we just have functions modifying
+
+00:43.290 --> 00:53.040
+data with no real structure O P puts things in an object in a container and organizes things into units
+
+00:53.370 --> 00:56.910
+that model real world applications.
+
+00:56.910 --> 00:59.290
+This is encapsulation.
+
+00:59.550 --> 01:08.490
+We wrap code into boxes that are related to one another so that these boxes can just interact with each
+
+01:08.490 --> 01:13.430
+other using the methods and properties that we make available.
+
+01:13.440 --> 01:19.170
+This makes code easier to maintain and more reusable right.
+
+01:19.320 --> 01:25.600
+We have all these nice little class packages that we can just use whenever we want.
+
+01:26.660 --> 01:33.290
+The next pillar is abstraction what is abstraction.
+
+01:33.300 --> 01:42.750
+Abstraction means just hiding the complexity from the user that is creating simpler interfaces such
+
+01:42.750 --> 01:48.930
+as Hey I'll take care of the class all you do is instantiate a class and there you go poof.
+
+01:49.110 --> 01:55.390
+You have an elf with all the properties and methods already and for you and the idea of abstraction
+
+01:55.780 --> 01:59.850
+says hey here are the methods and properties that you can use.
+
+01:59.860 --> 02:01.230
+Don't worry about everything else.
+
+02:01.240 --> 02:03.970
+I'll do all the calculations behind the scenes.
+
+02:03.970 --> 02:12.980
+This reduces complexity because we can just see the methods and understand what this class can do.
+
+02:13.120 --> 02:20.020
+Now the idea of abstraction also helps when we have private variables and private methods something
+
+02:20.020 --> 02:22.930
+that JavaScript is working towards.
+
+02:22.930 --> 02:25.170
+The next one is a big one.
+
+02:25.240 --> 02:32.290
+It's inheritance and we saw this already right by inheriting from other classes.
+
+02:32.290 --> 02:40.880
+We avoid having to rewrite the same code and we also save memory space by having shared methods.
+
+02:40.880 --> 02:47.150
+Inheritance is a very very important and powerful concept and it's definitely my favorite part of 0
+
+02:47.200 --> 02:48.430
+P.
+
+02:48.620 --> 02:55.130
+And then finally this is a big one and a big word that it's poly more fearsome.
+
+02:55.160 --> 02:56.570
+What does that mean.
+
+02:56.570 --> 03:01.890
+Well the word itself means many forms poorly morphing them.
+
+03:02.360 --> 03:07.490
+Now the definition of polymorphism is actually heavily debated.
+
+03:07.520 --> 03:14.090
+There's many interpretation of what it means but the idea is the ability to call the same method on
+
+03:14.090 --> 03:18.690
+different objects and each object responding in different way.
+
+03:18.890 --> 03:20.930
+That is poorly more.
+
+03:20.960 --> 03:32.210
+For example in my elf and ogre class let's say that they each have different ways of attacking for example
+
+03:32.240 --> 03:46.470
+the ELF attacks with let's call this cry and it's going to return attack with this dot cry.
+
+03:47.630 --> 03:56.870
+And then let's say that the ogre has attack but the ogre doesn't really accept a parameter instead is
+
+03:56.870 --> 04:11.720
+just going to return ah like a part if I now go down and let's change this up and let's do Dobie attack
+
+04:13.950 --> 04:15.630
+and we'll give it.
+
+04:15.630 --> 04:20.040
+The cry will be we if I run this
+
+04:23.060 --> 04:24.110
+I get undefined.
+
+04:24.150 --> 04:27.750
+Let's see where we made the mistake because I did this dog cry.
+
+04:27.780 --> 04:31.520
+But this isn't part or a property of the class.
+
+04:31.530 --> 04:34.760
+Instead is just a parameter so we don't need the this keyword.
+
+04:34.920 --> 04:48.430
+If I click Run attack with we and with Shrek if I do Shrek dot attack without a parameter I get R and
+
+04:48.700 --> 04:54.140
+this is a very basic explanation of what polymorphism means.
+
+04:54.520 --> 05:04.450
+But the idea of ability to appear in many forms that is we're simply doing method overwriting like this
+
+05:04.450 --> 05:10.630
+where the same method acts differently for each type of class.
+
+05:11.170 --> 05:19.540
+Or we can do method overloading which is adding extra features or extra parameters to a method to add
+
+05:19.540 --> 05:28.900
+on to what that method can do and the idea with polymorphism in object oriented programming is that
+
+05:29.230 --> 05:35.840
+it has the ability to process object differently depending on their data type or class.
+
+05:36.070 --> 05:43.150
+Now because javascript is a dynamically typed language it actually limits the amount of polymorphism
+
+05:43.360 --> 05:46.800
+that we can have but the idea is still the same.
+
+05:46.820 --> 05:56.300
+The ability to redefine methods for derived classes in allowing us to reuse some of the functionality
+
+05:56.540 --> 06:08.850
+but also customize methods to their own objects and classes and polymorphism is useful because we don't
+
+06:08.850 --> 06:12.450
+have to necessarily copy and paste code over and over.
+
+06:12.450 --> 06:23.440
+We can reuse some of the functionality from a superclass to adapt to our own specific needs and these
+
+06:23.560 --> 06:29.380
+are the four pillars of object oriented programming and behind the scenes.
+
+06:29.440 --> 06:36.580
+Although these are big words we've been using them all along because with these four things in mind
+
+06:36.880 --> 06:41.350
+we accomplished the goal that we set out to do at the beginning of the section.
+
+06:41.350 --> 06:46.360
+We created code that is clear and understandable.
+
+06:46.360 --> 06:48.600
+We create a code that is easy to extend.
+
+06:48.850 --> 06:51.860
+We definitely saw that with the extend keyword.
+
+06:52.000 --> 06:57.190
+It's easy to maintain because well we don't have to worry about those prototype chains.
+
+06:57.190 --> 07:01.510
+We don't have to keep the prototype property which got really confusing.
+
+07:01.510 --> 07:06.300
+We just used simple classes contained everything into its own parts.
+
+07:07.460 --> 07:11.010
+Everything inherits from a superclass.
+
+07:11.030 --> 07:16.940
+If we have to make a modification on a method we can just modify it in one location.
+
+07:16.940 --> 07:24.530
+We also learn how memory efficient it is especially in JavaScript where objects use references instead
+
+07:24.530 --> 07:31.160
+of cloning and copying each other and then finally we're able to make our code dry.
+
+07:31.180 --> 07:38.420
+We didn't keep repeating ourselves and using the same method over and over for each object.
+
+07:38.420 --> 07:45.880
+Instead we had one place where we could create functionality and if you can see that congratulations
+
+07:46.450 --> 07:53.860
+you've just learned a programming paradigm away for you now to think about code in a critical intelligent
+
+07:53.860 --> 07:59.550
+way to structure your code instead of just writing code one by one line by line.
+
+07:59.800 --> 08:05.620
+You now have a baseline to start thinking about the code how should you organize it.
+
+08:05.620 --> 08:13.180
+How should different things speak to one another in order to create programs that have all these qualities
+
+08:13.270 --> 08:14.390
+in mind.
+
+08:14.560 --> 08:16.310
+I'll see in the next one by.

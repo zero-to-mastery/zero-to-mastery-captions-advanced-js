@@ -1,0 +1,469 @@
+WEBVTT
+
+00:00.890 --> 00:01.400
+Welcome back.
+
+00:02.000 --> 00:05.150
+Let's talk about inheritance.
+
+00:05.150 --> 00:13.720
+A core aspect of object oriented programming is inheritance which means passing knowledge down.
+
+00:13.730 --> 00:17.670
+Remember at the start of this journey we decided that we want to create this game.
+
+00:17.840 --> 00:26.920
+This fairy tale game that had all these characters and we started with else just a couple of elves but
+
+00:26.950 --> 00:35.620
+as you can see our goal is to have many things we want to have maybe a dragon a knight a king and queen
+
+00:36.160 --> 00:38.260
+maybe some magicians.
+
+00:38.440 --> 00:39.900
+Yes even Dracula.
+
+00:40.660 --> 00:48.760
+So using this object oriented programming principle of inheritance how could we accomplish this with
+
+00:48.760 --> 00:50.740
+the work that we've already done.
+
+00:50.770 --> 00:52.250
+Let's have a look.
+
+00:52.360 --> 00:54.410
+We have our elf class here.
+
+00:54.460 --> 00:57.330
+Yes we've seen it before and it shouldn't be anything new.
+
+00:58.030 --> 01:06.730
+But let's say that I wanted to have a new player and this player is actually an ogre called Shrek.
+
+01:06.880 --> 01:10.390
+How would I go about creating the soldier.
+
+01:10.480 --> 01:17.020
+The one thing I could do is to copy and paste this code and create an ogre class.
+
+01:17.080 --> 01:25.690
+I mean that's copying pasting dry code that eventually we want to avoid because as we keep copying and
+
+01:25.690 --> 01:29.770
+pasting copying and pasting we just have repeated code which gets messy.
+
+01:30.250 --> 01:37.870
+So one option that we might have here is well let's just copy the elf and maybe you can extend it.
+
+01:38.560 --> 01:47.050
+So for example if I want to copy Fiona let's say Fiona over here if I click Run I have this health class
+
+01:48.850 --> 01:57.840
+or elf instance with all these properties now in order to copy while you already have.
+
+01:57.840 --> 01:59.900
+We can just do something like this.
+
+01:59.910 --> 02:07.020
+We can say const Polgar and Bulger is going to equal.
+
+02:07.020 --> 02:15.030
+Well let's clone Fiona and as I've shown you before we can do dot dot dot spread operator and then just
+
+02:15.030 --> 02:19.140
+do Fiona if I do this.
+
+02:19.140 --> 02:26.040
+Let's remove the spaces and I look at what ogre is now and I click Run look at that.
+
+02:26.050 --> 02:37.000
+I've copied Fiona into the ogre variable and the interesting thing here is if I do ogre dot underscore
+
+02:37.030 --> 02:40.720
+underscore proto underscore underscore what do I get.
+
+02:41.260 --> 02:43.480
+I get an empty object.
+
+02:43.710 --> 02:44.860
+What if I do Fiona
+
+02:47.820 --> 03:03.100
+I have elf so I've cloned the object but ogre no longer has ELF as the class the base class so that
+
+03:03.160 --> 03:20.060
+if I do hear console dialogue Fiona equals ogre clone and I click Run Oh and I don't the clone here
+
+03:20.090 --> 03:29.940
+it should just be ogre I get false these objects are not referencing the same place in memory they're
+
+03:29.970 --> 03:37.710
+completely different things but I've also lost this chain this prototype all inheritance chain I can't
+
+03:37.740 --> 03:40.170
+even do ogre dot attack
+
+03:43.890 --> 03:52.920
+No I don't have attack so that's a problem how can we extend this this work that we've currently had
+
+03:53.700 --> 04:00.180
+and this is where inheritance comes in and you used to be really difficult to do with JavaScript before
+
+04:00.510 --> 04:12.060
+we had this class syntax it involved a lot of ugly prototype code that luckily for us is now a lot cleaner
+
+04:12.240 --> 04:20.070
+so let's have a look to start off to make naming a lot better I'm going to change the class here to
+
+04:20.250 --> 04:28.030
+character because all characters in this game are going to have name and a weapon and they can attack.
+
+04:28.170 --> 04:29.330
+That's great.
+
+04:29.550 --> 04:41.160
+And now from this character I'm going to create a class elf that extends which is a keyword this character
+
+04:41.880 --> 04:52.150
+class this is something called Sub classing an object oriented programming that is we have a base class
+
+04:53.020 --> 05:03.610
+or a super class and a subclass that is we want to inherit from the character class all these properties
+
+05:03.610 --> 05:12.730
+and methods and create something new out of it extend it with health let's have a look if I just do
+
+05:12.730 --> 05:14.260
+this and I click Run.
+
+05:14.450 --> 05:16.060
+All right I get undefined.
+
+05:16.060 --> 05:17.860
+Let's see what Fiona is right now.
+
+05:17.860 --> 05:20.530
+If I do Fiona and click Run.
+
+05:20.530 --> 05:22.080
+All right look at that.
+
+05:22.330 --> 05:25.210
+Everything is still working.
+
+05:25.450 --> 05:32.120
+I have elf name Fiona weapons ninja All right great.
+
+05:32.180 --> 05:33.480
+But you know what.
+
+05:33.500 --> 05:35.960
+Let's make this a little bit more interesting.
+
+05:36.080 --> 05:45.750
+Let's say that the elf characters in this game they also have an extra property that they can have.
+
+05:45.830 --> 05:50.990
+Maybe it's a type property as to what type of ELF they are.
+
+05:51.020 --> 05:52.070
+So let's build that out.
+
+05:52.070 --> 05:53.480
+How do we go about doing that.
+
+05:53.870 --> 05:58.730
+Well in here let's add the type of property.
+
+05:59.120 --> 06:12.500
+If I do a construct right here and I do this dot name or this dot type equals type and let's say that
+
+06:12.500 --> 06:17.630
+we receive a type parameter in here.
+
+06:18.320 --> 06:20.210
+How is this going to work.
+
+06:20.390 --> 06:26.260
+We have to instantiate the elf class and we give it the name and the weapon.
+
+06:26.510 --> 06:29.840
+But we also want to have the type.
+
+06:30.380 --> 06:36.290
+So maybe we'll do this we'll say name and weapon.
+
+06:36.440 --> 06:38.310
+And the third parameter will be type.
+
+06:38.600 --> 06:41.780
+So all say that type of the self.
+
+06:41.780 --> 06:47.770
+I'm going to change the name from Fiona to Dobie.
+
+06:48.050 --> 06:57.570
+The name is going to be Dobie and the attack is going to be well or the weapon is just going to be a
+
+06:57.570 --> 07:05.910
+cloth and the type of Elf It's going to be a house elf All right.
+
+07:05.920 --> 07:08.100
+If I do this let's see what happens.
+
+07:08.130 --> 07:15.040
+I'm going to click Run reference here must call super constructor and derive class before accessing
+
+07:15.040 --> 07:18.380
+this or returning from derived constructor.
+
+07:18.430 --> 07:20.420
+Does that make sense.
+
+07:20.500 --> 07:21.770
+Not really right.
+
+07:21.820 --> 07:23.790
+I mean that's a pretty confusing error message.
+
+07:24.690 --> 07:35.580
+What is it saying in order for us to have our constructor and be able to use this and know what this
+
+07:35.580 --> 07:44.220
+is referring to which is Elf and not the character because remember we have both name and weapon.
+
+07:44.220 --> 07:54.600
+We have this special keyword called super for superclass and this superclass we call like this and by
+
+07:54.600 --> 08:03.660
+doing inside of the constructor the super call it says Hey call the superclass what's the superclass
+
+08:03.690 --> 08:04.700
+of elf.
+
+08:04.710 --> 08:05.760
+Well that's character.
+
+08:05.760 --> 08:12.960
+It extends character so it goes up and calls the constructor so that we create this on name and this
+
+08:13.140 --> 08:14.160
+dot map.
+
+08:14.970 --> 08:20.850
+So in here we have to pass it name and weapon.
+
+08:20.850 --> 08:23.230
+Now I know this is a little bit confusing.
+
+08:23.280 --> 08:30.420
+This whole super thing is just a standard especially with classic class based languages where super
+
+08:30.420 --> 08:34.870
+is referring to the superclass let's have a look here.
+
+08:35.140 --> 08:43.970
+If I click Run look at that I got elf that is Dobie weapon is a cloth and has a type.
+
+08:44.090 --> 08:45.200
+Well it's a household.
+
+08:45.680 --> 08:47.870
+And if I use Dolby dot attack
+
+08:50.760 --> 08:51.710
+attack with cloth.
+
+08:51.780 --> 08:55.710
+Now very effective but it's working.
+
+08:55.910 --> 08:57.990
+Now let's go over this one more time.
+
+08:58.250 --> 09:06.100
+When we do class elf extends character it means hey extend and set the prototype.
+
+09:06.170 --> 09:12.160
+That is the underscore underscore Prado to point to character.
+
+09:12.320 --> 09:17.510
+So elf now has a prototype chain optic character.
+
+09:17.570 --> 09:25.070
+It's saying Hey anytime you run an instance of elf like Dobie and a uses a property or a method that
+
+09:25.160 --> 09:26.050
+I don't have.
+
+09:26.150 --> 09:35.020
+Well then look up to character and tell me if character has the constructor is our own constructor just
+
+09:35.080 --> 09:37.580
+for the elf class.
+
+09:37.720 --> 09:42.880
+This is something that only gets run with an elf not with a character.
+
+09:42.880 --> 09:53.440
+And in here we can leave it as is but if we want to set any sort of property that is use the this keyword
+
+09:53.710 --> 10:01.030
+we have to call super and say Hey call the constructor of our superclass.
+
+10:01.030 --> 10:05.810
+And then after that I'll know what to do with this keyword.
+
+10:05.860 --> 10:06.700
+Let me show you.
+
+10:07.000 --> 10:18.660
+If I do console dot log here and do this and I run that gives an error because in order for us to use
+
+10:18.660 --> 10:26.550
+that this keyword inside of the constructor when we extend something we have to call super first so
+
+10:26.550 --> 10:37.670
+that if I move the console dialog to under the super call and I run look at that I have elf that has
+
+10:37.670 --> 10:41.000
+a name and weapon attached to it.
+
+10:41.020 --> 10:52.920
+So this because we call the super runs the constructor we now have a instance of character with these
+
+10:52.920 --> 11:02.300
+properties and then we can use this dot type to add type to it so that by the very end of our construction
+
+11:02.300 --> 11:10.550
+process of ELF we have all our properties set very very cool.
+
+11:10.550 --> 11:14.780
+And remember the this keyword simply says who am I.
+
+11:14.780 --> 11:15.950
+Who's calling me.
+
+11:16.160 --> 11:19.010
+In this case we use the new keyword.
+
+11:19.010 --> 11:23.660
+So this is going to be set to elf all right.
+
+11:23.670 --> 11:27.620
+But we started this video with us wanting to create an ogre.
+
+11:27.750 --> 11:28.890
+So let's do that.
+
+11:28.890 --> 11:30.150
+Let's continue on.
+
+11:30.150 --> 11:40.100
+Let's create another class that's going to be an ogre class that extends the character.
+
+11:40.550 --> 11:41.790
+We do the same thing now.
+
+11:41.920 --> 11:52.990
+Let's say that our ogre has a constructor and we want to pass in a few things such as name weapon and
+
+11:52.990 --> 11:55.030
+you know what ogres have different colors.
+
+11:55.060 --> 11:55.840
+So let's do that.
+
+11:55.840 --> 11:58.790
+Let's add a color prop..
+
+11:58.870 --> 12:00.430
+And what do we do here.
+
+12:00.430 --> 12:08.890
+Well we're gonna call the super class which is character with name and weapon so that now we can use
+
+12:08.980 --> 12:13.240
+this keyword to attach new properties to the ogre class.
+
+12:13.360 --> 12:16.570
+I'm going to add a color that equals whatever color we give it
+
+12:19.860 --> 12:21.390
+and you know what ogres.
+
+12:21.450 --> 12:22.710
+They have special powers.
+
+12:22.740 --> 12:27.400
+Let's say that ogres can also make forts.
+
+12:27.660 --> 12:34.630
+So we have a make Fort because you know they're very powerful obviously and they'll just return.
+
+12:34.770 --> 12:48.430
+Let's say strongest fort in the world made nice and easy just like that let's see if this works if I
+
+12:48.430 --> 12:58.400
+create let's say Shrek and Shrek is a new ogre with the name of Shrek.
+
+12:58.400 --> 13:00.700
+Weapon is going to be a club.
+
+13:00.860 --> 13:09.930
+And then finally the color obviously green if I do Shrek docked attack or let's just do Shrek here to
+
+13:09.930 --> 13:11.780
+see what we get.
+
+13:11.820 --> 13:12.620
+Look at that.
+
+13:12.630 --> 13:15.850
+I have a new ogre that was just created for me.
+
+13:15.870 --> 13:27.390
+How awesome is that and if I do make forts here and run this look at that I'm able to use make Fort
+
+13:27.390 --> 13:37.460
+function or method on Shrek but if I go and do make fort to Dobie no Doby can make for it.
+
+13:37.460 --> 13:39.200
+He's very very weak.
+
+13:39.210 --> 13:41.020
+There's not much that he can do.
+
+13:41.030 --> 13:42.120
+He's just the house elf.
+
+13:42.830 --> 13:47.150
+So let's go back to attack your.
+
+13:47.380 --> 13:48.680
+How cool was that.
+
+13:48.970 --> 13:58.900
+We were able to keep our code nice and organized and extend our base class character to create all these
+
+13:58.900 --> 14:01.370
+different characters in our game Elf.
+
+14:01.480 --> 14:10.390
+We have ogre we can keep creating different things like night magicians princesses kings queens and
+
+14:10.480 --> 14:20.950
+we can reuse code that we've run before but also extend these classes to have their own individual unique
+
+14:20.950 --> 14:27.400
+things like properties like type or even methods like make for it.
+
+14:27.440 --> 14:33.860
+This is a simple example but you can imagine the power of this as we get more and more properties and
+
+14:33.860 --> 14:36.320
+methods and bigger and bigger objects.
+
+14:36.320 --> 14:39.110
+Now let's take a break here and revisit this code in the next video.

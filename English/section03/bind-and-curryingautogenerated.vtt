@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.940 --> 00:02.400
+Welcome back.
+
+00:02.410 --> 00:10.900
+We learned how we can do function borrowing with apply and call and we also learn how we can use mind
+
+00:11.320 --> 00:18.490
+to do the same thing and also call a function later on when we want to with a certain value to the this
+
+00:19.090 --> 00:19.910
+keyword.
+
+00:19.960 --> 00:23.540
+But there's one other useful trick that you can use with buying.
+
+00:23.810 --> 00:27.430
+And it's called function currying.
+
+00:27.790 --> 00:32.290
+Something that we're going to learn a lot more about in our functional programming section of the course.
+
+00:32.440 --> 00:41.230
+But you can do something interesting with the bind method let's say I had a function and this function
+
+00:41.920 --> 00:52.260
+was called multiply and it simply multiplies two numbers so we just return a times be nice and simple.
+
+00:52.260 --> 01:00.840
+Now currying refers to well only partially giving a function a parameter.
+
+01:00.840 --> 01:02.940
+Now why would this be useful.
+
+01:02.970 --> 01:10.140
+Why would multiply to be more useful than just completing the entire parameter list.
+
+01:10.140 --> 01:19.110
+Well because we can do something like this we can have let's say a new variable multiply by two
+
+01:22.690 --> 01:28.080
+and this is going to use the multiply function.
+
+01:28.330 --> 01:31.060
+And I'm going to use bind method here.
+
+01:31.420 --> 01:34.670
+That's going to bind to this.
+
+01:35.020 --> 01:36.610
+And what is this.
+
+01:36.610 --> 01:38.610
+Well it's the window object.
+
+01:38.650 --> 01:45.500
+We don't really care because what we care about is giving the parameter to the multiply.
+
+01:45.580 --> 01:50.690
+So this is just an unintended consequence of using but we don't really care.
+
+01:50.770 --> 01:56.260
+So we're just going to leave it at this the window object.
+
+01:56.260 --> 02:10.680
+But now if I give it to here and I hit enter Well now I can run console dot log multiply by two and
+
+02:10.680 --> 02:18.510
+if I run this well it's a function it's returning for us a function that we can use later on but it
+
+02:18.510 --> 02:28.210
+already has one of the parameters in it so that if I run multiply by two let's say multiply by two.
+
+02:28.260 --> 02:34.700
+Number four which will be the second parameter and I run this I get eight.
+
+02:34.880 --> 02:36.380
+How cool is that.
+
+02:36.410 --> 02:44.000
+I created a new function called multiply by 2 that multiplies anything by 2 by giving it the first parameter
+
+02:44.420 --> 02:48.880
+to be 2 so that I can keep doing this right.
+
+02:48.980 --> 02:58.980
+I can create a another function let's say multiply by 10 and this gets a parameter of 10 so that when
+
+02:58.980 --> 03:04.220
+I multiply by 10 I get 40.
+
+03:04.280 --> 03:06.910
+How cool is that.
+
+03:06.920 --> 03:11.540
+This is something that we're going to learn a little bit more when we get into currying videos.
+
+03:11.540 --> 03:21.050
+But I was able to reuse a piece of code give it a partial parameter and create these functions that
+
+03:21.050 --> 03:28.500
+are extensible that are more specific such as multiply by two or multiply by 10.
+
+03:28.520 --> 03:31.280
+I hope this gets you as excited as it gets me.
+
+03:31.280 --> 03:36.390
+I think it's really really cool and an interesting concept of bind.
+
+03:36.470 --> 03:36.990
+All right.
+
+03:37.130 --> 03:41.810
+I want to know a bit of a tangent here but I'll see you for some exercises in the next video.

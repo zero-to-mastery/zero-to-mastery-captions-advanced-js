@@ -1,0 +1,847 @@
+WEBVTT
+
+00:01.640 --> 00:04.820
+How does javascript actually work.
+
+00:04.820 --> 00:07.110
+Imagine getting this question during an engine.
+
+00:07.190 --> 00:08.330
+Or how about this.
+
+00:08.360 --> 00:12.860
+Explain the difference between asynchronous and synchronous and JavaScript.
+
+00:13.220 --> 00:15.980
+Or maybe they ask you to explain the statement.
+
+00:15.980 --> 00:22.590
+Javascript does a single threaded language that can be non blocking oh boy in this video we're going
+
+00:22.590 --> 00:24.960
+to help you answer those questions.
+
+00:24.960 --> 00:30.810
+This is a video you may need to visit a few times as you progress to really get it so don't feel discouraged
+
+00:30.810 --> 00:32.880
+if you don't feel 100 percent confident.
+
+00:32.910 --> 00:35.270
+Just keep watching it and you'll get it.
+
+00:35.490 --> 00:41.910
+Now we don't need to know how javascript works internally to write a program but it is important to
+
+00:41.910 --> 00:42.870
+learn.
+
+00:42.930 --> 00:47.230
+I see a lot of people who have been developers for years and not know this.
+
+00:47.280 --> 00:50.720
+It's like being a pilot and not knowing how an airplane can fly.
+
+00:51.550 --> 00:55.120
+OK that's a little bit dramatic there but you get my point.
+
+00:55.200 --> 00:57.950
+So let's start first.
+
+00:58.140 --> 00:59.860
+What is a program.
+
+01:00.480 --> 01:03.430
+Well a program has to do some simple things.
+
+01:03.510 --> 01:10.110
+It has to allocate memory otherwise we wouldn't be able to have variables or even have a file on our
+
+01:10.110 --> 01:11.130
+computer.
+
+01:11.130 --> 01:17.380
+It also has to pass and execute scripts which means read and run commands.
+
+01:17.940 --> 01:25.680
+Now we also know that from our previous discussion there is the JavaScript engine that each browser
+
+01:25.680 --> 01:33.330
+implements and chrome it's the V8 and the V8 engine reads the javascript that we write and changes into
+
+01:33.330 --> 01:37.440
+machine executable instructions for the browser.
+
+01:37.440 --> 01:43.180
+Now the engine consists of two parts a memory heap and a whole stack.
+
+01:43.410 --> 01:45.270
+Now the memory heap.
+
+01:45.270 --> 01:48.810
+This is where the memory allocation happens.
+
+01:48.810 --> 01:52.210
+And don't worry we're gonna talk about this and then the call stack.
+
+01:52.230 --> 01:54.870
+This is where your code is read and executed.
+
+01:54.960 --> 01:57.420
+It tells you where you are in the program.
+
+01:59.040 --> 02:01.430
+So let's simplify this and show you why.
+
+02:01.470 --> 02:10.920
+I mean I have Sublime Text over here and for us to allocate memory and the memory heap.
+
+02:10.920 --> 02:16.890
+Well it's as simple as doing const A equals to 1.
+
+02:17.070 --> 02:18.930
+We've just allocate a memory.
+
+02:18.930 --> 02:24.070
+Now when we assign this the JavaScript engine is going to remember that.
+
+02:24.480 --> 02:24.960
+Oh yeah.
+
+02:25.140 --> 02:28.040
+A has a value of 1.
+
+02:28.170 --> 02:34.610
+We've just used up the memory heap and I can keep going on on and on like this right.
+
+02:34.620 --> 02:41.580
+I can keep copying and pasting and changing these variables to B and C and I can change the values to
+
+02:41.580 --> 02:46.250
+a hundred and maybe here will be 10 call.
+
+02:46.270 --> 02:49.880
+Now what's an issue that we see with this.
+
+02:49.950 --> 02:56.110
+This is something called a memory leak that you're going to hear as you become a developer.
+
+02:56.110 --> 03:01.870
+And what we've done here is we've created all these variables these global variables that are in the
+
+03:01.870 --> 03:05.500
+memory field but you see this box right.
+
+03:05.530 --> 03:11.070
+And with all memory we have a limited amount that we can actually have.
+
+03:11.080 --> 03:17.950
+So by increasing the number of variables that we have imagine if I had just this page full of variables
+
+03:17.950 --> 03:21.900
+and instead of just numbers they're like very very big arrays.
+
+03:22.000 --> 03:28.450
+Well memory leaks happen when you have unused memory such as let's say we're not using the variable
+
+03:28.480 --> 03:30.210
+a but it's still there.
+
+03:30.220 --> 03:37.750
+Well by having unused memory just laying around it fills up this memory heap and that's why you might
+
+03:37.750 --> 03:40.070
+hear why global variables are bad.
+
+03:40.120 --> 03:46.060
+Global variables are bad because if we don't forget to clean up after ourselves we fill up this memory
+
+03:46.090 --> 03:51.230
+heap and eventually the browser will not be able to work.
+
+03:51.300 --> 03:54.030
+All right so that's memory.
+
+03:54.060 --> 03:56.190
+Let's talk about the cold stack.
+
+03:56.190 --> 04:13.580
+What is that well again with a cold stack we can have something like this console log I'll go one console
+
+04:13.580 --> 04:27.890
+log to now finally console log three if I wrong this code in my browser terminal.
+
+04:28.560 --> 04:40.170
+Well I get one two three so the cold stack if you remember that's what reads and executes our scripts.
+
+04:40.230 --> 04:42.600
+So what the call stack does.
+
+04:42.600 --> 04:50.420
+It reads the first line console log it gets put in this call stack to the JavaScript engine says boot
+
+04:50.580 --> 05:00.410
+console dialogue has been added Let's pop it onto this call stack and then it runs it and creates one
+
+05:00.800 --> 05:06.890
+then it says OK I'm removing the first console law because I just finished running it I'm going to place
+
+05:06.980 --> 05:16.760
+the second console log into my call stack as it on here and says Yep execute two and then it removes
+
+05:16.760 --> 05:25.700
+that it pops it and then gets console locked three and logs console log three and then finally removes
+
+05:25.700 --> 05:31.850
+it but let's have a bit more of a complex example here to demonstrate this point.
+
+05:32.160 --> 05:34.580
+Imagine I have something like this
+
+05:37.400 --> 05:39.550
+I have a function concept one
+
+05:44.430 --> 05:52.440
+and inside this function we have another function calls to and for now it's not really going to do much
+
+05:52.440 --> 05:58.390
+is going to console dot log form.
+
+05:59.200 --> 06:07.350
+And then in here we'll just say we run the two function so if I copy and paste this and place it into
+
+06:07.350 --> 06:15.040
+our console and I run one I get four and ignore this error here.
+
+06:15.050 --> 06:17.390
+It just related to my app in the browser.
+
+06:17.490 --> 06:18.900
+But you see that we get four.
+
+06:18.990 --> 06:20.210
+So what happened here.
+
+06:20.220 --> 06:21.910
+According to the call stack.
+
+06:22.290 --> 06:30.060
+Well if we have the code stack here we first ran the one function.
+
+06:30.060 --> 06:37.560
+So on top of the call stack the one function gets run and as we enter into this call stack we see that
+
+06:37.560 --> 06:39.900
+we run another function too.
+
+06:40.200 --> 06:44.360
+So two goes on top of the call stack.
+
+06:45.060 --> 06:49.980
+And now we run the two function which is console dot log.
+
+06:50.580 --> 07:00.130
+So we have console done log for that's run inside of the two function.
+
+07:00.130 --> 07:04.000
+So now that we've read this the call stack is going to say OK.
+
+07:04.030 --> 07:08.330
+There's nothing else inside of this I'm going to run console log for.
+
+07:08.470 --> 07:11.080
+So it's going to print out number four here.
+
+07:11.410 --> 07:22.280
+It's going to remove that from the call stack and then remove the two and then remove the one because
+
+07:22.310 --> 07:23.390
+it's just been called
+
+07:26.050 --> 07:29.290
+and the call stack is now empty.
+
+07:29.290 --> 07:29.830
+All right.
+
+07:30.040 --> 07:30.700
+Awesome.
+
+07:30.700 --> 07:34.780
+Now let's revisit this statement from the beginning of the video.
+
+07:34.900 --> 07:42.010
+JavaScript is a single threaded language that can be non blocking single threaded means that it has
+
+07:42.010 --> 07:48.320
+only one call stack and one call stack only it can only do one thing at a time.
+
+07:48.350 --> 07:53.000
+And as you saw call stack is first in last out.
+
+07:53.090 --> 07:59.390
+So whatever is at the top the call stack gets run first then below that below that below that Dell the
+
+07:59.390 --> 08:02.940
+call stack is empty now.
+
+08:02.970 --> 08:08.880
+Other languages can have multiple call stacks and these are called multi threaded.
+
+08:08.900 --> 08:14.030
+You can also see how that might be beneficial to have multiple call stack so that we don't keep waiting
+
+08:14.030 --> 08:15.360
+around for stuff.
+
+08:15.380 --> 08:21.990
+Why was javascript designed to be single threaded while running code on a single thread can be quite
+
+08:21.990 --> 08:27.910
+easy since you don't have to deal with complicated scenarios that arise in multi threaded environment.
+
+08:27.930 --> 08:29.750
+You just have one thing to worry about.
+
+08:29.940 --> 08:40.010
+And when I say issues with multi threaded environment can have such thing as deadlocks now guess what.
+
+08:40.220 --> 08:47.430
+You just learned what synchronous programming means synchronous programming simply means.
+
+08:47.630 --> 08:53.530
+Line one gets executed then Line 2 gets executed and then line 3 gets executed.
+
+08:55.070 --> 08:59.210
+The latter can start before the first finishes.
+
+08:59.480 --> 09:06.560
+So this console log too doesn't start until console lock finishes in console lock 3 doesn't start until
+
+09:06.590 --> 09:12.470
+these above to finish because well we've looked at the call stack because of the call stack.
+
+09:12.470 --> 09:16.700
+Now you may have heard of the site stack overflow.
+
+09:16.700 --> 09:26.360
+If you're a developer you use it on a daily and have you ever wondered what Stack Overflow means well
+
+09:26.850 --> 09:28.470
+Stack Overflow.
+
+09:28.500 --> 09:32.400
+Is this when a stack is overflowing.
+
+09:32.400 --> 09:39.180
+Kind of like we talked about memory leaks and how the memory heap of a JavaScript engine can overflow
+
+09:40.080 --> 09:43.280
+well with Stack Overflow.
+
+09:43.290 --> 09:47.820
+This happens when the coal stacks just gets bigger and bigger and bigger until it just doesn't have
+
+09:47.820 --> 09:49.360
+enough space anymore.
+
+09:49.380 --> 09:52.130
+How can we do that.
+
+09:52.170 --> 09:54.150
+Can we recreate a stack overflow.
+
+09:54.940 --> 09:59.000
+Yeah I can show you quickly that to create a stack overflow.
+
+09:59.010 --> 10:05.970
+All you have to do is function foo like we have in here.
+
+10:07.760 --> 10:10.890
+And this function will just have food.
+
+10:13.120 --> 10:16.020
+Hand we're just going to run our food function.
+
+10:17.110 --> 10:22.060
+All right that looks confusing what is happening here.
+
+10:22.110 --> 10:24.550
+This is something called recursion
+
+10:27.290 --> 10:30.680
+and recursion means a function that calls itself.
+
+10:30.680 --> 10:36.120
+So if you look at what this function does we run foo and food gets executed.
+
+10:36.170 --> 10:43.840
+What food does is well we run food again so it just keeps looping over and over and over.
+
+10:44.000 --> 10:47.030
+Having a recursion but there is no end in sight right.
+
+10:47.060 --> 10:50.490
+We keep adding foo to the Col stack.
+
+10:50.630 --> 10:58.220
+We keep adding it over and over and over and over and over and over and over and over and we have a
+
+10:58.220 --> 10:59.910
+stack overflow.
+
+11:00.050 --> 11:06.950
+So if you want to have fun go into your browser go into your console and run something like this and
+
+11:07.040 --> 11:07.970
+see what happens.
+
+11:08.000 --> 11:11.570
+You're gonna get a stack overflow All right.
+
+11:11.900 --> 11:14.300
+So hopefully this now makes sense.
+
+11:14.300 --> 11:19.250
+The JavaScript engine which is the V8 engine and Chrome has a memory heap and a call stack.
+
+11:20.310 --> 11:20.660
+Now
+
+11:23.150 --> 11:29.060
+javascript is single threaded only one statement is executed at a time.
+
+11:30.120 --> 11:32.210
+But there is a problem now isn't it.
+
+11:32.220 --> 11:33.030
+What if.
+
+11:33.210 --> 11:37.080
+Line 2 was a big big task.
+
+11:37.110 --> 11:44.420
+We needed to do maybe loop through an array that had millions of items what would happen there.
+
+11:44.430 --> 11:48.780
+Well we would have this console log execute.
+
+11:48.780 --> 11:51.820
+Then the second line is a massive massive job.
+
+11:51.870 --> 11:54.960
+We'll just work there and console like 3.
+
+11:54.960 --> 11:59.430
+We'll take a really long time to get lost and in our small example.
+
+11:59.430 --> 12:05.520
+That doesn't mean much but if he had this on a Web site well the user wouldn't be able to do anything.
+
+12:05.580 --> 12:11.340
+The Web site would pretty much freeze until that task is done and the user just waits there.
+
+12:11.340 --> 12:13.190
+That's not very good is it.
+
+12:13.470 --> 12:19.650
+Well with synchronous task if we have one function that takes up a lot of time it's going to hold up
+
+12:19.650 --> 12:20.790
+the line.
+
+12:20.790 --> 12:22.860
+Imagine a buffet restaurant right.
+
+12:23.190 --> 12:29.130
+If all the people want to eat but Bobby says Hold on guys have to keep eating and putting bacon on my
+
+12:29.130 --> 12:29.640
+plate.
+
+12:29.640 --> 12:32.060
+Well everybody has to wait in line.
+
+12:32.310 --> 12:35.610
+So sounds like we need something non blocking.
+
+12:35.610 --> 12:41.580
+Remember our first statement that we made in this video JavaScript as a single threaded language that
+
+12:41.580 --> 12:43.730
+can be non blocking.
+
+12:43.740 --> 12:46.680
+Ideally we don't wait around for things that take time.
+
+12:47.640 --> 12:52.940
+So how do we do this while asynchronous to the rescue.
+
+12:53.000 --> 12:59.300
+Think of asynchronous like a behavior synchronous execution is great because is predictable.
+
+13:00.080 --> 13:02.480
+We know what happens first then what happens next.
+
+13:02.510 --> 13:03.050
+What happens.
+
+13:03.050 --> 13:05.420
+Third but it can get slow.
+
+13:05.720 --> 13:12.380
+So when we have to do things like image processing or making requests over the network like API calls.
+
+13:12.380 --> 13:15.200
+And don't worry we're going to talk about this in future videos.
+
+13:15.200 --> 13:18.510
+We need something more than just synchronous tasks.
+
+13:18.640 --> 13:19.000
+All right.
+
+13:19.100 --> 13:23.210
+So you're thinking to yourself Andre how do we do asynchronous programming.
+
+13:24.110 --> 13:27.850
+Well let me remove some of this clutter.
+
+13:28.070 --> 13:32.390
+We can do asynchronous programming by doing something like this.
+
+13:32.860 --> 13:40.820
+Set time out which we're gonna talk about is a function that comes within our browsers and it allows
+
+13:40.820 --> 13:47.590
+us to create a timeout and we can just give it the first parameter is the function that we want to run
+
+13:47.860 --> 13:51.010
+and then the second parameter is how many seconds we want to wait.
+
+13:51.040 --> 13:56.120
+So let's say I want to wait two seconds so two hundred two thousand milliseconds.
+
+13:56.290 --> 14:07.690
+If I do this now let's run into the console and see what happens.
+
+14:07.710 --> 14:10.530
+Well what just happened.
+
+14:10.530 --> 14:20.670
+We have console log 1 then console log three and then console log to two seconds later.
+
+14:21.040 --> 14:31.210
+It looks like we just skipped this whole step and then put this at the very end well you've just witness
+
+14:31.360 --> 14:36.930
+asynchronous programming in order to understand this and what just happened.
+
+14:36.970 --> 14:45.950
+I need to take you to the next part and that is in order for JavaScript as we know it to run for the
+
+14:45.950 --> 14:49.700
+JavaScript engine with memory heap and call stack to run.
+
+14:49.700 --> 14:52.430
+We need more than just the JavaScript engine.
+
+14:52.670 --> 15:00.800
+We need what we call a javascript runtime environment and JavaScript runtime environment is again part
+
+15:00.800 --> 15:01.580
+of the browser.
+
+15:01.610 --> 15:03.710
+It's included in the browsers.
+
+15:03.710 --> 15:06.650
+They have extra things on top of the engine.
+
+15:06.650 --> 15:16.300
+They have something called a web API as callback Q and an event loop and as you can see here set timeout
+
+15:16.580 --> 15:19.130
+is part of the web API.
+
+15:19.130 --> 15:22.800
+It's not technically part of javascript is it.
+
+15:23.030 --> 15:28.180
+It's what the browsers give us to use so we can do asynchronous programming.
+
+15:28.800 --> 15:38.020
+OK so looking at this diagram let's see if we can figure out what our code was doing we can create here
+
+15:38.080 --> 15:55.930
+our own call stack we'll have web API and then we'll have a callback Q And then finally just like we
+
+15:55.930 --> 15:59.280
+have in our javascript runtime environment.
+
+15:59.350 --> 16:00.610
+So what's happening here.
+
+16:00.610 --> 16:10.540
+Well first we have console log that goes into the call stack and that gets run.
+
+16:10.960 --> 16:15.070
+So we log console log to the browser.
+
+16:15.070 --> 16:22.640
+We then get set timeout into our call stack because we finish this first task we're going to the second
+
+16:22.640 --> 16:23.340
+one.
+
+16:23.690 --> 16:24.850
+And what's set timeout.
+
+16:24.920 --> 16:32.330
+What's gonna happen is well the call stack is gonna say Okay I have set timeout and because said timeout
+
+16:32.330 --> 16:37.940
+is not part of javascript but part of the web API in has this special characteristic.
+
+16:37.940 --> 16:51.220
+What's gonna happen is it triggers the web API and says Hey set timeout has just been called and because
+
+16:51.280 --> 16:56.330
+we notified away bag guy we can pop it out of the call stack.
+
+16:56.440 --> 17:04.720
+Now the web API starts a timer here a timer of two seconds but it's going to know that in two seconds
+
+17:05.290 --> 17:14.220
+you have to do something and because the call stack is empty the JavaScript engine now goes to console
+
+17:14.220 --> 17:20.580
+log 3 and executes this so that makes sense right.
+
+17:20.720 --> 17:27.980
+Now we've done one and three but we still have said timeout two seconds in the web API.
+
+17:27.980 --> 17:36.620
+Now after two seconds when our time limit is up the web API is going to say OK set time timeout should
+
+17:36.620 --> 17:38.690
+be run let's see what's inside of it.
+
+17:38.690 --> 17:40.940
+Well we have console locked too.
+
+17:41.000 --> 17:46.540
+So what's going to happen is it's going to say hey said timeout is done.
+
+17:46.660 --> 17:55.870
+We have a callback and this callback of said timeout we added to the callback queue saying that hey
+
+17:56.080 --> 17:58.230
+we have to run something we're ready to run it.
+
+18:00.770 --> 18:09.110
+Now the last part the event the event loop over here checks and says hey is the call stack empty.
+
+18:09.200 --> 18:13.900
+And it keeps checking all the time if this stack is empty and if the call stack is empty and there's
+
+18:13.910 --> 18:20.050
+nothing running right now in the javascript engine it's going to say hey do we have any callbacks.
+
+18:20.060 --> 18:25.280
+It's going to check the callback queue and say is anything in there because the call stack is empty.
+
+18:25.280 --> 18:31.370
+We can throw something in there and make it do some work in our case we say oh yeah I do.
+
+18:31.370 --> 18:34.380
+Let me put this into the call stack.
+
+18:34.490 --> 18:42.290
+So now we move the callback into the calls stack and then the callback we run it.
+
+18:42.290 --> 18:45.730
+And by running and we see that we have console log too.
+
+18:45.830 --> 18:55.260
+So it's going to say console log to it's going to run this function and once it's done it's going to
+
+18:55.260 --> 18:56.910
+pop it out of the call stack.
+
+18:56.910 --> 18:58.570
+And again we're done with the callback.
+
+18:58.590 --> 19:02.940
+So we remove it and there you go.
+
+19:02.940 --> 19:03.590
+We're done.
+
+19:03.600 --> 19:04.860
+Everything is empty.
+
+19:04.860 --> 19:08.440
+And we've just run this one three.
+
+19:09.240 --> 19:15.060
+It's going to go through the entire web API callback queue event loop and then it's going to run console
+
+19:15.090 --> 19:17.710
+log to crew.
+
+19:17.760 --> 19:19.400
+That was a lot of information.
+
+19:19.470 --> 19:25.310
+So you might need to watch that a few times but hopefully that makes sense to you of why we noticed
+
+19:25.320 --> 19:27.480
+this behavior.
+
+19:27.480 --> 19:30.800
+And I want to challenge your understanding here.
+
+19:31.440 --> 19:38.550
+Knowing what you know and what I just tell you what happens if I changed this to zero that means zero
+
+19:38.550 --> 19:43.400
+seconds I'm going to give you a second to think about what will happen.
+
+19:43.600 --> 19:47.360
+And then we're going to try to set clear the console.
+
+19:47.380 --> 19:58.900
+Copy and paste this and run it well one three and two did you guess right now think about why that happened
+
+19:59.350 --> 20:08.170
+even though this is zero seconds it still went through the process it still got entered into the web
+
+20:08.170 --> 20:11.950
+API eyes and then the callback queue and then they invented it.
+
+20:12.040 --> 20:19.870
+And by the time that was happening the call stack had already moved on to the console lock three and
+
+20:19.900 --> 20:23.650
+only after console log three was done in the call stack was empty.
+
+20:23.650 --> 20:31.410
+The event loop said oh yeah we can call a console log to hopefully that makes sense for you.
+
+20:31.450 --> 20:36.580
+And if you're able to understand that you'll actually have a lot of people that hire for JavaScript
+
+20:36.580 --> 20:41.750
+roles ask questions like this on an interview and you have to explain why that is.
+
+20:41.830 --> 20:47.560
+So I hope that made sense to you and you can use that to your advantage at the next interview.
+
+20:47.920 --> 20:49.510
+So let's recap
+
+20:53.980 --> 21:00.370
+if you wanted to load your latest tweet onto a Web page and you do this synchronicity then visitors
+
+21:00.370 --> 21:04.600
+to your site won't be able to do anything until those tweets are loaded.
+
+21:04.600 --> 21:08.690
+This could cause a long delay before they even get to see the content of your site.
+
+21:08.710 --> 21:12.640
+They may not be able to click anywhere and the page will feel like it's frozen.
+
+21:12.760 --> 21:14.460
+Not a very good user experiences.
+
+21:15.440 --> 21:22.330
+Another way to think about this is calling your teacher with a question synchronous way is you.
+
+21:22.330 --> 21:28.920
+Call the teacher you wait on the phone until the teacher answers the phone and ask him the question
+
+21:29.670 --> 21:36.180
+and hopefully get an answer so you let the phone ring until he picks up but you're not doing anything
+
+21:36.180 --> 21:42.570
+else in the meantime asynchronous means that you send a text to a teacher with a question and then when
+
+21:42.570 --> 21:48.160
+the teacher he or she has the time will respond to you and call you with the answer.
+
+21:48.330 --> 21:55.740
+So you can do other stuff in between javascript is asynchronous when you can leave it a message and
+
+21:55.740 --> 22:02.630
+a callback tells you Hey Mr. Teacher has a message for you when you're not too busy and that's why we
+
+22:02.630 --> 22:06.040
+call it a callback function and a callback.
+
+22:06.200 --> 22:10.850
+We're calling back to let them know that hey there's some stuff waiting for you.
+
+22:11.030 --> 22:17.180
+Now we see over here that we have Dom Ajax in timeout and there's a few other things but you also see
+
+22:17.180 --> 22:20.660
+in the callback queue that we have on click on mode on done.
+
+22:20.690 --> 22:23.600
+Do you remember the event listeners.
+
+22:23.600 --> 22:33.980
+Well with an event listener we had something like an element and we added event listener and in this
+
+22:34.070 --> 22:41.360
+then listener could say listen for a click and it will have a function that perhaps just console dog
+
+22:41.360 --> 22:50.130
+log click well similar to an asynchronous way of programming we've created this click function.
+
+22:50.280 --> 22:55.170
+And now we're just listening to it and every time a click happens on the web page.
+
+22:55.410 --> 22:56.940
+So on the dom.
+
+22:57.360 --> 23:05.210
+Well we run the callback function which console logs click.
+
+23:05.520 --> 23:06.450
+Right.
+
+23:06.480 --> 23:11.340
+So to finish things up when is asynchronous happening.
+
+23:11.480 --> 23:18.250
+It happens a lot when you try and talk between machines like speaking to a database make network requests
+
+23:18.350 --> 23:23.660
+image processing reading files and don't worry we'll go through this in future videos.
+
+23:23.660 --> 23:31.610
+But to recap what we just learned javascript is a single threaded language that can be non blocking.
+
+23:31.610 --> 23:36.500
+It has one call stack and it does one thing at a time.
+
+23:36.800 --> 23:44.330
+In order to not block the single thread it can be asynchronous with callback functions and these code
+
+23:44.340 --> 23:51.380
+malfunctions gets run in the background through the callback queue and then the amended to bring it
+
+23:51.380 --> 23:59.350
+back into the call stack so next time you get asked What is the difference between a synchronous or
+
+23:59.350 --> 24:02.780
+a synchronous program or how does javascript work.
+
+24:02.860 --> 24:09.030
+You should have a little bit more confidence to answer that question and I hope that this was helpful.
+
+24:09.270 --> 24:11.230
+I'll see in the next video by.

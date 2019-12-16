@@ -1,0 +1,163 @@
+WEBVTT
+
+00:01.370 --> 00:01.910
+Welcome back.
+
+00:02.240 --> 00:09.320
+Let's review what we've just learned about the module pattern using an iffy we're able to create a scope
+
+00:09.590 --> 00:18.050
+a function scope that mimics well a module scope that is we can just wrap an entire JavaScript file
+
+00:18.320 --> 00:26.150
+using this notation of an iffy and everything inside of it will run because we're immediately invoking
+
+00:26.150 --> 00:34.260
+it and will only return what we need to a variable that will be accessible on the global scope.
+
+00:34.280 --> 00:43.430
+So this is a global variable the code that defines the module is wrapped in this function and the clear
+
+00:43.430 --> 00:51.770
+benefit of this instead of what we had before is that we're only revealing one variable polluting the
+
+00:51.770 --> 00:58.590
+global namespace just once with this variable and we're hiding everything else in everything that we
+
+00:58.590 --> 00:59.640
+want to make public.
+
+00:59.640 --> 01:05.580
+We can attach it to this variable which is an object and attach different properties and methods to
+
+01:05.580 --> 01:06.240
+it.
+
+01:06.390 --> 01:15.840
+And this is great for maintain ability right by definition a module is self-contained now a well designed
+
+01:15.840 --> 01:23.940
+module like this could just contain functionality and also lower the dependencies on other parts of
+
+01:23.940 --> 01:31.800
+the code base we can import whatever we need from the global variable space in here so that inside of
+
+01:31.800 --> 01:37.830
+this function instead of looking up the global scope we can just look at our parameters that we import
+
+01:37.830 --> 01:44.760
+it from the global scope and use those instead so that if we do anything like modifying J query inside
+
+01:44.760 --> 01:52.320
+of here it won't affect the other parts of the code updating a single module is much easier when this
+
+01:52.380 --> 01:59.880
+module is decoupled from the other pieces of code if we had a fight module here and while we needed
+
+01:59.880 --> 02:05.850
+to fix some things inside of it it's good to know that it won't affect the outside parts so that we
+
+02:05.850 --> 02:10.860
+can have a team of engineers working on this module and another team of engineers working on another
+
+02:10.860 --> 02:11.520
+module.
+
+02:11.520 --> 02:18.750
+And as long as they don't break the public API that is we always expect fight to take in a character
+
+02:18.750 --> 02:25.630
+and character 2 and return something that we agree upon then we can work separately.
+
+02:25.800 --> 02:32.830
+And finally the other great thing about this is the idea of re usability right instead of copying code
+
+02:32.860 --> 02:40.240
+over and over these useful functions can be now shared so that I can use the fight function in other
+
+02:40.240 --> 02:46.120
+parts of the code and instead of having to write the same functionality in multiple places we have just
+
+02:46.120 --> 02:51.130
+one place in our code that has the fight function and if we ever need to fix it we know exactly where
+
+02:51.130 --> 02:54.370
+to go instead of changing the code in multiple places.
+
+02:54.430 --> 02:54.700
+All right.
+
+02:54.820 --> 02:56.250
+So module pattern is great.
+
+02:56.260 --> 02:57.220
+We're all done.
+
+02:57.220 --> 02:59.790
+We don't need to learn anything else.
+
+02:59.830 --> 03:01.510
+Well not really.
+
+03:01.510 --> 03:06.190
+There's two main problems with this approach that we see.
+
+03:06.190 --> 03:13.300
+One is that we technically are still polluting the global namespace fight module is still technically
+
+03:13.300 --> 03:15.690
+a variable on the global namespace.
+
+03:15.790 --> 03:23.350
+So that in here if we had a script that was called a fight module and we refreshes we'll fight module
+
+03:23.440 --> 03:25.490
+now gets overridden.
+
+03:25.600 --> 03:31.070
+So we've minimized the number of global variables but we can still have name clashes.
+
+03:31.300 --> 03:37.060
+And then the other issue and a lot of people who have worked with JavaScript in the past know this issue
+
+03:37.060 --> 03:43.960
+because it was a big headache is that we don't necessarily know all the dependencies so we have to make
+
+03:43.960 --> 03:48.270
+sure that the order of the script tags is correct.
+
+03:48.300 --> 04:00.090
+For example if I remove this J query code and put it at the bottom of the page that is after we actually
+
+04:00.150 --> 04:06.210
+use the J query module or in here we using the J.
+
+04:06.300 --> 04:14.310
+Mountain module before we actually tell the browser hey this is what J careers if I see this and refresh
+
+04:14.800 --> 04:16.080
+while I get an error J.
+
+04:16.080 --> 04:22.110
+Query is not defined because I'm using J querying here and the computer does doesn't really know anything
+
+04:22.110 --> 04:29.990
+about it because it was declared after and I've worked on projects before where we had close to a hundred
+
+04:30.080 --> 04:37.070
+script tax and you had to make sure that the script tags were in the right order so that those scripts
+
+04:37.100 --> 04:44.150
+that depending on other scripts where Wall declared after so that we had these variables available to
+
+04:44.150 --> 04:44.720
+them.
+
+04:44.720 --> 04:46.510
+How do we solve this.
+
+04:46.760 --> 04:50.320
+And for that we had two major solutions.
+
+04:50.450 --> 04:52.790
+So let's find out what those were in the next video.

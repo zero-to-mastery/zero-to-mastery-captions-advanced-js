@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.540 --> 00:03.000
+Let's do a fun little exercise.
+
+00:03.000 --> 00:04.220
+And yes I know.
+
+00:04.230 --> 00:07.220
+I call all exercise fun but it's fun right.
+
+00:07.260 --> 00:09.020
+We get to code.
+
+00:09.100 --> 00:16.240
+All right let's say we have a function here and this function is going to be called Loop another original
+
+00:16.240 --> 00:25.370
+name and inside of this loop will have a for loop that has variable I equal to zero.
+
+00:25.690 --> 00:29.280
+Let's say I is or should be less than five.
+
+00:29.290 --> 00:36.340
+And as long as it's less than five well we're going to keep incrementing and we're going to loop and
+
+00:36.340 --> 00:38.090
+just console dot log.
+
+00:38.690 --> 00:46.830
+Hi and after this for loop again within this function I'm going to also do console dog log.
+
+00:46.860 --> 00:48.610
+Hi.
+
+00:48.630 --> 00:54.810
+Now let's add a final text here and see what happens when I run this.
+
+00:54.820 --> 01:00.110
+What do you think's going to happen if I run while nothing.
+
+01:00.120 --> 01:02.150
+Because trick question.
+
+01:02.160 --> 01:04.230
+I haven't really invoked the function.
+
+01:04.230 --> 01:05.320
+So let's do that.
+
+01:05.460 --> 01:06.510
+I'm going to loop
+
+01:10.610 --> 01:11.800
+all right.
+
+01:11.910 --> 01:12.880
+Does that make sense.
+
+01:13.790 --> 01:18.520
+We declared a variable made at 0.
+
+01:18.520 --> 01:27.690
+We loop through everything and once we're done with all of this we finished everything AI becomes five
+
+01:28.350 --> 01:32.630
+we do is five less than five.
+
+01:32.650 --> 01:33.120
+No.
+
+01:33.220 --> 01:41.290
+Then I'm going to ignore this skip over this block and go to console log in because I is now five.
+
+01:41.770 --> 01:49.800
+Our final value is five but what if I change this to a let
+
+01:52.710 --> 01:58.040
+what would happen now with block scope.
+
+01:58.200 --> 02:02.480
+Think about it pause the video if you need to.
+
+02:02.580 --> 02:04.870
+Otherwise let's see what happens.
+
+02:05.000 --> 02:15.160
+Point to hit run Oh I get a reference here AI is not defined and why is that while.
+
+02:15.260 --> 02:25.910
+Because we're trying to use AI outside of its environment it's block scoped right so the environment
+
+02:25.910 --> 02:33.800
+that it's in well it's inside of these curly brackets so we can't really access it outside of those
+
+02:33.800 --> 02:37.360
+brackets so this isn't going to work.
+
+02:37.590 --> 02:40.370
+Now this may have unintended consequences.
+
+02:40.380 --> 02:47.100
+Maybe you do want to print this properly so there are cases where the variable keyword is still useful
+
+02:47.820 --> 02:56.900
+but it's nice to know that we now have a way to have block scoping whenever we need it so to review
+
+02:57.740 --> 03:05.690
+block scoping means declaring a variable not just inside a function but around any curly brackets like
+
+03:05.810 --> 03:08.090
+if statements or loops.
+
+03:08.090 --> 03:17.240
+Now the variable itself let I is actually still in memory but the engine just won't allow you to access
+
+03:17.240 --> 03:26.120
+it before like it was when we used var this way we get to keep our mental framework of execution context
+
+03:26.630 --> 03:35.410
+and variable environment but also have this little let keyword and cons keyword that give us some of
+
+03:35.410 --> 03:38.520
+the powers of block scoping.
+
+03:38.540 --> 03:39.110
+All right.
+
+03:39.360 --> 03:40.890
+I think that's enough for now.
+
+03:40.980 --> 03:44.330
+Take a break and I'll see you in the next video.
+
+03:44.330 --> 03:44.630
+Bye bye.

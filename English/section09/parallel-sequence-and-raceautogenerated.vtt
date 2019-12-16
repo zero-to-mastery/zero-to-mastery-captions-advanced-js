@@ -1,0 +1,367 @@
+WEBVTT
+
+00:00.940 --> 00:02.070
+Welcome back.
+
+00:02.140 --> 00:04.280
+I have a lot of code for you here.
+
+00:04.420 --> 00:07.780
+And don't worry you're going to get access to this code as well.
+
+00:07.870 --> 00:10.480
+You should probably see it on the left hand side over here.
+
+00:10.780 --> 00:17.910
+And I recommend that in this video you play along with me as well.
+
+00:17.930 --> 00:26.630
+Now I've created a little fun exercise for us because you see when it comes to promises there are three
+
+00:26.630 --> 00:34.410
+things that are I think quite crucial for you to decide especially when you have multiple promises.
+
+00:34.420 --> 00:41.630
+For example if let's say you had three promises that you need to handle.
+
+00:41.820 --> 00:45.180
+There are a few ways that we can manage this right.
+
+00:45.180 --> 00:54.540
+One is parallel that is I want you to execute all three of these promises or let's say Fetch calls or
+
+00:54.540 --> 01:03.440
+anything they are I want you to run them in parallel all at the same time another way that we might
+
+01:03.440 --> 01:05.440
+want to run them is sequential.
+
+01:05.480 --> 01:07.110
+Right.
+
+01:07.340 --> 01:12.860
+Maybe we want to run the first one and if the first one succeeds then the second one then the if the
+
+01:12.860 --> 01:19.340
+second one succeeds then the third one or they're all dependent on each other and another way that we
+
+01:19.340 --> 01:22.360
+might want to have is called a race.
+
+01:22.490 --> 01:29.480
+That is I want you to call three things but whichever one comes back first just do that one and ignore
+
+01:29.480 --> 01:30.380
+the rest.
+
+01:31.040 --> 01:38.840
+So in this exercise I want us to demonstrate how we do parallel sequential and race when it comes to
+
+01:39.260 --> 01:44.360
+asynchronous code so let's take a look at the code.
+
+01:45.980 --> 01:54.220
+I have a function over here that's called permissive fi that as you can see takes an item and a delay.
+
+01:54.670 --> 02:03.630
+So we're using permissive fi over here that takes a string a B.S. Just like our constants here and I'm
+
+02:03.630 --> 02:05.290
+giving them a delay.
+
+02:05.430 --> 02:13.740
+So I want you to return a promise with 100 millisecond delay five second delay and a three second delay.
+
+02:14.070 --> 02:21.240
+And this is simply going to return for us a new promise and this promise doesn't do anything exciting
+
+02:21.480 --> 02:30.680
+except resolve our ideas him with the delay that we specified but wrapped in a set timeout.
+
+02:30.770 --> 02:32.160
+So we have that delay.
+
+02:32.300 --> 02:32.910
+That's it.
+
+02:33.440 --> 02:49.380
+A B and C if we console log A B and C we have functions here that we can call and if we call these functions
+
+02:53.600 --> 02:57.380
+and run them we see that we have three promises.
+
+02:57.540 --> 02:58.150
+Right.
+
+02:58.190 --> 03:00.830
+Nothing too crazy.
+
+03:00.900 --> 03:07.370
+Now we have the parallel version of a here and we've seen this before right.
+
+03:08.660 --> 03:17.020
+We're gonna create an async function called parallel and this parallel will have promises that will
+
+03:17.020 --> 03:25.930
+be a B and C and now we're going to use the await promise that all that we saw in the previous videos
+
+03:26.830 --> 03:32.560
+to run all these promises at the same time and have Apple one.
+
+03:32.690 --> 03:39.680
+I'll put two up with three and this is a common pattern that you see a lot of with multiple promises.
+
+03:39.850 --> 03:44.490
+And these are going to be run in parallel so all at the same time.
+
+03:44.650 --> 03:50.170
+And as you can see we're going to return parallel is done with the output of 1 2 and 3 which should
+
+03:50.170 --> 03:58.150
+be a b and c because promise at all when we pass it an array of promises we'll return them one by one
+
+03:58.450 --> 04:09.970
+like this so let's see this works I'm going to say parallel and then do a dot then and console dot log
+
+04:11.390 --> 04:16.310
+you can see here that I'm just passing the function because dot then is going to get past whatever this
+
+04:16.310 --> 04:21.820
+returns which is bright here into the console log and it's going to call console lock.
+
+04:22.010 --> 04:29.660
+So it's the same as me doing data with console log data.
+
+04:29.660 --> 04:38.670
+Same thing as that is just more concise this way so if I run this we wait a bit we wait a bit and then
+
+04:38.670 --> 04:48.320
+suddenly we should have parallel is done with a b c up a one two and three is A B C because remember
+
+04:48.320 --> 04:53.420
+we resolved it with the parameters that we gave it here right.
+
+04:53.420 --> 04:55.370
+So that was parallel.
+
+04:55.550 --> 04:56.360
+Nice and easy.
+
+04:56.360 --> 04:57.500
+All of them at the same time.
+
+04:57.500 --> 04:59.090
+That's very useful.
+
+04:59.090 --> 05:05.830
+What about the next one the next one I want to do is race.
+
+05:05.990 --> 05:15.770
+That is I want to have a race between all these three promises and whichever one returns first.
+
+05:15.870 --> 05:26.790
+I wanted to be upper one and just log that and ignore all the other ones so that if I do race dot or
+
+05:26.850 --> 05:34.520
+call race God then console dialogue Well if I run this.
+
+05:34.650 --> 05:38.460
+Do you see how fast that was racist done and a return.
+
+05:38.580 --> 05:41.650
+I don't care about all the other ones it's done.
+
+05:41.650 --> 05:46.800
+And luckily for us promise comes with the DOT race method that does it for us.
+
+05:47.340 --> 05:50.310
+So that it's quite similar to what we had up here right.
+
+05:50.340 --> 05:59.140
+We just simply changed dot all to tie race and pass in array of promises and in this case a return first.
+
+05:59.150 --> 06:05.580
+But if I had something that finishes faster than a let's say B finished in well 0 seconds.
+
+06:05.600 --> 06:11.680
+If I run this look at that race is done and B wins out and that returned really really fast.
+
+06:11.690 --> 06:15.480
+Let's bring this back to five seconds right.
+
+06:15.490 --> 06:17.590
+So race is very very useful.
+
+06:17.590 --> 06:20.790
+What about the next one which is sequence.
+
+06:20.860 --> 06:23.440
+This is also quite useful.
+
+06:23.530 --> 06:28.590
+That is sometimes what we want to make sure that we do one thing first then the next thing.
+
+06:28.720 --> 06:34.000
+Then the third thing maybe they all depend on each other and we have to make sure that we have some
+
+06:34.000 --> 06:36.570
+sort of order with async await.
+
+06:36.700 --> 06:43.320
+We can do that pretty nicely and sequence is really really nice when it comes to async await because
+
+06:43.560 --> 06:51.290
+when we had promises and chaining that can get really really nasty with sequences so let's have a look.
+
+06:51.430 --> 06:54.930
+As you can see here we're not doing promised at all promised our race.
+
+06:55.000 --> 06:56.470
+We're just awaiting.
+
+06:56.530 --> 06:59.580
+I remember when we see the keyword awake.
+
+06:59.650 --> 07:06.820
+This function is going to run and it's going to pause here until a returns and it's going to say output
+
+07:06.850 --> 07:13.510
+is now equal to this and then we're going to wait and pause until B returns which in our case will be
+
+07:13.510 --> 07:19.870
+five seconds and then we finally assign a top two and then it's going to pause and wait until C returns
+
+07:20.320 --> 07:26.140
+and then wait until output 3 gets filled in with the value and then we finally return.
+
+07:26.140 --> 07:31.000
+So because of this awake keyword we can pause this execution let's have a look.
+
+07:31.660 --> 07:42.010
+If I do sequence dot then and then console dialog let's have a look here would click Run we're waiting
+
+07:42.070 --> 07:49.690
+we're waiting we're waiting for all the things to settle and then finally eventually we'll get sequences
+
+07:49.690 --> 07:58.480
+done a b c so that definitely took a lot longer than race but let's do something even more fun let's
+
+07:58.720 --> 08:01.520
+have a race between all three things.
+
+08:01.540 --> 08:06.780
+I'll say parallel and then I'll also say
+
+08:10.200 --> 08:17.430
+race and remember because these are all asynchronous it doesn't matter what order I put them in because
+
+08:17.700 --> 08:22.890
+when we actually receive something that's when the dot then console log gets run.
+
+08:22.890 --> 08:27.930
+So the order doesn't matter here and even though I put race at the bottom.
+
+08:27.930 --> 08:31.620
+This probably is gonna get finished before parallel and sequence.
+
+08:31.620 --> 08:33.180
+All right I'm going to hit run.
+
+08:33.180 --> 08:34.110
+Place your bets.
+
+08:34.110 --> 08:35.040
+Who's gonna win.
+
+08:35.190 --> 08:36.280
+Who's gonna be lost.
+
+08:36.390 --> 08:37.150
+Ready.
+
+08:37.170 --> 08:41.000
+Let's find out oh boy.
+
+08:41.190 --> 08:42.690
+I got you all excited for nothing.
+
+08:42.990 --> 08:44.420
+I misspelled Perla.
+
+08:44.430 --> 08:45.800
+Let's try that again.
+
+08:45.810 --> 08:46.240
+All right.
+
+08:46.290 --> 08:48.420
+This time I promise it should work.
+
+08:48.420 --> 08:49.290
+Place your bets.
+
+08:49.290 --> 08:52.600
+Let's find out race is done.
+
+08:52.610 --> 08:53.360
+That's fast.
+
+08:53.360 --> 08:54.190
+What about the other ones.
+
+08:56.310 --> 08:57.080
+Parallels Don.
+
+08:57.090 --> 08:57.330
+All right.
+
+08:57.360 --> 08:57.750
+That's good.
+
+08:57.750 --> 08:58.260
+That's good.
+
+08:58.300 --> 09:02.300
+Sequences taking a long time and then finally sequence is done
+
+09:05.240 --> 09:06.890
+was that what you expected.
+
+09:06.890 --> 09:09.020
+Well it should be great.
+
+09:09.080 --> 09:10.180
+Race is.
+
+09:10.220 --> 09:12.170
+Well whatever is the fastest.
+
+09:12.200 --> 09:13.280
+Just return.
+
+09:13.280 --> 09:19.970
+Parallel is I want you all to do all the promises at the same time and sequences has to wait for each
+
+09:19.970 --> 09:29.300
+one and do it sequentially very very cool next time you have a bunch of promises you have a bunch of
+
+09:29.360 --> 09:31.280
+async code.
+
+09:31.360 --> 09:34.220
+Think about what needs to happen.
+
+09:34.300 --> 09:40.970
+Do you need to run them in parallel in sequence or do you just need to brace figure out what's best
+
+09:40.970 --> 09:45.000
+for your program what's the most optimum way to do things.
+
+09:45.260 --> 09:50.540
+And I'll leave the code for you here to play around with change out the times maybe do different things
+
+09:50.540 --> 09:57.560
+on your own to explore these three concepts and I hope they'll come useful to you in your career.
+
+09:57.600 --> 09:59.470
+I'll see in the next one by.

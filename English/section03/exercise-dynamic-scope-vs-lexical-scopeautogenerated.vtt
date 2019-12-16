@@ -1,0 +1,355 @@
+WEBVTT
+
+00:00.880 --> 00:03.440
+Let's do a bit of an exercise.
+
+00:03.460 --> 00:06.640
+I have a piece of code here.
+
+00:06.870 --> 00:15.180
+And as you can see I have variable a that is a function and inside of that function we have another
+
+00:15.180 --> 00:22.320
+variable cost B that is also a function that we run at the end.
+
+00:22.320 --> 00:28.120
+The B function and then inside of that we also have a C function.
+
+00:28.230 --> 00:38.040
+But this time around C is an object that has property high which is a function and at the end we're
+
+00:38.040 --> 00:40.920
+calling C dot high.
+
+00:41.280 --> 00:45.950
+Just to clear this up I'm going to add a here in the console log.
+
+00:46.140 --> 00:48.960
+Want to add B in the console log.
+
+00:48.960 --> 00:53.210
+And then finally c in the console log.
+
+00:53.220 --> 01:03.270
+Now when I run this function it's going to execute this piece of code which executes goes to all the
+
+01:03.270 --> 01:08.880
+steps and executes B which will execute this piece of code.
+
+01:09.630 --> 01:14.230
+And this B will finish off with executing C dot.
+
+01:14.250 --> 01:20.900
+Hi hit pause and think about what's going to happen because in just a few seconds we're gonna find out.
+
+01:21.780 --> 01:22.160
+Let's see
+
+01:25.350 --> 01:26.950
+is that what you expected.
+
+01:27.750 --> 01:37.830
+Let's see what happened here a equals to the window object or the this keyword here refers to window
+
+01:38.070 --> 01:39.020
+and that makes sense right.
+
+01:39.030 --> 01:48.720
+We called a who called a while the window object called a right what about though.
+
+01:48.930 --> 01:50.470
+Who called B.
+
+01:50.730 --> 01:53.490
+It's nested inside the a function.
+
+01:53.550 --> 02:00.330
+Maybe you thought that we would have something else as B but that's not really the case right.
+
+02:00.330 --> 02:13.980
+Remember all we did was we called the a function and the a function executed this piece of code and
+
+02:14.520 --> 02:19.110
+the B function well who called the B function.
+
+02:19.160 --> 02:22.490
+There's nothing to the left or the B right.
+
+02:22.490 --> 02:30.990
+There's no other object that called B so in this case what's to the left of the dot.
+
+02:31.070 --> 02:33.140
+Well nothing has changed.
+
+02:33.140 --> 02:39.590
+And the this keyword who called me is still window because we have a window
+
+02:42.680 --> 02:50.030
+a function that got called and inside of here we called the B function but to the left of the dot it's
+
+02:50.030 --> 02:51.690
+still the window object.
+
+02:53.170 --> 02:59.860
+Now when we get to see that's when the interesting thing happens because we have an object and that
+
+02:59.860 --> 03:02.020
+should trigger something for us.
+
+03:02.020 --> 03:07.010
+As soon as we have an object we now see that C dot Hi.
+
+03:07.030 --> 03:08.230
+Got called.
+
+03:08.230 --> 03:18.340
+So when we call Hi What's the this keyword Well hi what's called right here.
+
+03:18.490 --> 03:20.580
+And who called Hi.
+
+03:20.860 --> 03:22.480
+Well seeded.
+
+03:22.600 --> 03:34.680
+So the this keyword or who called me is the high or the C object and this is unlike anything we've seen
+
+03:34.800 --> 03:44.430
+before remember when I told you about lexical scope lexical environment how the compiler knew right
+
+03:44.430 --> 03:52.920
+away without running any piece of code what variables functions have access to it almost looks like
+
+03:53.640 --> 03:59.850
+lexical scope doesn't work with this it doesn't really matter where we write it in the piece of code
+
+03:59.850 --> 04:00.540
+right.
+
+04:00.630 --> 04:09.510
+All that matters is how what gets called during invocation who calls it it matters how the function
+
+04:09.750 --> 04:18.850
+was called Let me show you another interesting example let's say we have an object and this object will
+
+04:19.060 --> 04:23.330
+have name once again and Billy is gonna make an appearance.
+
+04:23.440 --> 04:28.040
+Once again and belly is going to sink.
+
+04:29.300 --> 04:35.170
+And here was just to console log God or a console log this.
+
+04:35.180 --> 04:36.080
+Nothing new here.
+
+04:36.080 --> 04:40.820
+We've seen this before but let's add something new to this.
+
+04:41.200 --> 04:46.070
+And one of the biggest gotchas when it comes to this keyword is in here.
+
+04:46.120 --> 04:56.210
+I create a another variable and this variable will be another function that will be function.
+
+04:56.220 --> 05:00.350
+And then here will have console log
+
+05:04.550 --> 05:13.490
+and just for clarity let's just say B for this one and a for this one.
+
+05:14.530 --> 05:23.470
+And the sing function will actually at the very end call the another function.
+
+05:23.580 --> 05:26.710
+What do you think will happen here now.
+
+05:26.860 --> 05:32.990
+Again the ripple over here has some safeguards in place so it actually won't let us run this properly.
+
+05:33.010 --> 05:38.660
+So I'm going to copy this and open up the console let's refresh.
+
+05:38.660 --> 05:40.850
+Copy and paste here.
+
+05:41.040 --> 05:51.760
+Now when I create this object and I now run object dot saying let's see what happens is that what you
+
+05:51.760 --> 05:53.320
+expected.
+
+05:53.320 --> 05:54.610
+I have a.
+
+05:54.610 --> 06:01.270
+So the value of this referring to the object that had Billy and the sync function that makes a lot of
+
+06:01.270 --> 06:02.060
+sense.
+
+06:02.140 --> 06:06.600
+But what about this one what just happened here.
+
+06:06.640 --> 06:09.670
+This doesn't make sense at all right.
+
+06:09.700 --> 06:16.290
+I mean isn't this inside of the object over here.
+
+06:16.320 --> 06:19.780
+Why is this referring to the window object.
+
+06:20.040 --> 06:27.300
+And this is like I said one of the biggest gotchas when it comes to the this keyword because the this
+
+06:27.510 --> 06:33.320
+keyword is not lexical e scoped that is it doesn't matter where it is run.
+
+06:33.360 --> 06:42.560
+It matters how the function was called what actually happened underneath the hood is that object dot
+
+06:42.680 --> 06:53.610
+saying ran in this object dot saying inside of the sync function that's where another function car ran
+
+06:55.490 --> 07:05.360
+object didn't really call another function the sync function did in JavaScript this keyword defaults
+
+07:05.360 --> 07:07.650
+to the window object in here.
+
+07:07.730 --> 07:15.890
+I know it's extremely confusing right and this created a lot of problems for people because this error
+
+07:15.890 --> 07:18.060
+was so common.
+
+07:18.180 --> 07:25.020
+Remember this in javascript our lexical scope that is available data variables where the function was
+
+07:25.020 --> 07:31.860
+defined determines are available variables not where the function is called which is called Dynamic
+
+07:31.860 --> 07:41.250
+scoping but there's actually a little footnote to the state right because everything in Javascript is
+
+07:41.310 --> 07:50.410
+actually lexical a scoped how you write it determines what we have available except for the this keyword
+
+07:51.410 --> 07:59.970
+this keyword is actually dynamically scoped that is it doesn't matter where it's run it matters how
+
+07:59.970 --> 08:02.370
+the function was called.
+
+08:02.520 --> 08:05.480
+So how do we fix this problem.
+
+08:05.670 --> 08:10.930
+How can we avoid this pitfall that a lot of people had had in the past.
+
+08:11.010 --> 08:13.110
+Well there's two ways to do this.
+
+08:13.190 --> 08:24.470
+Let's have a look if I copy this back and let's just refresh here I can solve this issue using what
+
+08:24.470 --> 08:31.940
+we got in yes six arrow functions and you may have heard the term arrow functions are Lexa Glee bound
+
+08:32.870 --> 08:39.530
+that is air functions has a lexical this behavior unlike normal functions.
+
+08:39.530 --> 08:49.590
+So if I changed this function to an arrow function instead it's going to lexical eat bind this that
+
+08:49.590 --> 08:53.880
+is hey what object is surrounding this.
+
+08:53.910 --> 09:03.410
+While the main object is so by just doing this if I run this say sync
+
+09:06.580 --> 09:07.510
+Hey look at that.
+
+09:07.510 --> 09:08.890
+Problem solved.
+
+09:08.950 --> 09:10.480
+Not too bad right.
+
+09:10.600 --> 09:14.640
+And that's what the arrow functions gave us which was amazing.
+
+09:14.680 --> 09:16.360
+It prevents a lot of this confusion.
+
+09:17.550 --> 09:22.090
+And this is something we're going to talk more about in the object oriented programming section.
+
+09:22.380 --> 09:26.880
+But what do we do before we had iOS 6 and Ara functions.
+
+09:26.880 --> 09:34.140
+Another way that we were able to do this before we had our functions was to do something like this where
+
+09:34.140 --> 09:44.700
+I return another function and I bind to this which because we're doing this line of code outside of
+
+09:44.700 --> 09:45.400
+this function.
+
+09:45.420 --> 09:54.300
+This is going to refer to the object let's see what happens when I do that and I have to refresh.
+
+09:54.370 --> 09:55.470
+Let's try that again.
+
+09:55.470 --> 10:03.780
+And if I do object dot saying but then object dot saying actually returns another function.
+
+10:03.780 --> 10:12.780
+So if I do object dot saying call the function and then call the function again which will be running
+
+10:12.870 --> 10:18.020
+this line of code.
+
+10:18.200 --> 10:23.970
+Look at that both this keywords are now part of the object.
+
+10:25.150 --> 10:27.310
+Now I know that's really confusing.
+
+10:27.340 --> 10:32.370
+I just wanted to show you what we did to solve this issue before we had error functions.
+
+10:32.590 --> 10:41.560
+But what does bind really do well in the next video we're gonna find out.
+
+10:41.640 --> 10:52.060
+I just remembered there is one more way of solving this issue the issue of this keyword in here inside
+
+10:52.060 --> 11:00.650
+of another function being the window object and this is something that you may have seen a lot especially
+
+11:00.650 --> 11:08.200
+if you've worked in the past with J query or the first version of angular where in order for us to capture
+
+11:08.200 --> 11:17.050
+the this value and in order to have a referencing the object what we would do is outside of the function
+
+11:17.050 --> 11:28.940
+itself create a reference so that for example variable self is equal to this and because of the time
+
+11:29.510 --> 11:34.990
+this line is run this is still inside of the object.
+
+11:35.270 --> 11:44.880
+We're going to maintain that reference to the object so that here we can use self inside of the another
+
+11:44.880 --> 11:56.280
+function so that if I run this function I see that both the sing function has a reference to this which
+
+11:56.280 --> 12:05.040
+is the object and also the another function has the reference to the object using the self variable.

@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.750 --> 00:05.520
+It is time to get into the weeds of JavaScript by writing some code.
+
+00:05.520 --> 00:12.090
+Finally we're going to be coding along to understand the fundamental principles of the language and
+
+00:12.090 --> 00:15.410
+we will continue to do so for the rest of this course.
+
+00:15.420 --> 00:17.280
+Hurray I know everybody's happy.
+
+00:17.370 --> 00:18.870
+No more staring at slides.
+
+00:18.870 --> 00:22.910
+I mean we're still gonna have slides but don't worry we'll get some coding done too.
+
+00:23.100 --> 00:29.460
+In this section we're going to speak about things that underlie the way the language works and the topics
+
+00:29.460 --> 00:34.230
+that come up again and again for senior javascript developer interviews.
+
+00:34.470 --> 00:42.150
+By the end of this section you will know what each of these terms meet but also be able to use this
+
+00:42.150 --> 00:47.730
+to your advantage to analyze code to write better code and just a heads up.
+
+00:47.880 --> 00:53.730
+You're going to learn some words in here that sound a lot more complex than they really are.
+
+00:53.730 --> 00:55.280
+However they're important.
+
+00:55.290 --> 01:00.360
+And by the end of this section you should feel comfortable discussing them and using them when speaking
+
+01:00.360 --> 01:01.200
+about code.
+
+01:01.440 --> 01:04.080
+So enough talk let's get started.
+
+01:04.110 --> 01:04.960
+I'll see you in the next one.
+
+01:05.430 --> 01:05.790
+Bye bye.

@@ -1,0 +1,301 @@
+WEBVTT
+
+00:01.200 --> 00:04.640
+How do we run code in JavaScript.
+
+00:04.650 --> 00:09.450
+Well we assign variables and then we run functions.
+
+00:09.450 --> 00:10.250
+Right.
+
+00:10.260 --> 00:16.180
+That's all we really do in a language so take a look at the code over here.
+
+00:18.200 --> 00:26.750
+Every time we run a function let's say if we call the Say My Name function we add these brackets to
+
+00:26.750 --> 00:34.120
+it and then we're able to execute that function or run it the JavaScript engine is going to look at
+
+00:34.120 --> 00:38.160
+this and say aha here's a task for me.
+
+00:38.260 --> 00:39.570
+Tell me what to do.
+
+00:39.580 --> 00:45.760
+Mr. function and as soon as the JavaScript engine sees these brackets it's going to create something
+
+00:45.760 --> 00:51.000
+called an execution context but we'll get to that in a second.
+
+00:51.340 --> 01:00.200
+If we run this function say my name is going to be run which is going to return fine name which is going
+
+01:00.200 --> 01:05.420
+to return print name which is going to return my name.
+
+01:05.420 --> 01:05.750
+All right.
+
+01:05.780 --> 01:07.780
+That's a pretty convoluted way of doing things.
+
+01:07.790 --> 01:12.280
+But if I run this we see that it prints Andre Nagai.
+
+01:12.470 --> 01:14.780
+So what is happening here.
+
+01:14.780 --> 01:22.550
+Well when the JavaScript engine sees those brackets it's going to say oh I'm going to run a function
+
+01:22.580 --> 01:25.190
+and create an execution context.
+
+01:25.190 --> 01:34.670
+So the first thing it does is create an execution context say my name and add this execution context
+
+01:35.330 --> 01:36.520
+onto the stack.
+
+01:36.560 --> 01:37.830
+Remember our call stack right.
+
+01:38.690 --> 01:44.840
+And then it tries to run this function and sees that this function is calling another function.
+
+01:44.870 --> 01:50.630
+So I'm going to create a new execution context because I'm going to see these brackets.
+
+01:50.750 --> 01:52.310
+That's called find my name.
+
+01:52.370 --> 01:53.500
+And there we have it.
+
+01:53.570 --> 01:58.430
+Another item that gets pushed onto the stack and then that function.
+
+01:58.430 --> 02:04.910
+Once again the JavaScript engine is going to see oh here's another bracket pair brackets print name.
+
+02:05.150 --> 02:12.680
+Let's run this function and then this function after it's created its own execution context is going
+
+02:12.680 --> 02:14.450
+to return the string.
+
+02:14.450 --> 02:21.530
+Andre Agassi which gets returned to find my name which gets returned to say my name.
+
+02:21.740 --> 02:29.340
+And then eventually the call stack all gets popped off and we return onto the screen.
+
+02:29.420 --> 02:33.300
+Andre Agassi it's really weird saying my own name while doing this.
+
+02:33.310 --> 02:35.410
+Next time I'm going to pick a different name.
+
+02:35.500 --> 02:40.180
+So if we take a look back onto our code this should make sense.
+
+02:40.180 --> 02:44.770
+We're adding items onto the call stack which we've talked about before but this time I've introduced
+
+02:44.770 --> 02:48.940
+to this idea of execution context.
+
+02:48.940 --> 02:57.250
+Now before we get into exactly what this execution context means I may have lied to you the diagram
+
+02:57.400 --> 03:06.220
+that we just saw isn't 100 percent accurate because the base execution context that runs is called the
+
+03:06.220 --> 03:09.700
+Global execution context.
+
+03:09.750 --> 03:18.350
+This is what I mean initially our JavaScript engine is going to create a global execution context.
+
+03:18.350 --> 03:19.190
+We don't see this.
+
+03:19.190 --> 03:23.630
+It's underneath the hood but it's saying hey here's the javascript file for you.
+
+03:23.630 --> 03:26.180
+Just start reading it for me.
+
+03:26.180 --> 03:30.470
+And on top of that that's when we start adding say my name.
+
+03:30.470 --> 03:33.350
+Then find my name then print name.
+
+03:33.590 --> 03:41.240
+And then eventually as these execution context get popped off the last thing that remains is the global
+
+03:41.360 --> 03:42.830
+execution context.
+
+03:42.890 --> 03:50.300
+And when the final line of our code runs and we're done with the JavaScript engine this is going to
+
+03:50.300 --> 03:55.050
+get popped off the stack so just from what we've learned.
+
+03:55.070 --> 04:02.690
+If I tell you whenever code is run in JavaScript it is run inside of an execution context.
+
+04:02.810 --> 04:04.990
+Is that a true statement or a false statement.
+
+04:05.960 --> 04:07.550
+Well it's true right.
+
+04:07.550 --> 04:14.280
+Anytime we run code in JavaScript it's always going to be part of an execution context.
+
+04:14.420 --> 04:21.820
+That is it's part of global or inside of some function that we call now we're gonna get back to this
+
+04:21.820 --> 04:24.290
+topic a little bit deeper later on.
+
+04:24.520 --> 04:31.300
+But if we take a look at the global execution context remember that's the very first item on the stack.
+
+04:31.300 --> 04:37.180
+The first thing the JavaScript engine does is to create this global execution context and it gives you
+
+04:37.180 --> 04:38.590
+two things.
+
+04:38.590 --> 04:41.930
+First thing is a global object.
+
+04:42.250 --> 04:49.480
+And the other thing is that this keyword in JavaScript everybody's favorite topic right and that this
+
+04:49.480 --> 04:51.190
+keyword in JavaScript.
+
+04:51.190 --> 04:54.990
+Well we have an entire video series on this so stay tuned.
+
+04:55.270 --> 05:02.380
+But to start things off global execution context gives us these two things right off the bat when the
+
+05:02.380 --> 05:04.720
+JavaScript engine starts up.
+
+05:04.720 --> 05:10.300
+So let's test this assumption if what I just told you is correct.
+
+05:10.300 --> 05:16.900
+That means I can just give an empty file to let's say the browser and I should have a global object
+
+05:16.930 --> 05:20.950
+and the this keyword already defined without me having to do anything.
+
+05:21.460 --> 05:26.440
+So let's go to some code and test this out right.
+
+05:26.460 --> 05:29.520
+I've created the most basic web site ever.
+
+05:29.520 --> 05:39.710
+We have an HMO file that simply says Hulu and a script Ach that has script RJ Yes that is completely
+
+05:39.800 --> 05:40.930
+empty.
+
+05:40.940 --> 05:48.620
+Now if I refresh your and run this based on what I just told you I should have.
+
+05:48.630 --> 05:53.470
+Well the this keyword and look at that.
+
+05:53.470 --> 05:59.020
+I do have access to the this keyword even though there is absolutely nothing in my JavaScript file and
+
+05:59.050 --> 06:09.450
+I should also have access to the global object and in the browser the global object is window so I get
+
+06:09.450 --> 06:15.930
+these two things that this keyword and window without even writing a piece of Javascript because the
+
+06:16.140 --> 06:21.090
+browser has created a global execution context for me and you might be asking yourself.
+
+06:21.090 --> 06:21.720
+Hold on.
+
+06:21.720 --> 06:23.040
+Are these the same thing.
+
+06:23.040 --> 06:24.450
+Well let's test that out.
+
+06:24.480 --> 06:30.870
+This equals window that true Yep.
+
+06:31.100 --> 06:31.910
+That's true.
+
+06:31.910 --> 06:39.870
+That's the very first step that the JavaScript engine does for us the JavaScript engine is going to
+
+06:39.870 --> 06:46.740
+create these two objects and these two objects are going to equal to one another.
+
+06:47.010 --> 06:55.120
+For now Liz and by the way if we're using something like node the global object wouldn't be window.
+
+06:55.120 --> 07:03.020
+Instead it'll be called global and to this global object we can assign variables.
+
+07:03.130 --> 07:03.890
+Right.
+
+07:03.910 --> 07:17.290
+If I go back to our example and I clear this if I say variable a equals true or alleges do Teddy if
+
+07:17.290 --> 07:27.510
+I go to the window object now I open it up I see that I've added a variable to my global object that
+
+07:27.510 --> 07:34.620
+is a equals Teddy and I can add functions and I can add different things to this global object.
+
+07:35.250 --> 07:43.400
+So once we have done this what we call a creation phase in our JavaScript engine we then have a second
+
+07:43.400 --> 07:51.180
+phase and that second phase is called the execution phase where you actually run your code.
+
+07:51.210 --> 07:57.360
+Now we're going to expand on this a little bit but to review when code is run on the JavaScript engine
+
+07:58.600 --> 08:02.760
+a global execution context is created.
+
+08:02.840 --> 08:13.190
+And when you run a function a new execution context is added a function execution context and we start
+
+08:13.310 --> 08:21.720
+running our code until everything gets popped up the stack and all of our code is run.
+
+08:21.750 --> 08:22.290
+All right.
+
+08:22.450 --> 08:27.490
+I think you're sick and tired of me saying global execution context over and over but hopefully this
+
+08:27.490 --> 08:33.380
+made sense to you because in the next video we have another difficult term to cover.
+
+08:33.460 --> 08:35.080
+I'll see you on that one by.

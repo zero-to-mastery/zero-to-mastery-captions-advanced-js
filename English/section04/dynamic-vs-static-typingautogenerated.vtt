@@ -1,0 +1,376 @@
+WEBVTT
+
+00:02.050 --> 00:03.570
+Welcome back.
+
+00:03.570 --> 00:07.480
+There are a ton of programming languages out there.
+
+00:07.590 --> 00:13.330
+We've heard of them right Python Ruby Java C++.
+
+00:13.330 --> 00:21.500
+There's a ton and although javascript is the dominant language on the web and with the introduction
+
+00:21.500 --> 00:28.400
+of things like node j yes we can now use javascript outside of the web perhaps in the back end server
+
+00:28.580 --> 00:29.720
+as well.
+
+00:29.810 --> 00:38.200
+The world still has many different languages that are suited for their own domain and ability and if
+
+00:38.200 --> 00:44.740
+we had to categorize all these programming languages somehow we'd probably do something like this
+
+00:48.470 --> 00:49.060
+in this video.
+
+00:49.070 --> 00:55.190
+We're going to talk about the main spectrum here the dynamic and static of how programming languages
+
+00:55.220 --> 01:01.100
+can differ dynamically typed and statically tight.
+
+01:01.240 --> 01:10.760
+We see over here that JavaScript is a dynamically typed language and so are other popular programming
+
+01:10.760 --> 01:21.820
+languages like P HB Ruby Python closure on the other hand languages like Java Haskell scalar C++ are
+
+01:21.820 --> 01:30.540
+static or statically typed languages but what does that mean.
+
+01:30.670 --> 01:38.960
+Well let me actually just demonstrate a free if I open up the console here and you Oh that's a nice
+
+01:38.960 --> 01:40.190
+backyard today.
+
+01:40.280 --> 01:46.390
+Anyway back to the console so we can type some javascript in JavaScript because it's dynamically typed.
+
+01:46.400 --> 01:54.570
+We can do something like this variable a equals 100.
+
+01:54.790 --> 01:55.380
+All right.
+
+01:55.380 --> 01:57.210
+That's pretty expected.
+
+01:57.270 --> 02:00.040
+We know how javascript works and that's fine.
+
+02:00.930 --> 02:04.600
+But in some languages this wouldn't work.
+
+02:04.680 --> 02:14.340
+You see a dynamically typed language allows us to not have to say what type of variable this variable
+
+02:14.400 --> 02:16.090
+a is going to be.
+
+02:16.200 --> 02:16.980
+What does that mean.
+
+02:17.340 --> 02:23.460
+Well in a statically typed language let's say we were writing C++ which is a statically typed language
+
+02:24.560 --> 02:31.040
+we'd have to do something like this and I won't get highlighting because well this browser won't recognize
+
+02:31.160 --> 02:38.840
+C++ but if I was about to do the same thing I would have to say into a and it stands for an integer
+
+02:40.190 --> 02:50.540
+and then on a new line I'll say you let me add a semicolon here and on a new line I'd say that A equals
+
+02:51.160 --> 03:00.840
+one hundred you see with a statically typed language I have to say what kind of type this variable is
+
+03:00.840 --> 03:01.480
+going to be.
+
+03:01.560 --> 03:03.900
+In this case it's an integer.
+
+03:03.930 --> 03:09.870
+If this was a string like a hello I'd have to say string and so on and so forth.
+
+03:10.740 --> 03:19.950
+So with a statically type language we have to declare the variables explicitly before using them dynamically
+
+03:19.950 --> 03:24.460
+typed languages are not bound to this constraint.
+
+03:24.640 --> 03:27.070
+They're not bound to a particular type.
+
+03:27.160 --> 03:31.990
+JavaScript is smart enough and it's going to say oh yes yes yes.
+
+03:31.990 --> 03:33.520
+Variable a that's one hundred.
+
+03:33.520 --> 03:33.820
+Oh yeah.
+
+03:33.880 --> 03:36.400
+That's an integer it's an integer type.
+
+03:36.820 --> 03:38.200
+Wow I'm so smart.
+
+03:38.200 --> 03:46.370
+That's what javascript is saying and in dynamically typed languages type checking is done during runtime.
+
+03:46.460 --> 03:47.600
+What does that mean.
+
+03:47.600 --> 03:55.490
+Well if you remember in our discussion about the browser performance javascript gets run on the browser
+
+03:56.750 --> 04:05.100
+in the runtime or in git or just in time compilation while the user is actually browsing through the
+
+04:05.100 --> 04:09.870
+Web site javascript is running and being compiled in the background.
+
+04:09.870 --> 04:15.660
+If you remember our performance tab we had our scripting performance metric which was that yellow pie
+
+04:15.660 --> 04:22.090
+graph or the piece of the pie graph that was yellow that included the compile of the javascript as well.
+
+04:22.290 --> 04:29.490
+And because of that we're able to use dynamically typed languages that can assign anything to any variable
+
+04:29.760 --> 04:35.550
+and you're not gonna be caught you might get errors during runtime while the users browsing the web
+
+04:35.550 --> 04:44.270
+site but because of this we're able to just not have to worry about this looks pretty nice right.
+
+04:44.270 --> 04:46.550
+Why would we ever want to do this.
+
+04:46.550 --> 04:49.800
+This is just so much cleaner and easier for us to write.
+
+04:50.000 --> 04:56.850
+Well we're gonna see why that might not always be ideal and why it might cause a problem.
+
+04:58.170 --> 05:03.250
+But before we get to that there's been a holy war going on in programming languages.
+
+05:03.480 --> 05:09.750
+People that think statically typed languages are the way to go and think dynamically typed languages
+
+05:09.750 --> 05:12.180
+are horrible and vice versa.
+
+05:12.180 --> 05:18.090
+People there say oh aesthetically type languages are a waste of time and dynamic programming languages
+
+05:18.240 --> 05:24.570
+are the way to go because of that I'm treading lightly on this topic because people are so opinionated
+
+05:24.840 --> 05:27.070
+they have such strong opinions about this.
+
+05:27.180 --> 05:32.060
+But again a senior developers let's not focus on what is right what is wrong.
+
+05:32.070 --> 05:38.550
+Let's focus on pros and cons when one is good over the other so that we can make smart decisions.
+
+05:38.550 --> 05:49.910
+Let's talk about the pros the number one thing with a statically typed language like this is that we
+
+05:49.910 --> 05:57.050
+get documentation perhaps a better way to demonstrate this is to actually write a function if let's
+
+05:57.050 --> 06:05.530
+say I was going to delete this and say function some and in this some here I'm going to use a bit of
+
+06:05.530 --> 06:08.500
+a syntax that might not be familiar to you.
+
+06:08.560 --> 06:19.620
+But for now it's fine we'll just we'll just assume that this works we'll say a is a no and b there's
+
+06:19.670 --> 06:27.050
+also a number and in here we can just return a plus b
+
+06:29.820 --> 06:33.020
+and close our function bracket.
+
+06:33.030 --> 06:40.320
+This is in javascript if we ran this war going to get an error but this demonstrates what a statically
+
+06:40.410 --> 06:42.960
+typed language could do.
+
+06:42.960 --> 06:50.550
+You see if a new developer came along and ran the some function with something other than a number let's
+
+06:50.550 --> 07:04.030
+say that they ran the sum function with some hello and maybe something No well this before we're ever
+
+07:04.150 --> 07:09.640
+even going to put this code on the browser are in production is going to error out because it's going
+
+07:09.640 --> 07:12.020
+to say you're doing something wrong here.
+
+07:12.100 --> 07:19.840
+I'm expecting a number and a number here and you're not giving me any of that and in that sense statically
+
+07:19.840 --> 07:24.060
+type languages are self documenting.
+
+07:24.160 --> 07:29.410
+That is I can come onto a project and immediately see that even if this was named badly and this was
+
+07:29.410 --> 07:36.920
+a complicated function I can see what kind of parameters it expects and I avoid making that error the
+
+07:36.920 --> 07:45.230
+second pro of a static typed language is that because of this feature with our I.D. or text editors
+
+07:45.230 --> 07:50.210
+like sublime or visual code or any of your favorite text editor.
+
+07:50.360 --> 07:54.050
+This helps with auto completion and your editors.
+
+07:54.050 --> 07:58.080
+You can download plugins that say hey even before you run this.
+
+07:58.130 --> 08:02.660
+This should be a number that's also really nice when you're developing.
+
+08:02.660 --> 08:04.890
+Finally the most important thing.
+
+08:05.030 --> 08:09.870
+And yes there are many more pros but we're just focusing on the main ones here.
+
+08:09.890 --> 08:15.770
+The main thing of statically typed languages is that you're going to get less bugs you're gonna get
+
+08:15.770 --> 08:19.750
+less bugs in production because this will never make it into production.
+
+08:19.760 --> 08:28.660
+If this fails at what we call compile time that is before we even send it onto a browser then we catch
+
+08:28.660 --> 08:34.100
+that early we catch those bugs early so that in production most of the time there's going to be less
+
+08:34.100 --> 08:36.860
+bugs with a statically typed language.
+
+08:36.890 --> 08:41.940
+And don't worry we're going to talk about compiling and how that works later on now.
+
+08:41.960 --> 08:44.060
+That sounds pretty great thus bugs.
+
+08:44.060 --> 08:53.060
+Easy documentation helpful auto completion in editors so why don't we just do a statically typed language.
+
+08:53.190 --> 08:55.190
+Well there's some cons.
+
+08:55.490 --> 09:01.580
+No one is that we obviously just made our code a little bit more harder to read.
+
+09:01.580 --> 09:08.870
+It's more complex now we're just adding another layer to our programs and this takes time to time to
+
+09:08.870 --> 09:12.620
+learn if we have a project and we have new people joining our company.
+
+09:12.620 --> 09:18.200
+We're going to have to teach them how to write more code and how to write this properly it's an extra
+
+09:18.200 --> 09:23.880
+layer of complexity and that's always a concern with programming right.
+
+09:24.210 --> 09:29.710
+Adding an extra layer of complexity is that really going to benefit the project.
+
+09:29.720 --> 09:37.520
+The other cons or argument against statically type languages is that well why can't you just write better
+
+09:37.520 --> 09:38.250
+tests.
+
+09:38.450 --> 09:42.020
+A topic that we cover in another section.
+
+09:42.020 --> 09:49.640
+Many people get very very excited about static typing and forget about writing good tests good unit
+
+09:49.640 --> 09:55.530
+tests before you have static typing especially in a language like Javascript.
+
+09:55.560 --> 10:01.180
+Make sure that you have good unit tests and you don't forget about writing unit tests and assume.
+
+10:01.200 --> 10:01.590
+Oh yeah.
+
+10:01.590 --> 10:09.070
+Just because I have static typing I'm not gonna get any bugs that simply isn't true finally with a statically
+
+10:09.070 --> 10:10.890
+typed language.
+
+10:11.050 --> 10:17.260
+You're gonna have a slower development process because you now have an extra step where while you're
+
+10:17.260 --> 10:24.990
+coding along there's also another check to see that you're not making any type errors and this actually
+
+10:24.990 --> 10:31.650
+just slows down the development process and how fast you can create code and run code and ship it to
+
+10:31.650 --> 10:32.150
+production.
+
+10:33.700 --> 10:38.980
+You see with dynamically typed languages and this is why javascript was so popular is that you spend
+
+10:38.980 --> 10:46.660
+less time debugging syntax and semantic errors like this and instead most of your debugging time is
+
+10:46.660 --> 10:55.310
+spent purely on logic and errors which as a developer are a lot more interesting.
+
+10:55.330 --> 10:57.630
+All right let's go back to this.
+
+10:57.700 --> 11:05.620
+There are a few other pros and cons and everybody always has opinions when it comes to these two topics
+
+11:05.920 --> 11:07.500
+but the main point is this.
+
+11:07.720 --> 11:14.050
+Static types usually prevent bugs and help keep errors from happening dynamic typing allows you to be
+
+11:14.140 --> 11:24.670
+more flexible and write software faster typescript allows us to make javascript to behave like a statically
+
+11:24.910 --> 11:34.930
+typed language it adds types to JavaScript so it makes javascript extra safe but before I go on and
+
+11:34.930 --> 11:41.890
+show you a demonstration of how typescript works let's talk about the other two parts of this graph
+
+11:41.980 --> 11:48.920
+that often get confused with dynamic and static typing I'll see in the next one by.

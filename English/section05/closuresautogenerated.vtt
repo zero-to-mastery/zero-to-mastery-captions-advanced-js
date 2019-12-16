@@ -1,0 +1,469 @@
+WEBVTT
+
+00:00.610 --> 00:02.940
+We are finally here.
+
+00:02.980 --> 00:03.940
+It's time to learn.
+
+00:03.940 --> 00:10.730
+The first pillar of JavaScript and that is closures now.
+
+00:10.780 --> 00:16.730
+As I said before these two pillars I think give you superpowers.
+
+00:16.780 --> 00:23.650
+If you understand them deeply as a programmer now you think I'm exaggerating here but hopefully after
+
+00:23.650 --> 00:26.300
+these few videos you'll understand why.
+
+00:26.440 --> 00:34.430
+Especially when it comes to closures we unlock some really interesting abilities in our programs so
+
+00:34.610 --> 00:37.280
+let's learn how to harness their power.
+
+00:37.280 --> 00:43.720
+We have these things called closures in JavaScript because of two things that we get.
+
+00:43.720 --> 00:50.820
+One is the fact that in JavaScript functions are a first class citizen and we already talked about that.
+
+00:50.830 --> 00:52.020
+We know what that is.
+
+00:52.060 --> 00:57.010
+We can pass functions around like data like any other type in JavaScript.
+
+00:57.010 --> 01:06.010
+We also have this idea of lexical scope that is the JavaScript engine knows based on where our code
+
+01:06.010 --> 01:08.800
+is written before we even run the code.
+
+01:09.070 --> 01:10.560
+What variables.
+
+01:10.690 --> 01:19.810
+Each function has access to and closure is simply that a combination of function and the lexical environment
+
+01:20.050 --> 01:21.730
+from which it was declared.
+
+01:22.570 --> 01:30.430
+Closures allow a function to access variables from an enclosing scope or environment even after it leaves
+
+01:30.490 --> 01:33.540
+the scope in which it was declared.
+
+01:33.580 --> 01:35.360
+Sounds pretty confusing right.
+
+01:35.500 --> 01:40.430
+And closure is one of the most confusing things but it's an important topic.
+
+01:40.510 --> 01:44.320
+So instead of me just talking about it let me demonstrate with code.
+
+01:45.100 --> 01:56.110
+Let's say we have a function a and then this function will have a variable called Grampa that has the
+
+01:56.260 --> 01:59.710
+grandpa string inside of it or assigned to it.
+
+02:01.040 --> 02:05.600
+And then this function returns another function.
+
+02:05.660 --> 02:13.310
+So it's a higher order function and we return function b from here and function b will have a variable
+
+02:13.490 --> 02:14.450
+inside of it.
+
+02:14.510 --> 02:20.390
+Remember function scope that has father again same thing.
+
+02:20.390 --> 02:28.430
+String father and that function has or returns a function.
+
+02:28.430 --> 02:36.370
+Function C and inside of that function we have a variable called son that has string son.
+
+02:36.680 --> 02:44.870
+And finally through all of that we return let's say a template string and this template string will
+
+02:44.870 --> 02:46.580
+return a few things for us.
+
+02:48.350 --> 02:55.350
+I'll return Grandpa I'll return Father then I'll return.
+
+02:55.350 --> 03:01.270
+Son and let's just add some symbols just to make it look nice.
+
+03:01.440 --> 03:09.600
+So I've created some functions here and function a function b our higher order functions because while
+
+03:09.780 --> 03:16.320
+the return functions function C is just a normal function because at the end of the day we're just returning
+
+03:16.410 --> 03:17.630
+a piece of string.
+
+03:17.700 --> 03:27.420
+So let's run this code if I run a here and I click Run well it returns function B.
+
+03:27.660 --> 03:29.580
+That makes sense right.
+
+03:29.670 --> 03:35.400
+So I can assign this to a variable and call it again or I can just invoke the next.
+
+03:35.400 --> 03:41.850
+So whatever the invocation of a returns I'm going to call again which I'm going to call function b if
+
+03:41.850 --> 03:43.740
+I run this I get.
+
+03:43.830 --> 03:46.020
+Function C no surprises there.
+
+03:46.690 --> 03:59.670
+What if I run function c if I click Run that I get grandpa father son and if you've been working with
+
+03:59.670 --> 04:02.020
+JavaScript this shouldn't surprise you.
+
+04:02.070 --> 04:02.340
+Right.
+
+04:02.490 --> 04:13.740
+This is the expected behavior but here's my question how did son of all people remember what grandpa
+
+04:13.770 --> 04:14.280
+was.
+
+04:14.940 --> 04:25.530
+I mean if we call a function a here and let's just say cost our that's a terrible name lots to console
+
+04:25.660 --> 04:38.020
+1 well we just ran this function this function was invoked so the only thing we have remaining is this
+
+04:39.310 --> 04:39.780
+function.
+
+04:39.790 --> 04:42.730
+A got popped off the stack.
+
+04:42.730 --> 04:45.340
+So what happens when things get popped off the stack.
+
+04:45.580 --> 04:49.240
+Well we remove the variable environment right.
+
+04:49.330 --> 04:56.680
+So shouldn't let Grandpa be garbage collected and thrown away because well we removed it from the stack
+
+04:56.890 --> 04:59.170
+right somehow.
+
+04:59.170 --> 05:10.000
+Son has access to grandpa and also has access to Father even after after we call the B function and
+
+05:10.000 --> 05:14.870
+this is what closure is let's visualize what's happening here.
+
+05:16.470 --> 05:24.940
+With a closure and by the way this little box is going to be our closure when we run the a function
+
+05:24.940 --> 05:35.170
+first well it pops onto the stack or it gets pushed onto the stack and we create a variable environment
+
+05:35.350 --> 05:38.170
+right in this context.
+
+05:38.170 --> 05:47.290
+Execution has grandpa as a variable it would also have parameters here such as well the arguments keyword.
+
+05:47.310 --> 05:51.960
+But because we haven't given it any other parameters there's no other variables here.
+
+05:52.090 --> 06:00.610
+Just grandpa and this grandpa once we call functioning well what's going to happen to it.
+
+06:00.640 --> 06:08.710
+We have the chain here remember that gives us a link to the global scope.
+
+06:08.770 --> 06:16.450
+That means if there were any variables in the global scope or global execution environment then we might
+
+06:16.450 --> 06:25.910
+have access to them but for now and here once this gets removed off the stack it's gone.
+
+06:25.910 --> 06:28.520
+But Grampa still remains.
+
+06:28.790 --> 06:35.590
+And that's because Grandpa over here goes up into this box of closure.
+
+06:35.590 --> 06:44.080
+Now why is that because this box over here is technically where the memory heap is right.
+
+06:44.140 --> 06:45.910
+It's a bunch of memory.
+
+06:45.940 --> 06:50.680
+And as soon as we don't need things anymore well we need to remove it.
+
+06:50.710 --> 06:59.080
+However when the garbage collector comes sees Grandpa says there's a closure here it's in the special
+
+06:59.080 --> 07:06.520
+closure box and this closure box I can't clean up because there's something that is referencing Grandpa
+
+07:06.730 --> 07:07.540
+from inside of it.
+
+07:08.780 --> 07:17.240
+So the next B function gets called again and we add it to the stack a new variable environment is created
+
+07:17.510 --> 07:27.790
+and we have a father that once we remove Father or once B gets popped up the stack Well once again father
+
+07:27.790 --> 07:30.640
+is being referenced by another function inside of it.
+
+07:31.330 --> 07:43.110
+So gets put into this closure box and then C comes around finally gets called and we have son variable
+
+07:43.110 --> 07:43.980
+here.
+
+07:44.100 --> 07:54.960
+Now when we return the statement grandfather father son the C variable environment is going to return
+
+07:54.960 --> 08:01.800
+and say All right let's find out what the grandpa variable is it's going to look in the variable environment
+
+08:01.830 --> 08:12.430
+and say No I can't find it but then now instead of looking in the global scope or global variable it
+
+08:12.430 --> 08:17.050
+looks in this little closure box and says Hey do you have Grandpa.
+
+08:17.140 --> 08:18.170
+Yep I do.
+
+08:18.170 --> 08:19.740
+Hey do you have a father.
+
+08:19.750 --> 08:23.720
+Yep I do how cool is that.
+
+08:24.430 --> 08:26.800
+In Javascript does something unique here.
+
+08:26.820 --> 08:35.060
+Right the JavaScript engine will make sure that the function has access to all of the variables outside
+
+08:35.060 --> 08:36.190
+of the function.
+
+08:36.290 --> 08:43.570
+With this closure that is this little box So closure is a feature of JavaScript.
+
+08:43.640 --> 08:53.200
+Let's go back to our function again because function C is inside 0 function a and function b the JavaScript
+
+08:53.200 --> 08:56.470
+engine is going to say All right I'll create a closure for you.
+
+08:57.690 --> 09:01.680
+All of the variables outside of the C function.
+
+09:01.950 --> 09:06.510
+I'm going to keep around if C is using it.
+
+09:06.630 --> 09:14.260
+That is if we had another variable let's say let random and then it's a random number well.
+
+09:14.310 --> 09:22.800
+The JavaScript engine once B is invoked isn't going to keep random around because well it's gonna get
+
+09:22.800 --> 09:23.750
+garbage collected.
+
+09:23.770 --> 09:31.230
+Nothing's referencing it but the JavaScript engine is going to keep any thing that's still being referenced
+
+09:31.530 --> 09:32.850
+by a child.
+
+09:32.850 --> 09:38.970
+Function in this case C still needs father and grandpa.
+
+09:39.080 --> 09:46.900
+So it's going to keep it around and closures are also called lexical scoping.
+
+09:46.900 --> 09:47.790
+Let's think about that.
+
+09:47.800 --> 09:56.620
+We've seen that before right lexical scoping lexical means where it is written scoping is what variable
+
+09:56.830 --> 10:05.910
+we have access to so by that definition that means the JavaScript engine before we run any code before
+
+10:05.910 --> 10:14.430
+we get to line twelve or line 13 already knows which function has access to which variables because
+
+10:14.580 --> 10:25.410
+javascript is lexical scope or statically scoped it sees during the first phase where it looks to our
+
+10:25.410 --> 10:30.270
+code and says Oh yeah I'm going to keep grandpa around I'm going to keep Father around even if it gets
+
+10:30.270 --> 10:34.770
+called because I'm going to create these scope chains for us.
+
+10:34.770 --> 10:35.910
+Remember this.
+
+10:36.330 --> 10:45.480
+We had this little hidden property scope that created our scope chains and what we have access to so
+
+10:45.480 --> 10:54.010
+that the JavaScript engine before we run the code has these little links between the functions and this
+
+10:54.010 --> 10:58.510
+works because these values are not on the call stack.
+
+10:58.510 --> 11:00.620
+Instead they're on the memory heap right.
+
+11:00.940 --> 11:04.380
+And the heap just gets cleaned up by the garbage collection.
+
+11:04.420 --> 11:06.540
+But the JavaScript engine says no no no.
+
+11:06.790 --> 11:09.390
+We still need some of these variables.
+
+11:09.790 --> 11:13.190
+So why can we use closures again.
+
+11:13.270 --> 11:15.920
+That's because of what I just mentioned.
+
+11:16.120 --> 11:22.780
+We can have functions that return functions functions as first class citizens and we have this idea
+
+11:22.780 --> 11:32.380
+of lexical scope where we write the function matters not where we call the function or where we invoke
+
+11:32.380 --> 11:41.740
+the function let's look at another example let's say I create a function called BOO AND BOO takes a
+
+11:41.740 --> 11:52.310
+string and inside of this function we're going to return another function that will take named will
+
+11:52.330 --> 11:56.120
+have another function inside of this that gets returned.
+
+11:56.140 --> 12:03.260
+This will be name 2 and then inside of here we'll just console dialog.
+
+12:03.610 --> 12:11.110
+Let's say hi or actually just console log three things.
+
+12:11.240 --> 12:20.780
+That is String name and name two and a cleaner way of writing this.
+
+12:20.780 --> 12:26.000
+With Ara functions is to just simply do this.
+
+12:26.090 --> 12:28.270
+So let's do a concert.
+
+12:28.300 --> 12:41.230
+Boo equals string which is an error of function which is also going to return a function that finally
+
+12:41.920 --> 12:47.200
+returns console log so we can just remove all the brackets.
+
+12:48.920 --> 12:55.780
+Just like that and keep it on one line and because we only have one line here we don't need any curly
+
+12:55.780 --> 12:56.790
+brackets.
+
+12:57.100 --> 13:04.960
+We have console lot so that now if I run loops I do need the bracket.
+
+13:05.140 --> 13:14.070
+If I run boo with let's say hi well I get a function that makes sense.
+
+13:14.170 --> 13:18.360
+If I run it with Tim get another function.
+
+13:18.430 --> 13:30.410
+If I run it with Becca I get high in deca and if you haven't realized why I get so excited about closures
+
+13:30.440 --> 13:35.600
+and why you should too is that we can have some hidden powers now.
+
+13:35.630 --> 13:41.300
+For example imagine if we just did boo.
+
+13:41.590 --> 13:42.180
+Hi.
+
+13:42.200 --> 13:42.760
+I know this.
+
+13:42.800 --> 13:52.010
+This is a terribly named function but let's say that we have blue string here that equals blue high.
+
+13:53.170 --> 13:55.180
+And then let's wait.
+
+13:55.190 --> 14:09.830
+I don't know five years and then do Blue String name and then we're going to call blue string.
+
+14:09.850 --> 14:16.420
+Now obviously I just commented out here but what I'm showing you here is that when I call blue high
+
+14:17.350 --> 14:26.760
+and added to this variable let's add a constant and a concert here I could hypothetically if the JavaScript
+
+14:26.790 --> 14:27.840
+engine is running.
+
+14:27.930 --> 14:34.730
+Wait 5 years and then finally call boo string and boo string.
+
+14:34.740 --> 14:41.400
+Even though it'll be off the stack or the boo function is off the stack we'll still remember for me
+
+14:42.060 --> 14:45.420
+this high that we gave it five years ago.
+
+14:45.420 --> 14:52.710
+That's because remember parameters are treated just like local variables that get stored in variable
+
+14:53.040 --> 14:53.550
+environments.
+
+14:55.010 --> 15:01.910
+So I can wait five years and hold onto information in memory doesn't get deleted and I can call it whenever
+
+15:01.910 --> 15:03.180
+I want.
+
+15:03.200 --> 15:06.590
+Let's take a break and revisit this idea some more.
+
+15:06.590 --> 15:10.200
+To understand its true power I'll see in the next one by.

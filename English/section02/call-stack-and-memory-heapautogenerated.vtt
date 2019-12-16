@@ -1,0 +1,424 @@
+WEBVTT
+
+00:01.300 --> 00:02.740
+Welcome back.
+
+00:02.740 --> 00:10.420
+Up until now we've talked about topics that are definitely important but they won't really affect your
+
+00:10.420 --> 00:17.760
+day to day coding and you won't get really asked about what we just learned about interpreters and compilers.
+
+00:17.860 --> 00:23.950
+In an interview but starting in this video we're going to learn about something that will come up again
+
+00:23.980 --> 00:25.770
+and again in your career.
+
+00:25.840 --> 00:32.710
+That's very important and foundational to javascript that any senior developer should know.
+
+00:32.710 --> 00:37.270
+And it's also something that we're going to keep bringing up over and over throughout this course.
+
+00:37.270 --> 00:39.500
+So make sure you pay attention.
+
+00:39.760 --> 00:47.260
+And up to this point you might have wondered why I ignored completely this little pink and orange box
+
+00:47.740 --> 00:50.020
+the call stack and the memory heap.
+
+00:50.020 --> 00:55.090
+And good you've been paying attention because we're going to talk about this over the next couple of
+
+00:55.090 --> 00:56.420
+videos.
+
+00:56.540 --> 01:01.490
+You see we learned that the JavaScript engine does a lot of work for us.
+
+01:01.790 --> 01:07.860
+But the biggest thing is actually reading our code and executing it right.
+
+01:07.880 --> 01:11.880
+And what do you think the two most important things in this step are.
+
+01:11.900 --> 01:18.530
+That is one we need a place to store and right information that is to store our variables our objects
+
+01:18.920 --> 01:26.330
+our data of our apps and a place to actually run and keep track of what's happening line by line on
+
+01:26.330 --> 01:35.040
+our coat while we use call stack and memory heap for that we need the memory heap as a place to store
+
+01:35.610 --> 01:43.190
+and write information because at the end of the day all programs are just read and write operations.
+
+01:43.190 --> 01:48.090
+That way we have a place to allocate memory use memory and release memory.
+
+01:48.110 --> 01:54.340
+That is to remove it just like these cupboards over here and too with the cold stack.
+
+01:54.340 --> 01:57.190
+We need a place to keep track of where we are in the code.
+
+01:57.190 --> 02:05.260
+So with that we can run the code in order and with these two things the JavaScript engine is able to
+
+02:05.260 --> 02:14.570
+do that so to review the memory heap is where the memory allocation happens and the code sack is where
+
+02:14.630 --> 02:21.860
+the engine keeps track of where your code is and it's execution but enough diagrams looks to actually
+
+02:21.860 --> 02:34.210
+show you an example when we look at call stack and memory HEAP Well if we write a simple concept number
+
+02:34.390 --> 02:45.420
+equals 6 10 what we're saying here is please allocate memory for the number variable and make this number
+
+02:45.420 --> 02:58.460
+variable point two in memory in our memory heap the value 610 if we do let's say a string.
+
+02:58.760 --> 03:09.570
+It's the same thing we're going to tell the engine to hey please allocate memory for a string variable.
+
+03:09.570 --> 03:18.140
+So now whenever we use string we can say oh go into our memory string is pointing to somewhere in our
+
+03:18.140 --> 03:28.370
+memory to this value of some text another way to think about it is if we have an object that is going
+
+03:28.370 --> 03:39.130
+to equal first name is going to be Andre and last will be my very confusing last name that nobody can
+
+03:39.130 --> 03:49.870
+pronounce Nagoya and all we're telling the computer here is saying allocate memory for an object and
+
+03:50.170 --> 03:52.100
+its values.
+
+03:52.150 --> 03:58.960
+So now we're telling the JavaScript engine hey I'm going to assign this human variable and this human
+
+03:58.960 --> 04:06.880
+variable is going to point anytime I call it to a region in memory in our memory heap that has these
+
+04:06.880 --> 04:19.110
+values the first and Laskey that point to Andre and Nagoya values to review our memory heap is simply
+
+04:19.140 --> 04:28.320
+a free store is a large region in memory that the JavaScript engine provides for us which can be used
+
+04:28.320 --> 04:35.880
+to store any type of arbitrary data in an unordered fashion there's no order to this memory it just
+
+04:35.880 --> 04:42.150
+allows us to use variables to point to different storage areas just like a little cupboard here and
+
+04:42.240 --> 04:47.430
+a lot of science goes into optimizing the way space is allocated here but we don't need to worry about
+
+04:47.430 --> 04:55.560
+that we know that the engine takes care for us to put data into storage boxes for us and that's pretty
+
+04:55.560 --> 05:02.430
+easy right memory heap is not that hard just a place for us to store our information but what about
+
+05:02.430 --> 05:06.830
+the next one call stack how does that help us.
+
+05:06.930 --> 05:13.800
+Well if we go back to our code let's write some code here and we'll create something very simple we'll
+
+05:13.800 --> 05:28.250
+have a function that will be called calculate and this function well have a sum total that does some
+
+05:28.490 --> 05:38.300
+random calculation like four plus five and it's going to return sum total it's going to return 9.
+
+05:38.460 --> 05:50.530
+So as we know this function is going to be allocated to memory so that any time we call calculate it's
+
+05:50.530 --> 05:51.940
+going to look in memory and see.
+
+05:51.940 --> 05:52.420
+Oh yeah.
+
+05:52.440 --> 05:53.270
+Calculate.
+
+05:53.350 --> 05:54.860
+I have it right here.
+
+05:54.910 --> 06:05.660
+Here run this piece of code and every time we run this code calculate we use the call stack so we can
+
+06:05.660 --> 06:13.490
+think of call stack as a region in memory which operates in first in last out mode.
+
+06:13.490 --> 06:23.020
+What does that mean well when we run calculate we simply on our call stack it's going to just add the
+
+06:23.020 --> 06:25.680
+calculate function on top of the stack.
+
+06:25.960 --> 06:34.420
+And after we finish running this function it's going to remove it now to make this a little bit clearer.
+
+06:34.570 --> 06:38.830
+Let's add another function to here and then we're actually going to run this in Google Chrome to show
+
+06:38.830 --> 06:40.230
+you what's happening.
+
+06:40.350 --> 06:49.300
+I'm going to create another function called subtract 2 man it's going to take a number as a parameter
+
+06:49.720 --> 06:56.080
+and what's going to just return num minus two just going to subtract 2.
+
+06:56.200 --> 07:07.270
+So that in our calculate function we can just return subtract to and give it the sum total.
+
+07:07.330 --> 07:11.080
+So it's going to subtract 2 from 9.
+
+07:11.140 --> 07:13.810
+So it should give us 7.
+
+07:13.860 --> 07:18.050
+Now let's see how the call stack is going to work.
+
+07:18.090 --> 07:24.810
+When we run this function I'm going to copy this and go to our Google Chrome developer console.
+
+07:24.810 --> 07:33.090
+Now I'm going to click on sources here and you might have to click on this arrow to go to snippets and
+
+07:33.120 --> 07:35.910
+I can just add a new snippet here.
+
+07:36.120 --> 07:40.840
+And as you can see here on the right hand side I have something called coal stack that will show us
+
+07:40.900 --> 07:43.340
+what's happening fight.
+
+07:43.400 --> 07:45.220
+Copy and paste this code.
+
+07:45.410 --> 07:47.990
+Let's see what the call stack does.
+
+07:47.990 --> 07:53.090
+I'm going to add a debugger statement in here which is going to pause the execution right here before
+
+07:53.090 --> 07:53.850
+I write.
+
+07:53.900 --> 08:00.350
+Calculate and let's hit run and see what happens.
+
+08:02.620 --> 08:03.500
+All right.
+
+08:03.500 --> 08:09.320
+We've paused our execution as you can see here before we've done calculate.
+
+08:09.320 --> 08:13.720
+So the JavaScript engine has gone through this piece of code.
+
+08:13.970 --> 08:14.630
+I see that.
+
+08:14.720 --> 08:15.390
+OK.
+
+08:15.440 --> 08:17.870
+We've declared our functions.
+
+08:18.110 --> 08:20.180
+The JavaScript engine knows what.
+
+08:20.180 --> 08:28.970
+Subtract 2 and calculate is and it has some place in memory that it stored this information but we haven't
+
+08:28.970 --> 08:30.620
+run anything yet.
+
+08:30.620 --> 08:36.340
+But on the coal stack I see something called Anonymous here that we didn't see before.
+
+08:36.350 --> 08:37.640
+What is that.
+
+08:37.640 --> 08:43.370
+Well that's the global execution context and it's something that we're going to talk about in the next
+
+08:43.370 --> 08:44.010
+section.
+
+08:44.660 --> 08:49.260
+But for now it's anonymous because there's no name for this file.
+
+08:49.340 --> 08:52.920
+This is the JavaScript engine saying hey I'm running this file.
+
+08:52.940 --> 08:55.070
+This is the first item on the stack.
+
+08:55.190 --> 09:05.040
+And the first action that we take is to run this file if I put on this down arrow we will see that we
+
+09:05.040 --> 09:09.370
+get to calculate that's the next step in the JavaScript engine.
+
+09:09.390 --> 09:12.330
+In fact click down again see what happens to call stack here
+
+09:15.600 --> 09:22.340
+the calculate function just got pushed on top of the stack.
+
+09:22.410 --> 09:30.270
+So our call stack now has the anonymous function which was the global execution context which was the
+
+09:30.270 --> 09:39.790
+main run of our file but now because we run a function we're inside of this function now on top of the
+
+09:39.790 --> 09:48.670
+call stack we have calculate if I go next I see that I've calculated the sum total and the next line
+
+09:48.670 --> 09:52.330
+is going to be subtract to see what happens to the call stack here.
+
+09:52.660 --> 10:01.880
+If I click Next we're now inside of subtract to another function was called and we push another item
+
+10:01.910 --> 10:05.940
+on the stack now here's the interesting part.
+
+10:06.080 --> 10:09.590
+We are not done with the calculator function are we.
+
+10:09.590 --> 10:12.180
+We're still inside of this calculate function.
+
+10:12.280 --> 10:18.390
+And because this calculate function called subtract 2 We're now inside of subtract 2.
+
+10:18.970 --> 10:23.070
+I know kind of confusing kind of like inception but that's what's happening here.
+
+10:23.090 --> 10:26.890
+The call stack tells us hey right now where are we in the code.
+
+10:27.140 --> 10:28.280
+While we're at.
+
+10:28.280 --> 10:29.570
+Subtract two.
+
+10:29.570 --> 10:36.590
+Once we're done with subtract two then we can go back to calculate and then once we're done with calculate
+
+10:36.650 --> 10:43.710
+then we can go back to the global anonymous function which is what happens in line eleven here.
+
+10:43.790 --> 10:55.610
+Once we finish our work so watch if I click Next the subtract two is now going to return num minus to
+
+10:57.240 --> 11:05.670
+and the call stack these subtract two gets popped off the call stack we're now at calculate and we have
+
+11:05.790 --> 11:13.820
+some total which is nine and we know what subtract two is that is num minus seven.
+
+11:13.830 --> 11:23.840
+So if I go next calculate gets returned and if I go next we're done with the function.
+
+11:23.840 --> 11:34.630
+Look at that our answer returned seven and that's what a call stack does the call stack stores functions
+
+11:35.020 --> 11:44.800
+and variables as your code executes at each entry State of the stack also called the stack frame which
+
+11:44.800 --> 11:52.430
+is the frame over here these three stacks allows us to know where we are in the code and it runs in
+
+11:52.430 --> 11:54.530
+a first in last out mode.
+
+11:54.530 --> 12:02.760
+That is the first one N is the last one getting popped up and we can keep adding keep adding to the
+
+12:02.760 --> 12:12.960
+stack and eventually it pops Pops Pops all the function calls until we are done with our commands and
+
+12:12.960 --> 12:21.210
+we use the memory heap to actually point to different variables and objects and data that we store so
+
+12:21.210 --> 12:28.450
+that we know where to look and by the way this is the way it works in most programming languages we
+
+12:28.450 --> 12:36.060
+have call stacks and memory heaps and these are the two locations that JavaScript remembers items.
+
+12:36.340 --> 12:44.680
+Now since every JavaScript engine has different implementations where variables are allocated is not
+
+12:45.220 --> 12:53.610
+100 percent the same all the time so a good way to think about it is this simple variables can usually
+
+12:53.610 --> 13:01.290
+be stored on the stack and we'll learn about this later on and object's complex data structures like
+
+13:01.350 --> 13:08.680
+objects arrays and functions which we're going to talk about are stored in memory heaps the cool thing
+
+13:08.680 --> 13:14.650
+about call stacks is that it allows javascript to know where it needs to be in the code whatever is
+
+13:14.650 --> 13:22.590
+on top of the call stack is where javascript is running how genius is that one last thing.
+
+13:22.890 --> 13:29.070
+If we go back to the function that we had and let's say this time around we're just going to return
+
+13:29.190 --> 13:34.790
+some total and not going to use subtract to function at all.
+
+13:34.830 --> 13:43.290
+Instead we're going to run calculate twice what do you think's gonna happen well if I run this code
+
+13:44.810 --> 13:53.900
+we have our global execution context we had next because a new function was called we added to the stack
+
+13:54.050 --> 14:04.460
+on top there we go and now we run through this code and we return 9 and the call stack calculate function
+
+14:04.490 --> 14:10.780
+gets popped off we're done with the function and then we go on to next line which is line eleven and
+
+14:10.780 --> 14:18.310
+once again we call this function as soon as we call a function it gets popped or pushed onto this stack
+
+14:19.060 --> 14:26.730
+a runs through the code and then returns and it gets removed from the stack.
+
+14:26.880 --> 14:27.420
+All right.
+
+14:27.560 --> 14:28.790
+We've gotten that part.
+
+14:28.790 --> 14:34.930
+Now let's get into a fun video where we try and break this and cause a stack overflow.
+
+14:35.030 --> 14:36.430
+I'll see in the next one by.

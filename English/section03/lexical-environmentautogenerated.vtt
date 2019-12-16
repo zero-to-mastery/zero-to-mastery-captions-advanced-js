@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.670 --> 00:01.150
+Welcome back.
+
+00:01.720 --> 00:08.060
+Let's talk about another common term that we hear a lot that is lexical environment.
+
+00:08.200 --> 00:15.100
+You may have heard different variations of this words such as lexical scope lexical analysis.
+
+00:15.130 --> 00:19.180
+But what does the word lexical really mean.
+
+00:19.180 --> 00:21.700
+Well let's ask our good friend Google.
+
+00:21.700 --> 00:28.890
+Hey Google what does lexical mean related to the words or vocabulary of a language.
+
+00:28.900 --> 00:29.230
+All right.
+
+00:29.230 --> 00:30.610
+Did you get that.
+
+00:30.610 --> 00:31.860
+No not really right.
+
+00:31.870 --> 00:35.890
+That's the most confusing definition I've ever seen.
+
+00:35.890 --> 00:36.130
+All right.
+
+00:36.250 --> 00:37.390
+So let's simplify this.
+
+00:37.390 --> 00:44.050
+What does lexical meat lexical environment is simply where you write something.
+
+00:44.170 --> 00:48.280
+Because we now know how our JavaScript engine works.
+
+00:48.280 --> 00:53.500
+That is it looks through our code and breeze through our code where we write something is important
+
+00:53.650 --> 01:00.560
+a lexical environment simply means that this is the way that I like to think about it.
+
+01:00.580 --> 01:06.940
+Remember our code previously where we have our global execution context and then we called Say my name.
+
+01:06.940 --> 01:08.230
+Then find my name.
+
+01:08.320 --> 01:10.730
+And then finally print my name.
+
+01:10.850 --> 01:16.940
+Well you can't think of lexical environment as these little universes that you created.
+
+01:16.940 --> 01:25.010
+Every time we create an execution context and if I said something like I'm doing a lexical analysis
+
+01:25.190 --> 01:31.550
+or a compiler is doing lexical analysis all it's saying is it's checking to see where the words were
+
+01:31.550 --> 01:33.570
+written and their location.
+
+01:33.620 --> 01:42.820
+That is what universe is it part of if we go back to our code what we're saying with a lexical environment
+
+01:43.290 --> 01:51.530
+it's saying right now on this piece of paper or digital paper where do we write the function.
+
+01:51.630 --> 01:53.280
+What part of the universe is it
+
+01:56.300 --> 02:01.890
+say my name was written to the global execution context.
+
+02:01.910 --> 02:03.650
+Remember that global object.
+
+02:03.650 --> 02:05.190
+Same with find my name.
+
+02:05.300 --> 02:06.940
+Same with print name.
+
+02:06.980 --> 02:17.300
+If I did window dot print name or window dot say name it's going to work because they were all written
+
+02:18.630 --> 02:19.760
+right here.
+
+02:19.980 --> 02:29.460
+If I had a function that was let's say declared inside of here that function it was written inside another
+
+02:29.460 --> 02:31.830
+world inside a function world.
+
+02:31.830 --> 02:32.890
+Right.
+
+02:32.940 --> 02:36.450
+And again lexical means at compile time.
+
+02:36.570 --> 02:38.140
+Where is the code written.
+
+02:38.340 --> 02:44.130
+And based on when the compiler or the interpreter sees our code it will know different things about
+
+02:44.130 --> 02:45.230
+that code.
+
+02:45.480 --> 02:54.300
+In this case this function is lexical key inside the Find My name function the farm find my name world
+
+02:55.680 --> 03:02.550
+because this way the compiler knowing where it was written can decide and make decisions as to where
+
+03:02.550 --> 03:11.450
+to put things and what actions to take and what function a has access to when that world and there are
+
+03:11.480 --> 03:13.880
+a lot of lexical environments right.
+
+03:14.090 --> 03:15.370
+All these different planets.
+
+03:15.830 --> 03:24.320
+Well the way I like to think about it is this in javascript every time we have a function it creates
+
+03:24.380 --> 03:27.510
+a new world for us inside of that function.
+
+03:27.800 --> 03:36.200
+We are shot up into that planet every time we add it onto the call stack and inside of that planet we
+
+03:36.200 --> 03:42.380
+can do different things have different information inside of them and as we'll see later on they can
+
+03:42.380 --> 03:45.460
+communicate with each other in different ways.
+
+03:45.560 --> 03:46.990
+So based on what we just learned.
+
+03:47.150 --> 03:55.810
+If I told you execution context tells you which lexical environment is currently running does that makes
+
+03:55.810 --> 03:57.960
+sense well.
+
+03:58.330 --> 03:59.460
+Yeah right.
+
+03:59.490 --> 04:06.420
+This execution context is going to tell me which lexical environment which planet is currently running
+
+04:07.790 --> 04:13.420
+and that's how things work in JavaScript in JavaScript are lexical scope.
+
+04:13.530 --> 04:19.260
+And don't worry scope is something we'll go later on but you can think of it as a lexical environment
+
+04:19.590 --> 04:26.570
+where code is written so lexical scope which is the available data and variables where the function
+
+04:26.570 --> 04:27.310
+was defined.
+
+04:27.320 --> 04:34.580
+That is where we write it determines are available variables not where the function is called which
+
+04:34.580 --> 04:36.150
+is dynamic scope.
+
+04:36.320 --> 04:39.670
+So it doesn't matter where we call our function.
+
+04:39.890 --> 04:49.020
+It doesn't matter that fine my name gets called inside of say my name because find my name was lexical
+
+04:49.020 --> 04:54.950
+be scoped that is its lexical environment is global.
+
+04:54.950 --> 05:01.870
+It was written out here with no indentation that is in the global scope.
+
+05:02.030 --> 05:09.050
+It will have access to certain things based on that property and this is something that we're going
+
+05:09.050 --> 05:11.310
+to get into a little bit more.
+
+05:11.470 --> 05:17.920
+But to close out this video what is the first lexical environment that we have.
+
+05:17.920 --> 05:26.250
+Well the very first lexical environment is the global lexical environment where we write our code.
+
+05:26.370 --> 05:26.950
+All right.
+
+05:26.950 --> 05:35.190
+I hope your brain doesn't hurt from these terms but we just cover to execution context and lexical environment.
+
+05:35.210 --> 05:36.750
+Let's go on to the next video.
+
+05:36.920 --> 05:38.050
+I'll see you in the next one.
+
+05:38.370 --> 05:38.600
+By.

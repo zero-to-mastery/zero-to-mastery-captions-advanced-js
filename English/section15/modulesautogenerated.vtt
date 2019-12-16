@@ -1,0 +1,424 @@
+WEBVTT
+
+00:00.880 --> 00:08.200
+When I first started learning javascript modules and that topic was the most confusing thing ever for
+
+00:08.200 --> 00:08.670
+me.
+
+00:08.890 --> 00:12.950
+I had a really tough time getting a grasp of the concept.
+
+00:12.970 --> 00:20.640
+It took me a year to actually get it but I've created a mental image in my head to understand it better.
+
+00:21.770 --> 00:27.590
+And as we do in this course we first start with the problem then go to the solution that we have now
+
+00:27.590 --> 00:31.120
+to see where we where and where we are now.
+
+00:31.130 --> 00:37.000
+This is the mental model that I've created and I call it climbing the mountain of modules.
+
+00:37.100 --> 00:43.520
+Let me explain when we first started writing javascript and creating Web sites with JavaScript Well
+
+00:45.070 --> 00:55.110
+we had an ACM all file and the very first time people were using JavaScript you used a script tag and
+
+00:55.110 --> 01:01.270
+what we called an inline script and inline script is exactly that.
+
+01:01.270 --> 01:07.680
+We just inline all of our javascript within the Asian email file.
+
+01:07.750 --> 01:11.750
+Now there's problems that I see with this.
+
+01:11.890 --> 01:18.870
+Imagine this getting massive a massive JavaScript file hundreds and thousands of lines of code.
+
+01:19.120 --> 01:30.040
+One is the lack of code usability and you'll hear this term a lot if we need to add a another page maybe
+
+01:30.040 --> 01:32.320
+an about iteration up page.
+
+01:32.360 --> 01:38.200
+Well we have to copy this code and put it into the other Asian email file.
+
+01:39.150 --> 01:50.710
+And the second was the pollution of the global namespace and that is once I use up a as a variable in
+
+01:50.710 --> 01:53.300
+this case in the window object.
+
+01:53.320 --> 02:01.840
+Well I can never use a again and maybe hundreds of lines down by mistake I assign a variable a and I
+
+02:01.840 --> 02:03.320
+raise my a function.
+
+02:03.550 --> 02:07.140
+Well that's a huge problem and that's a big problem in general.
+
+02:07.150 --> 02:12.820
+You want to make sure that you don't pollute the global namespace that is the window object with all
+
+02:12.820 --> 02:18.410
+these names because then you have collisions you have different team members working on different pieces
+
+02:18.410 --> 02:22.160
+of the code and all of a sudden we both come up with the same name.
+
+02:22.600 --> 02:29.650
+It's a big problem the next attempt was script X and this is something we've been familiar with.
+
+02:29.940 --> 02:41.880
+Instead of having in line we had script X and where we played around with bootstrap and J query.
+
+02:41.940 --> 02:43.380
+This is what we did.
+
+02:43.500 --> 02:52.550
+We had our J query file load first then our JavaScript file load a second and as you can see we can
+
+02:52.550 --> 03:00.920
+have one script file then the second one then the third one then the fourth one this way you have everything
+
+03:00.950 --> 03:05.590
+outside of the issue email solves the problem write well.
+
+03:05.640 --> 03:12.580
+The problem with script tags as far as I can see are three things if we need to add another page like
+
+03:12.580 --> 03:20.310
+an about page well we still have to copy and paste this script X and again we don't really want to do
+
+03:20.310 --> 03:20.680
+that.
+
+03:21.580 --> 03:28.600
+The second one is the lack of dependency resolution and that is you're responsible to make sure that
+
+03:29.410 --> 03:32.500
+the scripts are added in proper order.
+
+03:32.500 --> 03:38.950
+For example if this script accesses a function from the number for Doug James firewall it's going to
+
+03:38.950 --> 03:42.930
+fail because the number for J.S. file hasn't loaded yet.
+
+03:43.360 --> 03:47.900
+So that's lack of dependency resolution and finally a third.
+
+03:47.910 --> 03:51.030
+This doesn't really solve the global namespace problem right.
+
+03:51.030 --> 03:57.630
+It's polluting the global namespace all the functions and variables that are declared in each of these
+
+03:57.630 --> 04:00.270
+files will be on the window object.
+
+04:01.030 --> 04:04.400
+OK so what about the third attempt.
+
+04:04.560 --> 04:10.620
+The IFC that stands for immediately invoked function execution.
+
+04:10.740 --> 04:14.790
+I know that's a mouthful but it looks something like this.
+
+04:16.470 --> 04:24.230
+And if he is it actually wraps a function in brackets so that JavaScript breathes this and says oh I
+
+04:24.230 --> 04:32.970
+have to evaluate this and execute this and then these brackets at the end says run the function.
+
+04:32.970 --> 04:41.650
+So after you evaluate this run this function and it was a confusing way to make sure of one thing and
+
+04:41.650 --> 04:47.130
+that is by using this method you don't pollute the global namespace.
+
+04:47.140 --> 04:54.970
+Now if in the first file you have variable my app they'll be on the window object but everything else
+
+04:55.300 --> 04:59.080
+that's inside a function as we know creates a new scope.
+
+04:59.080 --> 05:02.790
+So all the files because they're wrapped in this.
+
+05:02.830 --> 05:12.640
+If he had their own scope and if you wanted to add to my app you just added everything as a property
+
+05:12.640 --> 05:21.280
+or a method so awesome that reduced our global namespace to just one.
+
+05:21.280 --> 05:27.230
+I mean it's not zero but the one that's that's a lot better right but there is still one issue with
+
+05:27.230 --> 05:31.730
+this the order of the files are still important.
+
+05:32.070 --> 05:39.440
+And I've worked on apps before where we're using so many scripts that this was close to 100 skip Dex.
+
+05:39.450 --> 05:43.830
+And every time you need added a file you had to make sure that you added in the right place because
+
+05:44.400 --> 05:48.590
+that file might be dependent on another file loading before it.
+
+05:48.600 --> 05:51.950
+So as we know that's lack of dependency resolution.
+
+05:52.140 --> 06:02.460
+And frankly this doesn't look very pretty so then we had browser certify this nice looking logo.
+
+06:02.530 --> 06:04.920
+Now what did browser fi do.
+
+06:04.960 --> 06:08.640
+It actually used something called common G Yes.
+
+06:08.650 --> 06:16.620
+So I'm going to comment that if you go out and show you what browser if I did use common G yes which
+
+06:16.800 --> 06:23.580
+allowed us to use a certain syntax and it looks something like this if I wanted to have on my first
+
+06:23.580 --> 06:34.950
+JavaScript file a function ad I can say module dot exports and now in the second JavaScript file I could
+
+06:35.370 --> 06:48.580
+require the ad must fix the strings here and now I can add add function into my javascript to file now
+
+06:49.480 --> 06:57.400
+browser if I use this common syntax but it's actually a module bundler.
+
+06:57.630 --> 06:58.410
+And what does that mean.
+
+06:58.410 --> 07:03.570
+Well it runs before you put the Web site online.
+
+07:03.570 --> 07:12.660
+What that means is it read to all the JavaScript files rescue all the syntax and it bundles everything
+
+07:12.660 --> 07:22.200
+into a single file once you run all the files through browser Fi and again is just a simple tool that
+
+07:22.200 --> 07:31.150
+allowed us to just dump all our script files all of these into browser Fi and as long as we use the
+
+07:31.150 --> 07:43.910
+common syntax like this it will know what to do and automatically create one file usually be called
+
+07:43.910 --> 07:51.530
+something like bundled that J.S. so all our scripts will just be on one massive file and yeah that might
+
+07:51.530 --> 07:53.710
+be bad when we're actually developing.
+
+07:53.720 --> 08:01.010
+But when it's out on the Internet in real world we don't really care how it looks because we're just
+
+08:01.010 --> 08:07.300
+doing this to send it somewhere to a server so that the web app can be viewed by users.
+
+08:07.310 --> 08:10.740
+That's not what it's actually going to look when developers are working on it.
+
+08:10.820 --> 08:14.000
+When developers are working on it we just have our own separate files.
+
+08:14.000 --> 08:22.070
+We just run it through browser fi right before we deploy that is put it out to the public.
+
+08:22.070 --> 08:22.270
+All right.
+
+08:22.280 --> 08:28.130
+So that was pretty cool and we're getting closer to the top of the mountain here.
+
+08:29.300 --> 08:35.780
+Now all of these problems here it was all because javascript didn't have what we call a module system
+
+08:36.290 --> 08:44.140
+built into the language and think of modules as building blocks as different pieces of code.
+
+08:44.190 --> 08:47.070
+So instead of having one giant thing you have modules.
+
+08:47.070 --> 08:55.780
+Each piece is really really good at doing one thing and because javascript didn't have this module system.
+
+08:56.140 --> 09:01.240
+It's the reason we have so many different ways of importing and exporting modules and there's actually
+
+09:01.600 --> 09:09.340
+quite a few more that I didn't show because well frankly it'll just be too much but things have recently
+
+09:09.340 --> 09:12.940
+changed with the introduction of E6.
+
+09:13.360 --> 09:25.800
+We can now do something a lot nicer and it looks something like this with iOS 6.
+
+09:25.860 --> 09:33.260
+We have two new things export and import for example in JavaScript one file.
+
+09:33.260 --> 09:40.530
+I can have a function and you can see them using air functions here an add function and I simply export
+
+09:40.530 --> 09:49.750
+it or I can even do export default in the second file if I wanted to use the add function.
+
+09:49.750 --> 09:54.760
+All I say is import and then we see here the disk structuring.
+
+09:54.760 --> 10:05.750
+You might remember this from the iOS five iOS 6 video and we're simply just grabbing had or if the export
+
+10:05.750 --> 10:13.430
+was default which means with this you can export multiple functions in the same file versus here you
+
+10:13.550 --> 10:17.640
+can only export one thing so the file only exports one thing.
+
+10:17.660 --> 10:23.350
+Well in that case we don't need the lower brackets we can just do add from that file.
+
+10:23.480 --> 10:26.280
+Very cool so that's nice.
+
+10:26.280 --> 10:27.800
+That reads pretty nicely.
+
+10:27.800 --> 10:33.590
+We just put the imports at the top so each file we know exactly what each file needs and everything
+
+10:33.590 --> 10:38.360
+is clean everything's works and we don't have to worry about any of this stuff right.
+
+10:38.390 --> 10:41.170
+Well yeah kind of.
+
+10:41.360 --> 10:48.380
+As you know by now and I feel like a broken record browsers aren't supporting everything yet because
+
+10:48.380 --> 10:49.680
+it's a new feature.
+
+10:49.730 --> 10:52.600
+Again we're still waiting on browsers to implement them.
+
+10:52.880 --> 10:55.930
+But this is what this blue thing is for.
+
+10:56.000 --> 10:58.460
+It's called the wetback and wetback.
+
+10:58.460 --> 11:06.800
+Just like browser certify is a module bundler that is a bundles modules which is bundles JavaScript
+
+11:06.800 --> 11:17.030
+files and just like browser fi it traverses the dependency tree which is these export and import tags
+
+11:17.810 --> 11:25.850
+into a single file or it can even have multiple files based on your needs and with back we can actually
+
+11:26.090 --> 11:30.440
+use E6 in all browsers.
+
+11:30.470 --> 11:32.010
+Isn't that awesome.
+
+11:32.030 --> 11:37.670
+This is where we are now we've climbed the mountain of modules and we have a really really good system
+
+11:37.670 --> 11:39.170
+right now in JavaScript.
+
+11:39.170 --> 11:42.400
+It was really hard getting there but we're in a good place right now.
+
+11:42.410 --> 11:44.630
+So this is what we're gonna be using.
+
+11:44.630 --> 11:46.990
+And this is what the industry is using.
+
+11:47.060 --> 11:48.450
+Get used to this syntax.
+
+11:48.650 --> 11:52.060
+I'll leave a link at the end of this video so you can check out more.
+
+11:52.070 --> 11:58.040
+But when we get to react we're gonna be using this a lot and it's gonna be a ton of fun it's gonna make
+
+11:58.040 --> 12:00.310
+things really nice and clean for us.
+
+12:01.970 --> 12:03.550
+One thing I wanted to show you.
+
+12:03.710 --> 12:07.220
+You might think hey this wetback thing seems like it's kind of hard.
+
+12:07.220 --> 12:08.570
+Like how does it do it.
+
+12:08.570 --> 12:11.960
+It's very simple it just has a config file just like this.
+
+12:11.960 --> 12:19.160
+As you can see we just have an output that is bundle that J us and we don't need to worry too much about
+
+12:19.160 --> 12:19.340
+it.
+
+12:19.340 --> 12:26.780
+Usually when somebody is starting a project it's one person on the team that configured this file and
+
+12:26.780 --> 12:28.520
+everything is done the rest.
+
+12:28.520 --> 12:32.270
+You just build on top of it's very very simple to get started.
+
+12:32.300 --> 12:39.410
+I don't think it's super important for us to tackle right now but again a very very useful tool and
+
+12:39.410 --> 12:48.230
+it creates a nice bundle ust file so now all our AC Mills look nice and simple and you know what.
+
+12:48.420 --> 12:49.800
+That's it.
+
+12:49.860 --> 12:56.460
+We've covered some of the most important topics in JavaScript and some really really hard topics and
+
+12:56.550 --> 12:59.870
+I know your brain is hurting from all this information.
+
+12:59.880 --> 13:01.280
+But you've done it.
+
+13:01.320 --> 13:08.280
+We've finished the section and previous sections and now we can actually build amazing apps with the
+
+13:08.280 --> 13:09.140
+tools that we have.
+
+13:10.820 --> 13:16.840
+Can't wait to show you how all these pieces come together to build something amazing.
+
+13:17.000 --> 13:19.030
+I'll see in the next video by.

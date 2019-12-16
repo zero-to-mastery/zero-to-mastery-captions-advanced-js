@@ -1,0 +1,316 @@
+WEBVTT
+
+00:01.110 --> 00:02.260
+Welcome back.
+
+00:02.280 --> 00:08.780
+Let's try a few more things to test out our assumptions let's say I create.
+
+00:08.780 --> 00:15.350
+Once again another object and this object has a name
+
+00:18.320 --> 00:19.910
+Sally.
+
+00:20.070 --> 00:27.460
+Now if I do object DOD has own property and I do Sally.
+
+00:27.460 --> 00:36.640
+Or name in here I get true because we have it as our own property.
+
+00:36.800 --> 00:38.060
+That makes sense.
+
+00:38.060 --> 00:48.870
+But if I do something like has own property well I get false because object itself doesn't have this
+
+00:48.930 --> 00:50.040
+as its own property.
+
+00:50.040 --> 01:00.380
+It has this as a property up the prototype chain what about a function in this gets interesting because
+
+01:00.530 --> 01:04.680
+let's say have a function called a and it's an empty function.
+
+01:04.910 --> 01:14.390
+If I do a DOT has own property and I say Well remember what I said.
+
+01:14.410 --> 01:17.960
+All functions have call apply and bind.
+
+01:18.190 --> 01:19.420
+Right.
+
+01:19.540 --> 01:25.910
+If I do let's say call I get false.
+
+01:26.430 --> 01:29.760
+What if I do bind no false for that.
+
+01:29.790 --> 01:32.810
+What about let's say apply.
+
+01:32.940 --> 01:34.710
+No not for that.
+
+01:34.710 --> 01:36.180
+What about name.
+
+01:36.240 --> 01:42.790
+Remember how I said a name is an optional field for a function well.
+
+01:42.840 --> 01:43.670
+Yep.
+
+01:43.740 --> 01:49.270
+Remember functions are objects and a has a name right.
+
+01:49.410 --> 01:53.040
+A dot name is.
+
+01:53.040 --> 01:56.780
+Well name the name of the function is a itself.
+
+01:57.180 --> 02:07.910
+But our call in apply are not as part of the property you see this diagram that I showed you initially
+
+02:08.570 --> 02:12.400
+where a function is a special type of object.
+
+02:12.410 --> 02:17.690
+It's a callable object where we have code that can be invoked.
+
+02:17.750 --> 02:25.750
+We have an optional name field as we just saw and we also have properties that we can add to the function
+
+02:25.760 --> 02:34.520
+because while it's an object and then I told you that we have call apply and bind as properties technically
+
+02:34.820 --> 02:44.830
+this wasn't 100 percent correct because these properties aren't exactly on the multiply by five function
+
+02:45.570 --> 02:46.340
+instead.
+
+02:46.350 --> 02:48.360
+Where do you think it is.
+
+02:48.370 --> 02:54.280
+Well it's up here it's up the prototype chain.
+
+02:54.640 --> 03:02.890
+And don't worry I'll explain this diagram a little bit better but let's try this with a or let's change
+
+03:02.890 --> 03:04.450
+this now to multiply by five.
+
+03:04.540 --> 03:10.140
+So I'm going to create a function multiply by five.
+
+03:10.170 --> 03:23.000
+Now that takes a number and this number will well return Num Times 5 so multiply by 5.
+
+03:23.060 --> 03:33.770
+If I go up the prototype chain we'll have our function our base function that all functions get created
+
+03:33.770 --> 03:34.550
+from.
+
+03:34.550 --> 03:43.840
+Remember we've created a function from this base function over here and now this base function I can
+
+03:43.870 --> 03:49.360
+capture it by right clicking and saying store as global variable as temp 1.
+
+03:50.080 --> 04:00.880
+If I do temp one dot properties I see all these properties that comes with this function I have apply
+
+04:01.030 --> 04:09.910
+bind call I have length I'll have name because remember the name is well it's an empty name it's the
+
+04:09.910 --> 04:11.280
+base function with no name.
+
+04:11.650 --> 04:18.400
+But I have all these properties and methods on it and up the prototype chain you can see object over
+
+04:18.400 --> 04:18.850
+here.
+
+04:18.850 --> 04:25.450
+I also have has on property as prototype of property is innumerable just like we have it up there in
+
+04:25.450 --> 04:26.350
+our diagram.
+
+04:26.350 --> 04:29.080
+So that's actually what's happening here.
+
+04:29.900 --> 04:40.610
+When we do multiplied by five we have our proto property that links up to the function and this function
+
+04:40.610 --> 04:46.040
+over here has the call apply and bind.
+
+04:46.100 --> 04:53.120
+Now you may notice here there's something called prototype here that the underscore underscore Prado
+
+04:53.420 --> 05:03.360
+links to and once again underscore underscore proto links to prototype and then this proto links to
+
+05:03.390 --> 05:09.910
+no this is the base object and eventually we link to know we point to no.
+
+05:10.130 --> 05:12.200
+You see a pattern here right.
+
+05:12.230 --> 05:21.050
+We see a pattern like this where Kroto links to prototype I know very very confusing.
+
+05:21.050 --> 05:29.570
+So let's break this down multiplied by five which is a callable object that has a code that is invoke
+
+05:29.570 --> 05:32.770
+Bill it has name that's optional.
+
+05:32.780 --> 05:42.100
+It can have some properties it also has this protocol as well as a prototype property and that profile
+
+05:42.140 --> 05:51.620
+links up to this function which once again is a callable object a special type of object that has its
+
+05:51.620 --> 05:52.760
+own code.
+
+05:52.970 --> 06:00.130
+It has properties but it also has this property called prototype that the promo links to.
+
+06:00.320 --> 06:07.320
+And that's where call apply and bind live and as a matter of fact.
+
+06:07.560 --> 06:14.610
+This yellow arrow here underscore underscore protocol actually lives inside of this object.
+
+06:14.610 --> 06:18.660
+I just did and included here because while I ran out of space.
+
+06:18.660 --> 06:21.530
+So does your brain hurt yet.
+
+06:22.560 --> 06:24.600
+Let's test out our assumption.
+
+06:24.600 --> 06:29.880
+Let's go back to this diagram and test what I just told you.
+
+06:29.970 --> 06:39.280
+Multiply by five dot underscore underscore Kroto should point to that base function.
+
+06:39.310 --> 06:40.920
+Let's clear this first.
+
+06:40.950 --> 06:42.720
+So let's try that again.
+
+06:42.870 --> 06:45.590
+We'll do multiplied by five.
+
+06:45.780 --> 06:51.560
+Dot underscore underscore proton which is a pointer.
+
+06:51.600 --> 06:56.100
+It points to the function dot prototype.
+
+06:56.670 --> 06:59.220
+So I get this native function.
+
+06:59.220 --> 07:07.020
+So the native function is function dot prototype.
+
+07:07.020 --> 07:17.050
+This is the same because multiplied by PHI underscore underscore proton points to the prototype function.
+
+07:17.100 --> 07:22.960
+Dot prototype still confused let's try this.
+
+07:22.960 --> 07:27.720
+What if I do object dot prototype.
+
+07:27.760 --> 07:34.330
+Well I get this base object that we kept seeing everywhere.
+
+07:34.330 --> 07:37.390
+It's the prototype property of the object.
+
+07:37.480 --> 07:45.720
+If we go back to the diagram we see object that has prototype with has own property and other functions.
+
+07:45.730 --> 07:53.560
+And that prototype also includes Kroto as one of its properties that points to no let's test that object
+
+07:53.680 --> 08:01.840
+dot prototype that has a property underscore underscore Kroto that points to no again.
+
+08:02.030 --> 08:06.180
+I don't think javascript did a great job naming these things because it is confusing.
+
+08:06.260 --> 08:17.490
+But remember this diagram Prato is simply a reference or a pointer to up the chain prototype object.
+
+08:17.570 --> 08:22.060
+Let's test this out with well with an array.
+
+08:22.160 --> 08:33.320
+If I create an array let's say array that is an empty array and this array Dot has own property.
+
+08:33.320 --> 08:40.230
+Well does this array have its own property map nope it doesn't remember we're being efficient with our
+
+08:40.230 --> 08:47.490
+memory map function should live only in one location in memory up the prototype chain with the base
+
+08:47.490 --> 08:50.130
+array so instead.
+
+08:50.220 --> 08:54.020
+Now over here let's do array will be the same thing in here.
+
+08:54.050 --> 08:56.910
+If I do underscore underscore proton
+
+08:59.770 --> 09:06.040
+which is the property does that have on property map.
+
+09:06.040 --> 09:16.710
+And if we do array dot prototype Well we get the base array and if I do array dot underscore underscore
+
+09:16.800 --> 09:29.910
+Kroto we get the base array so array dot Proton is pointing to the farther array dot prototype to review
+
+09:30.570 --> 09:41.080
+arrays and functions are objects in javascript multiplied by five is a special type of object that is
+
+09:41.080 --> 09:47.800
+a callable object that instead of having called in apply and bind directly as its properties use this
+
+09:47.800 --> 09:56.500
+prototype all inheritance to actually inherit from the base function and the key here is that proton
+
+09:57.250 --> 10:00.920
+points to the prototype up the chain.
+
+10:01.170 --> 10:07.490
+And keep in mind that this Kroto property actually lives on the prototype.
+
+10:07.530 --> 10:13.850
+I know I know very extremely confusing but this way we're able to be efficient with our memory.
+
+10:14.010 --> 10:23.670
+We're able to use the map function or the for each functions on an array just write them once instead
+
+10:23.670 --> 10:29.790
+of just copying those same methods and properties all over the place.
+
+10:29.880 --> 10:34.970
+All right let's take a break and explore some more in the next video I'll see in the next one.

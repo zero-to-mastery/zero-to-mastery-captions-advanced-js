@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00.820 --> 00:01.820
+Welcome back.
+
+00:01.870 --> 00:12.960
+It's time to do another fun array interview question an interviewer asks you given to a race that are
+
+00:12.960 --> 00:14.380
+sorted.
+
+00:14.540 --> 00:21.150
+Can you merge these two arrays into one big one that's still sorted.
+
+00:21.620 --> 00:30.720
+So if I have a function called merge sorted arrays and I give it two parameters with two sorted arrays.
+
+00:31.010 --> 00:39.890
+Can you make it so that it returns 0 3 4 4 6 30 31 as you can see completely sorted.
+
+00:39.970 --> 00:43.820
+Let's see we can come up with and I'll see you in the solution video by.

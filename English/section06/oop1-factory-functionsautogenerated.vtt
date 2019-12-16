@@ -1,0 +1,226 @@
+WEBVTT
+
+00:00.990 --> 00:02.060
+Welcome back.
+
+00:02.070 --> 00:05.710
+Let's finally get into object oriented programming.
+
+00:05.950 --> 00:13.860
+And our goal throughout the next couple of videos is to show you an example of how we can go from procedural
+
+00:13.860 --> 00:17.490
+code from code that we repeat ourselves in.
+
+00:17.520 --> 00:27.150
+That isn't really well organized to code that goes all the way to Object Oriented Programming we'll
+
+00:27.150 --> 00:28.820
+start from the very basics.
+
+00:28.890 --> 00:34.620
+And each time improve little by little until we get to the end.
+
+00:34.630 --> 00:37.560
+Now we need a good example for this.
+
+00:37.570 --> 00:39.870
+So what should we do.
+
+00:39.900 --> 00:40.700
+I have an idea.
+
+00:40.770 --> 00:48.210
+How about we create a game or start to create a game where let's say as a fairy tale game with all these
+
+00:48.210 --> 00:55.340
+characters that interact play with each other maybe they fight one another or communicate with one another.
+
+00:55.380 --> 01:05.130
+So using this let's create a program that has object oriented principles in mind to organize our code
+
+01:06.260 --> 01:07.990
+how should we start.
+
+01:07.990 --> 01:11.880
+Well we definitely have else over here in this game.
+
+01:11.890 --> 01:18.150
+So I think the best place for us to start is to create while else.
+
+01:18.160 --> 01:27.040
+Let's go ahead and do that the very first naive approach is to well create an elf object.
+
+01:27.040 --> 01:27.920
+Right.
+
+01:28.060 --> 01:35.370
+And our alpha object will keep everything basic for now we'll definitely have a name for our elf.
+
+01:35.440 --> 01:43.000
+Let's create an elf called oral and this elf will have a weapon that would do.
+
+01:43.000 --> 01:44.380
+Else usually have.
+
+01:44.380 --> 01:47.590
+Let's go with Bo as the weapon.
+
+01:47.940 --> 01:55.890
+And then we can attack with this weapon using while just return.
+
+01:56.220 --> 02:12.220
+Attack with and then we can just do elf dot weapon so that now if I do elf dot name and I run this I
+
+02:12.220 --> 02:12.520
+get.
+
+02:12.520 --> 02:27.060
+Or Well if I do elf dot attack and I run this attack with bow awesome there's our elf but in this game
+
+02:27.090 --> 02:30.090
+we're not going to have just one elf right.
+
+02:30.130 --> 02:36.750
+We're going to have multiple else with different names different weapons maybe even different methods.
+
+02:36.750 --> 02:44.610
+So what should we do if we want to add another elf while we copy and paste this code and create elf
+
+02:44.850 --> 02:48.190
+to maybe the name is Sally.
+
+02:48.450 --> 02:57.920
+Weapon is bow and once again if I want to create Sally I do elf to attack and there you go.
+
+02:57.930 --> 03:01.960
+We have Sally attacking with a bow as well.
+
+03:01.980 --> 03:04.710
+Now what's the benefit to what we've just done.
+
+03:05.870 --> 03:12.470
+And at least moved us towards object oriented programming what we have something called Encapsulation
+
+03:12.470 --> 03:22.990
+here we've grouped functionality together we have state that is data within the object and functions
+
+03:23.110 --> 03:32.240
+or methods acting on that state so these methods can well interact with the state such as read it they
+
+03:32.240 --> 03:38.520
+can even modify it we can have a method called Change weapon that changes weapon from let's say bow
+
+03:38.520 --> 03:46.880
+to sort that's our first step in object oriented programming is we've encapsulated functionality that
+
+03:46.880 --> 03:58.330
+can be contained to model real world such as else into these containers that's good but what's the problem
+
+03:58.330 --> 04:05.630
+with this well the clear problem is that when we need more else which in this game we're gonna have
+
+04:05.630 --> 04:15.400
+a ton of else shoot we have to copy and paste the same code over and over even though all the elves
+
+04:15.400 --> 04:23.880
+have this same attack method we have to copy and paste copying base copy paste and most likely we have
+
+04:23.910 --> 04:30.510
+a way more code than this that else can do way more properties way more methods and we're not keeping
+
+04:30.510 --> 04:32.070
+our code very dry right.
+
+04:32.100 --> 04:33.960
+We're just constantly repeating ourself.
+
+04:34.590 --> 04:37.150
+So let's move on to the next level.
+
+04:37.470 --> 04:50.200
+That is two step two of object oriented programming let's go with factory functions and factory functions
+
+04:50.500 --> 04:54.700
+as the name suggests are functions that act like factories.
+
+04:54.700 --> 04:58.240
+They create objects for us so let's do that.
+
+04:58.270 --> 05:06.340
+I'm going to create a function create wealth so let's programmatically create else and this create Elf
+
+05:06.400 --> 05:09.620
+is going to have name and weapon.
+
+05:10.680 --> 05:15.160
+And we're just going to return a new ELF every time we run this function.
+
+05:15.240 --> 05:23.450
+So I'm just going to return an object and inside this object we have name we have weapon and we have
+
+05:23.450 --> 05:31.490
+attack and once again the attack is going to return for US attack with the weapon that we have.
+
+05:32.660 --> 05:43.390
+So now here if let's say I do concept Peter and I create Elf and this elves name is while Peter and
+
+05:43.450 --> 05:50.530
+the weapon will be let's say stones a very primitive weapon.
+
+05:50.620 --> 06:00.090
+If I click Run and well let's run Peter dot attack if I click Run I get attacked with stones.
+
+06:00.090 --> 06:08.160
+All right so that worked we've created a factory function that is a function that creates objects for
+
+06:08.160 --> 06:15.440
+us and we can even simplify this a little bit using yes six syntax where if property and value are the
+
+06:15.440 --> 06:26.910
+same we can just keep it like this inside of an object so that this still runs and the beauty with factory
+
+06:26.910 --> 06:28.210
+functions is that.
+
+06:28.210 --> 06:40.190
+Now if I want to create another elf all I do is create let's say Sam and Sam Sam's weapon is fire if
+
+06:40.270 --> 06:51.240
+I do Sam attack I have attack with fire from Sam and instead of me copy and pasting code I now have
+
+06:51.240 --> 07:00.410
+this function that just creates else for us we've moved up the step towards object oriented programming
+
+07:00.950 --> 07:06.840
+we avoided repetitive code but there's still a problem here.
+
+07:06.950 --> 07:11.690
+Factory functions are great but Keeney noticed something that we can improve here.
+
+07:13.240 --> 07:22.090
+What if we had a thousand tiles and those a thousand else they require space in our memory rate to store
+
+07:22.090 --> 07:28.390
+the same data and things like name and weapon well they're gonna be different.
+
+07:28.430 --> 07:32.440
+So we need to store that data in memory for each shelf.
+
+07:32.720 --> 07:41.880
+But methods such as attack that are pretty generic and they're the same thing that is going to be copied
+
+07:42.060 --> 07:50.730
+onto memory in a different location for each one of these else so if we had a thousand tiles that's
+
+07:51.030 --> 07:58.360
+a thousand attack functions in different places a memory for each elf assault.
+
+07:58.430 --> 08:06.330
+The best is it luckily for us JavaScript has this interesting thing right we learned about it in the
+
+08:06.330 --> 08:12.120
+last section when we talked about prototype all inheritance we can use that to our advantage to maybe
+
+08:12.120 --> 08:20.030
+improve this so that we share functionality across different objects let's get to that in the next video.

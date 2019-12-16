@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.900 --> 00:01.710
+All right.
+
+00:01.710 --> 00:03.300
+Let's solve this brain buster.
+
+00:03.420 --> 00:16.110
+Now the easiest way to actually solve this is to change the VAR keyword to let because if I run this
+
+00:16.590 --> 00:17.130
+and we wait
+
+00:19.890 --> 00:21.180
+look at that.
+
+00:21.180 --> 00:28.590
+I have zero one two three and I guess we're not logging the actual values here we're logging the indexes.
+
+00:28.590 --> 00:38.160
+So if we want to log the actual values we can just go like this click Run we wait three seconds and
+
+00:38.310 --> 00:45.090
+we should have everything set and hopefully you know why that works.
+
+00:45.310 --> 00:55.930
+Let allows us to use block scoping so that this block which is these curly brackets over here creates
+
+00:55.960 --> 01:09.790
+a scope for each eye so that I is scoped within here because initially when we had variable I over here
+
+01:10.180 --> 01:12.950
+it was part of the global scope.
+
+01:13.030 --> 01:21.790
+Right because we didn't really have a function surrounding it so that this set timeout when it finally
+
+01:21.790 --> 01:22.660
+returned.
+
+01:22.810 --> 01:27.780
+By that point the for loop has already gone through everything hand has turned.
+
+01:27.910 --> 01:31.410
+I do for all right.
+
+01:31.410 --> 01:34.840
+But what's another way that we can solve this.
+
+01:34.980 --> 01:44.530
+What if we couldn't use the left keyword we can use closures here to actually do something interesting.
+
+01:44.800 --> 01:55.700
+We can actually wrap this in a function so I can create a function and immediately invoked function.
+
+01:56.130 --> 02:01.420
+That wraps this entire set time.
+
+02:02.040 --> 02:17.670
+And this function is going to wrap our little sad time of so now in here we can reference I and as long
+
+02:17.670 --> 02:27.990
+as we reference I it won't be removed from the local scope or at least the reference to what I is when
+
+02:27.990 --> 02:35.640
+the loop comes through here and I can do that by passing this immediately invoked function a parameter
+
+02:35.700 --> 02:44.390
+of I that is we call this function and this function gets parameter Ei which every time it loops over
+
+02:44.400 --> 02:50.580
+it'll be zero one two three four and we receive that parameter right in here.
+
+02:50.580 --> 03:01.630
+And just to keep the names separate we'll say closure I and now we can access closure I like this.
+
+03:01.720 --> 03:02.680
+Let's see if that works.
+
+03:02.750 --> 03:11.040
+If I run this I wait three seconds and look at that it's working.
+
+03:11.340 --> 03:12.380
+I know that's a tough one.
+
+03:12.390 --> 03:21.480
+You might have to look at this a little bit but all I did was I created a function that gave me access
+
+03:21.990 --> 03:34.110
+to the I variable and this I variable I kept in my closure by passing it as a parameter receiving it
+
+03:34.890 --> 03:42.240
+and using it inside of this callback function for it.
+
+03:42.300 --> 03:43.620
+I think that was a big one.
+
+03:43.620 --> 03:47.250
+So let's take a break and I'll see you in the next video by.

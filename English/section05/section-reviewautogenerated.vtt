@@ -1,0 +1,115 @@
+WEBVTT
+
+00:01.090 --> 00:02.280
+Welcome back.
+
+00:02.290 --> 00:10.630
+We finally finished our two pillars of JavaScript concepts that not all programming languages have that
+
+00:10.630 --> 00:13.320
+are quite complex but are very powerful.
+
+00:13.330 --> 00:21.810
+If you understand them we now have the tools on top of our foundations with these two pillars to really
+
+00:21.990 --> 00:26.970
+push our abilities and start talking about programming paradigms.
+
+00:27.060 --> 00:36.780
+These paradigms allow us to create programs that are not just simple basic ones complex heavy applications
+
+00:36.840 --> 00:42.840
+using good practices enclosures and prototypes are going to be something we're going to be talking about
+
+00:43.020 --> 00:44.630
+over and over and over.
+
+00:44.670 --> 00:49.300
+When we talk about functional programming and object oriented programming.
+
+00:49.590 --> 00:56.000
+Two very important paradigms when it comes to becoming a great programmer.
+
+00:56.160 --> 01:02.340
+Now to finish off this section I wanted to talk to you about scheme and Java.
+
+01:02.340 --> 01:10.530
+You see originally when Brendan Eich in 1995 released javascript he was inspired by these two programming
+
+01:10.620 --> 01:20.390
+languages scheme was a programming language that was created at M.I.T. in the 70s.
+
+01:20.390 --> 01:26.090
+It was a very unique programming language and I believe the first language to have closures in the program
+
+01:27.320 --> 01:34.640
+and then Java at the time that JavaScript was created was the trendiest language everybody was using
+
+01:34.640 --> 01:35.120
+it.
+
+01:35.180 --> 01:40.780
+Everybody was talking about it companies wanted to hire Java developers now.
+
+01:41.030 --> 01:46.300
+Brendan Mike wanted to create a programming language while he was working at Netscape.
+
+01:46.340 --> 01:55.670
+That was very easy to use on the web but also used the popularity of Java which is why javascript name
+
+01:56.090 --> 01:57.480
+kind of derived from.
+
+01:57.530 --> 02:02.510
+But there was an issue here scheme in Java are quite different.
+
+02:02.570 --> 02:10.700
+Brendan I really liked the functional side of scheme this idea of closures and functions as first class
+
+02:10.790 --> 02:18.950
+citizens but at the same time he also had pressure from the Java community where classes and classical
+
+02:18.950 --> 02:22.950
+inheritance was really really important.
+
+02:23.090 --> 02:30.680
+This idea of object oriented programming where objects where the key to building beautiful programs
+
+02:30.950 --> 02:37.040
+versus scheme where functions where the key to building beautiful programs.
+
+02:37.280 --> 02:44.480
+Now I'm simplifying things a little bit here but as we move into the next part of the course I want
+
+02:44.480 --> 02:54.260
+you to realize that based on the roots of JavaScript which were inspired by scheme and Java we have
+
+02:54.440 --> 03:03.590
+this multi paradigm language unlike a lot of languages you can mix and match these paradigms and you
+
+03:03.590 --> 03:09.800
+can't really say that JavaScript is an object oriented programming language or a functional language
+
+03:10.610 --> 03:18.440
+you can do whatever you want which in my opinion is actually the beauty of javascript that you can use
+
+03:18.740 --> 03:25.970
+multi paradigms to build your applications based on your needs based on why you think will create the
+
+03:25.970 --> 03:33.410
+best outcome the most maintainable the most predictable code and that power of JavaScript we're going
+
+03:33.410 --> 03:35.230
+to explore in the next section.
+
+03:35.360 --> 03:43.310
+Now that we have these two pillars of closures and prototype inheritance two key pieces for us to really
+
+03:43.310 --> 03:45.860
+dive deep into object oriented programming.
+
+03:46.010 --> 03:53.810
+Functional programming and how they allow us to create large scale programs.
+
+03:53.810 --> 03:55.100
+I'll see you in the next section.

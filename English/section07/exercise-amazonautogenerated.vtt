@@ -1,0 +1,118 @@
+WEBVTT
+
+00:01.180 --> 00:02.510
+Welcome back.
+
+00:02.530 --> 00:08.770
+When I first started learning about functional programming I learned a lot of terms and interesting
+
+00:08.770 --> 00:14.120
+ways to organize functions but I never really understood the purpose of it.
+
+00:14.160 --> 00:21.460
+It kind of felt to mathy where I'm just doing equations and doing all these things but just to be clever
+
+00:21.670 --> 00:25.980
+with no actual understanding of what the use case is.
+
+00:26.140 --> 00:32.980
+So I have an exercise here that I hope will show you why functional programming can make you a better
+
+00:33.070 --> 00:34.870
+programmer.
+
+00:34.910 --> 00:44.510
+Now this exercise you've been hired by Amazon and Amazon needs to implement a shopping feature for this
+
+00:44.540 --> 00:48.210
+exercise so we have a user that has a name.
+
+00:48.290 --> 00:50.220
+It's an active user.
+
+00:50.240 --> 00:59.020
+It also has a cart array and a purchases array and I want you to implement whichever way you want these
+
+00:59.110 --> 01:00.260
+features.
+
+01:00.340 --> 01:10.990
+One is that this user can purchase an item let's say they can purchase an item that has a name property
+
+01:11.620 --> 01:18.400
+that will be a string of some sort and then also a price property that well we'll just be a number of
+
+01:18.400 --> 01:27.050
+the price of whatever item it is that they're buying what I want you to do is to allow a user to purchase
+
+01:27.050 --> 01:37.970
+something so purchase let's say item and a user is able to purchase an item which what that means is
+
+01:38.150 --> 01:41.700
+it allows you to add items to a cart.
+
+01:41.900 --> 01:44.880
+So we add an item object into the cart.
+
+01:44.990 --> 01:51.920
+It also adds a 3 percent tax to the item in the cart.
+
+01:51.980 --> 01:59.210
+It allows you to buy the item that is move the item from cart to purchases and then finally once everything
+
+01:59.210 --> 02:02.010
+has been purchased we empty the cart.
+
+02:02.030 --> 02:10.650
+We return to an empty array now with these four things or functions.
+
+02:10.650 --> 02:17.340
+I want you to create this functionality however you think is best and do it now without me giving you
+
+02:17.340 --> 02:22.830
+the answer because we're going to go through some functional programming concepts over the next couple
+
+02:22.830 --> 02:29.520
+of videos and at the end I'm going to return to this example and show you how I'll implement all the
+
+02:29.520 --> 02:36.900
+things that we've learned into this example and then you can compare what you did vs. what I did to
+
+02:36.900 --> 02:43.650
+see where you can improve where you can add more functional programming concepts and hopefully at the
+
+02:43.650 --> 02:48.810
+end of it all show you how we can make this work really really well.
+
+02:48.810 --> 02:55.440
+With functional programming stop by the way if you're really keen and you want to experiment well you
+
+02:55.440 --> 03:03.240
+can add bonus features like accepting refunds which allows you to remove things from purchases or track
+
+03:03.300 --> 03:06.740
+user history that is anything that the user does.
+
+03:06.930 --> 03:14.010
+Well you can track their history so that you can perhaps look at user logs and see if they did anything
+
+03:14.010 --> 03:14.280
+wrong.
+
+03:15.610 --> 03:16.590
+All right.
+
+03:16.640 --> 03:23.610
+I know that this example isn't exactly 100 percent clear it's not important that you get a right 100
+
+03:23.620 --> 03:24.690
+percent remember.
+
+03:24.770 --> 03:29.110
+Just try to devise a program that does this.
+
+03:29.120 --> 03:34.870
+It can be a simplistic or complicated as possible and we will revisit it at the end of this section.
+
+03:35.000 --> 03:36.950
+I'll see in the next one maybe.

@@ -1,0 +1,235 @@
+WEBVTT
+
+00:01.040 --> 00:02.330
+Welcome back.
+
+00:02.450 --> 00:08.800
+Now I told you there are two pillars in javascript that are really really important and powerful.
+
+00:08.810 --> 00:16.580
+One was closures and we cover that but now it's time to learn about prototypes and specifically prototype
+
+00:16.580 --> 00:18.410
+all inheritance.
+
+00:18.440 --> 00:21.820
+Let's see if you find this as fascinating as closures.
+
+00:21.830 --> 00:24.060
+Now I have to give you a bit of a warning.
+
+00:24.080 --> 00:28.290
+This part is going to be really tough.
+
+00:28.310 --> 00:35.690
+It may seem convoluted at times you may have to revisit the videos a few times but keep in mind what
+
+00:35.690 --> 00:42.800
+we're going to learn here will help us understand object oriented programming coming up in the next
+
+00:42.800 --> 00:43.380
+section.
+
+00:43.400 --> 00:48.410
+So hang in there because some of this is going to overflow into the next section where you're going
+
+00:48.410 --> 00:50.280
+to learn more and more.
+
+00:50.300 --> 00:51.530
+All right you ready.
+
+00:51.540 --> 00:52.990
+Hope I don't scare you off.
+
+00:53.000 --> 00:54.410
+Let's get started.
+
+00:54.410 --> 01:03.900
+Remember this diagram I told you that arrays and functions are just objects in javascript let's dive
+
+01:03.960 --> 01:05.940
+a little deeper into this.
+
+01:06.120 --> 01:11.370
+You see javascript uses something called prototype all inheritance.
+
+01:11.370 --> 01:14.090
+You see these chains over here.
+
+01:14.100 --> 01:16.420
+Their prototype all inheritance.
+
+01:16.410 --> 01:18.330
+And what does that mean.
+
+01:18.330 --> 01:28.040
+Well inheritance is an object getting access to the properties and methods of another object.
+
+01:28.050 --> 01:32.560
+So what I'm saying here is that the array object.
+
+01:32.640 --> 01:39.660
+Again remember everything is an object in the array object gets access to the properties and methods
+
+01:39.780 --> 01:43.310
+of the object in JavaScript.
+
+01:43.390 --> 01:50.650
+And same with functions through this chain that we call prototype all inheritance functions get access
+
+01:50.650 --> 01:54.410
+to the methods and properties of objects.
+
+01:54.420 --> 02:01.950
+Now let's demonstrate this in code there's a special way that we can actually see this chain.
+
+02:01.990 --> 02:05.740
+This prototype all inheritance in JavaScript.
+
+02:06.010 --> 02:16.180
+If I create an array here let's say array just an empty array and I do array dot underscore underscore
+
+02:16.600 --> 02:24.400
+Frodo for prototype prototyping inheritance and then underscore underscore and I hit enter.
+
+02:24.400 --> 02:26.760
+I get this thing it looks like an array.
+
+02:26.860 --> 02:28.270
+And if I open it up.
+
+02:28.540 --> 02:31.250
+Yeah it looks like an array right.
+
+02:31.270 --> 02:38.530
+I have all this reduce push pop map methods that arrays get.
+
+02:38.530 --> 02:39.880
+What happened here.
+
+02:39.880 --> 02:52.190
+Well I created a new array in this new array was created from yes this big array box over here what
+
+02:52.190 --> 02:53.760
+we call a constructor.
+
+02:53.810 --> 03:04.340
+This array created our array variable that contained while an empty array and I did dot underscore underscore
+
+03:04.340 --> 03:12.690
+Prado underscore underscore to go up the prototype chain and get into this array.
+
+03:12.710 --> 03:18.440
+So by that theory if I go up the prototype chain I should get an object right.
+
+03:18.530 --> 03:19.860
+Let's have a look.
+
+03:19.970 --> 03:31.320
+If I go back and do array dot protocol and then go up the prototype type chain again I get the object
+
+03:31.950 --> 03:34.110
+or Ruby called the base object.
+
+03:34.110 --> 03:40.860
+This is the object that everything in JavaScript gets created from including functions and including
+
+03:41.040 --> 03:45.750
+a race and we see that we have some properties on here.
+
+03:45.950 --> 03:56.090
+For example we have the two string method over here which means that anything that is a descendant of
+
+03:56.090 --> 03:58.760
+an object will get the two string method.
+
+03:58.760 --> 04:09.470
+So that means that an array such as our array over here has the two string method on it.
+
+04:09.670 --> 04:10.370
+Look at that.
+
+04:10.510 --> 04:14.740
+Because of this prototype chain remember what I said initially.
+
+04:14.740 --> 04:21.880
+An object gets access to the properties and methods of another object through the prototype chain.
+
+04:22.780 --> 04:30.690
+Let's further this example this time around let's create a function function a and this function a well
+
+04:30.830 --> 04:33.740
+is just empty once again.
+
+04:34.040 --> 04:42.670
+If I go up the prototype chain what do you think we'll get I get this f over here.
+
+04:43.430 --> 04:52.100
+A native function and this is our base function where all functions are created from so that if I go
+
+04:52.160 --> 05:03.030
+up the prototype chain again what do you think we'll get yes we go back to that object that base object
+
+05:03.330 --> 05:06.290
+that all objects come from all right.
+
+05:06.290 --> 05:14.490
+One last example let's say I create an object object one and this is going to be an empty object.
+
+05:14.890 --> 05:19.910
+But let's refresh to make sure that we haven't declared it before.
+
+05:19.940 --> 05:30.910
+Now if I do object one dot Kroto What do you think will happen we get the base object.
+
+05:31.010 --> 05:36.260
+Again this base object is this one over here right.
+
+05:36.330 --> 05:45.880
+I created from this object my own object variable and that inherits has a prototype chain up to the
+
+05:45.880 --> 05:52.930
+space object and this is what prototype all inheritance is.
+
+05:52.980 --> 05:58.980
+It's a concept that over the next couple of videos we're going to understand why it's so useful to us
+
+05:59.940 --> 06:01.070
+as a matter of fact.
+
+06:01.170 --> 06:09.060
+This feature is actually quite unique and not that common in other popular languages like C sharp or
+
+06:09.060 --> 06:09.880
+Java.
+
+06:10.140 --> 06:13.710
+They use something called classical inheritance.
+
+06:13.710 --> 06:17.370
+Javascript uses prototype all inheritance.
+
+06:17.610 --> 06:24.390
+Now even though in JavaScript we do have the class keyword and it's something that we're going to talk
+
+06:24.390 --> 06:28.680
+about in the object oriented programming section of the course in JavaScript.
+
+06:28.680 --> 06:31.900
+This is what we call syntactic sugar.
+
+06:31.900 --> 06:35.040
+There's actually no classes in JavaScript.
+
+06:35.040 --> 06:38.280
+We only have prototype all inheritance.
+
+06:38.280 --> 06:41.490
+So what is this whole prototype chain.
+
+06:41.490 --> 06:43.350
+Why is it useful.
+
+06:43.350 --> 06:47.250
+Well we just started here so let's dive a little bit deeper in the next video.

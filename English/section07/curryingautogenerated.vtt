@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.510 --> 00:09.500
+Let's talk about currying now currying is the technique of translating the evaluation of a function
+
+00:10.160 --> 00:12.090
+that takes multiple arguments.
+
+00:13.070 --> 00:20.690
+Into evaluating a sequence of functions each with a single argument that sounds pretty confusing doesn't
+
+00:20.690 --> 00:20.780
+it.
+
+00:21.680 --> 00:23.860
+Well you can't think of currying like this.
+
+00:23.900 --> 00:32.540
+You take a function that can take multiple parameters and instead use incurring modify it to a function
+
+00:32.930 --> 00:37.820
+that takes one parameter at a time let's have a look at an example.
+
+00:38.120 --> 00:39.600
+I can create a function.
+
+00:39.720 --> 00:50.760
+Multiply in this multiply takes a and b as parameters and we're just going to multiply a and b if I
+
+00:50.760 --> 00:56.560
+do multiply three times four I should get twelve.
+
+00:56.700 --> 00:58.450
+Nice and easy.
+
+00:58.480 --> 01:01.840
+How can we use currying here well.
+
+01:01.950 --> 01:09.720
+Remember we want to change the function from taking multiple parameters to taking a parameter at a time
+
+01:11.220 --> 01:12.910
+we can do something like this.
+
+01:12.930 --> 01:25.010
+I can say const curried multiply and we're going to take a parameter which is going to return another
+
+01:25.010 --> 01:35.350
+function that takes another parameter and that is going to multiply A times B because of closures we
+
+01:35.350 --> 01:44.920
+have access inside of the B function to the a variable and make sure I say const here.
+
+01:44.940 --> 01:45.760
+There you go.
+
+01:45.780 --> 01:47.810
+Now how can we use this.
+
+01:47.910 --> 02:00.170
+Well I can now say curried multiply four or less to five times three if I run this.
+
+02:00.420 --> 02:01.680
+Well no that doesn't work.
+
+02:01.680 --> 02:05.440
+Remember because this is Curry It takes one parameter at a time.
+
+02:05.910 --> 02:15.350
+So instead I'm going to create five which is going to give us the first variable in the way that I like
+
+02:15.350 --> 02:21.110
+to look at Aero functions is that I can mimic how the function is written in the way that I call the
+
+02:21.110 --> 02:21.540
+function.
+
+02:21.650 --> 02:24.300
+So I see two brackets here with a and b.
+
+02:24.320 --> 02:26.470
+So I can call it with a and b.
+
+02:26.590 --> 02:29.030
+So if I do three here and run.
+
+02:29.030 --> 02:29.750
+There you go.
+
+02:29.750 --> 02:38.700
+I get 15 so I'm giving the function one parameter at a time but why is this useful.
+
+02:38.700 --> 02:43.740
+I can now create multiple utility functions out of this.
+
+02:43.740 --> 02:55.400
+For example I can say const code multiply by five which is going to equal this creed multiply with the
+
+02:55.400 --> 02:56.660
+parameter of five.
+
+02:57.860 --> 03:07.010
+So that now I've called this function once and this function for the rest of its time or at least this
+
+03:07.010 --> 03:14.900
+function is going to remember this piece of data five for well forever until we finish running the program
+
+03:15.350 --> 03:23.750
+so that let's say 10 years from now we finally remember oh we have this code multiply by five function
+
+03:24.380 --> 03:32.570
+I can use the multiplied by five function and multiply anything that we want by five let's say four
+
+03:33.080 --> 03:42.230
+five run this I get twenty and instead of running this function over and over I've run it once and now
+
+03:42.230 --> 03:46.110
+this code multiply by five is there for us to use.
+
+03:46.250 --> 03:55.490
+So if it's a function that gets called many many times we only run this part of the function once which
+
+03:55.760 --> 04:02.870
+is really really cool incurring almost reminds you of those methods.
+
+04:02.880 --> 04:07.180
+Right on prototypes that were shared amongst objects.
+
+04:07.350 --> 04:15.280
+They're trying to save on memory or at least the amount that our computers has to work now that we have
+
+04:15.340 --> 04:16.430
+seen occurring.
+
+04:16.450 --> 04:20.680
+Let's go to the next topic that gets often confused with curry.
+
+04:21.340 --> 04:22.620
+I'll see in the next one.
+
+04:22.760 --> 04:22.990
+Bobby.

@@ -1,0 +1,292 @@
+WEBVTT
+
+00:01.310 --> 00:02.590
+Welcome back.
+
+00:02.600 --> 00:08.190
+As you may know in JavaScript we have a native error constructor function.
+
+00:08.270 --> 00:10.950
+If I go error like this in my console.
+
+00:11.720 --> 00:15.930
+Well that's a function that we have a constructor function.
+
+00:15.950 --> 00:17.530
+Remember capital letters.
+
+00:17.570 --> 00:26.700
+That means it's a constructor function and I can create new instances of these errors by doing new error.
+
+00:27.010 --> 00:33.650
+And in here passing a message like whoopsie I run this.
+
+00:33.720 --> 00:34.230
+Look at that.
+
+00:34.260 --> 00:39.000
+I get an error with whoopsie now.
+
+00:39.110 --> 00:45.960
+The error instance which is what we created with the new keyword it doesn't actually do anything.
+
+00:46.160 --> 00:51.780
+As you see over here I get something printed out but it's not really an error.
+
+00:51.800 --> 00:58.040
+What we need to do instead is to throw an error when we start throwing errors.
+
+00:58.040 --> 01:01.100
+That's when things get interesting in JavaScript.
+
+01:01.100 --> 01:03.470
+We have the throw keyword.
+
+01:03.850 --> 01:12.270
+And when we throw something well your script that we're currently running stops executing or at least
+
+01:12.270 --> 01:18.890
+stops executing it unless you're handling this through somehow which will go over.
+
+01:18.900 --> 01:27.820
+So when we do something like throw new error I now get a proper error.
+
+01:27.940 --> 01:35.860
+What has happened underneath the hood is that the error gets thrown and says All right stop the program
+
+01:35.860 --> 01:37.120
+handled the air somehow.
+
+01:37.120 --> 01:45.620
+We have an error in our program and this throw statement is used to define our errors.
+
+01:45.720 --> 01:52.860
+So during runtime when we run our javascript when a throw statement is encountered by the program the
+
+01:52.860 --> 01:59.550
+execution of the current function will stop and control will be passed to the next part of the call
+
+01:59.550 --> 02:00.360
+stack.
+
+02:00.420 --> 02:05.810
+But before we get into that and how to handle these things let's just go a little bit more over throw.
+
+02:05.850 --> 02:12.090
+You see I can throw anything in javascript I can throw a string if I want to do.
+
+02:12.140 --> 02:12.670
+There you go.
+
+02:12.680 --> 02:16.730
+I can't throw a boolean value if I wanted to.
+
+02:16.790 --> 02:17.980
+Nothing too crazy.
+
+02:18.050 --> 02:25.250
+I can't even actually throw the error constructor function which is well the function and then obviously
+
+02:25.400 --> 02:35.090
+our regular way of throwing an error an instance of the error as you can see when we throw something
+
+02:35.660 --> 02:46.550
+it stops the execution of our program so that if I do throw new error and right after it do four plus
+
+02:46.640 --> 02:52.370
+three we're never even going to get there because our program gets stopped and says hey we have a problem
+
+02:52.580 --> 02:57.990
+let's stop whatever we're doing and throw get outside of the program.
+
+02:58.070 --> 03:04.510
+Now this error property has three built in properties for us to use.
+
+03:04.540 --> 03:17.690
+Let me show you if I go const my error and do a new error here call it once again whoopsie.
+
+03:17.850 --> 03:27.300
+Now when I do my error you see that I have the air right over here but I have three properties.
+
+03:27.460 --> 03:33.010
+One is the actual name of the air which is air.
+
+03:33.140 --> 03:38.540
+We also have the message property of the air which is as you can see whoopsie.
+
+03:38.660 --> 03:47.060
+And the third last one and a very important one is the stack trace which can be accessed through the
+
+03:47.210 --> 03:54.440
+stack property and you see over here that that is my stack trace is just a string but it shows me where
+
+03:54.440 --> 03:55.590
+the error happened.
+
+03:55.760 --> 04:03.080
+In this case it happened inside of an anonymous function which is the main global execution context.
+
+04:04.620 --> 04:17.600
+For example if I do function a and inside of this function I do a b variable that has new error.
+
+04:17.670 --> 04:29.830
+This one is going to say what and we finally return B and close the function well.
+
+04:29.930 --> 04:40.100
+When I run a now I see that I get a stack trace I get the first item on the stack which is the global
+
+04:40.280 --> 04:43.150
+anonymous global execution context.
+
+04:43.310 --> 04:47.150
+And then I have the a function that was called.
+
+04:47.210 --> 04:51.810
+So it's actually show me what's happening on our call stack.
+
+04:51.950 --> 05:00.270
+We have the global execution context and then the a function and the error was thrown inside of a while
+
+05:00.360 --> 05:03.310
+a was on top of the global execution context.
+
+05:03.420 --> 05:09.570
+So as you can see here if we had another function inside of here that was getting called let's call
+
+05:09.570 --> 05:15.640
+it C then the error would show up as C A then the anonymous global execution context.
+
+05:15.830 --> 05:21.200
+And I can access this even though it prints it out for me by doing the stack.
+
+05:21.200 --> 05:27.960
+And as you can see down here we have our error stack which shows us where we were in our call stack
+
+05:28.170 --> 05:35.610
+when the air happened this way we see what's responsible for causing that error.
+
+05:35.660 --> 05:39.380
+It's almost like seeing your history in action.
+
+05:39.490 --> 05:40.540
+Now here's the thing.
+
+05:40.630 --> 05:49.020
+The JavaScript has many built in constructors for errors specifically standard ones that you may have
+
+05:49.020 --> 05:50.850
+seen before.
+
+05:50.920 --> 06:02.740
+You see we have the generic error but there's also new syntax error which you may have seen when you
+
+06:02.740 --> 06:05.760
+get an error where in your javascript syntax is off.
+
+06:05.770 --> 06:12.940
+For example if I do something like this I get a syntax error Unexpected token because well javascript
+
+06:13.480 --> 06:14.470
+doesn't understand this.
+
+06:14.470 --> 06:17.440
+There is a syntax issue here.
+
+06:17.440 --> 06:25.400
+We also have something like a new reference error which once again you may have seen.
+
+06:25.420 --> 06:35.020
+If I do let's say a variable that I haven't defined I'll get a reference error and as you can see here
+
+06:35.410 --> 06:43.930
+it automatically throws and has the throw keyword added upon it as soon as we have an error the throw
+
+06:43.930 --> 06:48.400
+statement is used to generate are exceptions are errors.
+
+06:48.400 --> 06:50.170
+But here's the thing so far.
+
+06:50.170 --> 06:55.380
+Errors are useful but what if we wanted to handle them inside of our programs.
+
+06:55.840 --> 07:03.250
+For example during our program when a throw statement is encountered an error is thrown our current
+
+07:03.250 --> 07:09.040
+function is going to stop and sometimes we might want to catch that error instead of well stopping the
+
+07:09.040 --> 07:10.620
+entire program.
+
+07:10.660 --> 07:13.900
+So how do we handle them in JavaScript.
+
+07:13.900 --> 07:19.050
+Well in JavaScript this is pretty much the system for errors.
+
+07:19.090 --> 07:25.960
+This is our call stack and as soon as an error happens on the call stack we go to the execution context
+
+07:26.170 --> 07:29.900
+underneath us and say hey is zero cash for us.
+
+07:29.920 --> 07:31.650
+Is there something handling this error.
+
+07:31.660 --> 07:31.980
+No.
+
+07:32.120 --> 07:33.730
+Okay then I'm going to keep going.
+
+07:33.730 --> 07:35.120
+Is there a catch.
+
+07:35.200 --> 07:38.980
+Is this handle handled anywhere in this part of the execution context.
+
+07:38.980 --> 07:39.560
+No.
+
+07:39.640 --> 07:45.550
+And if all the way through the call stack there's nothing handling it well we're going to get this on
+
+07:45.640 --> 07:55.300
+error function that runs inside of the browser that gives us that red text that we see in no J Yes instead
+
+07:55.300 --> 08:04.380
+of the on air we have the process dot on on cut exception so the runtime handles the errors if nothing
+
+08:04.380 --> 08:06.720
+in our program catches this.
+
+08:06.720 --> 08:12.030
+If the exception always just zoomed straight down to the bottom of the stack.
+
+08:12.420 --> 08:14.250
+Well it's not very useful.
+
+08:14.370 --> 08:20.970
+Our programs just end the power and the errors and what we're gonna learn about is in the fact that
+
+08:20.970 --> 08:28.830
+you can create these little hurdles these little stops along the call stack to catch these exceptions
+
+08:29.990 --> 08:34.940
+because once you've caught these exceptions you can do something interesting to address the problem
+
+08:35.180 --> 08:37.490
+so that your program doesn't start running.
+
+08:37.490 --> 08:41.860
+Instead you handle these errors so that your program keeps running.
+
+08:41.990 --> 08:45.820
+So how do we create these obstacles these hurdles.
+
+08:45.860 --> 08:49.580
+How do we catch an error in JavaScript for that.
+
+08:49.610 --> 08:51.450
+I'll see you in the next video by.

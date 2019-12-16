@@ -1,0 +1,145 @@
+WEBVTT
+
+00:00.560 --> 00:01.780
+There we have it.
+
+00:01.910 --> 00:06.170
+Object oriented programming and functional programming.
+
+00:06.260 --> 00:17.120
+They are both paradigms and a programming paradigm is well writing code compliant with a specific set
+
+00:17.120 --> 00:18.670
+of rules.
+
+00:18.800 --> 00:24.630
+For example organizing the code into units would be called Object Oriented Programming.
+
+00:24.950 --> 00:32.350
+Avoiding side effects and writing pure functions would be called functional programming in object oriented
+
+00:32.350 --> 00:33.170
+programming.
+
+00:33.220 --> 00:40.180
+An object is a box containing information and operations that are supposed to refer to the same concept
+
+00:40.670 --> 00:42.970
+or grouping it as an object.
+
+00:42.970 --> 00:50.320
+These pieces of information inside of the objects are called attributes or state and the operations
+
+00:50.320 --> 00:56.050
+that can happen on the state are known as methods in functional programming.
+
+00:56.050 --> 01:04.000
+The code is essentially a combination of functions and data is immutable which leads to writing programs
+
+01:04.000 --> 01:13.060
+with no side effects and pure functions because in a function in a functional programming paradigm that
+
+01:13.060 --> 01:20.740
+function cannot change the outside world and the output value of a function simply depends on the given
+
+01:20.740 --> 01:21.790
+arguments.
+
+01:21.790 --> 01:27.200
+This allows functional programming to really have control over a program flow.
+
+01:27.550 --> 01:35.110
+Now over the last couple of sections we learned about these two paradigms and we even coded some examples
+
+01:35.170 --> 01:36.120
+with it.
+
+01:36.190 --> 01:37.000
+So what do we learn.
+
+01:37.970 --> 01:42.890
+We learned that functional programming is based on different concepts right.
+
+01:42.900 --> 01:51.000
+We have higher order functions pure functions Referential transparency in functional programming functions
+
+01:51.090 --> 02:00.130
+are first class citizens in object oriented programming objects are first class citizens and we learned
+
+02:00.130 --> 02:04.710
+about the pillars of each of these paradigms in object oriented programming.
+
+02:04.720 --> 02:12.730
+We had abstraction we had encapsulation where it allows us to encapsulate ideas that are related together
+
+02:12.730 --> 02:13.660
+and objects.
+
+02:13.660 --> 02:20.930
+It helped us hide irrelevant data from the user we learned about inheritance and then we learned about
+
+02:20.930 --> 02:24.950
+polymorphism in functional programming.
+
+02:24.980 --> 02:31.780
+We learned that it's all about the idea of pure functions and composing functions to act upon that data
+
+02:33.070 --> 02:39.670
+now object oriented programming has been around for a long time since the 70s and functional programming
+
+02:39.730 --> 02:40.600
+as well.
+
+02:40.600 --> 02:49.910
+If not even earlier object oriented programming is very common in languages like C sharp Python Java
+
+02:51.040 --> 02:56.920
+and then functional programming is very common in languages like closure and Haskell but at the end
+
+02:56.920 --> 03:00.560
+of the day there is no one better than the other.
+
+03:00.640 --> 03:03.070
+All of them are good in their own ways.
+
+03:03.150 --> 03:07.000
+They're simply different approaches to the same problem.
+
+03:07.000 --> 03:16.370
+How do we write clear easy to extend easy to maintain efficient dry code in a functional style functions
+
+03:16.610 --> 03:25.950
+manipulate data structures like trees and arrays and objects and things like composition are used a
+
+03:25.950 --> 03:34.640
+lot more than loops and iterations and if else statements that are more procedural now although some
+
+03:34.730 --> 03:42.920
+languages prefer one over the other in terms of programming paradigms languages like Javascript allow
+
+03:42.920 --> 03:44.080
+you to do both.
+
+03:44.210 --> 03:53.750
+Which in my opinion is extremely wonderful because you can pick the solution to your own problem although
+
+03:54.290 --> 03:58.700
+the language that you use does have an effect on which type of paradigm.
+
+03:58.720 --> 04:02.520
+You're right even pure functions like Haskell.
+
+04:02.660 --> 04:09.200
+Well you can write procedural code you can write object oriented style and procedural languages like
+
+04:09.200 --> 04:15.600
+C The thing is that the benefits are in the application of these ideas.
+
+04:15.780 --> 04:22.710
+To be clear the advantage of each paradigm is simply in the modelling of your algorithm and data structures.
+
+04:22.830 --> 04:28.950
+The choice of which you use is simply what makes more sense for your project and the language that you're
+
+04:28.950 --> 04:29.280
+using.

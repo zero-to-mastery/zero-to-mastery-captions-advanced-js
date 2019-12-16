@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.720 --> 00:06.960
+Oh boy I know that was a long section and a long section without that much coat.
+
+00:06.990 --> 00:09.900
+I know you want to do exercises and get things going.
+
+00:09.900 --> 00:14.900
+And I promise you with the upcoming sections we're gonna do more and more coding.
+
+00:14.910 --> 00:21.660
+But I wanted for us to build this foundation so that we understand how the language works internally.
+
+00:21.660 --> 00:29.340
+In this section we learned about the JavaScript engine how we can send a javascript file and it runs
+
+00:29.340 --> 00:39.590
+it all through these steps including an interpreter and a compiler a git compiler to send us optimized
+
+00:39.590 --> 00:48.340
+code that we can run on our machines and then we also learned about these two very important concepts
+
+00:48.430 --> 00:55.030
+that we're going to take with us throughout the rest of the section call stack and memory heap and how
+
+00:55.210 --> 01:02.830
+these are used to run and execute our code and more importantly we focused on the call stack something
+
+01:02.830 --> 01:09.220
+that we're going to see over and over throughout the next couple of videos and sections where we use
+
+01:09.220 --> 01:17.210
+the stack to keep track of where we are in our program and this concept is going to be very important
+
+01:17.270 --> 01:20.640
+when we start to understand javascript deeply.
+
+01:20.660 --> 01:27.680
+We also learn about the idea of a single threaded model that is javascript is a single threaded language
+
+01:27.970 --> 01:30.770
+one call stack one memory heap.
+
+01:30.770 --> 01:37.670
+We learned about the limitations of that but also the beauty and simplicity because we can use the javascript
+
+01:37.790 --> 01:48.050
+runtime to have threads in the background that run it for us whether it is on the browser or outside
+
+01:48.050 --> 01:51.510
+of the browser using something like No J Yes.
+
+01:51.760 --> 01:59.120
+And we also learned about a very common interview question where we would do something like this and
+
+02:00.360 --> 02:05.040
+the interviewer asked you Hey what do you think is going to happen here.
+
+02:05.810 --> 02:14.030
+And we should know by now why this is why three is printed before 1 and 2.
+
+02:14.030 --> 02:18.480
+So this is your final test to finish off the section.
+
+02:18.620 --> 02:29.780
+What happens if I run this again but this time I'm going to run this in one second and this one in just
+
+02:29.840 --> 02:31.760
+10 milliseconds.
+
+02:31.830 --> 02:32.780
+All right you ready.
+
+02:32.790 --> 02:36.460
+Let's see okay.
+
+02:36.530 --> 02:38.140
+Is that what you expected.
+
+02:38.180 --> 02:39.680
+Did you get that right.
+
+02:39.710 --> 02:40.180
+Good.
+
+02:40.220 --> 02:49.820
+If you did move on to the next section but I have one last question for you and this is gonna be a little
+
+02:49.820 --> 02:54.650
+tough so let's change this back to zero.
+
+02:54.800 --> 03:00.290
+And this over here we're gonna change it instead to a promise.
+
+03:00.290 --> 03:12.650
+Dot resolve and it's just going to resolve to Hi and we're just going to dot then console log
+
+03:19.190 --> 03:24.530
+and by the way if you're not used to promises I've added some videos on promises in the appendix so
+
+03:24.530 --> 03:25.950
+you can go check those out.
+
+03:25.970 --> 03:29.130
+This is something that we're going to learn later on in the course.
+
+03:29.150 --> 03:32.470
+What do you think is going to happen here.
+
+03:32.510 --> 03:41.870
+We have a set time out then a promise that resolves right away and console logs to and then console
+
+03:41.870 --> 03:44.290
+log 3 Take your guess.
+
+03:44.300 --> 03:48.950
+Wait a second because I'm going to press enter and let's see what happens.
+
+03:50.760 --> 03:52.110
+Is that what you expected.
+
+03:54.590 --> 03:55.560
+Three is a crowd.
+
+03:55.560 --> 03:56.540
+Makes sense.
+
+03:56.710 --> 04:03.770
+But why did two get printed before one.
+
+04:03.840 --> 04:05.240
+Does that make sense to you.
+
+04:05.400 --> 04:08.700
+Because based on what I just tell you it doesn't.
+
+04:08.700 --> 04:09.710
+Right.
+
+04:09.750 --> 04:14.420
+How did promise get in before.
+
+04:14.670 --> 04:16.760
+One is the loneliest number.
+
+04:16.780 --> 04:17.060
+Mm hmm.
+
+04:18.450 --> 04:23.110
+Well in order for us to understand that and to leave you on a cliffhanger.
+
+04:23.220 --> 04:31.020
+This is something we're going to tackle in the asynchronous part of the course but the thing is before
+
+04:31.020 --> 04:37.840
+we get to that we have to really understand some of the more fundamental concepts of Javascript.
+
+04:37.950 --> 04:40.420
+I know I'm keeping you in suspense.
+
+04:40.440 --> 04:47.280
+You can jump to the asynchronous part of this course if you're really curious but I suggest that you
+
+04:47.280 --> 04:55.290
+wait so that we learn about the core javascript concepts before we see what's happening here.
+
+04:55.920 --> 05:01.030
+For now take a break and I hope to see you in the next section.
+
+05:01.040 --> 05:01.360
+Bye bye.

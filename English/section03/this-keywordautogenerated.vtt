@@ -1,0 +1,526 @@
+WEBVTT
+
+00:00.700 --> 00:02.100
+Welcome back.
+
+00:02.110 --> 00:10.020
+The scariest part of JavaScript this some would say the most confusing.
+
+00:10.140 --> 00:17.460
+Some even hated so much that they try to avoid it at all cost in their code because it creates so much
+
+00:17.460 --> 00:24.540
+confusion let's try and decode this mystery and figure out what this is all about.
+
+00:25.610 --> 00:32.330
+Now keep in mind this is a topic we're going to really dive deep into during the Object Oriented Programming
+
+00:32.330 --> 00:37.140
+section of the course but we are focusing on learning the fundamentals of this keyword.
+
+00:37.280 --> 00:45.200
+In the section so that when this term comes up later on in the course we have our foundation ready.
+
+00:45.210 --> 00:48.350
+So what is this.
+
+00:48.390 --> 00:56.580
+And although it looks intimidating this isn't that hard because all that it means is this.
+
+00:56.580 --> 01:03.000
+This is the object that the function is a property of.
+
+01:03.190 --> 01:04.440
+That's it.
+
+01:04.450 --> 01:06.100
+So what does that mean.
+
+01:06.100 --> 01:15.160
+Well this is the object that the function is a property of simply means that we have an object and this
+
+01:15.220 --> 01:24.580
+object has some function and inside of this function when we do something we have access to the this
+
+01:24.880 --> 01:26.290
+keyword.
+
+01:26.290 --> 01:36.250
+And this refers to the object that the function is a property of still confused by this.
+
+01:36.300 --> 01:37.860
+Let's look at an example.
+
+01:38.250 --> 01:51.270
+If I just simply run this here if I click Run well this environment won't let me work with this because
+
+01:51.270 --> 01:53.010
+of some safeguards in place.
+
+01:53.040 --> 02:03.580
+So let's open up our developer console and in here type in this and if I hit enter I have the window
+
+02:03.580 --> 02:04.450
+object.
+
+02:04.450 --> 02:06.860
+That's what this is referring to.
+
+02:07.150 --> 02:14.080
+Because remember this gets set in our execution context as window initially right.
+
+02:14.080 --> 02:22.500
+Remember our diagram when the global execution context starts during the creation phase we create the
+
+02:22.560 --> 02:25.710
+global object in this and they equal each other.
+
+02:25.860 --> 02:30.540
+In this case the window object is our global object.
+
+02:30.540 --> 02:41.370
+So what if we do something like here where I have a function a that we'll just console log
+
+02:44.930 --> 02:49.510
+this if I run a what do you think.
+
+02:49.580 --> 02:54.020
+The answer will be well we get window.
+
+02:54.090 --> 02:57.420
+Once again this is equal to window.
+
+02:57.990 --> 03:00.140
+And why is that.
+
+03:00.150 --> 03:01.800
+Remember the definition.
+
+03:01.800 --> 03:06.510
+This is the object that the function is a property of.
+
+03:06.570 --> 03:12.280
+That means we're calling window dot a.
+
+03:12.480 --> 03:13.350
+And running it.
+
+03:13.380 --> 03:15.240
+That's what we're doing up here.
+
+03:15.240 --> 03:19.380
+So what is the object that the function is a property of.
+
+03:19.380 --> 03:24.960
+Well the function is a property of the window object.
+
+03:24.960 --> 03:26.800
+So that's what this is.
+
+03:26.820 --> 03:28.710
+It's the window.
+
+03:28.710 --> 03:30.200
+And this should make sense.
+
+03:30.240 --> 03:31.330
+Right.
+
+03:31.440 --> 03:37.680
+But here's the problem when it comes to coding this part of javascript is a little bit weird in the
+
+03:37.680 --> 03:44.660
+sense that most of the time when we're coding we never want this to refer to the global object.
+
+03:44.880 --> 03:47.880
+But obviously this happens all the time.
+
+03:48.270 --> 03:54.480
+And as we'll see later on one of the pitfalls with this is that we unexpectedly have this referred to
+
+03:54.480 --> 03:58.110
+the window object when we think it should be something else.
+
+03:58.320 --> 04:09.370
+And if we go back to our example and create function b this time and with function b if I use use strict
+
+04:12.300 --> 04:23.680
+and I console dialog this well if I run be here I'll get on defined and remember what I said about the
+
+04:23.680 --> 04:33.990
+use strict tag use strict was added to JavaScript as a way for us to avoid the common mistakes that
+
+04:33.990 --> 04:38.980
+can happen with JavaScript when the language was originally designed.
+
+04:39.060 --> 04:46.170
+It wasn't perfect and there were bits and pieces of mistake and things like you strict allow us to not
+
+04:46.170 --> 04:55.090
+have this where this refers to the window object and use strict can be added at the beginning.
+
+04:55.170 --> 05:00.030
+The first line of a function or the beginning of our script.
+
+05:00.120 --> 05:03.340
+Now I know you're still confused about this.
+
+05:03.570 --> 05:05.440
+So let's give a better example.
+
+05:05.520 --> 05:09.030
+Remember our global execution context.
+
+05:09.030 --> 05:17.220
+We get this out of the box but also when we have a new function we have this as well.
+
+05:17.220 --> 05:19.170
+But what's the point of it then.
+
+05:19.320 --> 05:26.400
+If most of the time we don't even care that this points to the global object why did they even include
+
+05:26.400 --> 05:28.000
+this in the language.
+
+05:28.020 --> 05:35.100
+Well let's have a look at an example where this actually becomes useful and the reason that this keyword
+
+05:35.100 --> 05:46.440
+was created let's create an object here and this object will have a name that is barely and Billy can
+
+05:46.540 --> 05:54.730
+sing so we'll have a function here and inside of this function we can just return.
+
+05:54.730 --> 05:56.800
+Billy singing la la la.
+
+05:57.850 --> 05:59.810
+And we wanted to say la la la.
+
+06:00.620 --> 06:05.780
+Billy or use the name property.
+
+06:05.860 --> 06:06.140
+Mm hmm.
+
+06:06.370 --> 06:10.470
+But how can we do that inside of an object.
+
+06:10.510 --> 06:19.000
+How can we access a property so that this sync function can sing Billy's name.
+
+06:19.900 --> 06:27.310
+I mean we could write Billy like this but what if this object changes and all of a sudden it becomes
+
+06:27.810 --> 06:29.280
+Veronica.
+
+06:29.320 --> 06:35.410
+Now we have to also come over here and change this to Veronica instead.
+
+06:35.490 --> 06:47.100
+We can use that this keyword I can simply say this dot name and why is that.
+
+06:47.100 --> 06:49.030
+Because remember our definition.
+
+06:49.290 --> 06:55.180
+This is the object that the function is a property of.
+
+06:55.320 --> 07:06.260
+This is the object that these sync function is a property of so we're simply saying here object dot
+
+07:06.530 --> 07:09.980
+name but obviously object dot name wouldn't work in here.
+
+07:09.980 --> 07:19.810
+So we have to have something else like the this keyword so that if I run object dot saying
+
+07:23.280 --> 07:30.810
+and I click Run here look at that I have la la la Veronica and if I change this back to Billy I don't
+
+07:30.810 --> 07:37.260
+have to change anything in the function it gives me the correct same function.
+
+07:37.410 --> 07:44.130
+And by the way we can actually convert this to a newer syntax write it like this which also works and
+
+07:44.130 --> 07:47.930
+it's a little bit cleaner so let's go back to that function.
+
+07:48.030 --> 07:53.640
+This is the object that the function is a property of.
+
+07:53.880 --> 07:56.370
+And this is the rule of thumb that I like to use.
+
+07:56.580 --> 08:02.190
+This refers to whatever is to the left of the dot.
+
+08:02.190 --> 08:09.990
+Remember with an object we access properties and methods of an object and a method of an object is a
+
+08:09.990 --> 08:10.590
+function.
+
+08:11.070 --> 08:21.170
+So methods are functions that are inside of objects so the property and methods can be accessed with
+
+08:21.170 --> 08:25.380
+this dot notation and when it comes to this.
+
+08:25.420 --> 08:30.130
+This simply refers to hate inside of this function.
+
+08:30.130 --> 08:37.080
+What's to the left of the dot well object and that's all you really need to know about this.
+
+08:37.140 --> 08:44.450
+It's whatever to the left of the dot which is the object that the function is a property of.
+
+08:44.520 --> 08:46.530
+Now I know you're still confused.
+
+08:46.770 --> 08:50.720
+I still don't get why this is that useful.
+
+08:50.760 --> 08:56.460
+Let's use another example let's say that in this object I want to create a another function that says
+
+08:56.670 --> 09:03.390
+sing again and sing again and let's make this a little bit bigger.
+
+09:03.400 --> 09:04.470
+There you go.
+
+09:04.600 --> 09:08.710
+Sing again should well sing again.
+
+09:08.770 --> 09:16.580
+We want to run this function or perhaps sing again does something a little bit different.
+
+09:16.690 --> 09:19.750
+Maybe it adds an exclamation mark at the end.
+
+09:19.780 --> 09:21.280
+How will we go about doing this.
+
+09:21.760 --> 09:31.180
+Well I can just copy whatever the function does here and just add an exclamation mark at the end so
+
+09:31.180 --> 09:40.180
+that when I run sing again and I click Run and I have to make sure I add a comma here let's click Run
+
+09:42.470 --> 09:48.800
+I have sing again with the exclamation mark but this isn't good right.
+
+09:48.830 --> 09:54.350
+One of the principles of being a good programmer is dry do not repeat yourself.
+
+09:54.350 --> 09:59.810
+And this is a simple example with well one line of code when it comes to a function but you see here
+
+09:59.810 --> 10:08.760
+that we're just copying code the exact same thing over and over a better way of doing this is to call
+
+10:08.760 --> 10:16.380
+the same function and then add the exclamation mark to it once again if we change something let's say
+
+10:16.380 --> 10:20.550
+we change something in the sing function we don't have to change it here as well.
+
+10:20.550 --> 10:31.200
+So what we would do in this case as you may have guessed is this dot saying which returns this piece
+
+10:31.200 --> 10:36.790
+of string and then add the exclamation mark at the end felt like run.
+
+10:36.930 --> 10:37.840
+Look at that.
+
+10:37.890 --> 10:39.610
+It still works.
+
+10:39.630 --> 10:41.700
+We're now repeating ourselves.
+
+10:41.700 --> 10:44.040
+We're keeping things dry.
+
+10:44.040 --> 10:44.730
+That's very good.
+
+10:46.370 --> 10:52.220
+Here are the two main benefits of this and why the this keyword was created.
+
+10:52.400 --> 11:09.380
+The number one reason it gives us methods or it gives methods access to their object it gives Singh
+
+11:09.920 --> 11:18.910
+access to the object so that it can use properties and methods within that object so its siblings.
+
+11:18.930 --> 11:28.080
+The second reason that the this keyword is so important or it benefits us is that we can execute the
+
+11:28.080 --> 11:34.020
+same code for multiple objects.
+
+11:36.170 --> 11:38.010
+What does this one mean.
+
+11:38.120 --> 11:40.860
+Number one that makes sense.
+
+11:40.910 --> 11:48.200
+We have access now to all these methods and properties on our object which is great and we can keep
+
+11:48.200 --> 11:48.950
+our code dry.
+
+11:48.950 --> 11:50.170
+Like I've shown you here.
+
+11:50.300 --> 11:53.380
+But what about this second part.
+
+11:53.420 --> 12:01.770
+Well let's talk about the second part or the second benefit of this with another example.
+
+12:03.400 --> 12:11.530
+Let's create a function and this function will be let's say important person and this important person
+
+12:11.530 --> 12:15.460
+function simply console dot logs.
+
+12:15.460 --> 12:17.920
+This dot name.
+
+12:18.100 --> 12:28.040
+Now if I run this this is going to refer to the window object because when I call important or I can't
+
+12:28.040 --> 12:39.280
+spell important person important person and I run this it's being called with the global object window.
+
+12:39.280 --> 12:44.780
+Dot important person to the left of the dot is the window.
+
+12:44.950 --> 12:55.520
+So this is going to refer to window like doing window dot name and window Don name won't really know
+
+12:56.030 --> 13:00.720
+anything about this so let's create that property.
+
+13:00.720 --> 13:08.670
+I'm going to create a name property that is sunny and I'm also going to create two objects.
+
+13:08.670 --> 13:13.390
+The first object will have name
+
+13:16.230 --> 13:25.640
+Cassie and we're also going to have the important person function from up over here.
+
+13:26.140 --> 13:35.250
+That's going to say important person and then the second object will have the same thing will have object
+
+13:35.250 --> 13:47.120
+to name is going to be Jacob and they're going to use important person now right over here.
+
+13:47.120 --> 13:53.290
+I'm demonstrating the second important use when it comes to the this keyword it executes.
+
+13:53.300 --> 14:06.650
+Same code for multiple objects I've run a function once and now multiple objects can use this object
+
+14:06.650 --> 14:15.290
+one has important person method an object two has important person method once again and as long as
+
+14:15.290 --> 14:17.940
+I just change the code only here.
+
+14:18.080 --> 14:21.520
+Both of them are going to get the changes.
+
+14:21.710 --> 14:31.510
+If I had an exclamation mark here both of these have the same code again keeping our code dry.
+
+14:32.470 --> 14:34.380
+But let's see what happens now.
+
+14:34.720 --> 14:40.680
+Let's say that I console log here and let's test this out.
+
+14:41.980 --> 14:55.250
+If I console log name here what would the result be or more importantly if I do import and person and
+
+14:55.250 --> 14:57.080
+I run this function.
+
+14:57.310 --> 14:58.720
+What do you think I'll get.
+
+14:58.720 --> 15:00.010
+Who's the important person here.
+
+15:01.230 --> 15:07.530
+Remember the important person function simply runs console lock this down name the important person
+
+15:07.530 --> 15:10.620
+in this case is what's to the left or who's calling.
+
+15:10.620 --> 15:15.060
+Import person while the global object window is calling person.
+
+15:15.150 --> 15:24.510
+So we get Sunny because Sunny is the property on the global object which we created.
+
+15:24.510 --> 15:34.130
+Remember this is a global variable but what if I do object one dot important person who's the important
+
+15:34.130 --> 15:34.610
+person.
+
+15:35.960 --> 15:37.490
+Well who's calling it.
+
+15:37.790 --> 15:42.160
+Object 1 is calling important person the left of the dot.
+
+15:42.710 --> 15:50.750
+So the important person in this case is Cassie because we're calling this method and this is now referring
+
+15:50.750 --> 16:01.460
+to this is a function that is a method of Object 1 and if I change this to object to I get Jacob how
+
+16:01.460 --> 16:02.890
+cool is that.
+
+16:03.080 --> 16:06.570
+Those are the two main benefits of this.
+
+16:06.650 --> 16:15.330
+It gives methods access to their object and it also executes same code for multiple objects both things
+
+16:15.340 --> 16:18.250
+making our code cleaner simpler.
+
+16:18.250 --> 16:19.850
+We're not repeating ourselves.
+
+16:20.110 --> 16:33.040
+So to review this is usually determined by asking hey execution context what called the function what
+
+16:33.040 --> 16:34.390
+called me.
+
+16:34.390 --> 16:43.930
+So you can think of this as who called me who's that person that run me as a function and the this keyword
+
+16:43.960 --> 16:51.310
+acts as a placeholder and we'll refer to whichever object called that method.
+
+16:51.330 --> 16:57.830
+Now there's an interesting thing that happened here which we're going to visit in the next video I'll
+
+16:57.830 --> 16:59.250
+see on that one by.

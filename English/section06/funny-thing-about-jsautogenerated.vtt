@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.690 --> 00:06.960
+Yes yes I know I told you that we're going to finally get to classes in the next video but I do want
+
+00:06.960 --> 00:14.370
+to show you one more thing quickly just to solidify our knowledge now that we understand constructor
+
+00:14.370 --> 00:15.340
+functions.
+
+00:15.450 --> 00:17.100
+This should make sense now.
+
+00:17.250 --> 00:23.450
+If I do variable A equals new number five.
+
+00:23.460 --> 00:30.750
+Well we know that JavaScript is going to create number five for us.
+
+00:30.960 --> 00:42.410
+But you see here how A is actually a type of object because we've used a constructor function so it's
+
+00:42.410 --> 00:48.380
+not the same as me saying variable B equals to 5 which is
+
+00:51.180 --> 00:52.040
+a number.
+
+00:52.340 --> 00:53.800
+I know that's really confusing.
+
+00:53.810 --> 01:03.620
+But if I do a equals b and I run this I get false because there's two different ways of constructing
+
+01:03.710 --> 01:05.260
+these things in JavaScript.
+
+01:05.510 --> 01:12.140
+If I just do two equals I get true because these types get worst.
+
+01:12.350 --> 01:14.810
+Something that we've already learned about.
+
+01:14.810 --> 01:21.270
+So how does it work when I do B dot to string.
+
+01:21.360 --> 01:30.280
+You see that I have all these methods available to us even though type of B is a number and as we saw
+
+01:30.280 --> 01:38.710
+numbers are just primitive types well in JavaScript when we do something like this where we assign a
+
+01:38.710 --> 01:47.820
+variable internally it's going to construct the number that we've added so that we have access to all
+
+01:47.820 --> 01:56.820
+these methods and that's how we can use things like to fixed to string or even on string values string
+
+01:56.820 --> 01:57.540
+primitives.
+
+01:57.540 --> 02:04.110
+We can do things like this javascript sees that you want to use object methods so it automatically assumes
+
+02:04.140 --> 02:06.750
+you meant object instead of primitive.
+
+02:06.750 --> 02:16.020
+So it runs this internally and this is how things like new date works as well you're creating objects
+
+02:16.140 --> 02:23.580
+and it's useful because they have built in prototype methods so that on these dates we can run a different
+
+02:23.670 --> 02:25.810
+sort of methods.
+
+02:25.920 --> 02:32.560
+How cool is that yes technically in JavaScript everything is an object.
+
+02:32.560 --> 02:36.970
+Everything has a constructor function for it.
+
+02:36.970 --> 02:44.440
+I mean with the exception of null and undefined we have constructor functions for everything so that
+
+02:44.440 --> 02:47.890
+we have methods that we can use.
+
+02:47.890 --> 02:48.550
+All right.
+
+02:48.550 --> 02:51.010
+Hopefully your brain doesn't hurt too much after that.
+
+02:51.010 --> 02:52.390
+Let's get back to Obi.

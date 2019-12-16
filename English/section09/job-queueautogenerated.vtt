@@ -1,0 +1,256 @@
+WEBVTT
+
+00:00.620 --> 00:01.130
+Welcome back.
+
+00:01.700 --> 00:08.020
+I think it's time for us to figure out what is happening here underneath the hood.
+
+00:08.150 --> 00:11.780
+You see I haven't told you the full truth.
+
+00:11.780 --> 00:20.060
+This diagram here of our javascript runtime that you'll see on the web all over the place actually has
+
+00:20.060 --> 00:26.750
+a missing piece and it's missing because well this is how it was originally like.
+
+00:26.750 --> 00:35.060
+But as of yes six with the new updates in JavaScript came another piece of the javascript runtime that
+
+00:35.360 --> 00:39.860
+often doesn't get mentioned in older resources.
+
+00:40.080 --> 00:49.840
+You see promises are new to JavaScript or they were added quite recently and to accommodate this new
+
+00:49.840 --> 00:53.290
+addition we had to change the event loop.
+
+00:53.560 --> 01:04.270
+You see the event loop had what we called the callback queue which we've talked about and the callback
+
+01:04.280 --> 01:05.140
+to you.
+
+01:05.140 --> 01:15.190
+It was also called the task to but with promises we had this thing natively in JavaScript.
+
+01:15.190 --> 01:23.800
+Now instead of just using callbacks we now had a native way to handle asynchronous code using promises
+
+01:24.920 --> 01:28.390
+so it wasn't really part of the web API.
+
+01:28.430 --> 01:37.820
+It's part of JavaScript right Atma script the javascript committee said well we need another two for
+
+01:37.880 --> 01:46.650
+our promises and to accommodate this addition they said that well we need another cue called The Job
+
+01:46.950 --> 01:59.500
+Q or as some other people might call it the micro task to in this q is similar to the task you are the
+
+01:59.500 --> 02:05.250
+callback you just a little smaller but has a higher priority than this.
+
+02:05.290 --> 02:11.750
+Q You see it means that the event loop is going to check the job.
+
+02:11.750 --> 02:14.180
+Q First a make sure that there's nothing in that.
+
+02:14.180 --> 02:22.930
+Q before it starts looking at the callback Q or the task Q so that this has higher priority than this
+
+02:22.930 --> 02:31.090
+one so that our diagram of the javascript runtime looks something like this now we have a new addition
+
+02:31.180 --> 02:33.950
+of the job.
+
+02:33.960 --> 02:43.940
+Q And this job Q is now just like the callback Q in our javascript runtime implemented by the browser.
+
+02:44.040 --> 02:46.290
+But the event loop is going to check the job.
+
+02:46.290 --> 02:53.760
+Q First make sure that that's empty before we start putting some of the callback Q functions onto the
+
+02:53.760 --> 02:55.030
+call stack.
+
+02:55.170 --> 02:57.870
+So now our code should make sense.
+
+02:57.960 --> 03:07.780
+Right because we first run our program we call set time out which as it turns out is something called
+
+03:07.780 --> 03:14.280
+a facade function because it isn't actually javascript it just looks like Javascript.
+
+03:14.280 --> 03:23.610
+But underneath the hood it's a web API that calls the timer API to run for 0 seconds and then we get
+
+03:23.610 --> 03:27.290
+to set time out which again calls the web API.
+
+03:27.570 --> 03:35.480
+And it's a facade function that triggers the timer in the browser to run for 10 milliseconds and as
+
+03:35.480 --> 03:39.290
+those things are being processed we go to the next line promise.
+
+03:39.320 --> 03:43.740
+Dot resolve says Well that is for the job queue.
+
+03:43.790 --> 03:44.840
+It's a promise.
+
+03:44.840 --> 03:48.040
+So we're going to send it to the job queue.
+
+03:48.200 --> 03:55.340
+And when it resolves which in this case is right away we're going to say hey it's going to resolve and
+
+03:55.400 --> 04:01.900
+once it's resolved I want you to console log.
+
+04:01.900 --> 04:11.650
+So now these three are out outside of our world and we get to console log and console Lock says three
+
+04:11.680 --> 04:13.420
+is a crowd.
+
+04:13.420 --> 04:20.500
+So this gets Locke's first because it's not asynchronous and then the event loop says well the job queue
+
+04:20.500 --> 04:23.450
+and the micro task queue that has priority.
+
+04:23.470 --> 04:26.340
+So I'm not even going to bother checking the callback you first.
+
+04:26.410 --> 04:27.940
+I'm going to check the job queue.
+
+04:27.940 --> 04:28.700
+Hey job queue.
+
+04:28.810 --> 04:30.470
+Do you have anything for me.
+
+04:30.640 --> 04:34.750
+And the job is going to say well yes actually I haven't waited that long at all.
+
+04:34.750 --> 04:35.920
+I've been waiting for you.
+
+04:35.960 --> 04:38.260
+Here's here's some console log for you.
+
+04:38.290 --> 04:48.160
+So we log this out and you see here in this case the javascript file hasn't even returned yet and it's
+
+04:48.160 --> 04:54.440
+already checking the job queue for us which is again because it has a higher priority.
+
+04:54.610 --> 04:58.740
+And then once the job queues cleared the event loop is going to say all right.
+
+04:58.740 --> 05:00.280
+Any more on the job queue.
+
+05:00.280 --> 05:01.480
+No nothing else.
+
+05:01.480 --> 05:01.930
+All right.
+
+05:01.930 --> 05:04.270
+I'm going to start going to set time out.
+
+05:04.280 --> 05:05.810
+Hey the first set time.
+
+05:05.830 --> 05:07.090
+Are you done with your work.
+
+05:07.230 --> 05:08.380
+Yep I'm done here.
+
+05:08.530 --> 05:10.110
+One is the loneliest number.
+
+05:10.210 --> 05:14.020
+You can log that and then it checks the next one Hey are you done with this.
+
+05:14.020 --> 05:15.740
+Yep 2 can be as bad as 1.
+
+05:15.790 --> 05:20.840
+You can log that to so you see because of this new job queue.
+
+05:20.850 --> 05:27.960
+Even though said time it was before the promise stopped then and it should normally log this before
+
+05:27.960 --> 05:35.370
+the promise the job queue gets checked first because it has higher priority.
+
+05:35.430 --> 05:43.920
+Now I know this is a little bit confusing because the naming is a little bit confusing right and because
+
+05:43.920 --> 05:45.880
+we have so many names for these queue.
+
+05:46.020 --> 05:51.080
+There's often a lot of confusion around it but the act must script standards stay set.
+
+05:51.090 --> 05:59.860
+These are micro tasks or jobs which is where the name comes from while all the other things are like
+
+05:59.860 --> 06:02.550
+we've had before a callback queue and task queue.
+
+06:02.560 --> 06:08.290
+Now the interesting thing with this implementation is that it's implemented by the browser.
+
+06:08.290 --> 06:08.770
+Right.
+
+06:08.830 --> 06:15.820
+And we have different browsers and although the implementation is quite standard across all browsers
+
+06:15.820 --> 06:23.140
+now you'll still get some few weird kinks because browsers implement this differently where this might
+
+06:23.140 --> 06:25.360
+now work as you expect.
+
+06:25.360 --> 06:30.970
+For example some legacy browsers might not even have the job queue and might just have the callback
+
+06:30.970 --> 06:31.470
+queue.
+
+06:31.510 --> 06:36.550
+So that's something that you don't want to rely too heavily on but you do want to be aware that as time
+
+06:36.550 --> 06:41.680
+progresses we will have these two queues to look out for.
+
+06:41.790 --> 06:42.240
+All right.
+
+06:42.240 --> 06:43.590
+The mystery solved.
+
+06:43.590 --> 06:48.570
+I hope now you can explain to somebody hey the javascript runtime.
+
+06:48.570 --> 06:50.770
+Well we actually have a job.
+
+06:50.800 --> 06:54.840
+You don't forget about I'll see in the next one maybe.

@@ -1,0 +1,316 @@
+WEBVTT
+
+00:00.900 --> 00:02.300
+Welcome back.
+
+00:02.310 --> 00:07.240
+I wanted to talk to you a bit about JavaScript looping.
+
+00:07.460 --> 00:13.730
+You see I actually left out a few other ways that we can loop in JavaScript.
+
+00:13.790 --> 00:22.490
+We've talked about our For loops are while loops are do while loops and we also talked about for each
+
+00:23.490 --> 00:31.050
+but there's actually two other ways that we can loop in JavaScript and I'm going to show you how to
+
+00:31.050 --> 00:32.390
+do that in this video.
+
+00:33.700 --> 00:44.170
+Now let's imagine we have a basket and this basket is an array that well has our grocery list let's
+
+00:44.180 --> 00:51.740
+say we want to buy apples we want to buy oranges and we also want to buy grapes because grapes are nature's
+
+00:51.740 --> 00:59.550
+candy they're delicious now in order for us to loop through this basket we know how to do this right.
+
+00:59.590 --> 01:09.380
+We've learned about the for loops where we can just do let I equals zero as long as i is less than the
+
+01:09.830 --> 01:24.690
+basket length we increment i one by one and let's just the console dialogue basket that index of high
+
+01:26.560 --> 01:31.510
+so that's the first type of loop that we saw if we run this in the browser
+
+01:34.190 --> 01:35.260
+and hit enter.
+
+01:35.330 --> 01:39.240
+We see that we get apples oranges and grapes all right.
+
+01:39.240 --> 01:42.960
+So that's the first way we already know how to do that.
+
+01:43.050 --> 01:53.890
+We could also use the for each loop that came new in iOS 5 and there we can just say item we'll use
+
+01:53.890 --> 01:59.530
+air functions which we've learned about and in this area function I'll just console dot log
+
+02:03.030 --> 02:06.040
+and that looks a lot cleaner than it was before.
+
+02:06.060 --> 02:08.280
+If I run this function now
+
+02:11.710 --> 02:18.010
+I get the same thing we're looping over items and I'm not going to show you how to do the while loop
+
+02:18.010 --> 02:23.200
+and that do while loop because we've talked about it but there's two other ways that we can loop through
+
+02:23.200 --> 02:25.690
+things in JavaScript.
+
+02:25.690 --> 02:34.840
+The first one is called the four of loop and the other one is for in loop.
+
+02:35.040 --> 02:38.990
+I know the naming is a little bit confusing but stick with me here.
+
+02:39.300 --> 02:45.560
+The first one the four of loop works in a way that's very similar to these two.
+
+02:45.630 --> 02:52.400
+It's almost as if we're combining these two together and this is a new specification with E.
+
+02:52.410 --> 03:01.260
+So this is a new feature of JavaScript the way it works is we start with a for loop and we say item
+
+03:01.800 --> 03:12.110
+of basket you see that at the syntax cut nicely for me it's all blue and in here we simply say console
+
+03:12.170 --> 03:23.420
+log item not too bad Ray we're using the for keyword here but we're saying of and we're just creating
+
+03:23.450 --> 03:30.080
+a variable we can name this whatever we want of basket which is our array and that's going to loop through
+
+03:30.080 --> 03:38.930
+it so that if I copy and paste this here and hit enter I get the exact same thing.
+
+03:40.590 --> 03:44.150
+And as we know in programming there's many way of doing things.
+
+03:44.280 --> 03:50.400
+And these are just some of the ways that we can loop through this array but I want to mention a key
+
+03:50.550 --> 04:00.390
+term here what we're doing here is something called iterating over this array and this wording.
+
+04:00.410 --> 04:07.910
+Let's make this a little bit bigger this wording is really confusing at first when you first hear it.
+
+04:08.790 --> 04:18.540
+But iterating simply means we're able to go one by one through an item like let's say a basket which
+
+04:18.540 --> 04:26.910
+is an array go one by one and look at these items and iterating is able to be done in javascript on
+
+04:26.910 --> 04:35.490
+what we call it troubles in these variables is something that JavaScript provides us that says hey you
+
+04:35.490 --> 04:40.400
+can iterate over this thing and what is this thing.
+
+04:40.800 --> 04:46.390
+Well in JavaScript you can iterate over arrays and we've already seen that.
+
+04:46.470 --> 04:49.610
+And also strings instead of basket.
+
+04:49.620 --> 04:54.000
+If I just turn this into a string and I run the four of loop here
+
+04:57.210 --> 05:01.500
+I see that I'm iterating over the string one by one.
+
+05:01.560 --> 05:13.020
+So both arrays and strings are ignorable in JavaScript because we're able to iterate over individual
+
+05:13.140 --> 05:21.410
+items and 4 of allows us to iterate over these edibles.
+
+05:21.520 --> 05:27.540
+I know the wording is really really confusing but in a lot of tutorials books and even workplace you're
+
+05:27.540 --> 05:30.390
+going to hear this word and you want to know what it means.
+
+05:30.940 --> 05:32.950
+But let's talk about the next thing.
+
+05:33.280 --> 05:42.050
+The four in loop the foreign loop looks something like this and actually let's bring this back to the
+
+05:42.050 --> 05:44.900
+way it was so not strings.
+
+05:44.900 --> 05:52.170
+It's the array and I'm going to comment into out or delete the looping that we already familiar with
+
+05:52.600 --> 05:56.220
+just so we have better spacing here.
+
+05:56.360 --> 06:07.790
+Now the for in loop works with objects so let's create an object here and we'll call this object detailed
+
+06:08.210 --> 06:17.180
+basket in this detailed basket will be an object that contains apples and actually the quantity of apples
+
+06:17.180 --> 06:25.010
+that we want we want five apples and we'll have oranges as well and we can maybe say have 10 oranges
+
+06:25.370 --> 06:29.180
+lots of vitamin C and then finally grapes and they're delicious.
+
+06:29.180 --> 06:34.990
+So a thousand grapes for everybody now with this detailed basket.
+
+06:35.000 --> 06:47.400
+Now I can use a for in loop and I can say for item in instead of of this time detailed basket and I
+
+06:47.400 --> 06:50.190
+can console dialogue here the
+
+06:53.510 --> 06:58.460
+so that if I clear this let's copy detailed basket.
+
+06:58.550 --> 07:04.580
+So that's our object and we run the four in loop here.
+
+07:04.580 --> 07:19.330
+Notice what happens I get apples oranges grapes the four in loop allows us to loop over and see the
+
+07:19.420 --> 07:29.310
+object properties so that I can check what I need to go grocery shopping for apples oranges and grapes.
+
+07:29.330 --> 07:35.390
+Now here's the tricky part and you'll hear this word mentioned a lot when you talk to your programming
+
+07:35.390 --> 07:43.520
+friends and you can get really really confusing what we're doing here is not iterating because iterating
+
+07:43.520 --> 07:50.840
+is something that we can do with arrays and strings with an object in JavaScript we're doing something
+
+07:50.840 --> 08:00.710
+called enumerating all baseball die right because properties of an object are what we call enumerable
+
+08:01.830 --> 08:10.700
+and an object in Javascript is innumerable if it allows us to see the properties so apples oranges and
+
+08:10.700 --> 08:12.530
+grapes are innumerable.
+
+08:12.530 --> 08:17.380
+That is we can use it in a for and loop to check them up.
+
+08:18.020 --> 08:20.870
+So enumerating is four objects
+
+08:24.640 --> 08:27.080
+innumerable and editable.
+
+08:27.130 --> 08:29.770
+What happens if I switch these around.
+
+08:29.770 --> 08:37.780
+What if I have basket in here and the detailed basket in here.
+
+08:37.840 --> 08:42.160
+So we're using a for of loop with an object.
+
+08:42.190 --> 08:44.430
+What do you think will happen this chicken.
+
+08:45.130 --> 08:55.380
+I'm going to copy and paste this into our console hit run and I get an error detailed basket is not
+
+08:55.530 --> 08:56.500
+ignorable.
+
+08:56.910 --> 08:58.230
+And why is that.
+
+08:58.230 --> 08:59.610
+Well we know that right.
+
+08:59.610 --> 09:01.610
+I said that in JavaScript.
+
+09:01.620 --> 09:10.140
+We have a raise in strings that are ignorable in objects in most of the cases are not ignorable.
+
+09:10.230 --> 09:17.790
+You see four of lube doesn't work with objects because simply the javascript language needs to provide
+
+09:18.210 --> 09:26.750
+this property that is called ignorable when this property is only given by arrays and strings and because
+
+09:26.750 --> 09:31.040
+four of loops only works with it.
+
+09:32.280 --> 09:36.340
+It's going to give us this error but what about here.
+
+09:36.380 --> 09:41.100
+What if I do a for in loop on the basket which is the array.
+
+09:41.330 --> 09:53.770
+If I copy and paste this and run this code look at that it's working I get 0 1 2 and that is because
+
+09:53.830 --> 10:00.490
+underneath the hood you can think of JavaScript arrays like objects right.
+
+10:00.550 --> 10:12.140
+Because an array has an index of 0 1 and 2 so we can't think of basket as an object that has properties
+
+10:12.140 --> 10:13.970
+0 equal to apples
+
+10:18.280 --> 10:25.670
+we have oranges that has index of 2 or index of 1 and then index of 2.
+
+10:25.670 --> 10:37.650
+We have grapes so the 4 in loop is and Newman rating over the properties 0 1 and 2 which lists it out
+
+10:38.010 --> 10:45.850
+for us let's make this a little smaller but I wanted to make this video for you because a lot of people
+
+10:45.850 --> 10:52.840
+get confused between these two and although you can go a long time without ever using for and loops
+
+10:53.140 --> 10:59.680
+we can use something like object docked keys that we've seen before.
+
+11:00.930 --> 11:12.160
+Or valleys or entries or we can use for each loops or for loops instead of four of it's good to know
+
+11:12.160 --> 11:18.810
+these differences because if you see them in a code base you want to understand what's happening and
+
+11:18.810 --> 11:25.140
+also if you ever hear somebody saying editable or enumerable you kind of have an idea of the difference.
+
+11:25.140 --> 11:35.160
+Now to review a for in loop loops over enumerable properties and enumerable property names of an object
+
+11:36.310 --> 11:43.710
+the for of loop doesn't work with objects because they are not editable now.
+
+11:43.870 --> 11:51.820
+There are small caveats and exceptions to these rules but ninety nine percent of the time you should
+
+11:51.820 --> 11:52.790
+consider this.
+
+11:53.020 --> 12:01.470
+You're using the for in loop for objects and for all loop for arrays and strings I'll see in the next
+
+12:01.470 --> 12:02.750
+one maybe.

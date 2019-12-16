@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.910 --> 00:02.060
+Welcome back.
+
+00:02.080 --> 00:07.870
+I want to show you one last thing that I think is really really cool and because we've learned about
+
+00:07.990 --> 00:09.670
+object oriented programming.
+
+00:09.760 --> 00:11.130
+This should make sense to you.
+
+00:11.130 --> 00:13.330
+Now you see the error
+
+00:16.390 --> 00:18.570
+constructor is an object right.
+
+00:18.580 --> 00:21.350
+That we can extend from.
+
+00:21.380 --> 00:31.100
+So for example if I had a class that I'll just create and call it authentication error and we extend
+
+00:32.210 --> 00:41.200
+from air well we can inherit all the properties of error and add onto it or change things.
+
+00:41.450 --> 00:48.550
+So I can say constructor will receive a message and this message will.
+
+00:48.680 --> 00:52.740
+Well first of all call the super method with the message.
+
+00:52.850 --> 00:58.880
+So however the message gets handled in authentication error will be handled the exact same way that
+
+00:58.880 --> 01:00.070
+it does in error.
+
+01:00.080 --> 01:02.770
+So it calls the constructor of error.
+
+01:03.200 --> 01:13.960
+But on top of that I want to change the name of this error to authentication error and also this dot
+
+01:14.500 --> 01:22.120
+maybe we want to add something else something completely useless like favorite snack which is obviously
+
+01:22.480 --> 01:36.370
+grapes let's see how this would work if I do throw new authentication error with a message saying whoopsie
+
+01:37.700 --> 01:39.770
+and I click Run.
+
+01:40.080 --> 01:44.750
+And it should be extends here not extend let's make this a little bit bigger.
+
+01:44.880 --> 01:45.520
+There you go.
+
+01:45.590 --> 01:48.140
+I click Run look at that.
+
+01:48.180 --> 01:52.130
+I get an authentication error with whoopsie.
+
+01:52.280 --> 02:03.140
+The cool part is that if I do let's say cost A equals new authentication error and I do a will make
+
+02:03.140 --> 02:11.880
+sure I spelled out right const and I do a dot favorite snack look at that favorite snack of authentication
+
+02:11.880 --> 02:13.890
+error is grapes.
+
+02:13.920 --> 02:19.490
+How cool is that using this way of handling errors.
+
+02:19.490 --> 02:26.970
+Imagine you're running a node server and you want to make sure that you handle errors correctly.
+
+02:26.970 --> 02:32.940
+Now the tricky part here is that when you throw an error to let's say a user you don't want to reveal
+
+02:32.940 --> 02:39.270
+too much information about your system because hackers and bad actors might use that information to
+
+02:39.300 --> 02:46.800
+compromise your system so you don't necessarily want to just throw any error to the user so that they
+
+02:46.800 --> 02:55.500
+can see for example in a node server you never want to return a response with a full error with a stack
+
+02:55.500 --> 03:02.880
+trace of the error where it happened and all that information so you can actually use this to customize
+
+03:02.970 --> 03:05.050
+the errors that you may have.
+
+03:05.190 --> 03:15.310
+For example using this same method you might want to create let's say a database error and by the way
+
+03:15.310 --> 03:19.030
+these should be capitalized because there are classes.
+
+03:19.060 --> 03:20.650
+So that is the standard
+
+03:24.310 --> 03:25.920
+so database error.
+
+03:25.990 --> 03:27.090
+What else will we have.
+
+03:27.090 --> 03:32.910
+Well maybe we might have permission errors so I can say permission error.
+
+03:33.820 --> 03:37.510
+We'll have different things like we'll change this too.
+
+03:37.660 --> 03:46.350
+Permission error database error and we can have different properties on it but this way we're extending
+
+03:46.440 --> 03:54.720
+our error constructor or error class into different compartments so that our errors can be handled in
+
+03:54.720 --> 03:55.670
+different ways.
+
+03:55.740 --> 04:02.710
+And these are reusable right so other people in our program can now use authentication air database
+
+04:02.750 --> 04:09.840
+air and permission air without having to really worry about maybe even things that might not need to
+
+04:09.840 --> 04:12.390
+be revealed to the users.
+
+04:12.390 --> 04:17.970
+Maybe you don't even need to pass a message to this maybe you just want to have a default message that
+
+04:18.030 --> 04:23.160
+is in here like grapes so that when I call the database error
+
+04:26.540 --> 04:37.030
+even though I pass it a message and I run this well it's only going to receive grapes so that instead
+
+04:37.030 --> 04:42.820
+of relying on everybody on your team all the programmers to make sure that they return the correct type
+
+04:42.820 --> 04:50.390
+of error that doesn't reveal too much information we can just handle it within this space from one location.
+
+04:50.470 --> 04:53.590
+Now we can just create instances of each error.
+
+04:53.620 --> 04:59.140
+So for example a will be an instance of the database error.
+
+04:59.350 --> 05:02.100
+So if I run this I get true.
+
+05:02.140 --> 05:02.830
+How cool is that.
+
+05:03.910 --> 05:05.420
+Good job getting this far.
+
+05:05.500 --> 05:07.480
+I'll see you in the next video.

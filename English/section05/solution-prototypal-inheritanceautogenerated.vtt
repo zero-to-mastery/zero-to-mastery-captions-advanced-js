@@ -1,0 +1,295 @@
+WEBVTT
+
+00:00.480 --> 00:00.960
+Welcome back.
+
+00:01.530 --> 00:09.400
+Let's start with the first one adding a last year method to our data object this one.
+
+00:09.410 --> 00:13.980
+We can just simply do date dot prototype.
+
+00:14.090 --> 00:19.070
+So these are the properties that this data object will have access to.
+
+00:19.430 --> 00:23.710
+And we'll say well we want to add last year to it.
+
+00:23.830 --> 00:31.790
+It doesn't exist yet but I'm going to define it right here and this is going to be a function that well
+
+00:32.240 --> 00:33.260
+what should I do.
+
+00:33.500 --> 00:36.200
+It should return the year.
+
+00:36.200 --> 00:40.930
+Right now this is where it might have been a little tricky.
+
+00:40.970 --> 00:54.680
+How can we refer to this part of the data that is we want to add last year as a method here to whatever
+
+00:54.740 --> 00:56.600
+calls us.
+
+00:56.640 --> 01:04.800
+Remember that key word that I talked about that asks who called me that refers to the object that called
+
+01:04.920 --> 01:08.490
+the method if he guessed this your correct.
+
+01:08.610 --> 01:17.310
+This will refer to whatever gets called whatevers to the left of the dot so that if I do this and use
+
+01:17.340 --> 01:27.360
+get full year which is an actual method that we get on the date and simply do minus one to get last
+
+01:27.360 --> 01:28.290
+year.
+
+01:28.290 --> 01:28.890
+This should work.
+
+01:29.310 --> 01:35.580
+Let's hit run and see what happens and let's comment.
+
+01:35.640 --> 01:41.520
+This second part out and hit run and look at that eighteen ninety nine we got that right.
+
+01:41.520 --> 01:46.110
+If we just do today's date and run.
+
+01:46.110 --> 01:46.740
+There you go.
+
+01:46.740 --> 01:49.590
+Now you know what year this course was recorded in.
+
+01:50.100 --> 01:59.080
+And if I go back and let's just for fun do 17 or less to nineteen eighty eight.
+
+01:59.130 --> 01:59.760
+All right.
+
+01:59.760 --> 02:02.110
+Last year was nineteen eighty seven.
+
+02:02.310 --> 02:03.750
+Not bad.
+
+02:03.750 --> 02:14.480
+Now if I changed this to an arrow function if I do error function here and I run this Oh I get an error
+
+02:15.230 --> 02:16.790
+and why is that.
+
+02:16.790 --> 02:27.580
+This may have got a few of you remember with the arrow function we have this lexical early scoped that
+
+02:27.580 --> 02:35.470
+is if I canceled our log this and I run well repo won't let me do it.
+
+02:35.470 --> 02:41.360
+So let's do it in our console.
+
+02:41.380 --> 02:47.750
+This is referring to the actual function that called us right.
+
+02:47.770 --> 02:55.170
+Because we're lexical e scoped let's refresh that.
+
+02:55.190 --> 03:05.720
+So this is one of those rare cases that we want this to be determined at call time when we actually
+
+03:05.720 --> 03:07.130
+run this function.
+
+03:07.280 --> 03:12.490
+Remember the dynamic scope nature of the this keyword in this case.
+
+03:12.500 --> 03:13.640
+We want to keep that.
+
+03:13.700 --> 03:16.560
+I told you this was a little tricky.
+
+03:16.610 --> 03:18.270
+What about the next one.
+
+03:18.320 --> 03:19.920
+This one is.
+
+03:20.030 --> 03:25.610
+Well if you got this one then you may have gotten this one as well.
+
+03:25.610 --> 03:30.230
+It's a little trickier though let's figure out how to do this in here.
+
+03:30.260 --> 03:41.320
+I wanted to be able to run this method map on one two three so we can modify it on the array prototype.
+
+03:41.810 --> 03:51.200
+So the constructor array I can just say array dot prototype dot map which is an existing method but
+
+03:51.230 --> 03:59.450
+I'm going to modify it and actually overwrite the math function and this map function won't receive
+
+03:59.480 --> 04:00.580
+any parameters.
+
+04:00.590 --> 04:07.970
+I mean if we want to change any of the functionality we can definitely do it but for now we will do
+
+04:08.090 --> 04:19.040
+this will create an array and we'll do a loop over well the array that we give it.
+
+04:19.100 --> 04:19.480
+Right.
+
+04:19.490 --> 04:22.190
+We don't want to loop over the array that we just created.
+
+04:22.190 --> 04:26.750
+We want to loop over whatever we get and remember to the left of the dot.
+
+04:26.750 --> 04:27.770
+That's this.
+
+04:27.770 --> 04:35.840
+So whatever calls us that's what we want to loop over in this case because if I just do a map function
+
+04:35.870 --> 04:37.940
+well we're overriding the math function.
+
+04:37.940 --> 04:39.360
+So we can't really use that.
+
+04:39.440 --> 04:42.710
+Let's just do a basic for loop.
+
+04:42.710 --> 04:43.100
+We can do.
+
+04:43.100 --> 04:45.790
+Let I equals zero.
+
+04:46.340 --> 04:51.300
+And we're going to keep going until I is less then what should it be.
+
+04:51.380 --> 04:53.390
+This dot length.
+
+04:53.600 --> 05:04.570
+That is the length of whatever calls us and then we'll just do I plus plus and in here we can just finally
+
+05:04.570 --> 05:07.800
+and let's make this a little bit Baker There you go.
+
+05:09.020 --> 05:19.960
+And here we'll just a ray dot push to this new Array that we've created the this high so that is whatever
+
+05:20.020 --> 05:22.250
+this is the index of.
+
+05:22.270 --> 05:29.170
+So the first time around it'll be index of 0 which is one index of 1 which is to index of 2 which is
+
+05:29.170 --> 05:29.560
+3.
+
+05:30.310 --> 05:40.890
+And we're simply going to add to this the map right over here so we're just contaminating the string
+
+05:41.340 --> 05:43.930
+because of type caution in JavaScript.
+
+05:44.010 --> 05:47.570
+This is going to be turned well into a string for us.
+
+05:48.300 --> 05:53.720
+And because this is an expression we're going to wrap this in curly brackets.
+
+05:53.830 --> 05:57.060
+That's not how we wrap it in curly brackets like that.
+
+05:57.270 --> 06:08.380
+So it evaluates this before we console log it so that if I run this now well I get undefined because
+
+06:08.440 --> 06:10.320
+we don't return anything from here.
+
+06:10.420 --> 06:13.980
+So let's return the array that we've created.
+
+06:15.400 --> 06:22.610
+If I run this a look at that it's working and it's important to remember that map.
+
+06:22.870 --> 06:28.890
+If you go look at how map is implemented it returns a new array like this.
+
+06:28.960 --> 06:31.680
+We don't modify the existing array.
+
+06:31.780 --> 06:38.430
+We well we create a new one just like we did here and there we have it.
+
+06:38.600 --> 06:42.770
+We have one two three literally mapped.
+
+06:42.770 --> 06:45.090
+Very very cool.
+
+06:45.110 --> 06:52.790
+Now what's an issue with doing things like this Isaac came and imagine that's pretty dangerous right.
+
+06:52.800 --> 06:59.720
+What if somebody just modifies the actual functionality of map and all the code in our project that
+
+06:59.730 --> 07:03.270
+uses map is now well destroyed.
+
+07:03.540 --> 07:10.970
+Does something weird like actually throwing a map next to the item so you want to be really careful
+
+07:10.970 --> 07:19.700
+of this and you should never really modify the existing methods that we have but you must be asking
+
+07:19.700 --> 07:20.480
+yourself.
+
+07:20.600 --> 07:24.130
+Andre I haven't really seen this anymore.
+
+07:24.170 --> 07:25.640
+Like do we even use this.
+
+07:25.640 --> 07:29.270
+How come I've never seen prototype being used.
+
+07:29.270 --> 07:37.130
+And as we'll find out in the object oriented part of the course this array dot prototype dot map way
+
+07:37.130 --> 07:40.140
+of creating methods and doing inheritance.
+
+07:40.190 --> 07:42.860
+Well it's a little bit old school.
+
+07:42.920 --> 07:50.060
+There's newer cleaner way of doing this using things like the class keyword which we're gonna get into.
+
+07:50.060 --> 07:55.190
+And all this headache that I've been bothering you with with the prototype and the underscore underscore
+
+07:55.190 --> 08:02.330
+prototype and all that difficult stuff is going to become really really simple if you've gotten this
+
+08:02.330 --> 08:07.020
+far trust me things are going to get much much simpler.
+
+08:07.020 --> 08:13.530
+But I hope I show you some of the power of prototype inheritance because in the next part well we're
+
+08:13.530 --> 08:19.890
+going to clean all this up so for now take a break and I'll see you in the next one Bye.

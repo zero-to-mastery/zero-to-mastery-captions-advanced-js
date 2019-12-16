@@ -1,0 +1,229 @@
+WEBVTT
+
+00:01.130 --> 00:05.320
+How can we make this code not have any side effects.
+
+00:05.690 --> 00:09.780
+Not change whatever the array is.
+
+00:09.890 --> 00:12.180
+Well we can create a new array.
+
+00:12.320 --> 00:13.300
+Let's do that.
+
+00:13.430 --> 00:25.030
+Let's change it so that the mutate array will now be called remove last item and in here let's create
+
+00:25.030 --> 00:35.130
+a new array and this new Ray will will copy using the cone cat method that comes with the race.
+
+00:35.230 --> 00:40.950
+And now this new array will be the exact same thing as an array.
+
+00:40.990 --> 00:48.010
+But because we use the cone cat method instead of just doing equals array which would have copied the
+
+00:48.100 --> 00:54.850
+array but the reference to the array remember because object are passed by reference and JavaScript
+
+00:55.540 --> 00:57.670
+instead of then pointing to the same location.
+
+00:57.670 --> 01:09.010
+This way we have a new copy of the array and now we can just do new Array dot pop and return new Array
+
+01:11.980 --> 01:13.170
+let's see if that works.
+
+01:13.360 --> 01:24.200
+If I comment this out and just run the mutated array and let's make sure we rename that if I run this
+
+01:24.650 --> 01:26.800
+I see my original array.
+
+01:26.960 --> 01:27.270
+All right.
+
+01:27.290 --> 01:33.350
+I still have that but if I look at the console log of
+
+01:36.110 --> 01:40.030
+remove last item and I click run here.
+
+01:40.040 --> 01:45.360
+I see that that array there's a new one with just one and two in there.
+
+01:46.250 --> 01:53.480
+And although we created a new state or new data inside of this function it's a local variable right
+
+01:54.850 --> 02:02.110
+and we're not modifying anything outside of our scoped world right here although we're doing pop right
+
+02:02.110 --> 02:02.970
+here.
+
+02:03.070 --> 02:09.850
+It doesn't matter because we're not affecting the outside world and that's the beauty with no side effects
+
+02:10.750 --> 02:13.150
+because it doesn't affect the outside world.
+
+02:13.180 --> 02:22.930
+We know what to expect from it if we go back to this code of adding a 1 to the end of this array we
+
+02:22.930 --> 02:32.490
+can just accept a new array and once again we can copy the code that we had above and let's say that
+
+02:32.490 --> 02:42.900
+we want to multiply the array by 2 so we can just say multiply by 2 we get an array and this time we'll
+
+02:42.900 --> 02:52.230
+just use a will return in new array using the map method which automatically returns us in your array
+
+02:52.770 --> 03:04.150
+saying all or a dot map item and then item multiply by two so that if I ran multiplied by two here
+
+03:07.240 --> 03:13.330
+and I click run not on my arrays are changed as you see here from the console log.
+
+03:13.480 --> 03:23.560
+But if I do console dialogue multiply by two and I hit run look at that I have three distinct arrays
+
+03:24.070 --> 03:28.000
+and all these functions have no side effects.
+
+03:28.000 --> 03:32.110
+It doesn't affect anything in the outside world just to confirm this.
+
+03:32.110 --> 03:44.530
+I'm going to say array 2 equals remove last item and then we'll do constant array 3 equals multiply
+
+03:45.220 --> 03:53.950
+by 2 and then here in the console log I'm just going to say array 2 and array 3.
+
+03:53.970 --> 04:03.960
+If I click Run look at that different arrays living on their own no side effects so when it comes to
+
+04:03.960 --> 04:06.610
+no side effects I have a few questions for you.
+
+04:06.690 --> 04:09.420
+What happens if I have a function.
+
+04:09.760 --> 04:10.490
+A.
+
+04:10.680 --> 04:16.090
+In this function a says console dot log.
+
+04:16.270 --> 04:20.650
+Is that a pure function no it's not.
+
+04:20.690 --> 04:26.580
+That's a tricky one but console dialogue is well window specific.
+
+04:26.600 --> 04:30.840
+We're using the browser to log something to the browser.
+
+04:31.160 --> 04:33.730
+So it's actually affecting the outside world.
+
+04:33.730 --> 04:34.030
+Right.
+
+04:34.040 --> 04:37.250
+It's logging something to the output of the browser.
+
+04:38.960 --> 04:41.850
+It's modifying something outside of itself.
+
+04:41.900 --> 04:50.950
+But when we call this while we're out putting something out here so that function has side effects.
+
+04:51.040 --> 04:52.670
+All right let's go to the next one.
+
+04:52.750 --> 04:58.020
+The input should always result in the same output.
+
+04:58.330 --> 05:06.240
+Does the function always return the same output given the same input if I click run here.
+
+05:06.250 --> 05:11.950
+Well I can click this many times and a function is always going to return the same thing.
+
+05:11.950 --> 05:13.070
+That's great.
+
+05:13.090 --> 05:27.570
+What if I do a number one and number two if I do return num one plus num to if I click Run I have to
+
+05:27.570 --> 05:28.660
+give it some parameters.
+
+05:28.680 --> 05:37.440
+So let's do three and four click Run and I click many many times and it's always seven and this is what
+
+05:37.440 --> 05:48.280
+we call referential transparency and referential transparency simply means if I completely change this
+
+05:48.280 --> 05:54.290
+function to the number seven will affect any part of my program.
+
+05:54.400 --> 06:03.010
+For example if I had function b here and function b takes a number and it multiplies this number by
+
+06:03.010 --> 06:03.340
+two
+
+06:07.910 --> 06:19.280
+if I do B and because functions are first class citizens in javascript I can say a 3 and 4 here.
+
+06:19.280 --> 06:25.400
+So I'm calling the inner function here and then calling B let's see what happens.
+
+06:25.700 --> 06:37.540
+I get 14 referential Transparency says if I change this to 7 will it have any effect on the program.
+
+06:37.670 --> 06:39.200
+And no it doesn't.
+
+06:39.200 --> 06:45.800
+Because of this rule no matter what my input if they're the same it's always going to give me the same
+
+06:46.130 --> 06:52.940
+output and as a matter of fact these functions also have no side effects right.
+
+06:53.020 --> 06:55.250
+They're not touching any of the outside world.
+
+06:55.320 --> 07:00.020
+They're only touching their own parameters and parameters.
+
+07:00.030 --> 07:08.500
+If you remember are local variables to review the biggest thing in functional programming and we'll
+
+07:08.500 --> 07:11.300
+find out why this is such a big deal.
+
+07:11.350 --> 07:22.260
+Later on as well the idea with pure functions is that it makes functions very easy to test very easy
+
+07:22.260 --> 07:29.490
+to compose and it avoids a lot of bugs because we have no mutations no shared state.
+
+07:29.550 --> 07:34.870
+We have these predictable functions that minimize the bugs in our code.
+
+07:35.100 --> 07:39.530
+But is it possible to have pure functions everywhere.
+
+07:39.570 --> 07:42.620
+Can you have a 100 percent pure functions.
+
+07:42.780 --> 07:45.780
+Think about that and let's answer that in the next video.
+
+07:45.990 --> 07:46.260
+By.

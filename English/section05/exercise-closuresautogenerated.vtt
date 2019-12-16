@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.600 --> 00:01.670
+Welcome back.
+
+00:01.710 --> 00:11.200
+Let's do a fun little exercise if I run this function call me maybe what is going to happen this should
+
+00:11.200 --> 00:16.090
+be fairly obvious right if I run.
+
+00:16.140 --> 00:27.490
+Call Me Maybe we're using set time out here and if I run I wait a few seconds four seconds and then
+
+00:27.790 --> 00:28.390
+look at that.
+
+00:28.440 --> 00:29.020
+Hi.
+
+00:29.230 --> 00:30.800
+I am now here.
+
+00:31.150 --> 00:32.510
+I get a callback.
+
+00:32.590 --> 00:34.520
+That's great.
+
+00:34.540 --> 00:40.860
+And what do we use here for us to do this if you've guessed closures.
+
+00:40.890 --> 00:41.280
+Good.
+
+00:41.280 --> 00:49.150
+You've been paying attention because we have a function in here that if you remember the way set time
+
+00:49.200 --> 00:58.770
+works is it gets sent to the web API to start a timer for four seconds and then once that timer is gone
+
+00:59.160 --> 01:08.460
+we send this piece of code to the callback queue and the callback queue is going to wait there until
+
+01:08.580 --> 01:10.310
+the call stack is empty.
+
+01:10.440 --> 01:12.510
+So call me maybe has been called.
+
+01:12.840 --> 01:22.210
+It's now popped off the stack and the event loop is going to push this function onto the stack and run
+
+01:22.220 --> 01:25.070
+it and it's going to console log.
+
+01:25.150 --> 01:27.000
+Call me now.
+
+01:27.340 --> 01:34.290
+This variable call me has technically well it should have been gone right.
+
+01:34.300 --> 01:42.100
+Call Me Maybe has been popped off the stack by the time this line gets run but because of closures and
+
+01:42.100 --> 01:51.220
+yes even if some of the functions go all the way out to the web API world well they still use closures
+
+01:51.580 --> 02:00.480
+and we're able to remember this variable because of closures so let me ask you this based on what you
+
+02:00.480 --> 02:10.630
+know about closures if I remove that variable from out there and I put it down here what's going to
+
+02:10.630 --> 02:12.590
+happen.
+
+02:12.700 --> 02:14.980
+Can you guess before I hit run.
+
+02:14.980 --> 02:26.240
+Think about this and let's find out I run the function I wait I wait and I got a back.
+
+02:26.290 --> 02:28.820
+Why is that well.
+
+02:28.900 --> 02:34.440
+Because it doesn't matter where we define this variable.
+
+02:34.660 --> 02:39.910
+Yes even if it's const that doesn't get hoisted we don't care about hoisting here.
+
+02:40.030 --> 02:50.240
+Instead this piece of code goes all the way into web API world gets put on the callback queue the event
+
+02:50.240 --> 02:52.910
+loop pushes it back onto the stack.
+
+02:53.060 --> 03:02.100
+But by that time we already ran this function concert Call Me has already been created and assigned
+
+03:02.790 --> 03:10.690
+and because it sees that there's an enclosing function that is using it it's going to create a closure.
+
+03:10.740 --> 03:13.520
+How cool is that.
+
+03:13.530 --> 03:16.350
+All right let's take a break and do some more exercises.
+
+03:16.380 --> 03:17.970
+I'll see you in the next one by.

@@ -1,0 +1,397 @@
+WEBVTT
+
+00:00.330 --> 00:01.490
+Hello.
+
+00:01.740 --> 00:03.000
+Welcome back.
+
+00:03.000 --> 00:10.350
+In this video we're going to combine everything that we just learned to show you why javascript is useful
+
+00:10.560 --> 00:13.370
+because I know some of your thinking.
+
+00:13.610 --> 00:13.820
+OK.
+
+00:13.830 --> 00:21.090
+We learned a whole bunch of new ways of writing javascript and we learned about arrays and objects but
+
+00:21.390 --> 00:27.180
+I don't really know how that relates to me building Web sites or Web apps.
+
+00:27.180 --> 00:33.950
+Well I'm going to show you that we can build a simplified version of Facebook with what we just learned
+
+00:35.190 --> 00:36.740
+so let's get started.
+
+00:36.750 --> 00:43.130
+We're gonna have a database with usernames and passwords we're going to have a news feed and we're gonna
+
+00:43.140 --> 00:44.760
+have users.
+
+00:44.760 --> 00:50.830
+So let's start off by thinking about how Facebook works with Facebook.
+
+00:50.940 --> 00:59.940
+We have a sign up form usually we need to sign in and once we sign in if it's correct it goes to our
+
+01:00.000 --> 01:08.370
+profile where we can view our news feed so let's build that we can start off with having something called
+
+01:08.850 --> 01:09.690
+a database.
+
+01:10.140 --> 01:11.870
+So we'll have a variable database.
+
+01:12.450 --> 01:16.740
+And in this database we can have multiple users.
+
+01:16.740 --> 01:17.270
+Right.
+
+01:17.280 --> 01:18.900
+So what do we need here.
+
+01:18.900 --> 01:23.150
+We need an array a list of users.
+
+01:23.180 --> 01:24.740
+So now I can say
+
+01:28.060 --> 01:33.980
+I have a user name and this might look familiar from our previous lessons.
+
+01:34.150 --> 01:42.500
+We'll have a user name of Andre and a password of super secret.
+
+01:42.740 --> 01:46.610
+For now we're just going to leave it at one user.
+
+01:46.640 --> 01:50.640
+We have a database and we also want to have a news feed right.
+
+01:50.660 --> 01:54.200
+So let's have a variable called news feed.
+
+01:54.760 --> 01:56.660
+And in here a news feed.
+
+01:56.660 --> 02:14.820
+Well again it's a list an array of news so we can have a user name Bobby that on his timeline has maybe
+
+02:15.540 --> 02:22.160
+so tired from all that learning.
+
+02:22.190 --> 02:26.110
+We also have we we have more than one item usually in a news feed.
+
+02:26.120 --> 02:42.200
+We can say that user name Sally Sally on her timeline just posted javascript is so cool OK.
+
+02:42.510 --> 02:52.960
+So we have a new seed which has an array of objects and we have a database which is an array of just
+
+02:52.960 --> 02:56.890
+a single object right now a username and password.
+
+02:56.900 --> 03:01.280
+Now how can we build a sign and form.
+
+03:01.280 --> 03:10.620
+Well we would want to perform an action to check a user's credentials their username and password well
+
+03:10.620 --> 03:11.980
+we've done this before right.
+
+03:12.010 --> 03:25.650
+We've used prompt before accepts a user's input so we can do variable user name prompt we'll say equals
+
+03:25.680 --> 03:26.190
+prompt
+
+03:29.620 --> 03:35.640
+what's your user name OK.
+
+03:35.700 --> 03:36.870
+We also have.
+
+03:36.870 --> 03:39.260
+I'm going to make this smaller just so everything fits in here.
+
+03:39.270 --> 03:50.690
+Hopefully you can still see we have variable password prompt that equals prompt.
+
+03:50.890 --> 03:52.950
+What's your password.
+
+03:54.100 --> 04:05.670
+Question mark OK so we have this working when we open up this file and refresh H2 e-mail is gonna get
+
+04:05.670 --> 04:06.370
+loaded.
+
+04:06.420 --> 04:11.240
+Line by line and we see we have a script.
+
+04:11.290 --> 04:17.590
+Let me load the script and then the browser reads line by line.
+
+04:17.590 --> 04:18.990
+We have a database.
+
+04:19.210 --> 04:25.240
+We have a news feed and then it's going to say user name prompt equals prompt and it's going to ask
+
+04:25.240 --> 04:30.480
+us for what's your user name and then it's going to ask us for what's your password.
+
+04:30.500 --> 04:32.410
+Well let's just test that.
+
+04:32.410 --> 04:35.380
+I'm going to save and refresh and there you go.
+
+04:35.380 --> 04:37.530
+What's your new user name Andre.
+
+04:38.740 --> 04:43.180
+And what's your password super secret.
+
+04:43.180 --> 04:47.080
+That's very nice but when I sign in.
+
+04:47.080 --> 04:54.970
+I either want to know that my password is incorrect or if I log in and everything is correct I'm gonna
+
+04:55.000 --> 04:56.610
+get my niece fee right.
+
+04:57.890 --> 05:05.510
+So it sounds like we need to perform an action but we don't really have a sign in function in javascript
+
+05:05.510 --> 05:05.870
+do we.
+
+05:05.870 --> 05:13.040
+It's a custom function that we need to build ourself so let's think about this.
+
+05:13.050 --> 05:20.930
+We want to create a function called sign in and to sign in what do we need.
+
+05:20.930 --> 05:29.130
+Well we need a user name and password and we can name these whatever we want.
+
+05:29.160 --> 05:32.400
+And just to prove that to you I'm just gonna do user
+
+05:35.150 --> 05:36.350
+and password.
+
+05:36.680 --> 05:39.360
+We'll do pass like that OK.
+
+05:39.480 --> 05:43.530
+And if we remember to create a function this is function declaration.
+
+05:43.620 --> 05:47.850
+I have my curly brackets and in here I can do something.
+
+05:48.270 --> 05:53.710
+So again let's think about this logically in order to sign in.
+
+05:53.750 --> 05:56.870
+I need to check username and password.
+
+05:57.560 --> 06:08.920
+Well if the function gets the first argument to user Bill I can say that if user name on this case user
+
+06:10.720 --> 06:11.620
+equals.
+
+06:11.890 --> 06:12.850
+Well what does it equal.
+
+06:12.850 --> 06:17.090
+We need to check against our database right.
+
+06:17.290 --> 06:25.720
+Our database when Andre signed up for Facebook he put his user name down and password down so we have
+
+06:25.720 --> 06:28.600
+that information so we can say that when you sign in.
+
+06:28.600 --> 06:34.390
+We're gonna check user to see that the user matches database.
+
+06:35.530 --> 06:36.810
+And it's an array.
+
+06:37.000 --> 06:45.580
+So we're gonna grab the first element in the array and we're gonna grab the user name
+
+06:50.010 --> 06:50.920
+OK.
+
+06:51.060 --> 06:55.260
+And we also want to check the password drain.
+
+06:55.290 --> 07:03.110
+So what do we do when we have to check two things both a conditional that has and so here I can say
+
+07:03.890 --> 07:11.240
+password should equal database first item in the array.
+
+07:11.240 --> 07:17.460
+And this time instead of username it's password I'm going to put this on our new line just so you can
+
+07:17.460 --> 07:18.100
+see it.
+
+07:18.120 --> 07:29.360
+There you go so sign and function is going to say if user equals whatever we have in the database username
+
+07:29.810 --> 07:33.690
+and password equals whatever we have in the database.
+
+07:33.800 --> 07:36.110
+If that is right.
+
+07:36.170 --> 07:38.490
+Well we can say Soledad.
+
+07:38.560 --> 07:48.390
+Log and we'll say news feed else if the password or username is not correct.
+
+07:48.400 --> 07:51.080
+We'll just stay alert.
+
+07:51.490 --> 07:55.060
+Sorry wrong user name and password
+
+07:58.930 --> 08:03.720
+so we have our function but this disappeared somewhere.
+
+08:04.920 --> 08:06.640
+And we'll save this.
+
+08:06.750 --> 08:11.400
+And let's just refresh OK what is your user name.
+
+08:11.440 --> 08:15.330
+We'll say Andre and what is your password.
+
+08:15.330 --> 08:18.280
+Well we'll say super secret.
+
+08:18.600 --> 08:19.880
+I press enter.
+
+08:19.980 --> 08:20.300
+OK.
+
+08:20.310 --> 08:25.580
+And now nothing happens because well we haven't called the function right.
+
+08:25.590 --> 08:27.760
+We just know that sign it exists.
+
+08:27.810 --> 08:29.550
+Let's just check that sign and exists.
+
+08:31.440 --> 08:37.270
+Sign in is not defined oh it's because I spelled it.
+
+08:37.740 --> 08:39.030
+I spelled it wrong.
+
+08:39.030 --> 08:40.110
+Let's do signing again.
+
+08:40.140 --> 08:51.120
+Let's refresh Andre super secret and if I look for a sign and now yep there's the function.
+
+08:51.310 --> 08:52.630
+So let's run it.
+
+08:52.630 --> 09:05.580
+Let's do sign in and we'll say user name prompt password prompt.
+
+09:05.730 --> 09:08.590
+We just received our news feed.
+
+09:08.640 --> 09:09.240
+That's very cool.
+
+09:09.270 --> 09:10.980
+Let's put this inside though.
+
+09:10.980 --> 09:15.900
+So the script just runs and and we'll get our answer right away.
+
+09:16.200 --> 09:25.440
+So we'll do user name prompt and password prompt now just to show you what I did here.
+
+09:25.600 --> 09:31.510
+I am calling the function signing that accepts two parameters user and password.
+
+09:32.390 --> 09:38.740
+So when I call the function I'm going to give it to arguments to match those parameters.
+
+09:38.900 --> 09:43.700
+I'm going to give it the user name prompt which contains whatever we've written in the first prompt
+
+09:44.240 --> 09:47.170
+and then password prompt which contains whatever we've written.
+
+09:47.180 --> 09:48.930
+And the second prompt.
+
+09:49.010 --> 09:56.230
+So now if I save this and refresh I can say what's your username Andre.
+
+09:56.480 --> 10:02.290
+Password super secret and look at that.
+
+10:02.420 --> 10:08.750
+Now I'm logged in and I can view that Bobby is so tired from all that learning and Sally Well Sally
+
+10:08.750 --> 10:16.250
+finds javascript really really cool let's also try out the L statement in case we mess up our information
+
+10:16.490 --> 10:24.740
+I press refresh and I'll do Andre and for password I'll just do one two three I'll get sorry wrong user
+
+10:24.740 --> 10:27.510
+name and password.
+
+10:27.580 --> 10:28.590
+There you go.
+
+10:28.720 --> 10:35.560
+We've built a basic Facebook and that's what's so amazing about JavaScript is that you look at Web sites
+
+10:35.560 --> 10:41.380
+like Facebook that seem really really complicated but they're all made of these small chunks and the
+
+10:41.380 --> 10:48.900
+functionality that you see on Facebook is exactly that we are signing in and they're checking the signing
+
+10:48.940 --> 10:55.000
+information against the database and then based on if we're right or wrong we either get the news feed
+
+10:55.000 --> 11:01.480
+or we get you know please sign in again and that's the power of JavaScript right here and this is why
+
+11:01.510 --> 11:07.690
+I'm so excited to teach you the topic because it opens up a whole new possibility of pretty much doing
+
+11:07.900 --> 11:14.270
+anything online now I have another exciting video for you coming up next.
+
+11:14.570 --> 11:16.190
+I'll see you on that one by.

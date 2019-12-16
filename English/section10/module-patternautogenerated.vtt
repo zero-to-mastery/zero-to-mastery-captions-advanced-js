@@ -1,0 +1,388 @@
+WEBVTT
+
+00:00.750 --> 00:01.880
+Welcome back.
+
+00:01.890 --> 00:10.200
+Let's show you the very first way that we had modules in JavaScript or used the concept of modules in
+
+00:10.200 --> 00:11.290
+JavaScript.
+
+00:11.370 --> 00:19.710
+It was called the module pattern and I'm going to just comment this code out for now so we can talk
+
+00:19.710 --> 00:24.300
+about the module pattern a bit as we've discussed modules.
+
+00:24.340 --> 00:30.430
+Give us a better way to organize these variables and functions so that we can group these variables
+
+00:30.430 --> 00:36.610
+and functions that make sense together in terms of organizing things in JavaScript.
+
+00:36.610 --> 00:45.940
+We had the idea of the global scope and then we had the idea of the function scope and that's what we
+
+00:45.940 --> 00:47.230
+had in Javascript.
+
+00:47.320 --> 00:54.730
+I mean now we also have a concept with of the block scope which we've discussed that we get with left
+
+00:55.470 --> 01:05.260
+and const but before that we just had these two different scopes but ideally in an ideal world we have
+
+01:05.280 --> 01:12.670
+a another scope which is the module scope that is actually a little bit higher up than the function
+
+01:12.670 --> 01:19.840
+scope so that we can combine multiple functions together under this module scope but still not pollute
+
+01:19.870 --> 01:28.140
+our global namespace and this module scope can be used to share these variables between different functions
+
+01:28.140 --> 01:35.480
+as well so that we can share things without having to go through the global scope in this way with a
+
+01:35.480 --> 01:38.560
+module scope we can be explicit.
+
+01:38.780 --> 01:43.730
+Which of the variables classes or functions in the module should be available.
+
+01:43.730 --> 01:51.010
+We can say hey this module module one I want you to export this and this function and then inside of
+
+01:51.010 --> 01:56.740
+another module we can say hey this module I want you to import this and this function from this other
+
+01:56.830 --> 02:01.200
+module that's as being explicit saying directly hey this is what I want.
+
+02:01.210 --> 02:02.380
+This is what I'm importing.
+
+02:02.380 --> 02:10.860
+This is what I'm exporting and we were able to create this module scope this module pattern well with
+
+02:10.860 --> 02:13.980
+something called the module pattern.
+
+02:13.980 --> 02:19.680
+You see programmers in JavaScript land because we didn't really have classes got clever and we decided
+
+02:19.680 --> 02:26.780
+to use closure and encapsulation to create our own module scope and this is what it looked like
+
+02:30.030 --> 02:40.140
+function expression because it is in brackets and then executing it we've seen this before right.
+
+02:40.170 --> 02:49.350
+It's an immediately invoked function expression or and if he because we are wrapping it in a bracket
+
+02:50.020 --> 02:56.590
+Well it's not a function declaration because the first thing that the compiler sees won't be function
+
+02:56.950 --> 03:01.720
+and then we're immediately invoking it calling the function like this.
+
+03:02.230 --> 03:10.180
+So we're using the idea that we have function scope to simply just write all our code in here that will
+
+03:10.180 --> 03:17.810
+be private to this function but we also have the ability to access global variables.
+
+03:18.220 --> 03:25.410
+So I can still access the window object or any variable outside of it and this is essentially a function
+
+03:25.560 --> 03:34.530
+as a module because if we wrap the entire file let's say in our case our Harry Potter example if I just
+
+03:34.530 --> 03:38.550
+put the entire piece of code here.
+
+03:38.800 --> 03:44.470
+Now we've removed everything from the global scope this file still gets run.
+
+03:44.470 --> 03:55.870
+For example if I do fight here Harry and Baltimore and let's just console log this if I save and refresh
+
+03:55.870 --> 04:04.180
+here look at that we are able to run this function over and over and I'm refreshing refreshing
+
+04:06.930 --> 04:10.660
+and every once in a while Harry Potter wins as well.
+
+04:10.660 --> 04:18.510
+There you go but I don't have access to fight anymore or we have access to fight over here.
+
+04:18.780 --> 04:24.160
+But if we comment this out and save and refresh.
+
+04:24.900 --> 04:26.200
+Fight is not defined.
+
+04:26.220 --> 04:27.480
+What about Harry.
+
+04:27.480 --> 04:29.400
+Harry is not defined either.
+
+04:29.400 --> 04:38.900
+We've removed global name spaces but what if we wanted other scripts to use this fight function.
+
+04:38.990 --> 04:44.750
+But we don't really want them to touch Harry or Voldemort because while they're private variables using
+
+04:44.750 --> 04:53.480
+an iffy and the module pattern I can simply say variable fight module equals this entire thing.
+
+04:53.480 --> 05:03.770
+So this which we call the module pattern allows us to assign to this variable whatever the return of
+
+05:03.770 --> 05:12.120
+this function is that gets immediately invoked so we run this function and then something gets returned
+
+05:12.120 --> 05:20.010
+to fight module so I can simply say in here return and whatever we want to make available in our case
+
+05:20.010 --> 05:26.190
+we want to return an object that contains fight and we don't want to return Harry and Voldemort because
+
+05:26.250 --> 05:30.810
+those are private variables so let's have a look at this works.
+
+05:31.990 --> 05:43.020
+If I refresh your and I do fight look at that under my fight module I have the object fight.
+
+05:43.100 --> 05:47.030
+Now keep in mind if I do just fight here on that window object.
+
+05:47.030 --> 05:48.350
+No that's an error.
+
+05:48.440 --> 05:56.030
+It's not a global variable but under our fight module that we've created I can call fight and do different
+
+05:56.030 --> 05:56.990
+things like Ron
+
+05:59.960 --> 06:09.080
+vs. let's say Hagrid and if I run this look at that Hagrid wins and other pieces of code can now use
+
+06:09.500 --> 06:12.820
+this functionality but only what I tell it to.
+
+06:13.010 --> 06:18.020
+Essentially what we're doing is saying hey this is our public API.
+
+06:18.110 --> 06:19.490
+This is our interface.
+
+06:19.520 --> 06:23.250
+We're only exporting this but everything else that I'm not exporting.
+
+06:23.240 --> 06:31.400
+You can't touch how cool is that and this pattern of returning what we need is actually called the revealing
+
+06:31.490 --> 06:32.360
+module pattern.
+
+06:32.450 --> 06:38.890
+We just reveal whatever we need so we can have private functions if we want.
+
+06:38.890 --> 06:43.060
+So private functions that we don't export.
+
+06:43.060 --> 06:44.080
+We can have those.
+
+06:44.080 --> 06:51.730
+If we wanted to we can have private variables and we just specifically say what we want to give up to
+
+06:51.730 --> 06:52.990
+the public.
+
+06:53.260 --> 07:00.370
+And as we know because of closure even though this function gets executed because we returning a function
+
+07:00.400 --> 07:03.340
+inside of a function this fight function.
+
+07:03.340 --> 07:10.680
+For example if we call it we'll still have access to Harry and Voldemort if we really wanted to.
+
+07:10.710 --> 07:20.220
+Now the other benefit of this was used by libraries like Jacqui for example when people used to use
+
+07:20.220 --> 07:22.120
+J query a lot on their Web sites.
+
+07:22.200 --> 07:30.220
+And I have the script here to grab our where file from a CDM let's copy that and added to the top over
+
+07:30.220 --> 07:32.720
+here.
+
+07:32.770 --> 07:38.530
+Now this allows us to have a J query global import.
+
+07:38.560 --> 07:46.550
+If I save this let me say this as well if I go back to indexed on a Schimmel and refresh and do J query
+
+07:47.540 --> 07:54.240
+look at that we have access to J query now because we've added and underneath the hood This is what
+
+07:54.300 --> 08:03.930
+J query is doing it saying hey I'm going to define a J query variable that I'll return and this J query
+
+08:03.930 --> 08:10.200
+variable Well it's going to have access to different things not everything in our library but some things
+
+08:10.200 --> 08:11.520
+that you might need.
+
+08:11.820 --> 08:21.570
+For example if I use another script tack here and inside of this script Dag let's just we won't need
+
+08:21.570 --> 08:30.910
+to create a new file would just write it over here we can see a variable script two is going to equal
+
+08:31.000 --> 08:39.490
+while we can create our own module pattern saying function and inside of here we can actually use J
+
+08:39.500 --> 08:47.270
+query using the dollar sign which we get access to so if I do dollar sign and then select the h1 tag
+
+08:47.360 --> 08:55.940
+which we have over here the hello and then do quick and then inside of here we have a callback function
+
+08:58.430 --> 09:04.730
+that will just select the H1 and it will just
+
+09:09.700 --> 09:15.280
+so that if I save this and refresh and I click here.
+
+09:15.280 --> 09:15.800
+Look at that.
+
+09:15.880 --> 09:16.720
+It disappears.
+
+09:16.720 --> 09:25.050
+My H won and the beauty of this pattern is that whatever I define in here well won't get touched.
+
+09:25.060 --> 09:33.370
+For example if I bring back another script and this time around we have the we have a global secret
+
+09:33.940 --> 09:35.580
+and variable fight.
+
+09:35.800 --> 09:38.080
+Well this global secret.
+
+09:38.080 --> 09:41.840
+If I wanted to I have access to it in here.
+
+09:42.040 --> 09:46.360
+So let's have global secret and I'm going to make it equal to
+
+09:49.070 --> 09:50.960
+to zero.
+
+09:50.960 --> 09:59.980
+If I see this and refresh if I do global secret it's now zero.
+
+10:00.000 --> 10:00.680
+Hmm.
+
+10:00.930 --> 10:01.890
+That's not good right.
+
+10:01.890 --> 10:08.360
+We just modified a now they're global variable so how can we solve this.
+
+10:08.370 --> 10:09.900
+Well what if.
+
+10:09.900 --> 10:18.500
+Here we import our global secret which is available in our global scope.
+
+10:18.500 --> 10:27.230
+Right over here we call the function with global secret and we pass it in as a parameter and we can
+
+10:27.230 --> 10:28.220
+name it whatever we want.
+
+10:28.250 --> 10:36.330
+We can say global secret or we can just say gee s for short so that if we use GSK now
+
+10:39.470 --> 10:43.730
+and I safe here the global secret remains the same.
+
+10:43.890 --> 10:45.300
+But if I do G.S.
+
+10:50.980 --> 10:58.600
+Well we don't have access to it because it's inside of our module just to clarify this point.
+
+10:58.620 --> 11:00.590
+If I do global secret here.
+
+11:00.600 --> 11:01.770
+So it's the same thing.
+
+11:01.890 --> 11:03.430
+And it's the same name.
+
+11:03.570 --> 11:11.800
+If I change this to global secret just like it was before and I refresh global secret is still one two
+
+11:11.800 --> 11:21.490
+three four because when it comes to JavaScript and we say hey I want global secret to be zero the JavaScript
+
+11:21.490 --> 11:27.400
+engine is going to look and say hey local scope do you have global secret.
+
+11:27.400 --> 11:34.690
+And it's going to say yep I have global secret secret it's in my parameter as part of our variable environment.
+
+11:34.720 --> 11:36.430
+So I'm going to modify that.
+
+11:36.520 --> 11:42.240
+So it's not going to go up the scope chain to the global variable to change that.
+
+11:42.250 --> 11:50.120
+I hope you see the power in that because this way I can start adding to inside of my modules things
+
+11:50.120 --> 11:59.000
+like Jacqui and now Jake we're in here I can define it whatever I want such as the dollar sign.
+
+11:59.000 --> 12:09.410
+This will still work but if for some mistake I modify the dollar sign within this code to equal to normal
+
+12:09.780 --> 12:11.040
+or undefined
+
+12:13.610 --> 12:16.550
+Well the dollar sign or J.
+
+12:16.550 --> 12:24.620
+Query is still there the dollar sign it's still there because we're not modifying anything outside of
+
+12:24.650 --> 12:35.280
+ourself so using the module pattern we're able to make something available to the outside world using
+
+12:35.430 --> 12:44.800
+a public API like this by returning it and attaching it to a variable we're exporting things and other
+
+12:45.160 --> 12:52.570
+modules can explicitly say hey I want to use this global variable and be explicit about what they're
+
+12:52.570 --> 12:59.440
+using so that it makes our code more clear as to what we need from the global variable.
+
+12:59.470 --> 13:04.780
+Now let's take a break here and in the next video talk about some of the benefits with the module pattern.

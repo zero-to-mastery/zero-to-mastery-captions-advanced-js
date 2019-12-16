@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00.450 --> 00:01.580
+Welcome back.
+
+00:01.620 --> 00:04.710
+It's time to get into functional programming.
+
+00:04.800 --> 00:12.600
+The other major programming paradigm and in this section we're gonna be getting deep into functional
+
+00:12.600 --> 00:20.820
+programming turning a code into functional code and also talking about things such as curing partial
+
+00:20.820 --> 00:27.270
+applications pure functions Referential transparency composing and piping.
+
+00:27.270 --> 00:33.000
+There's gonna be a lot of new terms that will uncover in this section but don't worry I'll show you
+
+00:33.000 --> 00:38.940
+how they're gonna be useful to us how they're going to make us better coders and we're also going to
+
+00:38.940 --> 00:47.280
+finish up the section by talking about composition versus inheritance what then means and also comparing
+
+00:47.280 --> 00:50.310
+functional programming to object oriented programming.
+
+00:50.340 --> 00:54.300
+What are the pros and cons when should you use one over the other.
+
+00:54.510 --> 01:00.270
+And hopefully by the end of it all you're a better programmer because you understand these two paradigms
+
+01:00.540 --> 01:05.080
+and how you can use them to improve your programs your code.
+
+01:05.340 --> 01:09.470
+Now functional programming has existed for over 60 years.
+
+01:09.720 --> 01:16.810
+Lisp which is a very popular functional programming language was first developed in nineteen fifty eight
+
+01:17.400 --> 01:24.510
+and the idea of functional programming originates from mathematics from something called lambda calculus.
+
+01:24.510 --> 01:27.490
+And sometimes it can get very confusing.
+
+01:27.510 --> 01:33.480
+However in recent years the popularity of functional programming has really surged.
+
+01:33.480 --> 01:41.070
+Now why is that programming languages that are built with functional programming in mind such as Haskell
+
+01:41.460 --> 01:43.500
+scalar closure.
+
+01:43.770 --> 01:49.680
+They work really really well when it comes to distributed computing where there's multiple machines
+
+01:49.710 --> 01:57.870
+interacting with data and also parallelism which is machines working on the same data at the same time
+
+01:59.240 --> 02:07.850
+and also in javascript libraries like redux and even react have really popularized the idea of functional
+
+02:07.850 --> 02:09.880
+programming among other things.
+
+02:09.920 --> 02:19.090
+So all this talk about functional programming what is it actually and how can we use it as programmers.
+
+02:19.100 --> 02:26.870
+Well by the end hopefully you'll find this cartoon funny and you understand what functional programming
+
+02:26.870 --> 02:27.600
+is.
+
+02:27.830 --> 02:28.450
+Let's get started.

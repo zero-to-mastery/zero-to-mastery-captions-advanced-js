@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.840 --> 00:01.870
+Welcome back.
+
+00:01.890 --> 00:05.010
+Let's talk a little bit more about inheritance.
+
+00:05.010 --> 00:14.250
+When we created make fort here that is we created our own method just for the ogre class.
+
+00:14.520 --> 00:20.930
+What we actually did underneath the hood was we extended the prototype right.
+
+00:21.660 --> 00:30.450
+It's like saying ogre dot prototype dot make for it and you can see over here that's even showing me
+
+00:30.450 --> 00:40.290
+that I have make for it underneath the hood javascript created this for us because we used class keyword.
+
+00:41.250 --> 00:45.160
+And I think it looks a lot nicer than having to use prototype.
+
+00:45.180 --> 00:48.490
+We've done that before and it got a little confusing.
+
+00:48.600 --> 00:55.530
+Now the cool part about this beyond the fact that it just looks a lot cleaner things just make sense
+
+00:55.560 --> 01:03.090
+and we're using some really important object oriented principles like classes and extending and creating
+
+01:03.180 --> 01:08.040
+subclasses and using the new keyword to create instances.
+
+01:08.040 --> 01:15.840
+We're also using underneath the hood the prototype of inheritance of javascript to make these inheritance
+
+01:16.380 --> 01:22.620
+prototype chains between our objects to test that.
+
+01:22.640 --> 01:24.650
+Everything is linked properly.
+
+01:24.680 --> 01:26.200
+Let's do a few tests.
+
+01:26.300 --> 01:41.420
+Let's say that we want console dialogue to have let's say ogre is prototype of what is ogre a prototype
+
+01:41.420 --> 01:55.290
+of well if I do Shrek here and I run faults because again this is a little tricky ogre is a constructor
+
+01:55.290 --> 02:04.580
+function we want to check ogre dot prototype which is the object that contains all the properties and
+
+02:04.580 --> 02:06.460
+methods we have available.
+
+02:06.500 --> 02:13.800
+So if I do this and run I get true awesome.
+
+02:13.930 --> 02:17.270
+What if I do something like this.
+
+02:17.350 --> 02:22.710
+What if I do character dot prototype.
+
+02:22.750 --> 02:29.580
+Is that a prototype of ogre if I run this.
+
+02:29.830 --> 02:31.900
+And let's spell that correctly.
+
+02:31.900 --> 02:33.640
+Let's try this.
+
+02:33.640 --> 02:37.920
+I get false again and we have to remember ogre dot prototype.
+
+02:37.960 --> 02:46.170
+If I run I get true all right all this prototype stuff is a little bit confusing.
+
+02:46.210 --> 02:51.300
+There's a better way to check these connections using the instance of keyword.
+
+02:51.310 --> 02:52.630
+So let's do that.
+
+02:52.630 --> 03:05.270
+I can say Dolby is that an instance of health the elf class yep it's an instance of ELF class.
+
+03:05.390 --> 03:06.240
+That's great.
+
+03:06.470 --> 03:11.990
+Is it an instance of ogre.
+
+03:12.000 --> 03:14.620
+No it's not an instance of ogre.
+
+03:14.640 --> 03:18.560
+What about character.
+
+03:18.710 --> 03:27.470
+Is it an instance of character yet it's an instance of character because well it extends all the way
+
+03:27.530 --> 03:37.670
+up from character so remember that distinction instance is when we use the new keyword from a class
+
+03:37.820 --> 03:46.670
+we create an instance of a class instance is essentially creating a version of the class inheritance
+
+03:46.970 --> 03:54.350
+which is what we do with the keyword extends is inheriting something from a higher class inheritance
+
+03:54.410 --> 03:59.180
+in JavaScript doesn't actually copy our functionality.
+
+03:59.480 --> 04:03.350
+It doesn't just simply copy whatever we have in character.
+
+04:03.350 --> 04:07.070
+Instead it simply links up the prototype chain.
+
+04:07.100 --> 04:14.350
+So you're not creating copies and making things inefficient instead whenever it doesn't find something
+
+04:14.410 --> 04:22.810
+let's say on the ogre class it's going to look up to the ogres superclass which is character.
+
+04:22.810 --> 04:28.210
+So it's creating these efficient linking in JavaScript using prototype all inheritance.
+
+04:28.540 --> 04:37.840
+And I want to remind you unlike other class based languages javascript is well just objects it's objects
+
+04:37.840 --> 04:39.180
+inheriting from objects.
+
+04:39.220 --> 04:40.300
+That's it.
+
+04:40.300 --> 04:48.080
+There are no technical classes in languages like Java on the other hand they have classes that well
+
+04:48.640 --> 04:49.870
+are actual classes.
+
+04:49.880 --> 04:54.200
+There are things and classes inherit from classes.
+
+04:54.230 --> 05:00.390
+The interesting thing is that languages like Java and C++ actually copy objects.
+
+05:00.620 --> 05:09.050
+When we do something like extend instead of what we do with JavaScript which is that we link and the
+
+05:09.140 --> 05:15.490
+objects are referenced there's actually a bit of efficiency there in terms of memory.
+
+05:15.530 --> 05:22.460
+All right let's finish off and wrap all of this up into what we've learned about object oriented programming
+
+05:22.460 --> 05:23.310
+so far.
+
+05:23.480 --> 05:25.330
+I'll see in the next video by.

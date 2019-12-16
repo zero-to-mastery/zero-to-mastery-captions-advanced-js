@@ -1,0 +1,70 @@
+WEBVTT
+
+00:00.710 --> 00:01.880
+Welcome back.
+
+00:01.940 --> 00:03.630
+Let's do an exercise.
+
+00:03.920 --> 00:11.870
+Let's say I have a function called initialize in this function Initialize is let's say a view of some
+
+00:11.870 --> 00:12.200
+sort.
+
+00:12.200 --> 00:14.280
+Perhaps it's a web page.
+
+00:14.390 --> 00:20.430
+And this is the first functions that initialize is the view of your web page.
+
+00:20.440 --> 00:29.260
+Now you want to create this function but you're also hoping that people don't abuse it because we have
+
+00:29.260 --> 00:31.120
+it out in the open in the global scope.
+
+00:31.630 --> 00:38.920
+So people maybe somebody that's new on your developer team comes in and by mistake doesn't know that
+
+00:38.920 --> 00:46.090
+this thing should be only called once and instead in their code they initialize a bunch of times and
+
+00:46.150 --> 00:49.210
+maybe this is not what you wanted to do.
+
+00:49.510 --> 00:56.650
+So that when I run this you see that we set the view three times perhaps even resetting the web page
+
+00:56.740 --> 00:59.480
+and what the user was doing currently on the web page.
+
+00:59.500 --> 01:00.280
+That's not good.
+
+01:00.310 --> 01:01.150
+That's a bug.
+
+01:01.150 --> 01:02.120
+Right.
+
+01:02.140 --> 01:10.930
+So using what you know about closures can you turn this function into a function that can only be called
+
+01:11.200 --> 01:19.930
+once so that even though somebody might abuse it and run it a bunch of times as long as the function
+
+01:20.020 --> 01:22.500
+has been run once.
+
+01:22.630 --> 01:25.480
+Well it's only going to run that one time.
+
+01:25.900 --> 01:28.660
+Give it a go and in the next video we'll see what we can do.
+
+01:29.290 --> 01:30.670
+I'll see in the next one.
+
+01:30.690 --> 01:30.880
+Bob.

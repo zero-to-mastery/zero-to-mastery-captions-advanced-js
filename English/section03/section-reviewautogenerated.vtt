@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.600 --> 00:02.550
+Holy moly.
+
+00:02.550 --> 00:06.780
+Finally done with the foundations.
+
+00:06.780 --> 00:10.500
+We're gonna get to some exciting parts but what do we learn so far.
+
+00:11.460 --> 00:19.570
+Well we learned how the JavaScript engine and the compilers and how a language is read and execute it
+
+00:19.590 --> 00:20.350
+right.
+
+00:20.430 --> 00:28.530
+And then once a language like Javascript is executed we learned about execution context how every function
+
+00:28.560 --> 00:31.440
+invocation creates an execution context.
+
+00:31.500 --> 00:36.330
+We learned about lexical environment where we write our code is important.
+
+00:36.330 --> 00:43.580
+We learned about the scope chain a way for us to look for variables and see what we have access to.
+
+00:43.590 --> 00:50.610
+We learned about an interesting feature that is hoisting how javascript does this weird thing that hoists
+
+00:50.820 --> 00:57.920
+function declarations and variable declarations we learned about function invocation and some of the
+
+00:57.920 --> 01:05.100
+interesting properties when we create new functions such as getting the arguments parameter or sometimes
+
+01:05.130 --> 01:07.490
+even modifying the this keyword.
+
+01:07.800 --> 01:14.370
+We learned about function scope and block scope and how in JavaScript originally we only had function
+
+01:14.370 --> 01:20.820
+scope but with the new let and const keywords we can use some block scoping.
+
+01:21.000 --> 01:28.290
+We learned about dynamic and lexical scope how javascript just has lexical scope except for this little
+
+01:28.290 --> 01:37.500
+thing called the this keyword that has dynamic scoping that is it gets determined what the this value
+
+01:37.500 --> 01:40.970
+is when the function is invoked.
+
+01:41.010 --> 01:50.210
+We also learned how to master this keyword the benefits of having this keyword how to use call apply
+
+01:50.210 --> 01:56.770
+and bind and we also learned about immediately invoked function expressions.
+
+01:56.770 --> 02:04.060
+Now especially these two this and the if this is something we're going to talk about later on in the
+
+02:04.060 --> 02:09.550
+course so we just scratched the surface with these things.
+
+02:09.550 --> 02:16.720
+But by now you should have the foundations of JavaScript done and we learned some really complex topics
+
+02:17.020 --> 02:20.470
+that really make you a great programmer.
+
+02:20.470 --> 02:22.220
+I hope you are having fun.
+
+02:22.270 --> 02:28.040
+I know that was a tough big section but trust me things are gonna get better and better.
+
+02:28.180 --> 02:34.720
+And as we progress through the course you'll see how the foundations that we've laid out are gonna help
+
+02:34.720 --> 02:40.210
+you expand and learn and become better and better as we progress through the course.
+
+02:40.210 --> 02:44.510
+So don't give up just yet because we have lots more to go through.
+
+02:44.590 --> 02:46.090
+I'll see you the next one.
+
+02:46.090 --> 02:46.570
+Bye bye.

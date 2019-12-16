@@ -1,0 +1,406 @@
+WEBVTT
+
+00:00.880 --> 00:02.130
+Welcome back.
+
+00:02.140 --> 00:04.290
+Welcome to our favorite function.
+
+00:04.300 --> 00:12.410
+Once again the same my name function that runs find my name that runs print name.
+
+00:12.700 --> 00:14.640
+And then finally prints the name.
+
+00:14.720 --> 00:19.040
+Now there's another piece to the puzzle.
+
+00:19.070 --> 00:24.970
+There is another part of the execution context that we have not discussed.
+
+00:25.100 --> 00:26.340
+And I know I know.
+
+00:26.420 --> 00:32.660
+Seems like a lot but trust me once you get this stuff and I know I'm repeating a lot of things but by
+
+00:32.660 --> 00:38.160
+repetition we should have this ingrained in our brains for the rest of our career.
+
+00:38.210 --> 00:39.070
+So bear with me.
+
+00:39.110 --> 00:45.080
+I know I say execution context a thousand times in a video but hopefully I'll stick to you even though
+
+00:45.080 --> 00:48.290
+you might get a little bit annoyed with me.
+
+00:48.430 --> 00:55.150
+Now this other piece of the puzzle when it comes to the execution context that we haven't discussed
+
+00:55.150 --> 01:02.460
+yet is that each world that is each context has a link to its outside world.
+
+01:03.540 --> 01:12.620
+Or a link to its parent and this outer environment depends on where the function sits lexical.
+
+01:13.020 --> 01:18.220
+We know that word right lexicon early means where the function is written.
+
+01:18.360 --> 01:23.190
+So let's figure out what that means in here.
+
+01:23.280 --> 01:33.380
+If I created a new variable let's call it variable X that equals x all of these functions fine name
+
+01:33.650 --> 01:43.370
+print name Say my name is going to be able to access this variable this global variable if I run console
+
+01:43.390 --> 01:54.140
+dialog X here in fine name even though fine name gets added to the stack at the very end.
+
+01:54.410 --> 01:57.000
+If I run this I don't get any errors.
+
+01:57.050 --> 02:07.300
+I have access to X all of these functions have access to the global scope let's see how this works in
+
+02:07.300 --> 02:15.780
+a diagram all of these functions have a global lexical environment that is they're written in the global
+
+02:15.780 --> 02:23.790
+space to not inside of another function just on the main page they just get attached to the window object
+
+02:23.820 --> 02:25.770
+or the global object.
+
+02:25.770 --> 02:33.990
+So all these functions have their own variable environment they have access to each their own variables
+
+02:34.860 --> 02:46.510
+but they also have this little link what we call a scope chain and this scope chain links and gives
+
+02:46.510 --> 02:52.210
+us access to variables that are in our parent environment.
+
+02:52.210 --> 02:54.490
+In this case the global environment.
+
+02:54.490 --> 03:03.550
+So when we assigned a variable x to x when I ran print name console log X it first looks in the variable
+
+03:03.550 --> 03:11.830
+environment and only sees the variable C here and says Hmmm I can't really find this year let me go
+
+03:12.010 --> 03:21.040
+up the scope chain or in this case down the scope chain and see if it's attached to my global lexical
+
+03:21.040 --> 03:28.800
+environment and it finds the x variable all the way down here off the screen and is able to console
+
+03:28.800 --> 03:38.820
+log X again if we go back to our code console log X works because well we can go down the scope chain
+
+03:39.300 --> 03:45.330
+the JavaScript engine is going to say Alright I have variable b but I don't have variable X let me go
+
+03:45.330 --> 03:52.500
+into my parent environment and I see X here I can log it and by the way in the diagram the console log
+
+03:52.890 --> 04:00.700
+was here in the print name but it's the same thing it's going to work both ways.
+
+04:00.890 --> 04:09.000
+Now what I just demonstrated to you is called scope or static scope to be exact.
+
+04:09.110 --> 04:16.430
+Remember this phrase that we saw before in JavaScript are lexical scope that is available data variables
+
+04:16.640 --> 04:24.410
+where the function was defined determines are available variables that means variables in our local
+
+04:24.410 --> 04:32.770
+environment or variable environment and it doesn't really matter where the function is called No matter
+
+04:32.800 --> 04:40.960
+where the function is on the execution stack what matters is where the function is written and there's
+
+04:40.970 --> 04:48.450
+an interesting characteristic of that right this idea of lexical scope which is also called static scope
+
+04:49.080 --> 04:57.150
+in a language means that only by looking at the source code we can determine which environment the variables
+
+04:57.180 --> 05:03.720
+in data are available in and that's what the compiler does the javascript compiler looks at the code
+
+05:03.780 --> 05:12.090
+and attaches all these scope chains before it even runs the code how cool is that because we have lexical
+
+05:12.090 --> 05:19.950
+scope we know what environments are linked to each other and we know what data can be accessed by which
+
+05:19.950 --> 05:28.030
+function and the scope chain starts where the variable is defined and goes all the way down to the global
+
+05:28.030 --> 05:34.570
+context to see if the variable exists so that's what scope means.
+
+05:34.610 --> 05:43.060
+Scope is hey where can I access that variable where's that variable in my code.
+
+05:43.170 --> 05:45.620
+Let's take this example a little bit further.
+
+05:45.930 --> 05:48.040
+Let's say I have a new function.
+
+05:48.150 --> 05:57.190
+Well it still does the same thing but it's written lexical me in a different way if I run say my name
+
+05:57.190 --> 06:03.370
+here and I invoke this function and I click Run I get.
+
+06:03.430 --> 06:04.810
+Function fine name.
+
+06:05.110 --> 06:12.510
+That is because when I run this function well it returns this part of the code which is function find
+
+06:12.510 --> 06:21.930
+my name so using that logic let's invoke this function once again by adding another curly bracket remember
+
+06:22.380 --> 06:28.020
+this gets turned into the fine name function and this fine name function.
+
+06:28.020 --> 06:33.570
+I'm going to invoke it with a curly bracket and let's remove this console lock because we don't need
+
+06:33.570 --> 06:34.370
+it right now.
+
+06:34.410 --> 06:36.210
+If I click Run I get.
+
+06:36.210 --> 06:38.130
+Function print name.
+
+06:38.230 --> 06:38.510
+All right.
+
+06:38.520 --> 06:39.680
+So I'm here now.
+
+06:39.690 --> 06:41.790
+It's returned this part.
+
+06:41.790 --> 06:43.170
+Let's run this function again.
+
+06:43.170 --> 06:46.350
+I'm going to add another curly bracket.
+
+06:46.440 --> 06:50.830
+And again we're just using whatever the JavaScript engine does to run our function.
+
+06:50.910 --> 06:55.250
+If I click Run Hurray we've got the same result as last time.
+
+06:55.500 --> 07:03.840
+But as you can see here these are all left sickly scoped different than before right previously.
+
+07:03.840 --> 07:07.870
+All these functions had global lexical environments.
+
+07:08.050 --> 07:13.880
+What do they have now if you were the JavaScript engine and you are looking at this code you haven't
+
+07:13.880 --> 07:15.170
+even run this code.
+
+07:15.170 --> 07:19.060
+How would you link the chains together.
+
+07:19.220 --> 07:25.150
+Well it will look something like this instead of having the links like this.
+
+07:25.150 --> 07:35.870
+You'd have them like this what we call a function lexical environment that is find a name is written
+
+07:35.930 --> 07:37.380
+inside of say my name.
+
+07:37.400 --> 07:46.310
+Function so find names function lexical environment is say my name and print names function lexical
+
+07:46.310 --> 07:49.190
+environment is find a name.
+
+07:49.190 --> 07:53.010
+So the scope chain goes down like this.
+
+07:53.240 --> 08:05.750
+So that hypothetically print name has access to be and a fine name has access to be and a let's test
+
+08:05.750 --> 08:06.800
+the set.
+
+08:06.860 --> 08:17.900
+If I go to print name I can console all log C and if I run this awesome I get C.
+
+08:17.940 --> 08:19.060
+That's great.
+
+08:19.230 --> 08:27.140
+What if I console log B according to the diagram I have that scope chain where I can access the parent
+
+08:27.290 --> 08:27.980
+environment.
+
+08:27.980 --> 08:31.320
+So if I run this Hey look at that it works.
+
+08:31.400 --> 08:36.800
+What about a if I run this beautiful.
+
+08:36.890 --> 08:45.640
+So by running console dialogue eh I'm going up the scope chain saying hey is a here.
+
+08:45.730 --> 08:46.570
+No don't have it.
+
+08:46.570 --> 08:52.790
+Keep looking and then going up the scope chain to say my name says Hey do you have a here.
+
+08:52.990 --> 08:53.770
+Yep I have it.
+
+08:53.770 --> 08:55.610
+Here you go.
+
+08:55.660 --> 09:01.610
+What if I remove this and instead use it here.
+
+09:01.800 --> 09:03.040
+Can I look for a.
+
+09:03.360 --> 09:04.580
+If I run this.
+
+09:04.590 --> 09:05.940
+Yep I can look right.
+
+09:06.000 --> 09:10.140
+But what about see.
+
+09:10.260 --> 09:12.230
+No I get a reference error.
+
+09:12.250 --> 09:14.740
+C is not defined.
+
+09:14.740 --> 09:16.060
+Why is that.
+
+09:16.060 --> 09:27.500
+Well if we go to the diagram C is up over here and when I do console log in fine name it's going to
+
+09:27.500 --> 09:31.130
+look in the variable environment says no no C here.
+
+09:31.130 --> 09:34.170
+Keep looking and then it's going to go into there.
+
+09:34.440 --> 09:38.300
+Say my name's variable environment says Hey a C here.
+
+09:38.300 --> 09:38.650
+No.
+
+09:38.690 --> 09:39.460
+Keep looking.
+
+09:39.590 --> 09:45.320
+And then it goes into the global environment says hey is C there.
+
+09:45.320 --> 09:48.660
+No so it gives us a reference error.
+
+09:48.670 --> 09:51.070
+I have no idea what you're talking about.
+
+09:51.220 --> 09:52.450
+You're doing something strange here.
+
+09:52.450 --> 09:59.590
+I'm going to throw an error this principle in Javascript is going to be used throughout the course and
+
+09:59.590 --> 10:00.920
+it's very very important.
+
+10:00.940 --> 10:04.200
+So if you need to watch this video again go ahead and do it.
+
+10:04.450 --> 10:08.160
+But I hope you get this point in this video.
+
+10:08.160 --> 10:17.190
+We learned that the global scope is the outer most scope so variables declared outside a function are
+
+10:17.190 --> 10:25.610
+in what we call global scope and they can be accessed in any other scope that is inside of the functions.
+
+10:25.610 --> 10:35.390
+We can always access global scope now local scope that is any scope that is local to a function.
+
+10:35.690 --> 10:44.060
+Now variables declared in this local scope are accessible within this scope as well as any scopes surrounding
+
+10:45.170 --> 10:46.750
+and that's all scope is.
+
+10:46.980 --> 10:51.950
+It just defines the accessibility of variables and functions in the code.
+
+10:52.070 --> 10:58.040
+It tells us what we can access while we can not and just as a little refresher.
+
+10:58.180 --> 11:05.080
+Remember undefined is an actual type in JavaScript undefined when we get something undefined.
+
+11:05.080 --> 11:12.520
+It means yes we have this variable but it's not assigned anything right now versus something like a
+
+11:12.610 --> 11:23.990
+reference there says hey this is completely on declare scope chain can't find anything by the way back
+
+11:23.990 --> 11:24.780
+to the slide.
+
+11:24.830 --> 11:33.530
+Remember I told you that if val and the with statement are not a good idea it doesn't help our JavaScript
+
+11:33.620 --> 11:43.940
+engine optimize our code well it's because of the issues that it has with scope because with Val and
+
+11:43.940 --> 11:52.280
+width you can actually change how scope and scope change work internally in JavaScript and that makes
+
+11:52.280 --> 11:57.140
+things difficult for us because we have lexical scope.
+
+11:57.290 --> 12:03.210
+The compiler can just look at our code and create the scope chain and understand what's going to happen.
+
+12:03.410 --> 12:10.730
+But if we start changing those around with something like Val it's going to trick the JavaScript engine
+
+12:11.210 --> 12:15.490
+and it might have to do optimize some of our code.
+
+12:15.520 --> 12:19.150
+All right let's take a break and I'll see you in the next video.
+
+12:19.150 --> 12:19.390
+Bye bye.

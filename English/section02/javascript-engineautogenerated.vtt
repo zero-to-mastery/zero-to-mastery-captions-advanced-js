@@ -1,0 +1,190 @@
+WEBVTT
+
+00:01.280 --> 00:06.180
+Almost everyone that has worked with JavaScript has heard of the V8 engine.
+
+00:06.440 --> 00:12.830
+The idea of the JavaScript engine and most people know that JavaScript is a single threaded language
+
+00:13.520 --> 00:15.860
+that it uses a callback queue.
+
+00:15.920 --> 00:21.200
+You may also hear phrases like Javascript is an interpreted language.
+
+00:21.200 --> 00:24.650
+Let's tackle what that means over the next couple of videos.
+
+00:24.650 --> 00:28.410
+What is this engine that we speak of well.
+
+00:28.490 --> 00:39.010
+If I write some code like let's say cost is happy equals to true Well we just wrote some javascript
+
+00:39.670 --> 00:44.850
+I'm assigning the true boolean to the variable is happy.
+
+00:45.010 --> 00:50.730
+Now how do we read this or how does the computer read this.
+
+00:50.750 --> 00:56.210
+Imagine if somebody comes up to you and gives you a computer and they tell you hey tell this computer
+
+00:56.210 --> 01:02.960
+to display a picture of horses on the screen and you start looking at this computer and you tell the
+
+01:02.960 --> 01:10.390
+computer to display an image of a horse or horses in French is the computer going to understand you
+
+01:11.420 --> 01:16.450
+know the computer would have no idea what you just said in similar fashion.
+
+01:16.630 --> 01:26.370
+If I gave a computer with a CB you a file that is a javascript file and I tell it hey read this file
+
+01:26.370 --> 01:27.800
+and do something for me.
+
+01:27.990 --> 01:32.810
+Well the computer only understands ones and zeros at the end of the day.
+
+01:33.090 --> 01:38.820
+And when we give it the javascript file it's like me talking to a computer in French and the computer
+
+01:38.820 --> 01:40.550
+being like What.
+
+01:40.650 --> 01:42.150
+What are you talking about.
+
+01:42.180 --> 01:47.160
+Plus talking to a computer in French while people are going to look at you like you're a crazy person.
+
+01:47.160 --> 01:51.890
+So the computer doesn't really know what javascript is.
+
+01:51.990 --> 01:59.310
+So how are we able to communicate using a javascript file so that the computer displays pictures of
+
+01:59.310 --> 02:07.890
+horses and this is the first step in our learning and that is the JavaScript engine by having a JavaScript
+
+02:07.920 --> 02:09.900
+engine right over here.
+
+02:09.900 --> 02:14.000
+It allows you to give this machine the javascript file.
+
+02:14.340 --> 02:21.150
+And this machine is going to understand this file and tell the computer what to do to display pictures
+
+02:21.150 --> 02:22.290
+of horses.
+
+02:22.560 --> 02:28.590
+In a sense you just created a translator so you can communicate with somebody that doesn't know your
+
+02:28.590 --> 02:38.380
+language and this special engine called the JavaScript engine understands javascript our computer finally
+
+02:38.380 --> 02:39.090
+understands us.
+
+02:39.100 --> 02:46.060
+Because of this javascript engine and it says I'm on it boss I'll start displaying those horse pictures.
+
+02:46.070 --> 02:46.610
+There you go.
+
+02:46.610 --> 02:48.380
+That's our first step.
+
+02:48.440 --> 02:52.460
+And over the next couple of videos we're going to talk about exactly what's happening inside.
+
+02:53.060 --> 02:58.880
+But do you think there's one JavaScript engine or many javascript engines.
+
+02:58.880 --> 03:06.230
+Well as you can see from this wikipedia list there are eight on of engines and they're called X must
+
+03:06.230 --> 03:09.170
+script engines and we'll get into why that is later.
+
+03:09.170 --> 03:11.700
+But these are all the javascript engines.
+
+03:11.750 --> 03:17.490
+Some of them you may have heard of like V8 or spider monkey or choker.
+
+03:17.600 --> 03:25.370
+So anytime we use an engine we're able to give it a javascript file and this javascript file gets understood
+
+03:25.370 --> 03:33.110
+by the engine and it allows this engine to communicate and tell the machine the computer to do what
+
+03:33.110 --> 03:36.730
+we ask it to do with JavaScript.
+
+03:36.740 --> 03:43.980
+Now these engines are written by programmers for example V8 engine is written in C++.
+
+03:44.300 --> 03:47.280
+But why do people write these engines.
+
+03:47.360 --> 03:55.280
+2008 marked a really pivotal moment in history when it comes to JavaScript because a V8 was released
+
+03:55.310 --> 03:57.530
+by Google before then.
+
+03:57.590 --> 04:05.560
+Most browsers used engines that were very basic which meant that JavaScript was a little bit slow.
+
+04:05.570 --> 04:07.150
+You see Google had this problem.
+
+04:07.220 --> 04:13.940
+They had something called Google Maps and Google Maps as you know requires a lot of power.
+
+04:14.030 --> 04:20.180
+It does a lot of things you can ask for directions to zoom in and zoom out maybe even use Street View
+
+04:20.900 --> 04:27.320
+and all the previous engines before it would make Google maps very very slow on the browser and Google
+
+04:27.620 --> 04:29.940
+because they're a search engine.
+
+04:29.990 --> 04:36.380
+They want everybody to use their search engine and they built a browser in order for them to control
+
+04:36.380 --> 04:37.450
+more of the market.
+
+04:37.460 --> 04:43.940
+So with Google Maps and their own Chrome browser they said we're going to write our own JavaScript engine
+
+04:44.000 --> 04:52.860
+the V8 engine so that JavaScript runs way faster on the browser than it's done previously and in 2008
+
+04:53.070 --> 04:54.530
+they released V8.
+
+04:54.570 --> 05:00.510
+But the big takeaway for us here is that really really smart people work on these engines so that our
+
+05:00.510 --> 05:08.420
+javascript runs as fast as possible on the browser on the server or any type of computer.
+
+05:08.490 --> 05:15.160
+So every day javascript gets faster and faster for us because of the work that goes into these engines.
+
+05:15.160 --> 05:22.710
+OK but what is inside this engine this magical machine that understands javascript it reads our code
+
+05:22.740 --> 05:25.460
+and then it runs this code.
+
+05:25.570 --> 05:28.480
+Let's get into that in the upcoming video by.

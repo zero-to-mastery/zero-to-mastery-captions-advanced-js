@@ -1,0 +1,520 @@
+WEBVTT
+
+00:01.340 --> 00:02.470
+Welcome back.
+
+00:02.630 --> 00:05.910
+Up to this point we've played around with some javascript types.
+
+00:05.990 --> 00:07.210
+Only three out of seven.
+
+00:07.210 --> 00:09.160
+Don't worry we'll get to the rest of them.
+
+00:09.320 --> 00:11.990
+But there's one problem.
+
+00:11.990 --> 00:15.910
+How does a program remember things.
+
+00:16.000 --> 00:28.280
+For example if we write These pretzels are making me thirsty and we'll do this.
+
+00:28.300 --> 00:30.230
+Plus we need the exclamation.
+
+00:30.420 --> 00:32.880
+OK I enter that OK.
+
+00:32.890 --> 00:33.460
+I get that.
+
+00:33.520 --> 00:34.030
+That's good.
+
+00:34.030 --> 00:42.070
+But if I need to use this again Well again I have to ride these brats pls
+
+00:44.580 --> 00:52.960
+are making me thirsty and imagine you had to do that hundreds of time.
+
+00:52.960 --> 00:55.090
+That's kind of annoying right.
+
+00:55.090 --> 01:00.520
+That's computers are supposed to help us but instead we just keep writing stuff and keep writing stuff.
+
+01:00.520 --> 01:06.920
+And that's not very efficient is it well to catch and hold values.
+
+01:07.020 --> 01:19.120
+JavaScript has something called variables and variables can be used with the word var.
+
+01:19.140 --> 01:34.170
+So now if I go var George so VAR is for variable equals These pretzels are making me thirsty.
+
+01:35.560 --> 01:36.520
+Plus exclamation mark
+
+01:39.850 --> 01:47.140
+notices a call in here I will explain what that does in a bit I press enter I get undefined let's not
+
+01:47.140 --> 01:54.190
+worry about that that doesn't matter for now and now if I go George and you'll see that's Google Chrome
+
+01:54.190 --> 02:02.700
+actually helps me and recognizes it I press enter These pretzels are making me thirsty How awesome is
+
+02:02.700 --> 02:10.500
+that so we're able to store this value and obviously this is simple but imagine this was a long calculation
+
+02:10.500 --> 02:18.560
+that we had to make and we want to access it well all we need to do now is have George it's a variable.
+
+02:18.810 --> 02:25.320
+So now you see in the last video when I said that when we're comparing things we have to use three equals
+
+02:25.800 --> 02:35.280
+well because when you do three equals three it's saying assign the number three two three but there
+
+02:35.270 --> 02:39.420
+is a rule with variables with variables you can start with numbers.
+
+02:39.420 --> 02:51.460
+So if I go variable three equals three I'll get an error but if I go variable three equals three.
+
+02:51.480 --> 02:53.950
+Well that's no problem.
+
+02:54.150 --> 03:03.450
+And variables have a few rules the rules are well it needs to start with a letter.
+
+03:03.680 --> 03:10.790
+It can end with a number that's fine but it needs to start with the letter and it can't start with a
+
+03:10.790 --> 03:11.600
+symbol.
+
+03:11.600 --> 03:20.570
+So I can't do var and sign Hello equals five.
+
+03:20.720 --> 03:21.920
+No I'll get an error.
+
+03:22.000 --> 03:28.370
+So a variable needs to start with the letter can end in a number that's fine.
+
+03:28.650 --> 03:36.760
+And there's a few other special cases a variable can also start with a dollar sign or an underscore
+
+03:37.420 --> 03:39.640
+but we don't need to worry about that too much.
+
+03:39.760 --> 03:46.480
+And the standard in JavaScript so you won't get an error if this happens but you do something called
+
+03:46.480 --> 03:47.080
+camel case.
+
+03:47.100 --> 03:55.030
+So if it was a word let's say first name you would do camel case because these are two separate words
+
+03:55.030 --> 03:58.360
+you do lowercase the first word.
+
+03:58.360 --> 04:00.990
+Second word is gonna have uppercase.
+
+04:01.090 --> 04:08.110
+So first name so you capitalize the first letter and that's called camel case.
+
+04:08.120 --> 04:12.550
+So still not getting what variables are.
+
+04:12.740 --> 04:19.340
+Well I'm going to I'm going to demonstrate this point further in why we need to store values in a programming
+
+04:19.340 --> 04:20.500
+language.
+
+04:20.570 --> 04:27.950
+I'm going to introduce you to a little cool trick called Prompt and prompt when I use these brackets
+
+04:29.650 --> 04:31.450
+and I press enter.
+
+04:31.590 --> 04:32.380
+Look at that.
+
+04:32.610 --> 04:38.740
+I got something here and it's asking for something and I press OK and look at that.
+
+04:38.880 --> 04:40.480
+It returns whatever I typed.
+
+04:40.500 --> 04:41.210
+Let's try that again.
+
+04:41.220 --> 04:49.270
+If I go prompt press center I say hello press OK I get that response back.
+
+04:50.160 --> 04:50.380
+OK.
+
+04:50.380 --> 04:55.390
+So how can we say something like what's your username and store that value.
+
+04:55.390 --> 04:58.470
+That's something that we use quite a lot on Web sites right.
+
+04:58.480 --> 05:10.980
+Well with prompt you can do prompt opening and closing bracket and then here we'll say what is your
+
+05:11.240 --> 05:11.760
+user name.
+
+05:11.940 --> 05:13.930
+So we're entering a string here.
+
+05:14.100 --> 05:17.760
+And if I press enter OK.
+
+05:17.790 --> 05:19.950
+So it says what is your user name.
+
+05:19.950 --> 05:29.480
+So now if I died then my user name is Andre I get the username so using that knowledge let's make a
+
+05:29.480 --> 05:30.350
+calculator.
+
+05:30.470 --> 05:32.120
+Let's do var.
+
+05:32.190 --> 05:33.890
+First equals
+
+05:38.360 --> 05:40.250
+enter first number
+
+05:43.070 --> 05:48.290
+and then I'm going to press the shift here so that I can add a new line.
+
+05:48.290 --> 05:54.740
+So shift enter and I'm going to say variable second equals prompt
+
+05:58.110 --> 06:00.510
+enter second number
+
+06:04.450 --> 06:10.950
+and now if I press enter I'll get enter first number I'll say five.
+
+06:11.310 --> 06:18.770
+Press OK then enter second number I say 10 and press OK.
+
+06:19.170 --> 06:23.540
+OK but now I got undefined but here's the cool thing.
+
+06:23.630 --> 06:31.280
+Now I have these values held in these variables so I can use them if I check first.
+
+06:31.460 --> 06:33.600
+I have five if I check.
+
+06:33.600 --> 06:37.050
+Second I have 10.
+
+06:37.250 --> 06:39.500
+But you'll notice that I have double quotes around them.
+
+06:39.920 --> 06:46.170
+And that's because prompt automatically changes it to string it's expecting a form of text.
+
+06:46.220 --> 06:50.690
+So there's a cool trick to change a string into a number.
+
+06:50.690 --> 06:56.900
+And all we need to do and this is just syntax we need to remember is no and then we'll do first
+
+06:59.590 --> 07:00.800
+and will give us five.
+
+07:00.820 --> 07:21.830
+So all we need to do now is do no first plus no second and we'll get the some of these too but again
+
+07:22.280 --> 07:23.480
+we can use a variable here.
+
+07:23.480 --> 07:25.150
+I don't want to keep typing this.
+
+07:25.190 --> 07:35.890
+So what if I do variable sum equals no first plus no second semicolon press enter.
+
+07:36.260 --> 07:44.510
+Nothing yet because it's in the some now so if I ask for some I guess 15.
+
+07:45.490 --> 07:50.470
+OK so let's write our first program here.
+
+07:50.470 --> 07:53.740
+I'm going to show you one other cool trick and that is.
+
+07:53.740 --> 07:54.590
+Alert.
+
+07:54.760 --> 08:04.510
+So instead of prompt we're gonna use alert and alert what it does is says hi there
+
+08:08.440 --> 08:12.800
+if our press enter I get a pop up but without anything to enter Justin.
+
+08:12.900 --> 08:19.790
+Okay but so using this we can create a calculator so let's do this.
+
+08:19.870 --> 08:25.900
+And in Chrome if you actually press the up arrow you'll remember your history and you can pull up whatever
+
+08:25.900 --> 08:27.220
+you've typed in.
+
+08:27.220 --> 08:31.270
+So you remember here we have first second.
+
+08:31.450 --> 08:47.340
+So those are the two prompts and then I'm going to say variable some equals number the first plus number
+
+08:48.830 --> 08:49.550
+of the Second
+
+08:54.160 --> 09:03.710
+and finally again I do shift entries so that the code doesn't get executed and I do alert some so just
+
+09:03.710 --> 09:04.920
+looking at this.
+
+09:04.970 --> 09:06.490
+What do you think's gonna happen.
+
+09:06.500 --> 09:13.370
+I first asked for a prompt and I saw that value in first the second prompt asked for a second no stores
+
+09:13.370 --> 09:17.030
+it in the second the sum calculates the two numbers.
+
+09:17.240 --> 09:23.430
+And then I alert the sum I get a press enter and see what happens and your first number I'm going to
+
+09:23.430 --> 09:24.860
+say 15.
+
+09:25.100 --> 09:25.840
+OK.
+
+09:26.040 --> 09:28.650
+Next number I'm going to say 20.
+
+09:29.010 --> 09:31.780
+OK and look at that.
+
+09:31.780 --> 09:42.610
+I got 35 as the answer and again knowing what we know about strings and numbers I can now do.
+
+09:42.610 --> 09:46.660
+Again I pressed up to have exactly why I wrote back.
+
+09:46.700 --> 09:57.890
+Now I can say within the alert the sum is close the bracket plus some.
+
+09:57.960 --> 10:06.500
+So let's see that if I press enter I'll go three plus four the sum is seven.
+
+10:06.520 --> 10:17.250
+Look at that our first program variables can hold any javascript type think of them as little drawers
+
+10:17.250 --> 10:18.660
+in your desk.
+
+10:18.660 --> 10:24.950
+So in your desk you can open up that drawer and put anything you want in there your pens paper your
+
+10:24.960 --> 10:33.210
+racers calculators and you can close that door and whenever you need a pen or a calculator you can open
+
+10:33.210 --> 10:34.550
+that door and grab it.
+
+10:34.620 --> 10:37.730
+And that's what variables are now.
+
+10:37.770 --> 10:44.050
+The one thing that I've kind of omitted and I haven't told you about is this little weird seven call
+
+10:44.050 --> 10:44.940
+in here.
+
+10:44.940 --> 10:46.380
+Why do we need it.
+
+10:46.380 --> 10:51.910
+I mean we were able to do three plus four and we didn't see a semicolon.
+
+10:52.200 --> 11:00.880
+Well in JavaScript semicolon means the end of an expression.
+
+11:00.900 --> 11:02.600
+So what does that mean.
+
+11:03.910 --> 11:11.770
+A fragment of code that produces a value is called an expression so any value that's written really
+
+11:11.770 --> 11:12.520
+is an expression.
+
+11:12.550 --> 11:13.910
+So if I do three.
+
+11:14.020 --> 11:21.820
+Well that's an expression it produces a value three plus four is an expression in JavaScript.
+
+11:21.940 --> 11:25.770
+The rule is and then there are some people actually that don't use semicolons anymore.
+
+11:25.780 --> 11:33.220
+But the way it was built and the way that it's intended to work is to do three plus four add a semicolon.
+
+11:33.220 --> 11:37.060
+Most of the time if you forget it'll still work.
+
+11:37.120 --> 11:43.500
+There's only small cases where I'll break your program but just to form good habits for now.
+
+11:43.670 --> 11:45.360
+By the end of each expression.
+
+11:45.430 --> 11:48.130
+So that is anything we've done so far.
+
+11:48.130 --> 11:52.990
+Add a semicolon and you'll get used to it OK.
+
+11:53.090 --> 11:55.830
+Let's keep going with variables because they're very interesting.
+
+11:56.120 --> 12:02.750
+What if I do variable k equals true.
+
+12:02.750 --> 12:11.210
+Because remember variables can hold anything so variables can hold billions and variables can hold strings
+
+12:13.230 --> 12:15.450
+and variables can hold numbers as we've seen.
+
+12:15.450 --> 12:21.770
+So where are you going to hold variable a equals true but now what if I.
+
+12:22.500 --> 12:33.860
+Well I can access a but what if I say a equals Hello What do you think will happen if I press a and
+
+12:33.860 --> 12:35.240
+then enter.
+
+12:35.240 --> 12:46.300
+Well I get hello because you can reassign a value to a because initially the program thought a equals
+
+12:46.300 --> 12:46.670
+2 true.
+
+12:46.690 --> 12:49.740
+But then we said well a equals hello now.
+
+12:49.750 --> 12:52.930
+So it discarded the true value.
+
+12:52.930 --> 12:55.960
+And now a is equal to Hello.
+
+12:55.960 --> 13:01.240
+And we've completely forgotten about true okay.
+
+13:01.340 --> 13:02.630
+Another little trick.
+
+13:02.720 --> 13:06.510
+What happens if I go like this.
+
+13:06.860 --> 13:08.300
+Does that work or will I get an error.
+
+13:08.390 --> 13:08.750
+Let's see
+
+13:11.790 --> 13:12.390
+undefined.
+
+13:12.440 --> 13:14.450
+I didn't get that red bar nowhere.
+
+13:14.510 --> 13:15.110
+Okay.
+
+13:15.170 --> 13:16.220
+What if I access the.
+
+13:16.250 --> 13:17.770
+Let's see what happens.
+
+13:17.780 --> 13:24.830
+Well hello was assigned the last bar so let's let's do a different variable so if I do variable B which
+
+13:24.830 --> 13:28.440
+we haven't used before and I do this.
+
+13:28.670 --> 13:38.280
+Let's see if we can access it undefined B is undefined and you may have noticed this before but undefined
+
+13:38.310 --> 13:47.210
+is our fourth type in JavaScript and I know it's weird because you're you're asking yourself what is
+
+13:47.210 --> 13:47.870
+undefined.
+
+13:48.200 --> 13:54.500
+Well undefined is just one thing in JavaScript as a name suggests.
+
+13:54.560 --> 13:57.080
+This means that the variable has not been assigned.
+
+13:58.010 --> 14:07.190
+So think of it as you'll get undefined if variable password is like this.
+
+14:07.220 --> 14:15.710
+So if a user doesn't put it in a password well you'll get undefined and you'll be able to say well password
+
+14:15.710 --> 14:22.550
+is undefined you need to enter a password or maybe a form requires an email address well if email is
+
+14:22.550 --> 14:30.890
+undefined then you can't sign them up to the form so undefined is used when nothing is assigned to a
+
+14:30.890 --> 14:38.450
+variable so remember this just like you move stuff out of the drawer in your desk and put something
+
+14:38.450 --> 14:43.450
+else in variables can be assigned to different things.
+
+14:43.460 --> 14:51.700
+I can move my pen from one drawer to another I can change things in that drawer and if there's nothing
+
+14:51.700 --> 14:59.840
+in that drawer while it's undefined okay that's a very very big concept in JavaScript hopefully you
+
+14:59.840 --> 15:05.660
+understand I have a few exercises for you at the end of this video I know you can do it.
+
+15:05.660 --> 15:08.810
+Good luck and see you in the next video.
+
+15:08.810 --> 15:09.100
+Bye bye.

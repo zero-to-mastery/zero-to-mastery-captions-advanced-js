@@ -1,0 +1,508 @@
+WEBVTT
+
+00:00.930 --> 00:01.960
+Welcome back.
+
+00:02.010 --> 00:06.230
+It's time to walk through our own implementation of hash table.
+
+00:06.540 --> 00:12.030
+Now before we get started I do want to mention something that you may be wondering about that is this
+
+00:12.120 --> 00:13.820
+underscore over here.
+
+00:13.890 --> 00:15.050
+What does that mean.
+
+00:15.300 --> 00:24.080
+In most other languages like Java when you create a class you can have private properties.
+
+00:24.310 --> 00:28.150
+That is properties that I can't access outside of this class.
+
+00:28.270 --> 00:40.050
+So I wouldn't be able to do my hash table underscore Pash and access this property or method now with
+
+00:40.140 --> 00:42.230
+JavaScript iOS 6.
+
+00:42.270 --> 00:44.070
+That's not really possible.
+
+00:44.070 --> 00:52.680
+And there is a common standard which is to put underscore here in the javascript world which says this
+
+00:52.680 --> 00:54.860
+is a private property.
+
+00:54.900 --> 00:58.400
+Now this is just meaningless really.
+
+00:58.410 --> 01:07.380
+I can still access the hash method but it is a developer standard in the javascript community to let
+
+01:07.470 --> 01:14.440
+other developers know that hey you shouldn't be accessing this even though you technically can't and
+
+01:14.610 --> 01:17.700
+there are ways to make it work and half private properties.
+
+01:17.700 --> 01:24.760
+But it requires things like closure symbols or weak maps which again is beyond the scope of this course.
+
+01:24.900 --> 01:26.490
+And we don't need to worry about.
+
+01:26.550 --> 01:28.950
+So that's where the underscore is coming from.
+
+01:28.950 --> 01:34.860
+We're not usually going to access hash function like this right now that we got that out of the way.
+
+01:34.890 --> 01:36.870
+Let's talk a little bit about what this does.
+
+01:37.380 --> 01:46.240
+If I enter in here grapes we first create a new variable that is hash that is equal to zero and then
+
+01:47.020 --> 01:50.470
+this key we're going to grab the length of grapes.
+
+01:50.500 --> 02:02.340
+So that is one two three four five six and we're going to add zero which comes from the hash plus key
+
+02:02.640 --> 02:05.810
+character code at and character code at.
+
+02:05.850 --> 02:15.010
+In Javascript simply gives us an integer between 0 and his number representing the UTF 16 code.
+
+02:15.120 --> 02:17.210
+So that's just an encoding.
+
+02:17.480 --> 02:27.540
+So pretty much saying give me a character code because remember in memory a string or a letter is represented
+
+02:27.570 --> 02:28.920
+as a number.
+
+02:28.920 --> 02:37.090
+So this method allows us to say at index whatever we put in the parameter so let's say we're looking
+
+02:37.090 --> 02:39.090
+at index of I.
+
+02:39.130 --> 02:48.680
+The very first song will be g we're going to get the character code for G that is a number we multiply
+
+02:48.680 --> 02:53.840
+that by the index again just to make sure this makes it unique.
+
+02:53.930 --> 03:03.080
+And then we use what's called the modulo operator to make sure that this stays within the length of
+
+03:03.080 --> 03:08.850
+50 the size of our data.
+
+03:09.120 --> 03:10.760
+And then we return the hash.
+
+03:10.770 --> 03:21.470
+An easy way to see what's happening here is to simply console dialogue hash if I run this.
+
+03:21.640 --> 03:31.490
+We see that it's going to loop through our grapes character by character.
+
+03:31.520 --> 03:41.500
+It's going to generate some sort of a hash and because this hash gets constantly looped over we include
+
+03:42.100 --> 03:45.190
+whatever the generated let's see the first one is zero.
+
+03:45.250 --> 03:49.300
+It's going to say zero plus whatever this is.
+
+03:49.300 --> 03:54.970
+Then the next iteration hash is going to equal 14 and generates something else which is eight and keeps
+
+03:54.970 --> 04:01.140
+going keeps going keeps going until we get twenty three you can take your time and go through this code
+
+04:01.170 --> 04:02.320
+if you really want to.
+
+04:02.370 --> 04:09.010
+Again this is not the focus of this video so let's move on using our hash function.
+
+04:09.070 --> 04:17.940
+Let's do our very first method let's create the set method.
+
+04:17.940 --> 04:29.330
+This set method is going to receive a key and a value and just so we can see this and what's going to
+
+04:29.330 --> 04:36.980
+happen we'll run this method here saying we want grapes to equal ten thousand lots of grapes because
+
+04:36.980 --> 04:38.360
+they are delicious.
+
+04:38.480 --> 04:45.620
+If I run this I get undefined because while this isn't really doing anything the first thing we want
+
+04:45.620 --> 04:53.300
+to do is to create a variable called let address which will represent where we want to store this information
+
+04:55.390 --> 04:57.040
+and we'll say this dot
+
+05:02.610 --> 05:14.050
+so all we're saying is store this data that we're going to insert the key and value in this address
+
+05:14.050 --> 05:17.930
+space that is created by our hash function.
+
+05:18.220 --> 05:21.140
+And we give it the key of grapes.
+
+05:21.160 --> 05:23.070
+Remember our little animation.
+
+05:23.080 --> 05:29.980
+We're sending the grapes to into that magic little box that is the hash function from there.
+
+05:30.100 --> 05:34.880
+We simply say if this dot data
+
+05:37.700 --> 05:45.280
+address if it doesn't exist and there's nothing there.
+
+05:45.280 --> 05:52.780
+Because remember in a hash table we can have collisions and because we only have 50 spaces 50 shelves
+
+05:52.780 --> 05:56.300
+here we might have these collisions with enough data.
+
+05:56.410 --> 06:01.040
+So we're going to check if there is nothing there.
+
+06:01.170 --> 06:04.110
+In that case I'll just simply add that data.
+
+06:04.110 --> 06:06.120
+We're going to say this data
+
+06:08.960 --> 06:24.550
+address is going to be an array and in this new space new address space we're simply going to had
+
+06:30.190 --> 06:39.380
+by doing push key value so let's run this and see what happens.
+
+06:39.470 --> 06:41.790
+And I have a misspelt address here.
+
+06:41.840 --> 06:43.430
+Let's run that again.
+
+06:43.430 --> 06:55.730
+I get undefined but let's see what happens if I just console dot blog this dot data here.
+
+06:55.750 --> 07:04.150
+Well we check that at we have twenty three empty items on the twenty fourth item.
+
+07:04.160 --> 07:11.560
+We have grapes 10000 an array here and then twenty six empty items after that.
+
+07:11.560 --> 07:19.030
+Remember we have 50 shells in our memory and we have 23 24 plus 26.
+
+07:19.090 --> 07:23.350
+That's 50 except our grapes was inserted somewhere and 50.
+
+07:23.350 --> 07:35.270
+It looks like twenty four spot very cool but what happens if this already exists if I change the hash
+
+07:35.270 --> 07:43.970
+table to just have let's say two memory spaces and I click Run here I get one empty and grapes and if
+
+07:43.970 --> 07:54.510
+I change this around oh do you see that if I click again and let's say go back to just grapes check
+
+07:54.580 --> 08:06.060
+out what happens to my hash table I click Run and it just deleted my previous entry we have a collision
+
+08:06.720 --> 08:12.870
+but we're not doing anything about it and we've just deleted our data that could have been really important
+
+08:12.900 --> 08:15.610
+user data we definitely don't want that.
+
+08:15.660 --> 08:25.900
+So in order to solve that we simply say if because we're checking here if there is nothing in that address
+
+08:25.900 --> 08:27.740
+space do this.
+
+08:27.910 --> 08:28.570
+Otherwise
+
+08:31.660 --> 08:35.330
+simply add on to that array.
+
+08:35.590 --> 08:37.060
+So we can actually just
+
+08:39.910 --> 08:47.690
+run the same command here a nicer and cleaner way of doing this is to actually just take out the else
+
+08:48.710 --> 08:54.590
+because regardless we're always going to be pushing key and value we're always going to be adding the
+
+08:54.800 --> 08:57.260
+key and value that we set.
+
+08:57.260 --> 09:07.410
+We add to the data so all we do is just remove this so that when I run this and just so we know what's
+
+09:07.410 --> 09:12.630
+happening let's return this dot data here.
+
+09:12.630 --> 09:23.350
+I'm going to hit run and if we add here let's say another item this time we'll say apples and just 50
+
+09:23.350 --> 09:24.150
+for apples.
+
+09:24.150 --> 09:27.300
+If I run this do you see what happened here.
+
+09:28.870 --> 09:39.610
+If you look closely we have one empty item and then an array that contains inside of it the first index
+
+09:39.790 --> 09:43.460
+that is an array and a second index.
+
+09:43.570 --> 09:51.190
+That is another array because we've just pushed on to our existing array because our memory space is
+
+09:51.190 --> 09:54.020
+only two very cool.
+
+09:54.360 --> 09:55.440
+That wasn't too bad.
+
+09:56.070 --> 09:56.950
+Let's keep going.
+
+09:57.060 --> 10:01.900
+The next one is well I want to grab be able to grab grapes and apples.
+
+10:02.070 --> 10:11.040
+We can use the get method here which will receive a key and this method is going to work
+
+10:13.920 --> 10:21.150
+very nicely by just saying get and then while we want to grab which will be grapes we're going to do
+
+10:21.180 --> 10:28.690
+the exact same thing in that we run it through that black box where we're going to create or we're going
+
+10:28.690 --> 10:36.910
+to use the hash function to get the address of where we want to go and now we have the address to where
+
+10:36.910 --> 10:45.240
+we want to grab our information from however remember that we store this information in a bucket.
+
+10:45.240 --> 10:48.370
+So we have grapes and 10000.
+
+10:48.600 --> 10:49.620
+How do we grab that.
+
+10:49.620 --> 10:51.090
+We know where to get it from now.
+
+10:51.120 --> 10:59.770
+We have the address but we now need to loop over and grab grapes and then 10000 or apples and then 50
+
+10:59.770 --> 11:00.610
+for it.
+
+11:00.660 --> 11:01.670
+Let me show you what I mean.
+
+11:02.010 --> 11:11.610
+We'll first create a variable says saying current bucket that will just be this dot data dot or address
+
+11:11.640 --> 11:20.340
+just so we don't repeat ourself and we have a reference to this address or to the address and the data
+
+11:20.340 --> 11:20.760
+value.
+
+11:20.790 --> 11:31.830
+So this means if we console dialogue current bucket and I run this you see that I have the current bucket
+
+11:32.040 --> 11:39.600
+even though this has two items remember that it is technically just within its own bucket within one
+
+11:39.600 --> 11:39.930
+array.
+
+11:40.200 --> 11:48.120
+If we increase this memory space to let's say 50 we see that this bucket contains grapes.
+
+11:48.120 --> 11:53.230
+So we're grabbing this information but all we want to do is have 10000 being returned.
+
+11:53.250 --> 11:57.460
+That's our hash tables work or the get in the hash function works well.
+
+11:57.510 --> 12:07.770
+All we need to do is to say if current bucket and we'll say dot length.
+
+12:07.770 --> 12:11.750
+That is if this current bucket has something in it.
+
+12:12.090 --> 12:20.230
+In that case we are going to do something otherwise we're going to just return undefined because there's
+
+12:20.260 --> 12:22.000
+nothing in the bucket.
+
+12:22.210 --> 12:28.040
+We're checking if this actually exists so if there's nothing in the array if the length is zero and
+
+12:28.040 --> 12:35.050
+the array is empty well then we're not interested in it as a matter of fact we actually don't even need
+
+12:35.050 --> 12:43.180
+the length here because remember initially it's just going to be an empty array with undefined and we
+
+12:43.480 --> 12:50.560
+add an array to each slot whenever we set something.
+
+12:50.650 --> 12:57.460
+And it's an empty address so we can just leave it like that because if it's undefined it'll skip over
+
+12:57.490 --> 13:02.080
+and return undefined now in here.
+
+13:02.520 --> 13:11.400
+We will do a for loop because remember we might have multiple items in this bucket like we saw when
+
+13:11.400 --> 13:21.190
+we had to memory spaces in which case let me actually demonstrate that so we can see it.
+
+13:22.180 --> 13:27.160
+It's a run and current bucket against Paul helps run that again.
+
+13:27.250 --> 13:34.830
+All right if we console dialogue the current bucket and run this we see that we have two items in that
+
+13:34.830 --> 13:46.610
+bucket so we will need to loop over using our favorite for loop which we've done a ton by now we're
+
+13:46.630 --> 13:50.650
+going to say as long as I is less than the cream bucket.
+
+13:50.730 --> 14:01.480
+Let just increment hi and within here this is a little bit tricky so hopefully you follow.
+
+14:01.480 --> 14:11.280
+I'm going to say if current bucket by which is the index so remember is going to say zero which is going
+
+14:11.280 --> 14:21.420
+to grab this then one which is going to grab this if current bucket the grapes.
+
+14:21.430 --> 14:29.740
+So if I do zero here that means grab the first in our case the eye so it's going to be zero.
+
+14:29.730 --> 14:40.050
+First grab this first array then grab the zero index within this array which will be grapes and then
+
+14:40.170 --> 14:43.180
+once it loops the next time around an eye is 1.
+
+14:43.260 --> 14:44.950
+It's going to be apples.
+
+14:45.300 --> 14:49.810
+Check that against the key.
+
+14:49.810 --> 14:54.150
+Remember the key that we receive here that we are looking for.
+
+14:54.160 --> 15:04.770
+So if grapes which is the key matches with this item in that case just return the current bucket.
+
+15:05.230 --> 15:16.570
+The high and 1 because we want to return 10000 hopefully you fall here because if I run this I get 10000
+
+15:17.560 --> 15:20.180
+the get grapes is 10000.
+
+15:20.260 --> 15:26.280
+If I do apples here it is 50 for how cool is that.
+
+15:26.780 --> 15:34.040
+And looking at this I hope you understand on a deeper level the time complexity implications of hash
+
+15:34.040 --> 15:41.690
+tables even though we're doing a loop here within the hash function remember that hash functions are
+
+15:41.690 --> 15:48.330
+really really fast we're just looping over the key so we don't consider this to be a 0 event.
+
+15:48.410 --> 15:49.850
+This is very very fast.
+
+15:49.880 --> 15:53.770
+It's 0 of 1 when we set something.
+
+15:54.510 --> 15:55.490
+There's no loops here.
+
+15:55.560 --> 15:57.940
+We're just adding it to our data.
+
+15:58.140 --> 15:59.980
+We're just pushing it.
+
+16:00.150 --> 16:14.780
+So that is over 1 and if we go to get most of the time if there's no collisions it's going to be 0 of
+
+16:14.780 --> 16:20.150
+1 and in real life most of the time you can consider that it is 0 of 1.
+
+16:20.370 --> 16:27.840
+But in our really bad example with just two memory spaces and not a very good hash function well this
+
+16:27.840 --> 16:36.750
+can become 0 that but for now because we're good programmers that won't happen right.
+
+16:36.770 --> 16:38.140
+Everything will be good.
+
+16:38.180 --> 16:50.670
+We have 0 0 of 1 get we have the for loop here that might create that list we saw in our example see
+
+16:50.670 --> 16:52.540
+this list that we have here.
+
+16:52.590 --> 16:58.680
+This is what we created and it would be all then if this list just kept going and kept growing and kept
+
+16:58.680 --> 17:07.220
+growing but there is one other method that I want us to build and to showcase to you.
+
+17:07.360 --> 17:11.090
+One other downside of hash tables.
+
+17:11.240 --> 17:17.630
+What if we wanted to go through all the keys of the hash table.
+
+17:17.720 --> 17:18.840
+How would we do that.
+
+17:19.650 --> 17:21.660
+We're going to try and implement that in the next video.

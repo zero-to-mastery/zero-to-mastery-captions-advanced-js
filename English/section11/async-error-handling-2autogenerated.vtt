@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.540 --> 00:01.580
+Welcome back.
+
+00:01.590 --> 00:11.400
+Remember how I said the tri cash bloc was only for synchronous code and we used the DOT catch for our
+
+00:11.400 --> 00:14.850
+asynchronous code using promises.
+
+00:14.850 --> 00:22.500
+Well because async await although asynchronous makes our code look synchronous we can actually use try
+
+00:22.500 --> 00:23.600
+catch blocks with them.
+
+00:23.730 --> 00:30.310
+And that's the way we handle errors and catch errors or exceptions using async await.
+
+00:30.330 --> 00:31.760
+Let me show you what I mean.
+
+00:31.860 --> 00:38.160
+I can create an async function here we don't need to call it anything.
+
+00:38.460 --> 00:52.600
+And in here we'll have a try catch block will simply await a promise that lets say rejects with our
+
+00:53.270 --> 01:05.050
+whoopsie air and in the error block we will catch that error using console that log error and let's
+
+01:05.050 --> 01:11.800
+see what happens with another piece of code that goes like this says is this still good.
+
+01:14.050 --> 01:14.290
+All right.
+
+01:14.330 --> 01:20.360
+If I run this function we have to assign this function to something or name it.
+
+01:20.360 --> 01:25.970
+Well instead of just assigning it to a variable and calling it again we can just do and immediately
+
+01:25.970 --> 01:27.000
+invoked function.
+
+01:27.140 --> 01:31.570
+So I can just wrap it in brackets so it's an expression and then immediately invoke.
+
+01:32.180 --> 01:40.450
+If I run this look at that I get whoopsie as an error which gets caught and well.
+
+01:40.670 --> 01:41.640
+Is this still good.
+
+01:41.720 --> 01:50.680
+Gets run because it's after the try catch block so we're able to handle asynchronous code and rejections
+
+01:50.950 --> 01:58.040
+in similar ways that we've done with synchronous code because of the async await keyword how nice is
+
+01:58.040 --> 02:05.230
+that and we can use the same feature that we had before we can have nested try catch blocks if we wanted
+
+02:05.230 --> 02:14.670
+to if we had let's say a another promise that rejects with whoopsie number one and see number two.
+
+02:14.710 --> 02:22.250
+And if I click Run well as soon as one of them airs remember we just go to the cache block.
+
+02:22.630 --> 02:35.210
+If I have a resolved promise and I run this well we see that UPC number two gets caught by the year
+
+02:36.140 --> 02:45.140
+and because the code looks synchronous now it does help with error handling and because you need to
+
+02:45.140 --> 02:52.280
+use a try catch block with a finally or try the runtime will actually give you an error to remind you
+
+02:52.280 --> 02:55.880
+that hey you should be using the cache block.
+
+02:55.880 --> 03:02.000
+The only gotcha with async await is that it's very easy to just forget to wrap it in a try catch block
+
+03:02.210 --> 03:09.220
+so that these errors just don't get caught if we use this in our node
+
+03:12.280 --> 03:15.380
+runtime and I click Run.
+
+03:15.730 --> 03:21.700
+Luckily for us gives us the on handle promised rejection warning but once again you want to make sure
+
+03:21.700 --> 03:26.130
+that you wrap your async await code in a tri cache block.
+
+03:26.480 --> 03:26.950
+All right.
+
+03:26.950 --> 03:27.880
+Nice and easy.
+
+03:27.880 --> 03:29.110
+I'll see you in the next video.
+
+03:29.340 --> 03:29.520
+Bye.

@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.930 --> 00:01.980
+Welcome back.
+
+00:01.980 --> 00:04.990
+Let's do another exercise now.
+
+00:05.010 --> 00:09.260
+We learned all about prototype ball inheritance here.
+
+00:09.390 --> 00:18.000
+So based on what you know plus all the things that we've learned in the past like the this keyword using
+
+00:18.060 --> 00:24.300
+all that knowledge I have two questions here that I'm going to warn you are a little bit difficult.
+
+00:24.450 --> 00:25.830
+You might not get them.
+
+00:25.860 --> 00:32.210
+You might have to google around and search around and remember there's no such thing as a perfect programmer.
+
+00:32.700 --> 00:33.800
+We can know everything.
+
+00:33.810 --> 00:39.420
+So use Google if you need to and especially the last one is pretty tough.
+
+00:39.510 --> 00:42.840
+So you can always come back to it but give it a go.
+
+00:42.960 --> 00:48.400
+And in the next video I'll show you how we solve these problems.
+
+00:48.420 --> 00:56.400
+The first question is I want you to create using the Date object that we have in JavaScript right here.
+
+00:56.400 --> 01:00.930
+That simply gives us a date.
+
+01:01.010 --> 01:05.960
+I want you to add a new method onto this constructor.
+
+01:05.960 --> 01:13.400
+This date constructor that is called Last year javascript doesn't have this.
+
+01:13.400 --> 01:21.990
+If I run this code I get last year is not a function because well that's not a thing if I do get a year
+
+01:22.230 --> 01:23.460
+or get full year.
+
+01:23.580 --> 01:29.700
+We see the types of methods that we have with a date object.
+
+01:29.700 --> 01:32.150
+But unfortunately last year well we don't have that.
+
+01:32.160 --> 01:34.610
+We're going to want to create it ourself.
+
+01:34.650 --> 01:37.080
+So how would you go about doing that.
+
+01:37.200 --> 01:43.500
+If I give it let's say a string like this date suggests nineteen hundred.
+
+01:43.500 --> 01:51.480
+If I do last year it'll give me the year before in the year a year year year format.
+
+01:51.960 --> 01:54.680
+So the answer to this will be 18 19.
+
+01:55.380 --> 02:03.520
+If this was let's say just new date with nothing in here which will give us the current date this should
+
+02:03.520 --> 02:08.590
+give us well last year so how do you do that.
+
+02:08.890 --> 02:11.660
+And then the second part and this is the bonus one.
+
+02:11.860 --> 02:21.760
+How can we modify the map method that we have on a race to print a actual map emoji at the end of each
+
+02:22.030 --> 02:23.100
+item.
+
+02:23.350 --> 02:25.790
+Middle of a spelling error there.
+
+02:25.930 --> 02:28.920
+So that if I do let's say console log and I give it an array.
+
+02:28.960 --> 02:30.100
+One two three.
+
+02:30.300 --> 02:38.020
+And then I do dot map and not give it anything I will actually print out one two three.
+
+02:38.030 --> 02:44.310
+But with the maps next to it how could we do that.
+
+02:44.350 --> 02:50.610
+Can we modify what these built in methods by javascript do.
+
+02:50.650 --> 02:51.310
+Give it a go.
+
+02:51.400 --> 02:54.430
+And in the next video I'll give you the answers.
+
+02:54.490 --> 02:54.870
+Good luck.

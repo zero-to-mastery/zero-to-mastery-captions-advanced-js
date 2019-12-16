@@ -1,0 +1,172 @@
+WEBVTT
+
+00:02.530 --> 00:08.770
+Now that we've gone through the functional programming concept I hope you understand the idea of going
+
+00:08.770 --> 00:15.840
+from procedural to functional programming at the end of the day a function without a return statement.
+
+00:16.030 --> 00:18.940
+That's just a procedure right.
+
+00:18.940 --> 00:27.280
+Functional programming gave us this idea of pure function and functions are useful because well we limit
+
+00:27.400 --> 00:30.280
+repetitions every time we use a function.
+
+00:30.280 --> 00:35.910
+It's something that is reusable we can reuse that function somewhere else.
+
+00:35.910 --> 00:42.390
+Now one thing that you may have realized is that although functional programming has different concepts
+
+00:42.450 --> 00:47.720
+than object oriented programming at the end of the day the goal is still the same.
+
+00:47.850 --> 00:55.870
+To have these things in mind to write better code functional programming just like object oriented programming
+
+00:56.140 --> 00:59.500
+is all about making your code predictable.
+
+00:59.500 --> 01:05.830
+Now the one benefit of functional programming that you may have noticed is that it's really really good
+
+01:05.920 --> 01:09.230
+at doing one to one data transformations.
+
+01:09.250 --> 01:14.380
+That is we have a piece of data and we have functions acting upon it.
+
+01:14.660 --> 01:19.480
+And in the next section we're going to compare Object Oriented Programming with functional programming
+
+01:19.720 --> 01:26.470
+to really have a better general understanding of when to use what but to review what we've learned up
+
+01:26.470 --> 01:27.370
+until now.
+
+01:27.640 --> 01:31.130
+We'll notice that functional programming is quite powerful.
+
+01:31.220 --> 01:36.430
+And once you start doing a lot of functional programming you're gonna start to see a trend towards this
+
+01:36.430 --> 01:44.170
+idea of lists and elements of a list and this idea of lists being transformed based on these little
+
+01:44.290 --> 01:46.190
+functions in these lists.
+
+01:46.210 --> 01:51.040
+Well we used arrays as an example but it can be any data structure.
+
+01:51.160 --> 01:52.450
+It can be objects.
+
+01:52.450 --> 01:55.140
+It could be trees it could be anything that you want.
+
+01:55.150 --> 01:57.540
+We're just acting upon data.
+
+01:57.550 --> 02:04.210
+The thinking though with functional program is that it lays the foundation for creating these this reusable
+
+02:04.210 --> 02:12.030
+code that we can move pieces of functions around to do different things based on our needs.
+
+02:12.100 --> 02:18.640
+And the reason that we were able to do all of this was because javascript makes it easy to assign functions
+
+02:18.730 --> 02:26.470
+to variables pass them into other functions return functions from functions compose functions pipe functions
+
+02:27.690 --> 02:34.830
+javascript also allows us to use immutable concepts like primitive types or using map or code Cat on
+
+02:34.830 --> 02:43.530
+a race object that assign cloning objects using spread operators and we learned a lot of difficult functional
+
+02:43.530 --> 02:50.040
+programming terms but at the end of the day all the terms mean is that we're building pure functions
+
+02:50.190 --> 02:55.830
+and we're trying to have as many pure functions as possible to try and avoid mutating state as much
+
+02:55.830 --> 03:03.510
+as we can in order to have this clean predictable code and by the way using what you've learned now
+
+03:03.810 --> 03:10.770
+you might look at library code differently for example in our robo friends redux app which is an app
+
+03:10.770 --> 03:13.520
+that we built in one of my other courses.
+
+03:13.620 --> 03:17.940
+If we go to containers and app G.S. and scroll all the way down.
+
+03:18.750 --> 03:27.270
+This is an app build with react and we ducks and we see over here that this connect well reminds us
+
+03:27.270 --> 03:29.340
+a lot of composed doesn't it.
+
+03:29.370 --> 03:36.780
+We take the app which is our entire front end application or the view of the front end application and
+
+03:36.780 --> 03:38.460
+we add different things to it.
+
+03:38.490 --> 03:46.650
+So we take this data this view and we add properties and we add map state to props which is sort of
+
+03:46.650 --> 03:47.870
+like actions.
+
+03:47.970 --> 03:54.570
+So if we scroll all the way down up even if you don't know anything about react we see that map state
+
+03:54.570 --> 04:02.130
+to props and map dispatched to props are taking some sort of state or actions and returning once again
+
+04:02.520 --> 04:11.280
+objects that we can attach to our app things like redux really popularized the idea of functional programming
+
+04:11.550 --> 04:19.320
+for JavaScript developers especially front end javascript developers you start to see now that reduces
+
+04:19.380 --> 04:21.480
+and Redux while they're doing the same thing.
+
+04:21.660 --> 04:24.850
+They have state that they receive and some actions.
+
+04:25.020 --> 04:34.460
+And based on those actions we return a new state you see these paradigms that were developed over decades
+
+04:35.120 --> 04:41.990
+are now being used by some of the most popular libraries for JavaScript and other programming languages.
+
+04:42.200 --> 04:49.910
+And I hope with this section you start to notice these little things that it's not actually just extremely
+
+04:49.910 --> 04:56.000
+clever people that you'll never be able to understand or you'll never be able to be as good as they
+
+04:56.000 --> 05:04.910
+are all these programmers are just using the skills the paradigms that people in the past have learned
+
+05:05.030 --> 05:06.470
+and have adapted.
+
+05:06.470 --> 05:10.970
+So I hope now you have a better way to look at code and understand it.
+
+05:12.410 --> 05:13.730
+I'll see in the next one.
+
+05:13.920 --> 05:14.120
+Bob.

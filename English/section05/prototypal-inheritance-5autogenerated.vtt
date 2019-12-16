@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.930 --> 00:11.020
+Welcome back let's explore how we can create our own prototypes because I told you that promo is something
+
+00:11.020 --> 00:12.200
+that we shouldn't use.
+
+00:12.220 --> 00:20.890
+We should never do proton equals some type of an object because we should never use this for performance
+
+00:20.890 --> 00:24.150
+reasons in our javascript code.
+
+00:24.190 --> 00:26.980
+So what is a safe way to do this.
+
+00:26.980 --> 00:38.030
+Well let's create a human and this human will have a property that is well mortal.
+
+00:38.230 --> 00:42.150
+A human is mortal should be true.
+
+00:42.430 --> 00:51.160
+And let's say out of that human we create let's say Socrates and Socrates should also be a human it
+
+00:51.160 --> 00:57.180
+should inherit from this human and we can do that with object dot create.
+
+00:57.310 --> 00:59.210
+Now there are many ways of doing this.
+
+00:59.230 --> 01:06.910
+Something that we'll explore in the upcoming section but this is one of the ways that we can inherit
+
+01:07.540 --> 01:14.510
+from human so that I created object does create human.
+
+01:14.650 --> 01:24.770
+And that's going to equal Socrates so that if I do console dialogue Socrates and I run well I get an
+
+01:24.770 --> 01:37.500
+empty object let's add a property on Socrates let's say Socrates has let's say age of forty five.
+
+01:37.550 --> 01:44.480
+I don't know how old Socrates was but let's say forty five and if I run this I have age forty five but
+
+01:45.350 --> 01:57.920
+can I do Socrates thought mortal if I click Run yep I have it Socrates is mortal because we've created
+
+01:58.250 --> 02:12.300
+using object to create a prototype chain up to human so if I do human dot is a prototype of Socrates
+
+02:12.960 --> 02:22.730
+we all get true human is prototype of Socrates we've inherited from human not bad at all.
+
+02:22.900 --> 02:28.030
+This is something we're going to explore a little bit more like I said before but for now at least now
+
+02:28.030 --> 02:34.270
+you know how to do this without using that evil underscore underscore product as a matter of fact they
+
+02:34.360 --> 02:42.580
+named it this way so that nobody accidentally messes with the prototype chain I'll see in the next one.
+
+02:43.080 --> 02:43.190
+By.

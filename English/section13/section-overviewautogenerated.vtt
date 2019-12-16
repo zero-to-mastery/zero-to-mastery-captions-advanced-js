@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.230 --> 00:03.420
+What is a data structure.
+
+00:04.630 --> 00:13.940
+A data structure is a collection of values algorithms are the steps or processes we put into place to
+
+00:13.940 --> 00:17.630
+manipulate these collection of values.
+
+00:17.640 --> 00:26.110
+It's what allows us to write programs a person who knows how data structures and algorithms work and
+
+00:26.110 --> 00:31.400
+how to use them can write programs great programs.
+
+00:31.410 --> 00:38.880
+The beauty is that these are timeless no matter what programming language you use whether you prefer
+
+00:39.060 --> 00:46.920
+one library over the other whether you write code in angular or react in the front end development world
+
+00:47.430 --> 00:49.740
+or you're a game developer.
+
+00:49.740 --> 00:54.360
+Underneath it all it's all data structures and algorithms.
+
+00:54.360 --> 01:01.110
+If you understand these then you can really easily adapt and tackle all sorts of technical problems.
+
+01:02.160 --> 01:10.770
+It is why companies like Facebook Amazon Netflix Google ask questions specific to Data Structures and
+
+01:10.770 --> 01:18.060
+Algorithms because although it may be important to know the latest and greatest javascript syntax or
+
+01:18.150 --> 01:26.610
+maybe the latest and greatest library those things change if you know the fundamentals so then they
+
+01:26.610 --> 01:32.000
+can throw you any problem any situation and you're able to make the right decision.
+
+01:32.010 --> 01:34.510
+This knowledge is extremely valuable.
+
+01:34.620 --> 01:40.800
+The longer you are in the field the more and more you realize that you need these fundamental principles
+
+01:40.800 --> 01:46.350
+of data structures and algorithms in order to be a great developer or engineer.
+
+01:46.350 --> 01:49.920
+So let's get started with that over the next few sections.
+
+01:49.920 --> 01:54.960
+We have a long way to go to get familiar with data structures and algorithms so you can write great
+
+01:54.960 --> 01:56.160
+programs.
+
+01:56.190 --> 01:56.880
+Let's get started.

@@ -1,0 +1,370 @@
+WEBVTT
+
+00:00.900 --> 00:02.060
+Welcome back.
+
+00:02.070 --> 00:06.270
+This is a big one and one of my favorites.
+
+00:06.330 --> 00:13.980
+This really shows the power of functional programming which up until now has been a little bit confusing.
+
+00:14.130 --> 00:21.780
+It's been a lot of functions a lot of pure functions but it's hard to see the use in what we've learned.
+
+00:21.780 --> 00:28.110
+We've just learned a bunch of terminology but it hasn't really made us a better programmer starting
+
+00:28.110 --> 00:29.090
+in this video.
+
+00:29.120 --> 00:36.000
+We're gonna start to uncover some of these pieces so that when we work on our final exercise we understand
+
+00:36.000 --> 00:42.840
+how powerful this can be and compose is definitely the most powerful concept in my opinion at least
+
+00:43.560 --> 00:53.720
+composing or composition is the idea that any sort of data transformation that we do should be obvious.
+
+00:53.740 --> 00:58.780
+It's kind of like a conveyor belt right in a factory.
+
+00:58.780 --> 01:09.850
+We have data that gets processed by a function that outputs some sort of data and that data gets processed
+
+01:09.850 --> 01:20.140
+by another function that outputs that data in a new form and so on and so forth compose ability is a
+
+01:20.140 --> 01:27.760
+system design principle that deals with this relationship of components how we can compose different
+
+01:27.760 --> 01:36.370
+components of a factory that works on let's say a conveyor belt and a highly composed able system provides
+
+01:36.370 --> 01:42.300
+components that can be selected and assembled in various combinations just like an assembly line.
+
+01:42.400 --> 01:44.310
+We're moving this machine here.
+
+01:44.320 --> 01:52.180
+This machine here it's easy to move pieces around to get the desired output based on the user's specific
+
+01:52.240 --> 01:53.530
+requirements.
+
+01:53.530 --> 01:55.460
+Let's write some code to see what I mean.
+
+01:55.870 --> 01:58.150
+And I'm giving you a bit of a warning.
+
+01:58.240 --> 02:04.960
+This gets a little complicated at first you might need a few minutes on your own after this video to
+
+02:05.230 --> 02:08.060
+code this along and figure out exactly what happens.
+
+02:08.260 --> 02:13.710
+But trust me initially it's going to look hard with time this will become easier and easier.
+
+02:14.470 --> 02:18.370
+Let's say I want to do something using functional programming.
+
+02:18.490 --> 02:22.720
+So we want to keep all our functions pure and we want to do something interesting.
+
+02:22.720 --> 02:25.630
+We want to do two things at a time.
+
+02:25.780 --> 02:33.710
+We want to have a number like minus 50 that well gets multiplied by three.
+
+02:33.880 --> 02:36.610
+And then we also want to take the absolute off.
+
+02:36.670 --> 02:39.970
+That means we want a number that's always positive.
+
+02:40.000 --> 02:44.000
+So we also want to make sure that we remove any negative side from it.
+
+02:44.050 --> 02:45.580
+We want to do two things.
+
+02:45.670 --> 02:46.900
+Two functions.
+
+02:46.900 --> 02:51.310
+How can we compose them together like an assembly line at a factory.
+
+02:51.310 --> 03:05.320
+Well I want to have a function that I'm going to call multiply by three and absolute.
+
+03:05.390 --> 03:05.800
+All right.
+
+03:05.800 --> 03:11.210
+Not the best name in the world but at least this shows that we're doing multiple things and I want to
+
+03:11.210 --> 03:13.280
+do that operation that I told you about.
+
+03:14.180 --> 03:19.940
+But in order for me to do that I need to compose these two pieces of functionality.
+
+03:20.030 --> 03:20.830
+How can we do that.
+
+03:21.740 --> 03:30.460
+Well in functional programming you can use something called compose now compose doesn't exist in JavaScript.
+
+03:30.710 --> 03:39.180
+However it's so common that there are a ton of libraries that actually lets you use compose.
+
+03:39.280 --> 03:45.400
+For example one of the best libraries when it comes to JavaScript and functional programming is rammed
+
+03:45.400 --> 03:54.100
+up and rammed up as you can see comes with compose and we can use compose like this r dot to compose
+
+03:54.730 --> 04:03.840
+and we can pass it in functions just like an assembly line to operate on data but for now I don't want
+
+04:03.840 --> 04:04.680
+to use any library.
+
+04:04.680 --> 04:06.150
+I want to build our own.
+
+04:06.150 --> 04:21.080
+I want to build a compose function that allows us to multiply by three and then also lets say take absolute
+
+04:22.680 --> 04:29.430
+which means take that absolute number and make sure that there's no negative signs at all or you know
+
+04:29.430 --> 04:39.170
+what let's say make positive because that's why we want so I want a compose function that when given
+
+04:39.230 --> 04:45.370
+a number is going to multiply by three and make positive.
+
+04:45.480 --> 04:47.090
+How can we do this.
+
+04:47.160 --> 04:57.700
+Well let's define our own compose function in this compose function is going to take while the two functions
+
+04:58.800 --> 05:09.450
+so let's call it and this is f and g and f and g is going to return a another function in this function
+
+05:09.570 --> 05:13.260
+is going to receive the data.
+
+05:13.260 --> 05:21.660
+So whatever we want to multiply by three and absolute that number let's say in our example we want to
+
+05:21.660 --> 05:31.940
+be able to call multiply by three and absolute minus 50 so minus 50 is going to be the data now in here.
+
+05:32.120 --> 05:39.110
+The compose is going to accept F and G which is multiplied by three and make positive which is going
+
+05:39.110 --> 05:46.640
+to return a function right here that takes data and this data.
+
+05:46.650 --> 05:48.500
+Well what are we gonna do with it.
+
+05:48.620 --> 05:59.900
+First I want to take this data data over here which is minus 50 and I want our first while apply the
+
+06:00.530 --> 06:01.730
+make positive.
+
+06:01.730 --> 06:10.640
+So I'm going to say G is going to call data and then after that gets evaluated I want to multiply by
+
+06:10.640 --> 06:11.380
+three.
+
+06:11.390 --> 06:14.960
+Well again functions are first class citizens.
+
+06:14.960 --> 06:15.950
+And this.
+
+06:16.010 --> 06:25.200
+When that gets done I want you to call f which in our case is multiply by three.
+
+06:25.230 --> 06:31.790
+I hope that makes sense if not just playback this video and see if you follow step by step.
+
+06:31.860 --> 06:40.750
+Now if I run this I get an error rate because multiply by three and make positive is not really a thing.
+
+06:40.790 --> 06:48.500
+So let's make those as well let's make multiply by three and you see here that I'm just creating pure
+
+06:48.500 --> 06:57.640
+functions here multiply by three is going to take a number and it's going to Well multiply that by three.
+
+06:57.890 --> 07:12.270
+Nice and simple and then make positive is going to take once again a number and we're going to use the
+
+07:12.270 --> 07:22.320
+built in math dot a B.S. which does exactly that turns a number into the absolute number which again
+
+07:22.470 --> 07:27.520
+that means removing the minus.
+
+07:27.520 --> 07:34.450
+So now if I run this I get a hundred fifty because 50 multiplied by three is one hundred fifty and we
+
+07:34.450 --> 07:39.360
+make that an absolute number which turns it into while we remove the negative.
+
+07:39.550 --> 07:49.580
+How cool is that using compose we've created our little assembly line where we can compose different
+
+07:49.670 --> 07:53.000
+functions together and that's what is.
+
+07:53.060 --> 07:59.750
+Remember the definition compose ability is a system design principle that deals with the relationship
+
+07:59.870 --> 08:01.610
+between components.
+
+08:01.610 --> 08:08.100
+These are the components that can be selected and assembled in various combinations.
+
+08:08.180 --> 08:13.060
+I can move this around so that multiplied by three is here.
+
+08:13.070 --> 08:21.490
+And make positive is here so that the order of operation changes just like moving little machinery around
+
+08:21.490 --> 08:23.270
+an assembly line.
+
+08:23.270 --> 08:31.720
+And I hope you see the power in and compose here because now we can compose functions build them together
+
+08:31.720 --> 08:38.890
+to add extra functionality to create that data flow where we take a piece of data we take it through
+
+08:39.040 --> 08:46.210
+all these functions and then finally we have some sort of data that gets output because all those functions
+
+08:46.210 --> 08:52.210
+are pure and all those functions well are composed of all.
+
+08:52.410 --> 08:59.340
+Now when it comes to compose that's one of the most common functions that you're going to see in a programming
+
+08:59.340 --> 09:02.190
+language or a programming paradigm.
+
+09:02.190 --> 09:07.310
+Like I said RAMDANI Well it definitely has compose and most of the time.
+
+09:07.320 --> 09:12.330
+If you're using functional programming concepts while you're definitely using compose but there's also
+
+09:12.330 --> 09:24.570
+another thing called pipe which is actually not that difficult pipe is essentially the same thing except
+
+09:24.810 --> 09:32.630
+instead of going from right to left it goes left to right.
+
+09:32.630 --> 09:33.410
+Let me show you what I mean.
+
+09:34.820 --> 09:45.540
+If instead of compose we want to create pipe well pipe is simply the order will be different.
+
+09:45.540 --> 09:57.960
+So instead of G over here we just swap these around so that now with pipe the operations are different.
+
+09:57.960 --> 10:01.580
+F gets run first over the data.
+
+10:01.800 --> 10:04.440
+So that's the first parameter that we give and compose.
+
+10:04.650 --> 10:12.480
+So that means multiply by three gets run first and then G gets run over that data.
+
+10:12.480 --> 10:20.740
+So make positive gets run first now a better way for me to demonstrate this to you is like this imagine
+
+10:20.740 --> 10:29.630
+if we had a function one that takes it as a parameter a function and that function is function too.
+
+10:29.680 --> 10:38.160
+That itself takes a function which is function three and that itself takes 50.
+
+10:38.230 --> 10:44.610
+Now I know that's confusing but with composing pipe this is what we can do.
+
+10:44.950 --> 10:53.190
+We can do compose function 1 then function 2 then function 3.
+
+10:53.650 --> 10:57.040
+And then finally we give it the 50
+
+10:59.850 --> 11:09.660
+so with compose what we can do is say hey I want you to evaluate this right to left that is take the
+
+11:09.660 --> 11:15.900
+data then apply function 3 to it whatever comes out of that apply function to do it whatever comes out
+
+11:15.900 --> 11:22.050
+of that apply function want to pipe is just the opposite type says do.
+
+11:22.050 --> 11:29.380
+Function three first then function 1 or 2 then function 1.
+
+11:29.520 --> 11:37.160
+So if I do 50 these two functions are going to have the exact same output because the order is actually
+
+11:37.160 --> 11:37.770
+the same.
+
+11:37.940 --> 11:43.910
+The only difference is that pipe is going to grab 50 and then start off with function 3 just like compose
+
+11:44.000 --> 11:47.820
+start off with function 3 and then do function to then function 1.
+
+11:48.140 --> 11:54.920
+So goes left to right now I'm only mentioning this here because you'll see these changed interchangeably
+
+11:55.220 --> 12:01.680
+and you can use whichever one you prefer for your readability and I'm also going to use this technique
+
+12:01.710 --> 12:07.200
+in our final exercise to compose our shopping cart.
+
+12:07.250 --> 12:07.920
+All right.
+
+12:07.920 --> 12:13.530
+Hopefully this doesn't hurt your brain too much but I also hope that you see some of the power that
+
+12:13.530 --> 12:14.540
+comes with it.
+
+12:14.640 --> 12:22.620
+We've just created these tiny little functions that as you can see can be easily tested are pure but
+
+12:22.680 --> 12:29.330
+we're able to compose them together to do something more complex like multiplied by three and absolute.
+
+12:29.400 --> 12:31.820
+Let's take a break and I'll see you in the next one.
+
+12:31.900 --> 12:32.240
+Bye bye.

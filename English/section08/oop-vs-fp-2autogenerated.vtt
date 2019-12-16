@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00.570 --> 00:03.060
+OK OK I said that they're both equal.
+
+00:03.060 --> 00:07.580
+But you didn't really tell us about the pros and cons of each.
+
+00:07.590 --> 00:14.790
+Let's go over the key differences between these two to finalize everything that we've talked about functional
+
+00:14.790 --> 00:22.180
+programming is all about performing many different operation for which the data is fixed.
+
+00:22.410 --> 00:24.240
+So that's many operations
+
+00:27.740 --> 00:33.160
+object oriented programming is about a few operations
+
+00:36.190 --> 00:44.060
+on common data in a functional program.
+
+00:44.060 --> 00:46.510
+We have the idea of stateless.
+
+00:46.910 --> 00:55.400
+That is we don't modify state state is immutable versus an object oriented programming that is very
+
+00:55.520 --> 00:57.080
+state full.
+
+00:57.140 --> 01:02.550
+We are modifying state a feature of objects.
+
+01:02.660 --> 01:04.130
+Is that an object.
+
+01:04.130 --> 01:08.910
+Procedures can access and often modified the data fields of the object.
+
+01:08.930 --> 01:20.270
+Right we have the idea of this and self in objects and we can modify them in classes in functional programming
+
+01:21.500 --> 01:29.010
+our functions are pure they are no side effects it means that the functions that we write don't make
+
+01:29.010 --> 01:37.550
+an impact on the code that is running outside of that function on object oriented programming.
+
+01:37.660 --> 01:46.680
+There are definitely side effects methods manipulate our internal state.
+
+01:46.770 --> 01:48.180
+Now the interesting thing.
+
+01:48.180 --> 01:54.630
+And why functional programming is becoming popular is because of this idea of purity because of this
+
+01:54.990 --> 02:01.050
+with the functions that have no side effects it means that we can start running code in parallel on
+
+02:01.050 --> 02:08.340
+multiple processors and it won't have effect on our program vs. an object oriented programming where
+
+02:08.340 --> 02:13.980
+we can do that because our functions have side effects with functional programming.
+
+02:13.980 --> 02:25.860
+It's more declarative it's about what we want to be doing vs. an object oriented program which is more
+
+02:25.860 --> 02:31.750
+about how we want it to be done which is more imperative.
+
+02:33.380 --> 02:36.340
+So when should you use one over the other.
+
+02:36.350 --> 02:45.210
+Well functional programming is quite good at processing large data for applications if you're analyzing
+
+02:45.210 --> 02:49.940
+data user data maybe using it for a machine learning model.
+
+02:50.130 --> 02:55.980
+Functional programming works really well for high performance and processors for example because you
+
+02:55.980 --> 03:04.940
+can run it on multiple processors if you have a few things that require a lot of operations a lot of
+
+03:04.940 --> 03:09.740
+little functions applied to it well then functional programming is usually a good idea.
+
+03:09.950 --> 03:16.940
+If on the other hand you have many things like characters in a game with not too many operations with
+
+03:16.940 --> 03:25.060
+few operations will then object oriented programming might be a better solution but as I said before
+
+03:25.270 --> 03:28.990
+you can use the ideas from both of these to write your code.
+
+03:29.200 --> 03:35.930
+For example in this react app our robo friends app from my other course.
+
+03:35.970 --> 03:43.530
+Well here we see that react to users classes to extend component.
+
+03:43.530 --> 03:50.100
+We have a constructor we calling our super so that the component class which is a class provided by
+
+03:50.100 --> 03:59.110
+the react library can be constructed so that we have the ability of the component class and then we
+
+03:59.110 --> 04:04.150
+also have methods that we create onto this class.
+
+04:05.670 --> 04:09.930
+But at the same time there's also this idea of functional programming.
+
+04:10.320 --> 04:19.290
+If we go to our components that is the components on our Web site these little pieces of Jess X which
+
+04:19.290 --> 04:22.640
+convert to AML well they're just pure functions.
+
+04:22.680 --> 04:30.180
+The card component just receives an input of properties and produces an output based on that input no
+
+04:30.180 --> 04:35.590
+matter how many times I run this with the same input it's going to deliver the same output.
+
+04:35.610 --> 04:44.260
+It's just pure functions without state so remember in all programs there are two primary components
+
+04:44.770 --> 04:53.420
+the data and the behaviors object oriented programming says hey bring together the data and the behavior
+
+04:53.450 --> 04:57.230
+in a single location called object or class.
+
+04:57.230 --> 05:04.100
+This is going to allow us to understand our program easier and be more organized functional programming
+
+05:04.160 --> 05:10.910
+says that data and behavior are distinctly different things and should be kept separate for clarity
+
+05:12.060 --> 05:17.340
+I hope these principles will be useful to you in your future and I hope you learned a lot.
+
+05:17.340 --> 05:18.150
+I'll see in the next one.
+
+05:18.760 --> 05:19.320
+Bye bye.

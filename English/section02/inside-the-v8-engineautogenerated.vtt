@@ -1,0 +1,289 @@
+WEBVTT
+
+00:01.020 --> 00:01.930
+Welcome back.
+
+00:01.950 --> 00:04.980
+Let's have a look at the pros and cons of each.
+
+00:04.980 --> 00:14.040
+First off interpreters are quick to get up and running right because if we go to our example with an
+
+00:14.040 --> 00:21.630
+interpreter We don't have to convert this into a another language like language X like I showed you
+
+00:21.630 --> 00:23.150
+with a compiler.
+
+00:23.290 --> 00:27.140
+There's no compilation step before you can start running your code.
+
+00:27.370 --> 00:33.970
+You just give this to an interpreter and the interpreter starts translating their first line and just
+
+00:34.060 --> 00:37.150
+runs the code for us because of this.
+
+00:37.150 --> 00:41.610
+An interpreter is a natural fit for something like Javascript.
+
+00:41.610 --> 00:48.100
+Write a javascript file get sent from the server to the browser to the client on the front end.
+
+00:48.490 --> 00:53.860
+And we want that JavaScript to execute right away because our users are going to be waiting on the web
+
+00:53.860 --> 01:01.610
+page trying to interact with our application and JavaScript originally was created fro the browser.
+
+01:01.610 --> 01:06.240
+So being able to interpret javascript and run it as fast as possible.
+
+01:06.320 --> 01:08.490
+Well that was ideal.
+
+01:08.490 --> 01:16.080
+And this is exactly why javascript used interpreters at the beginning but there's a con with using an
+
+01:16.080 --> 01:23.850
+interpreter and this is the same problem that Google had back in the day when they had Google Maps running
+
+01:23.850 --> 01:30.240
+a lot of javascript but it'll get slower and slower and slower because the problem with interpreters
+
+01:30.330 --> 01:33.770
+is that when you're running the same code more than once.
+
+01:34.140 --> 01:40.320
+For example if you're in a loop like this one over here where we're running this piece of code over
+
+01:40.320 --> 01:48.740
+and over and over even though it gives us the same result it can get really really slow the compiler
+
+01:48.950 --> 01:51.210
+actually helps us here.
+
+01:51.320 --> 01:57.170
+It takes a little bit more time to start up because it has to go through that compilation step at the
+
+01:57.170 --> 02:05.300
+beginning go through our code understand it and spit it out into a another language but the compiler
+
+02:05.450 --> 02:11.360
+will be smart enough that when it sees code like this and this is obviously a simplified version of
+
+02:11.360 --> 02:17.690
+it but if he sees code like this that we just loop over and it has the same inputs returning the same
+
+02:17.690 --> 02:18.470
+outputs.
+
+02:18.740 --> 02:26.840
+Well it can actually just simplified this code and instead of calling this function multiple times can
+
+02:26.840 --> 02:36.450
+just replace this function with something like nine because we know that we want to return nine because
+
+02:36.450 --> 02:43.410
+a compiler doesn't need to repeat the translation for each pass through in that loop the code generated
+
+02:43.410 --> 02:51.770
+from it is actually faster and these sort of edits that compilers do are called optimization so let's
+
+02:51.770 --> 03:01.130
+go back to that question interpreter or compiler which one is better.
+
+03:01.280 --> 03:06.710
+They both have their pros and cons compiler obviously takes a little bit longer to get up and running
+
+03:06.890 --> 03:10.880
+but the code is going to eventually run faster or interpreter.
+
+03:10.880 --> 03:18.140
+That is really fast to get up and running but unfortunately doesn't do any optimizations.
+
+03:18.150 --> 03:25.020
+Is there a way that we can get the best of both worlds and this is what some engineers came up with
+
+03:25.320 --> 03:33.000
+in late 2000 and if we use Google as our example with the V8 engine what if we combine the best of both
+
+03:33.000 --> 03:42.250
+worlds what if instead of using the compiler and interpreter we combine these two and create something
+
+03:42.250 --> 03:45.510
+called a jet compiler or just in time.
+
+03:45.550 --> 03:53.840
+Compiler and this is exactly what browser started doing browsers started mixing compilers specifically
+
+03:53.870 --> 04:01.340
+these git compilers for just in time compilation to make the engines faster.
+
+04:01.400 --> 04:03.990
+So let's see how V8 engine does this.
+
+04:04.040 --> 04:10.090
+Underneath the hood in order to use the best of both worlds.
+
+04:10.300 --> 04:12.900
+Remember we passed the code.
+
+04:12.970 --> 04:22.450
+We turn it into an abstract syntax tree and then this code initially goes to an interpreter and by the
+
+04:22.450 --> 04:25.480
+way again I'm showing you what the V8 engine does.
+
+04:25.480 --> 04:31.840
+They're small changes in different engines but this is probably the best most optimum way to run the
+
+04:31.840 --> 04:32.820
+JavaScript engine.
+
+04:32.890 --> 04:36.460
+As I'm recording this video initially.
+
+04:36.510 --> 04:42.090
+The code gets sent to the interpreter and in the V8 engine.
+
+04:42.090 --> 04:43.440
+This is called ignition.
+
+04:43.440 --> 04:47.710
+I know they have really cool sounding names to make them sound like they do things fast.
+
+04:47.940 --> 04:55.140
+But this interpreter in the V8 engine is called ignition and it takes this SSD and it spits out bite
+
+04:55.140 --> 04:55.840
+code.
+
+04:55.950 --> 05:04.590
+I remember byte code is code that's not as low level as machine code but it's code that is able to be
+
+05:04.590 --> 05:09.860
+interpreted by the JavaScript engine in order to run our programs.
+
+05:10.770 --> 05:12.270
+So that's the first step.
+
+05:12.420 --> 05:15.930
+But then we see over here that there's something called a profiler.
+
+05:15.990 --> 05:25.530
+This old man that's checking out our code in this profiler also called a monitor monitors and watches
+
+05:25.770 --> 05:34.420
+our code as it runs and makes notes on how we can optimize this code such as how many times it is being
+
+05:34.420 --> 05:35.010
+run.
+
+05:35.320 --> 05:43.120
+What types are used and how we can possibly optimize this and using this profiler as the code is running
+
+05:43.150 --> 05:51.010
+through our interpreter which tells our browser what to do if the same lines of code are run a few times
+
+05:52.330 --> 06:00.580
+we actually pass off some of this code to the compiler or a git compiler adjust in time compiler because
+
+06:00.970 --> 06:08.030
+as the code is running the interpreter is going to say hey here's some code for you to optimize passes
+
+06:08.030 --> 06:15.020
+it off to the compiler and the compiler as the application is running takes a code and compiles it or
+
+06:15.020 --> 06:16.110
+modifies it.
+
+06:16.120 --> 06:24.820
+So it does what you ask it to but trying to make optimizations so it runs faster and it then replaces
+
+06:25.390 --> 06:33.730
+the sections where it could be improved of the bike code with optimized machine code so that code that
+
+06:33.760 --> 06:38.590
+optimized code is used from that point on instead of the slower byte code.
+
+06:38.590 --> 06:42.480
+So it mixes and matches things and it constantly runs through this loop.
+
+06:42.790 --> 06:47.970
+And this means that the execution speed of Job's script code will be improving.
+
+06:47.980 --> 06:48.810
+Right.
+
+06:48.820 --> 06:55.630
+This means that the execution speed of the javascript code that we entered into the engine is going
+
+06:55.630 --> 06:57.670
+to gradually improve.
+
+06:57.700 --> 06:58.030
+Right.
+
+06:58.030 --> 07:04.990
+Because the profiler in the compiler are constantly making updates and changes to our byte code in order
+
+07:04.990 --> 07:11.750
+to be as efficient as possible so interpreter allows us to run the code right away.
+
+07:11.910 --> 07:16.520
+And the compiler and profiler allows us to optimize this code as we're running.
+
+07:16.590 --> 07:19.170
+That's where the name comes from git compiler.
+
+07:19.230 --> 07:27.920
+Just in time compiler in this compiler for V8 is called turbo fan again a cool sounding name to make
+
+07:27.920 --> 07:33.000
+it sound like things are going fast and by the way just a bit of a fun fact.
+
+07:33.030 --> 07:40.650
+Previous versions of V8 engine actually used to JIT compilers with really cool sounding names but they
+
+07:40.650 --> 07:46.990
+changed it to this method because there were some faster optimizations that they could do so why did
+
+07:46.990 --> 07:48.550
+we just learn all of this.
+
+07:48.550 --> 07:52.880
+You can write JavaScript without knowing any of this stuff and you'll be fine.
+
+07:53.920 --> 08:02.620
+Now that we know how the engine works underneath the hood we can write more optimized code code that
+
+08:02.620 --> 08:07.990
+the compiler can take and run it faster than our regular javascript.
+
+08:08.170 --> 08:14.920
+And we also can use this knowledge to make sure that we don't confuse the compiler because the compiler
+
+08:14.920 --> 08:23.110
+is imperfect it can make mistakes and it can try to optimize code that actually does the opposite.
+
+08:23.110 --> 08:30.520
+And if it makes a mistake and it does something unexpected it does something called D optimization which
+
+08:30.520 --> 08:34.670
+takes even longer time to reverted back to the interpreter.
+
+08:34.690 --> 08:40.930
+So by learning this we're going to have a video coming up where we learn how to write optimize code
+
+08:41.230 --> 08:48.130
+so that we help out this profiler and compiler to make sure that we're able to run the fastest code
+
+08:48.280 --> 08:51.830
+possible and let's learn those optimizations.
+
+08:51.850 --> 08:54.670
+But first let's talk about something quickly.
+
+08:54.670 --> 08:56.350
+I'll see in the next video by.

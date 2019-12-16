@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.020 --> 00:01.930
+Welcome back.
+
+00:01.980 --> 00:08.580
+So we know about prototype oil inheritance in JavaScript and we can use that to our advantage to move
+
+00:08.670 --> 00:12.860
+a little bit closer towards object oriented programming.
+
+00:12.870 --> 00:18.630
+We want to solve this issue of having same functionality on multiple objects.
+
+00:18.630 --> 00:23.670
+How can we share that before we get to prototype of inheritance.
+
+00:23.670 --> 00:27.390
+There is one way of just doing this manually.
+
+00:27.390 --> 00:28.410
+Right.
+
+00:28.470 --> 00:36.840
+I can simply take out this function and this function at the top can be placed in some sort of a store
+
+00:37.050 --> 00:39.540
+that we have common functionality.
+
+00:39.540 --> 00:50.330
+For example I can do const elf functions and I can even call this elf function stores or store and in
+
+00:50.330 --> 00:52.490
+here I can just simply have attack
+
+00:55.450 --> 01:06.500
+and do something like this so that I have a simple object that has the attack method on it.
+
+01:07.210 --> 01:15.130
+And all I need to do now to give the attack ability to Peter and Sam is to add a line here that says
+
+01:16.420 --> 01:27.350
+Peter dot attack is going to equal the elf functions dot attack and then same with Sam will do the same
+
+01:27.350 --> 01:30.440
+thing we'll say Sam dot attack.
+
+01:30.440 --> 01:39.820
+So we're adding a new property onto Sam and that property is going to equal the elf functions dot attack.
+
+01:39.840 --> 01:50.930
+Now if I run this I get an error weapon is not defined because well this elf functions object has no
+
+01:50.930 --> 01:52.760
+idea what weapon is.
+
+01:52.760 --> 01:53.030
+Right.
+
+01:53.330 --> 01:59.520
+So how can we refer to the object that's calling us remember who's calling us.
+
+01:59.540 --> 02:09.820
+Well the object to the left of the dot right is so in this case albeit this dot weapon who's calling
+
+02:09.820 --> 02:13.440
+us Sam is calling us or Peter is calling us.
+
+02:13.720 --> 02:16.840
+If I run this all right everything is working.
+
+02:16.840 --> 02:20.970
+Sam can now attack with fire and that's not too bad right.
+
+02:20.970 --> 02:27.660
+We have shared functionality here but it's still a lot of manual work.
+
+02:27.660 --> 02:35.200
+Javascript gives us a nice little tool for us to make this a lot easier on our self we can do something
+
+02:35.200 --> 02:44.180
+called the object dot create which we've seen in the previous sections with object to create I can clean
+
+02:44.180 --> 02:53.160
+this up a bit instead of having to manually attach these methods onto each elf remember if we had a
+
+02:53.160 --> 03:01.820
+thousand elves that's going to be a lot of work instead I'm going to remove these lines of code and
+
+03:01.820 --> 03:12.010
+use object to create to create that link that prototype chain between these two parts of the code and
+
+03:12.010 --> 03:25.680
+the way we can do that is fairly simple we can say new ELF is going to equal object dot create an object
+
+03:25.770 --> 03:30.540
+create is going to take well what do we want to create an object from.
+
+03:31.050 --> 03:37.620
+We want to create an object from this elf function store which is an object.
+
+03:37.620 --> 03:42.480
+This could probably be named a little bit better because it is confusing it's an object even though
+
+03:42.480 --> 03:44.190
+I call it elf functions.
+
+03:44.190 --> 03:51.120
+So maybe you can say store here but for now let's leave it the way it is Elf functions.
+
+03:51.120 --> 04:01.040
+So I'm going to create an object from the elf function and I'm going to assign that to new wealth so
+
+04:01.220 --> 04:06.350
+let's just say let new wealth from here this new ELF.
+
+04:06.380 --> 04:13.820
+We can attach the name and weapon property so let's do new ELF Dot.
+
+04:13.860 --> 04:22.920
+Name is going to equal the parameter name that we receive and new ELF.
+
+04:22.970 --> 04:32.360
+Make sure I spelled out right new ELF dot weapon is going to equal weapon parameter that we receive
+
+04:33.140 --> 04:37.480
+and then finally we want to return the new elf from you
+
+04:40.430 --> 04:41.510
+let's see if that works.
+
+04:41.620 --> 04:45.600
+If I run this look at that it's working.
+
+04:45.610 --> 04:54.590
+Let's console log this just so we can see both of these in action and console log here as well if I
+
+04:54.590 --> 04:59.390
+run this look at that attack with stone attack with fire.
+
+04:59.390 --> 05:06.800
+Both Peter and Sam have the attack method and why were we able to do that.
+
+05:06.830 --> 05:18.820
+Well because we used object dot create what object does create does is it creates a link between the
+
+05:19.060 --> 05:28.910
+elf functions and the new elf that we just created we're doing prototype all inheritance here.
+
+05:29.100 --> 05:41.840
+If I console log new health here and I run this I see that it creates an empty object for me but where
+
+05:41.840 --> 05:43.950
+is this attack.
+
+05:44.060 --> 05:45.920
+Remember this is an object.
+
+05:46.190 --> 05:56.580
+So if I do dot underscore underscore Kroto to see what's up the prototype chain I get attack so object
+
+05:56.670 --> 06:04.260
+dot create creates this prototype chain for us all the way up so that we can use attack.
+
+06:04.260 --> 06:08.230
+Very very cool all right.
+
+06:08.250 --> 06:11.630
+So object that create solved all of our problems.
+
+06:11.670 --> 06:16.090
+Everything is working now we are done right.
+
+06:16.170 --> 06:23.270
+Here's the thing what we're doing with object to create is true prototype all inheritance.
+
+06:23.460 --> 06:26.050
+It's meant to be used like this.
+
+06:26.160 --> 06:30.350
+The code is a little bit cleaner now we have less lines of code.
+
+06:30.600 --> 06:33.020
+And I personally really like this.
+
+06:33.060 --> 06:38.230
+However you won't see this out in most code bases.
+
+06:38.280 --> 06:44.850
+I wouldn't say this is very standard or accepted by the javascript community as a whole.
+
+06:44.880 --> 06:51.120
+Now I don't want to get into a philosophical debate here but our goal in this section is to get closer
+
+06:51.120 --> 06:54.100
+and closer to object oriented programming.
+
+06:54.330 --> 07:01.860
+And the thing is what we're doing here isn't necessarily object oriented programming yet you'll see
+
+07:01.860 --> 07:09.450
+why in a second what I'm going to show you in the next video is actually something that we had before.
+
+07:09.450 --> 07:17.690
+Object I create that programmers used before we even had this ability because some people really didn't
+
+07:17.690 --> 07:21.430
+like the look of what I'm about to show you next.
+
+07:21.440 --> 07:28.550
+So keep this in mind and in the next video we'll see how we can get closer to object oriented programming
+
+07:29.150 --> 07:31.860
+and not use object create.
+
+07:31.970 --> 07:36.930
+And don't worry we'll come back to this and look at some of the pros and cons I'll see in the next one.
+
+07:37.440 --> 07:37.700
+Oh I.

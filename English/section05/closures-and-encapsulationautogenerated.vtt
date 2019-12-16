@@ -1,0 +1,265 @@
+WEBVTT
+
+00:01.030 --> 00:03.850
+OK so you're still not that impressed with closures.
+
+00:03.850 --> 00:11.620
+You're a tough cookie to crack but maybe with encapsulation I can convince you otherwise let's create
+
+00:12.040 --> 00:13.830
+a serious function this time.
+
+00:13.960 --> 00:17.110
+None of those funny silly functions that I keep creating.
+
+00:17.110 --> 00:28.450
+Let's have a concert make nuclear button function and this function well do a few things.
+
+00:28.840 --> 00:35.090
+Actually the first thing that it should do is to launch a nuclear bomb.
+
+00:35.200 --> 00:36.040
+So let's do that.
+
+00:36.040 --> 00:46.800
+I'm going to create a launch function and this launch function is going to return a big boom.
+
+00:46.920 --> 00:47.400
+All right.
+
+00:47.490 --> 00:49.950
+So that's our launch function.
+
+00:49.950 --> 00:55.700
+And you know what I want this function to maybe do more than just launch stuff.
+
+00:55.700 --> 01:03.910
+Let's let's have a countdown or let's figure out how much time we have without the ball.
+
+01:03.920 --> 01:05.050
+Let me show you what I mean.
+
+01:05.120 --> 01:14.180
+Let's create a variable called let time without destruction and time with our struct destruction will
+
+01:14.180 --> 01:15.330
+be zero.
+
+01:15.530 --> 01:22.130
+And we're going to create a little timer that counts how long it's been since well we've had this mutually
+
+01:22.130 --> 01:24.120
+assured destruction.
+
+01:24.200 --> 01:35.210
+So in here I'm going to have a variable called pass time and this past time variable or function in
+
+01:35.210 --> 01:42.200
+this case which happens to be assigned to a variable we'll simply have time without destruction and
+
+01:42.800 --> 01:49.180
+increment that time and then finally to make all of this work.
+
+01:49.320 --> 01:58.620
+I'm going to add a set interval which is like set time out but it keeps running the function that we
+
+01:58.620 --> 01:59.380
+give it.
+
+01:59.400 --> 02:03.240
+So in this case I'm just going to run pass time.
+
+02:03.240 --> 02:08.080
+So that is to increment the time without destruction by 1.
+
+02:08.670 --> 02:11.010
+And we'll do that every one second.
+
+02:11.990 --> 02:12.620
+All right.
+
+02:12.690 --> 02:14.760
+So I've created this.
+
+02:15.030 --> 02:21.490
+Nothing's being returned from this function let's return a few things.
+
+02:21.590 --> 02:29.360
+I'm going to return an object that has the launch
+
+02:32.010 --> 02:44.550
+function and let's maybe also make a total peace time function that simply gets the time without destruction.
+
+02:44.790 --> 02:51.890
+So let's create that first let's say total peacetime at a common here and then I'm going to create a
+
+02:51.890 --> 03:04.390
+another function called the concept total peacetime which will just return for us the time without destruction
+
+03:05.840 --> 03:07.570
+nothing too crazy here.
+
+03:07.600 --> 03:08.440
+Hey you know what.
+
+03:08.570 --> 03:18.230
+Just to keep in line with everything let's with the launch before we return the bomb will change time
+
+03:18.230 --> 03:21.290
+without destruction to equal minus one.
+
+03:21.320 --> 03:24.000
+Oh no that's not good okay.
+
+03:24.130 --> 03:26.610
+So let's see if this works.
+
+03:26.610 --> 03:37.910
+Now I can assign this to a variable let's say const oh no and oh no is going to say make nuclear bomb
+
+03:38.480 --> 03:46.160
+or nuclear button and we're going to run this cyclic run while nothing happens because we have to actually
+
+03:46.160 --> 03:51.440
+run something we've just assigned a object to.
+
+03:51.600 --> 03:58.560
+Oh no so by come down here and say oh no dot.
+
+03:58.580 --> 04:05.070
+Total peacetime and I run this function well I get zero.
+
+04:05.090 --> 04:12.770
+This is actually a little funny but because of the environment that I'm using this actually the set
+
+04:12.920 --> 04:14.390
+interval won't work properly.
+
+04:14.420 --> 04:17.270
+So let's use the developer tools instead.
+
+04:17.360 --> 04:19.370
+I'm going to copy this function.
+
+04:19.580 --> 04:24.620
+Open up developer tools and copy and paste this.
+
+04:24.620 --> 04:25.940
+Let's see what happens.
+
+04:27.650 --> 04:29.620
+Well I've got to refresh this.
+
+04:29.620 --> 04:30.360
+Let's try that again.
+
+04:32.190 --> 04:34.840
+I get zero if I do.
+
+04:34.840 --> 04:36.280
+Oh no dot.
+
+04:36.310 --> 04:37.420
+Total peace time.
+
+04:37.440 --> 04:41.950
+Again I get twelve total seconds have passed.
+
+04:42.010 --> 04:45.540
+What if I wait again and run this.
+
+04:45.540 --> 04:47.190
+I get 18 seconds have passed.
+
+04:47.190 --> 04:47.460
+All right.
+
+04:47.460 --> 04:48.920
+We have a lot of time with peace.
+
+04:48.930 --> 04:49.830
+That's great.
+
+04:49.830 --> 04:50.860
+And then I run this again.
+
+04:50.860 --> 04:52.260
+24 seconds.
+
+04:52.260 --> 04:55.890
+Well then all of a sudden I decide I'm going to launch
+
+04:58.940 --> 05:01.750
+Oh boy boom we have a big explosion.
+
+05:01.880 --> 05:08.030
+And if I go to total peace time while we're back to four again that's no good.
+
+05:08.080 --> 05:17.760
+But our functions working let's go back here and let's refresh so we can see the window again.
+
+05:17.790 --> 05:18.360
+All right.
+
+05:18.540 --> 05:27.630
+I hope this function isn't too confusing but let me demonstrate something to you.
+
+05:27.640 --> 05:36.010
+We used here closures right the time without destruction is something that these functions have access
+
+05:36.010 --> 05:43.570
+to but we also don't really want people to have powers like launch right.
+
+05:43.570 --> 05:53.250
+So instead let's remove the launch function from the returned object and instead just have total peace
+
+05:53.250 --> 06:07.370
+time so that if I run launch now no launch is not a function and this is what encapsulation does it's
+
+06:07.490 --> 06:14.110
+hiding of information that is unnecessary to be seen by the outside world or manipulated.
+
+06:14.180 --> 06:21.140
+And this gets into the idea of principle of least privilege a big security principle when it comes to
+
+06:21.140 --> 06:30.290
+programming where you don't want to give just anybody access to your API to your special functions or
+
+06:30.290 --> 06:39.050
+variables and using closures we are able to access things like time without destruction that I don't
+
+06:39.050 --> 06:45.130
+want anybody else touching because I just want to set interval to constantly increment that but at the
+
+06:45.130 --> 06:52.840
+same time I still want people to have access to things like pass time so that that pass time function
+
+06:53.080 --> 06:58.270
+can access the variables that are sacred to me.
+
+06:58.270 --> 07:07.030
+And this is one of the main benefits of closures of data encapsulation and it refers to the idea that
+
+07:07.030 --> 07:14.140
+some data should just not be directly exposed and we're able to do that now later on in the course when
+
+07:14.140 --> 07:21.160
+we talk about modules in JavaScript you'll see that classical module patterns like people used to use
+
+07:21.160 --> 07:28.030
+with immediately invoked function expressions use this pattern and we're only able to do that because
+
+07:28.030 --> 07:29.720
+of closures.
+
+07:29.740 --> 07:30.420
+All right.
+
+07:30.640 --> 07:34.700
+I hope you now truly understand the power of closures.
+
+07:34.720 --> 07:37.690
+I think it's time for us to do a couple of exercises though.
+
+07:37.840 --> 07:40.020
+So I'll see you in the next one.

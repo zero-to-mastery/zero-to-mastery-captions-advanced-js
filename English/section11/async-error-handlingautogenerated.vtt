@@ -1,0 +1,439 @@
+WEBVTT
+
+00:01.570 --> 00:02.620
+Welcome back.
+
+00:02.650 --> 00:09.030
+How do we handle asynchronous code because our code is not always going to be synchronous.
+
+00:09.100 --> 00:18.340
+We can't always just use try catch when we have an asynchronous function and an error occurs inside
+
+00:18.340 --> 00:18.690
+of it.
+
+00:19.210 --> 00:26.680
+Our script would have continue with our execution so that by the time this returns with an error well
+
+00:27.100 --> 00:34.060
+this entire script would have been done and the way we handle these types of errors in Javascript is
+
+00:34.120 --> 00:38.810
+using the catch method now in this video.
+
+00:38.810 --> 00:46.370
+I'm going to show you how to handle errors in promises and also an async await which will have an interesting
+
+00:46.670 --> 00:52.690
+way of handling errors so let's start off with promises and to make things that easy.
+
+00:52.690 --> 00:55.990
+I'm going to use the shorthand syntax of promise.
+
+00:55.990 --> 01:00.650
+Dot resolve which just returns a promise.
+
+01:00.820 --> 01:01.630
+See that over here.
+
+01:02.140 --> 01:04.590
+So it returns a promise that results right away.
+
+01:04.720 --> 01:06.670
+And I can just give it a piece of text here.
+
+01:06.700 --> 01:13.200
+Let's say async fail so that it returns a promise with async fail.
+
+01:13.330 --> 01:19.540
+It won't show over here because in order to catch a promise we need to do or in order to get the value
+
+01:19.540 --> 01:21.000
+from a promise that returns.
+
+01:21.010 --> 01:21.830
+We need a dot.
+
+01:21.850 --> 01:25.420
+Then as we've seen in the asynchronous part of the course.
+
+01:25.690 --> 01:33.550
+Now in here I'll get a response and this response will be returned right here and I can just console
+
+01:33.550 --> 01:34.940
+log.
+
+01:35.470 --> 01:35.980
+Response
+
+01:38.840 --> 01:40.060
+if I click run here.
+
+01:40.190 --> 01:43.970
+Look at that I get async fill.
+
+01:44.000 --> 01:45.620
+All right so so far so good.
+
+01:45.660 --> 01:54.570
+Everything is working but let's say we have a nother dot then promising or dot then block here that
+
+01:54.570 --> 01:56.550
+gets a response.
+
+01:56.550 --> 01:59.430
+We can just return the same response
+
+02:03.050 --> 02:04.660
+and that's still going to run.
+
+02:05.400 --> 02:08.370
+We're console long response twice.
+
+02:08.370 --> 02:14.960
+Okay but let's say something happens in our code and instead of getting to this console log and the
+
+02:14.960 --> 02:25.360
+return statement we're going to throw a new there that simply says no one fail I run this hmm.
+
+02:25.820 --> 02:27.160
+I didn't get anything.
+
+02:27.200 --> 02:36.750
+No errors and this is a big gotcha especially on browsers where if we don't catch something especially
+
+02:36.750 --> 02:42.630
+an asynchronous code it does what we call a silent fail it fails silently.
+
+02:42.630 --> 02:47.990
+So our code could have failed and we have no idea as programmers that it's failed.
+
+02:48.090 --> 02:56.550
+It's extremely dangerous so we need to make sure that with our promises we always have a dot catch clause.
+
+02:56.640 --> 03:02.520
+And honestly I can't think of any reason not to have a dot catch with a promise to make sure that you
+
+03:02.520 --> 03:08.990
+catch everything and it works just like the try catch block or the catch part of the try catch block.
+
+03:09.180 --> 03:19.830
+We simply receive an error and inside of here I can just console log the actual error so that if I run
+
+03:19.830 --> 03:27.430
+this look at that I get error number one fail.
+
+03:27.440 --> 03:35.910
+Now the interesting thing here is that because I return the response we should get a console dialog
+
+03:36.090 --> 03:37.740
+here but it never happens.
+
+03:37.770 --> 03:44.640
+Right because we throw the new error and the JavaScript engine says All right I'm not doing anything
+
+03:44.640 --> 03:50.250
+more whereas a hurdle whereas a catch and it's going to find a catch block here and say All right here's
+
+03:50.250 --> 03:52.520
+the error console log this error.
+
+03:52.770 --> 03:56.210
+So we're handling this issue now.
+
+03:56.280 --> 03:58.260
+You can actually keep going here.
+
+03:58.260 --> 04:08.520
+If I had let's say a nother dot then and here and this dot then actually well let's say returns or receives
+
+04:08.580 --> 04:12.260
+the error that this cache block receives.
+
+04:12.270 --> 04:19.130
+Well if I run this look at that it console logs the error because I can do anything I want to.
+
+04:19.130 --> 04:20.510
+And the catch block right.
+
+04:20.690 --> 04:27.890
+If I return the error here the dot then is going to receive the response and this will be the error.
+
+04:28.010 --> 04:40.390
+So if I do response dot message I get no one fail and I can keep chaining these I can say dot catch
+
+04:40.390 --> 04:53.630
+over here and this receives another error that lets say console logs final error if I run this that's
+
+04:53.630 --> 05:00.500
+never going to run because when the throw new error happens the JavaScript engine says All right who's
+
+05:00.500 --> 05:01.180
+gonna catch me.
+
+05:01.190 --> 05:07.640
+It's gonna keep going down and say oh I just got caught by something and now once it's caught it's handled.
+
+05:07.640 --> 05:11.900
+So unless we throw a new air here it's not going to get caught.
+
+05:13.160 --> 05:17.280
+So if I do air number two and I run this.
+
+05:17.340 --> 05:17.850
+There you go.
+
+05:17.850 --> 05:25.830
+Final air gets caught and that's the only error that happens because well we pass this into the first
+
+05:25.830 --> 05:30.810
+catch block and then we throw another air from here because let's say we don't know what to do with
+
+05:30.810 --> 05:31.160
+it.
+
+05:31.230 --> 05:35.670
+And then the next catch block catches it.
+
+05:35.690 --> 05:43.040
+Now the interesting thing here is if we go back to our original issue where we don't catch anything
+
+05:43.370 --> 05:48.690
+in our program silently fails that's bad right.
+
+05:48.860 --> 05:56.450
+In programs like No G Yes which is another runtime and I have here a rebel that uses no G S instead
+
+05:56.450 --> 06:01.820
+of JavaScript so you can see over here that we're using Node version nine point seven.
+
+06:01.820 --> 06:07.520
+If I run this because it's a different runtime it's going to handle that error differently.
+
+06:07.610 --> 06:15.000
+If I click Run I get something called on handled promise rejection warning and I guarantee you if you're
+
+06:15.000 --> 06:22.470
+working with promises you're going to see that many times in your career where you mistakenly forget
+
+06:22.470 --> 06:29.760
+to catch an acing care with their promise and node is telling you hey hey a promise rejection happens
+
+06:30.030 --> 06:36.360
+and this error originated because well you didn't have a catch block so you need to make sure that you
+
+06:36.360 --> 06:41.500
+add a doc catch so depending on the runtime it gets handled differently.
+
+06:41.700 --> 06:47.790
+And this is extremely dangerous and programs like let's say a node server where you want the server
+
+06:47.790 --> 06:49.800
+running constantly.
+
+06:49.800 --> 06:56.520
+If you haven't handled promise rejection it could spell your application might be leaving a critical
+
+06:56.610 --> 06:57.770
+error on attendant.
+
+06:58.500 --> 07:01.240
+So you want to be really really careful with that.
+
+07:01.500 --> 07:05.720
+And a big gotcha when it comes to error handling asynchronous code.
+
+07:05.730 --> 07:12.220
+Now if we go back to this example let's say that we've fixed our promises.
+
+07:12.230 --> 07:13.940
+So we have a catch block now.
+
+07:13.940 --> 07:18.760
+But let's say we have a another promise inside of a promise.
+
+07:19.010 --> 07:29.800
+So next it promises something like this where we have a promise dot resolve once again inside of here
+
+07:31.280 --> 07:37.440
+and this is going to have a dot then that well for now we don't have to worry about the response because
+
+07:37.440 --> 07:49.100
+inside of here I want to throw a new error and this error is going to say number three fail.
+
+07:49.200 --> 07:53.590
+What do you think will happen here well if I run this
+
+07:56.580 --> 07:59.900
+I get final error.
+
+08:00.150 --> 08:03.420
+But what is this on defined.
+
+08:03.420 --> 08:12.220
+Well if in here let's say I return five and I click Run look at that console log five works because
+
+08:12.310 --> 08:19.580
+this dot then block has asynchronous code inside of it.
+
+08:19.630 --> 08:27.100
+Well it doesn't really care what happens the promise when it first runs is a pending promise.
+
+08:27.100 --> 08:28.980
+So it goes to the next line.
+
+08:28.990 --> 08:35.530
+There's no error inside of this because it reads it synchronicity and it returns five which gets received
+
+08:35.620 --> 08:46.680
+here as dot then we console log the response and we have five the final error runs because we throw
+
+08:46.680 --> 08:48.540
+the error in here.
+
+08:48.540 --> 08:58.180
+So if I've removed this cache block and I click Run here all right.
+
+08:58.260 --> 09:07.350
+The error is still there because we throw in air and our program keeps going up the stack until we find
+
+09:07.500 --> 09:11.110
+something that catches us that's good.
+
+09:11.120 --> 09:15.210
+But it still has some surprising behavior here with the fight.
+
+09:15.350 --> 09:18.190
+What happens if we run this code in.
+
+09:18.200 --> 09:30.000
+Note If I go over here and I copy and paste and I run this Oh I get the same thing but I get this Eragon
+
+09:30.150 --> 09:37.470
+on handled promise rejection warning it's saying Hey buddy you're not handling your promises properly.
+
+09:37.470 --> 09:43.590
+You have another promise here and this one doesn't get handled it just gets handled by the enclosing
+
+09:43.590 --> 09:47.060
+scope which I mean it is a little bit confusing.
+
+09:47.130 --> 09:49.080
+Luckily for you you've added the dog catch.
+
+09:49.080 --> 09:52.300
+But is that really what you intended.
+
+09:52.350 --> 09:54.390
+Again this is not good right.
+
+09:54.630 --> 10:01.640
+Ideally we catch something for each promise so that in here we can catch and let's just canceled all
+
+10:01.650 --> 10:08.880
+log the error here so that if I run this I get error three fail.
+
+10:08.930 --> 10:12.740
+We're now handling it with this console log.
+
+10:12.740 --> 10:14.480
+But hold on a second.
+
+10:14.660 --> 10:18.360
+We still have final error.
+
+10:18.420 --> 10:20.110
+Why is that.
+
+10:20.350 --> 10:25.480
+Again this is where promises get really really tricky and you want to make sure that you're handling
+
+10:25.480 --> 10:26.860
+your errors properly.
+
+10:26.860 --> 10:30.720
+You see see this response dot message.
+
+10:30.940 --> 10:40.090
+Do you think that exists if I remove this message from here and do run.
+
+10:40.310 --> 10:50.550
+Did you see that it is now on the fight because we don't receive any responses here.
+
+10:50.600 --> 10:57.260
+Remember we returned five and this dot then block receives it and console logs and this dog then block
+
+10:57.530 --> 10:59.480
+doesn't return anything.
+
+10:59.480 --> 11:06.740
+So when I did response that message that was actually the error that was being thrown and being cut
+
+11:06.830 --> 11:14.260
+by the final error and if you're confused right now what this shows you how tricky it can be to handle
+
+11:14.560 --> 11:16.840
+asynchronous promises.
+
+11:16.840 --> 11:25.510
+So you want to make sure to really understand your flow and that on each level you're handling these
+
+11:25.510 --> 11:32.560
+promises with a dot catch call and that instead of having something like final error you're actually
+
+11:32.560 --> 11:42.410
+logging out the air to understand what's happening so let's fix this let's remove this from here.
+
+11:42.680 --> 11:49.860
+The final error will be actually logging out our air so that if I run this.
+
+11:50.030 --> 11:50.670
+All right.
+
+11:50.720 --> 11:52.210
+Everything is now good.
+
+11:52.400 --> 11:56.210
+We're handling our promises each individually.
+
+11:56.210 --> 12:01.120
+Right here with the DOT catch and everything is working well.
+
+12:01.190 --> 12:07.930
+If I run this in node and I click Run.
+
+12:07.940 --> 12:08.390
+All right.
+
+12:08.390 --> 12:09.230
+Perfect.
+
+12:09.260 --> 12:15.020
+We're handling our errors perfectly and there's no on handled promised rejection.
+
+12:15.020 --> 12:16.160
+Awesome.
+
+12:16.160 --> 12:22.370
+Now this was a little complicated but I hope it started to make sense although there are some cases
+
+12:22.370 --> 12:24.460
+where it can get a little difficult.
+
+12:24.650 --> 12:32.690
+And luckily for us because this chaining can get really overwhelming and complicated we have the new
+
+12:32.690 --> 12:35.930
+async await in JavaScript right.
+
+12:35.990 --> 12:38.920
+Which we've learned about in our async part of the course.
+
+12:39.020 --> 12:46.140
+Now we can handle these things a little bit different than we've handled those promises.
+
+12:46.160 --> 12:53.510
+I mean async await underneath the hood are still promises but the way we handle them can be a lot simpler.
+
+12:53.510 --> 12:55.610
+Let's find out how that works in the next video.

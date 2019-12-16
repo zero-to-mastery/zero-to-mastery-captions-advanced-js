@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.330 --> 00:02.470
+Welcome back.
+
+00:02.500 --> 00:06.330
+Now there is a big debate in the javascript community.
+
+00:06.550 --> 00:13.060
+People that love classes and people that never want to use them never want to see this new keyword and
+
+00:13.360 --> 00:20.120
+they just want to avoid using this keyword too much because they say it causes too much confusion and
+
+00:20.570 --> 00:23.170
+this is just personal preference.
+
+00:23.270 --> 00:29.960
+Highly respected programmers love classes other highly respected programmers hate classes and there's
+
+00:29.960 --> 00:37.550
+no right or wrong here but I do want to add a note that what you see here can be accomplished with object
+
+00:37.610 --> 00:43.730
+Doc create as we've seen in the previous videos and with object does create.
+
+00:43.820 --> 00:47.470
+We actually have everything we need with what some would say.
+
+00:47.480 --> 00:56.100
+None of the mess we're able to create these prototype chains without pretending like we have classes.
+
+00:56.180 --> 01:03.020
+Some people call using object Doc create pure prototype all inheritance as in that's the pure way of
+
+01:03.020 --> 01:06.830
+doing it instead of pretending like we're something else.
+
+01:06.830 --> 01:09.240
+What you use is up to you.
+
+01:09.320 --> 01:16.910
+However most of the javascript community doesn't use object to create as much as the class syntax.
+
+01:16.910 --> 01:24.770
+So in most code bases especially the New York code bases that use object oriented programming principles
+
+01:25.220 --> 01:27.830
+we'll use class.
+
+01:27.830 --> 01:32.130
+But the beauty with javascript like I said is that it's multi paradigm.
+
+01:32.180 --> 01:38.720
+It allows us to have a lot of options to code the way that we want it based on the problem at hand and
+
+01:38.720 --> 01:43.010
+based on what type of team dynamic you have with other programmers.
+
+01:43.010 --> 01:45.860
+So at the end of the day it's up to you.
+
+01:46.010 --> 01:47.750
+I'll see in the next one by.

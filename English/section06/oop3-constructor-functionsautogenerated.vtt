@@ -1,0 +1,388 @@
+WEBVTT
+
+00:00.600 --> 00:02.090
+Welcome back.
+
+00:02.100 --> 00:08.760
+I'm about to show you what we had from the very beginning in the javascript language.
+
+00:08.760 --> 00:11.100
+We didn't have object to create.
+
+00:11.100 --> 00:15.900
+So we did something different than what you see here.
+
+00:15.900 --> 00:20.970
+And this approach is even closer to Object Oriented Programming.
+
+00:20.970 --> 00:26.000
+Let me show you what we can do instead of using object to create.
+
+00:26.070 --> 00:35.300
+We're going to use something called constructor functions let's see how that would look with a constructor
+
+00:35.300 --> 00:36.290
+function.
+
+00:36.290 --> 00:38.990
+Let's just remove this for now.
+
+00:38.990 --> 00:49.900
+It will still be a function except we're going to create an elf function that takes in name and weapon
+
+00:50.740 --> 01:01.040
+and then we're going to remove all this line of code and instead use this dot name equals to name and
+
+01:01.130 --> 01:08.410
+this dot weapon equal to weapon.
+
+01:08.410 --> 01:13.670
+Now here's the interesting part I'm not returning anything here.
+
+01:13.790 --> 01:17.360
+I'm using this and that's it.
+
+01:17.360 --> 01:23.530
+We're constructing an elf but how does this work.
+
+01:24.220 --> 01:34.030
+Well if in here I changes to Elf and say Elf and for now let's just comment out these console logs and
+
+01:34.060 --> 01:36.350
+I run this I don't get any errors.
+
+01:36.370 --> 01:37.030
+That's good.
+
+01:37.030 --> 01:42.460
+If I do Sam dot name and I run this I get a type error.
+
+01:42.460 --> 01:43.530
+Can I read property.
+
+01:43.540 --> 01:51.660
+Name of undefined and that's because constructor functions are built like this.
+
+01:51.790 --> 01:58.360
+And in order to use a constructor function you need to use the new keyword in javascript.
+
+01:58.360 --> 02:09.830
+So in here we would add new and by adding new let's see what happens look at that.
+
+02:10.070 --> 02:13.590
+That magically worked.
+
+02:13.670 --> 02:15.310
+Why is that.
+
+02:15.320 --> 02:22.490
+That is because the new keyword in JavaScript which by the way a lot of people don't like but it's just
+
+02:22.490 --> 02:23.520
+the way things work.
+
+02:23.540 --> 02:32.800
+So we're gonna have to get used to the new keyword automatically returns the object for us that we have
+
+02:32.800 --> 02:45.970
+here and it creates the elf constructor that is it runs this code constructs the elf function for us.
+
+02:45.970 --> 02:59.180
+And now we have access to Peter and San and any function that is invoked using the new keyword is called
+
+02:59.180 --> 03:01.340
+a constructor function.
+
+03:01.340 --> 03:06.080
+And as a matter of fact we've seen constructor functions before.
+
+03:06.080 --> 03:18.190
+Remember when we talked about things like number or even object or function capital letters but they
+
+03:18.190 --> 03:20.290
+were functions.
+
+03:20.290 --> 03:23.290
+Those were all constructor functions.
+
+03:23.290 --> 03:32.780
+You invoke them by using the new keyword so as a rule even though you don't need to.
+
+03:32.820 --> 03:40.050
+You won't get a syntax error as a rule all constructor functions should start with a capital letter
+
+03:40.410 --> 03:47.640
+to let other programmers know that you need to call this function using the new keyword.
+
+03:47.640 --> 03:56.220
+Let's show you how to create an elf using the constructor function that comes natively in javascript
+
+03:56.640 --> 04:05.320
+that is the function constructor using the function constructor and this is something that we've seen
+
+04:05.320 --> 04:15.670
+before in the fundamentals part of the course where I can say let's say const of 1 is equal to new function
+
+04:15.700 --> 04:22.150
+so that we call this function constructor and this function constructor will have parameters of name
+
+04:22.960 --> 04:24.810
+and weapon.
+
+04:25.390 --> 04:30.180
+And then the last parameter is what the function is actually going to be doing.
+
+04:30.190 --> 04:36.460
+Now I'm going to use template strings here and I'm just going to copy and paste this piece of code
+
+04:40.250 --> 04:53.000
+and now if I do const Sara equals new ELF 1 let's make sure we use capital letters here because again
+
+04:53.360 --> 05:02.230
+to indicate that where we want to use the new keyword and I'll just say Sarah and Sarah's weapons are
+
+05:02.230 --> 05:06.280
+going to be let's say fireworks.
+
+05:06.280 --> 05:17.610
+Now if I do Sarah and look at that I have named Sarah weapon a function constructor or constructor functions
+
+05:18.000 --> 05:27.060
+are simply that they allow us to use the new keyword and create these objects for us.
+
+05:27.060 --> 05:33.500
+Now in the next video we're going to dive a little bit deeper into what the new keyword does and how
+
+05:33.500 --> 05:36.290
+constructor functions are used in JavaScript.
+
+05:36.290 --> 05:43.220
+But before I do that let's make sure that we implement the attack function on here.
+
+05:43.860 --> 05:53.600
+Because we've now used the new keyword and the new keyword automatically returns an elf object for us
+
+05:54.470 --> 05:57.980
+and it creates this elf constructor.
+
+05:57.980 --> 06:07.840
+We've created a new object and because this function is called a new execution context is created and
+
+06:07.840 --> 06:14.560
+because of that because this is a function that we're running and a new execution context is created.
+
+06:14.560 --> 06:20.160
+That means we automatically get the this valuable attached to it.
+
+06:20.170 --> 06:27.580
+Remember every function that we call gets the this and the arguments parameters.
+
+06:27.580 --> 06:29.010
+We remember this right.
+
+06:29.140 --> 06:32.800
+This and arguments.
+
+06:32.910 --> 06:41.640
+The interesting thing though is that when we use the new keyword instead of this pointing to the window
+
+06:41.640 --> 06:47.160
+object like it usually does the new keyword changes.
+
+06:47.280 --> 06:55.230
+What this is pointing to when a new execution context is created instead the new keyword will say hey
+
+06:55.530 --> 07:08.130
+I want you to point this to the object that we just created so that this now becomes Peter or Sam and
+
+07:08.310 --> 07:11.560
+this is what happens if we remove new.
+
+07:11.580 --> 07:17.280
+If we remove new and I click Run I cannot read property name of undefined
+
+07:19.920 --> 07:24.940
+and that's because without the new keyword we are not creating this object.
+
+07:25.020 --> 07:29.320
+We are not returning an object.
+
+07:29.460 --> 07:34.200
+And we're also not assigning this to the object that calls us.
+
+07:34.200 --> 07:40.140
+So this new keyword does a ton for us behind the scenes in order for it to work.
+
+07:41.110 --> 07:46.630
+So it's very important that we use the new keyword which is why we want to use the capital letters to
+
+07:46.630 --> 07:50.110
+indicate to other programmers hey we need to use the new keyword.
+
+07:50.110 --> 07:52.100
+Otherwise it's not going to work.
+
+07:52.210 --> 08:00.310
+And why this is so powerful is that because this is a function remember every function in javascript
+
+08:00.820 --> 08:05.050
+gets automatically a prototype property.
+
+08:05.050 --> 08:10.490
+Remember this functions are special type of objects in javascript.
+
+08:10.540 --> 08:16.170
+It's a callable object that has code that can be invoked an optional name.
+
+08:16.290 --> 08:20.100
+They'll have a bunch of properties that if we want to give it we have access to.
+
+08:20.200 --> 08:27.230
+But we also get this prototype that gets created with any new function.
+
+08:27.230 --> 08:33.410
+Now this prototype property is absolutely useless with any regular function.
+
+08:33.620 --> 08:40.160
+But when we have constructor functions remember the ones with capital letters that we can invoke with
+
+08:40.160 --> 08:41.180
+new.
+
+08:41.180 --> 08:49.430
+Well this prototype finally becomes useful and native constructor functions like the function comes
+
+08:49.430 --> 08:56.360
+with things like call apply and bind arrays come with things like Map Reduce for each.
+
+08:56.510 --> 09:04.310
+Because they're built out of the array constructor function in our case we can add our own to the prototype
+
+09:05.290 --> 09:13.390
+so that now we can do elf dot prototype which we have access to and say attack.
+
+09:13.420 --> 09:17.080
+So we're adding the attack method on the prototype.
+
+09:17.080 --> 09:30.690
+And if I do function return attack with this dot weapon remember this will be the calling object what's
+
+09:30.690 --> 09:31.950
+going to call us.
+
+09:32.370 --> 09:39.130
+Well whatever is to the left of the dot so that if I do run here I get sent.
+
+09:39.200 --> 09:48.370
+But if I do attack and I run look at that attack with fire How awesome is that.
+
+09:48.500 --> 09:52.420
+Let's make sure both of these work click Run.
+
+09:52.670 --> 09:53.390
+Look at that.
+
+09:53.390 --> 10:04.010
+Peter and Sam can finally attack with stones and fire and we were able to use the prototype to add functionality
+
+10:04.610 --> 10:05.260
+to both.
+
+10:05.250 --> 10:13.630
+Else so to review we're able to use constructor functions instead of something like object to create
+
+10:14.110 --> 10:20.050
+to create this magical function that creates a new object.
+
+10:20.050 --> 10:31.130
+Returns a new object and also modifies what this means to whatever object calls us so instead of the
+
+10:31.160 --> 10:32.450
+global object.
+
+10:32.480 --> 10:35.930
+This is not going to point to the calling object.
+
+10:35.930 --> 10:43.130
+Peter and Sam but because this is a constructor function we also have this prototype property that we
+
+10:43.130 --> 10:54.400
+can attach things to so that when Peter dot attack gets called Well Peter doesn't have attack as its
+
+10:54.400 --> 11:01.790
+own method but it's going to go up the prototype chain remember dot dot prototype is going to point
+
+11:02.420 --> 11:10.610
+to prototype and this prototype is going to have the attack and now both Peter and Sam are able to use
+
+11:10.610 --> 11:17.900
+attack from the same location in memory instead of us copying attack multiple places in multiple locations
+
+11:17.900 --> 11:24.650
+in memory we just have it written once in memory and both of these else are going to point to attack
+
+11:24.680 --> 11:31.420
+which is in the same memory space and the beauty is that I can just keep adding functionality here right.
+
+11:31.430 --> 11:38.000
+If the game evolves and all of a sudden I say well Elf can now also use built.
+
+11:38.000 --> 11:45.340
+Well now we have a new function that allows us to add functionality to all the else that we created.
+
+11:45.530 --> 11:48.040
+And they can now build as well.
+
+11:48.110 --> 11:49.300
+One other thing.
+
+11:49.490 --> 11:59.820
+What do you think happens if I change this into an arrow function if I click Run I get undefined.
+
+11:59.820 --> 12:01.980
+And we've seen this before right.
+
+12:01.980 --> 12:03.970
+Why do we get undefined.
+
+12:03.990 --> 12:10.830
+Well because arrow functions are lexicon we scoped that is they defined this based on where they're
+
+12:10.830 --> 12:11.420
+red.
+
+12:11.700 --> 12:19.050
+And this in this case is the global object because who's calling attack right now.
+
+12:19.050 --> 12:22.940
+There's no object surrounding it other than the global object.
+
+12:23.490 --> 12:30.720
+But by using the regular function which is dynamically scoped that is it doesn't matter where it's written
+
+12:30.840 --> 12:35.700
+it's whoever calls it well because it's dynamically scoped.
+
+12:35.700 --> 12:39.330
+This is going to change based on who calls it.
+
+12:40.350 --> 12:47.190
+So that is the one gotcha where you don't always want to use error functions because sometimes you don't
+
+12:47.190 --> 12:49.020
+want lexical scoped.
+
+12:49.080 --> 12:50.500
+This.
+
+12:50.720 --> 12:51.170
+All right.
+
+12:51.290 --> 12:56.870
+Let's take a break and talk a little bit more about this and think about some of the improvements pros
+
+12:56.870 --> 12:58.520
+and cons that we have with this.
+
+12:58.580 --> 12:59.870
+I'll see in the next one Bye.

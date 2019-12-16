@@ -1,0 +1,142 @@
+WEBVTT
+
+00:01.460 --> 00:02.550
+Welcome back.
+
+00:02.550 --> 00:02.870
+OK.
+
+00:02.890 --> 00:07.610
+OK I may have lied a little bit before we can talk about memory leaks.
+
+00:07.610 --> 00:11.320
+We have to understand this concept of garbage collection.
+
+00:11.480 --> 00:20.210
+JavaScript is a garbage collected language that means when javascript allocates memory let's say within
+
+00:20.210 --> 00:26.990
+a function we create an object and that object gets stored somewhere in our memory heap automatically
+
+00:27.200 --> 00:33.040
+with JavaScript when we finish calling the function and let's say we don't need that object anymore.
+
+00:33.200 --> 00:35.110
+It's going to clean it up for us.
+
+00:35.840 --> 00:44.900
+So javascript automatically frees up this memory that we no longer use and will collect our garbage
+
+00:45.140 --> 00:46.670
+just like this.
+
+00:46.670 --> 00:55.550
+So only the data that is still useful to us remains so that this way we make sure we don't use up all
+
+00:55.550 --> 00:59.970
+the memory we have available because as we know memory is limited.
+
+01:00.050 --> 01:01.910
+How nice is that now.
+
+01:02.060 --> 01:09.020
+In garbage collected languages like Javascript the garbage collector freeze memory on the heap and prevents
+
+01:09.020 --> 01:10.850
+what we call memory leaks.
+
+01:10.850 --> 01:17.180
+That is when the memory gets too big too big until we reach our maximum size like we did with Stack
+
+01:17.210 --> 01:22.420
+Overflow but that is hypothetically there's no perfect system right.
+
+01:22.550 --> 01:28.760
+And garbage collection gives us a false sense of security that oh we don't have to worry about memory
+
+01:28.850 --> 01:34.730
+management because this garbage collection is done automatically and it's smart enough to figure out
+
+01:34.760 --> 01:40.380
+what we need and while we don't but again this is actually a big mistake.
+
+01:40.410 --> 01:48.180
+It gives javascript developers the false impression that they can choose not to care about memory management.
+
+01:48.180 --> 01:54.900
+And as you'll see there are ways to actually make mistakes where the garbage collection won't actually
+
+01:54.900 --> 02:00.960
+free up the memory and you still have little pieces of box this year that don't have any reference or
+
+02:00.960 --> 02:09.480
+don't point to anything really that are still hanging around now in low level languages like C you control
+
+02:09.480 --> 02:14.550
+garbage collection and you tell it to remove parts of the memory.
+
+02:14.550 --> 02:22.070
+Now that's very very dangerous but it's also the reason that programs like C are extremely fast and
+
+02:22.080 --> 02:27.840
+memory efficient because you control garbage collection and with that control you can make it really
+
+02:27.840 --> 02:28.800
+really optimized.
+
+02:29.730 --> 02:34.350
+So how does garbage collection actually work in JavaScript.
+
+02:34.350 --> 02:42.810
+Well it uses something called Mark and sweep algorithm and this is a great video that shows how it works.
+
+02:42.810 --> 02:49.350
+Imagine on the left here are variables that we have in our program and these variables point to different
+
+02:49.620 --> 02:55.970
+objects and perhaps an object points to another object and so on and so forth.
+
+02:56.040 --> 03:03.770
+And as soon as we remove that reference from that object well it should get deleted right for example
+
+03:03.800 --> 03:08.600
+object 5 we don't need anymore because nothing is linking to it.
+
+03:09.460 --> 03:18.380
+So if we run this we mark while we need we sweep while we don't and that's how garbage collection works
+
+03:19.370 --> 03:27.170
+if we look at this through code we can simply show that in action by using human over here in our object.
+
+03:27.170 --> 03:35.210
+If I all of a sudden and let's change this to a var so we can assign it something else and we'll say
+
+03:35.210 --> 03:41.720
+that var or human now equals 5.
+
+03:41.740 --> 03:49.330
+Well this piece of memory that is my mate my name first name and last name is still in the memory heap
+
+03:49.360 --> 03:50.800
+but we don't need it anymore.
+
+03:50.860 --> 04:02.470
+Nothing is referencing that piece of code or perhaps this human variable was just inside this function
+
+04:03.670 --> 04:10.450
+and once this function is done executing and it's popped off the stack.
+
+04:10.450 --> 04:17.200
+Well we don't need that variable anymore so the garbage collector is going to mark and sweep and clean
+
+04:17.200 --> 04:24.400
+this from memory and now that we understand how garbage collector works we can take advantage of this
+
+04:24.460 --> 04:27.390
+and show you how memory leaks happen.
+
+04:27.490 --> 04:29.300
+I'll see you in the next video.
+
+04:29.660 --> 04:29.890
+Bobby.

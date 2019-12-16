@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.610 --> 00:01.650
+Welcome back.
+
+00:01.660 --> 00:12.640
+Let's talk about another important concept immutability immutability means not changing the data not
+
+00:12.820 --> 00:15.070
+changing the state.
+
+00:15.070 --> 00:21.010
+Remember how an object oriented programming we had classes that while you can change the name property
+
+00:21.020 --> 00:25.990
+the weapons of the characters that were building well and functional programming.
+
+00:25.990 --> 00:35.410
+The idea is of immutability that is not changing state but instead making copies of the state and returning
+
+00:35.410 --> 00:37.810
+a new state every time.
+
+00:37.810 --> 00:46.520
+For example we have an object here a simple object with a name of Andre if I create a function that
+
+00:46.730 --> 00:55.940
+clones an object and I'm using here a function that is pure we're not doing anything here except cloning
+
+00:56.000 --> 00:57.770
+the object.
+
+00:57.770 --> 01:01.640
+So no matter how many times I call this function it's going to clone.
+
+01:01.640 --> 01:09.170
+It's a pure function but afterwards I go ahead and do object dot name and my program and update the
+
+01:09.170 --> 01:11.390
+name to Nanna.
+
+01:11.670 --> 01:19.550
+And as you can see here as soon as I do that the name gets changed to Nana and this.
+
+01:19.690 --> 01:28.410
+Well this is mutating the state we're mutating data in our program in functional programming.
+
+01:28.470 --> 01:32.430
+The idea of immutability is very important.
+
+01:32.430 --> 01:40.710
+We can change things inside of our function but we don't want to affect the outside world in our programs.
+
+01:40.710 --> 01:50.240
+And although this function is pure Well our program has a lot of immutability to it ideally if we want
+
+01:50.240 --> 02:03.000
+to change the name we would create a function saying change name or let's do update name that receives
+
+02:03.000 --> 02:04.280
+an object.
+
+02:04.500 --> 02:16.440
+And in here we will have a new object let's say object to that we clone the initial object from that
+
+02:16.440 --> 02:21.230
+we receive and in here we can do object to dot.
+
+02:21.240 --> 02:24.090
+Name equals Nanna
+
+02:27.350 --> 02:33.530
+and then finally we can just return object to let's see that in action.
+
+02:33.890 --> 02:42.170
+If I console log the original object here and up here I'll do update.
+
+02:42.260 --> 02:48.470
+Name and give it the initial object.
+
+02:50.130 --> 02:52.050
+And I click run here.
+
+02:52.050 --> 03:01.360
+I see that my original object which is Andre is still there but if I create a new variable here saying
+
+03:02.020 --> 03:14.980
+updated object and I console log the updated object as well I see that there are two different things.
+
+03:14.980 --> 03:21.960
+Now I've maintained immutability of not changing the state.
+
+03:21.960 --> 03:28.150
+Just returning copies or new things every time a change is made.
+
+03:28.170 --> 03:33.180
+Now you might be asking yourself this doesn't seem very memory efficient.
+
+03:33.210 --> 03:39.270
+I mean this is a silly example but if we're just copying things over and over every time we want to
+
+03:39.270 --> 03:40.230
+make a change.
+
+03:40.230 --> 03:44.610
+Doesn't that just fill up our memory.
+
+03:44.610 --> 03:51.390
+Now this is a little bit beyond the scope of this course but there's something called structural sharing
+
+03:51.420 --> 03:59.370
+that when it comes to functional programming a lot of places implement and it looks something like this.
+
+03:59.510 --> 04:06.290
+The idea behind it is that when a new object all or let's say an array or any sort of data structure
+
+04:06.530 --> 04:11.210
+is created we don't actually copy everything.
+
+04:11.210 --> 04:15.640
+If it's a massive object or an array you can see that being very expensive.
+
+04:16.610 --> 04:24.230
+Instead of storing the entire copy underneath the hood what happens is that only the changes that were
+
+04:24.230 --> 04:27.440
+made to the state will be copied.
+
+04:27.440 --> 04:32.360
+But the things that don't change in memory are actually still there.
+
+04:32.540 --> 04:35.330
+And this is called structural sharing.
+
+04:35.600 --> 04:41.730
+This combined with the fact that in this day and age memory is fairly cheap.
+
+04:41.990 --> 04:48.020
+It makes sense for some cases and functional programming where we have immutability because by having
+
+04:48.020 --> 04:54.290
+immutability we can do some really interesting things that we're gonna see when we finish our coding
+
+04:54.620 --> 04:57.140
+challenge from the beginning of this section.
+
+04:57.140 --> 05:02.930
+We're simply saying Hey this data is not mine any data that I receive is not mine.
+
+05:02.960 --> 05:10.400
+So I'm just going to borrow it and I'm only going to copy and make a new copy of this data so other
+
+05:10.400 --> 05:13.160
+people can still use this.
+
+05:13.210 --> 05:14.570
+It's kind of like kindergarten right.
+
+05:14.870 --> 05:19.250
+If you played with a toy Well you shouldn't destroy you shouldn't change it.
+
+05:19.250 --> 05:24.090
+You should play with it and then return it back to the school so that other kids can play with it to
+
+05:25.530 --> 05:27.720
+let's take a break and I'll see you in the next video.

@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00.610 --> 00:01.650
+Welcome back.
+
+00:01.660 --> 00:11.070
+I wanted to have a quick video to clarify a term here and that is context versus scope scope is a function
+
+00:11.160 --> 00:13.710
+based thing right.
+
+00:13.710 --> 00:20.280
+Scope means what is the variable access of a function when it is invoked.
+
+00:20.550 --> 00:25.960
+What is in the variable environment right context.
+
+00:26.110 --> 00:36.400
+On the other hand is more about object based context says what's the value of this keyword.
+
+00:36.640 --> 00:45.210
+Which is a reference to the object that owns that current executing code so Context and scope is something
+
+00:45.210 --> 00:50.150
+that people get confused between and especially when we start talking about context execution as well.
+
+00:50.160 --> 00:57.240
+It gets a little bit confusing but just keep this in mind context is most often determined by how a
+
+00:57.240 --> 01:05.940
+function is invoked with the value of this keyword and scope refers to the visibility of variables.
+
+01:06.020 --> 01:07.870
+All right I'll see in the next one.
+
+01:08.000 --> 01:08.220
+Bye.

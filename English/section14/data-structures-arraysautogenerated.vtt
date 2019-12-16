@@ -1,0 +1,394 @@
+WEBVTT
+
+00:02.160 --> 00:03.270
+Welcome back.
+
+00:03.300 --> 00:09.360
+I hope you took a nice long break after the function's video because I know we covered a lot.
+
+00:09.360 --> 00:14.670
+We're going to learn something a little bit easier this time around and we're going to learn our first
+
+00:15.000 --> 00:16.650
+data structure.
+
+00:16.650 --> 00:19.430
+Now what is a data structure.
+
+00:19.590 --> 00:23.780
+Up until now we've only learned about numbers strings.
+
+00:23.890 --> 00:31.440
+Billions undefined and functions but how do you store all of them.
+
+00:31.440 --> 00:37.200
+We said that a variable is like a desk drawer but you don't want to throw everything in there and have
+
+00:37.200 --> 00:42.120
+a huge mess or you don't want to throw just a pen and close that drawer.
+
+00:42.120 --> 00:49.530
+Ideally you can store more things you can organize then data structures are like compartment holders
+
+00:49.530 --> 00:56.700
+in your desk kind of like this picture over here different data structures are good at different things.
+
+00:56.750 --> 01:03.770
+For example in this picture it looks like the file cabinet is really really good for finding things
+
+01:03.770 --> 01:08.510
+because it's sorted in alphabetical order and data structures.
+
+01:08.670 --> 01:17.000
+Give us this ability to store information and access it in a way that is useful to us.
+
+01:17.070 --> 01:20.760
+So let's learn our first data structure and that is
+
+01:24.120 --> 01:32.160
+arrays let's open up our console and we have our script file here and we're going to write our first
+
+01:32.160 --> 01:53.850
+survey by doing variable list and we will have square brackets tiger cat bear and let's do bird so it's
+
+01:53.850 --> 01:57.450
+still a variable and you see strings here.
+
+01:57.450 --> 02:06.490
+The only thing that's different are these square brackets but I call this list and it does look like
+
+02:06.490 --> 02:15.080
+a list but I could have called this anything list of animals for example but in an area like I said
+
+02:15.080 --> 02:17.730
+is a way to organize information.
+
+02:17.900 --> 02:20.010
+And this is organized in this way.
+
+02:20.060 --> 02:26.990
+But how do we grab it how do we grab one of these four items from the desk drawer the way you access
+
+02:26.990 --> 02:30.350
+an array is with something like this
+
+02:36.260 --> 02:36.550
+OK.
+
+02:36.580 --> 02:45.280
+So variable name square brackets a number and square brackets list to console all log and see what happens
+
+02:50.280 --> 02:52.880
+I get cat.
+
+02:52.980 --> 02:57.780
+Now most of you might have thought that we would get Tiger.
+
+02:57.780 --> 03:02.870
+I mean list we want the first item in the list.
+
+03:02.970 --> 03:07.740
+Maybe that's how you read it but that's not actually how it works in computer science.
+
+03:07.830 --> 03:14.070
+Developers like counting from zero so zeros the first number then one then two then three.
+
+03:14.790 --> 03:17.830
+So we always start counting from zero.
+
+03:17.850 --> 03:27.350
+So if you want to get Tiger from this list you do zero and let's refresh and we get Tiger let's play
+
+03:27.350 --> 03:34.640
+around with this in the console if I copy the list and put it like this
+
+03:40.550 --> 03:42.500
+the console actually gives us a nice
+
+03:45.500 --> 03:51.580
+of the array and we see that we have zero Tiger one cat to bear three bird.
+
+03:51.740 --> 04:02.460
+So as you can see an array is just a nice way for us to list items in an order from 0 1 2 and 3.
+
+04:02.480 --> 04:07.430
+Now what kind of things can arrays hold or is it just strings.
+
+04:07.430 --> 04:09.100
+Well not really.
+
+04:09.140 --> 04:30.570
+We can do variable numbers and have one two three four we can have polygons and we can have true false
+
+04:32.850 --> 04:37.580
+true again and this is the fun part.
+
+04:37.670 --> 04:44.840
+You can also have functions as an array so I can do.
+
+04:44.960 --> 04:46.790
+Function Apple
+
+04:50.680 --> 04:51.970
+console log apple
+
+04:57.340 --> 05:09.590
+and then close up with the square brackets and function list now has an array a location zero of Apple.
+
+05:09.590 --> 05:20.960
+Here is even what year we can do a variable let's call it mixed list and that can contain strings can
+
+05:20.960 --> 05:25.890
+have numbers can have undefined.
+
+05:26.300 --> 05:33.800
+You can have billions and like I show need before you can have functions
+
+05:36.880 --> 05:37.960
+and mixed lists.
+
+05:37.960 --> 05:44.070
+Now has a whole bunch of wacky stuff.
+
+05:44.160 --> 05:47.780
+Now this is not advised.
+
+05:47.910 --> 05:53.770
+It's actually a bit of a performance issue when you have arrays with different types.
+
+05:53.820 --> 05:59.970
+So you want to keep it the same but I do want to show you that we can put anything in arrays we can
+
+05:59.970 --> 06:02.760
+also make arrays within an array
+
+06:07.640 --> 06:09.920
+do you see what I just did here.
+
+06:09.960 --> 06:16.560
+We have an array that has an array of tiger cat bare bird.
+
+06:16.560 --> 06:25.680
+So if we save this and refresh what do you think will happen we get an array that has tiger cat their
+
+06:25.700 --> 06:26.420
+bird.
+
+06:26.420 --> 06:36.730
+But we accessed 0 let's try that again without the zero and see what happens this time we get a new
+
+06:36.730 --> 06:43.130
+array just like it says here that has and whoever hit inside of it.
+
+06:43.160 --> 06:45.200
+So how do we get let's say bear.
+
+06:45.230 --> 06:54.400
+Well we would say we want a first array and then another pair of square brackets.
+
+06:54.400 --> 07:06.170
+And because Tiger is at 0 1 2 We want to or takes a tiger and then bear so we're getting the first array
+
+07:06.560 --> 07:07.550
+this one.
+
+07:07.550 --> 07:13.380
+And within that first array we want 0 1 2 the bear.
+
+07:13.450 --> 07:15.210
+Let's see if that works.
+
+07:15.730 --> 07:18.180
+And then we get better now.
+
+07:18.310 --> 07:23.620
+Arrays are cool because JavaScript has predefined methods for them.
+
+07:23.890 --> 07:25.570
+And what are those for now.
+
+07:25.570 --> 07:32.130
+Think of them as functions their functions that we can use on arrays.
+
+07:32.160 --> 07:35.610
+Don't worry about too much the term method we'll get to it later.
+
+07:35.790 --> 07:37.760
+But let me show you what I mean.
+
+07:38.040 --> 07:40.230
+If we return this list to the way it was
+
+07:43.810 --> 07:49.280
+back to Tiger cat their bird so let's to let's look a list.
+
+07:49.290 --> 07:53.220
+What we have in list now you have tiger cat bear bird.
+
+07:53.310 --> 07:57.390
+Okay so let's see what sort of methods we can add to the list.
+
+07:57.540 --> 08:03.420
+Lists plus two shift and let's see what that does.
+
+08:03.840 --> 08:08.850
+I get back Tiger but if I look at the list now Tiger has been moved.
+
+08:08.850 --> 08:15.590
+I've shifted the array to removed Tiger and now everything's shifted to the left.
+
+08:16.330 --> 08:19.780
+What if I do list dot
+
+08:24.500 --> 08:26.360
+I get bird.
+
+08:26.360 --> 08:36.110
+So if we look at the list now it's popped bird off of the end of the array and now I only have cat and
+
+08:36.110 --> 08:37.460
+there.
+
+08:37.460 --> 08:44.510
+What if we do list dot push and then push needs to have an argument let's do elephant
+
+08:47.520 --> 08:54.380
+and now we get back the number three you might guess what that means and let's look a list.
+
+08:54.390 --> 08:56.870
+And now we have cat bear and elephants.
+
+08:56.910 --> 09:01.410
+So three items in the array let's clean this up a bit.
+
+09:01.490 --> 09:04.140
+Let's just double check what we have in the list.
+
+09:04.340 --> 09:05.350
+Perfect.
+
+09:05.420 --> 09:16.970
+What's another thing that we can do well we can also do list dot com Cat 4 concatenate and in here we
+
+09:16.970 --> 09:19.870
+can actually add another array.
+
+09:19.880 --> 09:32.790
+Let's do B and dear this press enter and now we have an array of five items.
+
+09:32.790 --> 09:43.630
+Cat bear elephant B and deer and I haven't told you this but when we look at the numbers 0 1 2 3 4.
+
+09:43.710 --> 09:52.980
+Cold index in a race so index means cat has an index of zero.
+
+09:53.160 --> 09:59.300
+Bear an index of one elephant of to be a three deer an index of four.
+
+10:00.040 --> 10:00.370
+OK.
+
+10:01.290 --> 10:06.870
+Let's do one last thing and then you can go do some exercises.
+
+10:06.870 --> 10:12.150
+As you can see arrays are a ton of fun while I sing I want to show you is this.
+
+10:12.250 --> 10:17.200
+If we do list that sort well as the name suggests
+
+10:20.220 --> 10:22.680
+we now have a sorted list.
+
+10:22.740 --> 10:26.570
+But well why do we only have three items.
+
+10:26.600 --> 10:28.140
+Why not five.
+
+10:28.820 --> 10:30.230
+And this is a little bit tricky.
+
+10:30.230 --> 10:34.180
+You have to you have to practice a bit with the race to understand them.
+
+10:34.220 --> 10:41.060
+We've sorted our array but only the original one the one that we concatenated.
+
+10:41.060 --> 10:44.840
+The one that we added We did an assigned to a variable.
+
+10:45.050 --> 10:49.220
+So it created a new array.
+
+10:49.260 --> 10:55.960
+So now we had two arrays in existence the list which only had bare cat an elephant.
+
+10:56.190 --> 11:03.540
+And another list can cat be dear that we did and capture the value of we did and assign it to a variable
+
+11:05.480 --> 11:06.660
+to show you.
+
+11:07.070 --> 11:13.980
+Let's copy this again and try this variable.
+
+11:14.420 --> 11:15.860
+My list equals
+
+11:19.430 --> 11:19.710
+okay.
+
+11:19.720 --> 11:24.900
+We have these five items and let's do variable.
+
+11:24.910 --> 11:33.680
+My new list equals my list Dokken cat
+
+11:37.100 --> 11:42.760
+and we'll do an array with monkey.
+
+11:42.810 --> 11:49.790
+So now if I look at my list I have five items.
+
+11:49.890 --> 11:52.010
+Cat bear elephant bee dear.
+
+11:52.320 --> 12:02.350
+But if I look at my new list I have six items with monkey in it so there are some methods that creates
+
+12:02.380 --> 12:10.650
+new lists like on cat and some methods like push or pop that don't create a new list.
+
+12:10.660 --> 12:17.050
+Just modify the current one I have some exercises for you at the end of this video.
+
+12:17.190 --> 12:18.990
+This is a really fun data structure.
+
+12:18.990 --> 12:22.050
+Hopefully you're excited about learning this one.
+
+12:22.090 --> 12:23.690
+That's it for race.
+
+12:23.710 --> 12:30.300
+Once you understand the syntax and the structure this has a lot of power.
+
+12:30.360 --> 12:35.700
+The last thing I wanted to show you was that our good friend w 3C
+
+12:41.460 --> 12:52.080
+has a great list of references of what methods or race have.
+
+12:52.080 --> 12:54.870
+So you can read through them as you work on your exercises.
+
+12:54.870 --> 12:59.970
+There's a few things that I didn't cover in the video that you'll have to search yourself through here
+
+13:00.360 --> 13:05.960
+to figure out why you'll need to solve the problems I'll see in the next one.
+
+13:06.020 --> 13:06.350
+Bye bye.

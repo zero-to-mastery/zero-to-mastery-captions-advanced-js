@@ -1,0 +1,133 @@
+WEBVTT
+
+00:01.050 --> 00:02.100
+Welcome back.
+
+00:02.100 --> 00:04.190
+Were you able to solve this.
+
+00:04.230 --> 00:04.890
+Let's give it a go.
+
+00:06.940 --> 00:16.810
+If I wanted to create a generic multiplied by function I'm going to do a function that accepts number
+
+00:16.810 --> 00:26.650
+one a number and inside of this function it's going to return a another function that is going to have
+
+00:26.860 --> 00:30.130
+number two as a parameter.
+
+00:30.130 --> 00:35.140
+And that's simply going to return num 1 times num 2.
+
+00:36.100 --> 00:46.520
+And with this in place I can do multiply by 2 and I can assign this to a another variable let's say
+
+00:47.000 --> 00:52.780
+multiply by two to equal multiply by two.
+
+00:52.880 --> 00:59.600
+And now I have this functionality and this function that I can keep reusing where I can multiply by
+
+00:59.600 --> 01:10.340
+2 4 I can multiply by two let's say 10 and I had that functionality over and over with this higher order
+
+01:10.340 --> 01:12.090
+function.
+
+01:12.250 --> 01:14.320
+What is the higher order function here.
+
+01:14.320 --> 01:23.210
+Well the multiply by is a higher order function because it returns another function and I can also extend
+
+01:23.210 --> 01:23.680
+this right.
+
+01:23.690 --> 01:30.360
+I can create something new where I can do multiply by let's say 5.
+
+01:31.280 --> 01:41.090
+And if I do multiply by five here I can now extend multiply by five let's say multiply six by five we
+
+01:41.090 --> 01:42.310
+get 30.
+
+01:42.890 --> 01:44.290
+Awesome.
+
+01:44.310 --> 01:53.880
+Now we can also write this in a cleaner way with Arrow functions and it looks something like this arrow.
+
+01:53.940 --> 02:02.330
+Function followed by another arrow function and we can even one line this.
+
+02:02.640 --> 02:11.060
+So we go like this to just a single line of code like that.
+
+02:11.250 --> 02:19.460
+And if I run this it still works and I like using arrow functions because visually it makes sense.
+
+02:19.500 --> 02:20.190
+Right.
+
+02:20.190 --> 02:23.000
+All it's saying is give me a parameter.
+
+02:23.070 --> 02:25.180
+Then another parameter.
+
+02:25.290 --> 02:35.220
+So if I just do multiply by number one which should be four and then add another bracket multiply by
+
+02:35.280 --> 02:38.580
+six six times four will be twenty four.
+
+02:38.700 --> 02:40.640
+And that's all these brackets are showing.
+
+02:40.640 --> 02:43.330
+You don't get confused by all these arrows.
+
+02:43.590 --> 02:50.160
+It's a higher order function but each bracket shows you how to call the function so that we can do something
+
+02:50.430 --> 02:52.600
+like this now.
+
+02:52.600 --> 02:53.920
+Higher order functions.
+
+02:53.940 --> 03:00.420
+I hope you start to see the power of them because we're gonna be using them a lot throughout the rest
+
+03:00.420 --> 03:01.950
+of the course.
+
+03:01.970 --> 03:06.870
+Now we learned how to go from a simple function to function with parameters.
+
+03:06.980 --> 03:14.120
+And then finally we went super sand to higher order functions and the main benefit was the idea of making
+
+03:14.120 --> 03:21.500
+code more general keeping our code dry and not repeating ourself and just breaking things down into
+
+03:21.500 --> 03:23.240
+small functionalities.
+
+03:23.240 --> 03:29.170
+Now some people might argue that high order functions doesn't necessarily simplify our code.
+
+03:29.300 --> 03:31.780
+It makes it look more complex and complicated.
+
+03:32.330 --> 03:35.400
+And that's a subject up for debate.
+
+03:35.660 --> 03:42.950
+But with this newfound knowledge I think we're ready to get tuned to our first pillars closures.
+
+03:42.950 --> 03:44.360
+I'll see in the next one by.

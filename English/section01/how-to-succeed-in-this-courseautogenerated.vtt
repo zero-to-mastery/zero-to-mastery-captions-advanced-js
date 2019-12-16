@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00.720 --> 00:09.330
+What does advanced JavaScript mean everyone has a different idea of what advanced needs in order to
+
+00:09.330 --> 00:12.240
+make sure that the course can be enjoyed by everybody.
+
+00:12.660 --> 00:18.840
+I have structured the course in a unique way so that although everyone will start at different levels
+
+00:18.900 --> 00:23.740
+of knowledge you will all end up at the same place in the end.
+
+00:23.760 --> 00:24.450
+Let's have a look.
+
+00:25.820 --> 00:34.520
+This is our course outline and the course starts off with the foundations to make sure that we have
+
+00:34.520 --> 00:38.590
+those building blocks in place to learn best practices.
+
+00:38.780 --> 00:46.130
+Advanced topics and how to write clean code will start diving quite deep into things like the JavaScript
+
+00:46.160 --> 00:53.270
+engine the runtime talking about interpreters compilers JIT compilers going to talk about all these
+
+00:53.270 --> 00:54.230
+topics.
+
+00:54.230 --> 00:59.450
+Some of them quite advanced and then dive deep into the language itself.
+
+00:59.450 --> 01:04.550
+Talking about some of the key terms that you may have heard but not fully understood like execution
+
+01:04.550 --> 01:09.760
+context lexical environment dynamic versus lexical scope.
+
+01:10.130 --> 01:17.300
+And once we're done with the foundations and we are for sure ready for more advanced topics we start
+
+01:17.300 --> 01:19.900
+getting into types in JavaScript.
+
+01:20.120 --> 01:27.140
+Talking about statically versus dynamically typed languages about type caution passed by reference past
+
+01:27.140 --> 01:31.260
+by value and then we're going to talk about something really important.
+
+01:31.400 --> 01:39.260
+The two pillars something that really makes javascript powerful and these two pillars are going to be.
+
+01:39.260 --> 01:42.110
+Closures and prototype all inheritance.
+
+01:42.110 --> 01:48.410
+Now you may know these topics but we're gonna go dive deep and understand why these two topics are really
+
+01:48.410 --> 01:51.520
+powerful and making us a great program.
+
+01:52.040 --> 01:52.920
+Along the way.
+
+01:52.920 --> 01:59.240
+We're going to talk about some other topics as well but all of this is for us to be set up to talk about
+
+01:59.630 --> 02:01.710
+the programming paradigms.
+
+02:01.730 --> 02:03.520
+This is where it gets fun.
+
+02:04.160 --> 02:12.800
+We take all the knowledge that we have built up until now to talk about ways to structure our code organize
+
+02:12.800 --> 02:15.830
+our code and write beautiful programs.
+
+02:15.920 --> 02:19.910
+We're going to talk about the two main ways to structure our code.
+
+02:20.060 --> 02:23.430
+One is object oriented programming and the other one.
+
+02:23.480 --> 02:25.460
+Functional programming.
+
+02:25.460 --> 02:31.700
+And we're going to dive deep and talk about each of these topics and also talk about composition versus
+
+02:31.730 --> 02:32.770
+inheritance.
+
+02:32.960 --> 02:40.040
+By the end of it you're going to learn some paradigms that have taken years and years decades for programmers
+
+02:40.310 --> 02:46.520
+to learn what these good practices are and to end it all off.
+
+02:46.610 --> 02:52.760
+I have some extra sections to go beyond and learn about important topics like asynchronous javascript
+
+02:53.150 --> 02:59.870
+modules and JavaScript and go over the history of modules and also a topic that often gets forgotten
+
+02:59.870 --> 03:03.240
+about error handling and how to properly do it.
+
+03:03.890 --> 03:07.410
+And there might be a small data structure section as well.
+
+03:07.550 --> 03:15.240
+In the end all of this is a path for you to become a top 10 percent javascript developer.
+
+03:15.260 --> 03:21.680
+The idea is that we're starting off with building our pyramid with the fundamentals and going up that
+
+03:21.680 --> 03:24.300
+pyramid each step of the way.
+
+03:24.440 --> 03:30.380
+If on one of the videos you find the topic too hard or too advanced I have included an appendix section
+
+03:30.680 --> 03:34.790
+which teaches you the basic javascript topics for a beginner.
+
+03:34.790 --> 03:40.760
+This way no matter what your level you have a way to learn from each of the videos and reference an
+
+03:40.790 --> 03:42.350
+easier video in the appendix.
+
+03:42.350 --> 03:49.520
+If you need more explanation for advanced programmers some of the beginning sections may seem too easy
+
+03:49.520 --> 03:55.580
+for you but I recommend you hang in there as each section builds on top of the other and you will learn
+
+03:55.580 --> 03:56.720
+things along the way.
+
+03:57.020 --> 04:00.550
+I promised now to get the most out of this course.
+
+04:00.590 --> 04:07.150
+You should follow the lessons in order since you may gain an insight or two even if you thought I'll
+
+04:07.160 --> 04:08.290
+leave me alone andre.
+
+04:08.330 --> 04:10.710
+I already know this stuff.
+
+04:10.710 --> 04:18.950
+OK now that you have an idea of the outline let's talk about what it means to succeed in this course.
+
+04:18.950 --> 04:25.290
+First make sure you use our online discourse community to communicate with fellow students.
+
+04:25.310 --> 04:27.230
+It's like a classroom.
+
+04:27.230 --> 04:28.220
+Ask questions.
+
+04:28.220 --> 04:32.010
+Do coding challenges talk about coding exercises.
+
+04:32.180 --> 04:37.670
+When it comes to programming there's nothing better than asking questions and helping others.
+
+04:37.670 --> 04:44.030
+This is the most active developer community on udemy with over a thousand developers online at any one
+
+04:44.030 --> 04:46.690
+time too.
+
+04:46.870 --> 04:52.280
+Anytime you feel like you're just watching a video and aren't understanding a topic.
+
+04:52.280 --> 04:56.660
+Stop what you are doing take a break and come back to a problem.
+
+04:56.960 --> 04:59.850
+You won't be able to finish this course in one week.
+
+05:00.020 --> 05:04.520
+If you do it properly it will take you about a month to finish everything.
+
+05:04.610 --> 05:05.890
+So take your time.
+
+05:05.900 --> 05:08.780
+This isn't a sprint it's a marathon.
+
+05:08.780 --> 05:13.160
+Finally try to complete the full course instead of just parts of it.
+
+05:13.160 --> 05:19.580
+Most lessons are tied into one another so that they flow and we keep building this pyramid of knowledge.
+
+05:19.580 --> 05:26.440
+We will start from the very basic and go into more and more advanced topics all right enough talk.
+
+05:26.910 --> 05:32.430
+I think it's time for us to start the course and get ready to be considered a top 10 percent javascript
+
+05:32.700 --> 05:33.960
+developer.
+
+05:33.960 --> 05:36.480
+Let's get started and see you in the next section.

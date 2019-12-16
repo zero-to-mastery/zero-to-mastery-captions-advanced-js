@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.970 --> 00:06.270
+Let's start off a new section which is modules in JavaScript.
+
+00:06.430 --> 00:14.990
+You see modules are very important concepts in JavaScript and any other programming language just like
+
+00:14.990 --> 00:17.370
+a painter has on his palette.
+
+00:17.480 --> 00:23.210
+Paint in different compartments with different colors and he or she combined them to create a piece
+
+00:23.210 --> 00:28.100
+of art or a writer that writes different chapters to a book.
+
+00:28.100 --> 00:35.600
+Modules are just like that in that different pieces of code are grouped together so that things are
+
+00:35.600 --> 00:42.830
+organized and as our application gets larger and larger we can combine different pieces together to
+
+00:42.830 --> 00:45.250
+make these large applications.
+
+00:45.460 --> 00:49.990
+It's very similar to the idea of separation of concern right.
+
+00:50.020 --> 00:56.260
+The thing that we saw in functional programming and object oriented programming where we tried to contain
+
+00:56.260 --> 01:03.160
+things into their own functionality and good modules are like that they're highly self-contained and
+
+01:03.160 --> 01:10.360
+grouped together with their own specific functionality allowing them to be moved around used by other
+
+01:10.360 --> 01:16.280
+places or even removed without disrupting the whole system as a whole now.
+
+01:16.290 --> 01:23.370
+In this section we're going to talk about the historical way how people originally used the idea of
+
+01:23.370 --> 01:29.700
+modules in JavaScript and where we are now with native yes 6 modules we're going to go from the very
+
+01:29.700 --> 01:36.450
+beginning to now and hopefully you'll understand some of the pain that we had in the past and where
+
+01:36.450 --> 01:37.680
+we're going to next.
+
+01:37.890 --> 01:46.110
+So that we're able to build these modular pieces of code because remember we need a way to import code
+
+01:46.110 --> 01:47.870
+that we want to use.
+
+01:48.120 --> 01:54.710
+We don't necessarily have just one massive JavaScript file Ideally our code is broken up into different
+
+01:54.710 --> 02:01.070
+files with different functionality or perhaps we even borrowing code that somebody else wrote and we
+
+02:01.070 --> 02:03.320
+want to use that in our program.
+
+02:03.320 --> 02:12.080
+So we need a way in javascript to import dependencies that is code that we want to use and export functionality
+
+02:12.500 --> 02:18.750
+often called an interface to allow others to use our code and with modules.
+
+02:18.770 --> 02:25.930
+This idea extends beyond just functions and classes that we saw in our programming paradigms.
+
+02:26.060 --> 02:32.450
+This idea of modularity actually goes beyond just JavaScript files to entire systems in distributed
+
+02:32.450 --> 02:33.500
+computing.
+
+02:33.500 --> 02:36.290
+The concept prevails throughout programming.
+
+02:36.290 --> 02:41.330
+So in this section we're going to talk about modules in JavaScript where we came from and where we are
+
+02:41.330 --> 02:42.950
+now and the best practices.
+
+02:43.460 --> 02:44.110
+Let's get started.

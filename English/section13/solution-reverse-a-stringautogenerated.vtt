@@ -1,0 +1,361 @@
+WEBVTT
+
+00:00.760 --> 00:01.490
+Welcome back.
+
+00:02.240 --> 00:09.110
+Now I'm not going to go over all of our steps that we used in the section where we talked about how
+
+00:09.110 --> 00:15.950
+to solve problems and how to talk through your problems in front of an interviewer.
+
+00:15.950 --> 00:21.620
+And we even watched That Google video of all the things you need to do because that's gonna take way
+
+00:21.620 --> 00:22.850
+too long of a time.
+
+00:22.880 --> 00:28.740
+I'm going to speed things up and just talk about the key points of how you would solve this problem.
+
+00:28.760 --> 00:37.680
+Well in order to reverse this string the first thing we want to do is some sort of a check of our input.
+
+00:37.730 --> 00:41.120
+We can't just assume that we're going to always receive a string.
+
+00:41.750 --> 00:48.950
+What if somebody calls the reverse function with well undefined or with a number.
+
+00:48.950 --> 00:50.130
+What happens then.
+
+00:50.510 --> 00:53.780
+And a good thing to always start off with is to check the input.
+
+00:53.780 --> 00:56.370
+In my case I'm going to do a simple check.
+
+00:56.390 --> 01:09.650
+Let's say that if there's no string so that is undefined or perhaps that the string dot length is less
+
+01:10.040 --> 01:11.660
+than two.
+
+01:11.990 --> 01:21.800
+That means well if string dot length is less than two that means I'm just receiving one letter or no
+
+01:21.800 --> 01:25.000
+letters in which case we don't really need to do any operations.
+
+01:25.010 --> 01:32.360
+It's already kind of reversed and we can add different input validation here such as using the type
+
+01:32.480 --> 01:35.810
+of keyword in javascript to check if it's a String type.
+
+01:36.410 --> 01:38.800
+But that's something you can just do on your own.
+
+01:39.080 --> 01:41.940
+Actually let's implement it since we're here anyway just to show you.
+
+01:42.170 --> 01:53.780
+So I can say type of string if it doesn't equal string type of SDR which is the parameter we receive
+
+01:53.840 --> 01:56.230
+as an equal the string type.
+
+01:56.300 --> 02:03.940
+Well in that case we can just return who.
+
+02:04.170 --> 02:04.950
+That's not good
+
+02:10.070 --> 02:10.700
+otherwise.
+
+02:10.730 --> 02:15.290
+Let's do some operation to reverse the string.
+
+02:15.290 --> 02:17.370
+Well let's think about this.
+
+02:17.420 --> 02:20.690
+We want to convert it into an array.
+
+02:20.840 --> 02:29.270
+So I'm going to create a backwards array and this is what we're going to return from the function.
+
+02:29.400 --> 02:35.240
+I'm going to return the array that is reversed.
+
+02:35.240 --> 02:37.520
+But we want to return a String.
+
+02:37.630 --> 02:38.000
+Right.
+
+02:38.000 --> 02:39.370
+A reverse reverses a string.
+
+02:39.380 --> 02:45.930
+This should return a String even though we're going to convert whatever we receive into an array at
+
+02:45.930 --> 02:46.620
+the end.
+
+02:46.620 --> 02:48.810
+We want to turn it back into a string.
+
+02:49.500 --> 03:02.900
+So in Javascript we can do the two string method or the joint method and we just say join all the items
+
+03:03.020 --> 03:04.040
+in the array.
+
+03:04.100 --> 03:15.940
+Now in here we're going to grab the length of the array or the string because we're gonna be using it
+
+03:15.940 --> 03:18.220
+a lot and we don't want to have repeated code.
+
+03:18.340 --> 03:25.270
+So I'm going to say length minus one is how many items we have in the string.
+
+03:25.270 --> 03:26.980
+Or maybe we should name this items
+
+03:30.860 --> 03:33.250
+or actually total items.
+
+03:33.290 --> 03:34.840
+That's a better name.
+
+03:34.920 --> 03:36.720
+Now these total items.
+
+03:36.930 --> 03:47.050
+So we're going to loop through our string we'll say let I equals to the total items
+
+03:50.100 --> 03:56.530
+so I is going to equal however many characters we have in our string and we're gonna keep going until
+
+03:56.530 --> 03:59.590
+I is equals to zero
+
+04:03.520 --> 04:10.220
+and all we're going to do because we want to go from back to front.
+
+04:10.370 --> 04:18.130
+We're going to decrement this so we're gonna go from the length of the string all the way back.
+
+04:18.140 --> 04:26.360
+So we're going to start off with I E R D and A and insert those into an array that we've created the
+
+04:26.360 --> 04:39.980
+backwards array one by one so in this loop all we're going to do is say backwards dot push each item
+
+04:40.010 --> 04:40.750
+that we're gonna create.
+
+04:40.760 --> 04:41.900
+So SDR
+
+04:44.770 --> 04:46.510
+and I know what you're thinking.
+
+04:46.830 --> 04:47.550
+Whoa whoa whoa.
+
+04:47.590 --> 04:50.890
+Why don't we just convert the string into an array.
+
+04:50.890 --> 04:57.850
+You told me all about converting strings into an array and we didn't really do that in JavaScript actually
+
+04:57.850 --> 05:09.260
+has the SDR dot split or we can run the split command to split things into an array but with JavaScript
+
+05:09.320 --> 05:17.720
+we can actually just use strings as arrays and access each property like this with bracket notation
+
+05:17.930 --> 05:24.260
+so that they essentially are arrays so we don't have to run any split commands.
+
+05:24.260 --> 05:33.410
+This also works and all we're doing is we're going backwards one by one and pushing each item of our
+
+05:33.410 --> 05:37.990
+given string into our array.
+
+05:38.060 --> 05:48.570
+So if I console log here before we run the joint command the backwards array and I run reverse
+
+05:51.580 --> 05:54.660
+and let's reverse the string
+
+05:58.960 --> 06:07.950
+let's run this oh and you may have noticed that this length didn't really come from anywhere it should
+
+06:07.950 --> 06:09.350
+be total items.
+
+06:09.450 --> 06:15.360
+So this is the total whoops total items.
+
+06:15.550 --> 06:17.460
+This is the problem with life coding.
+
+06:17.470 --> 06:23.290
+I tried to show that everybody makes mistakes even myself and it's good because this way you think through
+
+06:23.290 --> 06:33.700
+the problem and these total items remember we want to keep going as long as AI is greater than or equal
+
+06:33.790 --> 06:42.890
+to zero so if I now run this Hey look at that we have an array with all of our backwards items right
+
+06:42.890 --> 06:54.200
+in here and you see here that the return value that we get is the backwards string that we receive because
+
+06:54.200 --> 06:57.930
+we join it at the end very goal.
+
+06:57.940 --> 07:06.650
+I hope you got that answer or maybe you have a better answer than me because what I did here is not
+
+07:06.650 --> 07:09.140
+necessarily the cleanest way.
+
+07:09.410 --> 07:15.710
+And depending on which programming language you use you might have built in methods that simplify this
+
+07:15.710 --> 07:17.790
+step.
+
+07:17.810 --> 07:18.770
+Let me show you what I mean.
+
+07:19.840 --> 07:26.440
+In javascript for example we can use some built in methods that come with the race to just simplify
+
+07:26.440 --> 07:29.790
+this whole thing and make our code a lot more readable.
+
+07:29.920 --> 07:31.540
+Let's create a new function.
+
+07:31.540 --> 07:32.680
+And I'm going to call this
+
+07:36.200 --> 07:38.220
+reverse too.
+
+07:38.650 --> 07:44.520
+And this reverse too is going to once again receive some sort of an input.
+
+07:44.690 --> 07:48.050
+I won't do any input validation for this one.
+
+07:48.260 --> 07:51.290
+You can just assume that we can just copy and paste it here.
+
+07:52.020 --> 08:01.740
+But in here we can do a simple return statement grab the string run the split command because this time
+
+08:01.740 --> 08:06.630
+around we're not going to access the eye like we did up here.
+
+08:06.630 --> 08:14.690
+We're going to convert it into an array so that we can use a built in method that comes in JavaScript
+
+08:14.690 --> 08:24.180
+there is called reverse and this reverse does what we just did here for us and now we just join it at
+
+08:24.180 --> 08:24.720
+the end.
+
+08:25.810 --> 08:34.270
+So by using a built in method called reverse I avoided all this work.
+
+08:34.300 --> 08:35.460
+How nice is that.
+
+08:35.470 --> 08:36.340
+Let's see if that works.
+
+08:36.370 --> 08:38.560
+I'm going to say reverse too.
+
+08:38.890 --> 08:41.250
+Going to run and look at that.
+
+08:41.350 --> 08:43.180
+It's still working.
+
+08:43.210 --> 08:45.200
+What about another solution.
+
+08:45.340 --> 08:47.250
+Again many different ways.
+
+08:47.350 --> 08:55.180
+And let's say the interviewer says is there a more modern cleaner way that he can make this function
+
+08:56.560 --> 08:59.480
+and because in JavaScript there's the new.
+
+08:59.500 --> 09:01.810
+Yes six syntax.
+
+09:01.990 --> 09:11.910
+You can even create a one line function call it reverse three that's going to take a string and it's
+
+09:11.910 --> 09:15.840
+going to do string dot split
+
+09:19.760 --> 09:27.460
+and again do the exact same thing using error function this time around and this should still work the
+
+09:27.460 --> 09:30.680
+exact same look at that.
+
+09:30.920 --> 09:37.640
+And if you want to get fancy you can again use a new feature of JavaScript which is the structuring
+
+09:38.300 --> 09:39.470
+or not the structuring.
+
+09:39.470 --> 09:41.390
+This is the spread operator.
+
+09:41.390 --> 09:46.300
+If I run this we no longer need the split.
+
+09:46.580 --> 09:51.890
+I can run this and I get the same thing again.
+
+09:52.000 --> 09:57.940
+I just want to demonstrate to you that there are many different ways to solve a problem and an interviewer
+
+09:58.510 --> 10:07.060
+is not going to reject you for a job just because you implemented it this way vs. this way.
+
+10:07.060 --> 10:10.160
+It depends on how you deliver your solution.
+
+10:10.450 --> 10:16.150
+And this is something that we talked about in our how to solve problem section how you want to talk
+
+10:16.150 --> 10:17.250
+through the problem.
+
+10:17.380 --> 10:23.950
+Explain to the interviewer why you did and as long as you understand the pros and cons of each solution.
+
+10:24.280 --> 10:27.830
+That's what makes a great engineer.
+
+10:27.960 --> 10:28.790
+I'll see in the next one.

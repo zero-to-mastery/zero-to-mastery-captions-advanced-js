@@ -1,0 +1,61 @@
+WEBVTT
+
+00:01.060 --> 00:02.510
+Welcome back.
+
+00:02.590 --> 00:09.490
+Why hash tables hash tables are great when you want quick access to certain values.
+
+00:09.560 --> 00:14.930
+We remember that searching through an array for an item takes a really long time.
+
+00:14.930 --> 00:21.620
+We have to loop through every item and see if a certain string or a set number is in an array with hash
+
+00:21.620 --> 00:22.190
+tables.
+
+00:22.280 --> 00:29.430
+That's really really fast and this is why you see hash tables in places like databases right.
+
+00:29.450 --> 00:36.490
+We want to search for something in a database and a gives it back to us right away similarly inserting
+
+00:36.520 --> 00:46.450
+items in and a hash table on like an array that might shift indexes is typically of one.
+
+00:46.450 --> 00:53.090
+You just simply have to hash and create the key although we have those cases of collision.
+
+00:53.200 --> 00:58.150
+Most of the time that's something that we don't need to worry about too much and we can assume an insert
+
+00:58.180 --> 01:04.950
+of all one then there's other aspects that are quite similar between the two arrays let you quickly
+
+01:04.950 --> 01:06.960
+look up the value for a given.
+
+01:06.960 --> 01:15.610
+Key keys are called indexes in an array and we don't get to pick them it's always 0 1 2 3 in hash tables.
+
+01:15.690 --> 01:23.450
+We can pick them so hash tables is kind of like a hack on top of an array to let us use flexible keys
+
+01:24.410 --> 01:34.290
+instead of being stuck with 0 1 2 3 a problem of hash tables that we discussed was the idea of no concept
+
+01:34.290 --> 01:42.520
+of order in arrays each item was placed next to each other on a shelf in memory hash tables are kind
+
+01:42.520 --> 01:43.590
+of placed all over the place.
+
+01:45.560 --> 01:51.590
+Now that we have an idea of the differences between the two I think it's time for us to actually work
+
+01:51.590 --> 01:58.430
+on some exercises and interview questions that we'll use hash tables in their answers.
+
+01:58.520 --> 01:59.170
+I'll see you on that one.

@@ -1,0 +1,118 @@
+WEBVTT
+
+00:00.960 --> 00:01.900
+Welcome back.
+
+00:01.950 --> 00:09.180
+In the previous video we talked about how functions can be passed around like data and this idea of
+
+00:09.390 --> 00:11.190
+a function being passed around.
+
+00:11.220 --> 00:17.730
+Besides just being something that performs actions and because of this you'll often hear people say
+
+00:17.970 --> 00:24.360
+that functions are a first class citizen in JavaScript.
+
+00:24.360 --> 00:25.620
+What does that mean.
+
+00:25.620 --> 00:27.660
+Well it means three things.
+
+00:27.660 --> 00:29.330
+Let me comment this out.
+
+00:29.340 --> 00:37.590
+The first thing is that functions can be assigned to variables and properties of objects so that I can
+
+00:37.590 --> 00:45.780
+do variable stuff equals to function in some languages I can't do that.
+
+00:45.820 --> 00:49.940
+I can just run functions to perform actions but that's it in Javascript.
+
+00:50.020 --> 00:56.940
+I can assign it to a variable or even an object property which then becomes a method.
+
+00:56.950 --> 00:58.760
+What else can we do.
+
+00:58.770 --> 01:07.110
+Well we can also pass functions as arguments into a function so I can do.
+
+01:07.180 --> 01:17.660
+Function a that receives a another function and inside of this function I can run that function and
+
+01:17.660 --> 01:24.740
+then maybe we can call a with a function inside of it.
+
+01:25.050 --> 01:28.620
+Function console dialog
+
+01:31.860 --> 01:43.070
+so that if I run this code I get high there I am able to pass a function as a parameter to a function.
+
+01:43.080 --> 01:50.520
+Now I'm saying function a lot so I'm passing this which I can extract it away to a variable like we
+
+01:50.520 --> 01:53.870
+did up here at 1 and pass it around like data.
+
+01:53.910 --> 02:02.190
+It's almost as if I'm just passing it as a string and I'm saying hey here's here's some data for you
+
+02:02.670 --> 02:08.190
+run it when you get into function a so that's very interesting.
+
+02:08.370 --> 02:16.140
+And then the final piece of the puzzle is that we can return functions as a values from other functions.
+
+02:16.240 --> 02:16.810
+What does that mean.
+
+02:17.500 --> 02:18.840
+Well I can do this.
+
+02:18.910 --> 02:33.340
+I can say function b that returns another function C and this function C contains console dialog.
+
+02:33.390 --> 02:41.970
+So now if I run B I get function C but if I run that again
+
+02:45.200 --> 02:54.740
+I get by or I can even assign it to a variable and then just call that valuable.
+
+02:54.740 --> 03:05.310
+D So those are the three properties that make functions a first class citizen in JavaScript we're able
+
+03:05.310 --> 03:15.300
+to assign two variables these functions we can pass these functions into arguments and we can also return
+
+03:15.450 --> 03:22.520
+functions as values from another function and this goes back to what I said right.
+
+03:22.520 --> 03:30.260
+Functions are data not only do they perform actions for us but they're also pieces of data that can
+
+03:30.260 --> 03:35.260
+be passed around like first class citizens as if there were javascript types.
+
+03:35.450 --> 03:43.340
+So anything you can do with other types you can do with a function and as a matter of fact this idea
+
+03:43.370 --> 03:50.510
+of a first class citizen property in JavaScript introduces javascript to a whole world called functional
+
+03:50.510 --> 03:54.030
+programming an entire section that we have coming up.
+
+03:54.200 --> 04:00.080
+So now that we understand why functions are first class citizens let's dive deeper into some of the
+
+04:00.080 --> 04:01.630
+interesting things we can do with it.
+
+04:01.630 --> 04:04.240
+Now I'll see in the next one by.

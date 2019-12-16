@@ -1,0 +1,121 @@
+WEBVTT
+
+00:01.290 --> 00:01.710
+Welcome back.
+
+00:02.430 --> 00:08.400
+So we know that this thing called the JavaScript engine takes our written javascript code and does some
+
+00:08.400 --> 00:12.330
+magic to tell the computer to do what we want it to do.
+
+00:13.220 --> 00:16.280
+So what's happening inside of this engine.
+
+00:16.280 --> 00:21.590
+And here's the tricky part as we know this engine can be built by anybody.
+
+00:21.590 --> 00:21.860
+Yes.
+
+00:21.860 --> 00:26.560
+That means you can build your own JavaScript engine but it's a lot of work.
+
+00:26.660 --> 00:30.340
+And at the end of the day it's just a program.
+
+00:30.350 --> 00:36.320
+And the V8 engine which is the most popular most common and someone say the fastest JavaScript engine
+
+00:36.680 --> 00:44.870
+that the Chrome browser and no J.S. uses which we'll talk about later on this engine is written in C++.
+
+00:44.990 --> 00:52.670
+A low level programming language but let's see what's actually happening inside here inside this engine.
+
+00:52.670 --> 01:01.910
+It looks something like this we give it a javascript file and first is does something called lexical
+
+01:01.910 --> 01:08.660
+analysis which breaks the code into something called tokens to identify their meaning.
+
+01:08.660 --> 01:17.380
+So that we know what the code is trying to do and these tokens are formed into what we call an HST that
+
+01:17.380 --> 01:19.750
+is an abstract syntax tree.
+
+01:20.170 --> 01:28.720
+So we pass the code that is we try and figure out how the text is divided up based on keyboards from
+
+01:28.720 --> 01:34.850
+javascript and it gets formed into this tree like structure called abstract syntax tree.
+
+01:35.200 --> 01:42.280
+And this is a fun little tool online that you can use to demo this if we go to a SD explorer dot net
+
+01:43.300 --> 01:50.980
+I'll show you how this abstract syntax tree looks like and you have a bit of code here.
+
+01:50.980 --> 01:54.860
+And as you can see you can look at it in Jason format or he can use it.
+
+01:54.940 --> 02:00.780
+The tree and it breaks down the program into different things that are happening.
+
+02:00.840 --> 02:02.850
+We have a variable declaration
+
+02:05.550 --> 02:07.110
+a decorator.
+
+02:07.180 --> 02:13.870
+And although this may look like gibberish right now to you this allows the engine to understand what's
+
+02:13.870 --> 02:18.100
+going on in the program or at least break things down one by one
+
+02:21.800 --> 02:30.460
+in once in this form it goes through something called an interpreter profiler compiler and we get some
+
+02:30.460 --> 02:37.600
+sort of code which we're going to talk about later on in this whole engine is going to spit out some
+
+02:37.600 --> 02:46.170
+code that are C.P. you on our computers is going to understand to give it instructions and you can think
+
+02:46.170 --> 02:52.710
+of this whole process again which we're going to talk about in more detail coming up as something like
+
+02:52.710 --> 02:53.790
+this.
+
+02:53.790 --> 03:02.270
+We can create our own JavaScript engine by saying function and let's say J.S. engine function that takes
+
+03:02.270 --> 03:11.840
+Simpson code and this code is going to return for us let's say code dot split and we'll use some regex
+
+03:11.840 --> 03:13.670
+here just to split up our code
+
+03:17.010 --> 03:24.120
+and now if I write some code here let's say J.S. engine and we give it our code which will be a string
+
+03:24.120 --> 03:32.900
+that says variable a equals to five Look at that we've created a simple engine.
+
+03:32.950 --> 03:37.920
+I know I know there's a lot more complexities to it than that but that's what it's doing.
+
+03:37.930 --> 03:46.300
+We're giving it a piece of code which just gets string defined and then it tries and breaks things down
+
+03:46.300 --> 03:53.920
+into different parts so that maybe in this function we can say if you see variable keyword that means
+
+03:53.920 --> 04:02.260
+whatever comes after it is a variable that we're going to assign and so on and so forth but you might
+
+04:02.500 --> 04:04.030
+see a problem here.

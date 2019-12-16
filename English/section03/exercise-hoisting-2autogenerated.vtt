@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00.980 --> 00:02.270
+Welcome back.
+
+00:02.390 --> 00:09.090
+I have another tricky question for you and if you were able to get this you've pretty much mastered
+
+00:09.090 --> 00:10.230
+hoisting.
+
+00:10.230 --> 00:17.440
+It's a really difficult question that comes up quite often in JavaScript interviews looking at this
+
+00:17.440 --> 00:18.430
+function.
+
+00:18.490 --> 00:27.910
+I've created a few things while we have my favorite food grapes obviously but then I changed my mind
+
+00:28.270 --> 00:30.790
+and I have a few thoughts.
+
+00:30.790 --> 00:40.240
+Function in this food thought function is a function expression where I log my original favorite food
+
+00:40.660 --> 00:48.490
+and then I change my favorite food to sushi and then I console log my new favorite food and then online
+
+00:48.490 --> 00:49.190
+11.
+
+00:49.460 --> 00:56.810
+We're going to execute and run the food thoughts function before I click run here.
+
+00:56.810 --> 01:03.620
+Based on what you know but the creation face the execution phase about hoisting What do you think is
+
+01:03.620 --> 01:09.350
+going to be locked here pause the video if you want to try this out yourself.
+
+01:09.460 --> 01:11.330
+Otherwise I'm going to click Run.
+
+01:11.380 --> 01:11.920
+Let's find out
+
+01:14.660 --> 01:21.230
+original favorite food undefined new favorite food sushi.
+
+01:21.770 --> 01:22.680
+Huh.
+
+01:22.750 --> 01:25.000
+Is that what you expected.
+
+01:25.000 --> 01:31.480
+I bet most of you thought the last fine in our function that is console logged new favorite food to
+
+01:31.480 --> 01:36.980
+equal sushi would work but I bet this is surprising to some of you.
+
+01:37.030 --> 01:45.290
+Why do we get undefined here and this goes back to what I said in the previous video that is hoisting
+
+01:45.530 --> 01:49.250
+happens on every execution context.
+
+01:49.250 --> 01:56.480
+Any time where you run a function a new execution context gets created and we have to go through the
+
+01:56.480 --> 01:59.450
+creation face and execution phase again.
+
+01:59.540 --> 02:11.940
+So let's see what happens here well the first line gets hoisted so favorite food at the top becomes
+
+02:12.600 --> 02:14.550
+variable.
+
+02:14.910 --> 02:25.550
+Favorite food equals undefined and remember the JavaScript engine isn't actually moving these lines
+
+02:25.550 --> 02:25.830
+up.
+
+02:25.940 --> 02:27.720
+I just want to explain what's happening.
+
+02:27.890 --> 02:33.700
+But we assign favorite food to undefined favorite food.
+
+02:33.770 --> 02:43.080
+Now gets assigned to undefined and I may have forgotten the variable keyword here so that gets hoisted.
+
+02:43.320 --> 02:51.600
+And then we go to line four and line four we see a variable so fruit thoughts also gets hoisted so variable
+
+02:51.900 --> 02:55.650
+food thoughts is going to equal undefined.
+
+02:55.780 --> 02:56.560
+It's a variable
+
+02:59.760 --> 03:04.650
+and we keep going keep going keep going there's no more Vera var there's no more function at the beginning
+
+03:04.650 --> 03:05.350
+of the lines.
+
+03:05.370 --> 03:06.610
+So there you go.
+
+03:06.660 --> 03:08.940
+Our creation phase is done.
+
+03:08.940 --> 03:17.580
+So now during the execution phase it's almost as if we don't need the variable keywords anymore because
+
+03:18.510 --> 03:22.840
+they've been created during the creation phase.
+
+03:23.110 --> 03:25.770
+So now we start executing the code.
+
+03:25.870 --> 03:30.650
+The first execution that we do is favorite food equals two grapes.
+
+03:30.810 --> 03:31.680
+All right.
+
+03:31.810 --> 03:38.360
+And then we have food thoughts that gets assigned this entire piece of function.
+
+03:38.380 --> 03:39.710
+We don't run this function.
+
+03:39.760 --> 03:43.890
+It just says hey fruit thoughts is going to equal this function.
+
+03:43.990 --> 03:49.810
+And then on line 14 we're going to run this function because the JavaScript engine is going to see these
+
+03:49.810 --> 03:51.400
+two brackets.
+
+03:51.400 --> 04:00.970
+Now as soon as we run this function a new execution context is created and inside of this execution
+
+04:00.970 --> 04:05.580
+context hoisting happens during the creation phase.
+
+04:05.620 --> 04:15.650
+So it's going to say I see variable here in this little world that we're in and there's favorite food
+
+04:15.650 --> 04:16.510
+here.
+
+04:16.640 --> 04:22.940
+So I'm going to hoist that up and by I I mean the JavaScript engine and it's going to hoist it up and
+
+04:22.940 --> 04:26.210
+say favorite food equals to undefined
+
+04:30.210 --> 04:31.230
+and that's it.
+
+04:31.230 --> 04:34.370
+That's the only variable and function that it sees.
+
+04:34.380 --> 04:44.250
+So now it's almost as if during the execution phase you're doing this your logging original favorite
+
+04:44.250 --> 04:53.400
+food is favorite food which is undefined then favorite food becomes sushi where we log favorite food
+
+04:57.390 --> 05:03.750
+now looking at this I hope you understand what's happening underneath the hood and we're going to talk
+
+05:03.750 --> 05:13.230
+a little bit more about this idea of functions and scopes and what really happens here later on but
+
+05:13.290 --> 05:19.800
+you might be asking yourself isn't hoisting confusing what happened to being predictable with our code
+
+05:19.860 --> 05:25.620
+and making sure that the compiler as well as humans can understand our code because it's predictable
+
+05:26.610 --> 05:33.720
+and there are arguments about whether you should even use hoisting and whether hoisting is bad practice
+
+05:34.650 --> 05:43.080
+because we want to make code predictable remember and personally doing things like this makes your code
+
+05:43.080 --> 05:52.290
+very unpredictable and I recommend avoiding hoisting if you can and you can do that well by not using
+
+05:52.800 --> 05:54.630
+the VAR keyword.
+
+05:54.990 --> 06:04.160
+So if we go back to our code the way it was before like this we can just simply use
+
+06:06.690 --> 06:16.310
+cost and let that came with iOS 5 or E6 something we're going to talk about a little bit later on and
+
+06:16.730 --> 06:23.990
+that's going to give us an error because right now we're trying to take advantage of hoisting and while
+
+06:24.050 --> 06:30.740
+favorite food is not defined because it's defined here and we catch that error ahead of time because
+
+06:30.770 --> 06:33.870
+now as a developer you're gonna see.
+
+06:34.010 --> 06:34.320
+All right.
+
+06:34.340 --> 06:40.990
+This doesn't make sense because we're no longer using hoisting this console log at the beginning.
+
+06:41.030 --> 06:43.040
+Well this is not going to work.
+
+06:43.040 --> 06:50.210
+So maybe we need to rewrite our code to have it make more sense instead of just relying on hoisting.
+
+06:50.390 --> 06:54.740
+But it is a pretty important concept in JavaScript.
+
+06:54.740 --> 06:59.930
+You're going to see it used all over the place but I hope this is now a little bit easier for you to
+
+06:59.930 --> 07:03.340
+explain to others and work with yourself.
+
+07:03.380 --> 07:05.220
+I'll see you in the next video by.

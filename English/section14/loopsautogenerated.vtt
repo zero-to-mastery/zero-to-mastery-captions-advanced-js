@@ -1,0 +1,709 @@
+WEBVTT
+
+00:01.160 --> 00:03.840
+Welcome back up to this point.
+
+00:03.870 --> 00:09.450
+We've learned about codes just executing from top to bottom just in a straight line.
+
+00:09.570 --> 00:16.470
+We've learned about conditionals where we can add an if statement and have it go one way else go the
+
+00:16.470 --> 00:31.610
+other way and then we also learned about if else and else if so if Smith I'll see if else and then what
+
+00:31.610 --> 00:37.990
+if we wanted to do something like this something where we keep doing it over and over.
+
+00:38.210 --> 00:42.450
+And that's called looping and that's where we're gonna learn about in this video.
+
+00:42.590 --> 00:49.080
+And as you can see in our online javascript looping we're going to go through all of these and this
+
+00:49.080 --> 00:49.610
+video.
+
+00:49.860 --> 00:50.610
+Let's get started.
+
+00:52.500 --> 01:00.580
+Have an empty script tag here that again is attached to our Asia email and let's start off with maybe
+
+01:00.580 --> 01:12.570
+a to do list and a To Do List has well should be an array and we want to have maybe clean room.
+
+01:12.820 --> 01:26.950
+We want to have the brush teeth maybe exercise should definitely study some javascript and finally what
+
+01:26.950 --> 01:28.470
+we should eat healthy.
+
+01:29.110 --> 01:29.340
+All right.
+
+01:29.350 --> 01:32.530
+So we have a to do list.
+
+01:33.130 --> 01:39.900
+Let's say that we wanted to add an exclamation mark at the end of these two star items.
+
+01:39.910 --> 01:43.030
+I mean these are all really important and we want to emphasize that.
+
+01:43.060 --> 01:45.720
+But I mean that is kind of tedious right.
+
+01:45.720 --> 01:52.030
+I have to go one by one and add an exclamation mark add an exclamation mark and imagine if to do this
+
+01:52.030 --> 01:58.360
+was hundreds of lines and as programmers we want to do things efficiently.
+
+01:58.360 --> 02:00.500
+That's what we have machines for.
+
+02:00.640 --> 02:06.850
+So let's add some looping to this to do a loop and JavaScript.
+
+02:06.850 --> 02:12.940
+One of the main ways you can do it is called a for loop and you're gonna learn a new syntax here and
+
+02:13.120 --> 02:19.750
+be warned it looks confusing at first but it's one of those things again you have to do it a few times
+
+02:20.080 --> 02:20.980
+and you'll get the hang of it.
+
+02:21.820 --> 02:26.620
+So the first one is variable i equals zero.
+
+02:26.620 --> 02:37.690
+Will do high is less than to dos dot length and then we'll do pi plus plus.
+
+02:37.700 --> 02:40.140
+Don't worry I'll explain what this means.
+
+02:40.220 --> 02:42.080
+We have the curly brackets.
+
+02:42.080 --> 02:47.210
+And then within here for now let's just wait and explain what's happening.
+
+02:47.270 --> 02:54.950
+So I'm saying four which is a javascript towards saying we're going to do a loop now in this loop the
+
+02:54.950 --> 02:59.140
+first thing we're gonna do is we're going to say I equals zero.
+
+02:59.150 --> 03:01.200
+So it's just a random variable eyes.
+
+03:01.220 --> 03:04.760
+It's common to be used in a for loop stands for an index.
+
+03:04.760 --> 03:07.030
+So I starts off with the zero.
+
+03:07.040 --> 03:09.820
+We have a semicolon which means that's the end of the expression.
+
+03:09.830 --> 03:18.800
+We just assigned the eye variable the zero and then in the next line says I which is at the moment zero.
+
+03:19.110 --> 03:30.680
+If that is less than the deuce length and to deuce length we've never seen this before it's saying how
+
+03:30.890 --> 03:41.520
+long is the list in this case one two three four five so zero is greater than five if that's the case
+
+03:42.090 --> 03:51.710
+then run this loop and then when you're done do high plus plus which means I plus 1.
+
+03:51.760 --> 03:53.590
+So let's go through that.
+
+03:53.590 --> 03:55.550
+First off to do that length.
+
+03:55.570 --> 04:11.160
+If I go if I copy this I do to do start the plant I get five five items I could also do Hello Dot length
+
+04:13.450 --> 04:21.260
+and I get eight so one two three four five six seven eight so length just tells us how many items in
+
+04:21.260 --> 04:33.100
+the list and if I do variable i equals zero while I's zero but if I do I plus plus and I look at I again
+
+04:33.490 --> 04:36.380
+I see that it's one if I do I plus plus again.
+
+04:36.640 --> 04:38.850
+Well I get to.
+
+04:39.700 --> 04:42.970
+So this is incrementing I.
+
+04:43.040 --> 04:52.720
+So what we're doing is we're saying start off with zero as long as I is less than five then run what's
+
+04:52.720 --> 04:54.030
+ever in this block.
+
+04:54.090 --> 04:57.870
+And once you're done with it add one two I.
+
+04:57.870 --> 05:02.090
+So let's see what happens if I do console dialogue.
+
+05:02.340 --> 05:10.080
+I hear let's save and refresh 0 1 2 3 4.
+
+05:10.270 --> 05:13.650
+So we're doing a loop where it starts off with zero.
+
+05:13.660 --> 05:15.340
+Then we add one.
+
+05:15.400 --> 05:16.480
+It's now 1.
+
+05:16.780 --> 05:20.000
+Then we add another one to another one to three.
+
+05:20.230 --> 05:27.130
+And another one two four and how come we don't have five here because as soon as I equals five that's
+
+05:27.130 --> 05:31.850
+going to match the to dos length and the loop stops.
+
+05:31.870 --> 05:36.660
+So that's how we tell the loop to stop OK.
+
+05:36.930 --> 05:44.110
+So how can we do this if we wanted to add exclamation mark on the end of these.
+
+05:44.250 --> 05:47.190
+Well we can access to dos
+
+05:50.350 --> 05:58.630
+by because it's an array by eye because the first go around I will be zero which will be clean room
+
+05:58.840 --> 06:05.740
+then one which is brush teeth then two which is exercise 3 which is studied javascript and 4 which is
+
+06:05.980 --> 06:07.420
+eat healthy.
+
+06:07.570 --> 06:14.610
+So let's double check that if I do two dos I and safe refresh and I should change this back to I.
+
+06:14.620 --> 06:24.300
+There you go otherwise if I do this this actually won't run much as because well this is five equals
+
+06:24.360 --> 06:29.880
+five so it's never gonna it's never going to go through the loop so let's change that back to I am refresh
+
+06:30.570 --> 06:34.260
+clean room brush teeth exercise study javascript eat healthy.
+
+06:34.260 --> 06:34.980
+Perfect.
+
+06:34.980 --> 06:41.390
+So now I can just do I plus exclamation mark.
+
+06:42.170 --> 06:45.770
+Let's refresh look at that.
+
+06:46.040 --> 06:47.660
+That's how important these items are.
+
+06:47.660 --> 06:59.690
+But if I do to do or to dos Well my two dos don't actually have these exclamation marks we've just console
+
+06:59.690 --> 07:02.800
+log them but we haven't actually changed that to do right.
+
+07:03.140 --> 07:03.890
+So let's do that
+
+07:06.910 --> 07:21.860
+we can now say that to dos I equals to dos high plus exclamation mark.
+
+07:22.060 --> 07:24.520
+So let's see I refresh.
+
+07:24.520 --> 07:29.220
+Nothing happens by now if I check to dos.
+
+07:29.440 --> 07:33.730
+Look at that I have exclamation marks in each of my two dos.
+
+07:34.090 --> 07:45.860
+And again to break that down we're saying clean room now equals clean room plus exclamation mark very
+
+07:45.860 --> 07:46.990
+cool.
+
+07:47.030 --> 07:47.320
+OK.
+
+07:47.660 --> 07:51.150
+Let's learn a few others actually before we do.
+
+07:51.260 --> 07:57.560
+What if we want to cross this off the list maybe we want to cross them off because we've done them well
+
+07:58.070 --> 08:01.350
+we can do something like to do set up Pop.
+
+08:01.430 --> 08:06.260
+If you remember that's a an array method pop that removes the last item.
+
+08:06.290 --> 08:15.500
+So if I go save and refresh I get to dos I pop is not a function why is that.
+
+08:15.500 --> 08:22.240
+Well because we're saying clean room pop and that's a string.
+
+08:22.240 --> 08:27.550
+What we want to do is to use dot pop because that's the array.
+
+08:28.300 --> 08:39.200
+So if I save and refresh at let's see what we have an hour to dos clean room and brush teeth.
+
+08:39.560 --> 08:41.110
+What is that.
+
+08:41.110 --> 08:46.710
+Well because initially this was zero.
+
+08:47.030 --> 08:50.110
+And to do list length was five.
+
+08:50.540 --> 08:59.420
+But then because we popped it this changed to four and this to one and then three and two.
+
+08:59.990 --> 09:07.880
+So as you can see we removed eat healthy study javascript and exercise but because our to do is length
+
+09:08.030 --> 09:12.230
+changed well it stopped halfway through.
+
+09:12.230 --> 09:16.050
+So what's one way that we can fix that issue.
+
+09:17.580 --> 09:24.270
+Well we can do variable to do that length to dos.
+
+09:24.360 --> 09:28.670
+Length equals to dos dot length.
+
+09:29.600 --> 09:31.870
+So now this variables 5.
+
+09:32.090 --> 09:39.760
+So if I just do the variable to dos length.
+
+09:39.890 --> 09:43.310
+This is gonna remember because it's only gonna run once it's gone.
+
+09:43.640 --> 09:49.910
+This is gonna run then we're gonna assign five to two deuce length and then this is gonna loop over
+
+09:51.320 --> 09:53.600
+so if I see this and refresh.
+
+09:53.600 --> 09:55.750
+Let's look at two dos.
+
+09:55.770 --> 10:01.580
+Look at that we finished all of our to dos very cool.
+
+10:01.700 --> 10:11.150
+Let me show you a another option which is the while loop the while loop goes something like this.
+
+10:15.190 --> 10:18.760
+While let's create a variable here variable counter
+
+10:21.350 --> 10:36.160
+counter one we're gonna say that that is zero and we're gonna say while counter one is less than 10.
+
+10:36.250 --> 10:39.700
+In that case I want to console log
+
+10:43.530 --> 10:50.540
+counter 1 and then I want to counter one plus plus.
+
+10:50.580 --> 10:57.410
+Remember we're doing we're adding so every time we're increasing counter by 1.
+
+10:57.450 --> 10:58.750
+Let's just see what happens here.
+
+10:58.770 --> 11:09.240
+If I save this and refresh 0 1 2 3 4 5 6 7 8 9 and then it stops because well as soon as this it's 10
+
+11:10.240 --> 11:11.440
+this is no longer right.
+
+11:11.440 --> 11:14.470
+So this part of the block doesn't run
+
+11:17.780 --> 11:29.000
+OK can I do something maybe the other way around where we say that the counter is 10 and this time we
+
+11:29.000 --> 11:29.780
+want to count down.
+
+11:30.470 --> 11:36.620
+So while the counter is 10 keep going and otherwise stop.
+
+11:36.780 --> 11:39.720
+And the way we do that we obviously want to subtract.
+
+11:39.720 --> 11:40.800
+We don't want to keep going.
+
+11:40.830 --> 11:43.890
+Eleven or twelve because otherwise it's gonna keep going forever.
+
+11:43.980 --> 11:47.510
+The way we do that is minus minus which is the exact opposite.
+
+11:47.520 --> 11:49.530
+So it subtracts 1.
+
+11:49.560 --> 11:50.880
+Let's see what happens.
+
+11:52.500 --> 11:56.350
+Ten nine eight seven six five four three two one.
+
+11:56.360 --> 11:56.840
+There you go.
+
+11:57.830 --> 12:05.270
+Now out of curiosity what will happen if I go like this where the number just keeps increasing from
+
+12:05.270 --> 12:14.960
+10 to 11 to well infinity rate is just going to keep going up and you can do this in Google Chrome if
+
+12:14.960 --> 12:16.760
+you want.
+
+12:16.820 --> 12:19.910
+It's actually pretty pretty entertaining.
+
+12:19.910 --> 12:26.870
+What happens is it just keeps going forever and ever you'll just get a list of all these things.
+
+12:26.870 --> 12:34.730
+And it's called an infinite loop an infinite loop means it pretty much goes infinitely except it doesn't
+
+12:34.730 --> 12:41.210
+really because eventually Google Chrome is going to crash it's gonna say Hey I can't handle all this
+
+12:41.210 --> 12:47.040
+information you're driving me crazy and it's going to stop working OK.
+
+12:47.070 --> 12:51.730
+So we learn the for loop we learned a while.
+
+12:51.830 --> 12:52.640
+What else do we have.
+
+12:52.640 --> 12:55.680
+We have the do.
+
+12:55.740 --> 13:06.750
+So this is called the do while loop and it's a little bit different than the while we start off with
+
+13:06.760 --> 13:07.330
+do.
+
+13:07.690 --> 13:19.020
+Then curly brackets and we say counter let's call a counter to this time where do variable counter 2
+
+13:19.860 --> 13:25.880
+equals 10 and do counter 2 plus plus.
+
+13:25.880 --> 13:36.500
+So add counter to and also console logged counter 2 and we want to move console log at the top because
+
+13:36.500 --> 13:41.370
+this way I'll start with 10 then increase loops.
+
+13:41.400 --> 13:43.270
+This should be subtracted.
+
+13:43.470 --> 13:47.850
+So we do 10 it's gonna log 10 then it's going to subtract.
+
+13:47.850 --> 13:55.410
+So the next time that comes around here it's gonna be nine and then we do while and we give a condition
+
+13:55.410 --> 13:55.590
+here.
+
+13:55.590 --> 14:05.290
+So the conditions gonna be counter to is going to be greater than zero.
+
+14:05.300 --> 14:08.870
+OK so let's see what happens here.
+
+14:08.910 --> 14:11.070
+I refresh.
+
+14:11.130 --> 14:14.050
+Ten nine eight seven six five four three two one.
+
+14:14.250 --> 14:23.990
+It looks like we just did the same thing as the wild loop didn't we so let me just test that out.
+
+14:23.990 --> 14:33.000
+Let's refresh your and we see that we have ten through one for the while loop and ten through one through
+
+14:33.000 --> 14:35.070
+the do while loop.
+
+14:35.070 --> 14:37.590
+So what is the difference here.
+
+14:37.680 --> 14:42.670
+The difference is that with a while loop we check the condition first.
+
+14:42.680 --> 14:45.390
+So we say is kind of one greater than zero.
+
+14:45.480 --> 14:53.820
+OK then do the stuff versus the do while loop that says do the stuff first and then do counter to.
+
+14:54.060 --> 15:07.530
+Let me just demonstrate that point if we do 10 here and 10 let's refresh.
+
+15:07.710 --> 15:09.160
+I only get one.
+
+15:09.720 --> 15:11.380
+Let's check something here.
+
+15:11.460 --> 15:24.070
+I'm going to say this is the while loop and this is the do while loop save in a refresh so it looks
+
+15:24.070 --> 15:32.470
+like the do while ran but the while loop never did because well 10 equals to 10.
+
+15:32.620 --> 15:40.690
+This fails and the loop doesn't run versus the do while loop that does this first and then checks the
+
+15:40.690 --> 15:42.100
+condition if they should loop.
+
+15:42.760 --> 15:51.240
+So that's the difference between these two but to be honest with you most of the time you're gonna be
+
+15:51.240 --> 16:00.810
+using a for loop and the for loop is why you're going to get used to but there's actually a better way
+
+16:00.900 --> 16:02.440
+of doing it.
+
+16:02.670 --> 16:07.890
+If you look at the section outline we see that I have one last one which is for each.
+
+16:07.890 --> 16:10.780
+And it says new in my script five.
+
+16:10.800 --> 16:18.990
+So as you remember javascript is constantly evolving and Atma script 5 was a new standard that added
+
+16:19.020 --> 16:22.860
+that for each method.
+
+16:22.880 --> 16:24.980
+So what is the for each method.
+
+16:24.980 --> 16:29.150
+Well I'm going to show you the difference between a for loop and a for each.
+
+16:29.150 --> 16:32.960
+They both do the same thing but tell me which one looks better.
+
+16:34.670 --> 16:38.390
+So with here we'll say console dot log
+
+16:42.490 --> 16:43.450
+high.
+
+16:43.600 --> 16:57.030
+So we're just logging the I and with a for each loop I can do two dos dot for each function I console
+
+16:57.150 --> 16:57.920
+dot log.
+
+16:58.500 --> 17:02.790
+Hi might look a little bit confusing but let's just try it out.
+
+17:02.820 --> 17:04.760
+Let's see what happens.
+
+17:04.830 --> 17:16.370
+So it looks like a line 10 is printing out 0 1 2 3 4 and line 14 is printing out clear room brush teeth
+
+17:16.400 --> 17:17.900
+exercise study javascript.
+
+17:17.920 --> 17:19.040
+Eat healthy.
+
+17:19.040 --> 17:20.420
+What are we doing here.
+
+17:20.420 --> 17:22.370
+Well the for each.
+
+17:22.370 --> 17:24.100
+It takes an array.
+
+17:24.140 --> 17:34.990
+In this case the to dos and it asks for an argument that is tell me what to do with it so the action
+
+17:34.990 --> 17:45.060
+that we want to perform on the to dos can be represented in a function so I say function and this function
+
+17:45.060 --> 17:53.110
+receives the argument of I which is the each individual item in the tattoos.
+
+17:53.450 --> 18:02.660
+So I could just say to do here and to do and refresh is are still be the exact same.
+
+18:02.690 --> 18:11.990
+So you see here that we're not necessarily accessing the index like we are with this one because here
+
+18:11.990 --> 18:21.050
+in order to get the to dos I had to do two dos square bracket I five refresh.
+
+18:21.090 --> 18:21.620
+OK.
+
+18:21.630 --> 18:24.820
+In that case now it's all the same.
+
+18:24.830 --> 18:25.050
+OK.
+
+18:25.080 --> 18:28.790
+But how do I access the index within the for each.
+
+18:29.520 --> 18:38.820
+Well the second parameter and the second argument that it receives is the eye the index.
+
+18:38.820 --> 18:52.210
+So now if I do my and refresh 0 1 2 3 4 so it's the same thing as doing this in the for loop and refresh
+
+18:52.920 --> 18:58.210
+and look at that now by looking at these two.
+
+18:58.330 --> 19:03.750
+Which one tells you more about what it does.
+
+19:04.780 --> 19:06.660
+This one or this one.
+
+19:06.670 --> 19:17.440
+Let's read it in an English to dos for each run a function that console logs that to do and the index
+
+19:18.430 --> 19:19.850
+vs..
+
+19:20.070 --> 19:26.270
+Well frankly this looks confusing so for each is a really really great method that they've added to
+
+19:26.270 --> 19:29.490
+the language that really simplifies things.
+
+19:29.630 --> 19:31.870
+Most people might get confused by this part.
+
+19:31.870 --> 19:37.540
+The function was just to show you how powerful for it is we can actually do this.
+
+19:37.580 --> 19:49.690
+I'm going to take out the function and I'm going to call it log to dos and now all I have to do is have
+
+19:49.690 --> 20:02.350
+a function and call it log to dos and now I'm going to comment this out.
+
+20:02.580 --> 20:09.000
+It's going to do the exact same thing but I can now use LOC to dos in other places.
+
+20:10.200 --> 20:21.950
+So I can now do let's say I have another list that has maybe exclamation marks like we did in the first
+
+20:21.950 --> 20:22.300
+one.
+
+20:26.250 --> 20:27.780
+To dos.
+
+20:27.780 --> 20:30.690
+Important.
+
+20:30.730 --> 20:43.250
+So now I can do to do is important for each and use the same function log to dos I save and refresh
+
+20:44.500 --> 20:45.170
+and look at that.
+
+20:45.170 --> 20:51.030
+We have these to dos as well so you can see that it's very extensible.
+
+20:51.240 --> 20:57.840
+Now the one caveat I want to show you with for each is that it's a new standard as we do with all new
+
+20:57.840 --> 20:58.310
+standards.
+
+20:58.320 --> 21:02.730
+We should check that they work on all browsers so if you remember we had.
+
+21:02.730 --> 21:10.530
+Can I use dot com that we use for this and we use it at C Ss to make sure that our CSX 3 features like
+
+21:10.530 --> 21:15.360
+Box shadow and transitions work on all the browsers.
+
+21:15.360 --> 21:23.470
+So let's do that let's two for each and you see here at my script five for each.
+
+21:23.550 --> 21:27.720
+It looks like well full support.
+
+21:27.720 --> 21:29.340
+Everything looks good.
+
+21:29.340 --> 21:36.210
+We just have opera many that has partial support so it looks pretty good unless we're really worried
+
+21:36.210 --> 21:37.500
+about Opera Mini.
+
+21:37.560 --> 21:39.910
+We can use for each in the browser.
+
+21:41.470 --> 21:54.480
+And just to test if we open up our console Well we can definitely see that an array has for each.
+
+21:54.490 --> 22:04.830
+So there you have it we had the for loop the while loop the do while loop and then finally for each
+
+22:06.100 --> 22:12.890
+in the next video we're going to expand on our Facebook example and have multiple users so that we can
+
+22:12.890 --> 22:19.400
+loop through the database of multiple users and see if the user name and password match any of those
+
+22:20.020 --> 22:21.530
+I'll see in the next one.

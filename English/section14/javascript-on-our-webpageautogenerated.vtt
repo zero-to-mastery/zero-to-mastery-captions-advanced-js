@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.780 --> 00:02.940
+And welcome back.
+
+00:02.940 --> 00:10.770
+We're going to take a quick break from learning javascript syntax to show you how javascript gets implemented
+
+00:11.130 --> 00:12.390
+in the browser.
+
+00:12.390 --> 00:17.160
+We're going to go back to this image that we've seen many times before in this course.
+
+00:17.370 --> 00:22.620
+And we have a pretty good idea of what a e-mail and CSX does.
+
+00:22.620 --> 00:31.800
+If you remember a CML gets sent to the browser then it sees the link tag and the CSX gets sent to the
+
+00:31.800 --> 00:32.570
+browser.
+
+00:32.580 --> 00:36.220
+But what about our new friend javascript over here.
+
+00:36.240 --> 00:40.730
+What happens with him well in this video.
+
+00:40.910 --> 00:46.980
+We're going to learn exactly that so I have over here an index that ACM all file.
+
+00:47.090 --> 00:49.400
+I'm going to open it with Google Chrome.
+
+00:49.400 --> 00:50.960
+It's completely empty now.
+
+00:51.200 --> 00:57.370
+And I'm also going to drag it to my sublime text so that we can add something to it
+
+01:00.310 --> 01:06.700
+so I have Sublime Text and the browser and we're gonna use our little short command to create a quick
+
+01:06.750 --> 01:21.560
+a simple file javascript and let's just have a simple header that says javascript and HMO save and refresh.
+
+01:21.560 --> 01:22.220
+Perfect.
+
+01:22.220 --> 01:23.870
+We're M. is this already.
+
+01:23.870 --> 01:26.080
+We all know what's going on.
+
+01:26.120 --> 01:29.770
+So how do we add javascript to this.
+
+01:29.780 --> 01:35.430
+I mean with CSX we had the link tag right.
+
+01:35.600 --> 01:47.260
+And we had this track where we tell it where it is well if you remember javascript again just like a
+
+01:47.290 --> 01:49.790
+months assess is just a file.
+
+01:49.990 --> 01:54.490
+So let's create one first and sublime text.
+
+01:54.500 --> 01:55.960
+I'm going to create a new file.
+
+01:56.060 --> 02:02.690
+I'm going to save it and I'm going to say script dot J S see the dot J.S. at the end.
+
+02:02.780 --> 02:04.610
+That means javascript.
+
+02:04.610 --> 02:09.830
+Notice what happens when I click save at the bottom sublime text.
+
+02:10.040 --> 02:13.660
+Now converted the syntax to javascript.
+
+02:13.770 --> 02:22.320
+So now I can write something like four plus three and I get the cool javascript colors I can write if
+
+02:23.100 --> 02:38.440
+four plus three equals seven I can alert you're smart so you can see that it does the syntax for me
+
+02:39.960 --> 02:44.640
+OK perfect man I just save that.
+
+02:44.710 --> 02:47.640
+Let's see if we can add this to.
+
+02:47.830 --> 02:49.180
+I forgot the semicolon here.
+
+02:49.360 --> 02:51.010
+I always forget it too.
+
+02:51.160 --> 03:01.140
+Let's add this to our HMO if it works we'll get an alert saying you're a smart so how can we do this.
+
+03:01.210 --> 03:09.590
+Well there's an Asian male tag called script tag so link tag for style sheet.
+
+03:09.680 --> 03:15.460
+Script tag for JavaScript and all we do is this.
+
+03:15.600 --> 03:25.230
+We have that type text javascript you see over here how with CSX we have text CSX while we're telling
+
+03:25.230 --> 03:39.850
+it that this is javascript and in here JavaScript can be run right over here if I go alert Hello.
+
+03:40.290 --> 03:45.200
+And you might remember this because it's kind of like the style tag for CSX.
+
+03:45.250 --> 03:46.330
+Let's see what happens.
+
+03:47.440 --> 03:51.090
+And to refresh and I get Hello.
+
+03:51.090 --> 03:51.710
+Look at that.
+
+03:51.870 --> 04:01.350
+We just added javascript to our HMO but I really want to use this file as we know with CSX.
+
+04:01.350 --> 04:06.420
+We don't necessarily want our javascript to live on a simple we want separation of concerns.
+
+04:06.420 --> 04:09.090
+We want the javascript and the javascript file.
+
+04:09.120 --> 04:18.690
+Well the way we do that is through a source file so all we do is source.
+
+04:18.710 --> 04:20.810
+You might remember this from images.
+
+04:20.810 --> 04:31.820
+So instead of h ref and link we have source and we say script dot J S I save and I refresh and I get
+
+04:32.090 --> 04:34.860
+your smart now.
+
+04:35.020 --> 04:40.240
+Again we can say script digest because well it's in the same folder.
+
+04:40.240 --> 04:41.860
+It's in the desktop folder.
+
+04:41.980 --> 04:49.090
+If it wasn't then let's say this a Shia e-mail wasn't in the desktop folder we'd have to do something
+
+04:49.090 --> 04:51.160
+like desktop
+
+04:57.650 --> 04:58.860
+OK.
+
+04:59.100 --> 05:06.390
+So that's very interesting what if I have multiple JavaScript files we might have seen that in remember
+
+05:06.390 --> 05:07.560
+bootstrap and bootstrap.
+
+05:07.560 --> 05:09.100
+We had like three script tags.
+
+05:09.720 --> 05:17.280
+Well yeah you can just just like he can with link you can have multiple script X and you can just say
+
+05:17.610 --> 05:29.950
+script to script 3 and again each one gets executed one at a time OK now one question you might have
+
+05:29.950 --> 05:38.020
+is why did I just put the script tag at the bottom here at the bottom of the body.
+
+05:38.210 --> 05:41.120
+Why didn't we let me just remove this for now.
+
+05:41.150 --> 05:47.540
+Why don't we just put it at the top like we do with the CSF file.
+
+05:47.650 --> 05:48.620
+Well let me show you something.
+
+05:49.190 --> 05:50.450
+Let's put it up here.
+
+05:50.510 --> 05:51.910
+Let's see what happens.
+
+05:51.920 --> 05:59.130
+I'm going to refresh OK I get your smart.
+
+05:59.340 --> 06:00.260
+I don't know if you saw that.
+
+06:00.270 --> 06:02.030
+Did you see the javascript go.
+
+06:02.130 --> 06:09.210
+Let's change this quickly let's say our Web site is now fresh and new and I'm going to say waiting for
+
+06:09.390 --> 06:19.560
+JavaScript going to save notice what happens to the header I refresh it hasn't changed yet I have to
+
+06:19.560 --> 06:30.260
+click your smart you see it's completely gone click OK and only then it shows up because the browser
+
+06:30.470 --> 06:38.090
+reads the file goes and gets the CSX file and then sees a script tag and says well I'm going to go read
+
+06:38.090 --> 06:41.170
+what's over here and here is an alert.
+
+06:41.360 --> 06:42.790
+And what an alert does it.
+
+06:42.800 --> 06:52.070
+It waits for us to click OK so the browser can't display waiting for JavaScript so you will see an older
+
+06:52.070 --> 06:57.950
+Web sites people that put the script tags in here but that actually delays what gets seen by the user
+
+06:58.790 --> 07:11.010
+instead if we put it down here and change the text again to not waiting in a safe let's see what happens
+
+07:13.190 --> 07:20.390
+not waiting for JavaScript that got changed so we ideally want to put our script tags at the bottom
+
+07:20.390 --> 07:21.220
+of the body.
+
+07:21.350 --> 07:31.190
+What that means is that the Web site gets displayed gets rendered and then we have to still wait for
+
+07:31.190 --> 07:33.840
+the javascript to load let's say we had a cool animation.
+
+07:33.960 --> 07:41.060
+You'll have to wait until that loads but to a user it appears like the Web site loads a lot faster because
+
+07:41.360 --> 07:46.220
+they might not click on a drop down menu or see the animation right away and notice that there is a
+
+07:46.220 --> 07:50.130
+lie but they will see a delay if they don't see anything on the page.
+
+07:50.250 --> 07:56.140
+So script tax at the bottom one last thing.
+
+07:56.320 --> 08:04.390
+How do we get that console to print stuff out it would be nice if instead of alert all the time I can
+
+08:04.390 --> 08:05.800
+get something in the console.
+
+08:05.860 --> 08:19.770
+Well in JavaScript you can do something called console to log and here I can say hello so this syntax
+
+08:19.770 --> 08:20.600
+is a little bit weird.
+
+08:20.600 --> 08:28.820
+I'll explain later on what is going on here but console dialogue is a special little syntax that we
+
+08:28.820 --> 08:29.540
+can use.
+
+08:29.540 --> 08:39.370
+And now if I refresh the page I get logging over here so I can write as much as I want here.
+
+08:39.380 --> 08:46.970
+Kind of like alert but without getting that annoying pop up over and over and refresh and I get hello
+
+08:47.450 --> 08:51.440
+and we'll be using console log a lot in the next couple of videos.
+
+08:51.770 --> 08:59.120
+You can see here that it's a nice way for us to print something to the console before we learn how to
+
+08:59.480 --> 09:03.310
+change our e-mail so I'll see in the next four.

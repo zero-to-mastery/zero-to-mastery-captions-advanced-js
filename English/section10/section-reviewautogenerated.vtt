@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.730 --> 00:01.810
+Welcome back.
+
+00:01.810 --> 00:05.590
+In this section we learned about JavaScript modules.
+
+00:05.620 --> 00:13.870
+What we had before where we started with just simple script acts that just had one single file of JavaScript
+
+00:14.380 --> 00:15.280
+in the beginning.
+
+00:15.550 --> 00:23.260
+And as our programs as our web pages started getting more and more complex we started to see problems
+
+00:23.380 --> 00:27.970
+with just simple script X simple JavaScript files.
+
+00:28.240 --> 00:35.620
+We needed a way to have modules and we learned about how we used immediately invoked functions to create
+
+00:35.800 --> 00:37.150
+the module pattern.
+
+00:37.420 --> 00:39.630
+And as things got more and more complicated.
+
+00:39.730 --> 00:42.720
+Well we needed other ways to improve on that system.
+
+00:42.820 --> 00:51.400
+So libraries like common G.S. and M.D. came into play to make our code more reusable more modular so
+
+00:51.400 --> 00:55.180
+that we can start sharing code with other programmers around the world.
+
+00:55.180 --> 01:00.840
+And then finally we have our native ASX module where javascript is a serious language.
+
+01:00.850 --> 01:09.740
+Now that has modules built in and because of modules we now have a reusable code reusable functions
+
+01:10.340 --> 01:14.480
+which allow us to have code that is more maintainable.
+
+01:14.630 --> 01:22.030
+We're able to separate concerns and divide up our programs into small chunks that work on their own.
+
+01:22.100 --> 01:25.190
+We avoided the global namespace pollution.
+
+01:25.190 --> 01:31.500
+We can now compose different modules together to add different functionality to our programs.
+
+01:31.610 --> 01:35.700
+We can use third party code on places like NPM.
+
+01:35.750 --> 01:42.500
+More importantly if you're Google or Microsoft with thousands of developers we now have this idea of
+
+01:42.500 --> 01:48.950
+modules where we can isolate teams of developers to work separately on their own on their own modules
+
+01:48.950 --> 01:51.830
+on their own parts of the code.
+
+01:51.870 --> 01:57.000
+We now have a way to organize this code better and with our modules.
+
+01:57.000 --> 02:01.430
+Imagine how hard it will be to build the applications that we have now.
+
+02:01.530 --> 02:09.240
+So I hope you see the power in that and with iOS 6 modules we now have the ultimate power to build large
+
+02:09.240 --> 02:13.540
+applications the javascript I'll see in the next one by.
